@@ -1,0 +1,1703 @@
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Placer configuration is loaded and the information is shown below, please check:
+   "ClusterPlacerVerbose"   ====   "false"
+   "DrawNetAfterEachIteration"   ====   "false"
+   "Dump Cluster Simulated Annealig file"   ====   "../../../Documents/placerDumpData//./dumpSATrace"
+   "Dump Cluster file"   ====   "../../../Documents/placerDumpData//./dumpClusters"
+   "DumpLUTFFPair"   ====   "../../../Documents/placerDumpData//./DumpLUTFFPair"
+   "GlobalPlacementIteration"   ====   "30"
+   "GlobalPlacerPrintHPWL"   ====   "true"
+   "GlobalPlacerVerbose"   ====   "false"
+   "MKL"   ====   "true"
+   "PseudoNetWeight"   ====   "0.0025"
+   "Simulated Annealing IterNum"   ====   "30000000"
+   "Simulated Annealing restartNum"   ====   "600"
+   "cellType2fixedAmo file"   ====   "../benchmarks/VCU108/compatibleTable/cellType2fixedAmo"
+   "cellType2sharedCellType file"   ====   "../benchmarks/VCU108/compatibleTable/cellType2sharedCellType"
+   "clockRegionBRAMNum"   ====   "96"
+   "clockRegionDSPNum"   ====   "30"
+   "clockRegionXNum"   ====   "5"
+   "clockRegionYNum"   ====   "8"
+   "drawClusters"   ====   "false"
+   "dumpDirectory"   ====   "../../../Documents/placerDumpData//../../../Documents/placerDumpData/"
+   "fixed units file"   ====   "../benchmarks/VCU108/design/optimsoc/optimsoc_fixedUnits"
+   "jobs"   ====   "8"
+   "mergedSharedCellType2sharedCellType"   ====   "../benchmarks/VCU108/compatibleTable/mergedSharedCellType2sharedCellType"
+   "sharedCellType2BELtype file"   ====   "../benchmarks/VCU108/compatibleTable/sharedCellType2BELtype"
+   "special pin offset info file"   ====   "../benchmarks/VCU108/device/PCIEPin2SwXY"
+   "unpredictable macro file"   ====   "../benchmarks/VCU108/design/optimsoc/optimsoc_unpredictableMacros"
+   "vivado extracted design information file"   ====   "../benchmarks/VCU108/design/optimsoc/optimsoc_allCellPinNet.zip"
+   "vivado extracted device information file"   ====   "../benchmarks/VCU108/device/exportSiteLocation.zip"
+   "y2xRatio"   ====   "0.4"
+[40;34mReguPlacer INFO: [0m [0;0m[0m mapping BELType [SLICEM_CARRY8] to [SLICEL_CARRY8] when creating PlacementBins
+[40;34mReguPlacer INFO: [0m [0;0m[0m mapping BELType [SLICEM_LUT] to [SLICEL_LUT] when creating PlacementBins
+[40;34mReguPlacer INFO: [0m [0;0m[0m mapping BELType [SLICEM_FF] to [SLICEL_FF] when creating PlacementBins
+[40;34mReguPlacer INFO: [0m [0;0m[0m There are 8x5(YxX) clock regions on the device
+[40;32mReguPlacer STATUS: [0m [0;0m[0m New Device Info Created. (elapsed time: 3.709 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #ExtractedTile= 71312
+[40;34mReguPlacer INFO: [0m [0;0m[0m #ExtractedSite= 81110
+[40;34mReguPlacer INFO: [0m [0;0m[0m #ExtractedBEL= 2734042
+[40;34mReguPlacer INFO: [0m [0;0m[0m Tile(28 types): AMS BRAM CFG_CFG CLEL_L CLEL_R CLE_M CLE_M_R CMAC_CMAC_FT DSP GTH_R GTY_QUAD_LEFT_FT HPIO_L HRIO_L ILMAC_ILMAC_FT PCIE RCLK_BRAM_L RCLK_BRAM_R RCLK_CLEL_L RCLK_CLEL_R RCLK_CLEL_R_L RCLK_CLEL_R_R RCLK_CLE_M_L RCLK_CLE_M_R RCLK_INT_L RCLK_INT_R RCLK_RCLK_BRAM_L_AUXCLMP_FT RCLK_RCLK_BRAM_L_BRAMCLMP_FT XIPHY_L 
+[40;34mReguPlacer INFO: [0m [0;0m[0m Site(38 types): BITSLICE_CONTROL BITSLICE_RX_TX BITSLICE_TX BUFCE_LEAF_X16 BUFCE_ROW BUFGCE BUFGCE_DIV BUFGCTRL BUFG_GT BUFG_GT_SYNC CMAC_SITE CONFIG_SITE DSP48E2 GTHE3_CHANNEL GTHE3_COMMON GTYE3_CHANNEL GTYE3_COMMON HARD_SYNC HPIOB HPIOBDIFFINBUF HPIOBDIFFOUTBUF HPIO_VREF_SITE HRIO HRIODIFFINBUF HRIODIFFOUTBUF ILKN_SITE MMCME3_ADV PCIE_3_1 PLLE3_ADV PLL_SELECT_SITE RAMB181 RAMBFIFO18 RAMBFIFO36 RIU_OR SLICEL SLICEM SYSMONE1 XIPHY_FEEDTHROUGH 
+[40;34mReguPlacer INFO: [0m [0;0m[0m BEL(131 types): A5LUT A6LUT AFF AFF2 B5LUT B6LUT BFF BFF2 BSCAN1 BSCAN2 BSCAN3 BSCAN4 BUFCE BUFCE0 BUFCE1 BUFCE10 BUFCE11 BUFCE12 BUFCE13 BUFCE14 BUFCE15 BUFCE2 BUFCE3 BUFCE4 BUFCE5 BUFCE6 BUFCE7 BUFCE8 BUFCE9 BUFGCE_DIV BUFGCTRL BUFG_GT BUFG_GT_SYNC C5LUT C6LUT CARRY8 CFF CFF2 CMAC CONTROL D5LUT D6LUT DCIRESET DFF DFF2 DIFFINBUF DIFFOUTBUF DNA_PORT DSP_ALU DSP_A_B_DATA DSP_C_DATA DSP_MULTIPLIER DSP_M_DATA DSP_OUTPUT DSP_PREADD DSP_PREADD_DATA E5LUT E6LUT EFF EFF2 EFUSE_USR F5LUT F6LUT F7MUX_AB F7MUX_CD F7MUX_EF F7MUX_GH F8MUX_BOT F8MUX_TOP F9MUX FFF FFF2 FRAME_ECC G5LUT G6LUT GCLK_TEST_DELAY GFF GFF2 GTHE3_CHANNEL GTHE3_COMMON GTYE3_CHANNEL GTYE3_COMMON H5LUT H6LUT HFF HFF2 HPIO_VREF1 HPIO_VREF2 IBUFCTRL IBUFDS0_GTE3 IBUFDS0_GTYE3 IBUFDS1_GTE3 IBUFDS1_GTYE3 ICAP_BOT ICAP_TOP ILKN INBUF IPAD1 IPAD2 MASTER_JTAG MMCME3_ADV OBUFDS0_GTE3 OBUFDS0_GTYE3 OBUFDS1_GTE3 OBUFDS1_GTYE3 OPAD1 OPAD2 OUTBUF OUTINV PAD PCIE_3_1 PLLE3_ADV PLL_SELECT PULL RAMB18E2_L RAMB18E2_U RAMB36E2 RAMBFIFO18 RAMBFIFO36E2 REFCLK0N REFCLK0P REFCLK1N REFCLK1P RIU_OR RXTX_BITSLICE STARTUP SYN_UNIT SYSMONE1 TRISTATE_TX_BITSLICE USR_ACCESS XIPHY_FEEDTHROUGH 
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Design Information Loading. (elapsed time: 3.709 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #Connected Cell Pairs in Small Nets = 4812352
+[43;31mReguPlacer WARNING: [0m [0;0m[0m No clock file to specify clock signals in design! It might lead to clock partitioning error in final placement in vendor tools!
+[40;32mReguPlacer STATUS: [0m [0;0m[0m New Design Info Created. (elapsed time: 15.506 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #Cell= 468150
+[40;34mReguPlacer INFO: [0m [0;0m[0m #Net= 510676
+[40;34mReguPlacer INFO: [0m [0;0m[0m CellTypes(43 types): LUT1 LUT2 LUT3 LUT4 LUT5 LUT6 LUT6_2 FDCE FDPE FDRE FDSE AND2B1L CARRY8 DSP48E2 MUXF7 MUXF8 SRL16E SRLC32E RAM32M16 RAM32M RAM32X1D RAM64M8 RAMB18E2 RAMB36E2 BUFGCE BUFGCE_DIV IBUF IBUFDS IOBUFDS IOBUFE3 MMCME3_ADV OBUF OBUFT PCIE_3_1 BSCANE2 SYSMONE1 RXTX_BITSLICE BITSLICE_CONTROL TX_BITSLICE_TRI RIU_OR PLLE3_ADV HPIO_VREF OBUFDS_DUAL_BUF 
+[40;34mReguPlacer INFO: [0m [0;0m[0m #LUTCnt: 186183
+[40;34mReguPlacer INFO: [0m [0;0m[0m #FFCnt: 248983
+[40;34mReguPlacer INFO: [0m [0;0m[0m #CarryCnt: 1715
+[40;34mReguPlacer INFO: [0m [0;0m[0m #MuxCnt: 27037
+[40;34mReguPlacer INFO: [0m [0;0m[0m #LUTRAMCnt: 901
+[40;34mReguPlacer INFO: [0m [0;0m[0m #DSPCnt: 51
+[40;34mReguPlacer INFO: [0m [0;0m[0m #BRAMCnt: 218
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Loading compatiblePlacementTable (elapsed time: 15.506 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m New Compatible Placement Table Loaded. (elapsed time: 15.506 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m New Placement Info Created. (elapsed time: 15.509 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m InitialPacker Finding Macros (elapsed time: 15.509 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #CARRY Macro: 622
+[40;34mReguPlacer INFO: [0m [0;0m[0m #CARRY Macro Cells: 31454
+[40;32mReguPlacer STATUS: [0m [0;0m[0m CARRY Macro Extracted. (elapsed time: 15.572 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #Mux Macro: 21041
+[40;34mReguPlacer INFO: [0m [0;0m[0m #Mux Macro Cells: 102152
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Mux Macro Extracted. (elapsed time: 15.698 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #BRAM Macro: 129
+[40;34mReguPlacer INFO: [0m [0;0m[0m #BRAM Macro Cells: 370
+[40;32mReguPlacer STATUS: [0m [0;0m[0m BRAM Macro Extracted. (elapsed time: 15.706 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #DSP Macro: 17
+[40;34mReguPlacer INFO: [0m [0;0m[0m #DSP Macro Cells: 35
+[40;32mReguPlacer STATUS: [0m [0;0m[0m DSP Macro Extracted. (elapsed time: 15.714 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #CLB Macro: 199
+[40;34mReguPlacer INFO: [0m [0;0m[0m #CLB Macro Cells: 603
+[40;32mReguPlacer STATUS: [0m [0;0m[0m CLB Macro Extracted. (elapsed time: 15.716 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m InitialPacker Finding unpacked units (elapsed time: 15.716 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m #Cells In Macro = 134614
+[40;32mReguPlacer STATUS: [0m [0;0m[0m InitialPacker Loading Nets (elapsed time: 16.016 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m set BEL type for each cell (elapsed time: 17.404 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMinX: -0.400000
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMinY: 0.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMaxX: 86.400002
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMaxY: 479.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Placement Unit(s): 401205
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Unpacked Placement Unit(s): 379197
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Macro Placement Unit(s): 22008
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (ILKN_SITE) is not mapped to bin grid. e.g. [ILKN_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HPIOBDIFFOUTBUF) is not mapped to bin grid. e.g. [HPIOBDIFFOUTBUF_X0Y11]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (XIPHY_FEEDTHROUGH) is not mapped to bin grid. e.g. [XIPHY_FEEDTHROUGH_X2Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (PLL_SELECT_SITE) is not mapped to bin grid. e.g. [PLL_SELECT_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HRIODIFFINBUF) is not mapped to bin grid. e.g. [HRIODIFFINBUF_X0Y10]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HRIODIFFOUTBUF) is not mapped to bin grid. e.g. [HRIODIFFOUTBUF_X0Y8]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (BUFCE_ROW) is not mapped to bin grid. e.g. [BUFCE_ROW_X69Y7]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (RAMBFIFO36) is not mapped to bin grid. e.g. [RAMB36_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (GTYE3_CHANNEL) is not mapped to bin grid. e.g. [GTYE3_CHANNEL_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HARD_SYNC) is not mapped to bin grid. e.g. [HARD_SYNC_X0Y1]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (BUFCE_LEAF_X16) is not mapped to bin grid. e.g. [BUFCE_LEAF_X16_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (CMAC_SITE) is not mapped to bin grid. e.g. [CMAC_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Bin Grid Size: Y: 96 X:18 (elapsed time: 17.735 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Bin Grid for Density Control Created (elapsed time: 17.735 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Device Information Verified for Design Information (elapsed time: 17.751 s)
+[43;31mReguPlacer WARNING: [0m [0;0m[0m pseudoNetWeightConsiderNetNum option is turn on: 0.002650
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Cluster Placement Start. (elapsed time: 17.758 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Clustering Start. (elapsed time: 17.758 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m Recursive partitioning generates 27 clusters and the numbers of the placement units for them are: 4447-6662(DSP:0,BRAM:128), 5173-9103(DSP:0,BRAM:0), 10314-18120(DSP:0,BRAM:0), 11567-19194(DSP:0,BRAM:4), 12209-21147(DSP:0,BRAM:0), 12821-21217(DSP:3,BRAM:13), 12848-21283(DSP:3,BRAM:13), 12986-21454(DSP:3,BRAM:13), 13073-23019(DSP:0,BRAM:0), 13131-21698(DSP:3,BRAM:13), 13268-20569(DSP:0,BRAM:0), 13363-19285(DSP:0,BRAM:0), 13371-22141(DSP:3,BRAM:13), 13655-22220(DSP:3,BRAM:13), 13785-22480(DSP:3,BRAM:13), 14229-24194(DSP:3,BRAM:13), 14707-19145(DSP:3,BRAM:48), 15485-25877(DSP:3,BRAM:13), 16111-27448(DSP:3,BRAM:13), 16444-27959(DSP:3,BRAM:13), 19047-31695(DSP:3,BRAM:13), 19078-31755(DSP:3,BRAM:13), 19999-32990(DSP:3,BRAM:13), 21092-34368(DSP:3,BRAM:13), 21541-36116(DSP:3,BRAM:13), 23322-27390(DSP:0,BRAM:3), 24139-34755(DSP:0,BRAM:12), 
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Placement Unit Clustering Done. (elapsed time: 37.379 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m SA-based Cluster Placement Start. (elapsed time: 37.379 s)
+  0% [                                                            ]  1% [                                                            ]  2% [|                                                           ]  4% [||                                                          ]  5% [|||                                                         ]  6% [|||                                                         ]  7% [||||                                                        ]  9% [|||||                                                       ] 10% [||||||                                                      ] 12% [|||||||                                                     ] 13% [|||||||                                                     ] 14% [||||||||                                                    ] 16% [|||||||||                                                   ] 17% [||||||||||                                                  ] 18% [|||||||||||                                                 ] 19% [|||||||||||                                                 ] 21% [||||||||||||                                                ] 22% [|||||||||||||                                               ] 24% [||||||||||||||                                              ] 25% [|||||||||||||||                                             ] 26% [||||||||||||||||                                            ] 28% [||||||||||||||||                                            ] 29% [|||||||||||||||||                                           ] 30% [||||||||||||||||||                                          ] 31% [|||||||||||||||||||                                         ] 33% [||||||||||||||||||||                                        ] 34% [||||||||||||||||||||                                        ] 36% [|||||||||||||||||||||                                       ] 37% [||||||||||||||||||||||                                      ] 38% [|||||||||||||||||||||||                                     ] 40% [||||||||||||||||||||||||                                    ] 41% [||||||||||||||||||||||||                                    ] 42% [|||||||||||||||||||||||||                                   ] 43% [||||||||||||||||||||||||||                                  ] 45% [|||||||||||||||||||||||||||                                 ] 46% [||||||||||||||||||||||||||||                                ] 48% [||||||||||||||||||||||||||||                                ] 49% [|||||||||||||||||||||||||||||                               ] 50% [||||||||||||||||||||||||||||||                              ] 52% [|||||||||||||||||||||||||||||||                             ] 53% [||||||||||||||||||||||||||||||||                            ] 54% [||||||||||||||||||||||||||||||||                            ] 56% [|||||||||||||||||||||||||||||||||                           ] 57% [||||||||||||||||||||||||||||||||||                          ] 58% [|||||||||||||||||||||||||||||||||||                         ] 60% [||||||||||||||||||||||||||||||||||||                        ] 61% [||||||||||||||||||||||||||||||||||||                        ] 62% [|||||||||||||||||||||||||||||||||||||                       ] 64% [||||||||||||||||||||||||||||||||||||||                      ] 65% [|||||||||||||||||||||||||||||||||||||||                     ] 66% [||||||||||||||||||||||||||||||||||||||||                    ] 68% [||||||||||||||||||||||||||||||||||||||||                    ] 69% [|||||||||||||||||||||||||||||||||||||||||                   ] 70% [||||||||||||||||||||||||||||||||||||||||||                  ] 72% [|||||||||||||||||||||||||||||||||||||||||||                 ] 73% [||||||||||||||||||||||||||||||||||||||||||||                ] 74% [||||||||||||||||||||||||||||||||||||||||||||                ] 76% [|||||||||||||||||||||||||||||||||||||||||||||               ] 77% [||||||||||||||||||||||||||||||||||||||||||||||              ] 78% [|||||||||||||||||||||||||||||||||||||||||||||||             ] 80% [||||||||||||||||||||||||||||||||||||||||||||||||            ] 81% [||||||||||||||||||||||||||||||||||||||||||||||||            ] 82% [|||||||||||||||||||||||||||||||||||||||||||||||||           ] 84% [||||||||||||||||||||||||||||||||||||||||||||||||||          ] 85% [|||||||||||||||||||||||||||||||||||||||||||||||||||         ] 86% [||||||||||||||||||||||||||||||||||||||||||||||||||||        ] 88% [||||||||||||||||||||||||||||||||||||||||||||||||||||        ] 89% [|||||||||||||||||||||||||||||||||||||||||||||||||||||       ] 90% [||||||||||||||||||||||||||||||||||||||||||||||||||||||      ] 92% [|||||||||||||||||||||||||||||||||||||||||||||||||||||||     ] 93% [||||||||||||||||||||||||||||||||||||||||||||||||||||||||    ] 94% [||||||||||||||||||||||||||||||||||||||||||||||||||||||||    ] 96% [|||||||||||||||||||||||||||||||||||||||||||||||||||||||||   ] 97% [||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  ] 98% [||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ]
+[40;34mReguPlacer INFO: [0m [0;0m[0m SA optimization ratio (finalE/initE) = 0.512321
+[40;34mReguPlacer INFO: [0m [0;0m[0m SA optimization initE = 5357748.225296
+ 1(2.78654e+06) 2(2.76492e+06) 3(2.75496e+06) 4(2.76829e+06) 5(2.77181e+06) 6(2.78512e+06) 7(2.77294e+06) 8(2.79396e+06) 9(2.76438e+06) 10(2.7845e+06)
+ 11(2.77746e+06) 12(2.77208e+06) 13(2.76631e+06) 14(2.78057e+06) 15(2.76893e+06) 16(2.78211e+06) 17(2.78493e+06) 18(2.76141e+06) 19(2.79931e+06) 20(2.76931e+06)
+ 21(2.7778e+06) 22(2.75956e+06) 23(2.7667e+06) 24(2.78694e+06) 25(2.76612e+06) 26(2.77203e+06) 27(2.79059e+06) 28(2.76697e+06) 29(2.77008e+06) 30(2.76121e+06)
+ 31(2.76392e+06) 32(2.76156e+06) 33(2.78529e+06) 34(2.79268e+06) 35(2.76897e+06) 36(2.77597e+06) 37(2.78892e+06) 38(2.77531e+06) 39(2.79298e+06) 40(2.78015e+06)
+ 41(2.78019e+06) 42(2.78511e+06) 43(2.7779e+06) 44(2.80276e+06) 45(2.78038e+06) 46(2.78199e+06) 47(2.7764e+06) 48(2.75595e+06) 49(2.76583e+06) 50(2.78101e+06)
+ 51(2.77722e+06) 52(2.77238e+06) 53(2.76872e+06) 54(2.76481e+06) 55(2.77583e+06) 56(2.77141e+06) 57(2.79769e+06) 58(2.7619e+06) 59(2.78818e+06) 60(2.78012e+06)
+ 61(2.76699e+06) 62(2.78701e+06) 63(2.79118e+06) 64(2.77649e+06) 65(2.77713e+06) 66(2.76984e+06) 67(2.76647e+06) 68(2.77567e+06) 69(2.77182e+06) 70(2.77603e+06)
+ 71(2.77899e+06) 72(2.77185e+06) 73(2.77632e+06) 74(2.7657e+06) 75(2.7573e+06) 76(2.77799e+06) 77(2.7742e+06) 78(2.76249e+06) 79(2.78156e+06) 80(2.77288e+06)
+ 81(2.76889e+06) 82(2.77341e+06) 83(2.77167e+06) 84(2.74951e+06) 85(2.75821e+06) 86(2.79109e+06) 87(2.77296e+06) 88(2.77545e+06) 89(2.78581e+06) 90(2.77842e+06)
+ 91(2.75532e+06) 92(2.77542e+06) 93(2.77369e+06) 94(2.77989e+06) 95(2.75938e+06) 96(2.76899e+06) 97(2.76102e+06) 98(2.78394e+06) 99(2.77658e+06) 100(2.7948e+06)
+ 101(2.76798e+06) 102(2.76962e+06) 103(2.75889e+06) 104(2.7796e+06) 105(2.78852e+06) 106(2.75611e+06) 107(2.76874e+06) 108(2.78569e+06) 109(2.78405e+06) 110(2.79121e+06)
+ 111(2.76177e+06) 112(2.78738e+06) 113(2.75967e+06) 114(2.75655e+06) 115(2.79384e+06) 116(2.78015e+06) 117(2.78904e+06) 118(2.78192e+06) 119(2.78374e+06) 120(2.7882e+06)
+ 121(2.7883e+06) 122(2.76971e+06) 123(2.78293e+06) 124(2.78599e+06) 125(2.77379e+06) 126(2.77572e+06) 127(2.76881e+06) 128(2.76745e+06) 129(2.78389e+06) 130(2.7631e+06)
+ 131(2.76517e+06) 132(2.77352e+06) 133(2.75881e+06) 134(2.76336e+06) 135(2.77344e+06) 136(2.77673e+06) 137(2.77425e+06) 138(2.75779e+06) 139(2.75877e+06) 140(2.76926e+06)
+ 141(2.77926e+06) 142(2.77952e+06) 143(2.76577e+06) 144(2.777e+06) 145(2.77076e+06) 146(2.77895e+06) 147(2.76436e+06) 148(2.76725e+06) 149(2.75669e+06) 150(2.77842e+06)
+ 151(2.78871e+06) 152(2.77541e+06) 153(2.77832e+06) 154(2.75857e+06) 155(2.76643e+06) 156(2.76799e+06) 157(2.80858e+06) 158(2.78007e+06) 159(2.77878e+06) 160(2.77669e+06)
+ 161(2.77482e+06) 162(2.76813e+06) 163(2.77137e+06) 164(2.77508e+06) 165(2.76534e+06) 166(2.77773e+06) 167(2.78022e+06) 168(2.77164e+06) 169(2.76321e+06) 170(2.78587e+06)
+ 171(2.77859e+06) 172(2.76723e+06) 173(2.77461e+06) 174(2.74489e+06) 175(2.78253e+06) 176(2.76803e+06) 177(2.77035e+06) 178(2.78971e+06) 179(2.77076e+06) 180(2.78169e+06)
+ 181(2.76554e+06) 182(2.77681e+06) 183(2.78271e+06) 184(2.77776e+06) 185(2.76533e+06) 186(2.77585e+06) 187(2.78501e+06) 188(2.7791e+06) 189(2.77485e+06) 190(2.76988e+06)
+ 191(2.79524e+06) 192(2.769e+06) 193(2.76593e+06) 194(2.79093e+06) 195(2.78757e+06) 196(2.77566e+06) 197(2.7531e+06) 198(2.78384e+06) 199(2.76931e+06) 200(2.77173e+06)
+ 201(2.78658e+06) 202(2.76528e+06) 203(2.78151e+06) 204(2.77737e+06) 205(2.77231e+06) 206(2.78097e+06) 207(2.78069e+06) 208(2.78325e+06) 209(2.76271e+06) 210(2.7836e+06)
+ 211(2.77291e+06) 212(2.78616e+06) 213(2.77912e+06) 214(2.77471e+06) 215(2.76371e+06) 216(2.76624e+06) 217(2.76772e+06) 218(2.7779e+06) 219(2.76412e+06) 220(2.7826e+06)
+ 221(2.76074e+06) 222(2.77633e+06) 223(2.77506e+06) 224(2.7759e+06) 225(2.76738e+06) 226(2.76426e+06) 227(2.77885e+06) 228(2.77876e+06) 229(2.77309e+06) 230(2.76067e+06)
+ 231(2.79091e+06) 232(2.75825e+06) 233(2.75965e+06) 234(2.77877e+06) 235(2.7711e+06) 236(2.77603e+06) 237(2.77188e+06) 238(2.76465e+06) 239(2.78644e+06) 240(2.76288e+06)
+ 241(2.77264e+06) 242(2.77607e+06) 243(2.77931e+06) 244(2.77313e+06) 245(2.7765e+06) 246(2.76749e+06) 247(2.77679e+06) 248(2.76157e+06) 249(2.77527e+06) 250(2.78061e+06)
+ 251(2.76905e+06) 252(2.77249e+06) 253(2.76712e+06) 254(2.77758e+06) 255(2.75812e+06) 256(2.76402e+06) 257(2.76037e+06) 258(2.76931e+06) 259(2.78129e+06) 260(2.77803e+06)
+ 261(2.78764e+06) 262(2.77339e+06) 263(2.77091e+06) 264(2.77767e+06) 265(2.78096e+06) 266(2.75717e+06) 267(2.77887e+06) 268(2.77215e+06) 269(2.79469e+06) 270(2.7899e+06)
+ 271(2.78075e+06) 272(2.77579e+06) 273(2.79513e+06) 274(2.77951e+06) 275(2.77303e+06) 276(2.79034e+06) 277(2.77836e+06) 278(2.76376e+06) 279(2.78383e+06) 280(2.77723e+06)
+ 281(2.77766e+06) 282(2.78137e+06) 283(2.79348e+06) 284(2.76911e+06) 285(2.76893e+06) 286(2.77381e+06) 287(2.7681e+06) 288(2.76383e+06) 289(2.76397e+06) 290(2.7841e+06)
+ 291(2.78552e+06) 292(2.78274e+06) 293(2.76181e+06) 294(2.75398e+06) 295(2.76939e+06) 296(2.76257e+06) 297(2.77625e+06) 298(2.79142e+06) 299(2.79555e+06) 300(2.79028e+06)
+ 301(2.77048e+06) 302(2.78816e+06) 303(2.76393e+06) 304(2.79769e+06) 305(2.77921e+06) 306(2.77643e+06) 307(2.79799e+06) 308(2.78356e+06) 309(2.80358e+06) 310(2.78642e+06)
+ 311(2.77708e+06) 312(2.74939e+06) 313(2.76688e+06) 314(2.76016e+06) 315(2.76929e+06) 316(2.77459e+06) 317(2.77632e+06) 318(2.78014e+06) 319(2.78484e+06) 320(2.78072e+06)
+ 321(2.79656e+06) 322(2.78962e+06) 323(2.77621e+06) 324(2.7753e+06) 325(2.76425e+06) 326(2.79066e+06) 327(2.79595e+06) 328(2.75925e+06) 329(2.76908e+06) 330(2.77382e+06)
+ 331(2.78029e+06) 332(2.78182e+06) 333(2.77717e+06) 334(2.78366e+06) 335(2.80068e+06) 336(2.77475e+06) 337(2.77992e+06) 338(2.77395e+06) 339(2.79572e+06) 340(2.79583e+06)
+ 341(2.75844e+06) 342(2.77716e+06) 343(2.7742e+06) 344(2.75401e+06) 345(2.77454e+06) 346(2.77496e+06) 347(2.7684e+06) 348(2.75575e+06) 349(2.78041e+06) 350(2.75324e+06)
+ 351(2.75507e+06) 352(2.77098e+06) 353(2.78029e+06) 354(2.76827e+06) 355(2.7651e+06) 356(2.77934e+06) 357(2.77359e+06) 358(2.76164e+06) 359(2.74689e+06) 360(2.77371e+06)
+ 361(2.79043e+06) 362(2.76071e+06) 363(2.77245e+06) 364(2.77158e+06) 365(2.7632e+06) 366(2.76914e+06) 367(2.77467e+06) 368(2.76532e+06) 369(2.77451e+06) 370(2.79515e+06)
+ 371(2.77171e+06) 372(2.7819e+06) 373(2.786e+06) 374(2.75418e+06) 375(2.78246e+06) 376(2.77896e+06) 377(2.77797e+06) 378(2.79115e+06) 379(2.77049e+06) 380(2.78766e+06)
+ 381(2.77558e+06) 382(2.78023e+06) 383(2.77417e+06) 384(2.76736e+06) 385(2.78654e+06) 386(2.76501e+06) 387(2.77785e+06) 388(2.7712e+06) 389(2.77032e+06) 390(2.76767e+06)
+ 391(2.7791e+06) 392(2.76381e+06) 393(2.77594e+06) 394(2.77241e+06) 395(2.78692e+06) 396(2.7821e+06) 397(2.76538e+06) 398(2.76549e+06) 399(2.75994e+06) 400(2.77158e+06)
+ 401(2.76688e+06) 402(2.75589e+06) 403(2.79276e+06) 404(2.75875e+06) 405(2.76264e+06) 406(2.8013e+06) 407(2.80336e+06) 408(2.7787e+06) 409(2.78518e+06) 410(2.75442e+06)
+ 411(2.77629e+06) 412(2.78122e+06) 413(2.78386e+06) 414(2.77955e+06) 415(2.79431e+06) 416(2.79806e+06) 417(2.77638e+06) 418(2.76258e+06) 419(2.77495e+06) 420(2.76701e+06)
+ 421(2.75789e+06) 422(2.78402e+06) 423(2.75565e+06) 424(2.78194e+06) 425(2.77579e+06) 426(2.7747e+06) 427(2.77372e+06) 428(2.78426e+06) 429(2.78994e+06) 430(2.77225e+06)
+ 431(2.77762e+06) 432(2.76792e+06) 433(2.7882e+06) 434(2.80522e+06) 435(2.78525e+06) 436(2.78405e+06) 437(2.77458e+06) 438(2.76178e+06) 439(2.76574e+06) 440(2.77068e+06)
+ 441(2.77115e+06) 442(2.7801e+06) 443(2.76896e+06) 444(2.78775e+06) 445(2.78595e+06) 446(2.78248e+06) 447(2.77977e+06) 448(2.77888e+06) 449(2.76771e+06) 450(2.7965e+06)
+ 451(2.78192e+06) 452(2.75896e+06) 453(2.76629e+06) 454(2.77586e+06) 455(2.75796e+06) 456(2.77616e+06) 457(2.78794e+06) 458(2.7639e+06) 459(2.7772e+06) 460(2.77037e+06)
+ 461(2.78832e+06) 462(2.75416e+06) 463(2.75784e+06) 464(2.76965e+06) 465(2.77833e+06) 466(2.78604e+06) 467(2.78217e+06) 468(2.78064e+06) 469(2.77006e+06) 470(2.76163e+06)
+ 471(2.76828e+06) 472(2.76368e+06) 473(2.76546e+06) 474(2.79239e+06) 475(2.78895e+06) 476(2.76986e+06) 477(2.78646e+06) 478(2.76011e+06) 479(2.77841e+06) 480(2.79184e+06)
+ 481(2.76997e+06) 482(2.78052e+06) 483(2.78615e+06) 484(2.74837e+06) 485(2.76107e+06) 486(2.79921e+06) 487(2.77523e+06) 488(2.77034e+06) 489(2.77322e+06) 490(2.76698e+06)
+ 491(2.78623e+06) 492(2.77281e+06) 493(2.75948e+06) 494(2.78595e+06) 495(2.78637e+06) 496(2.7829e+06) 497(2.78064e+06) 498(2.7903e+06) 499(2.78345e+06) 500(2.76205e+06)
+ 501(2.76653e+06) 502(2.77051e+06) 503(2.772e+06) 504(2.79754e+06) 505(2.75938e+06) 506(2.76983e+06) 507(2.77271e+06) 508(2.77708e+06) 509(2.7707e+06) 510(2.77588e+06)
+ 511(2.78604e+06) 512(2.76856e+06) 513(2.77245e+06) 514(2.77075e+06) 515(2.76325e+06) 516(2.78102e+06) 517(2.77366e+06) 518(2.78502e+06) 519(2.76199e+06) 520(2.76249e+06)
+ 521(2.7544e+06) 522(2.78299e+06) 523(2.78385e+06) 524(2.76189e+06) 525(2.75539e+06) 526(2.79074e+06) 527(2.76612e+06) 528(2.79382e+06) 529(2.78494e+06) 530(2.78071e+06)
+ 531(2.77841e+06) 532(2.77037e+06) 533(2.78228e+06) 534(2.79571e+06) 535(2.78457e+06) 536(2.78548e+06) 537(2.79233e+06) 538(2.74989e+06) 539(2.79533e+06) 540(2.77286e+06)
+ 541(2.7666e+06) 542(2.77443e+06) 543(2.7836e+06) 544(2.75618e+06) 545(2.80334e+06) 546(2.77532e+06) 547(2.76816e+06) 548(2.77226e+06) 549(2.76842e+06) 550(2.77792e+06)
+ 551(2.78442e+06) 552(2.78682e+06) 553(2.78487e+06) 554(2.80417e+06) 555(2.76574e+06) 556(2.77247e+06) 557(2.77962e+06) 558(2.77877e+06) 559(2.79042e+06) 560(2.75816e+06)
+ 561(2.77271e+06) 562(2.78728e+06) 563(2.78179e+06) 564(2.77365e+06) 565(2.76951e+06) 566(2.76477e+06) 567(2.79669e+06) 568(2.77658e+06) 569(2.77925e+06) 570(2.77719e+06)
+ 571(2.78304e+06) 572(2.78172e+06) 573(2.75868e+06) 574(2.75587e+06) 575(2.7953e+06) 576(2.77181e+06) 577(2.78346e+06) 578(2.76657e+06) 579(2.78038e+06) 580(2.78503e+06)
+ 581(2.77784e+06) 582(2.77045e+06) 583(2.77145e+06) 584(2.77143e+06) 585(2.76723e+06) 586(2.76777e+06) 587(2.76606e+06) 588(2.76387e+06) 589(2.78308e+06) 590(2.76592e+06)
+ 591(2.77796e+06) 592(2.75997e+06) 593(2.77314e+06) 594(2.77126e+06) 595(2.79471e+06) 596(2.76818e+06) 597(2.7895e+06) 598(2.7569e+06) 599(2.76463e+06) 600(2.77586e+06)
+
+[40;34mReguPlacer INFO: [0m [0;0m[0m SA final occupied region num = 27
+[40;34mReguPlacer INFO: [0m [0;0m[0m SAPlace handle 27 cluster(s) and the final placement cost is 2744885.053732
+[40;32mReguPlacer STATUS: [0m [0;0m[0m SA-based Cluster Placement Done. (elapsed time: 113.246 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Cluster Placement Done. (elapsed time: 113.537 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m ClusterPlacement Total HPWL = 772291.448455
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer GlobalPlacement_fixedCLB started (elapsed time: 113.569 s)
+[43;31mReguPlacer WARNING: [0m [0;0m[0m addPseudoNetForMacros is disabled according to placer configuration.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m addPseudoNetForMacros is disabled according to placer configuration.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m addPseudoNetForMacros is disabled according to placer configuration.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m addPseudoNetForMacros is disabled according to placer configuration.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m addPseudoNetForMacros is disabled according to placer configuration.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m addPseudoNetForMacros is disabled according to placer configuration.
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#0 Done (elapsed time: 114.240 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer GlobalPlacement_CLBElements started (elapsed time: 114.515 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.000125
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.000250
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=379553.125000 pseudoNetWeight=0.002500
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  0 Done HPWL=379553.125000 (elapsed time: 115.223 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 115.399 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 115.468 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 38 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 129 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 116.429 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 119.785 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 126.043 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  0 Done HPWL=5559194.000000 (elapsed time: 126.081 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=5559194.000000 pseudoNetWeight=0.002500
+[40;34mReguPlacer INFO: [0m [0;0m[0m minHPWL=5559194.000000 progressRatio=0.199782
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=14.646682
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=100000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.000499
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.000665
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1107971.875000 pseudoNetWeight=0.003325
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  1 Done HPWL=1107971.875000 (elapsed time: 126.972 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 127.183 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 127.192 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 21 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 49 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 127.356 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 127.611 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 127.854 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  1 Done HPWL=3533381.000000 (elapsed time: 127.897 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=3533381.000000 pseudoNetWeight=0.003325
+[40;34mReguPlacer INFO: [0m [0;0m[0m minHPWL=3533381.000000 progressRatio=0.498658
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=3.189053
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=100000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.001019
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.001222
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1197443.375000 pseudoNetWeight=0.004075
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  2 Done HPWL=1197443.375000 (elapsed time: 128.755 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 128.991 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 128.996 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 26 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 47 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 129.128 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 129.345 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 129.454 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 129.455 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 129.601 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  2 Done HPWL=2423567.500000 (elapsed time: 129.637 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2423567.500000 pseudoNetWeight=0.004075
+[40;34mReguPlacer INFO: [0m [0;0m[0m minHPWL=2423567.500000 progressRatio=0.655058
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=2.023952
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=100000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.001670
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.001908
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1163302.125000 pseudoNetWeight=0.004771
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  3 Done HPWL=1163302.125000 (elapsed time: 130.854 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 131.102 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 131.107 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 46 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 50 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 131.262 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 803 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 33 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 131.562 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2278 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 32 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 131.846 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 131.846 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 132.021 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  3 Done HPWL=2827358.500000 (elapsed time: 132.055 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2827358.500000 pseudoNetWeight=0.004771
+[40;34mReguPlacer INFO: [0m [0;0m[0m minHPWL=2423567.500000 progressRatio=0.586931
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=2.430459
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=100000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.002564
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.002849
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1234217.125000 pseudoNetWeight=0.005699
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  4 Done HPWL=1234217.125000 (elapsed time: 132.918 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 133.174 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 133.180 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 40 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 54 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 133.333 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 459 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 28 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 133.525 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 133.577 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 133.578 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 133.778 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  4 Done HPWL=2123877.500000 (elapsed time: 133.813 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2123877.500000 pseudoNetWeight=0.005699
+[40;34mReguPlacer INFO: [0m [0;0m[0m minHPWL=2123877.500000 progressRatio=0.722033
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.720830
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=100000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.003596
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.003923
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1264892.875000 pseudoNetWeight=0.006538
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  5 Done HPWL=1264892.875000 (elapsed time: 134.723 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 134.998 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 135.003 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 30 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 56 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 135.189 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 265 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 30 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 135.367 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 135.419 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 135.419 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 135.642 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  5 Done HPWL=1766205.750000 (elapsed time: 135.677 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1766205.750000 pseudoNetWeight=0.006538
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=980714.750000 minHPWL=1766205.750000 err/minHPWL=0.555266 progressRatio=0.818479
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.396328
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=100000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.004851
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.005354
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1208970.250000 pseudoNetWeight=0.007281
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  6 Done HPWL=1208970.250000 (elapsed time: 136.504 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 136.759 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 136.764 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 7 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 49 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 136.938 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 137.151 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 505 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 27 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 137.217 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 137.217 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 137.442 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  6 Done HPWL=1656186.375000 (elapsed time: 137.476 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1656186.375000 pseudoNetWeight=0.007281
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=662020.687500 minHPWL=1656186.375000 err/minHPWL=0.399726 progressRatio=0.827911
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.369915
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=100000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.006528
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.007138
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1179646.500000 pseudoNetWeight=0.008083
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  7 Done HPWL=1179646.500000 (elapsed time: 138.282 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 138.533 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 138.539 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 5 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 60 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 54 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 138.735 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 138.934 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 138.985 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 138.985 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 139.206 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  7 Done HPWL=1578142.125000 (elapsed time: 139.243 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1578142.125000 pseudoNetWeight=0.008083
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=616413.437500 minHPWL=1578142.125000 err/minHPWL=0.390594 progressRatio=0.839776
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.337809
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=100000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.008598
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.009331
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1164272.000000 pseudoNetWeight=0.008941
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  8 Done HPWL=1164272.000000 (elapsed time: 140.061 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 140.311 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 140.316 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 23 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 98 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 140.548 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 865 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 41 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 140.792 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 140.818 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 140.818 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 141.063 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  8 Done HPWL=1524236.000000 (elapsed time: 141.099 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =10000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =10000.000000
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  8 Done (elapsed time: 141.773 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1524236.000000 pseudoNetWeight=0.008941
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=296120.281250 minHPWL=1524236.000000 err/minHPWL=0.194275 progressRatio=0.850749
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.309175
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=8.336961
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.011128
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.012007
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1218465.625000 pseudoNetWeight=0.009855
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  9 Done HPWL=1218465.625000 (elapsed time: 142.591 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 142.845 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 142.851 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 26 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 47 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 143.011 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 433 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 30 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 143.196 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 143.220 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 143.220 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 143.446 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  9 Done HPWL=1497489.375000 (elapsed time: 143.482 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =8.336961
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.544950
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  9 Done (elapsed time: 144.049 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1497489.375000 pseudoNetWeight=0.009855
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=144646.796875 minHPWL=1497489.375000 err/minHPWL=0.096593 progressRatio=0.883628
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.228996
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=8.365707
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumping coordinate archieve to: FinalLUTFF-0.gz (elapsed time: 144.093 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumped coordinate archieve to: FinalLUTFF-0.gz (elapsed time: 145.705 s)
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (ILKN_SITE) is not mapped to bin grid. e.g. [ILKN_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HPIOBDIFFOUTBUF) is not mapped to bin grid. e.g. [HPIOBDIFFOUTBUF_X0Y11]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (XIPHY_FEEDTHROUGH) is not mapped to bin grid. e.g. [XIPHY_FEEDTHROUGH_X2Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (PLL_SELECT_SITE) is not mapped to bin grid. e.g. [PLL_SELECT_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HRIODIFFINBUF) is not mapped to bin grid. e.g. [HRIODIFFINBUF_X0Y10]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HRIODIFFOUTBUF) is not mapped to bin grid. e.g. [HRIODIFFOUTBUF_X0Y8]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (BUFCE_ROW) is not mapped to bin grid. e.g. [BUFCE_ROW_X69Y7]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (RAMBFIFO36) is not mapped to bin grid. e.g. [RAMB36_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (GTYE3_CHANNEL) is not mapped to bin grid. e.g. [GTYE3_CHANNEL_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HARD_SYNC) is not mapped to bin grid. e.g. [HARD_SYNC_X0Y1]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (BUFCE_LEAF_X16) is not mapped to bin grid. e.g. [BUFCE_LEAF_X16_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (CMAC_SITE) is not mapped to bin grid. e.g. [CMAC_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Bin Grid Size: Y: 160 X:29 (elapsed time: 146.011 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Bin Grid for Density Control Created (elapsed time: 146.011 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 146.013 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 146.158 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer GlobalPlacement_CLBElements started (elapsed time: 146.158 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.014095
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.015135
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1161981.500000 pseudoNetWeight=0.010749
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  0 Done HPWL=1161981.500000 (elapsed time: 147.045 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 147.214 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 147.224 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 169 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 619 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 137 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 147.880 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 25 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2376 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 76 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 149.459 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 6 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 794 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 60 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 150.043 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 150.044 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 150.219 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  0 Done HPWL=1652352.625000 (elapsed time: 150.254 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =8.365707
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.571178
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  0 Done (elapsed time: 150.783 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1652352.625000 pseudoNetWeight=0.010749
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=106195.679688 minHPWL=1497489.375000 err/minHPWL=0.070916 progressRatio=0.809577
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.422013
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=8.001771
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.018111
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.019370
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1161173.625000 pseudoNetWeight=0.012003
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  1 Done HPWL=1161173.625000 (elapsed time: 151.610 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 151.807 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 151.816 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 164 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 599 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 114 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 152.268 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 6 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 511 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 44 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 152.641 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 152.737 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 152.738 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 152.938 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  1 Done HPWL=1543834.625000 (elapsed time: 152.972 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =8.001771
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.717709
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  1 Done (elapsed time: 153.470 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1543834.625000 pseudoNetWeight=0.012003
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=81671.000000 minHPWL=1497489.375000 err/minHPWL=0.054539 progressRatio=0.842903
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.329547
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.882105
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.022853
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.024362
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1151351.000000 pseudoNetWeight=0.013263
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  2 Done HPWL=1151351.000000 (elapsed time: 154.327 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 154.600 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 154.606 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 166 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 584 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 78 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 155.043 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 326 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 37 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 155.342 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 279 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 39 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 155.455 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 155.455 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 155.671 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  2 Done HPWL=1472784.750000 (elapsed time: 155.703 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.882105
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.636399
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  2 Done (elapsed time: 156.170 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1472784.750000 pseudoNetWeight=0.013263
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=90055.820312 minHPWL=1472784.750000 err/minHPWL=0.061147 progressRatio=0.862663
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.279180
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.742562
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.028474
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.030267
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1134333.250000 pseudoNetWeight=0.014563
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  3 Done HPWL=1134333.250000 (elapsed time: 156.981 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 157.223 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 22 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 157.230 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 172 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 628 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 73 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 157.578 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 117 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 60 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 157.931 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 325 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 40 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 158.039 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 158.040 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 158.266 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  3 Done HPWL=1434598.375000 (elapsed time: 158.302 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.742562
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.518192
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  3 Done (elapsed time: 158.825 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1434598.375000 pseudoNetWeight=0.014563
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=113809.445312 minHPWL=1434598.375000 err/minHPWL=0.079332 progressRatio=0.868573
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.264706
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.783788
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.035216
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.037341
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1182757.875000 pseudoNetWeight=0.015961
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  4 Done HPWL=1182757.875000 (elapsed time: 159.624 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 159.867 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 159.873 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 162 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 615 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 101 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 160.252 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 63 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 40 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 160.514 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 249 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 38 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 160.615 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 160.615 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 160.844 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  4 Done HPWL=1436108.250000 (elapsed time: 160.882 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.783788
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.337409
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  4 Done (elapsed time: 161.406 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1436108.250000 pseudoNetWeight=0.015961
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=110281.414062 minHPWL=1434598.375000 err/minHPWL=0.076873 progressRatio=0.890072
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.214203
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.773319
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.043050
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.045549
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1135569.500000 pseudoNetWeight=0.017373
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  5 Done HPWL=1135569.500000 (elapsed time: 162.191 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 162.445 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 162.450 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 181 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 752 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 67 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 162.784 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 225 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 35 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 163.062 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 378 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 38 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 163.154 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 163.155 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 163.378 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  5 Done HPWL=1381395.250000 (elapsed time: 163.413 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.773319
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.298969
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  5 Done (elapsed time: 163.898 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1381395.250000 pseudoNetWeight=0.017373
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=90069.617188 minHPWL=1381395.250000 err/minHPWL=0.065202 progressRatio=0.889073
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.216478
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.708264
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumping coordinate archieve to: FinalLUTFF-1.gz (elapsed time: 163.940 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumped coordinate archieve to: FinalLUTFF-1.gz (elapsed time: 165.515 s)
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (ILKN_SITE) is not mapped to bin grid. e.g. [ILKN_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HPIOBDIFFOUTBUF) is not mapped to bin grid. e.g. [HPIOBDIFFOUTBUF_X0Y11]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (XIPHY_FEEDTHROUGH) is not mapped to bin grid. e.g. [XIPHY_FEEDTHROUGH_X2Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (PLL_SELECT_SITE) is not mapped to bin grid. e.g. [PLL_SELECT_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HRIODIFFINBUF) is not mapped to bin grid. e.g. [HRIODIFFINBUF_X0Y10]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HRIODIFFOUTBUF) is not mapped to bin grid. e.g. [HRIODIFFOUTBUF_X0Y8]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (BUFCE_ROW) is not mapped to bin grid. e.g. [BUFCE_ROW_X69Y7]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (RAMBFIFO36) is not mapped to bin grid. e.g. [RAMB36_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (GTYE3_CHANNEL) is not mapped to bin grid. e.g. [GTYE3_CHANNEL_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (HARD_SYNC) is not mapped to bin grid. e.g. [HARD_SYNC_X0Y1]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (BUFCE_LEAF_X16) is not mapped to bin grid. e.g. [BUFCE_LEAF_X16_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Site Type (CMAC_SITE) is not mapped to bin grid. e.g. [CMAC_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined.
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Bin Grid Size: Y: 240 X:44 (elapsed time: 165.826 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Bin Grid for Density Control Created (elapsed time: 165.826 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 165.828 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 165.974 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer GlobalPlacement_CLBElements started (elapsed time: 165.974 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.052424
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.055363
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1176203.625000 pseudoNetWeight=0.018917
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  0 Done HPWL=1176203.625000 (elapsed time: 166.831 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 166.993 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 167.008 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1402 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 5008 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 137 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 169.992 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 66 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3135 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 84 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 171.819 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 16 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1126 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 67 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 172.356 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 172.357 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 172.357 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 174.909 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 174.909 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 174.909 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 175.116 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  0 Done HPWL=1734771.250000 (elapsed time: 175.147 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.708264
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.248269
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  0 Done (elapsed time: 175.611 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1734771.250000 pseudoNetWeight=0.018917
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=166763.750000 minHPWL=1381395.250000 err/minHPWL=0.120721 progressRatio=0.792035
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.474890
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.807605
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.063989
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.065817
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1193810.375000 pseudoNetWeight=0.021239
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  1 Done HPWL=1193810.375000 (elapsed time: 176.436 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 176.635 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 176.645 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 751 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2262 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 292 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 180.046 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 25 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 879 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 75 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 181.130 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 17 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 882 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 102 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 183.448 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 183.448 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 183.448 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 186.006 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 186.006 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 186.006 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 186.234 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  1 Done HPWL=2342876.750000 (elapsed time: 186.269 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.807605
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.453876
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  1 Done (elapsed time: 186.752 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2342876.750000 pseudoNetWeight=0.021239
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=459379.031250 minHPWL=1381395.250000 err/minHPWL=0.332547 progressRatio=0.667285
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.962520
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.911617
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.078905
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.081038
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1273535.750000 pseudoNetWeight=0.024775
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  2 Done HPWL=1273535.750000 (elapsed time: 187.528 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 187.754 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 33 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 187.767 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 948 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3194 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 173 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 190.197 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 13 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 523 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 50 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 190.680 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 17 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 371 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 88 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 192.256 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 192.256 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 192.256 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 194.792 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 194.792 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 194.792 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 195.010 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  2 Done HPWL=2286721.750000 (elapsed time: 195.045 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.911617
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.805035
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  2 Done (elapsed time: 195.513 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2286721.750000 pseudoNetWeight=0.024775
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=611871.062500 minHPWL=1381395.250000 err/minHPWL=0.442937 progressRatio=0.703848
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.795569
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.450523
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.095950
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.098410
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1411052.375000 pseudoNetWeight=0.028581
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  3 Done HPWL=1411052.375000 (elapsed time: 196.352 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 196.652 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 23 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 196.674 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1068 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3729 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 108 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 198.399 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 12 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 512 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 59 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 198.836 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 21 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 576 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 84 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 200.047 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 200.047 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 200.047 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 200.047 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 200.267 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  3 Done HPWL=2119504.250000 (elapsed time: 200.302 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.450523
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.577163
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  3 Done (elapsed time: 200.767 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2119504.250000 pseudoNetWeight=0.028581
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=694801.000000 minHPWL=1381395.250000 err/minHPWL=0.502970 progressRatio=0.783403
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.502073
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=7.138011
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.119238
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.128254
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1417674.125000 pseudoNetWeight=0.032177
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  4 Done HPWL=1417674.125000 (elapsed time: 201.592 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 201.838 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 23 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 201.852 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1022 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3470 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 151 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 204.018 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 11 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 428 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 58 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 204.484 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 15 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 494 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 112 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 205.977 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 205.977 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 205.977 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 208.893 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 208.893 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 208.893 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 209.114 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  4 Done HPWL=2077371.375000 (elapsed time: 209.148 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =7.138011
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.566777
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  4 Done (elapsed time: 209.571 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2077371.375000 pseudoNetWeight=0.032177
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=761331.062500 minHPWL=1381395.250000 err/minHPWL=0.551132 progressRatio=0.795129
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.465338
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=6.970795
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.154653
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.166162
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1434472.125000 pseudoNetWeight=0.036093
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  5 Done HPWL=1434472.125000 (elapsed time: 210.429 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 210.677 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 24 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 210.690 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1069 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3742 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 109 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 212.342 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 18 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 675 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 49 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 212.775 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 340 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 84 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 213.892 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 213.892 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 213.892 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 213.892 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 214.116 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  5 Done HPWL=1987999.375000 (elapsed time: 214.151 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =6.970795
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.539020
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  5 Done (elapsed time: 214.653 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1987999.375000 pseudoNetWeight=0.036093
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=792618.312500 minHPWL=1381395.250000 err/minHPWL=0.573781 progressRatio=0.822177
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.385875
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=6.332718
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumping coordinate archieve to: FinalLUTFF-2.gz (elapsed time: 214.702 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumped coordinate archieve to: FinalLUTFF-2.gz (elapsed time: 216.226 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer GlobalPlacement_CLBElements started (elapsed time: 216.230 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.203424
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.223800
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1422811.500000 pseudoNetWeight=0.040144
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  0 Done HPWL=1422811.500000 (elapsed time: 217.262 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 217.509 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 217.521 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1244 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4421 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 173 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 220.573 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 25 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 929 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 93 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 221.464 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 20 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 589 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 104 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 223.372 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 223.372 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 223.372 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 224.657 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 224.657 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 224.657 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 224.877 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  0 Done HPWL=1880457.875000 (elapsed time: 224.907 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =6.332718
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.446492
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  0 Done (elapsed time: 225.429 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1880457.875000 pseudoNetWeight=0.040144
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=702258.625000 minHPWL=1381395.250000 err/minHPWL=0.508369 progressRatio=0.845922
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.321649
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=5.692869
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.271678
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.298615
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1406043.125000 pseudoNetWeight=0.044316
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  1 Done HPWL=1406043.125000 (elapsed time: 226.255 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 226.565 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 23 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 226.580 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1174 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4150 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 131 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 228.627 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 14 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 524 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 61 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 229.105 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 116 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4113 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 162 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 237.781 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 237.781 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 237.781 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 237.781 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 237.994 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  1 Done HPWL=2363492.000000 (elapsed time: 238.031 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =5.692869
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.282310
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  1 Done (elapsed time: 238.414 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2363492.000000 pseudoNetWeight=0.044316
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=722597.250000 minHPWL=1381395.250000 err/minHPWL=0.523092 progressRatio=0.732262
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.680953
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=5.951529
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.366075
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.392224
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1415266.250000 pseudoNetWeight=0.050685
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  2 Done HPWL=1415266.250000 (elapsed time: 239.248 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 24 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 239.499 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 24 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 239.507 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1363 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 5071 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 85 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 241.084 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 11 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 476 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 49 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 241.469 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 64 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2019 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 92 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 244.582 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 244.583 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 244.583 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 245.786 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 245.786 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 245.786 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 246.011 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  2 Done HPWL=2139091.500000 (elapsed time: 246.053 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =5.951529
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.752586
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  2 Done (elapsed time: 246.596 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2139091.500000 pseudoNetWeight=0.050685
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=726640.500000 minHPWL=1381395.250000 err/minHPWL=0.526019 progressRatio=0.780486
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.511441
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=5.106312
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.473349
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.506762
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1477333.625000 pseudoNetWeight=0.057113
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  3 Done HPWL=1477333.625000 (elapsed time: 247.507 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 247.766 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 247.776 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1489 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 5612 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 87 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 249.404 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 10 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 329 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 41 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 249.746 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 774 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 23937 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 140 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 265.466 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 265.466 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 265.466 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 265.467 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 265.680 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  3 Done HPWL=2628897.500000 (elapsed time: 265.716 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =5.106312
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.392082
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  3 Done (elapsed time: 266.230 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2628897.500000 pseudoNetWeight=0.057113
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=861616.125000 minHPWL=1381395.250000 err/minHPWL=0.623729 progressRatio=0.707657
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.779488
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=5.604064
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.624941
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.668569
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1535022.625000 pseudoNetWeight=0.065813
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  4 Done HPWL=1535022.625000 (elapsed time: 267.038 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 267.341 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 6 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 16 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 43 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 267.365 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1756 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 6778 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 83 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 269.229 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 11 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 442 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 72 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 269.609 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 925 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 29515 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 104 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 280.719 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 280.719 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 280.719 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 280.719 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 280.938 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  4 Done HPWL=2488197.750000 (elapsed time: 280.976 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =5.604064
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.928578
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  4 Done (elapsed time: 281.441 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2488197.750000 pseudoNetWeight=0.065813
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=955924.125000 minHPWL=1381395.250000 err/minHPWL=0.691999 progressRatio=0.748407
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.620952
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=4.653645
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.813708
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=0.869928
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1518863.625000 pseudoNetWeight=0.074899
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  5 Done HPWL=1518863.625000 (elapsed time: 282.235 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 282.483 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 282.493 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1847 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 7252 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 72 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 284.114 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 20 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 850 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 38 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 284.457 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1101 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 34610 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 60 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 292.020 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 292.020 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 292.020 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 292.020 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 292.233 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  5 Done HPWL=2261288.500000 (elapsed time: 292.264 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =4.653645
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.514989
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  5 Done (elapsed time: 292.744 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=2261288.500000 pseudoNetWeight=0.074899
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=1009366.500000 minHPWL=1381395.250000 err/minHPWL=0.730686 progressRatio=0.787585
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.488803
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=3.997357
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumping coordinate archieve to: FinalLUTFF-3.gz (elapsed time: 292.787 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumped coordinate archieve to: FinalLUTFF-3.gz (elapsed time: 294.272 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m Current Total HPWL = 2261288.435790
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker Pairing LUTs and FFs. (elapsed time: 294.308 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m IncrementalBELPacker: LUTTO1FFPackedCnt=48891
+[40;34mReguPlacer INFO: [0m [0;0m[0m IncrementalBELPacker: LUTTOMultiFFPackedCnt=3881
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker Updating Cell-PlacementUnit Mapping (elapsed time: 294.511 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker Loading Nets (elapsed time: 294.581 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker Paired LUTs and FFs (#Pairs = 52772) (elapsed time: 296.202 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker: dumping LUTFFPair archieve to: ../../../Documents/placerDumpData//./DumpLUTFFPair-0.gz (elapsed time: 296.202 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker: dumped LUTFFPair archieve to: ../../../Documents/placerDumpData//./DumpLUTFFPair-0.gz (elapsed time: 296.309 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker Pairing FFs. (elapsed time: 296.363 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m IncrementalBELPacker: 2FFPairedCnt=84862
+[40;34mReguPlacer INFO: [0m [0;0m[0m IncrementalBELPacker: FFCouldBePackedCnt=192608
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker Updating Cell-PlacementUnit Mapping (elapsed time: 296.960 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker Loading Nets (elapsed time: 297.038 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker Paired LUTs and FFs (#Pairs = 52772) (elapsed time: 298.850 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker: dumping LUTFFPair archieve to: ../../../Documents/placerDumpData//./DumpLUTFFPair-1.gz (elapsed time: 298.850 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m IncrementalBELPacker: dumped LUTFFPair archieve to: ../../../Documents/placerDumpData//./DumpLUTFFPair-1.gz (elapsed time: 298.957 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMinX: -0.400000
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMinY: 0.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMaxX: 86.400002
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMaxY: 479.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Placement Unit(s): 263571
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Unpacked Placement Unit(s): 103929
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Macro Placement Unit(s): 159642
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer GlobalPlacement_CLBElements started (elapsed time: 299.052 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=1.045343
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=1.116867
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1469156.375000 pseudoNetWeight=0.084212
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  0 Done HPWL=1469156.375000 (elapsed time: 299.878 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 300.163 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 4 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 7 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 30 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 300.177 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2018 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 7777 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 104 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 303.360 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 16 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 599 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 75 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 304.323 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1038 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 32266 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 99 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 320.383 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 320.383 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 320.383 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 321.525 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 321.525 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 321.525 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 321.761 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  0 Done HPWL=1937014.125000 (elapsed time: 321.792 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =3.997357
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =2.001554
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  0 Done (elapsed time: 322.465 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1937014.125000 pseudoNetWeight=0.084212
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=942157.312500 minHPWL=1381395.250000 err/minHPWL=0.682033 progressRatio=0.847152
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.318453
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=3.794261
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=1.349303
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=1.476801
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1495389.250000 pseudoNetWeight=0.092928
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  1 Done HPWL=1495389.250000 (elapsed time: 323.215 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 323.491 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 25 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 323.498 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2086 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8216 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 58 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 325.343 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 13 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 519 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 56 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 325.809 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 15 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 410 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 62 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 326.684 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 326.684 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 326.684 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 328.009 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 328.009 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 328.009 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 328.276 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  1 Done HPWL=1880381.500000 (elapsed time: 328.310 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =3.794261
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =1.684268
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  1 Done (elapsed time: 329.006 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1880381.500000 pseudoNetWeight=0.092928
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=906993.437500 minHPWL=1381395.250000 err/minHPWL=0.656578 progressRatio=0.871575
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.257453
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=3.440922
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=1.769325
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=1.935453
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1488104.250000 pseudoNetWeight=0.101751
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  2 Done HPWL=1488104.250000 (elapsed time: 329.801 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 23 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 330.078 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 330.090 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2065 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8130 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 64 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 332.007 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 11 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 552 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 48 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 332.476 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 18 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 490 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 86 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 333.393 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 333.393 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 333.393 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 333.393 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 333.631 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  2 Done HPWL=1776863.375000 (elapsed time: 333.666 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =3.440922
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =1.332332
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  2 Done (elapsed time: 334.328 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1776863.375000 pseudoNetWeight=0.101751
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=736657.125000 minHPWL=1381395.250000 err/minHPWL=0.533270 progressRatio=0.899058
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.194045
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=3.438389
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=2.297240
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=2.511649
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1441644.500000 pseudoNetWeight=0.110434
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  3 Done HPWL=1441644.500000 (elapsed time: 335.092 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 335.366 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 335.372 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2097 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8247 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 66 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 337.347 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 16 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 563 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 54 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 337.817 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 22 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 409 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 75 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 339.018 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 339.019 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 339.019 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 340.227 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 340.227 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 340.227 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 340.464 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  3 Done HPWL=1726827.250000 (elapsed time: 340.495 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =3.438389
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =1.212982
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  3 Done (elapsed time: 341.157 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1726827.250000 pseudoNetWeight=0.110434
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=567032.625000 minHPWL=1381395.250000 err/minHPWL=0.410478 progressRatio=0.897358
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.197818
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=3.351814
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=2.981297
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=3.257984
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1416327.375000 pseudoNetWeight=0.119923
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  4 Done HPWL=1416327.375000 (elapsed time: 341.901 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 342.174 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 342.191 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2145 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8524 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 46 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 343.631 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 16 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 643 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 44 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 344.059 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 18 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 235 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 59 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 344.862 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 344.862 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 344.862 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 344.862 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 345.097 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  4 Done HPWL=1674919.125000 (elapsed time: 345.132 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Rough Legalization =3.351814
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Rough Legalization =1.062675
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  4 Done (elapsed time: 345.810 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1674919.125000 pseudoNetWeight=0.119923
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=428852.906250 minHPWL=1381395.250000 err/minHPWL=0.310449 progressRatio=0.904278
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.182579
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=3.280943
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=4.049602
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=4.644607
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1393778.500000 pseudoNetWeight=0.129937
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  5 Done HPWL=1393778.500000 (elapsed time: 346.542 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 346.817 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 24 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 346.824 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2100 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8229 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 63 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 349.024 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 15 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 623 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 50 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 349.563 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 21 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 373 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 61 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 350.450 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 350.450 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 350.450 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 350.450 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 350.685 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  5 Done HPWL=1671908.375000 (elapsed time: 350.718 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Exact Legalization =10000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Exact Legalization =10000.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m CARRY Average Displacement Of Exact Legalization =10000.000000
+[40;32mReguPlacer STATUS: [0m [0;0m[0m mCLBLegalizer: Launch. (elapsed time: 350.718 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m BRAMDSPLegalizer: Launch. (elapsed time: 351.434 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  5 Done (elapsed time: 352.350 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1671908.375000 pseudoNetWeight=0.129937
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=372896.687500 minHPWL=1381395.250000 err/minHPWL=0.269942 progressRatio=0.896579
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.199551
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=2.886244
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=5.509483
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=6.015518
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1341926.750000 pseudoNetWeight=0.141137
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  6 Done HPWL=1341926.750000 (elapsed time: 353.118 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 3 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 21 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 353.390 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 353.398 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2049 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8019 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 65 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 355.397 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 13 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 541 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 68 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 355.959 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 21 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 513 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 80 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 357.115 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 357.115 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 357.115 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 357.115 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 357.349 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  6 Done HPWL=1641392.875000 (elapsed time: 357.384 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Exact Legalization =0.232347
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Exact Legalization =0.705186
+[40;34mReguPlacer INFO: [0m [0;0m[0m CARRY Average Displacement Of Exact Legalization =10000.000000
+[40;32mReguPlacer STATUS: [0m [0;0m[0m CARRYMacroLegalizer: Launch. (elapsed time: 357.384 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  6 Done (elapsed time: 358.251 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1641392.875000 pseudoNetWeight=0.141137
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=320584.250000 minHPWL=1381395.250000 err/minHPWL=0.232073 progressRatio=0.886155
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.223161
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=0.232347
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=0
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=7.156678
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=7.810858
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1326812.750000 pseudoNetWeight=0.153817
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  7 Done HPWL=1326812.750000 (elapsed time: 359.127 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_CARRY8] (elapsed time: 359.397 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 1 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 24 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 359.408 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2107 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8383 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 59 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 361.355 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 10 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 422 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 50 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 361.830 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 13 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 170 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 60 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 362.686 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 362.686 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 362.686 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 362.686 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 362.929 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  7 Done HPWL=1636985.250000 (elapsed time: 362.964 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m DSPBRAM Average Displacement Of Exact Legalization =0.190371
+[40;34mReguPlacer INFO: [0m [0;0m[0m MCLB Average Displacement Of Exact Legalization =0.493867
+[40;34mReguPlacer INFO: [0m [0;0m[0m CARRY Average Displacement Of Exact Legalization =0.835642
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  7 Done (elapsed time: 362.965 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1636985.250000 pseudoNetWeight=0.153817
+[43;31mReguPlacer WARNING: [0m [0;0m[0m macroLocatedAtSite=1 and minHPWL is updated to be: 1638436.375000
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: Routability-oriented area adjustion is reset. (elapsed time: 363.003 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=45327.812500 minHPWL=1638436.375000 err/minHPWL=0.027665 progressRatio=0.881106
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.234866
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=0.190371
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=4.652014
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=5.075315
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1446270.000000 pseudoNetWeight=0.083955
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  8 Done HPWL=1446270.000000 (elapsed time: 363.714 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 363.983 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2139 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8496 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 52 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 365.650 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 9 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 250 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 67 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 366.042 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 11 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 308 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 57 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 366.658 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 366.658 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 366.658 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 366.658 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 366.894 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  8 Done HPWL=1692374.625000 (elapsed time: 366.929 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  8 Done (elapsed time: 366.929 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1692374.625000 pseudoNetWeight=0.083955
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=32770.234375 minHPWL=1638436.375000 err/minHPWL=0.020001 progressRatio=0.910022
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.170165
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=0.190371
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=6.286637
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=7.199018
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1519112.125000 pseudoNetWeight=0.090796
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration#  9 Done HPWL=1519112.125000 (elapsed time: 367.618 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 367.889 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2180 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8489 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 62 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 370.105 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 12 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 419 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 51 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 370.568 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 17 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 273 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 73 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 371.734 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 371.734 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 371.734 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 371.734 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 371.968 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration#  9 Done HPWL=1732013.125000 (elapsed time: 371.998 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration#  9 Done (elapsed time: 371.998 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1732013.125000 pseudoNetWeight=0.090796
+[40;34mReguPlacer INFO: [0m [0;0m[0m err=50586.675781 minHPWL=1638436.375000 err/minHPWL=0.030875 progressRatio=0.924322
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.140148
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=0.190371
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=6.654616
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=7.617797
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1400485.000000 pseudoNetWeight=0.073306
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration# 10 Done HPWL=1400485.000000 (elapsed time: 372.695 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 372.966 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2121 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8371 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 57 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 374.884 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 5 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 155 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 75 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 375.436 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 18 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 579 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 99 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 376.800 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 376.800 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 376.800 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 376.800 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 377.038 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration# 10 Done HPWL=1658985.250000 (elapsed time: 377.070 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration# 10 Done (elapsed time: 377.070 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1658985.250000 pseudoNetWeight=0.073306
+[40;34mReguPlacer INFO: [0m [0;0m[0m minHPWL=1638436.375000 progressRatio=0.903361
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.184579
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=0.190371
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=9.449806
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=10.814048
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1481040.250000 pseudoNetWeight=0.079450
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration# 11 Done HPWL=1481040.250000 (elapsed time: 377.747 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 378.026 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2094 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8399 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 68 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 380.383 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 7 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 228 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 80 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 380.827 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 15 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 333 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 70 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 381.595 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 381.595 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 381.595 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 381.595 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 381.834 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration# 11 Done HPWL=1699045.500000 (elapsed time: 381.866 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration# 11 Done (elapsed time: 381.866 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1699045.500000 pseudoNetWeight=0.079450
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.147197
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=0.190371
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=13.334485
+[40;34mReguPlacer INFO: [0m [0;0m[0m WLOptimizer macroLegalizePseudoNet=15.254834
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after QP=1537413.875000 pseudoNetWeight=0.085622
+[40;32mReguPlacer STATUS: [0m [0;0m[0m WLOptimizer Iteration# 12 Done HPWL=1537413.875000 (elapsed time: 382.572 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF8] (elapsed time: 382.846 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 2188 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 8635 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 48 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_MUXF7] (elapsed time: 384.420 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 5 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 147 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 74 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_LUT] (elapsed time: 384.840 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 17 overflowed bins
+[40;34mReguPlacer INFO: [0m [0;0m[0m found 398 cells in them
+[40;34mReguPlacer INFO: [0m [0;0m[0m spread for 78 iterations
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GeneralSpreader: accomplished spreadPlacementUnits for type: [SLICEL_FF] (elapsed time: 385.744 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 385.744 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 385.744 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 385.744 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 385.987 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Spreader Iteration# 12 Done HPWL=1734745.375000 (elapsed time: 386.020 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Legalization Iteration# 12 Done (elapsed time: 386.020 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m HPWL after LG=1734745.375000 pseudoNetWeight=0.085622
+[40;34mReguPlacer INFO: [0m [0;0m[0m upperBoundHPWL / lowerBoundHPWL=1.128353
+[40;34mReguPlacer INFO: [0m [0;0m[0m averageMacroLegalDisplacementL=0.190371
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLocatedAtSite=1
+[40;34mReguPlacer INFO: [0m [0;0m[0m macroLegalizationFixed=1
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Global Placer: B2B converge (elapsed time: 386.060 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m MacroLegalizer: dumping MacroLegalization archieve to: BRAMDSPLegalizerDumpMacroLegalization-0.gz (elapsed time: 386.060 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m MacroLegalizer: dumped MacroLegalization archieve to: BRAMDSPLegalizerDumpMacroLegalization-0.gz (elapsed time: 386.065 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m MacroLegalizer: dumping MacroLegalization archieve to: CARRYMacroLegalizerDumpMacroLegalization-0.gz (elapsed time: 386.065 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m MacroLegalizer: dumped MacroLegalization archieve to: CARRYMacroLegalizerDumpMacroLegalization-0.gz (elapsed time: 386.078 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m CLBLegalizer: dumping CLBLegalization archieve to: DumpCLBLegalization-0.gz (elapsed time: 386.078 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m CLBLegalizer: dumped CLBLegalization archieve to: DumpCLBLegalization-0.gz (elapsed time: 386.082 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumping coordinate archieve to: FinalLUTFF-4.gz (elapsed time: 386.082 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m GlobalPlacer: dumped coordinate archieve to: FinalLUTFF-4.gz (elapsed time: 387.509 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumping PU information archieve to: PUInfoBeforeFinalPacking.gz (elapsed time: 387.514 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumped PU information archieve to: PUInfoBeforeFinalPacking.gz (elapsed time: 390.123 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m loading PU coordinate archieve from: PUInfoBeforeFinalPacking.gz (elapsed time: 390.129 s)
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Please note that the loaded PU location information should be compatible with the otherinformation in the placer! Otherwise, there could be potential errors
+[43;31mReguPlacer WARNING: [0m [0;0m[0m E.g., the initial packing which creates virtual cells should be done. The bin grid for all cell types should be created.
+[40;34mReguPlacer INFO: [0m [0;0m[0m Current Total HPWL = 1734745.627791
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: CARRY macros are mapped to sites. (elapsed time: 395.858 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: initialized. (elapsed time: 395.858 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: initial packCLBsIteration done. (elapsed time: 396.679 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#0 #Mapped PU=33930 (elapsed time: 396.680 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1734745.627791 (elapsed time: 396.740 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#0 #determined Slice=0 (elapsed time: 396.740 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#0 Distribution:  (elapsed time: 396.740 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#1 #Mapped PU=73668 (elapsed time: 401.165 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1734745.627791 (elapsed time: 401.231 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#1 #determined Slice=0 (elapsed time: 401.231 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#1 Distribution:  (elapsed time: 401.231 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#2 #Mapped PU=113195 (elapsed time: 406.163 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1734745.627791 (elapsed time: 406.238 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#2 #determined Slice=0 (elapsed time: 406.238 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#2 Distribution:  (elapsed time: 406.238 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#3 #Mapped PU=147820 (elapsed time: 411.228 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1714475.193133 (elapsed time: 411.312 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#3 #determined Slice=30013 (elapsed time: 411.312 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#3 Distribution: (1,2301), (2,8088), (3,2782), (6,14120), (14,2722),  (elapsed time: 411.312 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#4 #Mapped PU=178312 (elapsed time: 415.697 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1712259.122015 (elapsed time: 415.787 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#4 #determined Slice=39182 (elapsed time: 415.787 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#4 Distribution: (1,1877), (2,7419), (3,3336), (4,4994), (5,1342), (6,7786), (7,1298), (8,5368), (9,1036), (12,1782), (14,864), (15,221), (16,1003), (17,245), (20,597), (28,14),  (elapsed time: 415.787 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#5 #Mapped PU=202501 (elapsed time: 419.718 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1710452.824303 (elapsed time: 419.823 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#5 #determined Slice=43548 (elapsed time: 419.823 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#5 Distribution: (1,1714), (2,5936), (3,3519), (4,4579), (5,2523), (6,7043), (7,1390), (8,4255), (9,2628), (10,3964), (11,521), (12,1088), (13,174), (14,1515), (15,234), (16,581), (17,234), (18,726), (19,129), (20,305), (21,100), (22,311), (23,51), (26,12), (28,2), (29,2), (30,12),  (elapsed time: 419.823 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#6 #Mapped PU=222455 (elapsed time: 423.063 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1708455.915947 (elapsed time: 423.182 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#6 #determined Slice=46580 (elapsed time: 423.182 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#6 Distribution: (1,1784), (2,6021), (3,2601), (4,4326), (5,2323), (6,5618), (7,2249), (8,4236), (9,2409), (10,2966), (11,1808), (12,4085), (13,445), (14,1124), (15,794), (16,1278), (17,277), (18,550), (19,233), (20,608), (21,113), (22,248), (23,159), (24,238), (25,23), (26,33), (27,3), (28,9), (29,1), (30,6), (31,1), (32,11),  (elapsed time: 423.182 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#7 #Mapped PU=236494 (elapsed time: 425.862 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1709299.207744 (elapsed time: 425.985 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#7 #determined Slice=48671 (elapsed time: 425.985 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#7 Distribution: (1,1815), (2,5804), (3,2411), (4,3896), (5,2407), (6,4647), (7,2535), (8,4195), (9,2443), (10,3265), (11,1646), (12,2704), (13,1417), (14,2779), (15,1278), (16,1043), (17,640), (18,1413), (19,290), (20,614), (21,356), (22,305), (23,161), (24,208), (25,126), (26,197), (27,24), (28,23), (29,3), (30,8), (31,1), (32,8), (33,1), (34,8),  (elapsed time: 425.985 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#8 #Mapped PU=246137 (elapsed time: 428.264 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1714529.034018 (elapsed time: 428.408 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#8 #determined Slice=50180 (elapsed time: 428.408 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#8 Distribution: (1,1868), (2,5364), (3,2304), (4,3805), (5,2125), (6,4278), (7,2474), (8,4088), (9,2650), (10,3508), (11,1991), (12,2549), (13,1619), (14,2601), (15,1543), (16,1442), (17,843), (18,1196), (19,614), (20,1093), (21,581), (22,438), (23,298), (24,310), (25,138), (26,227), (27,94), (28,78), (29,14), (30,22), (31,2), (32,9), (33,3), (34,6), (35,1), (36,4),  (elapsed time: 428.408 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#9 #Mapped PU=252272 (elapsed time: 430.473 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1723025.331124 (elapsed time: 430.611 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#9 #determined Slice=51058 (elapsed time: 430.611 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#9 Distribution: (1,1891), (2,4989), (3,2195), (4,3682), (5,2039), (6,3830), (7,2439), (8,3772), (9,2669), (10,3367), (11,2355), (12,2904), (13,1795), (14,2577), (15,1724), (16,1668), (17,995), (18,1188), (19,762), (20,1138), (21,680), (22,648), (23,519), (24,424), (25,203), (26,267), (27,111), (28,113), (29,30), (30,49), (31,6), (32,9), (33,3), (34,9), (35,3), (36,4), (38,1),  (elapsed time: 430.611 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#10 #Mapped PU=255832 (elapsed time: 432.419 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1733622.835494 (elapsed time: 432.551 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#10 #determined Slice=51537 (elapsed time: 432.551 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#10 Distribution: (1,1895), (2,4690), (3,2131), (4,3590), (5,1969), (6,3607), (7,2317), (8,3593), (9,2544), (10,3273), (11,2383), (12,2969), (13,2065), (14,2736), (15,1855), (16,1759), (17,1184), (18,1360), (19,823), (20,1150), (21,747), (22,747), (23,656), (24,498), (25,238), (26,312), (27,131), (28,160), (29,37), (30,60), (31,19), (32,17), (33,2), (34,11), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 432.551 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#11 #Mapped PU=257646 (elapsed time: 434.391 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1744086.452693 (elapsed time: 434.533 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#11 #determined Slice=51769 (elapsed time: 434.533 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#11 Distribution: (1,1878), (2,4490), (3,2014), (4,3539), (5,1928), (6,3503), (7,2314), (8,3380), (9,2454), (10,3183), (11,2441), (12,2918), (13,2156), (14,2850), (15,1931), (16,1883), (17,1288), (18,1450), (19,984), (20,1216), (21,797), (22,818), (23,700), (24,515), (25,278), (26,320), (27,159), (28,191), (29,50), (30,71), (31,22), (32,20), (33,3), (34,16), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 434.533 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#12 #Mapped PU=258467 (elapsed time: 436.157 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1753302.474283 (elapsed time: 436.301 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#12 #determined Slice=51881 (elapsed time: 436.301 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#12 Distribution: (1,1852), (2,4375), (3,1976), (4,3477), (5,1882), (6,3391), (7,2241), (8,3293), (9,2483), (10,3152), (11,2430), (12,2915), (13,2191), (14,2882), (15,1973), (16,1973), (17,1337), (18,1520), (19,1069), (20,1287), (21,837), (22,856), (23,716), (24,535), (25,313), (26,337), (27,172), (28,198), (29,61), (30,77), (31,25), (32,26), (33,2), (34,18), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 436.302 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#13 #Mapped PU=258779 (elapsed time: 437.837 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1760625.637331 (elapsed time: 437.977 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#13 #determined Slice=51935 (elapsed time: 437.977 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#13 Distribution: (1,1842), (2,4316), (3,1940), (4,3431), (5,1854), (6,3342), (7,2212), (8,3263), (9,2419), (10,3120), (11,2452), (12,2975), (13,2202), (14,2910), (15,2007), (16,1984), (17,1372), (18,1567), (19,1092), (20,1325), (21,867), (22,867), (23,744), (24,544), (25,321), (26,350), (27,184), (28,208), (29,64), (30,80), (31,24), (32,25), (33,3), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 437.977 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#14 #Mapped PU=258906 (elapsed time: 439.393 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1765160.232143 (elapsed time: 439.561 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#14 #determined Slice=51963 (elapsed time: 439.561 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#14 Distribution: (1,1834), (2,4290), (3,1917), (4,3425), (5,1846), (6,3312), (7,2186), (8,3240), (9,2399), (10,3107), (11,2442), (12,3014), (13,2236), (14,2909), (15,2020), (16,1997), (17,1392), (18,1571), (19,1123), (20,1345), (21,873), (22,865), (23,754), (24,547), (25,332), (26,356), (27,188), (28,211), (29,64), (30,84), (31,26), (32,26), (33,3), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 439.561 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#15 #Mapped PU=258986 (elapsed time: 440.909 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1767865.023116 (elapsed time: 441.066 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#15 #determined Slice=51976 (elapsed time: 441.066 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#15 Distribution: (1,1829), (2,4286), (3,1907), (4,3407), (5,1836), (6,3306), (7,2196), (8,3218), (9,2402), (10,3093), (11,2440), (12,3012), (13,2240), (14,2931), (15,2018), (16,2004), (17,1403), (18,1576), (19,1136), (20,1351), (21,872), (22,882), (23,755), (24,542), (25,337), (26,359), (27,188), (28,217), (29,64), (30,85), (31,25), (32,26), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 441.066 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#16 #Mapped PU=259017 (elapsed time: 442.128 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1769174.883151 (elapsed time: 442.279 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#16 #determined Slice=51978 (elapsed time: 442.279 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#16 Distribution: (1,1828), (2,4281), (3,1908), (4,3400), (5,1828), (6,3303), (7,2191), (8,3214), (9,2405), (10,3094), (11,2445), (12,3002), (13,2246), (14,2928), (15,2017), (16,2009), (17,1404), (18,1581), (19,1140), (20,1357), (21,877), (22,882), (23,757), (24,542), (25,338), (26,358), (27,188), (28,220), (29,65), (30,86), (31,25), (32,26), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 442.279 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#17 #Mapped PU=259034 (elapsed time: 443.171 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1769890.067689 (elapsed time: 443.309 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#17 #determined Slice=51980 (elapsed time: 443.309 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#17 Distribution: (1,1826), (2,4281), (3,1903), (4,3401), (5,1829), (6,3301), (7,2189), (8,3212), (9,2402), (10,3097), (11,2446), (12,3001), (13,2246), (14,2924), (15,2021), (16,2012), (17,1406), (18,1583), (19,1143), (20,1353), (21,875), (22,888), (23,759), (24,541), (25,338), (26,358), (27,189), (28,221), (29,65), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 443.309 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#18 #Mapped PU=259044 (elapsed time: 443.994 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1770364.676921 (elapsed time: 444.132 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#18 #determined Slice=51980 (elapsed time: 444.132 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#18 Distribution: (1,1825), (2,4279), (3,1902), (4,3403), (5,1829), (6,3300), (7,2187), (8,3209), (9,2398), (10,3096), (11,2453), (12,3001), (13,2246), (14,2926), (15,2017), (16,2011), (17,1410), (18,1582), (19,1143), (20,1353), (21,878), (22,888), (23,760), (24,541), (25,338), (26,359), (27,190), (28,221), (29,65), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 444.132 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#19 #Mapped PU=259047 (elapsed time: 444.616 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1770708.119638 (elapsed time: 444.758 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#19 #determined Slice=51980 (elapsed time: 444.758 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#19 Distribution: (1,1825), (2,4278), (3,1901), (4,3402), (5,1829), (6,3297), (7,2187), (8,3213), (9,2397), (10,3094), (11,2451), (12,3004), (13,2249), (14,2924), (15,2016), (16,2012), (17,1410), (18,1584), (19,1143), (20,1353), (21,878), (22,888), (23,759), (24,541), (25,340), (26,358), (27,191), (28,221), (29,65), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 444.758 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#20 #Mapped PU=259049 (elapsed time: 445.102 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1770837.262222 (elapsed time: 445.239 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#20 #determined Slice=51980 (elapsed time: 445.239 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#20 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3213), (9,2397), (10,3096), (11,2451), (12,3003), (13,2251), (14,2924), (15,2016), (16,2012), (17,1408), (18,1583), (19,1145), (20,1354), (21,877), (22,888), (23,760), (24,541), (25,339), (26,357), (27,193), (28,221), (29,65), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 445.239 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#21 #Mapped PU=259050 (elapsed time: 445.510 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1770926.943175 (elapsed time: 445.651 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#21 #determined Slice=51980 (elapsed time: 445.651 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#21 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2396), (10,3098), (11,2452), (12,3001), (13,2251), (14,2925), (15,2017), (16,2012), (17,1408), (18,1583), (19,1144), (20,1354), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 445.651 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#22 #Mapped PU=259050 (elapsed time: 445.884 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1770983.663564 (elapsed time: 446.024 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#22 #determined Slice=51980 (elapsed time: 446.024 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#22 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2396), (10,3098), (11,2452), (12,2999), (13,2251), (14,2927), (15,2017), (16,2012), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 446.024 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#23 #Mapped PU=259050 (elapsed time: 446.248 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1770994.399155 (elapsed time: 446.396 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#23 #determined Slice=51980 (elapsed time: 446.396 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#23 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2453), (12,2999), (13,2251), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 446.396 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#24 #Mapped PU=259050 (elapsed time: 446.624 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1771002.586753 (elapsed time: 446.770 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#24 #determined Slice=51980 (elapsed time: 446.770 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#24 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2452), (12,2999), (13,2252), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 446.770 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#25 #Mapped PU=259050 (elapsed time: 447.003 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1771002.586753 (elapsed time: 447.143 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#25 #determined Slice=51980 (elapsed time: 447.143 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#25 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2452), (12,2999), (13,2252), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 447.143 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#26 #Mapped PU=259050 (elapsed time: 447.372 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1771002.586753 (elapsed time: 447.517 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#26 #determined Slice=51980 (elapsed time: 447.517 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#26 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2452), (12,2999), (13,2252), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 447.517 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#27 #Mapped PU=259050 (elapsed time: 447.740 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1771002.586753 (elapsed time: 447.889 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#27 #determined Slice=51980 (elapsed time: 447.889 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#27 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2452), (12,2999), (13,2252), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 447.889 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#28 #Mapped PU=259050 (elapsed time: 448.125 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1771002.586753 (elapsed time: 448.288 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#28 #determined Slice=51980 (elapsed time: 448.288 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#28 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2452), (12,2999), (13,2252), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 448.288 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#29 #Mapped PU=259050 (elapsed time: 448.573 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1771002.586753 (elapsed time: 448.731 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#29 #determined Slice=51980 (elapsed time: 448.731 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#29 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2452), (12,2999), (13,2252), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 448.731 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#30 #Mapped PU=259050 (elapsed time: 448.990 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1771002.586753 (elapsed time: 449.155 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#30 #determined Slice=51980 (elapsed time: 449.155 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#30 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2452), (12,2999), (13,2252), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 449.155 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#31 #Mapped PU=259050 (elapsed time: 449.385 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: current HPWL=1771002.586753 (elapsed time: 449.536 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#31 #determined Slice=51980 (elapsed time: 449.536 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: iter#31 Distribution: (1,1824), (2,4278), (3,1902), (4,3402), (5,1828), (6,3297), (7,2185), (8,3211), (9,2395), (10,3098), (11,2452), (12,2999), (13,2252), (14,2926), (15,2017), (16,2013), (17,1408), (18,1582), (19,1144), (20,1355), (21,878), (22,888), (23,759), (24,541), (25,340), (26,357), (27,192), (28,221), (29,66), (30,85), (31,25), (32,27), (33,4), (34,20), (35,2), (36,5), (37,1), (38,1),  (elapsed time: 449.536 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: finish iterative packing (elapsed time: 449.536 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: start exceptionHandling. (elapsed time: 449.807 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: starting parallel ripping up for 145 PUs and current displacement threshold for ripping up is 3.000000 (elapsed time: 449.807 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker: there are 0 PUs left to be legalized and current displacement threshold for ripping up is 4.800000 (elapsed time: 450.230 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m there are 0 FFs(avgW=-nan) and 0 LUTs(avgW=-nan) 
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker::exceptionHandling done! (elapsed time: 450.230 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m Current Total HPWL = 1771538.381933
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker Updating Cell-PlacementUnit Mapping (elapsed time: 451.443 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m ParallelCLBPacker Loading Nets (elapsed time: 451.531 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF Utilization (elapsed time: 453.909 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Packablity (elapsed time: 453.909 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Packablity (elapsed time: 455.081 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF Utilization (elapsed time: 455.081 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusting LUT/FF utilization based on Routability (elapsed time: 455.081 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: adjusted LUT/FF utilization based on Routability (elapsed time: 455.313 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumping congestion rate to: congestionInfo (elapsed time: 455.313 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMinX: -0.400000
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMinY: 0.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMaxX: 86.400002
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMaxY: 479.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Placement Unit(s): 56357
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Unpacked Placement Unit(s): 3409
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Macro Placement Unit(s): 52948
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumping PU information archieve to: PUInfoBeforeFinal.gz (elapsed time: 455.902 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumped PU information archieve to: PUInfoBeforeFinal.gz (elapsed time: 457.844 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m loading PU coordinate archieve from: PUInfoBeforeFinal.gz (elapsed time: 457.848 s)
+[43;31mReguPlacer WARNING: [0m [0;0m[0m Please note that the loaded PU location information should be compatible with the otherinformation in the placer! Otherwise, there could be potential errors
+[43;31mReguPlacer WARNING: [0m [0;0m[0m E.g., the initial packing which creates virtual cells should be done. The bin grid for all cell types should be created.
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumping PU information archieve to: placement.tcl (elapsed time: 463.944 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumped PU information archieve to: placement.tcl (elapsed time: 463.974 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMinX: -0.400000
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMinY: 0.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMaxX: 86.400002
+[40;34mReguPlacer INFO: [0m [0;0m[0m globalMaxY: 479.000000
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Placement Unit(s): 56357
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Unpacked Placement Unit(s): 3409
+[40;34mReguPlacer INFO: [0m [0;0m[0m Total Macro Placement Unit(s): 52948
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumping PU information archieve to: PUInfoFinal.gz (elapsed time: 463.975 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m PlacementInfo: dumped PU information archieve to: PUInfoFinal.gz (elapsed time: 465.934 s)
+[40;32mReguPlacer STATUS: [0m [0;0m[0m Placement Done (elapsed time: 465.939 s)
+[40;34mReguPlacer INFO: [0m [0;0m[0m Current Total HPWL = 1771538.381933

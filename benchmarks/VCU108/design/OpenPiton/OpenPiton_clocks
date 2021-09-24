@@ -1,0 +1,17 @@
+chipset/clk_mmcm/inst/clkf_buf/O
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+chipset/chipset_impl/piton_sd_top/sd_init/FSM_sequential_cb_state[1]_i_3_bufg_place/O
+chipset/chipset_impl/mc_top/i_ddr4_0/inst/u_ddr4_infrastructure/u_bufg_riuClk/O
+chipset/clk_mmcm/inst/clkout1_buf/O
+chipset/clk_mmcm/inst/clk_in1_clk_mmcm_BUFG_inst/O
+DOUTA_reg[65]_i_2__0/O
+chipset/chipset_impl/piton_sd_top/sdc_controller/clock_divider0/sd_clk_bufgmux/O
+chipset/chipset_impl/mc_top/i_ddr4_0/inst/u_ddr4_infrastructure/u_bufg_dbg_clk/O
+chipset/chipset_rst_n_ff_reg_bufg_place/O
+DOUTA_reg[65]_i_2/O
+chipset/chipset_impl/mc_top/i_ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/inst/u_ddr4_phy_pll/sys_clk_in_BUFGCE_collapsed_inst/O
+chipset/chipset_impl/mc_top/i_ddr4_0/inst/u_ddr4_infrastructure/u_bufg_divClk/O
+chip/tile0/g_ariane_core.core/i_sync/syncdata_reg[0]_0_BUFG_inst/O
+chip/tile1/g_ariane_core.core/i_sync/syncdata_reg[0]_0_BUFG_inst/O
+chip/tile0/rst_n_f_reg__0_rep__1_bufg_place/O
+chipset/clk_mmcm/inst/clkout3_buf/O

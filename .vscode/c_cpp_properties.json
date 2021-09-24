@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/src/lib/HiFPlacer/designInfo",
+                "${workspaceFolder}/src/lib/HiFPlacer/deviceInfo",
+                "${workspaceFolder}/src/lib/HiFPlacer/placement/globalPlacement",
+                "${workspaceFolder}/src/lib/HiFPlacer/placement/legalization",
+                "${workspaceFolder}/src/lib/HiFPlacer/placement/packing",
+                "${workspaceFolder}/src/lib/HiFPlacer/placement/packing",
+                "${workspaceFolder}/src/lib/HiFPlacer/problemSolvers",
+                "${workspaceFolder}/src/lib/HiFPlacer/placement/placementInfo",
+                "${workspaceFolder}/src/lib/utils"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "go2sh.cmake-integration"
+        }
+    ],
+    "version": 4
+}

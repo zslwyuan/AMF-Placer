@@ -1,0 +1,8 @@
+u_board/u_mig_ultrascale/inst/u_ddr4_infrastructure/u_bufg_riuClk/O
+u_board/u_mig_ultrascale/inst/u_ddr4_infrastructure/u_bufg_divClk/O
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+u_board/BUFGCE_DIV_CLK1_inst/O
+u_board/u_mig_ultrascale/inst/u_ddr4_infrastructure/u_bufg_dbg_clk/O
+u_glip/u_control/itlb_trans_spr_cs_r_i_1_bufg_place/O
+u_board/u_mig_ultrascale/inst/u_ddr4_infrastructure/u_bufg_inst/O
+u_glip/u_control/FSM_sequential_state[1]_i_1__177_bufg_place/O
