@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AMF-Placer: Related Pages</title>
+<title>AMF-Placer: Implementation Explanation</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('pages.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('explanation.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -82,21 +82,21 @@ $(document).ready(function(){initNavTree('pages.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Related Pages</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Implementation Explanation </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all related documentation pages:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="explanation.html" target="_self">Implementation Explanation</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="_my.html" target="_self">test page</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="get_started.html" target="_self">Get Started</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="intro.html" target="_self">Introduction</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="publication.html" target="_self">Publications</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="md__r_e_a_d_m_e.html" target="_self">README</a></td><td class="desc"></td></tr>
-</table>
-</div><!-- directory -->
-</div><!-- contents -->
+<div class="textblock"><p ><a class="anchor" id="md_doc_pages_explanation"></a> Here, we will explain the placement flow by going through the functionality of the major modules in the placer. Of course, you can also make full use of the Doxygen diagram to trace the call graphs to understand their relationship. We try to avoid multi-level class during implementation so it is easier for beginners to trace the call graphs.</p>
+<ol type="1">
+<li><a class="el" href="class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections.">DesignInfo</a></li>
+<li><a class="el" href="class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion.">DeviceInfo</a></li>
+<li><a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a></li>
+<li><a class="el" href="class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement.">PlacementTimingInfo</a></li>
+<li><a class="el" href="class_global_placer.html" title="GlobalPlacer accounts for the general iterations in global placement.">GlobalPlacer</a></li>
+<li><a class="el" href="class_initial_packer.html">InitialPacker</a> 7..... </li>
+</ol>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -25,7 +25,11 @@
 var NAVTREE =
 [
   [ "AMF-Placer", "index.html", [
+    [ "Implementation Explanation", "explanation.html", null ],
     [ "test page", "_my.html", null ],
+    [ "Get Started", "get_started.html", null ],
+    [ "Introduction", "intro.html", null ],
+    [ "Publications", "publication.html", null ],
     [ "README", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -74,9 +78,9 @@ var NAVTREEINDEX =
 "class_placement_info_1_1_compatible_placement_table.html#acb6784c1b88ff54941384d25fb481c23",
 "class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2",
 "class_vivado_graph_util_1_1_vivado_cell.html#adc3960e5c7d0cb7d4f39dab987cee1ef",
-"functions_vars_h.html",
-"namespacepaint_placement.html#ae12a8fd093f1782980ae7f898709bf8d",
-"struct_placement_info_1_1_location.html"
+"functions_vars_g.html",
+"namespacepaint_placement.html#aa6ea21837ec483004a9361df0c12cd8c",
+"struct_placement_info_1_1_cell_bin_info.html#a21f7c173cac781ac8e11bc933eb46e69"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
