@@ -36,7 +36,7 @@ For commercial usage of this open-source project, users must contact authors (We
 1. supports placeemnt with a large number of mixed-size macros with shape constraints in practical FPGA applications.
 2. a set of optional optimization techniques to improve mixed-size FPGA placement QoR
 3. parallelize the implementation of each stage of placement based on multi-threading
-4. modularized function implementation for easier further development
+4. modularized function implementation for easier further development 
 5. flexible and extensible JSON-based placement configuration
 6. a set of pre-implementation benchmarks from latest practical FPGA applications
 
