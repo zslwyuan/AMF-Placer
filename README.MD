@@ -10,7 +10,7 @@ a series of new techniques for wirelength optimization, cell spreading, packing,
 of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results
 indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the
 baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure
-can be accelerated by 2.41x on average.
+can be accelerated by 2.41x on average. Detailed Docygen-based documentation can be accessed **[here](https://zslwyuan.github.io/AMF-Placer/)**.
 
 **License**
 
@@ -42,7 +42,7 @@ For commercial usage of this open-source project, users must contact authors (We
 
 **Implementation Overview**
 
-<img src="overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
+<img src="https://zslwyuan.github.io/AMF-Placer/overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
 
 **Project Hiearchy**
 
@@ -87,11 +87,11 @@ Apart from the fundamental mechanisms to support macro placement, some optional 
 
 Below are the comparison data which are normalized. We will keep improving our implementation.
 
-<img src="data.png" alt="Experimental Data" title="Experimental Data" width="800" /> 
+<img src="https://zslwyuan.github.io/AMF-Placer/data.png" alt="Experimental Data" title="Experimental Data" width="800" /> 
 
 Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.
 
-<img src="placement.png" alt="Placement" title="Placement" width="800" /> 
+<img src="https://zslwyuan.github.io/AMF-Placer/placement.png" alt="Placement" title="Placement" width="800" /> 
 
 **Dependencies**
 1. opengl, freeglut, glew
