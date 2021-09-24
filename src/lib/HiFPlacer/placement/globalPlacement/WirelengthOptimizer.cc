@@ -422,12 +422,14 @@ void WirelengthOptimizer::adjustHighFanoutPULocation(float pesudoNetWeight)
 
 void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeight, double disExpected)
 {
+    assert(placementInfo->getTimingInfo());
     if (levelThr < 4)
         return;
 
     float maxEnhanceRatio = 0;
     auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
     auto &cellLoc = placementInfo->getCellId2location();
+    assert(cellLoc.size() == timingNodes.size());
 
     float powFactor = 0.5 + 0.2 * placementInfo->getProgress();
     // std::ofstream outfile0("timingOptProc.log");

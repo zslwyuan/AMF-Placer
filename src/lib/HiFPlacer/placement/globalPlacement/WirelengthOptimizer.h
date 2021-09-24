@@ -43,6 +43,21 @@ class WirelengthOptimizer
         if (ySolver)
             delete ySolver;
     }
+
+    /**
+     * @brief use quadratic model to estimate the HPWL and some timing/user-defined pseudo nets are involved for
+     * specific optimization
+     *
+     * @param pesudoNetWeight the common weight factor for pseudo nets
+     * @param firstIteration indicates whether this is the first iteration of current round of WL optimization to
+     * control the data loading
+     * @param forwardSolutionToNextIteration if this round of WL optimization includes multiple iterations, do we
+     * forward the location data obtained in last iteration for later processing?
+     * @param enableMacroPseudoNet2Site
+     * @param considerNetNum whether add the interconnection-density-aware factor to pseudo net weights
+     * @param enableUserDefinedClusterOpt whether check user-defined cluster information to add pseudo nets
+     * @param timingOpt whether turn on the timing-oriented optimizations
+     */
     void GlobalPlacementQPSolve(float pesudoNetWeight, bool firstIteration = true,
                                 bool forwardSolutionToNextIteration = false, bool enableMacroPseudoNet2Site = false,
                                 bool considerNetNum = true, bool enableUserDefinedClusterOpt = false,
