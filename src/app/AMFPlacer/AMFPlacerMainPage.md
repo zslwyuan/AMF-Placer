@@ -45,4 +45,7 @@ For commercial usage of this open-source project, users must contact authors (We
 
 <img src="overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
 
+**Acknowledgement**
+We sincerely appreciate the kindly suggestions from reviewers, detailed explanations of UTPlaceF from [Dr. Wuxi Li](http://wuxili.net/#about), useful advice on Vivado metric usages from Dr. Stephen Yang and fruitful discussion on some previous works with [Ms. Yun Zhou](https://github.com/YunxZhou).
+
 (last updated Aug 17, 2021)
