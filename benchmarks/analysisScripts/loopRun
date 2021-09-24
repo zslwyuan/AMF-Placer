@@ -1,4 +1,0 @@
-while true
-do
-    ./ReguPlacer ../benchmarks/testConfig/minimap_GENE.json
-done
