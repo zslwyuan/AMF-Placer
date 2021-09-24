@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p ><b>Introduction</b></p>
-<p >To enable the performance optimization of application mapping on modern field-programmable gate arrays (FPGAs), certain critical path portions of the designs might be prearranged into many multi-cell macros during synthesis. These movable macros with constraints of shape and resources lead to challenging mixed-size placement for FPGA designs which cannot be addressed by previous works of analytical placers. In this work, we propose AMF-Placer, an open-source analytical mixed-size FPGA placer supporting mixed-size placement on FPGA, with an interface to Xilinx Vivado. To speed up the convergence and improve the quality of the placement, AMF-Placer is equipped with a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Based on a set of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure can be accelerated by 2.41x on average.</p>
+<p >To enable the performance optimization of application mapping on modern field-programmable gate arrays (FPGAs), certain critical path portions of the designs might be prearranged into many multi-cell macros during synthesis. These movable macros with constraints of shape and resources lead to challenging mixed-size placement for FPGA designs which cannot be addressed by previous works of analytical placers. In this work, we propose AMF-Placer, an open-source analytical mixed-size FPGA placer supporting mixed-size placement on FPGA, with an interface to Xilinx Vivado. To speed up the convergence and improve the quality of the placement, AMF-Placer is equipped with a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Based on a set of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure can be accelerated by 2.41x on average. Detailed Docygen-based documentation can be accessed <b><a href="https://zslwyuan.github.io/AMF-Placer/">here</a></b>.</p>
 <p ><b>License</b></p>
 <p >For non-commercial usage of this open-source project, users should comply the Apache License attached in the root directory. For commercial usage of this open-source project, users must contact authors (Wei ZHANG, <a href="#" onclick="location.href='mai'+'lto:'+'eew'+'ei'+'z@u'+'st'+'.hk'; return false;">eewei<span style="display: none;">.nosp@m.</span>z@us<span style="display: none;">.nosp@m.</span>t.hk</a>; Tingyuan LIANG, <a href="#" onclick="location.href='mai'+'lto:'+'tli'+'an'+'g@c'+'on'+'nec'+'t.'+'ust'+'.h'+'k'; return false;">tlian<span style="display: none;">.nosp@m.</span>g@co<span style="display: none;">.nosp@m.</span>nnect<span style="display: none;">.nosp@m.</span>.ust<span style="display: none;">.nosp@m.</span>.hk</a>) for authorization.</p>
 <p ><b>Publications</b></p>
@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>a set of pre-implementation benchmarks from latest practical FPGA applications</li>
 </ol>
 <p ><b>Implementation Overview</b></p>
-<p ><img src="overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" class="inline"/></p>
+<p ><img src="https://zslwyuan.github.io/AMF-Placer/overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" class="inline"/></p>
 <p ><b>Project Hiearchy</b></p>
 <p >Below is a hiearchy tree of this project. As for the details, please refer to the class information and collaboration diagram in the Doxygen documentation and trace the implementation, e.g., <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a>, <a class="el" href="class_global_placer.html" title="GlobalPlacer accounts for the general iterations in global placement.">GlobalPlacer</a>, and <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a>. </p><div class="fragment"><div class="line">├── benchmarks  // benchmark information</div>
 <div class="line">│   ├── analysisScripts  // experimental result analysis Python scripts</div>
@@ -147,9 +147,9 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <li>progressive macro legalization</li>
 </ol>
 <p >Below are the comparison data which are normalized. We will keep improving our implementation.</p>
-<p ><img src="data.png" alt="Experimental Data" title="Experimental Data" width="800" class="inline"/></p>
+<p ><img src="https://zslwyuan.github.io/AMF-Placer/data.png" alt="Experimental Data" title="Experimental Data" width="800" class="inline"/></p>
 <p >Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.</p>
-<p ><img src="placement.png" alt="Placement" title="Placement" width="800" class="inline"/></p>
+<p ><img src="https://zslwyuan.github.io/AMF-Placer/placement.png" alt="Placement" title="Placement" width="800" class="inline"/></p>
 <p ><b>Dependencies</b></p><ol type="1">
 <li>opengl, freeglut, glew</li>
 <li>eigen 3.3.8 (source code included)</li>
