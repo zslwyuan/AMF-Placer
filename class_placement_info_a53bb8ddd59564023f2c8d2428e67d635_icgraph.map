@@ -34,7 +34,7 @@
 <area shape="rect" id="node47" href="$class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title=" " alt="" coords="1469,1620,1664,1661"/>
 <area shape="rect" id="node48" href="$class_wirelength_optimizer.html#a431184067de089857b584da070404661" title="Construct a new Wirelength Optimizer object." alt="" coords="1495,1802,1639,1844"/>
 <area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="1198,1634,1351,1676"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title=" " alt="" coords="931,1569,1109,1610"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="931,1569,1109,1610"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="675,1125,876,1166"/>
 <area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="675,1264,876,1305"/>
 <area shape="rect" id="node11" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="935,286,1105,328"/>

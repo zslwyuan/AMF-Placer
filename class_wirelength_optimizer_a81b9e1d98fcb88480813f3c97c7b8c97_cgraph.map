@@ -1,5 +1,5 @@
 <map id="WirelengthOptimizer::GlobalPlacementQPSolve" name="WirelengthOptimizer::GlobalPlacementQPSolve">
-<area shape="rect" id="node1" title=" " alt="" coords="5,141,184,182"/>
+<area shape="rect" id="node1" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="5,141,184,182"/>
 <area shape="rect" id="node2" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="801,88,891,115"/>
 <area shape="rect" id="node3" href="$class_q_p_solver_wrapper.html#a4d661af587ec252bc62b14d420cd6bce" title=" " alt="" coords="232,5,416,32"/>
 <area shape="rect" id="node4" href="$class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title=" " alt="" coords="255,173,393,214"/>

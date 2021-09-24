@@ -41,6 +41,6 @@
 <area shape="rect" id="node33" href="$class_macro_legalizer.html#a291c9e58885f27b964c86162bb3aa4ae" title=" " alt="" coords="1142,367,1329,408"/>
 <area shape="rect" id="node39" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="429,366,587,393"/>
 <area shape="rect" id="node41" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="652,591,805,632"/>
-<area shape="rect" id="node42" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title=" " alt="" coords="419,417,597,459"/>
+<area shape="rect" id="node42" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="419,417,597,459"/>
 <area shape="rect" id="node43" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="165,417,366,459"/>
 </map>

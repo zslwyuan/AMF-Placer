@@ -6,7 +6,7 @@
 <area shape="rect" id="node9" href="$class_cluster_placer.html#ab2f74c136ed361b6782d56d5dcf92dc6" title="construct the netlist of the generated clusters based on the PlacementNet in PlacementInfo" alt="" coords="1412,239,1619,266"/>
 <area shape="rect" id="node17" href="$class_cluster_placer.html#a8ad4a2d696e76b631a5360cbc36b2a44" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="931,297,1097,339"/>
 <area shape="rect" id="node18" href="$class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title=" " alt="" coords="1418,173,1613,215"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title=" " alt="" coords="430,64,609,105"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="430,64,609,105"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,53,366,95"/>
 <area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="165,119,366,160"/>
 <area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,126,116,153"/>

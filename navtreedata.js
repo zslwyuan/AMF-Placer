@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "AMF-Placer", "index.html", [
+    [ "test page", "_my.html", null ],
     [ "README", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -64,18 +65,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_m_f_placer_8h.html",
-"class_a_m_f_placer.html#a9edb6e34696a6768fc14aaa8ad8c02e8",
-"class_design_info.html#a908ca136751755b00f1220f562d844da",
-"class_device_info_1_1_clock_region.html#a4dcb246f202147f8c357d522dd610992",
-"class_global_placer.html#a2cf85a213f431a3ad9678912b875a97f",
-"class_macro_legalizer.html#ac163ab99d8122f656ec8f4a79f93bebd",
-"class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aa55b27afffe7d72a9678684ba6340f7c",
-"class_placement_info_1_1_compatible_placement_table.html#ae11781c90ed3e74f656a50a017dc5ef6",
-"class_placement_info_1_1_placement_unit.html#a1baafbc8e0492b25a78a884da74d08ea",
-"class_vivado_graph_util_1_1_vivado_cell.html#aeeae739be8662b4ba7ad7f11bc94ebfb",
-"functions_vars_k.html",
-"namespacepaint_placement.html#afc64b6f04c34484dc3cfcc8fadb25ecd",
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html"
+"class_a_m_f_placer.html#a91f820423e8844774dc7419b24132344",
+"class_design_info.html#a8ef265973bd84c7357aceccd040ec2dc",
+"class_device_info_1_1_clock_region.html#a438ceb50d9b5b7b97d0aa25ab0b0520f",
+"class_global_placer.html#a2c36508da5605e7c5b572d61c0ac0f2c",
+"class_macro_legalizer.html#ac10b80e1de702a5fdd0b872465ea5c4c",
+"class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a9a218f7881dbe3141b9ad19bf501df72",
+"class_placement_info_1_1_compatible_placement_table.html#acb6784c1b88ff54941384d25fb481c23",
+"class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2",
+"class_vivado_graph_util_1_1_vivado_cell.html#adc3960e5c7d0cb7d4f39dab987cee1ef",
+"functions_vars_h.html",
+"namespacepaint_placement.html#ae12a8fd093f1782980ae7f898709bf8d",
+"struct_placement_info_1_1_location.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
