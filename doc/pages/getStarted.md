@@ -30,7 +30,7 @@ Below is a command that users can try to run in the "build" directory. It will r
 By checking the content of the JSON file in the command argument above, you may notice the major settings of our placer. 
 Generally, we need to let the placer know where are the data of the design and devices, whether the placer should dump some log text/archieve files for further checking or evaluation, and some parameters related to the algorithms in the placer.
 
-Below, we explain some of the settings. If users target at Xilinx VCU108, users may only need to change the parameters related to the design benchmark, which we mark with \[DESIGN\].
+Below, we explain some of the settings. If users target at Xilinx VCU108, users may only need to change the parameters related to the design benchmark, which we mark with \[DESIGN\]. We also mark others parameters with \[DEVICE\], \[DEBUG\] and \[PLACER\]. Some optional parameters can be disable by commenting out by "//". Please be aware that no matter the value types are string or not, the value should be wrapper by " " as syntax requirement.
 ```
 {
     "vivado extracted design information file": ==> the location of the design netlist zip file [DESIGN]
@@ -38,50 +38,51 @@ Below, we explain some of the settings. If users target at Xilinx VCU108, users 
     "special pin offset info file": ==> the location of a information file indicating the offset of pins relative to the coordinate of the device site. (e.g. PCIE bank spans in a long range) [DEVICE]
     "cellType2fixedAmo file": ==> the location of a information file indicating the resource demand of each type of design standard cells [DEVICE]
     "cellType2sharedCellType file":  ==> the location of a information file indicating the resource demand of each type of design standard cells [DEVICE]
-    "sharedCellType2BELtype file": "../benchmarks/VCU108/compatibleTable/sharedCellType2BELtype",
-    "mergedSharedCellType2sharedCellType": "../benchmarks/VCU108/compatibleTable/mergedSharedCellType2sharedCellType",
-    "unpredictable macro file": "../benchmarks/VCU108/design/OpenPiton/OpenPiton_unpredictableMacros",
-    "fixed units file": "../benchmarks/VCU108/design/OpenPiton/OpenPiton_fixedUnits",
-    "clock file": "../benchmarks/VCU108/design/OpenPiton/OpenPiton_clocks",
-    "designCluster": "../benchmarks/VCU108/design/OpenPiton/OpenPiton_clusters.zip",
-    "Dump Cluster file": "./dumpClusters",
-    "Dump Cluster Simulated Annealig file": "./dumpSATrace",
-    // "DumpCLBLegalization" : "./DumpCLBLegalization",
-    // "SLICEL_LUT": "./SLICEL_LUT_density",
-    // "DumpLUTFFCoordTrace": "./DumpLUTFFCoordTrace",
-    // "DumpCARRYCoordTrace": "./DumpCARRYCoordTrace",
-    // "Dump MacroDensity": "./macroDensity",
-    // "Dump Cell Density": "./Density",
-    // "DumpLUTCoordTrace": "./DumpLUTCoordTrace",
-    // "DumpDSPCoordTrace": "./DumpDSPCoordTrace",
-    // "DumpFFCoordTrace": "./DumpFFCoordTrace",
-    // "DumpAllCoordTrace" : "./DumpAllCoordTrace",
-    "GlobalPlacerPrintHPWL": "true",
-    "DumpCLBPacking" : "./DumpCLBPacking",
-    "DumpLUTFFPair": "./DumpLUTFFPair",
-    "DumpClockUtilization": "true",
-    // "DumpMacroLegalization" : "./DumpMacroLegalizationLog",
-    // "MacroLegalizationVerbose" : "true",
-    // "CLBLegalizationVerbose" : "true",
-    "Simulated Annealing restartNum": "600",
-    "Simulated Annealing IterNum": "30000000",
-    // "RandomInitialPlacement" : "true",
-    "DrawNetAfterEachIteration": "false",
-    "PseudoNetWeight": "0.0025",
-    "GlobalPlacementIteration": "30",
-    "clockRegionXNum": "5",
-    "clockRegionYNum": "8",
-    "clockRegionDSPNum": "30",
-    "clockRegionBRAMNum": "96",
-    "jobs": "8",
-    "y2xRatio": "0.4",
-    "ClusterPlacerVerbose": "false",
-    "GlobalPlacerVerbose": "false",
-    // "SpreaderSimpleExpland": "true",
-    // "pseudoNetWeightConsiderNetNum" : "false",
-    // "disableSpreadingConvergeRatio" : "true",
-    "drawClusters": "false",
-    "MKL": "true",
-    "dumpDirectory": "../../../Documents/placerDumpData/",
+    "sharedCellType2BELtype file":  ==> the location of a information file indicating the DeviceSite/DeviceBEL demand of each type of design standard cells [DEVICE]
+    "mergedSharedCellType2sharedCellType":  ==> the location of a information file indicating how some types of standard cells can be mapped different types of BEL slots in different types of DeviceSite [DEVICE]
+    "unpredictable macro file": ==> the location of a information file indicating some macros which cannot be identified by AMF-Placer which we can detect in Vivado [DESIGN]
+    "fixed units file":  ==> the location of a information file indicating some elements, locations of which are fixed on the device [DESIGN]
+    "clock file": ==>  (Optional) the location of a information file indicating the clock driver pins in the design [DESIGN]
+    "designCluster":  ==> (Optional) the location of a information file indicating some user-defined clusters for optimization [DESIGN]
+    "Dump Cluster file":  ==> (Optional) the location where the information of clusters generated by initial partitioning should be dumped. [DEBUG]
+    "Dump Cluster Simulated Annealig file":  ==> (Optional) the location where the trace of the SA procedure should be dumped. [DEBUG]
+    // "DumpCLBLegalization" : ==> (Optional) the location where the information of CLB legalization should be dumped. [DEBUG]
+    // "SLICEL_LUT":  ==> (Optional) the location where the information of SLICEL_LUT density should be dumped. [DEBUG]
+    // "DumpLUTFFCoordTrace":  ==> (Optional) the location where the trace of LUT/FF coordinate change should be dumped. [DEBUG]
+    // "DumpCARRYCoordTrace": ==> (Optional) the location where the trace of CARRY coordinate change should be dumped. [DEBUG]
+    // "Dump MacroDensity": ==> (Optional) the location where the trace of macros coordinate change should be dumped. [DEBUG]
+    // "Dump Cell Density": ==> (Optional) the location where the trace of standard cells coordinate change should be dumped. [DEBUG]
+    // "DumpLUTCoordTrace": ==> (Optional) the location where the trace of LUT coordinate change should be dumped. [DEBUG]
+    // "DumpDSPCoordTrace": ==> (Optional) the location where the trace of DSP coordinate change should be dumped. [DEBUG]
+    // "DumpFFCoordTrace": ==> (Optional) the location where the trace of FF coordinate change should be dumped. [DEBUG]
+    // "DumpAllCoordTrace" : ==> (Optional) the location where the trace of All elements' coordinate change should be dumped. [DEBUG]
+    "GlobalPlacerPrintHPWL":  ==> (Optional) indicate whether print out the detailed changes of HPWL during global placement. [DEBUG]
+    "DumpCLBPacking" :  ==> (Optional) indicate where to dump the information of CLB packing
+    "DumpLUTFFPair":  ==> (Optional) indicate where to dump the information of LUT-FF pairing
+    "DumpClockUtilization":  ==> (Optional) indicate whether print out the detailed changes of clock utilization [DEBUG]
+    // "DumpMacroLegalization" :  ==> (Optional) indicate where print out macro legalization information [DEBUG]
+    // "MacroLegalizationVerbose" : ==> (Optional:default "false") indicate whether print out DSP/BRAM macro legalization information during runtime [DEBUG]
+    // "CLBLegalizationVerbose" :  ==> (Optional:default "false") indicate whether print out CLB legalization information during runtime [DEBUG]
+    "Simulated Annealing restartNum":  ==> a number indicate how many times the SA procedure should restart [PLACER]
+    "Simulated Annealing IterNum":  ==> a number indicate the total iteration number the SA procedure should conduct [PLACER]
+    // "RandomInitialPlacement" :  ==> (Optional:default "false") indicate whether the initial placement is randomly generated [PLACER]
+    "DrawNetAfterEachIteration":  ==> (Optional:default "false") indicate whether use OpenGL to draw the nets after each iteration of SA procedure [PLACER]
+    "PseudoNetWeight": ==> indicate the initial pseudo net weight which controls the placer convergence speed. [PLACER]
+    "GlobalPlacementIteration": ==> indicate the total number of the global placement iterations [PLACER]
+    "clockRegionXNum": ==> indicate how many clock region in a row on the device [DEVICE]
+    "clockRegionYNum":  ==> indicate how many clock region in a column on the device [DEVICE]
+    "clockRegionDSPNum": ==> indicate the threshold number of DSPs in a clock region during initial SA placement [PLACER]
+    "clockRegionBRAMNum": ==> indicate the threshold number of BRAMs in a clock region during initial SA placement [PLACER]
+    "jobs":  ==> indicate the parallelism of the placer [PLACER]
+    "y2xRatio":  ==> indicate the weight of Y routing net compared to X routing net [PLACER]
+    "ClusterPlacerVerbose": ==> (Optional:default "false") indicate whether the SA cluster placer print outs detailed information during runtime [DEBUG]
+    "GlobalPlacerVerbose":  ==> (Optional:default "false") indicate whether the global placer print outs detailed information during runtime [DEBUG]
+    // "SpreaderSimpleExpland":  ==> (Optional:default "false") indicate whether the cell spreader finds the cell spreading window in a simple approach [PLACER]
+    // "pseudoNetWeightConsiderNetNum" :  ==> (Optional:default "true") indicate whether the wirelength optimizer considers the interconnection density for psuedo net weight [PLACER]
+    // "disableSpreadingConvergeRatio" : ==> (Optional:default "false") indicate whether the cell spreader utilizes forget-rate-based cell spreading location update [PLACER]
+    "drawClusters": ==> (Optional:default "false") indicate whether the SA placer draws the cluster placement with OpenGL [DEBUG]
+    "MKL": ==> (Optional:default "false") indicate whether wirelength optimizer is based on MKL library when using OSQP placer, which can set constraints for the quadratic model [PLACER]
+    "dumpDirectory": ==> indicate where the "DUMP" files should be located. [PLACER]
+    //"useUnconstrainedCG" : (Optional:default "true") indicate whether wirelength optimizer uses Eigen3, which cannot set constraints, to solve the quadratic problem. If false, OSQP solver which can set constraints for the quadratic model, will be involved to replace Eigen3. [PLACER]
 }
 ```
