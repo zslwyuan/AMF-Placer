@@ -28,6 +28,13 @@
 class WirelengthOptimizer
 {
   public:
+    /**
+     * @brief Construct a new Wirelength Optimizer object
+     *
+     * @param placementInfo the PlacementInfo for this placer to handle
+     * @param JSONCfg the user-defined placement configuration
+     * @param verbose whether the WirelengthOptimizer prints out more information or dumps log files
+     */
     WirelengthOptimizer(PlacementInfo *placementInfo, std::map<std::string, std::string> &JSONCfg, bool verbose = true);
     ~WirelengthOptimizer()
     {
