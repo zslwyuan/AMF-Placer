@@ -89,9 +89,9 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 <div class="textblock"><p ><a class="anchor" id="md_doc_pages_getStarted"></a> Here, we will go through some basic steps for users to build the placer and run a placement flow for a new design/device with a new placement configuration:</p><ol type="1">
 <li>Build the Placer</li>
 <li>Run An Example</li>
+<li>Set the Placement Configuration in JSON file</li>
 <li>Extract Design Information from Vivado</li>
 <li>Extract Device Information from Vivado</li>
-<li>Set the Placement Configuration in JSON file</li>
 <li>(Optional) Load the Output Placement in Vivado</li>
 <li>(Optional) Customize the Placement Flow</li>
 </ol>
@@ -99,8 +99,62 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 <p >We provide a script to build the placer and users can run the following command in the project root directory:</p>
 <div class="fragment"><div class="line">./build.sh</div>
 </div><!-- fragment --><p ><b>2. Run An Example</b></p>
-<p >Below is a command that users can try to run. It will run the placement flow according to a given JSON configuration, where design/device/paramters are specified.</p>
+<p >Below is a command that users can try to run in the "build" directory. It will run the placement flow according to a given JSON configuration, where design/device/paramters are specified.</p>
 <div class="fragment"><div class="line">./AMFPlacer ../benchmarks/testConfig/OpenPiton.json</div>
+</div><!-- fragment --><p ><b>3. Set the Placement Configuration in JSON file</b></p>
+<p >By checking the content of the JSON file in the command argument above, you may notice the major settings of our placer. Generally, we need to let the placer know where are the data of the design and devices, whether the placer should dump some log text/archieve files for further checking or evaluation, and some parameters related to the algorithms in the placer.</p>
+<p >Below, we explain some of the settings. If users target at Xilinx VCU108, users may only need to change the parameters related to the design benchmark, which we mark with [DESIGN]. </p><div class="fragment"><div class="line">{</div>
+<div class="line">    &quot;vivado extracted design information file&quot;: ==&gt; the location of the design netlist zip file [DESIGN]</div>
+<div class="line">    &quot;vivado extracted device information file&quot;: ==&gt; the location of the device zip file [DEVICE]</div>
+<div class="line">    &quot;special pin offset info file&quot;: ==&gt; the location of a information file indicating the offset of pins relative to the coordinate of the device site. (e.g. PCIE bank spans in a long range) [DEVICE]</div>
+<div class="line">    &quot;cellType2fixedAmo file&quot;: ==&gt; the location of a information file indicating the resource demand of each type of design standard cells [DEVICE]</div>
+<div class="line">    &quot;cellType2sharedCellType file&quot;:  ==&gt; the location of a information file indicating the resource demand of each type of design standard cells [DEVICE]</div>
+<div class="line">    &quot;sharedCellType2BELtype file&quot;: &quot;../benchmarks/VCU108/compatibleTable/sharedCellType2BELtype&quot;,</div>
+<div class="line">    &quot;mergedSharedCellType2sharedCellType&quot;: &quot;../benchmarks/VCU108/compatibleTable/mergedSharedCellType2sharedCellType&quot;,</div>
+<div class="line">    &quot;unpredictable macro file&quot;: &quot;../benchmarks/VCU108/design/OpenPiton/OpenPiton_unpredictableMacros&quot;,</div>
+<div class="line">    &quot;fixed units file&quot;: &quot;../benchmarks/VCU108/design/OpenPiton/OpenPiton_fixedUnits&quot;,</div>
+<div class="line">    &quot;clock file&quot;: &quot;../benchmarks/VCU108/design/OpenPiton/OpenPiton_clocks&quot;,</div>
+<div class="line">    &quot;designCluster&quot;: &quot;../benchmarks/VCU108/design/OpenPiton/OpenPiton_clusters.zip&quot;,</div>
+<div class="line">    &quot;Dump Cluster file&quot;: &quot;./dumpClusters&quot;,</div>
+<div class="line">    &quot;Dump Cluster Simulated Annealig file&quot;: &quot;./dumpSATrace&quot;,</div>
+<div class="line">    // &quot;DumpCLBLegalization&quot; : &quot;./DumpCLBLegalization&quot;,</div>
+<div class="line">    // &quot;SLICEL_LUT&quot;: &quot;./SLICEL_LUT_density&quot;,</div>
+<div class="line">    // &quot;DumpLUTFFCoordTrace&quot;: &quot;./DumpLUTFFCoordTrace&quot;,</div>
+<div class="line">    // &quot;DumpCARRYCoordTrace&quot;: &quot;./DumpCARRYCoordTrace&quot;,</div>
+<div class="line">    // &quot;Dump MacroDensity&quot;: &quot;./macroDensity&quot;,</div>
+<div class="line">    // &quot;Dump Cell Density&quot;: &quot;./Density&quot;,</div>
+<div class="line">    // &quot;DumpLUTCoordTrace&quot;: &quot;./DumpLUTCoordTrace&quot;,</div>
+<div class="line">    // &quot;DumpDSPCoordTrace&quot;: &quot;./DumpDSPCoordTrace&quot;,</div>
+<div class="line">    // &quot;DumpFFCoordTrace&quot;: &quot;./DumpFFCoordTrace&quot;,</div>
+<div class="line">    // &quot;DumpAllCoordTrace&quot; : &quot;./DumpAllCoordTrace&quot;,</div>
+<div class="line">    &quot;GlobalPlacerPrintHPWL&quot;: &quot;true&quot;,</div>
+<div class="line">    &quot;DumpCLBPacking&quot; : &quot;./DumpCLBPacking&quot;,</div>
+<div class="line">    &quot;DumpLUTFFPair&quot;: &quot;./DumpLUTFFPair&quot;,</div>
+<div class="line">    &quot;DumpClockUtilization&quot;: &quot;true&quot;,</div>
+<div class="line">    // &quot;DumpMacroLegalization&quot; : &quot;./DumpMacroLegalizationLog&quot;,</div>
+<div class="line">    // &quot;MacroLegalizationVerbose&quot; : &quot;true&quot;,</div>
+<div class="line">    // &quot;CLBLegalizationVerbose&quot; : &quot;true&quot;,</div>
+<div class="line">    &quot;Simulated Annealing restartNum&quot;: &quot;600&quot;,</div>
+<div class="line">    &quot;Simulated Annealing IterNum&quot;: &quot;30000000&quot;,</div>
+<div class="line">    // &quot;RandomInitialPlacement&quot; : &quot;true&quot;,</div>
+<div class="line">    &quot;DrawNetAfterEachIteration&quot;: &quot;false&quot;,</div>
+<div class="line">    &quot;PseudoNetWeight&quot;: &quot;0.0025&quot;,</div>
+<div class="line">    &quot;GlobalPlacementIteration&quot;: &quot;30&quot;,</div>
+<div class="line">    &quot;clockRegionXNum&quot;: &quot;5&quot;,</div>
+<div class="line">    &quot;clockRegionYNum&quot;: &quot;8&quot;,</div>
+<div class="line">    &quot;clockRegionDSPNum&quot;: &quot;30&quot;,</div>
+<div class="line">    &quot;clockRegionBRAMNum&quot;: &quot;96&quot;,</div>
+<div class="line">    &quot;jobs&quot;: &quot;8&quot;,</div>
+<div class="line">    &quot;y2xRatio&quot;: &quot;0.4&quot;,</div>
+<div class="line">    &quot;ClusterPlacerVerbose&quot;: &quot;false&quot;,</div>
+<div class="line">    &quot;GlobalPlacerVerbose&quot;: &quot;false&quot;,</div>
+<div class="line">    // &quot;SpreaderSimpleExpland&quot;: &quot;true&quot;,</div>
+<div class="line">    // &quot;pseudoNetWeightConsiderNetNum&quot; : &quot;false&quot;,</div>
+<div class="line">    // &quot;disableSpreadingConvergeRatio&quot; : &quot;true&quot;,</div>
+<div class="line">    &quot;drawClusters&quot;: &quot;false&quot;,</div>
+<div class="line">    &quot;MKL&quot;: &quot;true&quot;,</div>
+<div class="line">    &quot;dumpDirectory&quot;: &quot;../../../Documents/placerDumpData/&quot;,</div>
+<div class="line">}</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
