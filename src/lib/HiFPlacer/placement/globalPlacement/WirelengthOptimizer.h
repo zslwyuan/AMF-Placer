@@ -20,6 +20,11 @@
 #include <thread>
 #include <vector>
 
+/**
+ * @brief WirelengthOptimizer builds numerical models based on the element locations and calls solvers to find an
+ * optimal solution of the placement.
+ *
+ */
 class WirelengthOptimizer
 {
   public:
