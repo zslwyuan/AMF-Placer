@@ -1,0 +1,7 @@
+<map id="GeneralSpreader::SpreadRegion::isRegionOverlap" name="GeneralSpreader::SpreadRegion::isRegionOverlap">
+<area shape="rect" id="node1" title="check whether overlapped with another SpreadRegion" alt="" coords="5,104,212,145"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a76a8313ac5e28f52ae29b066d83ec909" title="get the bottom bin coordinate Y of the SpreadRegion in bin grid" alt="" coords="272,5,479,47"/>
+<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region.html#a37f541916ccd3f1edc6be75fa9835a74" title="get the left bin coordinate X of the SpreadRegion in bin grid" alt="" coords="272,71,479,112"/>
+<area shape="rect" id="node4" href="$class_general_spreader_1_1_spread_region.html#a20edd0f95b684109bfce7c3f7b1e8d0c" title="get the right bin coordinate X of the SpreadRegion in bin grid" alt="" coords="272,136,479,177"/>
+<area shape="rect" id="node5" href="$class_general_spreader_1_1_spread_region.html#a1e6aa8a310ba2134263ce63767c846ab" title="get the top bin coordinate Y of the SpreadRegion in bin grid" alt="" coords="260,202,491,229"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="PlacementInfo::CompatiblePlacementTable::getInflateRatio" name="PlacementInfo::CompatiblePlacementTable::getInflateRatio">
+<area shape="rect" id="node1" title="Get the inflate ratio of a cell." alt="" coords="5,5,211,47"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="259,5,411,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="459,5,636,47"/>
+</map>

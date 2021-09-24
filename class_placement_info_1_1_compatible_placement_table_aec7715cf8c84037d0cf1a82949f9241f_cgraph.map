@@ -1,0 +1,10 @@
+<map id="PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable" name="PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable">
+<area shape="rect" id="node1" title="Construct a new Compatible Placement Table object." alt="" coords="5,140,287,181"/>
+<area shape="rect" id="node2" href="$class_design_info.html#adf0324cc2aabb175c21af7242f26a0e7" title="translate a string into a DesignCellType for a cell" alt="" coords="338,5,503,47"/>
+<area shape="rect" id="node4" href="$class_device_info.html#a7639859f731c1b24443b15d72ecff72d" title="get BEL types in the device" alt="" coords="337,71,505,98"/>
+<area shape="rect" id="node5" href="$class_design_info.html#a8ada82debbe2ac615c36cae57d16eadc" title=" " alt="" coords="335,122,507,149"/>
+<area shape="rect" id="node6" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="383,173,458,199"/>
+<area shape="rect" id="node7" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="375,223,466,250"/>
+<area shape="rect" id="node8" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title=" " alt="" coords="389,274,452,301"/>
+<area shape="rect" id="node3" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title=" " alt="" coords="555,13,635,39"/>
+</map>

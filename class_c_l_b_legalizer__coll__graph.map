@@ -1,0 +1,9 @@
+<map id="CLBLegalizer" name="CLBLegalizer">
+<area shape="rect" id="node1" title="CLBLegalizer maps CLBs (each of which consists of one site) to legal location. e.g...." alt="" coords="952,204,1052,231"/>
+<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="621,104,728,131"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="201,119,379,161"/>
+<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,9,89,36"/>
+<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="217,67,363,93"/>
+<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,167,89,193"/>
+<area shape="rect" id="node7" href="$class_min_cost_bipartite_matcher.html" title=" " alt="" coords="592,301,757,328"/>
+</map>

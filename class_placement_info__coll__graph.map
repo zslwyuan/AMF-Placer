@@ -1,0 +1,7 @@
+<map id="PlacementInfo" name="PlacementInfo">
+<area shape="rect" id="node1" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="181,199,287,225"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="88,95,265,136"/>
+<area shape="rect" id="node3" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="71,5,155,32"/>
+<area shape="rect" id="node5" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="289,102,435,129"/>
+<area shape="rect" id="node4" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="355,5,439,32"/>
+</map>

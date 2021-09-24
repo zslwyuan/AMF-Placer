@@ -1,0 +1,7 @@
+<map id="GlobalPlacer::dumpDSPCoordinate" name="GlobalPlacer::dumpDSPCoordinate">
+<area shape="rect" id="node1" title=" " alt="" coords="629,46,852,73"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="413,46,581,73"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
+</map>

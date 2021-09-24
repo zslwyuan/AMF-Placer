@@ -1,0 +1,9 @@
+<map id="DesignInfo::DesignPin::isOutputPort" name="DesignInfo::DesignPin::isOutputPort">
+<area shape="rect" id="node1" title=" " alt="" coords="627,71,776,112"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#aad7f3857c4b9584e94def14bde121ffd" title="add a net and assign it into output/input net list" alt="" coords="425,9,577,51"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a16cdc343adeeac7222745a64e4ed420d" title="bind a pin to the cell" alt="" coords="215,71,367,112"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_net.html#a05d76a2910b424aac20cc6915fef48b4" title="bind the net to a pin&#39;s pointer" alt="" coords="424,129,579,171"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c" title="let the parent cell know that one of its pin connects to a specific net" alt="" coords="205,5,376,47"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="5,78,157,105"/>
+<area shape="rect" id="node7" href="$class_design_info.html#aa6022bca479e36f7f13fbcd96946301d" title="bind a pin to an existing net. If the net does not exist, new one." alt="" coords="207,137,374,163"/>
+</map>

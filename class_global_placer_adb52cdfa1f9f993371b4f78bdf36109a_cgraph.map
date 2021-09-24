@@ -1,0 +1,52 @@
+<map id="GlobalPlacer::GlobalPlacement_CLBElements" name="GlobalPlacer::GlobalPlacement_CLBElements">
+<area shape="rect" id="node1" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="5,937,207,979"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#aaeeece0e2a9362d1bb26c2e17fd90aad" title="reset the inflate ratio of all the cells to be 1, for re&#45;evaluation" alt="" coords="537,1227,784,1268"/>
+<area shape="rect" id="node7" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="912,762,1003,789"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="282,207,462,248"/>
+<area shape="rect" id="node14" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="623,711,698,738"/>
+<area shape="rect" id="node16" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="288,518,456,545"/>
+<area shape="rect" id="node29" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="541,341,780,367"/>
+<area shape="rect" id="node30" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="565,1015,756,1042"/>
+<area shape="rect" id="node34" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="560,1066,761,1093"/>
+<area shape="rect" id="node37" href="$class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5" title=" " alt="" coords="277,788,467,829"/>
+<area shape="rect" id="node38" href="$class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265" title=" " alt="" coords="263,853,481,895"/>
+<area shape="rect" id="node39" href="$class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="281,919,463,946"/>
+<area shape="rect" id="node40" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title=" " alt="" coords="283,620,461,661"/>
+<area shape="rect" id="node41" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="279,686,465,713"/>
+<area shape="rect" id="node42" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="611,914,710,941"/>
+<area shape="rect" id="node43" href="$class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title=" " alt="" coords="299,431,445,472"/>
+<area shape="rect" id="node44" href="$class_placement_info.html#a958489df28152a1f6d57ed1d300d0cea" title="Set the Macro Legalization Parameters." alt="" coords="255,1189,489,1231"/>
+<area shape="rect" id="node45" href="$class_placement_info.html#acf04c3cb841c54072879fb499d4c8617" title="record the minimum HPWL during placement procedure" alt="" coords="277,1255,467,1282"/>
+<area shape="rect" id="node46" href="$class_placement_info.html#ae4d7fbda04595b6a0563a0cb55b24c77" title="Set the Pseudo Net Weight according to a given value." alt="" coords="285,1307,459,1348"/>
+<area shape="rect" id="node47" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="293,1373,451,1399"/>
+<area shape="rect" id="node48" href="$str_print_8cc.html#ab175fbcc2469d1996f59d2e3ea070974" title=" " alt="" coords="315,1423,429,1450"/>
+<area shape="rect" id="node49" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="273,1475,471,1516"/>
+<area shape="rect" id="node50" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="279,1021,465,1063"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="871,1234,1044,1261"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_compatible_placement_table.html#a773fd0743326e715c99e7ee8b64a0d76" title="get the reference of cellId2InfationRatio for convenience" alt="" coords="832,1285,1083,1327"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="878,1351,1037,1378"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="867,1168,1048,1209"/>
+<area shape="rect" id="node9" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="570,123,751,164"/>
+<area shape="rect" id="node10" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="551,189,770,215"/>
+<area shape="rect" id="node11" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="551,239,770,266"/>
+<area shape="rect" id="node12" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="567,290,755,317"/>
+<area shape="rect" id="node13" href="$class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region." alt="" coords="555,5,766,47"/>
+<area shape="rect" id="node15" href="$class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region" alt="" coords="548,71,773,98"/>
+<area shape="rect" id="node17" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="571,544,750,585"/>
+<area shape="rect" id="node21" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="540,610,781,637"/>
+<area shape="rect" id="node22" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="549,661,772,687"/>
+<area shape="rect" id="node23" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="555,442,767,469"/>
+<area shape="rect" id="node26" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="549,493,772,519"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="869,551,1046,592"/>
+<area shape="rect" id="node19" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="861,485,1053,527"/>
+<area shape="rect" id="node20" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="902,617,1013,643"/>
+<area shape="rect" id="node24" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="881,251,1033,292"/>
+<area shape="rect" id="node25" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="899,317,1015,343"/>
+<area shape="rect" id="node27" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="881,368,1033,409"/>
+<area shape="rect" id="node28" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="894,434,1021,461"/>
+<area shape="rect" id="node31" href="$class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title=" " alt="" coords="856,965,1059,991"/>
+<area shape="rect" id="node32" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="854,1015,1061,1042"/>
+<area shape="rect" id="node33" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="860,914,1055,941"/>
+<area shape="rect" id="node35" href="$class_macro_legalizer.html#a8c322f41c19d3f9d06c0e856feac21db" title=" " alt="" coords="851,1066,1064,1093"/>
+<area shape="rect" id="node36" href="$class_macro_legalizer.html#acb09c00d4e10b8ee7f4dfd8520aec604" title=" " alt="" coords="849,1117,1066,1143"/>
+</map>

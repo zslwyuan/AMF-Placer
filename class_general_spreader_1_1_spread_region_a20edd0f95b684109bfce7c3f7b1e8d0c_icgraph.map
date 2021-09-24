@@ -1,0 +1,8 @@
+<map id="GeneralSpreader::SpreadRegion::right" name="GeneralSpreader::SpreadRegion::right">
+<area shape="rect" id="node1" title="get the right bin coordinate X of the SpreadRegion in bin grid" alt="" coords="895,39,1101,80"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a0179a5805b8dafadb4ea6b759b924027" title="check whether overlapped with another SpreadRegion" alt="" coords="630,5,837,47"/>
+<area shape="rect" id="node3" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="620,71,847,112"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="413,78,572,105"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,41,365,83"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
+</map>

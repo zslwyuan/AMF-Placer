@@ -1,0 +1,8 @@
+<map id="DesignInfo::updateFFControlSets" name="DesignInfo::updateFFControlSets">
+<area shape="rect" id="node1" title="go through the FF cells to extract control sets for later processing" alt="" coords="5,71,219,98"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#ac7c77263d23bf57844c74fb11e437b53" title="add a FF into the set of FFs which are compatible to this control set" alt="" coords="281,5,454,47"/>
+<area shape="rect" id="node3" href="$class_design_info.html#af0678b75a70953088fc83a563241e8cf" title="extract the ids of CLK, SR, and CE for a given FF" alt="" coords="267,71,468,98"/>
+<area shape="rect" id="node6" href="$class_design_info.html#aece2b3b80c5b69d451d85a4d9dd0b84a" title=" " alt="" coords="282,122,453,149"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="516,31,668,72"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="516,96,668,137"/>
+</map>

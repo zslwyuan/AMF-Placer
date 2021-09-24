@@ -1,0 +1,8 @@
+<map id="PlacementInfo::PlacementUnpackedCell" name="PlacementInfo::PlacementUnpackedCell">
+<area shape="rect" id="node1" title="the smallest, indivisible, representable component. It will include only one standard cell" alt="" coords="39,379,213,420"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand" alt="" coords="5,289,204,316"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects" alt="" coords="229,289,381,316"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="189,5,367,32"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="305,81,456,108"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_control_set_info.html" title="A control set is a combination of CLK, CE and SR signal. It could be nullptr (not related to control ..." alt="" coords="299,200,473,227"/>
+</map>

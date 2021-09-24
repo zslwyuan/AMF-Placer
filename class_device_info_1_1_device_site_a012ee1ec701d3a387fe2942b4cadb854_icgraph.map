@@ -1,0 +1,5 @@
+<map id="DeviceInfo::DeviceSite::setClockRegion" name="DeviceInfo::DeviceSite::setClockRegion">
+<area shape="rect" id="node1" title=" " alt="" coords="216,39,369,80"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_clock_region.html#a13a7c2a81aeb7d693eaecc6593aa3e43" title="add a site in the clock region and update the boundary of the clock region" alt="" coords="5,5,168,47"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_clock_region.html#a742fee4138c51d1d39d2fb8963c3f9e3" title="Construct a new Clock Region object." alt="" coords="5,71,168,112"/>
+</map>

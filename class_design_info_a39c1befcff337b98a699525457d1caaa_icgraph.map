@@ -1,0 +1,6 @@
+<map id="DesignInfo::updateFFControlSets" name="DesignInfo::updateFFControlSets">
+<area shape="rect" id="node1" title="go through the FF cells to extract control sets for later processing" alt="" coords="364,31,577,57"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="164,5,316,32"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="176,56,304,83"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,56,116,83"/>
+</map>

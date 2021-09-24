@@ -1,0 +1,6 @@
+<map id="DesignInfo::DesignPin::checkPinType" name="DesignInfo::DesignPin::checkPinType">
+<area shape="rect" id="node1" title="get the pin type based on its reference name" alt="" coords="5,71,155,112"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="203,5,355,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="203,71,355,112"/>
+<area shape="rect" id="node4" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title=" " alt="" coords="239,137,319,163"/>
+</map>

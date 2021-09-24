@@ -1,0 +1,4 @@
+<map id="PlacementInfo::isLegalLocation" name="PlacementInfo::isLegalLocation">
+<area shape="rect" id="node1" title="check whether the PlacementUnit is legalized in the device area when it is placed at target location" alt="" coords="5,13,209,39"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="257,5,432,47"/>
+</map>

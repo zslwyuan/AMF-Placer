@@ -1,0 +1,6 @@
+<map id="PlacementInfo::_ClockNetCoverage" name="PlacementInfo::_ClockNetCoverage">
+<area shape="rect" id="node1" title="the retangular clock region coverage of a clock net" alt="" coords="16,260,189,301"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html" title="Placement net, compared to design net, includes information related to placement." alt="" coords="5,171,200,197"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="27,81,178,108"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="14,5,191,32"/>
+</map>

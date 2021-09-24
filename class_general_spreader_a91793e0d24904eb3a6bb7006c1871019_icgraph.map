@@ -1,0 +1,7 @@
+<map id="GeneralSpreader::findOverflowBins" name="GeneralSpreader::findOverflowBins">
+<area shape="rect" id="node1" title="find the overflow bins in the placement accoridng to a given threshold" alt="" coords="895,42,1117,69"/>
+<area shape="rect" id="node2" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="620,35,847,76"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="413,42,572,69"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,42,116,69"/>
+</map>

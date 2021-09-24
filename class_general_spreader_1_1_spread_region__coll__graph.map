@@ -1,0 +1,9 @@
+<map id="GeneralSpreader::SpreadRegion" name="GeneralSpreader::SpreadRegion">
+<area shape="rect" id="node1" title="SpreadRegion is an object that record cell spreading region information, including boundaries,..." alt="" coords="73,317,280,344"/>
+<area shape="rect" id="node2" href="$struct_general_spreader_1_1_spread_region_1_1expand_op.html" title="a struct to describe the expanding operation for the SpreadRegion" alt="" coords="5,199,212,240"/>
+<area shape="rect" id="node3" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="237,206,343,233"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="144,95,321,136"/>
+<area shape="rect" id="node5" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="127,5,211,32"/>
+<area shape="rect" id="node7" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="345,102,491,129"/>
+<area shape="rect" id="node6" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="411,5,495,32"/>
+</map>

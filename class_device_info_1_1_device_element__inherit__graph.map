@@ -1,0 +1,6 @@
+<map id="DeviceInfo::DeviceElement" name="DeviceInfo::DeviceElement">
+<area shape="rect" id="node1" title="basic class of device element" alt="" coords="173,5,350,32"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_b_e_l.html" title="BEL(Basic Element of Logic), the smallest undividable element." alt="" coords="5,80,160,107"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html" title="Site class for site on device." alt="" coords="185,80,338,107"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites." alt="" coords="362,80,513,107"/>
+</map>

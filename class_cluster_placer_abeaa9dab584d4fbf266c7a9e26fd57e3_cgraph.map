@@ -1,0 +1,10 @@
+<map id="ClusterPlacer::refineClustersWithPredefinedClusters" name="ClusterPlacer::refineClustersWithPredefinedClusters">
+<area shape="rect" id="node1" title="refine the elements in obtained clusters to ensure the cells in user&#45;defined clusters in the same clu..." alt="" coords="5,122,191,163"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#add47297a7892d37d376e66c550fc1dd7" title=" " alt="" coords="239,5,431,32"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="247,57,422,98"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="239,122,431,163"/>
+<area shape="rect" id="node7" href="$class_design_info.html#ad8e885107886e24ed0a3d1e976fab10b" title="Get the predefined clusters which are defined in design configuration files." alt="" coords="250,187,419,229"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="297,253,372,280"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="479,122,631,163"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="679,122,856,163"/>
+</map>

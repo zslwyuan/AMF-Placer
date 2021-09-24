@@ -1,0 +1,5 @@
+<map id="WirelengthOptimizer::addExtraWeightToNetsInLongPath" name="WirelengthOptimizer::addExtraWeightToNetsInLongPath">
+<area shape="rect" id="node1" title=" " alt="" coords="5,35,233,76"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a31002e9f9505db4830e71b8b1eeb4837" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="289,5,467,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#ac5727dfe232e8402b6f6c95ba2cc5d43" title="Get the Long Paths in the net list for later optimization." alt="" coords="281,71,475,98"/>
+</map>

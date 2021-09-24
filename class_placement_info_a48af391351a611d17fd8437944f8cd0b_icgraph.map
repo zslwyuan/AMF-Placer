@@ -1,0 +1,4 @@
+<map id="PlacementInfo::getPlacementUnitByCellId" name="PlacementInfo::getPlacementUnitByCellId">
+<area shape="rect" id="node1" title=" " alt="" coords="224,5,416,47"/>
+<area shape="rect" id="node2" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="5,5,176,47"/>
+</map>

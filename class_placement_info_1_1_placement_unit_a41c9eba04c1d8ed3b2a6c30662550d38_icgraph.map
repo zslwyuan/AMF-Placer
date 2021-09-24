@@ -1,0 +1,6 @@
+<map id="PlacementInfo::PlacementUnit::setAnchorLocation" name="PlacementInfo::PlacementUnit::setAnchorLocation">
+<area shape="rect" id="node1" title="Set the Anchor Location for the PlacementUnit." alt="" coords="641,5,816,47"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unpacked_cell.html#ac7d3b8b70966af2d4689019d1585a48d" title=" " alt="" coords="411,5,593,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,5,363,47"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+</map>

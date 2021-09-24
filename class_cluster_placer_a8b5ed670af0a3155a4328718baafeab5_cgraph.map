@@ -1,0 +1,5 @@
+<map id="ClusterPlacer::basicPartitioning" name="ClusterPlacer::basicPartitioning">
+<area shape="rect" id="node1" title="pure connectivity&#45;based partitioning based on PaToH" alt="" coords="5,35,208,61"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="256,5,476,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="270,57,462,98"/>
+</map>

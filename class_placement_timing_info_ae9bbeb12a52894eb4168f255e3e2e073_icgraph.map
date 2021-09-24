@@ -1,0 +1,7 @@
+<map id="PlacementTimingInfo::getSimplePlacementTimingGraph" name="PlacementTimingInfo::getSimplePlacementTimingGraph">
+<area shape="rect" id="node1" title="Get the Simple Placement Timing Graph object." alt="" coords="391,63,577,119"/>
+<area shape="rect" id="node2" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="168,5,339,47"/>
+<area shape="rect" id="node3" href="$class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f" title=" " alt="" coords="164,71,343,112"/>
+<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58" title=" " alt="" coords="164,136,343,177"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,143,116,170"/>
+</map>

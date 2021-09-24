@@ -1,0 +1,8 @@
+<map id="CLBLegalizer::createBipartiteGraph" name="CLBLegalizer::createBipartiteGraph">
+<area shape="rect" id="node1" title="Create a bipartite graph between PlacementUnit and potential DeviceSites." alt="" coords="5,100,196,141"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="244,107,451,134"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="507,5,682,47"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="499,71,691,112"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="511,137,679,163"/>
+<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="511,187,679,214"/>
+</map>

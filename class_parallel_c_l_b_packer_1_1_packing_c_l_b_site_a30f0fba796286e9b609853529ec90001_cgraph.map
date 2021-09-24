@@ -1,0 +1,13 @@
+<map id="ParallelCLBPacker::PackingCLBSite::addLUTRAMMacro" name="ParallelCLBPacker::PackingCLBSite::addLUTRAMMacro">
+<area shape="rect" id="node1" title=" " alt="" coords="5,217,241,259"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title=" " alt="" coords="289,142,528,198"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title=" " alt="" coords="289,250,528,306"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7839574b3af61d1ad3117aa547dfce05" title=" " alt="" coords="589,5,797,47"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afbbc37ecef88e17c27b70d9982272e81" title=" " alt="" coords="595,70,790,126"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="605,149,780,191"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2e8820284a04ee0a7d615769f324970e" title=" " alt="" coords="576,215,809,256"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8f89087f0c845cf7da3ca7cddf9b8f07" title=" " alt="" coords="580,279,805,335"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="857,228,1032,269"/>
+<area shape="rect" id="node10" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="861,294,1029,321"/>
+<area shape="rect" id="node11" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="861,345,1029,371"/>
+</map>

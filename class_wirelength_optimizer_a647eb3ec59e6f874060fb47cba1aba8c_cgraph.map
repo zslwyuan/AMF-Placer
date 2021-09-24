@@ -1,0 +1,8 @@
+<map id="WirelengthOptimizer::reloadPlacementInfo" name="WirelengthOptimizer::reloadPlacementInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="5,99,152,141"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="200,5,400,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="200,56,400,83"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="201,107,399,133"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="201,157,399,184"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="204,209,396,250"/>
+</map>

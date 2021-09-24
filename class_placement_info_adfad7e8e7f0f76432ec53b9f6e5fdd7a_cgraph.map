@@ -1,0 +1,10 @@
+<map id="PlacementInfo::checkClockUtilization" name="PlacementInfo::checkClockUtilization">
+<area shape="rect" id="node1" title="check the utlization of the clock regions on the device" alt="" coords="5,165,185,207"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="255,5,437,47"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="237,71,455,98"/>
+<area shape="rect" id="node4" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="237,122,455,149"/>
+<area shape="rect" id="node5" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="252,173,440,199"/>
+<area shape="rect" id="node6" href="$class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region." alt="" coords="241,224,451,265"/>
+<area shape="rect" id="node7" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="309,290,383,317"/>
+<area shape="rect" id="node8" href="$class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region" alt="" coords="233,341,459,367"/>
+</map>

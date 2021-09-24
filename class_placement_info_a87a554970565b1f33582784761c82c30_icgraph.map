@@ -1,0 +1,7 @@
+<map id="PlacementInfo::setProgress" name="PlacementInfo::setProgress">
+<area shape="rect" id="node1" title="Set the progress ratio, indicating the progress of the placement convergence,." alt="" coords="647,46,829,73"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="165,5,364,47"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="413,68,599,109"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,71,365,112"/>
+</map>

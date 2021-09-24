@@ -1,0 +1,4 @@
+<map id="DesignInfo::resetNetEnhanceRatio" name="DesignInfo::resetNetEnhanceRatio">
+<area shape="rect" id="node1" title="disable enhancement of all the nets in the design (reset extra weight to be 1)" alt="" coords="164,5,355,47"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+</map>

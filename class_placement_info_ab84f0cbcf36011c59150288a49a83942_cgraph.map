@@ -1,0 +1,21 @@
+<map id="PlacementInfo::adjustLUTFFUtilization_Packablity" name="PlacementInfo::adjustLUTFFUtilization_Packablity">
+<area shape="rect" id="node1" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="5,363,252,404"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="337,136,507,177"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="623,5,775,47"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="613,202,785,229"/>
+<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="623,253,775,295"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_compatible_placement_table.html#aead0affeaeaf5fa2bbfe747ed425d3b0" title="get the reference of cellId2Occupation for convenience" alt="" coords="300,304,544,345"/>
+<area shape="rect" id="node10" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="343,370,501,397"/>
+<area shape="rect" id="node12" href="$class_placement_info.html#a5093b0b1c68570bdeebdb0326117ce01" title=" " alt="" coords="324,421,520,463"/>
+<area shape="rect" id="node14" href="$class_placement_info.html#a467603faa84a06c4ccf231c05598e0dc" title="Get the Pair Pin Num of two LUTs." alt="" coords="322,487,522,514"/>
+<area shape="rect" id="node17" href="$class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="331,538,513,565"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="346,589,498,631"/>
+<area shape="rect" id="node19" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="377,655,467,682"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_bin_info.html#a3520d1ce9ca822861f5450aa38a53afe" title="Get the reference of the set of cells in the bin." alt="" coords="612,136,787,177"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_bin_info.html#a33cbef70955f92b34e9fcf4b1cd435e9" title="Get the shortest Manhattan distance from the bin to a specific location." alt="" coords="592,71,807,112"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="855,5,1032,47"/>
+<area shape="rect" id="node11" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="631,367,768,394"/>
+<area shape="rect" id="node13" href="$class_design_info.html#a045dcc72cb83c568065771b458898b47" title=" " alt="" coords="612,419,787,460"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="623,549,775,591"/>
+<area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="623,484,775,525"/>
+</map>

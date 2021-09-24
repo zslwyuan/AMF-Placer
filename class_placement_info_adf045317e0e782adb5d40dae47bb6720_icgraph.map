@@ -1,0 +1,8 @@
+<map id="PlacementInfo::getDeviceInfo" name="PlacementInfo::getDeviceInfo">
+<area shape="rect" id="node1" title=" " alt="" coords="648,56,840,83"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#aadb6ba900abf8a5d1c03e0fd7edd320c" title="Construct a new Global Placer object based on placement information." alt="" coords="419,5,595,32"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="413,56,600,83"/>
+<area shape="rect" id="node6" href="$class_placement_timing_optimizer.html#a1a0dadc3dffc30406d0e8728d907071a" title=" " alt="" coords="415,107,599,149"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,49,365,90"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,56,116,83"/>
+</map>
