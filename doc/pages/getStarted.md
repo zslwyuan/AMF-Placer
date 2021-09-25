@@ -10,7 +10,10 @@ Here, we will go through some basic steps for users to build the placer and run 
 7. (Optional) Customize the Placement Flow
 
 **1. Build the Placer**
-
+First of all, users need to download the project and the command below will download it from GitHub:
+```
+git clone https://github.com/zslwyuan/AMF-Placer.git
+```
 We provide a script to build the placer and users can run the following command in the project root directory:
 
 ```bash
@@ -107,7 +110,8 @@ set targetFolderPath "/home/tingyuan/tmpFiles/"
 source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl
 ```
 * d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for OpenPiton:
-<img src="designFiles.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
+
+<img src="designFiles.png" alt="Implementation Overview" title="Implementation Overview" width="200" /> 
 
 **5. Extract Device Information from Vivado**
 Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provide device information for VCU108 which can be found in "benchmarks/VCU108/device".

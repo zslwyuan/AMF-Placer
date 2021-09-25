@@ -17,7 +17,7 @@ can be accelerated by 2.41x on average. The project can be downloaded **[here](h
 This project is developed by [Reconfiguration Computing Systems Lab](https://eeweiz.home.ece.ust.hk/), Hong Kong University of Science and Technology (HKUST).
 
 For non-commercial usage of this open-source project, users should comply the Apache License attached in the root directory.
-For commercial usage of this open-source project, users must contact authors (Wei ZHANG, eeweiz@ust.hk; Tingyuan LIANG, tliang@connect.ust.hk) for authorization.
+For commercial usage of this open-source project, users must contact authors (Wei ZHANG, eeweiz AT ust DOT hk; Tingyuan LIANG, tliang AT connect DOT ust DOT hk) for authorization.
 
 **Documentation Hierarchy**
 
@@ -50,5 +50,12 @@ For commercial usage of this open-source project, users must contact authors (We
 **Acknowledgement**
 
 We sincerely appreciate the kindly suggestions from reviewers, detailed explanations of UTPlaceF from [Dr. Wuxi Li](http://wuxili.net/#about), useful advice on Vivado metric usages from Dr. Stephen Yang and fruitful discussion on some previous works with [Ms. Yun Zhou](https://github.com/YunxZhou).
+
+
+**Issue Report**
+
+This project is under active development. Therefore, 
+* If you have any question/problem, please feel free to create a issue in the [GitHub Issue](https://github.com/zslwyuan/AMF-Placer/issues) or email us (Tingyuan LIANG, tliang AT connect DOT ust DOT hk)
+* We sincerely welcome code contribution to this project or suggestion in any approach! 
 
 (last updated Aug 17, 2021)
