@@ -89,4 +89,38 @@ Below, we explain some of the settings. If users target at Xilinx VCU108, users 
 
 
 **4. Extract Design Information from Vivado**
-in ""
+Users can go through the following steps to extract the information of specific designs. Please note that we have provide a set of benchmarks for VCU108 which can be found in "benchmarks/VCU108/design".
+
+* a. Please ensure that your design has sucessfully gone through the general Vivado flow to "Generate Bistream". In this way, Vivado will check your design to avoid some bugs in  frond-end design stages, and meanwhile we can extrat information of your design, even part of which are some of them are blackbox IPs in Vivado, from the "Implemented Design" which has gone through the placement and routing of Vivado.
+* b. Open the Tcl script "benchmarks/vivadoScripts/extractDesignInfo.tcl" in the project directory where you can find the below content at the beginning and modify them according to the comments suggesting.
+```
+# replace this with the name for your benchmark
+set benchmarkName "OpenPiton" 
+# replace this path with your one to specify where to store the files of extracted data
+set targetFolderPath "/home/tingyuan/tmpFiles/" 
+```
+* c. Open your design in Vivado and "Open Implemented Design" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or ~1hour to finish the extraction due to the slow Tcl execution related to strings and IOs in Vivado.
+```
+# replace XXXXX to indicate where your AMFPlacer is located.
+source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl
+```
+* d. Finally, you should be able to find the extracted files in target folder path set by you.
+
+**5. Extract Device Information from Vivado**
+Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provide device information for VCU108 which can be found in "benchmarks/VCU108/device".
+
+* a. Please ensure that your Vivado has the license for the specific device, so you can open the Device window by clicking on the top bar "Window->Device"
+
+* b. Open the Tcl script "benchmarks/vivadoScripts/extractDeviceInfo.tcl" in the project directory where you can find the below content at the beginning and modify them according to the comments suggesting.
+```
+# replace this with the name for your device
+set deviceName "VCU108" 
+# replace this path with your one to specify where to store the files of extracted data
+set targetFolderPath "/home/tingyuan/tmpFiles/" 
+```
+* c. Open your design of your target device or just create empty project of the target device. Open the Device window by clicking on the top bar "Window->Device" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or ~1hour to finish the extraction due to the slow Tcl execution related to strings and IOs in Vivado.
+```
+# replace XXXXX to indicate where your AMFPlacer is located.
+source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl
+```
+* d. Finally, you should be able to find the extracted files in target folder path set by you.

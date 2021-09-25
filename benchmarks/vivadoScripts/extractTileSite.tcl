@@ -1,5 +1,5 @@
 
-set fo [open "/home/tingyuan/Downloads/VCU108DeviceSite" "w"]
+set fo [open "${pahtPrefix}DeviceSite" "w"]
 
 set allBELs [get_bels]
 #set allSites [get_sites]
@@ -16,7 +16,7 @@ close $fo
 
 # extract PCIE
 
-set fo [open "/home/tingyuan/Downloads/PCIEPin2Sw0" "w"]
+set fo [open "${pahtPrefix}PCIEPin2Sw0" "w"]
 set curPCIESite [get_sites PCIE_3_1_X0Y0]
 set PCIEPins [get_site_pins -of_objects [get_sites $curPCIESite]]
 

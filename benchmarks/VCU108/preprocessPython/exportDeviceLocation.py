@@ -7,8 +7,14 @@ from PIL import Image
 import numpy as np
 from matplotlib.patches import Patch
 import zipfile
-
+import os
+import sys
 gw = 0.3
+
+assert(len(sys.argv) == 2)
+
+targetPath = sys.argv[0]
+deviceName = sys.argv[1]
 
 
 class siteInfo(object):
@@ -200,8 +206,8 @@ def processGTY_QuadSites():
 
 # lines = deviceInfoFile.readlines()
 
-archive = zipfile.ZipFile('../device/VCU108DeviceSite.zip', 'r')
-lines = archive.read('VCU108DeviceSite').decode('utf-8').split("\n")
+archive = zipfile.ZipFile(targetPath+"/"+deviceName+"DeviceSite.zip", 'r')
+lines = archive.read(deviceName+"DeviceSite").decode('utf-8').split("\n")
 
 plotPriority = dict()
 
@@ -340,7 +346,7 @@ for curSite in sites:
 # plt.show()
 
 
-exportfile = open("exportSiteLocation", "w")
+exportfile = open(targetPath+"/"+deviceName+"_exportSiteLocation", "w")
 
 for curSite in sites:
     cx = curSite.centerX
@@ -361,3 +367,4 @@ for curSite in sites:
           + " BELs=> " + str(curSite.BELs).replace(" ", "").replace("\'", ""), file=exportfile)
 
 exportfile.close()
+os.system("zip ")
