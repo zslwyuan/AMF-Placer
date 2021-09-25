@@ -111,8 +111,10 @@ source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl
 ```
 * d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for OpenPiton:
 
+<p align="center">
 <img src="designFiles.png" alt="Design Files" title="Design Files" width="300" /> 
-
+</p
+>
 **5. Extract Device Information from Vivado**
 Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provided device information for VCU108 which can be found in "benchmarks/VCU108/device". Please note that for a device, you can go through this extraction flow just ONE TIME. You DON'T need to do this every time your run AMFPlacer.
 
@@ -132,7 +134,9 @@ source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl
 ```
 * d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for VCU108:
 
+<p align="center">
 <img src="deviceFiles.png" alt="Device Files" title="Device Files" width="300" /> 
+</p>
 
 Please note that since the exact location of the extracted site/BEL/pins are not provided, the Tcl script uses a Python script to map the sites/BEL/pin to specifc location based on their names and hierarchy. If users change their target devices from VCU108 or Xilinx Ultrascale Series products, they might need to change the Python script to adapt to some other FPGA architectures.
 
@@ -152,4 +156,6 @@ source XXXXX/DumpCLBPacking-first-0.tcl
 
 Below is a screenshot when the AMFPlacer's placement is loading on Vivado. The orange blocks means the cells are placed are set fixed on the device.
 
+<p align="center">
 <img src="loadPlacement.png" alt="AMFPlacer's placement is loading on Vivado" title="AMFPlacer's placement is loading on Vivado" width="400" /> 
+</p>
