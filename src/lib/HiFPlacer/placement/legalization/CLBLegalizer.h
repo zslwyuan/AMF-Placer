@@ -177,7 +177,7 @@ class CLBLegalizer
     std::map<std::string, std::vector<DeviceInfo::DeviceSite *>> siteType2Sites;
 
     /**
-     * @brief record the mapping from PlacementUnits to the sites binded to them.
+     * @brief record the mapping from PlacementUnits to the candidate sites which are NOT binded to PUs
      *
      * Please be aware that a PlacementUnit (i.e., PlacementMacro) might be binded of multiple sites.
      *
@@ -384,7 +384,7 @@ class CLBLegalizer
     std::set<PlacementInfo::PlacementUnit *> LCLBPUs;
 
     /**
-     * @brief a cache record the candidate sites for each PlacementUnit
+     * @brief a cache record the candidate sites within a given displacement threshold  for each PlacementUnit
      *
      */
     std::map<PlacementInfo::PlacementUnit *, std::vector<DeviceInfo::DeviceSite *> *> PU2SitesInDisplacementThreshold;

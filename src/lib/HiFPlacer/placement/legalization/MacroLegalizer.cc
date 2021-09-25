@@ -12,8 +12,7 @@ MacroLegalizer::MacroLegalizer(std::string legalizerName, PlacementInfo *placeme
       compatiblePlacementTable(placementInfo->getCompatiblePlacementTable()),
       macroTypesToLegalize(macroTypesToLegalize), cellLoc(placementInfo->getCellId2location()), JSONCfg(JSONCfg)
 {
-    macrosToLegalize.clear();
-    cell2Site2HPWLIncrease.clear();
+    macroCellsToLegalize.clear();
     PU2X.clear();
     PU2Y.clear();
     PU2LegalSites.clear();
@@ -38,12 +37,10 @@ void MacroLegalizer::legalize(bool exactLegalization, bool directLegalization)
 {
     if (verbose)
         print_status("MacroLegalizer[" + legalizerName + "] Started Legalization.");
-    cell2Site2HPWLIncrease.clear();
-    PU2Site2HPWLIncrease.clear();
+
     resetSettings();
     findMacroType2AvailableSites();
     getMacrosToLegalize();
-    resetHPWLChangeCache();
 
     if (!directLegalization)
     {
@@ -71,7 +68,7 @@ void MacroLegalizer::legalize(bool exactLegalization, bool directLegalization)
 
 void MacroLegalizer::roughlyLegalize()
 {
-    while (macrosToLegalize.size())
+    while (macroCellsToLegalize.size())
     {
         findMacroCell2SitesInDistance();
         findPossibleLegalLocation(false);
@@ -99,9 +96,9 @@ void MacroLegalizer::fixedColumnLegalize(bool directLegalization)
     mapMacrosToColumns(directLegalization);
     resolveOverflowColumns();
 
-    macrosToLegalize = initialMacrosToLegalize;
+    macroCellsToLegalize = initialMacrosToLegalize;
 
-    while (macrosToLegalize.size())
+    while (macroCellsToLegalize.size())
     {
         findMacroCell2SitesInDistance();
         findPossibleLegalLocation(true);
@@ -322,21 +319,9 @@ float MacroLegalizer::DPForMinHPWL(int colNum, std::vector<std::vector<DeviceInf
     return tmpTotalDisplacement;
 }
 
-void MacroLegalizer::resetHPWLChangeCache()
-{
-    for (auto curCell : macrosToLegalize)
-    {
-        cell2Site2HPWLIncrease[curCell] = std::map<DeviceInfo::DeviceSite *, float>();
-    }
-    for (auto curPU : macroUnitsToLegalizeSet)
-    {
-        PU2Site2HPWLIncrease[curPU] = std::map<DeviceInfo::DeviceSite *, float>();
-    }
-}
-
 void MacroLegalizer::getMacrosToLegalize()
 {
-    macrosToLegalize.clear();
+    macroCellsToLegalize.clear();
     macroUnitsToLegalizeSet.clear();
     BRAMPUs.clear();
     DSPPUs.clear();
@@ -350,7 +335,7 @@ void MacroLegalizer::getMacrosToLegalize()
                 auto curPU = placementInfo->getPlacementUnitByCell(curCell);
                 if (!curPU->isLocked())
                 {
-                    macrosToLegalize.push_back(curCell);
+                    macroCellsToLegalize.push_back(curCell);
                     macroUnitsToLegalizeSet.insert(curPU);
                     if (curCell->isBRAM())
                     {
@@ -368,7 +353,7 @@ void MacroLegalizer::getMacrosToLegalize()
             }
         }
     }
-    initialMacrosToLegalize = macrosToLegalize;
+    initialMacrosToLegalize = macroCellsToLegalize;
 }
 
 void MacroLegalizer::findMacroType2AvailableSites()
@@ -510,12 +495,12 @@ void MacroLegalizer::findPossibleLegalLocation(bool fixedColumn)
 {
     macro2Sites.clear();
 
-    for (auto curCell : macrosToLegalize)
+    for (auto curCell : macroCellsToLegalize)
     {
         macro2Sites[curCell] = std::vector<DeviceInfo::DeviceSite *>(0);
     }
 
-    int numMacroCells = macrosToLegalize.size();
+    int numMacroCells = macroCellsToLegalize.size();
 
     if (verbose)
     {
@@ -525,7 +510,7 @@ void MacroLegalizer::findPossibleLegalLocation(bool fixedColumn)
 #pragma omp parallel for
     for (int i = 0; i < numMacroCells; i++)
     {
-        auto curCell = macrosToLegalize[i];
+        auto curCell = macroCellsToLegalize[i];
         auto curCellType = curCell->getCellType();
         assert(macroType2Sites.find(curCellType) != macroType2Sites.end());
 
@@ -622,14 +607,14 @@ void MacroLegalizer::findPossibleLegalLocation(bool fixedColumn)
 void MacroLegalizer::createBipartiteGraph()
 {
     rightSiteIds.clear();
-    adjList.resize(macrosToLegalize.size());
+    adjList.resize(macroCellsToLegalize.size());
     siteList.clear();
 
     float minCost = 10000000;
 
-    for (unsigned int leftCellId = 0; leftCellId < macrosToLegalize.size(); leftCellId++)
+    for (unsigned int leftCellId = 0; leftCellId < macroCellsToLegalize.size(); leftCellId++)
     {
-        auto curCell = macrosToLegalize[leftCellId];
+        auto curCell = macroCellsToLegalize[leftCellId];
         adjList[leftCellId].clear();
         for (auto curSite : macro2Sites[curCell])
         {
@@ -653,7 +638,7 @@ void MacroLegalizer::createBipartiteGraph()
     if (minCost < 0.0001)
     {
         float compensation = 10 - minCost;
-        for (unsigned int leftCellId = 0; leftCellId < macrosToLegalize.size(); leftCellId++)
+        for (unsigned int leftCellId = 0; leftCellId < macroCellsToLegalize.size(); leftCellId++)
         {
             for (unsigned int tmpId = 0; tmpId < adjList[leftCellId].size(); tmpId++)
             {
@@ -666,10 +651,10 @@ void MacroLegalizer::createBipartiteGraph()
 void MacroLegalizer::updateMatchingAndUnmatchedMacroCells()
 {
 
-    for (unsigned int leftCellId = 0; leftCellId < macrosToLegalize.size(); leftCellId++)
+    for (unsigned int leftCellId = 0; leftCellId < macroCellsToLegalize.size(); leftCellId++)
     {
         int rightNode = minCostBipartiteMatcher->getMatchedRightNode(leftCellId);
-        auto curCell = macrosToLegalize[leftCellId];
+        auto curCell = macroCellsToLegalize[leftCellId];
         if (rightNode >= 0)
         {
             assert(matchedMacroCells.find(curCell) == matchedMacroCells.end());
@@ -681,15 +666,15 @@ void MacroLegalizer::updateMatchingAndUnmatchedMacroCells()
     }
     std::vector<DesignInfo::DesignCell *> newMacrosToLegalize;
     newMacrosToLegalize.clear();
-    for (unsigned int leftCellId = 0; leftCellId < macrosToLegalize.size(); leftCellId++)
+    for (unsigned int leftCellId = 0; leftCellId < macroCellsToLegalize.size(); leftCellId++)
     {
-        auto curCell = macrosToLegalize[leftCellId];
+        auto curCell = macroCellsToLegalize[leftCellId];
         if (matchedMacroCells.find(curCell) == matchedMacroCells.end())
         {
             newMacrosToLegalize.push_back(curCell);
         }
     }
-    macrosToLegalize = newMacrosToLegalize;
+    macroCellsToLegalize = newMacrosToLegalize;
 }
 
 void MacroLegalizer::dumpMatching(bool fixedColumn, bool enforce)
@@ -721,7 +706,7 @@ void MacroLegalizer::dumpMatching(bool fixedColumn, bool enforce)
                     outfile0 << "    macthed with: " << matchedSite->getName() << "\n        locX:" << matchedSite->X()
                              << "\n        locY:" << matchedSite->Y()
                              << "\n        dis:" << getDisplacement(cellLoc[curCell->getCellId()], matchedSite)
-                             << "\n        HPWLIncrease:" << getHPWLChange(curCell, matchedSite, false) << "\n";
+                             << "\n        HPWLIncrease:" << getHPWLChange(curCell, matchedSite) << "\n";
                 }
             }
 

@@ -137,68 +137,288 @@ class MacroLegalizer
      *
      */
     std::vector<DesignInfo::DesignCellType> macroTypesToLegalize;
+
+    /**
+     * @brief a reference of the locations of cells (in cellId order)
+     *
+     */
     std::vector<PlacementInfo::Location> &cellLoc;
 
     std::map<std::string, std::string> &JSONCfg;
 
+    /**
+     * @brief min-cost bipartite matching solver for the legalization
+     *
+     */
     MinCostBipartiteMatcher *minCostBipartiteMatcher = nullptr;
-    std::vector<DesignInfo::DesignCell *> macrosToLegalize;
-    std::vector<DesignInfo::DesignCell *> initialMacrosToLegalize;
-    std::set<PlacementInfo::PlacementUnit *> macroUnitsToLegalizeSet;
-    std::map<DesignInfo::DesignCellType, std::vector<DeviceInfo::DeviceSite *>> macroType2Sites;
-    std::map<DesignInfo::DesignCell *, std::vector<DeviceInfo::DeviceSite *>> macro2Sites;
-    std::map<DesignInfo::DesignCell *, std::vector<DeviceInfo::DeviceSite *> *> macro2SitesInDisplacementThreshold;
-    std::map<DeviceInfo::DeviceSite *, int> rightSiteIds;
-    std::vector<DeviceInfo::DeviceSite *> siteList;
-    std::vector<std::vector<std::pair<int, float>>> adjList;
-    std::map<DesignInfo::DesignCell *, std::map<DeviceInfo::DeviceSite *, float>> cell2Site2HPWLIncrease;
-    std::map<PlacementInfo::PlacementUnit *, std::map<DeviceInfo::DeviceSite *, float>> PU2Site2HPWLIncrease;
 
+    /**
+     * @brief a vector storing the Design cells which have NOT been legalized
+     *
+     */
+    std::vector<DesignInfo::DesignCell *> macroCellsToLegalize;
+
+    /**
+     * @brief a vector storing the cells in macros which SHOULD be legalized
+     *
+     */
+    std::vector<DesignInfo::DesignCell *> initialMacrosToLegalize;
+
+    /**
+     * @brief a set storing the macros which have NOT been legalized
+     *
+     */
+    std::set<PlacementInfo::PlacementUnit *> macroUnitsToLegalizeSet;
+
+    /**
+     * @brief a map record the potential sites of different site types
+     *
+     */
+    std::map<DesignInfo::DesignCellType, std::vector<DeviceInfo::DeviceSite *>> macroType2Sites;
+
+    /**
+     * @brief record the mapping from cells to the candidate sites which are NOT binded to other cells
+     *
+     * Please be aware that a cell might be binded of multiple sites.
+     *
+     */
+    std::map<DesignInfo::DesignCell *, std::vector<DeviceInfo::DeviceSite *>> macro2Sites;
+
+    /**
+     * @brief a cache record the candidate sites within a given displacement threshold for each cell in the macros
+     *
+     */
+    std::map<DesignInfo::DesignCell *, std::vector<DeviceInfo::DeviceSite *> *> macro2SitesInDisplacementThreshold;
+
+    /**
+     * @brief map sites to temperary indexes for bipartite matching
+     *
+     */
+    std::map<DeviceInfo::DeviceSite *, int> rightSiteIds;
+
+    /**
+     * @brief a vector for the candidate sites for bipartite matching
+     *
+     */
+    std::vector<DeviceInfo::DeviceSite *> siteList;
+
+    /**
+     * @brief the adjacent list of the bipartite graph
+     *
+     */
+    std::vector<std::vector<std::pair<int, float>>> adjList;
+
+    /**
+     * @brief a set of cells in macros binded to corresponding DeviceSites
+     *
+     */
     std::set<DesignInfo::DesignCell *> matchedMacroCells;
+
+    /**
+     * @brief a set of DeviceSites binded to corresponding PlacementUnits
+     *
+     */
     std::set<DeviceInfo::DeviceSite *> matchedSites;
+
+    /**
+     * @brief record the binding between design standard cells and DeviceSites as a vector of pairs
+     *
+     */
     std::vector<std::pair<DesignInfo::DesignCell *, DeviceInfo::DeviceSite *>> cellLevelMatching;
+
+    /**
+     * @brief record the binding between PlacementUnits and DeviceSites as a vector of pairs
+     *
+     */
     std::vector<std::pair<PlacementInfo::PlacementUnit *, DeviceInfo::DeviceSite *>> PULevelMatching;
 
     int DumpMacroLegalizationCnt = 0;
 
+    /**
+     * @brief displacement threshold to detect potential legal sites
+     *
+     */
     float displacementThreshold = 30;
+
+    /**
+     * @brief the maximum number of final candidate sites
+     *
+     */
     int maxNumCandidate = 30;
 
+    /**
+     * @brief the number of BRAM columns on the target device
+     *
+     */
     int BRAMColumnNum = -1;
+
+    /**
+     * @brief the number of DSP columns on the target device
+     *
+     */
     int DSPColumnNum = -1;
+
+    /**
+     * @brief the number of CARRY columns on the target device
+     *
+     */
     int CARRYColumnNum = -1;
 
+    /**
+     * @brief the number of BRAM rows on the target device
+     *
+     */
     int BRAMRowNum = -1;
+
+    /**
+     * @brief the number of DSP rows on the target device
+     *
+     */
     int DSPRowNum = -1;
+
+    /**
+     * @brief the number of CARRY rows on the target device
+     *
+     */
     int CARRYRowNum = -1;
 
+    /**
+     * @brief the floating-point X location of the BRAM columns on the device
+     *
+     */
     std::vector<float> BRAMColumnXs;
+
+    /**
+     * @brief the floating-point X location of the DSP columns on the device
+     *
+     */
     std::vector<float> DSPColumnXs;
+
+    /**
+     * @brief the floating-point X location of the CARRY columns on the device
+     *
+     */
     std::vector<float> CARRYColumnXs;
 
+    /**
+     * @brief record the sites in each column of BRAM
+     *
+     */
     std::vector<std::vector<DeviceInfo::DeviceSite *>> BRAMColumn2Sites;
+
+    /**
+     * @brief record the sites in each column of DSP
+     *
+     */
     std::vector<std::vector<DeviceInfo::DeviceSite *>> DSPColumn2Sites;
+
+    /**
+     * @brief record the sites in each column of CARRY
+     *
+     */
     std::vector<std::vector<DeviceInfo::DeviceSite *>> CARRYColumn2Sites;
 
+    /**
+     * @brief record the PlacementUnits in each column of BRAM Sites
+     *
+     */
     std::vector<std::deque<PlacementInfo::PlacementUnit *>> BRAMColumn2PUs;
+
+    /**
+     * @brief record the PlacementUnits in each column of DSP Sites
+     *
+     */
     std::vector<std::deque<PlacementInfo::PlacementUnit *>> DSPColumn2PUs;
+
+    /**
+     * @brief record the PlacementUnits in each column of CARRY
+     *
+     */
     std::vector<std::deque<PlacementInfo::PlacementUnit *>> CARRYColumn2PUs;
 
+    /**
+     * @brief record the number of cells (Macro contains multiple cells) in each column for BRAM
+     *
+     */
     std::vector<int> BRAMColumnUntilization;
+
+    /**
+     * @brief record the number of cells (Macro contains multiple cells) in each column for DSP
+     *
+     */
     std::vector<int> DSPColumnUntilization;
+
+    /**
+     * @brief record the number of cells (Macro contains multiple cells) in each column for CARRY
+     *
+     */
     std::vector<int> CARRYColumnUntilization;
 
+    /**
+     * @brief record the PlacementUnits in each column of BRAM site
+     *
+     */
     std::map<DesignInfo::DesignCell *, int> BRAMCell2Column;
+
+    /**
+     * @brief record the PlacementUnits in each column of DSP site
+     *
+     */
     std::map<DesignInfo::DesignCell *, int> DSPCell2Column;
+
+    /**
+     * @brief record the PlacementUnits in each column of CARRY site
+     *
+     */
     std::map<DesignInfo::DesignCell *, int> CARRYCell2Column;
 
     std::map<PlacementInfo::PlacementUnit *, std::vector<DeviceInfo::DeviceSite *>> PU2LegalSites;
+
+    /**
+     * @brief record the mapping from PlacementUnits to exact DeviceSite location X
+     *
+     */
     std::map<PlacementInfo::PlacementUnit *, float> PU2X;
+
+    /**
+     * @brief record the mapping from PlacementUnits to exact DeviceSite location Y
+     *
+     */
     std::map<PlacementInfo::PlacementUnit *, float> PU2Y;
+
+    /**
+     * @brief record the exact site X (column id) of involved PlacementUnits
+     *
+     * unused currently and just for debugging
+     *
+     */
     std::map<PlacementInfo::PlacementUnit *, int> PU2SiteX;
+
+    /**
+     * @brief record the column id for the binded cells in involved PlacementUnits
+     *
+     * i.e., if a PlacementUnit is PlacementMacro, the cells in it might be allowed to bind to different columns during
+     * rough legalization.
+     *
+     */
     std::map<PlacementInfo::PlacementUnit *, std::vector<int>> PU2Columns;
+
+    /**
+     * @brief the PlacementUnits which shoudl be mapped to BRAM site
+     *
+     */
     std::set<PlacementInfo::PlacementUnit *> BRAMPUs;
+
+    /**
+     * @brief the PlacementUnits which shoudl be mapped to DSP site
+     *
+     */
     std::set<PlacementInfo::PlacementUnit *> DSPPUs;
+
+    /**
+     * @brief the PlacementUnits which shoudl be mapped to CARRY BEL
+     *
+     */
     std::set<PlacementInfo::PlacementUnit *> CARRYPUs;
 
     bool enableBRAMLegalization = false;
@@ -207,13 +427,50 @@ class MacroLegalizer
     bool verbose = false;
     float y2xRatio = 1.0;
 
+    /**
+     * @brief the average displacement of exact legalization for the involved PlacementUnit
+     *
+     */
     float finalAverageDisplacement = 10000.0;
+
+    /**
+     * @brief the average displacement of fixed column (but not exactly consective) legalization for the involved
+     * PlacementUnit
+     *
+     * During the fixed column legalization, cells in a macro will be constrainted on one column.
+     *
+     */
     float fixedColumnAverageDisplacement = 10000.0;
+
+    /**
+     * @brief the average displacement of rough legalization for the involved PlacementUnit
+     *
+     */
     float roughAverageDisplacement = 10000.0;
 
+    /**
+     * @brief displacement threshold to detect potential legal sites
+     *
+     */
     float initialDisplacementThreshold = 30;
+
+    /**
+     * @brief the maximum number of final candidate sites
+     *
+     */
     int initialMaxNumCandidate = 30;
+
+    /**
+     * @brief the number of the parallel multi-threading workers to handle the legalization problems
+     *
+     */
     int nJobs = 1;
+
+    /**
+     * @brief we are allowed to detect a excessive number (>candidateNum) of initial candidates. candidateFactor is to
+     * control the excessive ratio.
+     *
+     */
     int candidateFactor = 5;
 
     /**
@@ -280,49 +537,117 @@ class MacroLegalizer
      * @param directLegalization direct legalize the macros without rough legalization phase
      */
     void fixedColumnLegalize(bool directLegalization);
+
+    /**
+     * @brief update the locations of the legalization anchors for the PlacementUnits.
+     *
+     * This function might be called more than one time during implementation so we have to specify the type of
+     * legalization and whether we want to update the displacement value for the control of some optimizations.
+     *
+     * @param isRoughLegalization specify the type of legalization
+     * @param updateDisplacement whether we want to update the displacement value for the control of some optimizations
+     */
     void updatePUMatchingLocation(bool isRoughLegalization = true, bool updateDisplacement = true);
+
+    /**
+     * @brief finally dynamic programming to legalize the macros which have been mapped to the columns.
+     *
+     * This function will call DP function for each specific type of macros
+     *
+     */
     void finalLegalizeBasedOnDP();
+
+    /**
+     * @brief DP function for the legalization of a specific type of macros in the same column
+     *
+     * @param colNum total number of the column of the target type of PlacementUnit
+     * @param Column2Sites a vector record the sites in the columns
+     * @param Column2PUs  a vector record the macros in the columns
+     * @return float
+     */
     float DPForMinHPWL(int colNum, std::vector<std::vector<DeviceInfo::DeviceSite *>> &Column2Sites,
                        std::vector<std::deque<PlacementInfo::PlacementUnit *>> &Column2PUs);
+
+    /**
+     * @brief record the matching in private list and update the list of cells which are not matched by the
+     * bi-partite matching
+     *
+     */
     void updateMatchingAndUnmatchedMacroCells();
+
+    /**
+     * @brief spread PlacementUnits accross columns to resolve resource overflow
+     *
+     * @param columnNum the number of columns
+     * @param columnUntilization a vector reording the utilization usage of each column
+     * @param column2Sites a vector reording device sites in each column
+     * @param column2PUs a vector reording PlacementUnits in each column
+     * @param cell2Column a map recording the column id for each PlacementUnit
+     */
     void spreadMacros(int columnNum, std::vector<int> &columnUntilization,
                       std::vector<std::vector<DeviceInfo::DeviceSite *>> &column2Sites,
                       std::vector<std::deque<PlacementInfo::PlacementUnit *>> &column2PUs,
                       std::map<DesignInfo::DesignCell *, int> &cell2Column, float budgeRatio = 1);
+
+    /**
+     * @brief find the column which contains the most of cells in a macro in a specific range of columns
+     *
+     * @param minId the begin column
+     * @param maxId the end column
+     * @param ids the column ids of the cells in the macro
+     * @return int
+     */
     int findIdMaxWithRecurence(int minId, int maxId, std::vector<int> &ids);
+
+    /**
+     * @brief Set the sites which are binded as mapped so they will not be mapped to other elements in the netlist
+     *
+     */
     void setSitesMapped();
 
+    /**
+     * @brief find candidate sites for the cells left to be matched
+     *
+     */
     void findMacroCell2SitesInDistance()
     {
         macro2SitesInDisplacementThreshold.clear();
 
-        int macrosNum = macrosToLegalize.size();
+        int macrosNum = macroCellsToLegalize.size();
 
         for (int i = 0; i < macrosNum; i++)
         {
-            macro2SitesInDisplacementThreshold[macrosToLegalize[i]] = nullptr;
+            macro2SitesInDisplacementThreshold[macroCellsToLegalize[i]] = nullptr;
         }
 
 #pragma omp parallel for
         for (int i = 0; i < macrosNum; i++)
         {
-            DesignInfo::DesignCell *curCell = macrosToLegalize[i];
+            DesignInfo::DesignCell *curCell = macroCellsToLegalize[i];
             macro2SitesInDisplacementThreshold[curCell] = placementInfo->findNeiborSiteFromBinGrid(
                 curCell, cellLoc[curCell->getCellId()].X, cellLoc[curCell->getCellId()].Y, displacementThreshold,
                 candidateFactor * maxNumCandidate);
         }
     }
 
+    /**
+     * @brief clear the information of candidate sites for the cells left to be matched
+     *
+     */
     void resetMacroCell2SitesInDistance()
     {
-        int macrosNum = macrosToLegalize.size();
+        int macrosNum = macroCellsToLegalize.size();
         for (int i = 0; i < macrosNum; i++)
         {
-            DesignInfo::DesignCell *curCell = macrosToLegalize[i];
+            DesignInfo::DesignCell *curCell = macroCellsToLegalize[i];
             delete macro2SitesInDisplacementThreshold[curCell];
         }
     }
 
+    /**
+     * @brief clear the mapping information and reset the mapping parameters
+     *
+     */
     inline void resetSettings()
     {
         displacementThreshold = initialDisplacementThreshold;
@@ -333,6 +658,12 @@ class MacroLegalizer
         PULevelMatching.clear();
     }
 
+    /**
+     * @brief check how many sites are required by the given PlacementUnit
+     *
+     * @param tmpPUUnit  the given PlacementUnit
+     * @return int
+     */
     int getMarcroCellNum(PlacementInfo::PlacementUnit *tmpMacroUnit);
 
     inline void swapPU(PlacementInfo::PlacementUnit **A, PlacementInfo::PlacementUnit **B)
@@ -356,16 +687,15 @@ class MacroLegalizer
         return std::fabs(curPU->X() - curSite->X()) + y2xRatio * std::fabs(curPU->Y() - curSite->Y());
     }
 
-    inline float getHPWLChange(DesignInfo::DesignCell *curCell, DeviceInfo::DeviceSite *curSite, bool useCache = true)
+    /**
+     * @brief get the HPWL change when the given DesignCell moves to the given DeviceSite
+     *
+     * @param curCell the given DesignCell
+     * @param curSite  the given DeviceSite
+     * @return float
+     */
+    inline float getHPWLChange(DesignInfo::DesignCell *curCell, DeviceInfo::DeviceSite *curSite)
     {
-        if (useCache)
-        {
-            assert(cell2Site2HPWLIncrease.find(curCell) != cell2Site2HPWLIncrease.end());
-            if (cell2Site2HPWLIncrease[curCell].find(curSite) != cell2Site2HPWLIncrease[curCell].end())
-            {
-                return cell2Site2HPWLIncrease[curCell][curSite];
-            }
-        }
         float oriHPWL = 0.0;
         float newHPWL = 0.0;
         auto tmpPU = placementInfo->getPlacementUnitByCell(curCell);
@@ -392,15 +722,18 @@ class MacroLegalizer
             oriHPWL += curNet->getHPWL(y2xRatio);
             newHPWL += curNet->getNewHPWLByTrying(tmpPU, PUX, PUY, y2xRatio);
         }
-        if (useCache)
-        {
-            cell2Site2HPWLIncrease[curCell][curSite] = (newHPWL - oriHPWL) / numCellsInMacro;
-        }
         return (newHPWL - oriHPWL) / numCellsInMacro;
         // return std::fabs(macroLoc.X - curSite->X()) + std::fabs(macroLoc.Y - curSite->Y());
         // placementInfo->getPlacementUnitByCell(curCell);
     }
 
+    /**
+     * @brief get the HPWL change when the given PlacementUnit moves to the given DeviceSite
+     *
+     * @param tmpPU the given PlacementUnit
+     * @param curSite  the given DeviceSite
+     * @return float
+     */
     inline float getHPWLChange(PlacementInfo::PlacementUnit *tmpPU, DeviceInfo::DeviceSite *curSite)
     {
         float oriHPWL = 0.0;
@@ -422,8 +755,14 @@ class MacroLegalizer
         return (newHPWL - oriHPWL);
     }
 
-    void resetHPWLChangeCache();
-
+    /**
+     * @brief get the HPWL change when the given PlacementUnit moves to the given location
+     *
+     * @param tmpPU  the given PlacementUnit
+     * @param PUX given location X
+     * @param PUY given location Y
+     * @return float
+     */
     inline float getHPWLChange(PlacementInfo::PlacementUnit *tmpPU, float PUX, float PUY)
     {
 
