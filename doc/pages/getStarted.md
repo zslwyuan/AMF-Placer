@@ -106,7 +106,8 @@ set targetFolderPath "/home/tingyuan/tmpFiles/"
 # replace XXXXX to indicate where your AMFPlacer is located.
 source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl
 ```
-* d. Finally, you should be able to find the extracted files in target folder path set by you.
+* d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for OpenPiton:
+<img src="designFiles.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
 
 **5. Extract Device Information from Vivado**
 Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provide device information for VCU108 which can be found in "benchmarks/VCU108/device".
@@ -126,3 +127,5 @@ set targetFolderPath "/home/tingyuan/tmpFiles/"
 source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl
 ```
 * d. Finally, you should be able to find the extracted files in target folder path set by you.
+
+Please note that since the exact location of the extracted site/BEL/pins are not provided, the Tcl script uses a Python script to map the sites/BEL/pin to specifc location based on their names and hierarchy. If users change their target devices from VCU108 or Xilinx Ultrascale Series products, they might need to change the Python script to adapt to some other FPGA architectures.
