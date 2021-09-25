@@ -1,7 +1,6 @@
 <map id="GlobalPlacer::dumpAllCellsCoordinate" name="GlobalPlacer::dumpAllCellsCoordinate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,100,184,141"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="239,5,417,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="232,71,424,112"/>
-<area shape="rect" id="node4" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="283,137,373,163"/>
-<area shape="rect" id="node5" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="273,187,383,214"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,64,184,105"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="232,5,424,47"/>
+<area shape="rect" id="node3" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="283,71,373,98"/>
+<area shape="rect" id="node4" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="273,122,383,149"/>
 </map>

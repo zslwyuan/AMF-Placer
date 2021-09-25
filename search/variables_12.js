@@ -36,6 +36,6 @@ var searchData=
   ['totalutilization_33',['totalUtilization',['../class_general_spreader_1_1_spread_region.html#a027061786a09d4b8bf58a77f9b82bcc4',1,'GeneralSpreader::SpreadRegion']]],
   ['totalweight_34',['totalWeight',['../class_placement_info_1_1_cluster_unit.html#a759335f54b8f3716f92199f3aa2e06a0',1,'PlacementInfo::ClusterUnit']]],
   ['true_35',['True',['../namespacegothrough_benchmarks.html#af77b6121a5c17f055453604ff118832f',1,'gothroughBenchmarks']]],
-  ['type_36',['type',['../class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083',1,'DeviceInfo::DeviceElement::type()'],['../class_design_info_1_1_design_element.html#a0ab5c559fcb022b3033a141e67e46cdd',1,'DesignInfo::DesignElement::type()']]],
+  ['type_36',['type',['../class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083',1,'DeviceInfo::DeviceElement::type()'],['../class_design_info_1_1_design_element.html#a0ab5c559fcb022b3033a141e67e46cdd',1,'DesignInfo::DesignElement::type()'],['../namespace_untitled-1.html#a1038844dca5cc3692328b0ee6a0b3d89',1,'Untitled-1.type()']]],
   ['type2cells_37',['type2Cells',['../class_design_info.html#a2e94f4948c646ff032960efb452b89cd',1,'DesignInfo']]]
 ];

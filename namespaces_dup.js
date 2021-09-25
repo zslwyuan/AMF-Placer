@@ -177,5 +177,13 @@ var namespaces_dup =
       [ "s", "namespacepaint_summary.html#a666a53ca335e56f4cbec602072c037d7", null ],
       [ "width", "namespacepaint_summary.html#a098c8614cd714a8d3d021826baf5a34e", null ]
     ] ],
+    [ "Untitled-1", "namespace_untitled-1.html", [
+      [ "curCell", "namespace_untitled-1.html#ad63786501d677b9c3e97884b4e147b57", null ],
+      [ "dir", "namespace_untitled-1.html#adc472ff47dad21b02f3f5a0a44778c91", null ],
+      [ "drivepin", "namespace_untitled-1.html#ae7ab2591ac390d4b5ee4b0a10a507291", null ],
+      [ "net", "namespace_untitled-1.html#a74b0f792c770b841b0533b3689523cf4", null ],
+      [ "pin", "namespace_untitled-1.html#a0b55f5ed5effc7f728cca0088f1758c5", null ],
+      [ "type", "namespace_untitled-1.html#a1038844dca5cc3692328b0ee6a0b3d89", null ]
+    ] ],
     [ "VivadoGraphUtil", "namespace_vivado_graph_util.html", "namespace_vivado_graph_util" ]
 ];

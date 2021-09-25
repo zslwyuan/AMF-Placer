@@ -342,11 +342,18 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">JSONCfg</td><td>user configuration JSON mapping </td></tr>
-    <tr><td class="paramname">_deviceName</td><td>device file name </td></tr>
+    <tr><td class="paramname">_deviceName</td><td>device file name</td></tr>
   </table>
   </dd>
 </dl>
-
+<p>The device information file will contain information like the text shown below </p><div class="fragment"><div class="line">site=&gt; SLICE_X59Y220 tile=&gt; CLEL_R_X36Y220 sitetype=&gt; SLICEL tiletype=&gt; CLE_R centerx=&gt; 37.25 centery=&gt; 220.15</div>
+<div class="line">BELs=&gt; [SLICE_X59Y220/A5LUT,SLICE_X59Y220/A6LUT,SLICE_X59Y220/AFF,SLICE_X59Y220/AFF2,SLICE_X59Y220/B5LUT,SLICE_X59Y220/B6LUT,SLICE_X59Y220/BFF,SLICE_X59Y220/BFF2,SLICE_X59Y220/C5LUT,SLICE_X59Y220/C6LUT,SLICE_X59Y220/CARRY8,SLICE_X59Y220/CFF,SLICE_X59Y220/CFF2,SLICE_X59Y220/D5LUT,SLICE_X59Y220/D6LUT,SLICE_X59Y220/DFF,SLICE_X59Y220/DFF2,SLICE_X59Y220/E5LUT,SLICE_X59Y220/E6LUT,SLICE_X59Y220/EFF,SLICE_X59Y220/EFF2,SLICE_X59Y220/F5LUT,SLICE_X59Y220/F6LUT,SLICE_X59Y220/F7MUX_AB,SLICE_X59Y220/F7MUX_CD,SLICE_X59Y220/F7MUX_EF,SLICE_X59Y220/F7MUX_GH,SLICE_X59Y220/F8MUX_BOT,SLICE_X59Y220/F8MUX_TOP,SLICE_X59Y220/F9MUX,SLICE_X59Y220/FFF,SLICE_X59Y220/FFF2,SLICE_X59Y220/G5LUT,SLICE_X59Y220/G6LUT,SLICE_X59Y220/GFF,SLICE_X59Y220/GFF2,SLICE_X59Y220/H5LUT,SLICE_X59Y220/H6LUT,SLICE_X59Y220/HFF,SLICE_X59Y220/HFF2]</div>
+<div class="line"> </div>
+<div class="line">site=&gt; RAMB18_X7Y88 tile=&gt; BRAM_X36Y220 sitetype=&gt; RAMBFIFO18 tiletype=&gt; CLE_R centerx=&gt; 36.75 centery=&gt; 221.96249999999998 </div>
+<div class="line">BELs=&gt; [RAMB18_X7Y88/RAMBFIFO18] site=&gt; RAMB18_X7Y89 tile=&gt; BRAM_X36Y220 sitetype=&gt; RAMB181</div>
+<div class="line"> </div>
+<div class="line">tiletype=&gt; CLE_R centerx=&gt; 36.75 centery=&gt; 224.11249999999998 BELs=&gt; [RAMB18_X7Y89/RAMB18E2_U]</div>
+</div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="_device_info_8cc_source.html#l00020">20</a> of file <a class="el" href="_device_info_8cc_source.html">DeviceInfo.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
@@ -407,7 +414,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00730">730</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00743">743</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -513,7 +520,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00747">747</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00760">760</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00413">addBEL()</a>.</p>
 <div class="dynheader">
@@ -658,7 +665,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00766">766</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00779">779</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00430">addSite()</a>.</p>
 <div class="dynheader">
@@ -749,7 +756,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00785">785</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00798">798</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00449">addTile()</a>.</p>
 <div class="dynheader">
@@ -789,7 +796,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00921">921</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00934">934</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -816,7 +823,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00908">908</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00921">921</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -853,7 +860,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;DeviceBEL *&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00824">824</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00837">837</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -881,7 +888,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00937">937</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00950">950</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03137">PlacementInfo::getBELType2FalseBELType()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00179">PlacementInfo::CompatiblePlacementTable::setBELTypeForCells()</a>.</p>
 <div class="dynheader">
@@ -927,7 +934,7 @@ Here is the caller graph for this function:</div>
 <p>get BEL types in the device </p>
 <dl class="section return"><dt>Returns</dt><dd>std::set&lt;std::string&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00801">801</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00814">814</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00056">PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable()</a>.</p>
 <div class="dynheader">
@@ -975,7 +982,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>DeviceBEL* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00812">812</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00825">825</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1002,7 +1009,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00985">985</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00998">998</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00284">PlacementInfo::createGridBins()</a>.</p>
 <div class="dynheader">
@@ -1075,7 +1082,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00998">998</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01011">1011</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01835">PlacementInfo::checkClockUtilization()</a>.</p>
 <div class="dynheader">
@@ -1120,7 +1127,7 @@ Here is the caller graph for this function:</div>
 <p>Get the number of columns of the clock region array. </p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01032">1032</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01045">1045</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01289">PlacementInfo::adjustLUTFFUtilization_Clocking()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01835">PlacementInfo::checkClockUtilization()</a>.</p>
 <div class="dynheader">
@@ -1166,7 +1173,7 @@ Here is the caller graph for this function:</div>
 <p>Get the number of rows of the clock region array. </p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01042">1042</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01055">1055</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01289">PlacementInfo::adjustLUTFFUtilization_Clocking()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01835">PlacementInfo::checkClockUtilization()</a>.</p>
 <div class="dynheader">
@@ -1209,7 +1216,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01071">1071</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01084">1084</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01289">PlacementInfo::adjustLUTFFUtilization_Clocking()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01835">PlacementInfo::checkClockUtilization()</a>.</p>
 <div class="dynheader">
@@ -1252,7 +1259,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00791">791</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00804">804</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1300,7 +1307,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01066">1066</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01079">1079</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01835">PlacementInfo::checkClockUtilization()</a>.</p>
 <div class="dynheader">
@@ -1343,7 +1350,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00926">926</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00939">939</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01511">InitialPacker::loadFixedPlacementUnits()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>.</p>
 <div class="dynheader">
@@ -1385,7 +1392,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00912">912</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00925">925</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00284">PlacementInfo::createGridBins()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00022">PlacementInfo::PlacementInfo()</a>.</p>
 <div class="dynheader">
@@ -1435,7 +1442,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;DeviceSite *&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00858">858</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00871">871</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00284">PlacementInfo::createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01406">PlacementInfo::createSiteBinGrid()</a>, <a class="el" href="_design_info_8cc_source.html#l00129">DesignInfo::DesignInfo()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00359">MacroLegalizer::findMacroType2AvailableSites()</a>, <a class="el" href="_c_l_b_legalizer_8cc_source.html#l00343">CLBLegalizer::findSiteType2AvailableSites()</a>, <a class="el" href="_device_info_8cc_source.html#l00291">loadPCIEPinOffset()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00029">ParallelCLBPacker::ParallelCLBPacker()</a>.</p>
 <div class="dynheader">
@@ -1488,7 +1495,7 @@ Here is the caller graph for this function:</div>
 <p>Get the Site Types in the device. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::set&lt;std::string&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00835">835</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00848">848</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1525,7 +1532,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>DeviceSite* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00846">846</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00859">859</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01289">InitialPacker::loadOtherCLBMacros()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01574">PlacementInfo::loadPlacementUnitInformation()</a>.</p>
 <div class="dynheader">
@@ -1567,7 +1574,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00931">931</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00944">944</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1594,7 +1601,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00916">916</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00929">929</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1631,7 +1638,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;DeviceTile *&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00892">892</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00905">905</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1661,7 +1668,7 @@ Here is the caller graph for this function:</div>
 <p>Get the tile types in the device. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::set&lt;std::string&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00869">869</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00882">882</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1698,7 +1705,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>DeviceTile* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00880">880</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00893">893</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1983,7 +1990,7 @@ Here is the caller graph for this function:</div>
 
 <p>remove the mapped flags for all sites without fixed elements </p>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00968">968</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00981">981</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00395">GlobalPlacer::macroLegalize()</a>.</p>
 <div class="dynheader">
@@ -2021,9 +2028,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01080">1080</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01093">1093</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00413">addBEL()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00908">getBELs()</a>, <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>, and <a class="el" href="_device_info_8h_source.html#l00730">~DeviceInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00413">addBEL()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00921">getBELs()</a>, <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>, and <a class="el" href="_device_info_8h_source.html#l00743">~DeviceInfo()</a>.</p>
 
 </div>
 </div>
@@ -2047,9 +2054,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01079">1079</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01092">1092</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00413">addBEL()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00824">getBELsInType()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00413">addBEL()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00837">getBELsInType()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
 
 </div>
 </div>
@@ -2073,9 +2080,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01090">1090</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01103">1103</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00937">getBELType2FalseBELType()</a>, and <a class="el" href="_device_info_8cc_source.html#l00465">loadBELType2FalseBELType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00950">getBELType2FalseBELType()</a>, and <a class="el" href="_device_info_8cc_source.html#l00465">loadBELType2FalseBELType()</a>.</p>
 
 </div>
 </div>
@@ -2099,9 +2106,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01078">1078</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01091">1091</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00747">addBELTypes()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00801">getBELTypes()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00760">addBELTypes()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00814">getBELTypes()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
 
 </div>
 </div>
@@ -2125,9 +2132,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01105">1105</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01118">1118</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00985">getBoundaryTolerance()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00998">getBoundaryTolerance()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
 
 </div>
 </div>
@@ -2151,9 +2158,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01106">1106</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01119">1119</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00998">getClockRegionByLocation()</a>, <a class="el" href="_device_info_8h_source.html#l01032">getClockRegionNumX()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l01011">getClockRegionByLocation()</a>, <a class="el" href="_device_info_8h_source.html#l01045">getClockRegionNumX()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
 
 </div>
 </div>
@@ -2177,9 +2184,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01107">1107</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01120">1120</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00998">getClockRegionByLocation()</a>, <a class="el" href="_device_info_8h_source.html#l01042">getClockRegionNumY()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l01011">getClockRegionByLocation()</a>, <a class="el" href="_device_info_8h_source.html#l01055">getClockRegionNumY()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
 
 </div>
 </div>
@@ -2203,9 +2210,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01097">1097</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01110">1110</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l01071">getClockRegions()</a>, <a class="el" href="_device_info_8h_source.html#l01066">getMaxUtilizationOfClockColumns_InClockRegion()</a>, <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>, and <a class="el" href="_device_info_8cc_source.html#l00285">recordClockRelatedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l01084">getClockRegions()</a>, <a class="el" href="_device_info_8h_source.html#l01079">getMaxUtilizationOfClockColumns_InClockRegion()</a>, <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>, and <a class="el" href="_device_info_8cc_source.html#l00285">recordClockRelatedCell()</a>.</p>
 
 </div>
 </div>
@@ -2229,9 +2236,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01098">1098</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01111">1111</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00998">getClockRegionByLocation()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l01011">getClockRegionByLocation()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
 
 </div>
 </div>
@@ -2255,9 +2262,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01099">1099</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01112">1112</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00998">getClockRegionByLocation()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l01011">getClockRegionByLocation()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
 
 </div>
 </div>
@@ -2281,7 +2288,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01096">1096</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01109">1109</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, and <a class="el" href="_device_info_8cc_source.html#l00147">mapClockRegionToArray()</a>.</p>
 
@@ -2307,7 +2314,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01102">1102</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01115">1115</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>.</p>
 
@@ -2333,9 +2340,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01077">1077</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01090">1090</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, and <a class="el" href="_device_info_8h_source.html#l00791">getDeviceName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, and <a class="el" href="_device_info_8h_source.html#l00804">getDeviceName()</a>.</p>
 
 </div>
 </div>
@@ -2359,7 +2366,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01101">1101</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01114">1114</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>.</p>
 
@@ -2385,9 +2392,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01092">1092</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01105">1105</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00413">addBEL()</a>, <a class="el" href="_device_info_8h_source.html#l00921">getBEL()</a>, and <a class="el" href="_device_info_8h_source.html#l00812">getBELWithName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00413">addBEL()</a>, <a class="el" href="_device_info_8h_source.html#l00934">getBEL()</a>, and <a class="el" href="_device_info_8h_source.html#l00825">getBELWithName()</a>.</p>
 
 </div>
 </div>
@@ -2411,9 +2418,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01093">1093</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01106">1106</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00430">addSite()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00926">getSite()</a>, and <a class="el" href="_device_info_8h_source.html#l00846">getSiteWithName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00430">addSite()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00939">getSite()</a>, and <a class="el" href="_device_info_8h_source.html#l00859">getSiteWithName()</a>.</p>
 
 </div>
 </div>
@@ -2437,9 +2444,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01094">1094</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01107">1107</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00449">addTile()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00931">getTile()</a>, and <a class="el" href="_device_info_8h_source.html#l00880">getTileWithName()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00449">addTile()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00944">getTile()</a>, and <a class="el" href="_device_info_8h_source.html#l00893">getTileWithName()</a>.</p>
 
 </div>
 </div>
@@ -2463,9 +2470,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01084">1084</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01097">1097</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00430">addSite()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00912">getSites()</a>, <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>, <a class="el" href="_device_info_8h_source.html#l00968">resetAllSiteMapping()</a>, and <a class="el" href="_device_info_8h_source.html#l00730">~DeviceInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00430">addSite()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00925">getSites()</a>, <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>, <a class="el" href="_device_info_8h_source.html#l00981">resetAllSiteMapping()</a>, and <a class="el" href="_device_info_8h_source.html#l00743">~DeviceInfo()</a>.</p>
 
 </div>
 </div>
@@ -2489,9 +2496,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01083">1083</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01096">1096</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00430">addSite()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00858">getSitesInType()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00430">addSite()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00871">getSitesInType()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
 
 </div>
 </div>
@@ -2515,9 +2522,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01082">1082</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01095">1095</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00766">addSiteTypes()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00835">getSiteTypes()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00779">addSiteTypes()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00848">getSiteTypes()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
 
 </div>
 </div>
@@ -2541,7 +2548,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01103">1103</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01116">1116</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, and <a class="el" href="_device_info_8cc_source.html#l00291">loadPCIEPinOffset()</a>.</p>
 
@@ -2567,9 +2574,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01088">1088</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01101">1101</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00449">addTile()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00916">getTiles()</a>, <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>, and <a class="el" href="_device_info_8h_source.html#l00730">~DeviceInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00449">addTile()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00929">getTiles()</a>, <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>, and <a class="el" href="_device_info_8h_source.html#l00743">~DeviceInfo()</a>.</p>
 
 </div>
 </div>
@@ -2593,9 +2600,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01087">1087</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01100">1100</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00449">addTile()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00892">getTilesInType()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00449">addTile()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00905">getTilesInType()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
 
 </div>
 </div>
@@ -2619,9 +2626,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01086">1086</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l01099">1099</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00785">addTileTypes()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00869">getTileTypes()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00798">addTileTypes()</a>, <a class="el" href="_device_info_8cc_source.html#l00020">DeviceInfo()</a>, <a class="el" href="_device_info_8h_source.html#l00882">getTileTypes()</a>, and <a class="el" href="_device_info_8cc_source.html#l00361">printStat()</a>.</p>
 
 </div>
 </div>

@@ -2,11 +2,9 @@
 <area shape="rect" id="node1" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="5,165,232,207"/>
 <area shape="rect" id="node2" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit" alt="" coords="300,5,475,47"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="291,71,483,112"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a227563f5f5f5fc68e73beef0ce8337c3" title=" " alt="" coords="288,136,487,177"/>
-<area shape="rect" id="node7" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="350,202,425,229"/>
-<area shape="rect" id="node8" href="$class_placement_info.html#adb467655582635a1c7f5743803397e11" title="set the legalization of some PlacementUnit objects" alt="" coords="288,253,487,279"/>
-<area shape="rect" id="node9" href="$class_macro_legalizer.html#aca631ffd6d2c4fda5713fb1044c3ce1f" title=" " alt="" coords="280,303,495,330"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="550,104,702,145"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="757,104,935,145"/>
-<area shape="rect" id="node10" href="$class_macro_legalizer.html#aa58fa1b66ae80470c5a6483338aa854f" title=" " alt="" coords="543,303,709,330"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a227563f5f5f5fc68e73beef0ce8337c3" title=" " alt="" coords="288,136,487,177"/>
+<area shape="rect" id="node5" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="350,202,425,229"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#adb467655582635a1c7f5743803397e11" title="set the legalization of some PlacementUnit objects" alt="" coords="288,253,487,279"/>
+<area shape="rect" id="node7" href="$class_macro_legalizer.html#aca631ffd6d2c4fda5713fb1044c3ce1f" title=" " alt="" coords="280,303,495,330"/>
+<area shape="rect" id="node8" href="$class_macro_legalizer.html#aa58fa1b66ae80470c5a6483338aa854f" title=" " alt="" coords="543,303,709,330"/>
 </map>

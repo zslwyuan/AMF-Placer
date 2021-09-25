@@ -168,7 +168,7 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 <li>c. Open your design in Vivado and "Open Implemented Design" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or ~1hour to finish the extraction due to the slow Tcl execution related to strings and IOs in Vivado. <div class="fragment"><div class="line"># replace XXXXX to indicate where your AMFPlacer is located.</div>
 <div class="line">source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl</div>
 </div><!-- fragment --></li>
-<li>d. Finally, you should be able to find the extracted files in target folder path set by you.</li>
+<li>d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for OpenPiton: <img src="designFiles.png" alt="Implementation Overview" title="Implementation Overview" width="800" class="inline"/></li>
 </ul>
 <p ><b>5. Extract Device Information from Vivado</b> Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provide device information for VCU108 which can be found in "benchmarks/VCU108/device".</p>
 <ul>
@@ -181,8 +181,9 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 <li>c. Open your design of your target device or just create empty project of the target device. Open the Device window by clicking on the top bar "Window-&gt;Device" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or ~1hour to finish the extraction due to the slow Tcl execution related to strings and IOs in Vivado. <div class="fragment"><div class="line"># replace XXXXX to indicate where your AMFPlacer is located.</div>
 <div class="line">source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl</div>
 </div><!-- fragment --></li>
-<li>d. Finally, you should be able to find the extracted files in target folder path set by you. </li>
+<li>d. Finally, you should be able to find the extracted files in target folder path set by you.</li>
 </ul>
+<p >Please note that since the exact location of the extracted site/BEL/pins are not provided, the Tcl script uses a Python script to map the sites/BEL/pin to specifc location based on their names and hierarchy. If users change their target devices from VCU108 or Xilinx Ultrascale Series products, they might need to change the Python script to adapt to some other FPGA architectures. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

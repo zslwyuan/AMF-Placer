@@ -1,21 +1,16 @@
 <map id="GlobalPlacer::dumpCoord" name="GlobalPlacer::dumpCoord">
-<area shape="rect" id="node1" title=" " alt="" coords="5,342,173,369"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="253,305,431,347"/>
-<area shape="rect" id="node7" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="221,254,463,281"/>
-<area shape="rect" id="node10" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="231,203,453,230"/>
-<area shape="rect" id="node13" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="236,371,448,398"/>
-<area shape="rect" id="node16" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="231,422,453,449"/>
-<area shape="rect" id="node19" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="223,473,461,499"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="518,341,695,383"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="511,407,703,448"/>
-<area shape="rect" id="node5" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="561,239,652,266"/>
-<area shape="rect" id="node6" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="551,290,662,317"/>
-<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="531,123,683,164"/>
-<area shape="rect" id="node9" href="$class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="541,189,672,215"/>
-<area shape="rect" id="node11" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="531,5,683,47"/>
-<area shape="rect" id="node12" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="543,71,670,98"/>
-<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="531,472,683,513"/>
-<area shape="rect" id="node15" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="549,538,665,565"/>
-<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="531,589,683,631"/>
-<area shape="rect" id="node18" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="543,655,670,682"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,169,173,196"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="253,133,431,174"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="221,31,463,57"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="231,81,453,108"/>
+<area shape="rect" id="node10" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="236,199,448,225"/>
+<area shape="rect" id="node12" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="231,249,453,276"/>
+<area shape="rect" id="node14" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="223,300,461,327"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="511,107,703,149"/>
+<area shape="rect" id="node4" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="561,173,652,200"/>
+<area shape="rect" id="node5" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="551,224,662,251"/>
+<area shape="rect" id="node7" href="$class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="541,5,672,32"/>
+<area shape="rect" id="node9" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="543,56,670,83"/>
+<area shape="rect" id="node11" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="549,275,665,301"/>
+<area shape="rect" id="node13" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="543,325,670,352"/>
 </map>
