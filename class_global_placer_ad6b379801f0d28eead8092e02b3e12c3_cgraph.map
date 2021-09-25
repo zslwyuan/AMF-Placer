@@ -1,8 +1,11 @@
 <map id="GlobalPlacer::dumpLUTFFCoordinate" name="GlobalPlacer::dumpLUTFFCoordinate">
-<area shape="rect" id="node1" title=" " alt="" coords="5,122,244,149"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="292,5,484,47"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="330,71,446,98"/>
-<area shape="rect" id="node4" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="325,122,451,149"/>
-<area shape="rect" id="node5" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="343,173,433,199"/>
-<area shape="rect" id="node6" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="333,223,443,250"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,231,244,258"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="299,5,477,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="292,71,484,112"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="312,136,464,177"/>
+<area shape="rect" id="node5" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="330,202,446,229"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="312,253,464,295"/>
+<area shape="rect" id="node7" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="325,319,451,346"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="343,370,433,397"/>
+<area shape="rect" id="node9" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="333,421,443,447"/>
 </map>

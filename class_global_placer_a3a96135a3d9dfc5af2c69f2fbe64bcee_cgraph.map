@@ -9,11 +9,11 @@
 <area shape="rect" id="node17" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="835,903,926,930"/>
 <area shape="rect" id="node21" href="$class_cluster_placer.html#abfbe96e2abf0baa2d62dc634d2b55460" title=" " alt="" coords="525,339,708,366"/>
 <area shape="rect" id="node30" href="$class_cluster_placer.html#a1b673af919362063d2ede4cb7a4ae004" title=" " alt="" coords="523,954,710,980"/>
-<area shape="rect" id="node31" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="1053,1122,1253,1148"/>
-<area shape="rect" id="node32" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="1053,1527,1253,1554"/>
-<area shape="rect" id="node33" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="1054,1578,1251,1604"/>
-<area shape="rect" id="node34" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="1054,1172,1251,1199"/>
-<area shape="rect" id="node35" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="1047,1636,1258,1663"/>
+<area shape="rect" id="node31" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="1053,1138,1253,1164"/>
+<area shape="rect" id="node32" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="1053,1543,1253,1570"/>
+<area shape="rect" id="node33" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="1054,1594,1251,1620"/>
+<area shape="rect" id="node34" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="1054,1188,1251,1215"/>
+<area shape="rect" id="node35" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="1047,1644,1258,1671"/>
 <area shape="rect" id="node37" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="524,1248,709,1275"/>
 <area shape="rect" id="node49" href="$class_cluster_placer.html#a03879444f8300ffffcfd036736f2b14a" title=" " alt="" coords="542,721,691,762"/>
 <area shape="rect" id="node4" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="790,502,971,544"/>
@@ -37,16 +37,16 @@
 <area shape="rect" id="node27" href="$_g_l_draw_8cc.html#a79ed8fb990bec2e98a9efb12b041f02c" title=" " alt="" coords="1091,72,1214,99"/>
 <area shape="rect" id="node28" href="$_g_l_draw_8cc.html#a6819355374dd277347abd7c4235f0cd7" title=" " alt="" coords="1119,123,1187,150"/>
 <area shape="rect" id="node29" href="$_g_l_draw_8cc.html#acecd08dc3692c751235b177c6b66488e" title=" " alt="" coords="1084,174,1221,200"/>
-<area shape="rect" id="node36" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="1321,1629,1495,1670"/>
+<area shape="rect" id="node36" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="1321,1637,1495,1678"/>
 <area shape="rect" id="node38" href="$class_s_a_placer.html#a24ec75a4238c9b4459151046b7a2a9a3" title=" " alt="" coords="797,1223,964,1250"/>
 <area shape="rect" id="node39" href="$class_cluster_placer.html#a149784331309e2ae938933d1af6c6010" title="map PlacementUnit to cluster location" alt="" coords="795,1376,967,1417"/>
 <area shape="rect" id="node40" href="$class_s_a_placer.html#a030b4efe05c4dd6791d8d1249518a27e" title=" " alt="" coords="823,1324,938,1351"/>
 <area shape="rect" id="node45" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="781,1005,980,1046"/>
-<area shape="rect" id="node41" href="$class_s_a_placer.html#a3361137d57f95bcaf8b3f860c1776774" title=" " alt="" coords="1321,1393,1495,1434"/>
-<area shape="rect" id="node42" href="$class_s_a_placer.html#aaf023c8cf207e46d9f24cc1aa58d7a23" title=" " alt="" coords="1069,1274,1237,1300"/>
-<area shape="rect" id="node43" href="$str_print_8cc.html#a9d3b483a858efb84ce776bed255b6dd6" title=" " alt="" coords="1103,1324,1202,1351"/>
-<area shape="rect" id="node44" href="$class_s_a_placer.html#afcbdf47a02d7b05b80a8936b7a09b827" title=" " alt="" coords="1091,1375,1214,1402"/>
+<area shape="rect" id="node41" href="$class_s_a_placer.html#a3361137d57f95bcaf8b3f860c1776774" title=" " alt="" coords="1321,1409,1495,1450"/>
+<area shape="rect" id="node42" href="$class_s_a_placer.html#aaf023c8cf207e46d9f24cc1aa58d7a23" title=" " alt="" coords="1069,1290,1237,1316"/>
+<area shape="rect" id="node43" href="$str_print_8cc.html#a9d3b483a858efb84ce776bed255b6dd6" title=" " alt="" coords="1103,1340,1202,1367"/>
+<area shape="rect" id="node44" href="$class_s_a_placer.html#afcbdf47a02d7b05b80a8936b7a09b827" title=" " alt="" coords="1091,1391,1214,1418"/>
 <area shape="rect" id="node46" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="1069,954,1236,996"/>
 <area shape="rect" id="node47" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="1066,1020,1239,1047"/>
-<area shape="rect" id="node48" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="1067,1071,1239,1098"/>
+<area shape="rect" id="node48" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1077,1072,1229,1113"/>
 </map>

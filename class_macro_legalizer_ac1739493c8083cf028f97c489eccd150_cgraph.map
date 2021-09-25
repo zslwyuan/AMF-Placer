@@ -2,7 +2,9 @@
 <area shape="rect" id="node1" title="Create a bipartite graph between PlacementUnit and potential DeviceSites." alt="" coords="5,100,205,141"/>
 <area shape="rect" id="node2" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="253,107,471,134"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="519,5,711,47"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="519,71,711,112"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="531,137,699,163"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="531,187,699,214"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="519,71,711,112"/>
+<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="531,137,699,163"/>
+<area shape="rect" id="node8" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="531,187,699,214"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="759,5,911,47"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="959,5,1136,47"/>
 </map>

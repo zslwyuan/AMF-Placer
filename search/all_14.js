@@ -47,6 +47,6 @@ var searchData=
   ['tryremovelutpairfrompairs_44',['tryRemoveLUTPairFromPairs',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ad6fb34950187dacbb99c6cefc4888a84',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['tryremovesinglelut_45',['tryRemoveSingleLUT',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a88b06096ffbc50885c014e8512008ea8',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['tryremovesinglelutfrompairs_46',['tryRemoveSingleLUTFromPairs',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4a8f9e6a66d3408478015beea9ffba51',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['type_47',['type',['../class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083',1,'DeviceInfo::DeviceElement::type()'],['../class_design_info_1_1_design_element.html#a0ab5c559fcb022b3033a141e67e46cdd',1,'DesignInfo::DesignElement::type()'],['../namespace_untitled-1.html#a1038844dca5cc3692328b0ee6a0b3d89',1,'Untitled-1.type()']]],
+  ['type_47',['type',['../class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083',1,'DeviceInfo::DeviceElement::type()'],['../class_design_info_1_1_design_element.html#a0ab5c559fcb022b3033a141e67e46cdd',1,'DesignInfo::DesignElement::type()']]],
   ['type2cells_48',['type2Cells',['../class_design_info.html#a2e94f4948c646ff032960efb452b89cd',1,'DesignInfo']]]
 ];
