@@ -10,6 +10,8 @@ indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8
 baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure
 can be accelerated by 2.41x on average. Detailed Docygen-based documentation can be accessed **[here](https://zslwyuan.github.io/AMF-Placer/)**.
 
+<img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="300" /> 
+
 ## License
 
 This project is developed by [Reconfiguration Computing Systems Lab](https://eeweiz.home.ece.ust.hk/), Hong Kong University of Science and Technology (HKUST).
