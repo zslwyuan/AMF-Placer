@@ -55,10 +55,17 @@ class MacroLegalizer
      * @brief conduct legalization and map the PlacementUnit of one of the given types to sites
      *
      * @param exactLegalization true to ensure elements in a macro are consecutive
-     * @param directLegalization
+     * @param directLegalization direct legalize the macros without rough legalization phase
      */
     void legalize(bool exactLegalization = false, bool directLegalization = false);
 
+    /**
+     * @brief Get the average displacement of exact legalization for the involved PlacementUnit
+     *
+     * Exact legalization ensures elements in a macro are placed consecutively.
+     *
+     * @return float
+     */
     inline float getAverageDisplacementOfExactLegalization()
     {
         if (finalAverageDisplacement > 1000)
@@ -74,6 +81,13 @@ class MacroLegalizer
         return tmpAverageDisplacement;
     }
 
+    /**
+     * @brief Get the average displacement of rough legalization for the involved PlacementUnit
+     *
+     * Rough legalization does not guarantee that elements in a macro are placed consecutively.
+     *
+     * @return float
+     */
     inline float getAverageDisplacementOfRoughLegalization()
     {
         return roughAverageDisplacement;
@@ -81,6 +95,13 @@ class MacroLegalizer
 
     void dumpMatching(bool fixedColumn = false, bool enforce = false);
 
+    /**
+     * @brief Set the intitial parameters of the legalizer
+     *
+     * @param displacementThr displacement threshold to detect potential legal sites
+     * @param candidateNum the maximum number of final candidate sites
+     * @param _candidateFactor we are allowed to detect a excessive number (>candidateNum) of initial candidates
+     */
     void setIntitialParameters(float displacementThr, int candidateNum, int _candidateFactor = -1)
     {
         initialDisplacementThreshold = displacementThr;
@@ -91,13 +112,30 @@ class MacroLegalizer
         }
     }
 
+    /**
+     * @brief reset the mapped flag of the involved sites.
+     *
+     * A mapped site will not be binded to another PlacementUnit.
+     *
+     */
     void resetSitesMapped();
 
   private:
     std::string legalizerName;
     PlacementInfo *placementInfo;
     DeviceInfo *deviceInfo;
+
+    /**
+     * @brief compatiblePlacementTable describes the type mapping from design to device, where a cell can be placed
+     * (which BEL in which site)
+     *
+     */
     PlacementInfo::CompatiblePlacementTable *compatiblePlacementTable;
+
+    /**
+     * @brief a vector of Cell Type string indicating the target types handled by this MacroLegalizer
+     *
+     */
     std::vector<DesignInfo::DesignCellType> macroTypesToLegalize;
     std::vector<PlacementInfo::Location> &cellLoc;
 
@@ -178,14 +216,69 @@ class MacroLegalizer
     int nJobs = 1;
     int candidateFactor = 5;
 
+    /**
+     * @brief get the PlacementMacro(s) which SHOULD be legalized
+     *
+     */
     void getMacrosToLegalize();
+
+    /**
+     * @brief find available sites for each specific macro type required by the constructor
+     *
+     */
     void findMacroType2AvailableSites();
+
+    /**
+     * @brief resolve the overflow columns during fixed column legalization by spreading "outliers" to neighbor columns
+     *
+     */
     void resolveOverflowColumns();
+
+    /**
+     * @brief find potential sites for each PlacementUnit
+     *
+     * @param fixedColumn true if we want to find potential sites for PlacementUnit in a given column
+     */
     void findPossibleLegalLocation(bool fixedColumn = false);
+
+    /**
+     * @brief map the macros to the columns according to the locations of the cells in it
+     *
+     * @param directLegalization direct legalize the macros without rough legalization phase
+     */
     void mapMacrosToColumns(bool directLegalization);
+
+    /**
+     * @brief find the closest column for a given location X
+     *
+     * @param curX given location X
+     * @param Xs the location X for the resource columns
+     * @return int
+     */
     int findCorrespondingColumn(float curX, std::vector<float> &Xs);
+
+    /**
+     * @brief Create a bipartite graph between PlacementUnit and potential DeviceSites
+     *
+     */
     void createBipartiteGraph();
+
+    /**
+     * @brief conduct rough legalization.
+     *
+     * Rough legalization does not guarantee that elements in a macro are placed consecutively. During rough
+     * legalization, each cell in a macro will be "legalized" individually as a general standard cell withouth the shape
+     * constraints.
+     *
+     */
     void roughlyLegalize();
+
+    /**
+     * @brief conduct fixed-column legalization as a step in exact legalization. During fixed-column legalization, cells
+     * in PlacementUnit (macro) can be only mapped to the same column.
+     *
+     * @param directLegalization direct legalize the macros without rough legalization phase
+     */
     void fixedColumnLegalize(bool directLegalization);
     void updatePUMatchingLocation(bool isRoughLegalization = true, bool updateDisplacement = true);
     void finalLegalizeBasedOnDP();

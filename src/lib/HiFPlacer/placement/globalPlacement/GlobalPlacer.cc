@@ -136,6 +136,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
 
     int iterCntAfterMacrosFixed = 0;
 
+    // global placement iterations
     for (int i = 0; i < iterNum || (!stopStrictly && shouldLegalize); i++)
     {
 
@@ -393,6 +394,8 @@ void GlobalPlacer::dumpLUTCoordinate()
 
 void GlobalPlacer::macroLegalize(int curIteration)
 {
+    // based on the global placement convergence progress and legalization displacement, select different strategies.
+    // TODO: make this part more clean and clear for reader!
     if (macroLegalizationFixed)
         return;
     if (macroLocked)
@@ -408,6 +411,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
          curIteration < 10) &&
         !macroLocked && !macrosBindedToSites && !directMacroLegalize)
     {
+        // rough legalization phase
         averageMacroLegalDisplacement = BRAMDSPLegalizer->getAverageDisplacementOfRoughLegalization();
         averageMCLBLegalDisplacement = mCLBLegalizer->getAverageDisplacementOfRoughLegalization();
         print_info("DSPBRAM Average Displacement Of Rough Legalization =" +
@@ -422,6 +426,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
     }
     else
     {
+        // exact legalization phase
         averageMacroLegalDisplacement = BRAMDSPLegalizer->getAverageDisplacementOfExactLegalization();
         averageMCLBLegalDisplacement = mCLBLegalizer->getAverageDisplacementOfExactLegalization();
         averageCarryLegalDisplacement = CARRYMacroLegalizer->getAverageDisplacementOfExactLegalization();
