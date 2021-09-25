@@ -17,5 +17,5 @@ var searchData=
   ['gridw_14',['gridW',['../class_s_a_placer.html#aae677401ba2a9f6b1e1d0926219ed63f',1,'SAPlacer']]],
   ['gridx_15',['gridX',['../class_device_info_1_1_clock_region.html#a3090e63e749a5aa9253f4c8f3ecd456d',1,'DeviceInfo::ClockRegion']]],
   ['gridy_16',['gridY',['../class_device_info_1_1_clock_region.html#a078571146059793ccc87a611fc681e5a',1,'DeviceInfo::ClockRegion']]],
-  ['gw_17',['gw',['../namespaceexport_device_location.html#a7f65b699e9332c5c3e7bb41bb450bb28',1,'exportDeviceLocation']]]
+  ['gw_17',['gw',['../namespaceexport_device_location.html#a7f65b699e9332c5c3e7bb41bb450bb28',1,'exportDeviceLocation.gw()'],['../namespaceget_pin_offset.html#a8b0b21a442621b5b29a5bc2d9f7b7ee9',1,'getPinOffset.gw()']]]
 ];

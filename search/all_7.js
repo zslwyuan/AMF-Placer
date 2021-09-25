@@ -304,7 +304,7 @@ var searchData=
   ['glut_5floop_5fcontinue_301',['glut_loop_continue',['../_g_l_draw_8cc.html#a2b3b8146a6c7460f55f7d028e8eef55c',1,'GLDraw.cc']]],
   ['gothroughbenchmarks_302',['gothroughBenchmarks',['../namespacegothrough_benchmarks.html',1,'']]],
   ['gothroughbenchmarks_2epy_303',['gothroughBenchmarks.py',['../gothrough_benchmarks_8py.html',1,'']]],
-  ['graphpartitioner_304',['GraphPartitioner',['../class_graph_partitioner.html',1,'GraphPartitioner&lt; NodeList, NetList &gt;'],['../class_graph_partitioner.html#a76913be5dc96ae087c31bbbfb38a7f7e',1,'GraphPartitioner::GraphPartitioner()']]],
+  ['graphpartitioner_304',['GraphPartitioner',['../class_graph_partitioner.html#a76913be5dc96ae087c31bbbfb38a7f7e',1,'GraphPartitioner::GraphPartitioner()'],['../class_graph_partitioner.html',1,'GraphPartitioner&lt; NodeList, NetList &gt;']]],
   ['graphpartitioner_2ecc_305',['GraphPartitioner.cc',['../_graph_partitioner_8cc.html',1,'']]],
   ['graphpartitioner_2eh_306',['GraphPartitioner.h',['../_graph_partitioner_8h.html',1,'']]],
   ['greedyfindnextclustertoplace_307',['greedyFindNextClusterToPlace',['../class_s_a_placer.html#a8f859c4df32a82a35707161e2c3d8b1c',1,'SAPlacer']]],
@@ -316,6 +316,6 @@ var searchData=
   ['gridw_313',['gridW',['../class_s_a_placer.html#aae677401ba2a9f6b1e1d0926219ed63f',1,'SAPlacer']]],
   ['gridx_314',['gridX',['../class_device_info_1_1_clock_region.html#a3090e63e749a5aa9253f4c8f3ecd456d',1,'DeviceInfo::ClockRegion']]],
   ['gridy_315',['gridY',['../class_device_info_1_1_clock_region.html#a078571146059793ccc87a611fc681e5a',1,'DeviceInfo::ClockRegion']]],
-  ['gw_316',['gw',['../namespaceexport_device_location.html#a7f65b699e9332c5c3e7bb41bb450bb28',1,'exportDeviceLocation']]],
+  ['gw_316',['gw',['../namespaceexport_device_location.html#a7f65b699e9332c5c3e7bb41bb450bb28',1,'exportDeviceLocation.gw()'],['../namespaceget_pin_offset.html#a8b0b21a442621b5b29a5bc2d9f7b7ee9',1,'getPinOffset.gw()']]],
   ['gzdecode_317',['gzdecode',['../namespacecoord_density_visualization.html#ada95ad6130e91010068c8dc2e554c50f',1,'coordDensityVisualization']]]
 ];

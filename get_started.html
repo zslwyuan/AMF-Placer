@@ -182,8 +182,9 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 <li>c. Open your design of your target device or just create empty project of the target device. Open the Device window by clicking on the top bar "Window-&gt;Device" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or 6 hours to finish the extraction due to the slow Tcl execution (get_site_pins is SOOOO slow...) related to strings and IOs in Vivado. (You can run the script at night and go to bed ealier..) <div class="fragment"><div class="line"># replace XXXXX to indicate where your AMFPlacer is located.</div>
 <div class="line">source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl</div>
 </div><!-- fragment --></li>
-<li>d. Finally, you should be able to find the extracted files in target folder path set by you.</li>
+<li>d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for VCU108:</li>
 </ul>
+<p ><img src="deviceFiles.png" alt="Device Files" title="Device Files" width="300" class="inline"/></p>
 <p >Please note that since the exact location of the extracted site/BEL/pins are not provided, the Tcl script uses a Python script to map the sites/BEL/pin to specifc location based on their names and hierarchy. If users change their target devices from VCU108 or Xilinx Ultrascale Series products, they might need to change the Python script to adapt to some other FPGA architectures.</p>
 <p ><b>6. Load the Output Placement in Vivado</b> After the placemnt completes, a Tcl file will be generated in the directory specified by "dumpDirectory" in the JSON configuration file. Currently, the mentioned Tcl file is named "DumpCLBPacking-first-0.tcl" since it is dumped by the <a class="el" href="class_parallel_c_l_b_packer.html">ParallelCLBPacker</a>.</p>
 <p >You can go through the following steps to load the <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> result into Vivado Implementation.</p>
