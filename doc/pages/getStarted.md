@@ -130,7 +130,9 @@ set targetFolderPath "/home/tingyuan/tmpFiles/"
 # replace XXXXX to indicate where your AMFPlacer is located.
 source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl
 ```
-* d. Finally, you should be able to find the extracted files in target folder path set by you.
+* d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for VCU108:
+
+<img src="deviceFiles.png" alt="Device Files" title="Device Files" width="300" /> 
 
 Please note that since the exact location of the extracted site/BEL/pins are not provided, the Tcl script uses a Python script to map the sites/BEL/pin to specifc location based on their names and hierarchy. If users change their target devices from VCU108 or Xilinx Ultrascale Series products, they might need to change the Python script to adapt to some other FPGA architectures.
 

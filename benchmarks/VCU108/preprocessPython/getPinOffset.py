@@ -7,13 +7,25 @@ from PIL import Image
 import numpy as np
 from matplotlib.patches import Patch
 import re
+import pathlib
+import os
+import sys
+gw = 0.3
 
-deviceInfoFile = open("PCIEPin2Sw", "r")
-refpinnamefile = open("pcierefpinname", "r")
+assert(len(sys.argv) == 3)
+
+targetPath = sys.argv[1]
+deviceName = sys.argv[2]
+
+deviceInfoFile = open(targetPath+"/"+deviceName +
+                      "/"+deviceName+"_PCIEPin2Sw", "r")
+refpinnamefile = open(
+    str(pathlib.Path(__file__).parent.absolute())+"/pcierefpinname", "r")
 # pin=> XIL_UNCONN_OUT99 swtile=> INT_INTERFACE_PCIE_L_X77Y23
 
 lines = deviceInfoFile.readlines()
-exportfile = open("PCIEPin2SwXY", "w")
+exportfile = open(targetPath+"/"+deviceName +
+                  "/"+deviceName+"_PCIEPin2SwXY", "w")
 
 devicePinNames = set()
 
@@ -38,13 +50,17 @@ for line in lines:
             pinName = pinName[:tmploc]+"["+pinName[tmploc:]+"]"
 
     pinName = pinName.replace("_", "")
-
+    pinName = pinName.split("/")[1]
     SWName = pin_SW[1]
-    X = 0
-    Y = int(SWName[SWName.rfind("Y")+1:])
-    devicePinNames.add(pinName)
-    # print("pin=> "+pinName+" swX=> "+str(X)+" swY=> "+str(Y))
-    print("pin=> "+pinName+" swX=> "+str(X)+" swY=> "+str(Y), file=exportfile)
+    try:
+        X = 0
+        Y = int(SWName[SWName.rfind("Y")+1:])
+        devicePinNames.add(pinName)
+        # print("pin=> "+pinName+" swX=> "+str(X)+" swY=> "+str(Y))
+        print("pin=> "+pinName+" swX=> "+str(X) +
+              " swY=> "+str(Y), file=exportfile)
+    except:
+        pass
 
 lines = refpinnamefile.readlines()
 
@@ -55,4 +71,7 @@ print("designRefPinNames-devicePinNames: ", designRefPinNames-devicePinNames)
 if (len(designRefPinNames-devicePinNames) > 0):
     print("WARNING!!!!!!!!!!!!!!!!!")
     print("The pins shown above fail to match with the design pins!")
+    print("They are required to find their loacations!! Find them in Vivado!!!!")
+    print("Add them in file: (  ", targetPath+"/"+deviceName +
+          "/"+deviceName+"_PCIEPin2SwXY", "   )")
 exportfile.close()

@@ -11,10 +11,10 @@ import os
 import sys
 gw = 0.3
 
-assert(len(sys.argv) == 2)
+assert(len(sys.argv) == 3)
 
-targetPath = sys.argv[0]
-deviceName = sys.argv[1]
+targetPath = sys.argv[1]
+deviceName = sys.argv[2]
 
 
 class siteInfo(object):
@@ -206,8 +206,9 @@ def processGTY_QuadSites():
 
 # lines = deviceInfoFile.readlines()
 
-archive = zipfile.ZipFile(targetPath+"/"+deviceName+"DeviceSite.zip", 'r')
-lines = archive.read(deviceName+"DeviceSite").decode('utf-8').split("\n")
+archive = zipfile.ZipFile(targetPath+"/"+deviceName +
+                          "/"+deviceName+"_DeviceSite.zip", 'r')
+lines = archive.read(deviceName+"_DeviceSite").decode('utf-8').split("\n")
 
 plotPriority = dict()
 
@@ -346,7 +347,8 @@ for curSite in sites:
 # plt.show()
 
 
-exportfile = open(targetPath+"/"+deviceName+"_exportSiteLocation", "w")
+exportfile = open(targetPath+"/"+deviceName+"/" +
+                  deviceName+"_exportSiteLocation", "w")
 
 for curSite in sites:
     cx = curSite.centerX
