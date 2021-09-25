@@ -16,7 +16,7 @@ close $fo
 
 # extract PCIE
 
-set fo [open "${pahtPrefix}PCIEPin2Sw0" "w"]
+set fo [open "${pahtPrefix}PCIEPin2Sw" "w"]
 set curPCIESite [get_sites PCIE_3_1_X0Y0]
 set PCIEPins [get_site_pins -of_objects [get_sites $curPCIESite]]
 

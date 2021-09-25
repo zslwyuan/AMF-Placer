@@ -114,7 +114,7 @@ source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl
 <img src="designFiles.png" alt="Implementation Overview" title="Implementation Overview" width="200" /> 
 
 **5. Extract Device Information from Vivado**
-Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provide device information for VCU108 which can be found in "benchmarks/VCU108/device".
+Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provided device information for VCU108 which can be found in "benchmarks/VCU108/device".
 
 * a. Please ensure that your Vivado has the license for the specific device, so you can open the Device window by clicking on the top bar "Window->Device"
 
@@ -125,7 +125,7 @@ set deviceName "VCU108"
 # replace this path with your one to specify where to store the files of extracted data
 set targetFolderPath "/home/tingyuan/tmpFiles/" 
 ```
-* c. Open your design of your target device or just create empty project of the target device. Open the Device window by clicking on the top bar "Window->Device" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or ~1hour to finish the extraction due to the slow Tcl execution related to strings and IOs in Vivado.
+* c. Open your design of your target device or just create empty project of the target device. Open the Device window by clicking on the top bar "Window->Device" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or 6 hours to finish the extraction due to the slow Tcl execution (get_site_pins is SOOOO slow...) related to strings and IOs in Vivado. (You can run the script at night and go to bed ealier..)
 ```tcl
 # replace XXXXX to indicate where your AMFPlacer is located.
 source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl

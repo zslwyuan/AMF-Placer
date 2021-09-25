@@ -7,3 +7,5 @@ exec mkdir "${targetFolderPath}/${deviceName}"
 set pahtPrefix "${targetFolderPath}/${deviceName}/${deviceName}_"
 set script_path [ file dirname [ file normalize [ info script ] ] ]
 source "${script_path}/extractTileSite.tcl"
+exec zip -j "${pahtPrefix}DeviceSite.zip" "${pahtPrefix}DeviceSite"
+exec rm "${pahtPrefix}DeviceSite"
