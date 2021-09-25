@@ -111,7 +111,7 @@ source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl
 ```
 * d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for OpenPiton:
 
-<img src="designFiles.png" alt="Implementation Overview" title="Implementation Overview" width="200" /> 
+<img src="designFiles.png" alt="Design Files" title="Design Files" width="300" /> 
 
 **5. Extract Device Information from Vivado**
 Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provided device information for VCU108 which can be found in "benchmarks/VCU108/device".
@@ -133,3 +133,21 @@ source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl
 * d. Finally, you should be able to find the extracted files in target folder path set by you.
 
 Please note that since the exact location of the extracted site/BEL/pins are not provided, the Tcl script uses a Python script to map the sites/BEL/pin to specifc location based on their names and hierarchy. If users change their target devices from VCU108 or Xilinx Ultrascale Series products, they might need to change the Python script to adapt to some other FPGA architectures.
+
+**6. Load the Output Placement in Vivado**
+After the placemnt completes, a Tcl file will be generated in the directory specified by "dumpDirectory" in the JSON configuration file. Currently, the mentioned Tcl file is named "DumpCLBPacking-first-0.tcl" since it is dumped by the ParallelCLBPacker.
+
+You can go through the following steps to load the AMFPlacer result into Vivado Implementation.
+
+* a. Please ensure that your Vivado has the license for the specific device, so you can open the Device window by clicking on the top bar "Window->Device"
+* b. Open your design in Vivado and click on "Open Implemented Design" in the flow navigator and execut the command below in the Tcl console of Vivado.
+
+```tcl
+# replace XXXXX with the path specified by the "dumpDirectory" you specified in the configuration files.
+source XXXXX/DumpCLBPacking-first-0.tcl
+```
+* c. Then you can wait until the placement and routing finish. The Tcl script will clear the Vivado placement result and packing information, which might take ~10 minutes for medium-size designs (50% resource). Then it will place the cells according to the AMFPlacer result, which might take ~20 minutes for medium-size designs (50% resource). Finally, it will call Vivado Placer to verify AMFPlacer's placement, handle a small number (tens) of Xilinx primitive cells (e.g., the clock buffer placement) and do routing. 
+
+Below is a screenshot when the AMFPlacer's placement is loading on Vivado. The orange blocks means the cells are placed are set fixed on the device.
+
+<img src="loadPlacement.png" alt="AMFPlacer's placement is loading on Vivado" title="AMFPlacer's placement is loading on Vivado" width="400" /> 
