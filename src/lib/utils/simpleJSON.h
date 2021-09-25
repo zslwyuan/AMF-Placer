@@ -34,6 +34,8 @@ std::map<std::string, std::string> parseJSONFile(std::string JSONFileName)
     {
         if (line.find("//") == std::string::npos)
             entireStr += line;
+        else
+            entireStr += line.substr(0, line.find("//"));
     }
 
     std::map<std::string, std::string> res;
@@ -45,17 +47,21 @@ std::map<std::string, std::string> parseJSONFile(std::string JSONFileName)
 
     for (auto jsonBlock : jsonBlocks)
     {
+        if (jsonBlock.find(":") == std::string::npos)
+            continue;
+        if (jsonBlock.find("\"") == std::string::npos)
+            continue;
 
-        replaceAll(jsonBlock, "    ", "");
-        replaceAll(jsonBlock, "\"", "");
-        while (jsonBlock.find(": ") != std::string::npos)
-            replaceAll(jsonBlock, ": ", ":");
-        while (jsonBlock.find(" :") != std::string::npos)
-            replaceAll(jsonBlock, " :", ":");
-        std::vector<std::string> elements;
-        strSplit(jsonBlock, elements, ":");
+        int quote1Loc = jsonBlock.find("\"");
+        int quote2Loc = jsonBlock.find("\"", quote1Loc + 1);
+        int quote3Loc = jsonBlock.find("\"", quote2Loc + 1);
+        int quote4Loc = jsonBlock.find("\"", quote3Loc + 1);
 
-        res[elements[0]] = elements[1];
+        assert(quote1Loc >= 0 && quote2Loc >= 0 && quote3Loc >= 0 && quote4Loc >= 0 &&
+               "the json file has some syntax error");
+
+        res[jsonBlock.substr(quote1Loc + 1, quote2Loc - quote1Loc - 1)] =
+            jsonBlock.substr(quote3Loc + 1, quote4Loc - quote3Loc - 1);
     }
 
     if (res.find("dumpDirectory") != res.end())
