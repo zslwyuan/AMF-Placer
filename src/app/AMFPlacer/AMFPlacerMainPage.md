@@ -10,7 +10,7 @@ a series of new techniques for wirelength optimization, cell spreading, packing,
 of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results
 indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the
 baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure
-can be accelerated by 2.41x on average.
+can be accelerated by 2.41x on average. The project can be downloaded **[here](https://github.com/zslwyuan/AMF-Placer)**.
 
 **License**
 

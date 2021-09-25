@@ -86,3 +86,7 @@ Below, we explain some of the settings. If users target at Xilinx VCU108, users 
     //"useUnconstrainedCG" : (Optional:default "true") indicate whether wirelength optimizer uses Eigen3, which cannot set constraints, to solve the quadratic problem. If false, OSQP solver which can set constraints for the quadratic model, will be involved to replace Eigen3. [PLACER]
 }
 ```
+
+
+**4. Extract Design Information from Vivado**
+in ""
