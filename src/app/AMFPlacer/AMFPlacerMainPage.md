@@ -14,15 +14,17 @@ can be accelerated by 2.41x on average. The project can be downloaded **[here](h
 
 **License**
 
+This project is developed by [Reconfiguration Computing Systems Lab](https://eeweiz.home.ece.ust.hk/), Hong Kong University of Science and Technology (HKUST).
+
 For non-commercial usage of this open-source project, users should comply the Apache License attached in the root directory.
 For commercial usage of this open-source project, users must contact authors (Wei ZHANG, eeweiz@ust.hk; Tingyuan LIANG, tliang@connect.ust.hk) for authorization.
 
 **Documentation Hierarchy**
 
-* [Basic Project Introduction](@ref intro)
-* [Get Started](@ref getStarted)
-* [Publications](@ref publication)
-* [Implementation Explanation](@ref explanation)
+* [Basic Project Introduction](@ref intro): motivation, features and some experimental results.
+* [Get Started](@ref getStarted): guideline to use the placer for your work.
+* [Publications](@ref publication): some papers which are the fundamental parts of this project.
+* [Implementation Explanation](@ref explanation): the concrete explaination for the function module and the placement procedure.
 
 **Motivations**
 
