@@ -1,6 +1,4 @@
-set allCells [xilinx::designutils::get_leaf_cells *]
-
-set fo [open "/home/tingyuan/Downloads/minimap2_unpredictableMacros" "w"]
+set fo [open "${pahtPrefix}unpredictableMacros" "w"]
 set ram32s [get_cells $allCells -filter {REF_NAME =~ "RAM32X1D"}]
 foreach curCell $ram32s {
     set tmpLoc [get_property LOC $curCell]

@@ -1,4 +1,4 @@
-set fo [open "/home/tingyuan/Downloads/OpenPiton_allCellPinNet" "w"]
+set fo [open "${pahtPrefix}allCellPinNet" "w"]
 set allCells [xilinx::designutils::get_leaf_cells *]
 foreach curCell $allCells {
     set curCelltype [get_property REF_NAME $curCell]
@@ -15,7 +15,7 @@ foreach curCell $allCells {
 }
 close $fo
 
-set fo [open "/home/tingyuan/Downloads/MemN2N_clocks" "w"]
+set fo [open "${pahtPrefix}_clocks" "w"]
 set clocks [get_nets -hierarchical -top_net_of_hierarchical_group -filter { TYPE == "GLOBAL_CLOCK" } ]
 foreach curClock $clocks {
     set tmp_net_driver_pin [get_pins  -leaf -of_objects  $curClock -filter {DIRECTION == OUT}]
