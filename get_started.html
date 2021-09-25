@@ -170,11 +170,8 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 </div><!-- fragment --></li>
 <li>d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for OpenPiton:</li>
 </ul>
-<p  align="center"></p>
-<p ><img src="designFiles.png" alt="Design Files" title="Design Files" width="300" class="inline"/> &lt;/p </p><blockquote class="doxtable">
-<p ></p>
-</blockquote>
-<p><b>5. Extract Device Information from Vivado</b> Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provided device information for VCU108 which can be found in "benchmarks/VCU108/device". Please note that for a device, you can go through this extraction flow just ONE TIME. You DON'T need to do this every time your run <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a>.</p>
+<p ><img src="designFiles.png" alt="Design Files" align="center" title="Design Files" width="300" class="inline"/></p>
+<p ><b>5. Extract Device Information from Vivado</b> Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provided device information for VCU108 which can be found in "benchmarks/VCU108/device". Please note that for a device, you can go through this extraction flow just ONE TIME. You DON'T need to do this every time your run <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a>.</p>
 <ul>
 <li>a. Please ensure that your Vivado has the license for the specific device, so you can open the Device window by clicking on the top bar "Window-&gt;Device"</li>
 <li>b. Open the Tcl script "benchmarks/vivadoScripts/extractDeviceInfo.tcl" in the project directory where you can find the below content at the beginning and modify them according to the comments suggesting. <div class="fragment"><div class="line"># replace this with the name for your device</div>
@@ -187,8 +184,7 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 </div><!-- fragment --></li>
 <li>d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for VCU108:</li>
 </ul>
-<p  align="center"></p>
-<p ><img src="deviceFiles.png" alt="Device Files" title="Device Files" width="300" class="inline"/> </p>
+<p ><img src="deviceFiles.png" alt="Device Files" align="center" title="Device Files" width="300" class="inline"/></p>
 <p >Please note that since the exact location of the extracted site/BEL/pins are not provided, the Tcl script uses a Python script to map the sites/BEL/pin to specifc location based on their names and hierarchy. If users change their target devices from VCU108 or Xilinx Ultrascale Series products, they might need to change the Python script to adapt to some other FPGA architectures.</p>
 <p ><b>6. Load the Output Placement in Vivado</b> After the placemnt completes, a Tcl file will be generated in the directory specified by "dumpDirectory" in the JSON configuration file. Currently, the mentioned Tcl file is named "DumpCLBPacking-first-0.tcl" since it is dumped by the <a class="el" href="class_parallel_c_l_b_packer.html">ParallelCLBPacker</a>.</p>
 <p >You can go through the following steps to load the <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> result into Vivado Implementation.</p>
@@ -202,8 +198,7 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 <li>c. Then you can wait until the placement and routing finish. The Tcl script will clear the Vivado placement result and packing information, which might take ~10 minutes for medium-size designs (50% resource). Then it will place the cells according to the <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> result, which might take ~20 minutes for medium-size designs (50% resource). Finally, it will call Vivado Placer to verify <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a>'s placement, handle a small number (tens) of Xilinx primitive cells (e.g., the clock buffer placement) and do routing.</li>
 </ul>
 <p >Below is a screenshot when the <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a>'s placement is loading on Vivado. The orange blocks means the cells are placed are set fixed on the device.</p>
-<p  align="center"></p>
-<p ><img src="loadPlacement.png" alt="AMFPlacer's placement is loading on Vivado" title="AMFPlacer&apos;s placement is loading on Vivado" width="400" class="inline"/> </p>
+<p ><img src="loadPlacement.png" alt="AMFPlacer's placement is loading on Vivado" align="center" title="AMFPlacer&apos;s placement is loading on Vivado" width="400" class="inline"/> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
