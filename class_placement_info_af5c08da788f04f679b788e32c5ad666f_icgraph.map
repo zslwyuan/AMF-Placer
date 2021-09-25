@@ -6,7 +6,7 @@
 <area shape="rect" id="node9" href="$class_placement_info.html#aaeeece0e2a9362d1bb26c2e17fd90aad" title="reset the inflate ratio of all the cells to be 1, for re&#45;evaluation" alt="" coords="648,188,895,229"/>
 <area shape="rect" id="node11" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title=" " alt="" coords="949,371,1183,412"/>
 <area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="702,305,841,347"/>
-<area shape="rect" id="node15" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title=" " alt="" coords="977,253,1155,295"/>
+<area shape="rect" id="node15" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title="get the PlacementMacro(s) which SHOULD be legalized" alt="" coords="977,253,1155,295"/>
 <area shape="rect" id="node18" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,408,365,449"/>
 <area shape="rect" id="node19" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="165,473,364,515"/>
 <area shape="rect" id="node20" href="$class_placement_timing_optimizer.html#a8e6810c2be22ebbe719229c7e6237adb" title=" " alt="" coords="977,539,1155,580"/>

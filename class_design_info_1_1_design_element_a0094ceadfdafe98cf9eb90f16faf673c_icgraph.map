@@ -25,8 +25,8 @@
 <area shape="rect" id="node50" href="$class_general_spreader.html#a39da1cce84c49100bdac69835f2b7271" title="multi&#45;threading workers for updating the information of the involved PlacementUnit(s)" alt="" coords="1135,971,1390,1012"/>
 <area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="872,332,1047,373"/>
 <area shape="rect" id="node9" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="259,215,505,242"/>
-<area shape="rect" id="node12" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title=" " alt="" coords="15,765,201,807"/>
-<area shape="rect" id="node13" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title=" " alt="" coords="5,714,211,741"/>
+<area shape="rect" id="node12" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="15,765,201,807"/>
+<area shape="rect" id="node13" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="5,714,211,741"/>
 <area shape="rect" id="node16" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="313,887,451,928"/>
 <area shape="rect" id="node18" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="20,627,196,668"/>
 <area shape="rect" id="node19" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization." alt="" coords="11,573,205,599"/>
@@ -40,7 +40,7 @@
 <area shape="rect" id="node33" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="281,1158,483,1185"/>
 <area shape="rect" id="node34" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title=" " alt="" coords="579,789,762,845"/>
 <area shape="rect" id="node35" href="$class_macro_legalizer.html#acb09c00d4e10b8ee7f4dfd8520aec604" title=" " alt="" coords="562,1050,779,1077"/>
-<area shape="rect" id="node36" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title=" " alt="" coords="582,1101,759,1143"/>
+<area shape="rect" id="node36" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title="get the PlacementMacro(s) which SHOULD be legalized" alt="" coords="582,1101,759,1143"/>
 <area shape="rect" id="node37" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a95869e6f3fc7e59347ce2889d73a71ce" title=" " alt="" coords="567,1166,774,1222"/>
 <area shape="rect" id="node38" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a92bbec6e8c1899d04dab2a6ba9251651" title=" " alt="" coords="559,1246,782,1302"/>
 <area shape="rect" id="node39" href="$class_cluster_placer.html#abeaa9dab584d4fbf266c7a9e26fd57e3" title="refine the elements in obtained clusters to ensure the cells in user&#45;defined clusters in the same clu..." alt="" coords="578,1325,763,1367"/>

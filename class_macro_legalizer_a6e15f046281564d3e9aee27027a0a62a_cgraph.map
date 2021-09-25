@@ -1,5 +1,5 @@
 <map id="MacroLegalizer::findMacroType2AvailableSites" name="MacroLegalizer::findMacroType2AvailableSites">
-<area shape="rect" id="node1" title=" " alt="" coords="5,115,177,156"/>
+<area shape="rect" id="node1" title="find available sites for each specific macro type required by the constructor" alt="" coords="5,115,177,156"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="225,5,407,47"/>
 <area shape="rect" id="node6" href="$class_device_info.html#a1ec4f9ac803f0d37ea7d331de133b27c" title="Get sites of a specfic type." alt="" coords="227,71,405,98"/>
 <area shape="rect" id="node7" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title=" " alt="" coords="247,122,385,149"/>

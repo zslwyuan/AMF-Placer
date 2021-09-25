@@ -19,18 +19,18 @@
 <area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="505,5,644,47"/>
 <area shape="rect" id="node9" href="$class_macro_legalizer.html#ad3d60bfec68dc4badcf933d793b4d1f9" title=" " alt="" coords="489,71,661,112"/>
 <area shape="rect" id="node13" href="$class_c_l_b_legalizer.html#a2add935df0c96989390f616634fca284" title="find candidate sites for the PlacementUnits left to be matched" alt="" coords="483,420,666,461"/>
-<area shape="rect" id="node10" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title=" " alt="" coords="221,121,408,163"/>
-<area shape="rect" id="node12" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title=" " alt="" coords="212,187,417,214"/>
+<area shape="rect" id="node10" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="221,121,408,163"/>
+<area shape="rect" id="node12" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="212,187,417,214"/>
 <area shape="rect" id="node11" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="5,213,164,239"/>
 <area shape="rect" id="node14" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="227,537,403,579"/>
 <area shape="rect" id="node16" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization." alt="" coords="217,486,412,513"/>
 <area shape="rect" id="node15" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="10,574,159,601"/>
 <area shape="rect" id="node18" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="474,267,675,294"/>
-<area shape="rect" id="node20" href="$class_macro_legalizer.html#a291c9e58885f27b964c86162bb3aa4ae" title=" " alt="" coords="481,136,668,177"/>
+<area shape="rect" id="node20" href="$class_macro_legalizer.html#a291c9e58885f27b964c86162bb3aa4ae" title="find potential sites for each PlacementUnit" alt="" coords="481,136,668,177"/>
 <area shape="rect" id="node19" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="214,355,415,396"/>
 <area shape="rect" id="node22" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="479,551,670,578"/>
 <area shape="rect" id="node23" href="$class_c_l_b_legalizer.html#a21503dd1a3f80dd7fb6d5fbc42dc3bbc" title="find potential sites for each PlacementUnit" alt="" coords="487,485,663,527"/>
-<area shape="rect" id="node25" href="$class_macro_legalizer.html#ac1739493c8083cf028f97c489eccd150" title=" " alt="" coords="475,201,675,243"/>
+<area shape="rect" id="node25" href="$class_macro_legalizer.html#ac1739493c8083cf028f97c489eccd150" title="Create a bipartite graph between PlacementUnit and potential DeviceSites." alt="" coords="475,201,675,243"/>
 <area shape="rect" id="node26" href="$class_macro_legalizer.html#a27503df70c356847d98827b88570d0c3" title=" " alt="" coords="468,318,681,345"/>
 <area shape="rect" id="node28" href="$class_macro_legalizer.html#ae277d2626728649d30340e40cc436de4" title=" " alt="" coords="481,369,668,395"/>
 <area shape="rect" id="node27" href="$class_macro_legalizer.html#a77e9e1f1fbbf77fb805b34d57d3198f4" title=" " alt="" coords="221,289,408,331"/>

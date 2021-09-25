@@ -1,5 +1,5 @@
 <map id="MacroLegalizer::findPossibleLegalLocation" name="MacroLegalizer::findPossibleLegalLocation">
-<area shape="rect" id="node1" title=" " alt="" coords="5,253,192,294"/>
+<area shape="rect" id="node1" title="find potential sites for each PlacementUnit" alt="" coords="5,253,192,294"/>
 <area shape="rect" id="node2" href="$class_macro_legalizer.html#a8c322f41c19d3f9d06c0e856feac21db" title=" " alt="" coords="923,56,1137,83"/>
 <area shape="rect" id="node5" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title=" " alt="" coords="244,260,383,287"/>
 <area shape="rect" id="node6" href="$class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="248,311,379,337"/>

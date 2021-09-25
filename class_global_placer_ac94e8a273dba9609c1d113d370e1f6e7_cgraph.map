@@ -1,9 +1,9 @@
 <map id="GlobalPlacer::macroLegalize" name="GlobalPlacer::macroLegalize">
 <area shape="rect" id="node1" title="legalize specific types of macro to the target regions" alt="" coords="5,1188,192,1215"/>
 <area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a06f85b0a59dcacb146bec2dc57eb9467" title="Get the average displacement of exact legalization for the involved PlacementUnit." alt="" coords="243,226,459,267"/>
-<area shape="rect" id="node3" href="$class_macro_legalizer.html#a5194414fc87eb82a9bb3cd1e8a79540f" title=" " alt="" coords="243,291,459,333"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#a5194414fc87eb82a9bb3cd1e8a79540f" title="Get the average displacement of exact legalization for the involved PlacementUnit." alt="" coords="243,291,459,333"/>
 <area shape="rect" id="node4" href="$class_c_l_b_legalizer.html#aa35786806efd390c90e17e2a8e2d74e3" title="Get the average displacement of rough legalization for the involved PlacementUnit." alt="" coords="240,357,461,398"/>
-<area shape="rect" id="node5" href="$class_macro_legalizer.html#a818b3fa99d17c2ecb9720f0746ed9580" title=" " alt="" coords="240,422,461,463"/>
+<area shape="rect" id="node5" href="$class_macro_legalizer.html#a818b3fa99d17c2ecb9720f0746ed9580" title="Get the average displacement of rough legalization for the involved PlacementUnit." alt="" coords="240,422,461,463"/>
 <area shape="rect" id="node6" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="255,488,447,515"/>
 <area shape="rect" id="node7" href="$class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="797,1324,996,1351"/>
 <area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="276,589,425,616"/>
@@ -13,9 +13,9 @@
 <area shape="rect" id="node45" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="301,1403,400,1429"/>
 <area shape="rect" id="node46" href="$class_device_info.html#af2a89acda8ffdd35889bf07c0b0e7806" title="remove the mapped flags for all sites without fixed elements" alt="" coords="272,1454,429,1495"/>
 <area shape="rect" id="node47" href="$class_c_l_b_legalizer.html#ae1c80f68af5ff0a91f0b838038b3d013" title="reset the mapped flag of the involved sites." alt="" coords="268,1519,433,1561"/>
-<area shape="rect" id="node48" href="$class_macro_legalizer.html#a0c2e90a66a7dcd3a583d310b886462fc" title=" " alt="" coords="263,1585,438,1626"/>
+<area shape="rect" id="node48" href="$class_macro_legalizer.html#a0c2e90a66a7dcd3a583d310b886462fc" title="reset the mapped flag of the involved sites." alt="" coords="263,1585,438,1626"/>
 <area shape="rect" id="node49" href="$class_c_l_b_legalizer.html#aab49be41667cc50e411e598ce6d00818" title="Set the intitial parameters of the legalizer." alt="" coords="271,1650,430,1691"/>
-<area shape="rect" id="node50" href="$class_macro_legalizer.html#aa0f2812c921b80c03260b0513aa6275f" title=" " alt="" coords="266,1715,435,1757"/>
+<area shape="rect" id="node50" href="$class_macro_legalizer.html#aa0f2812c921b80c03260b0513aa6275f" title="Set the intitial parameters of the legalizer." alt="" coords="266,1715,435,1757"/>
 <area shape="rect" id="node9" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="528,772,719,799"/>
 <area shape="rect" id="node15" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="535,706,712,747"/>
 <area shape="rect" id="node18" href="$class_c_l_b_legalizer.html#a03b73bdcb61a3ac7123ac2e2f4c5fb13" title="clear the mapping information and reset the mapping parameters" alt="" coords="805,576,988,603"/>
@@ -42,11 +42,11 @@
 <area shape="rect" id="node35" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="523,1189,724,1216"/>
 <area shape="rect" id="node36" href="$class_macro_legalizer.html#a77e9e1f1fbbf77fb805b34d57d3198f4" title=" " alt="" coords="530,823,717,865"/>
 <area shape="rect" id="node37" href="$class_macro_legalizer.html#a6be7354bbee0d0aca68e2a3468c61ded" title=" " alt="" coords="800,1273,993,1300"/>
-<area shape="rect" id="node38" href="$class_macro_legalizer.html#a6e15f046281564d3e9aee27027a0a62a" title=" " alt="" coords="537,523,709,565"/>
-<area shape="rect" id="node39" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title=" " alt="" coords="530,1058,717,1099"/>
-<area shape="rect" id="node40" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title=" " alt="" coords="535,1123,712,1165"/>
+<area shape="rect" id="node38" href="$class_macro_legalizer.html#a6e15f046281564d3e9aee27027a0a62a" title="find available sites for each specific macro type required by the constructor" alt="" coords="537,523,709,565"/>
+<area shape="rect" id="node39" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="530,1058,717,1099"/>
+<area shape="rect" id="node40" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title="get the PlacementMacro(s) which SHOULD be legalized" alt="" coords="535,1123,712,1165"/>
 <area shape="rect" id="node41" href="$class_macro_legalizer.html#a9f8ed254ef243b89b295d0c81261d74c" title=" " alt="" coords="509,1241,737,1282"/>
-<area shape="rect" id="node42" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title=" " alt="" coords="521,1307,726,1333"/>
+<area shape="rect" id="node42" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="521,1307,726,1333"/>
 <area shape="rect" id="node43" href="$class_macro_legalizer.html#af435c8eafea89bd3e3e3a7af82c1192d" title=" " alt="" coords="541,941,705,982"/>
 <area shape="rect" id="node44" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title=" " alt="" coords="510,641,737,682"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="MacroLegalizer::roughlyLegalize" name="MacroLegalizer::roughlyLegalize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,809,211,835"/>
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#ac1739493c8083cf028f97c489eccd150" title=" " alt="" coords="728,717,928,759"/>
+<area shape="rect" id="node1" title="conduct rough legalization." alt="" coords="5,809,211,835"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#ac1739493c8083cf028f97c489eccd150" title="Create a bipartite graph between PlacementUnit and potential DeviceSites." alt="" coords="728,717,928,759"/>
 <area shape="rect" id="node10" href="$class_macro_legalizer.html#ad3d60bfec68dc4badcf933d793b4d1f9" title=" " alt="" coords="742,219,914,260"/>
-<area shape="rect" id="node19" href="$class_macro_legalizer.html#a291c9e58885f27b964c86162bb3aa4ae" title=" " alt="" coords="269,591,456,632"/>
+<area shape="rect" id="node19" href="$class_macro_legalizer.html#a291c9e58885f27b964c86162bb3aa4ae" title="find potential sites for each PlacementUnit" alt="" coords="269,591,456,632"/>
 <area shape="rect" id="node30" href="$class_macro_legalizer.html#a071fa22616c6c216bc60c4aa71acbe4c" title=" " alt="" coords="272,831,453,872"/>
 <area shape="rect" id="node31" href="$class_min_cost_bipartite_matcher.html#a4d58b7b38000fd820e2df2c3fc20a417" title=" " alt="" coords="280,896,445,937"/>
 <area shape="rect" id="node32" href="$class_macro_legalizer.html#a65e32d65b99e52814b72af64559dfae5" title=" " alt="" coords="259,961,467,1003"/>

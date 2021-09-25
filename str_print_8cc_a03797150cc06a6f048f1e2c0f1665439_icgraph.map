@@ -32,8 +32,8 @@
 <area shape="rect" id="node19" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,384,367,411"/>
 <area shape="rect" id="node24" href="$class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title=" " alt="" coords="1199,595,1373,637"/>
 <area shape="rect" id="node27" href="$class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d" title="Construct a new AMFPlacer object according to a given placer configuration file." alt="" coords="1207,711,1365,737"/>
-<area shape="rect" id="node29" href="$class_macro_legalizer.html#a5a30f90a83079d26bf7e058997847542" title=" " alt="" coords="1181,762,1391,803"/>
-<area shape="rect" id="node30" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title=" " alt="" coords="927,722,1113,763"/>
+<area shape="rect" id="node29" href="$class_macro_legalizer.html#a5a30f90a83079d26bf7e058997847542" title="resolve the overflow columns during fixed column legalization by spreading &quot;outliers&quot; to neighbor col..." alt="" coords="1181,762,1391,803"/>
+<area shape="rect" id="node30" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="927,722,1113,763"/>
 <area shape="rect" id="node31" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="675,689,833,716"/>
 <area shape="rect" id="node33" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="429,501,587,528"/>
 <area shape="rect" id="node35" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="419,751,597,793"/>

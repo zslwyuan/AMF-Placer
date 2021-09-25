@@ -1,5 +1,5 @@
 <map id="MacroLegalizer::getAverageDisplacementOfExactLegalization" name="MacroLegalizer::getAverageDisplacementOfExactLegalization">
-<area shape="rect" id="node1" title=" " alt="" coords="648,27,864,69"/>
+<area shape="rect" id="node1" title="Get the average displacement of exact legalization for the involved PlacementUnit." alt="" coords="648,27,864,69"/>
 <area shape="rect" id="node2" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="413,5,600,32"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="414,57,599,98"/>
 <area shape="rect" id="node3" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,27,365,69"/>

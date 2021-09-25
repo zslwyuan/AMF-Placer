@@ -1,5 +1,5 @@
 <map id="MacroLegalizer::createBipartiteGraph" name="MacroLegalizer::createBipartiteGraph">
-<area shape="rect" id="node1" title=" " alt="" coords="5,100,205,141"/>
+<area shape="rect" id="node1" title="Create a bipartite graph between PlacementUnit and potential DeviceSites." alt="" coords="5,100,205,141"/>
 <area shape="rect" id="node2" href="$class_macro_legalizer.html#acb09c00d4e10b8ee7f4dfd8520aec604" title=" " alt="" coords="253,107,471,134"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="519,5,711,47"/>
 <area shape="rect" id="node6" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="519,71,711,112"/>
