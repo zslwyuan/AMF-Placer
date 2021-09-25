@@ -122,59 +122,64 @@ $(document).ready(function(){initNavTree('simple_j_s_o_n_8h_source.html',''); in
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordflow">if</span> (line.find(<span class="stringliteral">&quot;//&quot;</span>) == std::string::npos)</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            entireStr += line;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    }</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    std::map&lt;std::string, std::string&gt; res;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    res.clear();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    entireStr = std::string(entireStr.begin() + 1, entireStr.end() - 1);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    std::vector&lt;std::string&gt; jsonBlocks;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_function" href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a>(entireStr, jsonBlocks, <span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> jsonBlock : jsonBlocks)</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a>(jsonBlock, <span class="stringliteral">&quot;    &quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <a class="code hl_function" href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a>(jsonBlock, <span class="stringliteral">&quot;\&quot;&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">while</span> (jsonBlock.find(<span class="stringliteral">&quot;: &quot;</span>) != std::string::npos)</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <a class="code hl_function" href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a>(jsonBlock, <span class="stringliteral">&quot;: &quot;</span>, <span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">while</span> (jsonBlock.find(<span class="stringliteral">&quot; :&quot;</span>) != std::string::npos)</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            <a class="code hl_function" href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a>(jsonBlock, <span class="stringliteral">&quot; :&quot;</span>, <span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        std::vector&lt;std::string&gt; elements;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_function" href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a>(jsonBlock, elements, <span class="stringliteral">&quot;:&quot;</span>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        res[elements[0]] = elements[1];</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (res.find(<span class="stringliteral">&quot;dumpDirectory&quot;</span>) != res.end())</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    {</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        std::map&lt;std::string, std::string&gt;::iterator it;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">for</span> (it = res.begin(); it != res.end(); it++)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">if</span> (it-&gt;first.find(<span class="stringliteral">&quot;dump&quot;</span>) != std::string::npos || it-&gt;first.find(<span class="stringliteral">&quot;Dump&quot;</span>) != std::string::npos)</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                res[it-&gt;first] = res[<span class="stringliteral">&quot;dumpDirectory&quot;</span>] + <span class="stringliteral">&quot;/&quot;</span> + it-&gt;second;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_function" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a>(<span class="stringliteral">&quot;Placer configuration is loaded and the information is shown below, please check:&quot;</span>);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> pair : res)</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;   \&quot;&quot;</span> &lt;&lt; pair.first &lt;&lt; <span class="stringliteral">&quot;\&quot;   ====   \&quot;&quot;</span> &lt;&lt; pair.second &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            entireStr += line.substr(0, line.find(<span class="stringliteral">&quot;//&quot;</span>));</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    std::map&lt;std::string, std::string&gt; res;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    res.clear();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    entireStr = std::string(entireStr.begin() + 1, entireStr.end() - 1);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::vector&lt;std::string&gt; jsonBlocks;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_function" href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a>(entireStr, jsonBlocks, <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> jsonBlock : jsonBlocks)</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">if</span> (jsonBlock.find(<span class="stringliteral">&quot;:&quot;</span>) == std::string::npos)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">if</span> (jsonBlock.find(<span class="stringliteral">&quot;\&quot;&quot;</span>) == std::string::npos)</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">int</span> quote1Loc = jsonBlock.find(<span class="stringliteral">&quot;\&quot;&quot;</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">int</span> quote2Loc = jsonBlock.find(<span class="stringliteral">&quot;\&quot;&quot;</span>, quote1Loc + 1);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">int</span> quote3Loc = jsonBlock.find(<span class="stringliteral">&quot;\&quot;&quot;</span>, quote2Loc + 1);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">int</span> quote4Loc = jsonBlock.find(<span class="stringliteral">&quot;\&quot;&quot;</span>, quote3Loc + 1);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        assert(quote1Loc &gt;= 0 &amp;&amp; quote2Loc &gt;= 0 &amp;&amp; quote3Loc &gt;= 0 &amp;&amp; quote4Loc &gt;= 0 &amp;&amp;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>               <span class="stringliteral">&quot;the json file has some syntax error&quot;</span>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        res[jsonBlock.substr(quote1Loc + 1, quote2Loc - quote1Loc - 1)] =</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            jsonBlock.substr(quote3Loc + 1, quote4Loc - quote3Loc - 1);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">if</span> (res.find(<span class="stringliteral">&quot;dumpDirectory&quot;</span>) != res.end())</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        std::map&lt;std::string, std::string&gt;::iterator it;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">for</span> (it = res.begin(); it != res.end(); it++)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <span class="keywordflow">if</span> (it-&gt;first.find(<span class="stringliteral">&quot;dump&quot;</span>) != std::string::npos || it-&gt;first.find(<span class="stringliteral">&quot;Dump&quot;</span>) != std::string::npos)</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            {</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                res[it-&gt;first] = res[<span class="stringliteral">&quot;dumpDirectory&quot;</span>] + <span class="stringliteral">&quot;/&quot;</span> + it-&gt;second;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_function" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a>(<span class="stringliteral">&quot;Placer configuration is loaded and the information is shown below, please check:&quot;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> pair : res)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;   \&quot;&quot;</span> &lt;&lt; pair.first &lt;&lt; <span class="stringliteral">&quot;\&quot;   ====   \&quot;&quot;</span> &lt;&lt; pair.second &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="asimple_j_s_o_n_8h_html_a47b912b821d387118038fcd83de7692b"><div class="ttname"><a href="simple_j_s_o_n_8h.html#a47b912b821d387118038fcd83de7692b">parseJSONFile</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; parseJSONFile(std::string JSONFileName)</div><div class="ttdef"><b>Definition:</b> <a href="simple_j_s_o_n_8h_source.html#l00025">simpleJSON.h:25</a></div></div>
 <div class="ttc" id="asimple_j_s_o_n_8h_html_a49e658b63ca781f16ebdb15339b8411b"><div class="ttname"><a href="simple_j_s_o_n_8h.html#a49e658b63ca781f16ebdb15339b8411b">exists_test</a></div><div class="ttdeci">bool exists_test(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="simple_j_s_o_n_8h_source.html#l00019">simpleJSON.h:19</a></div></div>
 <div class="ttc" id="astr_print_8cc_html_a03797150cc06a6f048f1e2c0f1665439"><div class="ttname"><a href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a></div><div class="ttdeci">void print_warning(std::string tmp_string)</div><div class="ttdef"><b>Definition:</b> <a href="str_print_8cc_source.html#l00033">strPrint.cc:33</a></div></div>
 <div class="ttc" id="astr_print_8h_html"><div class="ttname"><a href="str_print_8h.html">strPrint.h</a></div></div>
 <div class="ttc" id="astring_check_8cc_html_abcff5c080eaf26c4fe2ca75cfdb1f140"><div class="ttname"><a href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a></div><div class="ttdeci">void strSplit(const std::string &amp;s, std::vector&lt; std::string &gt; &amp;sv, const char *delim)</div><div class="ttdef"><b>Definition:</b> <a href="string_check_8cc_source.html#l00011">stringCheck.cc:11</a></div></div>
-<div class="ttc" id="astring_check_8cc_html_aea65d8aaf45377aa73450b1f4b0e1930"><div class="ttname"><a href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a></div><div class="ttdeci">void replaceAll(std::string &amp;str, const std::string from, const std::string to)</div><div class="ttdef"><b>Definition:</b> <a href="string_check_8cc_source.html#l00026">stringCheck.cc:26</a></div></div>
 <div class="ttc" id="astring_check_8h_html"><div class="ttname"><a href="string_check_8h.html">stringCheck.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
