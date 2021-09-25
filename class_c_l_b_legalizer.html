@@ -263,7 +263,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:aea1a9311560468871b7fb25ed313e566"><td class="mdescLeft">&#160;</td><td class="mdescRight">a map record the potential sites of different site types  <a href="class_c_l_b_legalizer.html#aea1a9311560468871b7fb25ed313e566">More...</a><br /></td></tr>
 <tr class="separator:aea1a9311560468871b7fb25ed313e566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a22879fb5dc3ea3dbf1f29aad15c9a289"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementInfo::PlacementUnit</a> *, std::vector&lt; <a class="el" href="class_device_info_1_1_device_site.html">DeviceInfo::DeviceSite</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_b_legalizer.html#a22879fb5dc3ea3dbf1f29aad15c9a289">PU2Sites</a></td></tr>
-<tr class="memdesc:a22879fb5dc3ea3dbf1f29aad15c9a289"><td class="mdescLeft">&#160;</td><td class="mdescRight">record the mapping from PlacementUnits to the sites binded to them.  <a href="class_c_l_b_legalizer.html#a22879fb5dc3ea3dbf1f29aad15c9a289">More...</a><br /></td></tr>
+<tr class="memdesc:a22879fb5dc3ea3dbf1f29aad15c9a289"><td class="mdescLeft">&#160;</td><td class="mdescRight">record the mapping from PlacementUnits to the candidate sites which are NOT binded to PUs  <a href="class_c_l_b_legalizer.html#a22879fb5dc3ea3dbf1f29aad15c9a289">More...</a><br /></td></tr>
 <tr class="separator:a22879fb5dc3ea3dbf1f29aad15c9a289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe5ab3d6f86a1990eab740917f7e6dd4"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="class_device_info_1_1_device_site.html">DeviceInfo::DeviceSite</a> *, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_b_legalizer.html#abe5ab3d6f86a1990eab740917f7e6dd4">rightSiteIds</a></td></tr>
 <tr class="memdesc:abe5ab3d6f86a1990eab740917f7e6dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">map sites to temperary indexes for bipartite matching  <a href="class_c_l_b_legalizer.html#abe5ab3d6f86a1990eab740917f7e6dd4">More...</a><br /></td></tr>
@@ -364,7 +364,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a15e40e20033f4de8ae20291012d7be87"><td class="mdescLeft">&#160;</td><td class="mdescRight">the PlacementUnits which shoudl be mapped to SLICEL  <a href="class_c_l_b_legalizer.html#a15e40e20033f4de8ae20291012d7be87">More...</a><br /></td></tr>
 <tr class="separator:a15e40e20033f4de8ae20291012d7be87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4347eefd1757d136a4904f4d3093f9e"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementInfo::PlacementUnit</a> *, std::vector&lt; <a class="el" href="class_device_info_1_1_device_site.html">DeviceInfo::DeviceSite</a> * &gt; * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_b_legalizer.html#ae4347eefd1757d136a4904f4d3093f9e">PU2SitesInDisplacementThreshold</a></td></tr>
-<tr class="memdesc:ae4347eefd1757d136a4904f4d3093f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">a cache record the candidate sites for each PlacementUnit  <a href="class_c_l_b_legalizer.html#ae4347eefd1757d136a4904f4d3093f9e">More...</a><br /></td></tr>
+<tr class="memdesc:ae4347eefd1757d136a4904f4d3093f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">a cache record the candidate sites within a given displacement threshold for each PlacementUnit  <a href="class_c_l_b_legalizer.html#ae4347eefd1757d136a4904f4d3093f9e">More...</a><br /></td></tr>
 <tr class="separator:ae4347eefd1757d136a4904f4d3093f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a870e1b7e15cb136db2bd27be9c040071"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_l_b_legalizer.html#a870e1b7e15cb136db2bd27be9c040071">enableMCLBLegalization</a> = false</td></tr>
 <tr class="separator:a870e1b7e15cb136db2bd27be9c040071"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -4165,7 +4165,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>record the mapping from PlacementUnits to the sites binded to them. </p>
+<p>record the mapping from PlacementUnits to the candidate sites which are NOT binded to PUs </p>
 <p >Please be aware that a PlacementUnit (i.e., PlacementMacro) might be binded of multiple sites. </p>
 
 <p class="definition">Definition at line <a class="el" href="_c_l_b_legalizer_8h_source.html#l00185">185</a> of file <a class="el" href="_c_l_b_legalizer_8h_source.html">CLBLegalizer.h</a>.</p>
@@ -4194,7 +4194,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>a cache record the candidate sites for each PlacementUnit </p>
+<p>a cache record the candidate sites within a given displacement threshold for each PlacementUnit </p>
 
 <p class="definition">Definition at line <a class="el" href="_c_l_b_legalizer_8h_source.html#l00390">390</a> of file <a class="el" href="_c_l_b_legalizer_8h_source.html">CLBLegalizer.h</a>.</p>
 

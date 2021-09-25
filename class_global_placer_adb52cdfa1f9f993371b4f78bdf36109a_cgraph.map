@@ -48,5 +48,5 @@
 <area shape="rect" id="node32" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="854,1015,1061,1042"/>
 <area shape="rect" id="node33" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="860,914,1055,941"/>
 <area shape="rect" id="node35" href="$class_macro_legalizer.html#a8c322f41c19d3f9d06c0e856feac21db" title=" " alt="" coords="851,1066,1064,1093"/>
-<area shape="rect" id="node36" href="$class_macro_legalizer.html#acb09c00d4e10b8ee7f4dfd8520aec604" title=" " alt="" coords="849,1117,1066,1143"/>
+<area shape="rect" id="node36" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="849,1117,1066,1143"/>
 </map>

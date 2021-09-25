@@ -1,6 +1,6 @@
 <map id="MacroLegalizer::updatePUMatchingLocation" name="MacroLegalizer::updatePUMatchingLocation">
-<area shape="rect" id="node1" title=" " alt="" coords="5,165,232,207"/>
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title=" " alt="" coords="300,5,475,47"/>
+<area shape="rect" id="node1" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="5,165,232,207"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit" alt="" coords="300,5,475,47"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="291,71,483,112"/>
 <area shape="rect" id="node6" href="$class_placement_info.html#a227563f5f5f5fc68e73beef0ce8337c3" title=" " alt="" coords="288,136,487,177"/>
 <area shape="rect" id="node7" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="350,202,425,229"/>

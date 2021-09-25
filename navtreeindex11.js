@@ -1,8 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"namespacepaint_placement.html#aaefa194f54af639b4bec7997c4e7b8ce":[5,0,10,15],
-"namespacepaint_placement.html#adb77d472072b4ee242884b73a474b089":[5,0,10,4],
-"namespacepaint_placement.html#ae12a8fd093f1782980ae7f898709bf8d":[5,0,10,5],
 "namespacepaint_placement.html#ae964954f828c42ad38a643d47b2a9f7f":[5,0,10,14],
 "namespacepaint_placement.html#af0911322a80519c426bdc1ed19bae1ce":[5,0,10,18],
 "namespacepaint_placement.html#afc64b6f04c34484dc3cfcc8fadb25ecd":[5,0,10,11],
@@ -249,5 +246,8 @@ var NAVTREEINDEX11 =
 "struct_placement_info_1_1___clock_net_coverage.html#a67f2a0a81c1cfa98bfaf45237b08300e":[6,0,18,0,1],
 "struct_placement_info_1_1___clock_net_coverage.html#af6b82a3c22fc2348428006b782d672fb":[6,0,18,0,0],
 "struct_placement_info_1_1_cell_bin_info.html":[6,0,18,1],
-"struct_placement_info_1_1_cell_bin_info.html#a21f7c173cac781ac8e11bc933eb46e69":[6,0,18,1,1]
+"struct_placement_info_1_1_cell_bin_info.html#a21f7c173cac781ac8e11bc933eb46e69":[6,0,18,1,1],
+"struct_placement_info_1_1_cell_bin_info.html#a2e93dfec483d7bd044c7a8d032e348aa":[6,0,18,1,2],
+"struct_placement_info_1_1_cell_bin_info.html#ad8feaf669dda7f51eaeb4d481944ad99":[6,0,18,1,3],
+"struct_placement_info_1_1_cell_bin_info.html#ae41eaadd2067a933f6b0d668355af685":[6,0,18,1,0]
 };

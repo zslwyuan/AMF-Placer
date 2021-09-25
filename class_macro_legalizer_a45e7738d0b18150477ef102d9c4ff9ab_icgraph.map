@@ -1,5 +1,5 @@
 <map id="MacroLegalizer::findIdMaxWithRecurence" name="MacroLegalizer::findIdMaxWithRecurence">
-<area shape="rect" id="node1" title=" " alt="" coords="1321,5,1492,47"/>
+<area shape="rect" id="node1" title="find the column which contains the most of cells in a macro in a specific range of columns" alt="" coords="1321,5,1492,47"/>
 <area shape="rect" id="node2" href="$class_macro_legalizer.html#af026f4687fe10487e7af6ca75c5c7f8f" title="map the macros to the columns according to the locations of the cells in it" alt="" coords="1089,5,1273,47"/>
 <area shape="rect" id="node3" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="855,5,1041,47"/>
 <area shape="rect" id="node4" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,13,807,39"/>

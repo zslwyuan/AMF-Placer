@@ -42,7 +42,7 @@
 <area shape="rect" id="node47" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="962,2337,1189,2379"/>
 <area shape="rect" id="node48" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="427,441,612,483"/>
 <area shape="rect" id="node49" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="967,333,1184,375"/>
-<area shape="rect" id="node50" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title=" " alt="" coords="962,2403,1189,2444"/>
+<area shape="rect" id="node50" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="962,2403,1189,2444"/>
 <area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="703,5,856,47"/>
 <area shape="rect" id="node5" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,173,624,199"/>
 <area shape="rect" id="node10" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="435,1253,604,1295"/>

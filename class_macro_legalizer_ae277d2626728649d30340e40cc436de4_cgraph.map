@@ -1,6 +1,6 @@
 <map id="MacroLegalizer::sortPartition" name="MacroLegalizer::sortPartition">
 <area shape="rect" id="node1" title=" " alt="" coords="5,133,192,159"/>
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#acb09c00d4e10b8ee7f4dfd8520aec604" title=" " alt="" coords="240,107,457,134"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="240,107,457,134"/>
 <area shape="rect" id="node9" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title=" " alt="" coords="255,158,442,185"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="505,5,697,47"/>
 <area shape="rect" id="node6" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="505,71,697,112"/>

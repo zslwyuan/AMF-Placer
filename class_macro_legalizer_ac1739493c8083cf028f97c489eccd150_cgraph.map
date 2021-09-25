@@ -1,6 +1,6 @@
 <map id="MacroLegalizer::createBipartiteGraph" name="MacroLegalizer::createBipartiteGraph">
 <area shape="rect" id="node1" title="Create a bipartite graph between PlacementUnit and potential DeviceSites." alt="" coords="5,100,205,141"/>
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#acb09c00d4e10b8ee7f4dfd8520aec604" title=" " alt="" coords="253,107,471,134"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="253,107,471,134"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="519,5,711,47"/>
 <area shape="rect" id="node6" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="519,71,711,112"/>
 <area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="531,137,699,163"/>

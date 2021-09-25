@@ -1,6 +1,6 @@
 <map id="MacroLegalizer::mapMacrosToColumns" name="MacroLegalizer::mapMacrosToColumns">
 <area shape="rect" id="node1" title="map the macros to the columns according to the locations of the cells in it" alt="" coords="5,71,189,112"/>
 <area shape="rect" id="node2" href="$class_macro_legalizer.html#a95ce9c746e7b057f7c8e9ce7ce2b8b0a" title="find the closest column for a given location X" alt="" coords="237,5,456,47"/>
-<area shape="rect" id="node3" href="$class_macro_legalizer.html#a45e7738d0b18150477ef102d9c4ff9ab" title=" " alt="" coords="261,71,432,112"/>
-<area shape="rect" id="node4" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title=" " alt="" coords="259,136,434,177"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#a45e7738d0b18150477ef102d9c4ff9ab" title="find the column which contains the most of cells in a macro in a specific range of columns" alt="" coords="261,71,432,112"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit" alt="" coords="259,136,434,177"/>
 </map>

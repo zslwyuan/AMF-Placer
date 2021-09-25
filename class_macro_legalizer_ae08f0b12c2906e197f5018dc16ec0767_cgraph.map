@@ -1,5 +1,5 @@
 <map id="MacroLegalizer::getHPWLChange" name="MacroLegalizer::getHPWLChange">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,223,134"/>
+<area shape="rect" id="node1" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="5,107,223,134"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="271,5,463,47"/>
 <area shape="rect" id="node5" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="271,71,463,112"/>
 <area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="283,137,451,163"/>

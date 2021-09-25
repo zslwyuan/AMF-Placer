@@ -13,7 +13,7 @@
 <area shape="rect" id="node23" href="$class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title=" " alt="" coords="1469,595,1631,637"/>
 <area shape="rect" id="node25" href="$class_placement_info.html#aa6c7978a01c8f599d13ebe537fc67285" title="make the PlacementUnits in the long path closer to each other" alt="" coords="1455,661,1645,702"/>
 <area shape="rect" id="node26" href="$simple_j_s_o_n_8h.html#a47b912b821d387118038fcd83de7692b" title=" " alt="" coords="1495,727,1605,753"/>
-<area shape="rect" id="node28" href="$class_macro_legalizer.html#adda92ff94c3ef15945c99b82df0bb178" title=" " alt="" coords="1451,777,1649,804"/>
+<area shape="rect" id="node28" href="$class_macro_legalizer.html#adda92ff94c3ef15945c99b82df0bb178" title="spread PlacementUnits accross columns to resolve resource overflow" alt="" coords="1451,777,1649,804"/>
 <area shape="rect" id="node32" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="907,494,1133,535"/>
 <area shape="rect" id="node34" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="1209,934,1363,975"/>
 <area shape="rect" id="node37" href="$class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title=" " alt="" coords="1439,980,1661,1036"/>

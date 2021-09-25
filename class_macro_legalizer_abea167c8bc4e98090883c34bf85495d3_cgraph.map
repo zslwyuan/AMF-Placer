@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="5,151,200,192"/>
 <area shape="rect" id="node2" href="$class_macro_legalizer.html#ae277d2626728649d30340e40cc436de4" title=" " alt="" coords="248,133,435,159"/>
 <area shape="rect" id="node11" href="$class_macro_legalizer.html#a9dfeb4e45f4d3bd3aadaf3cd6519f1ef" title=" " alt="" coords="255,183,428,210"/>
-<area shape="rect" id="node3" href="$class_macro_legalizer.html#acb09c00d4e10b8ee7f4dfd8520aec604" title=" " alt="" coords="483,107,700,134"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="483,107,700,134"/>
 <area shape="rect" id="node10" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title=" " alt="" coords="498,158,685,185"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="748,5,940,47"/>
 <area shape="rect" id="node7" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="748,71,940,112"/>

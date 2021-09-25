@@ -1,9 +1,9 @@
 <map id="MacroLegalizer::dumpMatching" name="MacroLegalizer::dumpMatching">
 <area shape="rect" id="node1" title=" " alt="" coords="5,253,207,280"/>
 <area shape="rect" id="node2" href="$class_macro_legalizer.html#a8c322f41c19d3f9d06c0e856feac21db" title=" " alt="" coords="257,56,470,83"/>
-<area shape="rect" id="node5" href="$class_macro_legalizer.html#acb09c00d4e10b8ee7f4dfd8520aec604" title=" " alt="" coords="255,111,472,137"/>
+<area shape="rect" id="node5" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="255,111,472,137"/>
 <area shape="rect" id="node6" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="520,173,712,214"/>
-<area shape="rect" id="node10" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title=" " alt="" coords="276,213,451,254"/>
+<area shape="rect" id="node10" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit" alt="" coords="276,213,451,254"/>
 <area shape="rect" id="node11" href="$class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480" title=" " alt="" coords="276,278,451,319"/>
 <area shape="rect" id="node12" href="$class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="264,344,463,371"/>
 <area shape="rect" id="node13" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="318,395,409,421"/>
