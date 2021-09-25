@@ -29,7 +29,7 @@ var NAVTREE =
     [ "Get Started", "get_started.html", null ],
     [ "Introduction", "intro.html", null ],
     [ "Publications", "publication.html", null ],
-    [ "README", "md__r_e_a_d_m_e.html", null ],
+    [ "AMF-Placer", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

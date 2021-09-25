@@ -59,7 +59,7 @@ var searchData=
   ['adjustlutffutilization_5froutability_56',['adjustLUTFFUtilization_Routability',['../class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6',1,'PlacementInfo']]],
   ['adjustlutffutilization_5froutability_5freset_57',['adjustLUTFFUtilization_Routability_Reset',['../class_placement_info.html#aaeeece0e2a9362d1bb26c2e17fd90aad',1,'PlacementInfo']]],
   ['allcoordinatedumpcnt_58',['allCoordinateDumpCnt',['../class_global_placer.html#af145ce3e88666b609057e32c59b7f5ff',1,'GlobalPlacer']]],
-  ['amf_2dplacer_59',['AMF-Placer',['../index.html',1,'']]],
+  ['amf_2dplacer_59',['AMF-Placer',['../index.html',1,'(Global Namespace)'],['../md__r_e_a_d_m_e.html',1,'(Global Namespace)']]],
   ['amfplacer_60',['AMFPlacer',['../class_a_m_f_placer.html',1,'AMFPlacer'],['../class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d',1,'AMFPlacer::AMFPlacer()']]],
   ['amfplacer_2eh_61',['AMFPlacer.h',['../_a_m_f_placer_8h.html',1,'']]],
   ['amfplacermainpage_2emd_62',['AMFPlacerMainPage.md',['../_a_m_f_placer_main_page_8md.html',1,'']]],

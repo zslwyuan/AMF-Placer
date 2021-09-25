@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   7: "dep",
   8: "cdeps",
   9: "cmp",
-  10: "agipr"
+  10: "agip"
 };
 
 var indexSectionNames =
