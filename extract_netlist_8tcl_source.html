@@ -86,7 +86,7 @@ $(document).ready(function(){initNavTree('extract_netlist_8tcl_source.html','');
   <div class="headertitle"><div class="title">extractNetlist.tcl</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="extract_netlist_8tcl.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>set fo [open &quot;/home/tingyuan/Downloads/OpenPiton_allCellPinNet&quot; &quot;w&quot;]</div>
+<a href="extract_netlist_8tcl.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>set fo [open &quot;${pahtPrefix}allCellPinNet&quot; &quot;w&quot;]</div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>set allCells [xilinx::designutils::get_leaf_cells *]</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>foreach curCell $allCells {</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>    set curCelltype [get_property REF_NAME $curCell]</div>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('extract_netlist_8tcl_source.html','');
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>}</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>close $fo</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>set fo [open &quot;/home/tingyuan/Downloads/MemN2N_clocks&quot; &quot;w&quot;]</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>set fo [open &quot;${pahtPrefix}_clocks&quot; &quot;w&quot;]</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>set clocks [get_nets -hierarchical -top_net_of_hierarchical_group -filter { TYPE == &quot;GLOBAL_CLOCK&quot; } ]</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>foreach curClock $clocks {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    set tmp_net_driver_pin [get_pins  -leaf -of_objects  $curClock -filter {DIRECTION == OUT}]</div>

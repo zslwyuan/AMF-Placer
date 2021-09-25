@@ -156,7 +156,32 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 <div class="line">    &quot;dumpDirectory&quot;: ==&gt; indicate where the &quot;DUMP&quot; files should be located. [PLACER]</div>
 <div class="line">    //&quot;useUnconstrainedCG&quot; : (Optional:default &quot;true&quot;) indicate whether wirelength optimizer uses Eigen3, which cannot set constraints, to solve the quadratic problem. If false, OSQP solver which can set constraints for the quadratic model, will be involved to replace Eigen3. [PLACER]</div>
 <div class="line">}</div>
-</div><!-- fragment --><p ><b>4. Extract Design Information from Vivado</b> in "" </p>
+</div><!-- fragment --><p ><b>4. Extract Design Information from Vivado</b> Users can go through the following steps to extract the information of specific designs. Please note that we have provide a set of benchmarks for VCU108 which can be found in "benchmarks/VCU108/design".</p>
+<ul>
+<li>a. Please ensure that your design has sucessfully gone through the general Vivado flow to "Generate Bistream". In this way, Vivado will check your design to avoid some bugs in frond-end design stages, and meanwhile we can extrat information of your design, even part of which are some of them are blackbox IPs in Vivado, from the "Implemented Design" which has gone through the placement and routing of Vivado.</li>
+<li>b. Open the Tcl script "benchmarks/vivadoScripts/extractDesignInfo.tcl" in the project directory where you can find the below content at the beginning and modify them according to the comments suggesting. <div class="fragment"><div class="line"># replace this with the name for your benchmark</div>
+<div class="line">set benchmarkName &quot;OpenPiton&quot; </div>
+<div class="line"># replace this path with your one to specify where to store the files of extracted data</div>
+<div class="line">set targetFolderPath &quot;/home/tingyuan/tmpFiles/&quot; </div>
+</div><!-- fragment --></li>
+<li>c. Open your design in Vivado and "Open Implemented Design" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or ~1hour to finish the extraction due to the slow Tcl execution related to strings and IOs in Vivado. <div class="fragment"><div class="line"># replace XXXXX to indicate where your AMFPlacer is located.</div>
+<div class="line">source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl</div>
+</div><!-- fragment --></li>
+<li>d. Finally, you should be able to find the extracted files in target folder path set by you.</li>
+</ul>
+<p ><b>5. Extract Device Information from Vivado</b> Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provide device information for VCU108 which can be found in "benchmarks/VCU108/device".</p>
+<ul>
+<li>a. Please ensure that your Vivado has the license for the specific device, so you can open the Device window by clicking on the top bar "Window-&gt;Device"</li>
+<li>b. Open the Tcl script "benchmarks/vivadoScripts/extractDeviceInfo.tcl" in the project directory where you can find the below content at the beginning and modify them according to the comments suggesting. <div class="fragment"><div class="line"># replace this with the name for your device</div>
+<div class="line">set deviceName &quot;VCU108&quot; </div>
+<div class="line"># replace this path with your one to specify where to store the files of extracted data</div>
+<div class="line">set targetFolderPath &quot;/home/tingyuan/tmpFiles/&quot; </div>
+</div><!-- fragment --></li>
+<li>c. Open your design of your target device or just create empty project of the target device. Open the Device window by clicking on the top bar "Window-&gt;Device" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or ~1hour to finish the extraction due to the slow Tcl execution related to strings and IOs in Vivado. <div class="fragment"><div class="line"># replace XXXXX to indicate where your AMFPlacer is located.</div>
+<div class="line">source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl</div>
+</div><!-- fragment --></li>
+<li>d. Finally, you should be able to find the extracted files in target folder path set by you. </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

@@ -86,18 +86,17 @@ $(document).ready(function(){initNavTree('extract_fixed_units_8tcl_source.html',
   <div class="headertitle"><div class="title">extractFixedUnits.tcl</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="extract_fixed_units_8tcl.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>set fo [open &quot;/home/tingyuan/Downloads/OpenPiton_fixedUnits&quot; &quot;w&quot;]</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span>set allCells [xilinx::designutils::get_leaf_cells *]</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>set fixedUnits [get_cells $allCells -filter {IS_LOC_FIXED == true}]</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>foreach curCell $fixedUnits {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    set tmpLoc [get_property LOC $curCell]</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    set tmpBEL [get_property BEL $curCell]</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    puts $fo &quot;name=&gt; $curCell loc=&gt;  $tmpLoc bel=&gt;  $tmpBEL&quot;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>}</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>close $fo</div>
+<a href="extract_fixed_units_8tcl.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>set fo [open &quot;${pahtPrefix}fixedUnits&quot; &quot;w&quot;]</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>set fixedUnits [get_cells $allCells -filter {IS_LOC_FIXED == true}]</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>foreach curCell $fixedUnits {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    set tmpLoc [get_property LOC $curCell]</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    set tmpBEL [get_property BEL $curCell]</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    puts $fo &quot;name=&gt; $curCell loc=&gt;  $tmpLoc bel=&gt;  $tmpBEL&quot;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>}</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>close $fo</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

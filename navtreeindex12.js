@@ -1,5 +1,13 @@
 var NAVTREEINDEX12 =
 {
+"struct_placement_info_1_1___clock_net_coverage.html#a5e20fa0b666df88b04b1527bba2a21fd":[6,0,18,0,2],
+"struct_placement_info_1_1___clock_net_coverage.html#a67f2a0a81c1cfa98bfaf45237b08300e":[6,0,18,0,1],
+"struct_placement_info_1_1___clock_net_coverage.html#af6b82a3c22fc2348428006b782d672fb":[6,0,18,0,0],
+"struct_placement_info_1_1_cell_bin_info.html":[6,0,18,1],
+"struct_placement_info_1_1_cell_bin_info.html#a21f7c173cac781ac8e11bc933eb46e69":[6,0,18,1,1],
+"struct_placement_info_1_1_cell_bin_info.html#a2e93dfec483d7bd044c7a8d032e348aa":[6,0,18,1,2],
+"struct_placement_info_1_1_cell_bin_info.html#ad8feaf669dda7f51eaeb4d481944ad99":[6,0,18,1,3],
+"struct_placement_info_1_1_cell_bin_info.html#ae41eaadd2067a933f6b0d668355af685":[6,0,18,1,0],
 "struct_placement_info_1_1_location.html":[6,0,18,5],
 "struct_placement_info_1_1_location.html#a7a8a335444a6e21e4ab97ba49d9d78b6":[6,0,18,5,0],
 "struct_placement_info_1_1_location.html#a95ca2a314c793fae8fe61aa1b1ac5df5":[6,0,18,5,1],
