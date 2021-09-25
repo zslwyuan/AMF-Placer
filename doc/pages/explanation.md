@@ -17,4 +17,20 @@ Here, we will explain the placement flow by going through the functionality of t
 8. PlacementTimingOptimizer: based on the timing information and the placement information, adjusts some terms in the quadratic models which can improve the timing.
 9. ParallelCLBPacker: finally packs LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.
 
+Below is the overall flow of AMFPlacer and a visualized procedure is shown in the figure below.
+
+1. AMFPlacer will be constructed based on the DesignInfo and DeviceInfo. 
+2. At the beginning, AMFPlacer will construct the PlacementInfo based on the DesignInfo and DeviceInfn. 
+3. The element attributes, locations and densities will be initialized in the PlacementInfo. 
+4. InitialPacker will be called by AMFPlacer to identify PlacementMacro and PlacementUnpackedCell from the design netlist.
+5. The PlacementTimingInfo inside PlacementInfo will be initialized by constructing a TimingGraph and checking the level of DesignCell in their corresponding timing paths.
+6. GlobalPlacer will cluster the netlist based on clock information and the connectivity and initially place the cluster on the device based on SAPlacer.
+7. GlobalPlacer will go through some global placement iteration (wirelength optimization, cell spreading, legalization)
+8. PlacementInfo will set a more fine-grained cell density grid.
+9. (Again) GlobalPlacer will go through some global placement iteration (wirelength optimization, cell spreading, legalization).
+10. IncrementalBELPacker will pair some LUTs and FFs based on their locations as an intermediate process for later packing.
+11. PlacementTimingOptimizer will enhence some net weights for timing optimization.
+12. GlobalPlacer will enable PlacementInfo (i.e., set neighbor displacement upperbound to a positive value) to conduct packing-aware (Improved UTPlacerF solution, considering cell resource, timing and net density. Enable earlier cell packing determination based on history analysis. Enable parallel exception handling.) Please note that congestion-aware cell area adjustion will be automatically enabled during global placement according to the placement convergence progress.
+13. Finally, when global placement converges, ParallelCLBPacker will pack the elements into the corresponding DeviceSite / DeviceBEL.
+
 <img src="overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
