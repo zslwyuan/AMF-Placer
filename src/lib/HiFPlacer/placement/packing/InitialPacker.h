@@ -13,9 +13,21 @@
 #include <string>
 #include <vector>
 
+/**
+ * @brief InitialPacker will identify macros from the design netlist based on pattern matching
+ *
+ */
 class InitialPacker
 {
   public:
+    /**
+     * @brief Construct a new Initial Packer object
+     *
+     * @param designInfo given design information
+     * @param deviceInfo given device information
+     * @param placementInfo the PlacementInfo for this placer to handle
+     * @param JSONCfg  the user-defined placement configuration
+     */
     InitialPacker(DesignInfo *designInfo, DeviceInfo *deviceInfo, PlacementInfo *placementInfo,
                   std::map<std::string, std::string> &JSONCfg)
         : designInfo(designInfo), deviceInfo(deviceInfo), placementInfo(placementInfo),
@@ -29,13 +41,33 @@ class InitialPacker
     {
     }
 
+    /**
+     * @brief extract the macros from the netlist to construction PlacmentMacro
+     *
+     */
     void pack();
 
+    /**
+     * @brief BFS to find the core cells of a macro based on some pre-defined patterns of cascaded cells
+     *
+     * @param portPattern a given set of port patterns on the element to detect cascading interconnection
+     * @param startCell a start cell for the search initialization
+     * @param exactMatch indicate whether the portPattern should be exactly matched otherwise, containment relationship
+     * will be accepted as matched.
+     * @return std::vector<DesignInfo::DesignCell *>
+     */
     std::vector<DesignInfo::DesignCell *>
     BFSExpandViaSpecifiedPorts(std::string portPattern, DesignInfo::DesignCell *startCell, bool exactMatch = false);
     std::vector<DesignInfo::DesignCell *> BFSExpandViaSpecifiedPorts(std::vector<std::string> portPatterns,
                                                                      DesignInfo::DesignCell *startCell,
                                                                      bool exactMatch = false);
+
+    /**
+     * @brief detects DSP macros and clusters the related cells into PlacementMacro
+     *
+     * If two DSPs are interconnected via their "ACIN[", "BCIN[", "PCIN[" ports, they are cascaded.
+     *
+     */
     void findDSPMacros();
     void findBRAMMacros();
     std::vector<DesignInfo::DesignCell *> checkCompatibleFFs(std::vector<DesignInfo::DesignCell *> FFs);

@@ -9,3 +9,5 @@ set script_path [ file dirname [ file normalize [ info script ] ] ]
 source "${script_path}/extractNetlist.tcl"
 source "${script_path}/extractLUTRAMs.tcl"
 source "${script_path}/extractFixedUnits.tcl"
+exec zip -j "${pahtPrefix}allCellPinNet.zip" "${pahtPrefix}allCellPinNet"
+exec rm "${pahtPrefix}allCellPinNet"
