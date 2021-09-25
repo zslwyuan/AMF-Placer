@@ -16,7 +16,7 @@
 <area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="195,130,334,171"/>
 <area shape="rect" id="node8" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,253,116,280"/>
 <area shape="rect" id="node10" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="1225,119,1433,145"/>
-<area shape="rect" id="node11" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="974,203,1102,229"/>
+<area shape="rect" id="node11" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="974,203,1102,229"/>
 <area shape="rect" id="node16" href="$class_design_info.html#a39c1befcff337b98a699525457d1caaa" title="go through the FF cells to extract control sets for later processing" alt="" coords="1222,279,1435,305"/>
 <area shape="rect" id="node17" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="962,279,1114,305"/>
 <area shape="rect" id="node19" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5c2b50544d1e2288a0fceb1e93a10004" title=" " alt="" coords="1209,355,1448,411"/>

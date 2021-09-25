@@ -2,6 +2,6 @@
 <area shape="rect" id="node1" title=" " alt="" coords="544,46,675,73"/>
 <area shape="rect" id="node2" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title=" " alt="" coords="341,5,495,47"/>
 <area shape="rect" id="node5" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title=" " alt="" coords="340,71,496,112"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="164,46,292,73"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,46,292,73"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>

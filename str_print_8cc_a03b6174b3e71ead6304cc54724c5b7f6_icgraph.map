@@ -19,9 +19,9 @@
 <area shape="rect" id="node23" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="987,399,1164,440"/>
 <area shape="rect" id="node25" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="426,375,613,402"/>
 <area shape="rect" id="node26" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="975,917,1176,943"/>
-<area shape="rect" id="node27" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="715,841,843,867"/>
+<area shape="rect" id="node27" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="715,841,843,867"/>
 <area shape="rect" id="node28" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="971,967,1179,994"/>
-<area shape="rect" id="node29" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title=" " alt="" coords="980,1018,1171,1045"/>
+<area shape="rect" id="node29" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="980,1018,1171,1045"/>
 <area shape="rect" id="node30" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="982,698,1169,725"/>
 <area shape="rect" id="node31" href="$class_placement_timing_info_1_1_timing_graph.html#ae3b82205bd3755e782958cd81cd6366f" title="propogate the forward level of each TimingNode forward level of a TimingNode is the distance toward t..." alt="" coords="965,1856,1185,1897"/>
 <area shape="rect" id="node32" href="$class_cluster_placer.html#a6a55cd1a6f302b4499533ce925d199a0" title="check whether the average size of clusters is greater than the given threshold" alt="" coords="697,1287,861,1328"/>

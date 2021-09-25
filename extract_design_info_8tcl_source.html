@@ -97,6 +97,8 @@ $(document).ready(function(){initNavTree('extract_design_info_8tcl_source.html',
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>source &quot;${script_path}/extractNetlist.tcl&quot;</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>source &quot;${script_path}/extractLUTRAMs.tcl&quot;</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>source &quot;${script_path}/extractFixedUnits.tcl&quot;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>exec zip -j &quot;${pahtPrefix}allCellPinNet.zip&quot; &quot;${pahtPrefix}allCellPinNet&quot;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>exec rm &quot;${pahtPrefix}allCellPinNet&quot;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

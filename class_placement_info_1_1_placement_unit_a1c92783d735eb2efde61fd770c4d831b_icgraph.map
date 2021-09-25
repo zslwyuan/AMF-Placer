@@ -6,7 +6,7 @@
 <area shape="rect" id="node3" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="185,201,341,243"/>
 <area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="414,398,615,425"/>
 <area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="411,499,619,526"/>
-<area shape="rect" id="node8" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title=" " alt="" coords="419,230,610,257"/>
+<area shape="rect" id="node8" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="419,230,610,257"/>
 <area shape="rect" id="node9" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="421,449,608,475"/>
 <area shape="rect" id="node10" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title=" " alt="" coords="437,281,593,323"/>
 <area shape="rect" id="node11" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,5,363,47"/>
@@ -14,6 +14,6 @@
 <area shape="rect" id="node13" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="185,71,341,112"/>
 <area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="193,136,334,177"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,143,116,170"/>
-<area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="199,347,327,374"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,347,327,374"/>
 <area shape="rect" id="node16" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="667,551,865,592"/>
 </map>

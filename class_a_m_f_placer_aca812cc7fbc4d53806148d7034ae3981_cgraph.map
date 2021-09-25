@@ -21,7 +21,7 @@
 <area shape="rect" id="node37" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="468,402,669,443"/>
 <area shape="rect" id="node38" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="748,462,947,503"/>
 <area shape="rect" id="node39" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="769,798,925,839"/>
-<area shape="rect" id="node40" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="783,579,911,605"/>
+<area shape="rect" id="node40" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="783,579,911,605"/>
 <area shape="rect" id="node41" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="219,1623,358,1665"/>
 <area shape="rect" id="node42" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title=" " alt="" coords="473,1598,664,1639"/>
 <area shape="rect" id="node43" href="$class_placement_info.html#ae7c0dcd8d6ccdb681f0f29c8d65c911b" title=" " alt="" coords="488,1075,649,1101"/>

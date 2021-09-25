@@ -1,5 +1,5 @@
 <map id="InitialPacker" name="InitialPacker">
-<area shape="rect" id="node1" title=" " alt="" coords="173,288,268,315"/>
+<area shape="rect" id="node1" title="InitialPacker will identify macros from the design netlist based on pattern matching." alt="" coords="173,288,268,315"/>
 <area shape="rect" id="node2" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="29,5,113,32"/>
 <area shape="rect" id="node4" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="287,199,394,225"/>
 <area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="130,95,308,136"/>

@@ -5,7 +5,7 @@
 <area shape="rect" id="node19" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="285,490,460,532"/>
 <area shape="rect" id="node20" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="542,716,717,757"/>
 <area shape="rect" id="node25" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="779,1163,945,1190"/>
-<area shape="rect" id="node26" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title=" " alt="" coords="289,160,457,201"/>
+<area shape="rect" id="node26" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title="BFS to find the core cells of a macro based on some pre&#45;defined patterns of cascaded cells." alt="" coords="289,160,457,201"/>
 <area shape="rect" id="node28" href="$_initial_packer_8cc.html#a0fd0a2e1abc315a9956507a413459e1b" title=" " alt="" coords="316,556,429,583"/>
 <area shape="rect" id="node30" href="$class_initial_packer.html#a468e9bb1cecc4bcf35c57212bb4c52f7" title=" " alt="" coords="261,832,484,859"/>
 <area shape="rect" id="node31" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="304,883,441,910"/>

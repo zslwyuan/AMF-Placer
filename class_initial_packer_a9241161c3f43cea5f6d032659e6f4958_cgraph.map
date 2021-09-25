@@ -1,8 +1,8 @@
 <map id="InitialPacker::findDSPMacros" name="InitialPacker::findDSPMacros">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1175,196,1202"/>
+<area shape="rect" id="node1" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="5,1175,196,1202"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="244,528,419,569"/>
 <area shape="rect" id="node19" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="244,985,419,1027"/>
-<area shape="rect" id="node20" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title=" " alt="" coords="247,1051,415,1092"/>
+<area shape="rect" id="node20" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title="BFS to find the core cells of a macro based on some pre&#45;defined patterns of cascaded cells." alt="" coords="247,1051,415,1092"/>
 <area shape="rect" id="node23" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="263,1117,400,1143"/>
 <area shape="rect" id="node24" href="$class_placement_info_1_1_placement_macro.html#a10685875692186ba2a95623ec871637c" title=" " alt="" coords="244,1168,419,1209"/>
 <area shape="rect" id="node25" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="249,1234,414,1261"/>

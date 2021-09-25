@@ -5,6 +5,6 @@
 <area shape="rect" id="node7" href="$_placement_info_8cc.html#a0f0f5e6d103770fbc53ac592f3798708" title=" " alt="" coords="665,151,750,177"/>
 <area shape="rect" id="node8" href="$class_placement_info_1_1_placement_net.html#a69b50e9a71bb43a1aa1efd2d71bc9039" title="Construct a new Placement Net object." alt="" coords="620,202,795,243"/>
 <area shape="rect" id="node4" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="340,92,548,119"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="164,92,292,119"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,92,292,119"/>
 <area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,92,116,119"/>
 </map>

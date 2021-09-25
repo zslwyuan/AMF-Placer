@@ -7,7 +7,7 @@
 <area shape="rect" id="node3" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="187,201,343,243"/>
 <area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="417,485,618,511"/>
 <area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="413,434,621,461"/>
-<area shape="rect" id="node8" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title=" " alt="" coords="422,215,613,242"/>
+<area shape="rect" id="node8" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="422,215,613,242"/>
 <area shape="rect" id="node9" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="424,383,611,410"/>
 <area shape="rect" id="node10" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title=" " alt="" coords="439,267,595,308"/>
 <area shape="rect" id="node11" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="165,5,364,47"/>
@@ -15,7 +15,7 @@
 <area shape="rect" id="node13" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="187,71,343,112"/>
 <area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="194,136,335,177"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,209,116,235"/>
-<area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="201,333,329,359"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="201,333,329,359"/>
 <area shape="rect" id="node16" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="669,427,868,468"/>
 <area shape="rect" id="node18" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="433,535,601,562"/>
 <area shape="rect" id="node19" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,508,365,549"/>

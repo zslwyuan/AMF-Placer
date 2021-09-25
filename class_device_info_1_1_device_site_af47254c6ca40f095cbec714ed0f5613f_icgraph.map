@@ -46,7 +46,7 @@
 <area shape="rect" id="node39" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="465,871,684,927"/>
 <area shape="rect" id="node41" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="13,1003,157,1044"/>
 <area shape="rect" id="node43" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="487,1003,662,1044"/>
-<area shape="rect" id="node45" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="787,1023,915,1050"/>
+<area shape="rect" id="node45" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="787,1023,915,1050"/>
 <area shape="rect" id="node48" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="752,1075,951,1116"/>
 <area shape="rect" id="node50" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="775,1141,927,1167"/>
 </map>

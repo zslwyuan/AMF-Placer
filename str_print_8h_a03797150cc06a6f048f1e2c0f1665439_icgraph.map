@@ -24,7 +24,7 @@
 <area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="650,115,858,141"/>
 <area shape="rect" id="node8" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="927,5,1113,32"/>
 <area shape="rect" id="node9" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="921,107,1119,149"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title=" " alt="" coords="444,88,572,115"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="444,88,572,115"/>
 <area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,443,116,469"/>
 <area shape="rect" id="node16" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="1201,377,1371,418"/>
 <area shape="rect" id="node17" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="917,377,1123,418"/>
