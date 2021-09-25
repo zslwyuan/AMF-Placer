@@ -95,6 +95,8 @@ $(document).ready(function(){initNavTree('extract_device_info_8tcl_source.html',
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>set pahtPrefix &quot;${targetFolderPath}/${deviceName}/${deviceName}_&quot;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>set script_path [ file dirname [ file normalize [ info script ] ] ]</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>source &quot;${script_path}/extractTileSite.tcl&quot;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>exec zip -j &quot;${pahtPrefix}DeviceSite.zip&quot; &quot;${pahtPrefix}DeviceSite&quot;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>exec rm &quot;${pahtPrefix}DeviceSite&quot;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
