@@ -372,6 +372,42 @@ class PlacementTimingInfo
         }
 
         /**
+         * @brief find loop from a node in timing graph (for debug)
+         *
+         * @param nodeInPath
+         * @param startNode
+         * @param curNode
+         * @param level
+         */
+        void findALoopFromNode(std::vector<int> &nodeInPath, int startNode, int curNode, int level)
+        {
+            if (level > 5)
+                return;
+            if (level > 0 && curNode == startNode)
+            {
+                for (auto nodeId : nodeInPath)
+                {
+                    std::cout << nodes[nodeId]->getDesignNode()->getName() << "  =>" << nodes[nodeId]->checkIsRegister()
+                              << "\n";
+                    std::cout << nodes[nodeId]->getDesignNode() << "\n";
+                }
+                exit(0);
+            }
+            for (auto outEdge : nodes[curNode]->getOutEdges())
+            {
+                int nextId = outEdge->getSink()->getId();
+
+                if (!nodes[nextId]->checkIsRegister())
+                {
+
+                    nodeInPath.push_back(nextId);
+                    findALoopFromNode(nodeInPath, startNode, nextId, level + 1);
+                    nodeInPath.pop_back();
+                }
+            }
+        }
+
+        /**
          * @brief propogate the forward level of each TimingNode
          *  forward level of a TimingNode is the distance toward the farthest predecessor register based on the path
          * length (instead of delay)

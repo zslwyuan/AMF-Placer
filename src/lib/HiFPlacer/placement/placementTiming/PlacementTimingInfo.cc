@@ -305,7 +305,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
     resSucessors.push_back(startNodeId);
     nodeSet.insert(startNodeId);
     nodeQ.push(startNodeId);
-    int targetForwardLevel = nodes[startNodeId]->getDestLevel();
+    int targetPathLen = nodes[startNodeId]->getLongestPathLength();
 
     while (nodeQ.size() && nodeSet.size() < sizeThr)
     {
@@ -316,7 +316,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
         {
             int nextId = outEdge->getSink()->getId();
 
-            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getDestLevel() >= targetForwardLevel * 0.9)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() >= targetPathLen * 0.9)
             {
                 if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
                 {
@@ -331,7 +331,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
         {
             int nextId = inEdge->getSource()->getId();
 
-            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getDestLevel() >= targetForwardLevel * 0.9)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() >= targetPathLen * 0.9)
             {
                 if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
                 {

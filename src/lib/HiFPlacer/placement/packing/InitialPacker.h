@@ -79,6 +79,7 @@ class InitialPacker
     void loadNets();
     void LUTFFPairing();
     void dumpMacroHighLight();
+    void enhanceIONets();
 
   private:
     class PackedControlSet

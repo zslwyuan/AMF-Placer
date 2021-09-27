@@ -135,13 +135,13 @@ void ClusterPlacer::createLongPathClusterUnits()
     unsigned int maxSize = 0;
     for (auto timingNode : timingNodes)
     {
-        if (timingNode->getDestLevel() > pathLengthThr)
+        if (timingNode->getLongestPathLength() > pathLengthThr)
         {
             auto curCell = timingNode->getDesignNode();
             auto tmpPU = placementInfo->getPlacementUnitByCell(curCell);
             if (placementUnitId2ClusterUnitId[tmpPU->getId()] < 0)
             {
-                auto candidateCellIds = simpleTimingGraph->BFSFromNode(timingNode->getId(), 10000, extractedCellIds);
+                auto candidateCellIds = simpleTimingGraph->BFSFromNode(timingNode->getId(), 1000000, extractedCellIds);
                 std::set<PlacementInfo::PlacementUnit *> PUsInLongPaths;
                 PUsInLongPaths.clear();
                 for (auto &candidateCellId : candidateCellIds)
@@ -152,6 +152,9 @@ void ClusterPlacer::createLongPathClusterUnits()
                     if (placementUnitId2ClusterUnitId[PUInPath->getId()] < 0)
                         PUsInLongPaths.insert(PUInPath);
                 }
+
+                if (PUsInLongPaths.size() == 0)
+                    continue;
 
                 PlacementInfo::ClusterUnit *curClusterUnit = new PlacementInfo::ClusterUnit(clusterUnits.size());
                 for (auto PUInPath : PUsInLongPaths)
@@ -167,6 +170,7 @@ void ClusterPlacer::createLongPathClusterUnits()
                 clusterUnits.push_back(curClusterUnit);
             }
         }
+        assert(clusterUnits.size() <= placementInfo->getPlacementUnits().size());
     }
     print_info("ClusterPlacer: largest long-path cluster size=" + std::to_string(maxSize));
 }

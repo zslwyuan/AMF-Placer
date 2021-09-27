@@ -57,6 +57,8 @@ void InitialPacker::pack()
     // for each FF, check/record its control set
     designInfo->updateFFControlSets();
     placementInfo->calculateNetNumDistributionOfPUs();
+
+    // enhanceIONets();
     // std::string dumpFile = "netNumDisribution.gz";
     // print_status("ParallelCLBPacker: dumping unpackable PUs archieve to: " + dumpFile);
     // std::stringstream outfile1;
@@ -68,6 +70,27 @@ void InitialPacker::pack()
     // writeStrToGZip(dumpFile, outfile1);
 
     dumpMacroHighLight();
+}
+
+void InitialPacker::enhanceIONets()
+{
+    for (auto net : placementInfo->getPlacementNets())
+    {
+        if (net->getDriverUnits().size() == 1)
+        {
+            if (net->getDriverUnits()[0]->isFixed())
+            {
+                net->getDesignNet()->enhanceOverallNetEnhancement(2);
+            }
+        }
+        else if (net->getUnitsBeDriven().size() == 1)
+        {
+            if (net->getUnitsBeDriven()[0]->isFixed())
+            {
+                net->getDesignNet()->enhanceOverallNetEnhancement(2);
+            }
+        }
+    }
 }
 
 std::vector<DesignInfo::DesignCell *>
