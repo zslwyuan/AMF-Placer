@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"namespacepaint_benchmarks_results.html#ab0c5d00daa24b7789f3f8fddb9d82464":[6,0,7,22],
+"namespacepaint_benchmarks_results.html#ae4d87002ab1ec0675038091e65ec6503":[6,0,7,19],
 "namespacepaint_placement.html":[6,0,10],
 "namespacepaint_placement.html#a082821fb8230777ec65c81f1abadc0f0":[6,0,10,9],
 "namespacepaint_placement.html#a0a9bf320d1ead9d6fe5857129ab19451":[6,0,10,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX11 =
 "struct_general_spreader_1_1_spread_region_1_1expand_op.html#a461f9056aea1b986d00a1ae369612019":[7,0,9,0,0,4],
 "struct_general_spreader_1_1_spread_region_1_1expand_op.html#a5a07bf1328b3de731ec71eed1aebbd45":[7,0,9,0,0,0],
 "struct_general_spreader_1_1_spread_region_1_1expand_op.html#a7708d46224934e9063f74b19f3228445":[7,0,9,0,0,2],
-"struct_general_spreader_1_1_spread_region_1_1expand_op.html#aa32823d340c9c1907b11c22b795be158":[7,0,9,0,0,3],
-"struct_general_spreader_1_1_spread_region_1_1expand_op.html#ac9ef7cc9a6500ea7b9fc954280c89084":[7,0,9,0,0,6],
-"struct_general_spreader_1_1_spread_region_1_1expand_op.html#ace8132e014bd5046a0ce8a6c1dccb5b8":[7,0,9,0,0,5]
+"struct_general_spreader_1_1_spread_region_1_1expand_op.html#aa32823d340c9c1907b11c22b795be158":[7,0,9,0,0,3]
 };

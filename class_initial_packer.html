@@ -154,6 +154,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a15ef325cb341bebae0e22a2f57cb4d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4192856f4321d686ca5113f9993c17f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_initial_packer.html#ab4192856f4321d686ca5113f9993c17f">dumpMacroHighLight</a> ()</td></tr>
 <tr class="separator:ab4192856f4321d686ca5113f9993c17f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac594d558a4e72721ffafb5b52d2ec0cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_initial_packer.html#ac594d558a4e72721ffafb5b52d2ec0cf">enhanceIONets</a> ()</td></tr>
+<tr class="separator:ac594d558a4e72721ffafb5b52d2ec0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -297,9 +299,9 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;DesignInfo::DesignCell *&gt; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00074">74</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00097">97</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00252">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00171">findDSPMacros()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00275">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00194">findDSPMacros()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -358,7 +360,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00116">116</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00139">139</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -388,9 +390,9 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00375">375</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00398">398</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -420,7 +422,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01575">1575</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01598">1598</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -445,6 +447,34 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="ac594d558a4e72721ffafb5b52d2ec0cf" name="ac594d558a4e72721ffafb5b52d2ec0cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac594d558a4e72721ffafb5b52d2ec0cf">&#9670;&nbsp;</a></span>enhanceIONets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitialPacker::enhanceIONets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00075">75</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_initial_packer_ac594d558a4e72721ffafb5b52d2ec0cf_cgraph.png" border="0" usemap="#aclass_initial_packer_ac594d558a4e72721ffafb5b52d2ec0cf_cgraph" alt=""/></div>
+<map name="aclass_initial_packer_ac594d558a4e72721ffafb5b52d2ec0cf_cgraph" id="aclass_initial_packer_ac594d558a4e72721ffafb5b52d2ec0cf_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,196,32"/>
+<area shape="rect" href="class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="244,5,464,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a9b15c94f8f5fcff2bd895e3286cb1d3f" name="a9b15c94f8f5fcff2bd895e3286cb1d3f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9b15c94f8f5fcff2bd895e3286cb1d3f">&#9670;&nbsp;</a></span>findBRAMMacros()</h2>
 
@@ -460,7 +490,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00252">252</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00275">275</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -530,7 +560,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00656">656</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00679">679</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -612,7 +642,7 @@ Here is the caller graph for this function:</div>
 <p>detects DSP macros and clusters the related cells into PlacementMacro </p>
 <p >If two DSPs are interconnected via their "ACIN[", "BCIN[", "PCIN[" ports, they are cascaded. </p>
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00171">171</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00194">194</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -678,7 +708,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01043">1043</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01066">1066</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -748,7 +778,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01480">1480</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01503">1503</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -790,7 +820,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01511">1511</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01534">1534</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -854,7 +884,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01289">1289</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01312">1312</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -921,7 +951,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01404">1404</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l01427">1427</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 <div class="dynheader">
@@ -1008,9 +1038,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00433">433</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8cc_source.html#l00456">456</a> of file <a class="el" href="_initial_packer_8cc_source.html">InitialPacker.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1168,9 +1198,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00240">240</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00241">241</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00252">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00171">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01480">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01511">loadFixedPlacementUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01289">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01404">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00275">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00194">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01066">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01503">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01534">loadFixedPlacementUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01312">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01427">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
 </div>
 </div>
@@ -1194,7 +1224,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00241">241</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00242">242</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
 </div>
 </div>
@@ -1218,9 +1248,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00239">239</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00240">240</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00252">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00171">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01480">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01289">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01404">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00275">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00194">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01066">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01503">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01312">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01427">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
 </div>
 </div>
@@ -1244,9 +1274,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00232">232</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00233">233</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00252">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00171">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01480">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01289">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01404">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00275">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00194">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01066">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01503">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01312">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01427">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
 </div>
 </div>
@@ -1270,9 +1300,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00229">229</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00230">230</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00252">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00171">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01480">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01511">loadFixedPlacementUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01289">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01404">LUTFFPairing()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00433">mapCarryRelatedRouteThru()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00275">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00194">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01066">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01503">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01534">loadFixedPlacementUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01312">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01427">LUTFFPairing()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00456">mapCarryRelatedRouteThru()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
 </div>
 </div>
@@ -1296,9 +1326,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00230">230</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00231">231</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01511">loadFixedPlacementUnits()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l01289">loadOtherCLBMacros()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01534">loadFixedPlacementUnits()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l01312">loadOtherCLBMacros()</a>.</p>
 
 </div>
 </div>
@@ -1322,9 +1352,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00237">237</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00238">238</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01511">loadFixedPlacementUnits()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01534">loadFixedPlacementUnits()</a>.</p>
 
 </div>
 </div>
@@ -1348,7 +1378,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00242">242</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00243">243</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
@@ -1374,9 +1404,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00231">231</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00232">232</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01575">dumpMacroHighLight()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01598">dumpMacroHighLight()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00075">enhanceIONets()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
 </div>
 </div>
@@ -1400,9 +1430,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00236">236</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00237">237</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00252">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00171">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01289">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01404">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00275">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00194">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01066">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01312">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01427">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
 </div>
 </div>
@@ -1426,9 +1456,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00234">234</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00235">235</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00252">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00656">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00171">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01480">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01289">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01404">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00275">findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00679">findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00194">findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01066">findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01503">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01312">loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01427">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
 </div>
 </div>
@@ -1452,9 +1482,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00235">235</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_initial_packer_8h_source.html#l00236">236</a> of file <a class="el" href="_initial_packer_8h_source.html">InitialPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01480">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01404">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l01503">findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01427">LUTFFPairing()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00009">pack()</a>.</p>
 
 </div>
 </div>

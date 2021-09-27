@@ -7,6 +7,7 @@ var class_initial_packer =
     [ "BFSExpandViaSpecifiedPorts", "class_initial_packer.html#a56f0933facb5f3e34b8b9f058ee911ac", null ],
     [ "checkCompatibleFFs", "class_initial_packer.html#a468e9bb1cecc4bcf35c57212bb4c52f7", null ],
     [ "dumpMacroHighLight", "class_initial_packer.html#ab4192856f4321d686ca5113f9993c17f", null ],
+    [ "enhanceIONets", "class_initial_packer.html#ac594d558a4e72721ffafb5b52d2ec0cf", null ],
     [ "findBRAMMacros", "class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f", null ],
     [ "findCARRYMacros", "class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18", null ],
     [ "findDSPMacros", "class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958", null ],
