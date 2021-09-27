@@ -107,6 +107,7 @@ var class_design_info =
     [ "getType2Cells", "class_design_info.html#a8ada82debbe2ac615c36cae57d16eadc", null ],
     [ "isBRAM", "class_design_info.html#a602d2e43d47be601b929f4044d165504", null ],
     [ "isCarry", "class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600", null ],
+    [ "isClockBuffer", "class_design_info.html#a552a1d253c3b57f151bb08650f5feba5", null ],
     [ "isDesignClock", "class_design_info.html#a2b8b2ef74da8be7e36beaf70c9f8e609", null ],
     [ "isDSP", "class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b", null ],
     [ "isFF", "class_design_info.html#a5abea54a57ffccc26028456b5f156e74", null ],

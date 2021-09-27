@@ -1,5 +1,8 @@
 var NAVTREEINDEX10 =
 {
+"functions_vars_b.html":[7,3,2,1],
+"functions_vars_c.html":[7,3,2,2],
+"functions_vars_d.html":[7,3,2,3],
 "functions_vars_e.html":[7,3,2,4],
 "functions_vars_f.html":[7,3,2,5],
 "functions_vars_g.html":[7,3,2,6],
@@ -246,8 +249,5 @@ var NAVTREEINDEX10 =
 "namespacepaint_benchmarks_results.html#aa34f7523bcda477ae4fcef14f6dafc0d":[6,0,7,8],
 "namespacepaint_benchmarks_results.html#aa8b9a2411e350ffa5da888bd56e63f10":[6,0,7,16],
 "namespacepaint_benchmarks_results.html#ab0c5d00daa24b7789f3f8fddb9d82464":[6,0,7,22],
-"namespacepaint_benchmarks_results.html#ae4d87002ab1ec0675038091e65ec6503":[6,0,7,19],
-"namespacepaint_placement.html":[6,0,10],
-"namespacepaint_placement.html#a082821fb8230777ec65c81f1abadc0f0":[6,0,10,9],
-"namespacepaint_placement.html#a0a9bf320d1ead9d6fe5857129ab19451":[6,0,10,0]
+"namespacepaint_benchmarks_results.html#ae4d87002ab1ec0675038091e65ec6503":[6,0,7,19]
 };

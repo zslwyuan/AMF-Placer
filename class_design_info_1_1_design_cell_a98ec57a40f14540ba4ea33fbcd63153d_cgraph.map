@@ -1,8 +1,10 @@
 <map id="DesignInfo::DesignCell::isTimingEndPoint" name="DesignInfo::DesignCell::isTimingEndPoint">
-<area shape="rect" id="node1" title="check whether the cell is an endpoint in timing graph" alt="" coords="5,136,157,177"/>
+<area shape="rect" id="node1" title="check whether the cell is an endpoint in timing graph" alt="" coords="5,201,157,243"/>
 <area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="205,5,357,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="205,71,357,112"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="205,136,357,177"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#ab0d4229a60e41eea39020d5ff6211fcb" title=" " alt="" coords="205,201,357,243"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="205,267,357,308"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a1b3e3d6fd8c0d80e24536065f960c448" title=" " alt="" coords="205,71,357,112"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="205,136,357,177"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="205,201,357,243"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#ab0d4229a60e41eea39020d5ff6211fcb" title=" " alt="" coords="205,267,357,308"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="205,332,357,373"/>
+<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="205,397,357,439"/>
 </map>

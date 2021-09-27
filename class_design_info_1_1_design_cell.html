@@ -159,6 +159,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a395881ed3a15b278ab8d678e6b2cfdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f7cf81863dad6b4613a54daf1b12133"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133">isLUTRAM</a> ()</td></tr>
 <tr class="separator:a1f7cf81863dad6b4613a54daf1b12133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad540c02ce890d994bcf7a9b4e6433ea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea">originallyIsLUTRAM</a> ()</td></tr>
+<tr class="separator:aad540c02ce890d994bcf7a9b4e6433ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a546abcfc49d0f2a14c46abb9c7877e8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f">isBRAM</a> ()</td></tr>
 <tr class="separator:a546abcfc49d0f2a14c46abb9c7877e8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2af0a5d238fbead4ece2812226d06e4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4">isMux</a> ()</td></tr>
@@ -171,6 +173,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a58e7a388f22b042defe20e751da42b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0d4229a60e41eea39020d5ff6211fcb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_design_info_1_1_design_cell.html#ab0d4229a60e41eea39020d5ff6211fcb">isIO</a> ()</td></tr>
 <tr class="separator:ab0d4229a60e41eea39020d5ff6211fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b3e3d6fd8c0d80e24536065f960c448"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_design_info_1_1_design_cell.html#a1b3e3d6fd8c0d80e24536065f960c448">isClockBuffer</a> ()</td></tr>
+<tr class="separator:a1b3e3d6fd8c0d80e24536065f960c448"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98ec57a40f14540ba4ea33fbcd63153d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_design_info_1_1_design_cell.html#a98ec57a40f14540ba4ea33fbcd63153d">isTimingEndPoint</a> ()</td></tr>
 <tr class="memdesc:a98ec57a40f14540ba4ea33fbcd63153d"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether the cell is an endpoint in timing graph  <a href="class_design_info_1_1_design_cell.html#a98ec57a40f14540ba4ea33fbcd63153d">More...</a><br /></td></tr>
 <tr class="separator:a98ec57a40f14540ba4ea33fbcd63153d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -639,9 +643,9 @@ Here is the caller graph for this function:</div>
 <p>Get the Cell Id in the cell list. </p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00908">908</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00922">922</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00088">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addLUT()</a>, <a class="el" href="_placement_info_8cc_source.html#l00898">PlacementInfo::adjustLUTFFUtilization_Packablity()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00228">IncrementalBELPacker::FFPairing()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00612">MacroLegalizer::findMacroCell2SitesInDistance()</a>, <a class="el" href="_placement_info_8h_source.html#l02821">PlacementInfo::findNeiborLUTFFsFromBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03598">PlacementInfo::findNeiborSiteFromBinGrid()</a>, <a class="el" href="_c_l_b_legalizer_8h_source.html#l00568">CLBLegalizer::findPU2SitesInDistance()</a>, <a class="el" href="_placement_info_8h_source.html#l00229">PlacementInfo::CompatiblePlacementTable::getActualOccupation()</a>, <a class="el" href="_design_info_8h_source.html#l01407">DesignInfo::getFFControlSetId()</a>, <a class="el" href="_placement_info_8h_source.html#l00240">PlacementInfo::CompatiblePlacementTable::getInflateRatio()</a>, <a class="el" href="_placement_info_8h_source.html#l02932">PlacementInfo::getPlacementUnitByCell()</a>, <a class="el" href="_placement_info_8h_source.html#l00174">PlacementInfo::CompatiblePlacementTable::getPotentialBELTypeIDs()</a>, <a class="el" href="_placement_info_8h_source.html#l03348">PlacementInfo::getPULocationByCellLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03254">PlacementInfo::isLegalLocation()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00019">IncrementalBELPacker::LUTFFPairing()</a>, <a class="el" href="_placement_info_8cc_source.html#l00700">operator&lt;&lt;()</a>, <a class="el" href="_placement_info_8cc_source.html#l00802">PlacementInfo::updateElementBinGrid()</a>, <a class="el" href="_general_spreader_8cc_source.html#l00425">GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations()</a>, and <a class="el" href="_general_spreader_8cc_source.html#l00329">GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00088">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addLUT()</a>, <a class="el" href="_placement_info_8cc_source.html#l00898">PlacementInfo::adjustLUTFFUtilization_Packablity()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00228">IncrementalBELPacker::FFPairing()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00612">MacroLegalizer::findMacroCell2SitesInDistance()</a>, <a class="el" href="_placement_info_8h_source.html#l02821">PlacementInfo::findNeiborLUTFFsFromBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03598">PlacementInfo::findNeiborSiteFromBinGrid()</a>, <a class="el" href="_c_l_b_legalizer_8h_source.html#l00568">CLBLegalizer::findPU2SitesInDistance()</a>, <a class="el" href="_placement_info_8h_source.html#l00229">PlacementInfo::CompatiblePlacementTable::getActualOccupation()</a>, <a class="el" href="_design_info_8h_source.html#l01428">DesignInfo::getFFControlSetId()</a>, <a class="el" href="_placement_info_8h_source.html#l00240">PlacementInfo::CompatiblePlacementTable::getInflateRatio()</a>, <a class="el" href="_placement_info_8h_source.html#l02932">PlacementInfo::getPlacementUnitByCell()</a>, <a class="el" href="_placement_info_8h_source.html#l00174">PlacementInfo::CompatiblePlacementTable::getPotentialBELTypeIDs()</a>, <a class="el" href="_placement_info_8h_source.html#l03348">PlacementInfo::getPULocationByCellLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03254">PlacementInfo::isLegalLocation()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00019">IncrementalBELPacker::LUTFFPairing()</a>, <a class="el" href="_placement_info_8cc_source.html#l00700">operator&lt;&lt;()</a>, <a class="el" href="_placement_info_8cc_source.html#l00802">PlacementInfo::updateElementBinGrid()</a>, <a class="el" href="_general_spreader_8cc_source.html#l00425">GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations()</a>, and <a class="el" href="_general_spreader_8cc_source.html#l00329">GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -802,7 +806,7 @@ Here is the caller graph for this function:</div>
 <p >A control set is a combination of CLK, CE and SR signal. It could be nullptr (not related to control set)</p>
 <dl class="section return"><dt>Returns</dt><dd>ControlSetInfo* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00925">925</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00939">939</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00945">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_initial_packer_8h_source.html#l00129">InitialPacker::PackedControlSet::addFF()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00133">ParallelCLBPacker::PackedControlSet::addFF()</a>, and <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00140">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addToFFSet()</a>.</p>
 <div class="dynheader">
@@ -877,7 +881,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00826">826</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00088">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addLUT()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00347">canLUTPacked()</a>, <a class="el" href="_design_info_8h_source.html#l01011">DesignInfo::ControlSetInfo::compatibleWith()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">InitialPacker::findMuxMacros()</a>, <a class="el" href="_design_info_8h_source.html#l01338">DesignInfo::getCLKSRCENet()</a>, <a class="el" href="_design_info_8h_source.html#l01296">DesignInfo::getCLKSRCENetId()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00301">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPairPinNum()</a>, <a class="el" href="_placement_info_8h_source.html#l03920">PlacementInfo::getPairPinNum()</a>, and <a class="el" href="_design_info_8h_source.html#l01055">DesignInfo::ControlSetInfo::setControlSetInfoAs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00088">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addLUT()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00347">canLUTPacked()</a>, <a class="el" href="_design_info_8h_source.html#l01025">DesignInfo::ControlSetInfo::compatibleWith()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">InitialPacker::findMuxMacros()</a>, <a class="el" href="_design_info_8h_source.html#l01359">DesignInfo::getCLKSRCENet()</a>, <a class="el" href="_design_info_8h_source.html#l01317">DesignInfo::getCLKSRCENetId()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00301">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPairPinNum()</a>, <a class="el" href="_placement_info_8h_source.html#l03920">PlacementInfo::getPairPinNum()</a>, and <a class="el" href="_design_info_8h_source.html#l01069">DesignInfo::ControlSetInfo::setControlSetInfoAs()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -940,9 +944,9 @@ Here is the caller graph for this function:</div>
 <p>Get the Original Cell Type object defined in the design netlist. </p>
 <dl class="section return"><dt>Returns</dt><dd>DesignCellType </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00960">960</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00974">974</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00945">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00133">ParallelCLBPacker::PackedControlSet::addFF()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00140">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addToFFSet()</a>, <a class="el" href="_design_info_8h_source.html#l01011">DesignInfo::ControlSetInfo::compatibleWith()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l01122">hasLUT62()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00433">InitialPacker::mapCarryRelatedRouteThru()</a>, and <a class="el" href="_design_info_8h_source.html#l01055">DesignInfo::ControlSetInfo::setControlSetInfoAs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00945">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00133">ParallelCLBPacker::PackedControlSet::addFF()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00140">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addToFFSet()</a>, <a class="el" href="_design_info_8h_source.html#l01025">DesignInfo::ControlSetInfo::compatibleWith()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l01122">hasLUT62()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00433">InitialPacker::mapCarryRelatedRouteThru()</a>, and <a class="el" href="_design_info_8h_source.html#l01069">DesignInfo::ControlSetInfo::setControlSetInfoAs()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1117,9 +1121,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00853">853</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00861">861</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01503">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_global_placer_8cc_source.html#l01020">GlobalPlacer::dumpBRAMCoordinate()</a>, <a class="el" href="_design_info_8h_source.html#l00898">isTimingEndPoint()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01503">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_global_placer_8cc_source.html#l01020">GlobalPlacer::dumpBRAMCoordinate()</a>, <a class="el" href="_design_info_8h_source.html#l00912">isTimingEndPoint()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1172,7 +1176,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00861">861</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00869">869</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01503">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_global_placer_8cc_source.html#l00689">GlobalPlacer::dumpCARRYCoordinate()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
@@ -1206,6 +1210,44 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a1b3e3d6fd8c0d80e24536065f960c448" name="a1b3e3d6fd8c0d80e24536065f960c448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b3e3d6fd8c0d80e24536065f960c448">&#9670;&nbsp;</a></span>isClockBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DesignInfo::DesignCell::isClockBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00900">900</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00912">isTimingEndPoint()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_design_info_1_1_design_cell_a1b3e3d6fd8c0d80e24536065f960c448_icgraph.png" border="0" usemap="#aclass_design_info_1_1_design_cell_a1b3e3d6fd8c0d80e24536065f960c448_icgraph" alt=""/></div>
+<map name="aclass_design_info_1_1_design_cell_a1b3e3d6fd8c0d80e24536065f960c448_icgraph" id="aclass_design_info_1_1_design_cell_a1b3e3d6fd8c0d80e24536065f960c448_icgraph">
+<area shape="rect" title=" " alt="" coords="205,5,357,47"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a98ec57a40f14540ba4ea33fbcd63153d" title="check whether the cell is an endpoint in timing graph" alt="" coords="5,5,157,47"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a58e7a388f22b042defe20e751da42b8a" name="a58e7a388f22b042defe20e751da42b8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58e7a388f22b042defe20e751da42b8a">&#9670;&nbsp;</a></span>isDSP()</h2>
 
@@ -1229,9 +1271,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00869">869</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00877">877</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01503">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_global_placer_8cc_source.html#l00924">GlobalPlacer::dumpDSPCoordinate()</a>, <a class="el" href="_design_info_8h_source.html#l00898">isTimingEndPoint()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01503">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_global_placer_8cc_source.html#l00924">GlobalPlacer::dumpDSPCoordinate()</a>, <a class="el" href="_design_info_8h_source.html#l00912">isTimingEndPoint()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1289,7 +1331,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00841">841</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8cc_source.html#l00898">PlacementInfo::adjustLUTFFUtilization_Packablity()</a>, <a class="el" href="_placement_info_8cc_source.html#l01098">PlacementInfo::adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_design_info_8cc_source.html#l00024">DesignInfo::DesignPin::checkPinType()</a>, <a class="el" href="_global_placer_8cc_source.html#l00737">GlobalPlacer::dumpFFCoordinate()</a>, <a class="el" href="_general_spreader_8cc_source.html#l01205">GeneralSpreader::dumpLUTFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00827">GlobalPlacer::dumpLUTFFCoordinate()</a>, <a class="el" href="_design_info_8h_source.html#l01338">DesignInfo::getCLKSRCENet()</a>, <a class="el" href="_design_info_8h_source.html#l01296">DesignInfo::getCLKSRCENetId()</a>, <a class="el" href="_design_info_8h_source.html#l01407">DesignInfo::getFFControlSetId()</a>, <a class="el" href="_design_info_8h_source.html#l00898">isTimingEndPoint()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00019">IncrementalBELPacker::LUTFFPairing()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8cc_source.html#l00898">PlacementInfo::adjustLUTFFUtilization_Packablity()</a>, <a class="el" href="_placement_info_8cc_source.html#l01098">PlacementInfo::adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_design_info_8cc_source.html#l00024">DesignInfo::DesignPin::checkPinType()</a>, <a class="el" href="_global_placer_8cc_source.html#l00737">GlobalPlacer::dumpFFCoordinate()</a>, <a class="el" href="_general_spreader_8cc_source.html#l01205">GeneralSpreader::dumpLUTFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00827">GlobalPlacer::dumpLUTFFCoordinate()</a>, <a class="el" href="_design_info_8h_source.html#l01359">DesignInfo::getCLKSRCENet()</a>, <a class="el" href="_design_info_8h_source.html#l01317">DesignInfo::getCLKSRCENetId()</a>, <a class="el" href="_design_info_8h_source.html#l01428">DesignInfo::getFFControlSetId()</a>, <a class="el" href="_design_info_8h_source.html#l00912">isTimingEndPoint()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00019">IncrementalBELPacker::LUTFFPairing()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1356,9 +1398,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00873">873</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00881">881</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00898">isTimingEndPoint()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00912">isTimingEndPoint()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1520,7 +1562,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00846">846</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01503">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_design_info_8h_source.html#l00898">isTimingEndPoint()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01503">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_design_info_8h_source.html#l00912">isTimingEndPoint()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1572,7 +1614,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00857">857</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00865">865</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01503">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01043">InitialPacker::findMuxMacros()</a>, and <a class="el" href="_placement_info_8h_source.html#l01338">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
@@ -1625,7 +1667,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00865">865</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00873">873</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1657,18 +1699,20 @@ Here is the caller graph for this function:</div>
 <dd>
 false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00898">898</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00912">912</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_design_info_1_1_design_cell_a98ec57a40f14540ba4ea33fbcd63153d_cgraph.png" border="0" usemap="#aclass_design_info_1_1_design_cell_a98ec57a40f14540ba4ea33fbcd63153d_cgraph" alt=""/></div>
 <map name="aclass_design_info_1_1_design_cell_a98ec57a40f14540ba4ea33fbcd63153d_cgraph" id="aclass_design_info_1_1_design_cell_a98ec57a40f14540ba4ea33fbcd63153d_cgraph">
-<area shape="rect" title="check whether the cell is an endpoint in timing graph" alt="" coords="5,136,157,177"/>
+<area shape="rect" title="check whether the cell is an endpoint in timing graph" alt="" coords="5,201,157,243"/>
 <area shape="rect" href="class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="205,5,357,47"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="205,71,357,112"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="205,136,357,177"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#ab0d4229a60e41eea39020d5ff6211fcb" title=" " alt="" coords="205,201,357,243"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="205,267,357,308"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a1b3e3d6fd8c0d80e24536065f960c448" title=" " alt="" coords="205,71,357,112"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="205,136,357,177"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="205,201,357,243"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#ab0d4229a60e41eea39020d5ff6211fcb" title=" " alt="" coords="205,267,357,308"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="205,332,357,373"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="205,397,357,439"/>
 </map>
 </div>
 
@@ -1697,7 +1741,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00913">913</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00927">927</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00945">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_initial_packer_8h_source.html#l00129">InitialPacker::PackedControlSet::addFF()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00133">ParallelCLBPacker::PackedControlSet::addFF()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00140">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addToFFSet()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l01122">hasLUT62()</a>, and <a class="el" href="_initial_packer_8cc_source.html#l00433">InitialPacker::mapCarryRelatedRouteThru()</a>.</p>
 <div class="dynheader">
@@ -1737,6 +1781,44 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="aad540c02ce890d994bcf7a9b4e6433ea" name="aad540c02ce890d994bcf7a9b4e6433ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad540c02ce890d994bcf7a9b4e6433ea">&#9670;&nbsp;</a></span>originallyIsLUTRAM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DesignInfo::DesignCell::originallyIsLUTRAM </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00853">853</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00912">isTimingEndPoint()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_design_info_1_1_design_cell_aad540c02ce890d994bcf7a9b4e6433ea_icgraph.png" border="0" usemap="#aclass_design_info_1_1_design_cell_aad540c02ce890d994bcf7a9b4e6433ea_icgraph" alt=""/></div>
+<map name="aclass_design_info_1_1_design_cell_aad540c02ce890d994bcf7a9b4e6433ea_icgraph" id="aclass_design_info_1_1_design_cell_aad540c02ce890d994bcf7a9b4e6433ea_icgraph">
+<area shape="rect" title=" " alt="" coords="205,5,357,47"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a98ec57a40f14540ba4ea33fbcd63153d" title="check whether the cell is an endpoint in timing graph" alt="" coords="5,5,157,47"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a9de4f44871d9dfb5558ced3b7354abc4" name="a9de4f44871d9dfb5558ced3b7354abc4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9de4f44871d9dfb5558ced3b7354abc4">&#9670;&nbsp;</a></span>setControlSetInfo()</h2>
 
@@ -1770,7 +1852,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00937">937</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00951">951</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1807,7 +1889,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00950">950</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00964">964</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01449">PlacementInfo::PlacementMacro::addCell()</a>.</p>
 <div class="dynheader">
@@ -1855,9 +1937,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00974">974</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00988">988</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00720">DesignCell()</a>, <a class="el" href="_design_info_8h_source.html#l00789">getCellType()</a>, <a class="el" href="_design_info_8h_source.html#l00853">isBRAM()</a>, <a class="el" href="_design_info_8h_source.html#l00861">isCarry()</a>, <a class="el" href="_design_info_8h_source.html#l00869">isDSP()</a>, <a class="el" href="_design_info_8h_source.html#l00841">isFF()</a>, <a class="el" href="_design_info_8h_source.html#l00873">isIO()</a>, <a class="el" href="_design_info_8h_source.html#l00835">isLUT()</a>, <a class="el" href="_design_info_8h_source.html#l00831">isLUT6()</a>, <a class="el" href="_design_info_8h_source.html#l00846">isLUTRAM()</a>, <a class="el" href="_design_info_8h_source.html#l00857">isMux()</a>, <a class="el" href="_design_info_8h_source.html#l00865">isShift()</a>, and <a class="el" href="_design_info_8h_source.html#l00950">setVirtualType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00720">DesignCell()</a>, <a class="el" href="_design_info_8h_source.html#l00789">getCellType()</a>, <a class="el" href="_design_info_8h_source.html#l00861">isBRAM()</a>, <a class="el" href="_design_info_8h_source.html#l00869">isCarry()</a>, <a class="el" href="_design_info_8h_source.html#l00900">isClockBuffer()</a>, <a class="el" href="_design_info_8h_source.html#l00877">isDSP()</a>, <a class="el" href="_design_info_8h_source.html#l00841">isFF()</a>, <a class="el" href="_design_info_8h_source.html#l00881">isIO()</a>, <a class="el" href="_design_info_8h_source.html#l00835">isLUT()</a>, <a class="el" href="_design_info_8h_source.html#l00831">isLUT6()</a>, <a class="el" href="_design_info_8h_source.html#l00846">isLUTRAM()</a>, <a class="el" href="_design_info_8h_source.html#l00865">isMux()</a>, <a class="el" href="_design_info_8h_source.html#l00873">isShift()</a>, and <a class="el" href="_design_info_8h_source.html#l00964">setVirtualType()</a>.</p>
 
 </div>
 </div>
@@ -1881,9 +1963,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00977">977</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00991">991</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00925">getControlSetInfo()</a>, and <a class="el" href="_design_info_8h_source.html#l00937">setControlSetInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00939">getControlSetInfo()</a>, and <a class="el" href="_design_info_8h_source.html#l00951">setControlSetInfo()</a>.</p>
 
 </div>
 </div>
@@ -1907,7 +1989,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00971">971</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00985">985</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00700">DesignCell()</a>, and <a class="el" href="_design_info_8h_source.html#l00818">getInputNets()</a>.</p>
 
@@ -1933,7 +2015,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00967">967</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00981">981</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00700">DesignCell()</a>, and <a class="el" href="_design_info_8h_source.html#l00826">getInputPins()</a>.</p>
 
@@ -1959,9 +2041,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00976">976</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00990">990</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00741">DesignCell()</a>, and <a class="el" href="_design_info_8h_source.html#l00913">isVirtualCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00741">DesignCell()</a>, and <a class="el" href="_design_info_8h_source.html#l00927">isVirtualCell()</a>.</p>
 
 </div>
 </div>
@@ -1985,7 +2067,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00973">973</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00987">987</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00700">DesignCell()</a>.</p>
 
@@ -2011,7 +2093,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00970">970</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00984">984</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00700">DesignCell()</a>.</p>
 
@@ -2037,9 +2119,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00975">975</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00989">989</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00720">DesignCell()</a>, and <a class="el" href="_design_info_8h_source.html#l00960">getOriCellType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00720">DesignCell()</a>, <a class="el" href="_design_info_8h_source.html#l00974">getOriCellType()</a>, and <a class="el" href="_design_info_8h_source.html#l00853">originallyIsLUTRAM()</a>.</p>
 
 </div>
 </div>
@@ -2063,7 +2145,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00972">972</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00986">986</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00700">DesignCell()</a>, and <a class="el" href="_design_info_8h_source.html#l00814">getOutputNets()</a>.</p>
 
@@ -2089,7 +2171,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00968">968</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00982">982</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00700">DesignCell()</a>, and <a class="el" href="_design_info_8h_source.html#l00822">getOutputPins()</a>.</p>
 
@@ -2115,7 +2197,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00969">969</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00983">983</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00700">DesignCell()</a>.</p>
 
@@ -2141,7 +2223,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00966">966</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_design_info_8h_source.html#l00980">980</a> of file <a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_design_info_8h_source.html#l00700">DesignCell()</a>, <a class="el" href="_design_info_8h_source.html#l00801">getPins()</a>, and <a class="el" href="_design_info_8h_source.html#l00783">~DesignCell()</a>.</p>
 

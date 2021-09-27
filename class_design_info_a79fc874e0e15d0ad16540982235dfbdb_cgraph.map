@@ -1,8 +1,9 @@
 <map id="DesignInfo::isTimingEndPoint" name="DesignInfo::isTimingEndPoint">
-<area shape="rect" id="node1" title="check whether the cell type is an endpoint in timing graph" alt="" coords="5,107,196,133"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title=" " alt="" coords="252,5,391,32"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="258,56,385,83"/>
-<area shape="rect" id="node4" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="263,107,379,133"/>
-<area shape="rect" id="node5" href="$class_design_info.html#a459c8440c10ee812fa9db2b8c2bada29" title=" " alt="" coords="264,157,379,184"/>
-<area shape="rect" id="node6" href="$class_design_info.html#a68661265c8e549ee8f3a0209f6df1163" title=" " alt="" coords="244,208,399,235"/>
+<area shape="rect" id="node1" title="check whether the cell type is an endpoint in timing graph" alt="" coords="5,132,196,159"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title=" " alt="" coords="258,5,397,32"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a552a1d253c3b57f151bb08650f5feba5" title=" " alt="" coords="244,56,411,83"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="264,107,391,133"/>
+<area shape="rect" id="node5" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="269,157,385,184"/>
+<area shape="rect" id="node6" href="$class_design_info.html#a459c8440c10ee812fa9db2b8c2bada29" title=" " alt="" coords="270,208,385,235"/>
+<area shape="rect" id="node7" href="$class_design_info.html#a68661265c8e549ee8f3a0209f6df1163" title=" " alt="" coords="250,259,405,285"/>
 </map>
