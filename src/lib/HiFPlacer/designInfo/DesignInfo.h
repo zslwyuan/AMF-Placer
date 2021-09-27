@@ -850,6 +850,14 @@ class DesignInfo
                     cellType == CellType_RAM32X1D || cellType == CellType_RAM32X1S || cellType == CellType_RAM64X1S ||
                     cellType == CellType_RAM64M8);
         }
+        inline bool originallyIsLUTRAM()
+        {
+            return (oriCellType == CellType_RAM32M16 || oriCellType == CellType_RAM32X1D ||
+                    oriCellType == CellType_RAM64X1S || oriCellType == CellType_RAM64M ||
+                    oriCellType == CellType_RAM64X1D || oriCellType == CellType_RAM32M ||
+                    oriCellType == CellType_RAM32X1D || oriCellType == CellType_RAM32X1S ||
+                    oriCellType == CellType_RAM64X1S || oriCellType == CellType_RAM64M8);
+        }
         inline bool isBRAM()
         {
             return cellType == CellType_RAMB18E2 || cellType == CellType_RAMB36E2;
@@ -889,6 +897,12 @@ class DesignInfo
                    cellType == CellType_OBUFDS_DUAL_BUF;
         }
 
+        inline bool isClockBuffer()
+        {
+            return cellType == CellType_BUFGCE || cellType == CellType_BUFG_GT || cellType == CellType_BUFG_GT_SYNC ||
+                   cellType == CellType_BUFGCE_DIV || cellType == CellType_BUFGCTRL;
+        }
+
         /**
          * @brief check whether the cell is an endpoint in timing graph
          *
@@ -897,7 +911,7 @@ class DesignInfo
          */
         inline bool isTimingEndPoint()
         {
-            return (isFF() || isLUTRAM() || isBRAM() || isDSP() || isIO());
+            return (isFF() || isLUTRAM() || originallyIsLUTRAM() || isBRAM() || isDSP() || isIO() || isClockBuffer());
         }
 
         /**
@@ -1213,6 +1227,12 @@ class DesignInfo
                cellType == CellType_OBUFDS_DUAL_BUF;
     }
 
+    inline bool isClockBuffer(DesignCellType cellType)
+    {
+        return cellType == CellType_BUFGCE || cellType == CellType_BUFG_GT || cellType == CellType_BUFG_GT_SYNC ||
+               cellType == CellType_BUFGCE_DIV || cellType == CellType_BUFGCTRL;
+    }
+
     /**
      * @brief check whether the cell type is an endpoint in timing graph
      *
@@ -1222,7 +1242,8 @@ class DesignInfo
      */
     inline bool isTimingEndPoint(DesignCellType cellType)
     {
-        return (isFF(cellType) || isLUTRAM(cellType) || isBRAM(cellType) || isDSP(cellType) || isIO(cellType));
+        return (isFF(cellType) || isLUTRAM(cellType) || isBRAM(cellType) || isDSP(cellType) || isIO(cellType) ||
+                isClockBuffer(cellType));
     }
 
     // clang-format off
