@@ -52,11 +52,11 @@ class siteInfo(object):
         self.siteY = int(siteName[siteName.rfind("Y")+1:])
 
         if (siteType == "HPIOB" or siteType == "HRIO" or siteType == "BITSLICE_RX_TX"):
-            self.Y += ((self.siteY) % 26+1)/28*30
+            self.Y = self.siteY//26 * 30 + ((self.siteY) % 26+1)/28*30
         if (siteType == "BITSLICE_CONTROL" or siteType == "BITSLICE_TX"):
-            self.Y += ((self.siteY) % 8+1)/9*30
+            self.Y = self.siteY//4 * 30 + ((self.siteY) % 4+0.5)/5*30
         if (siteType == "RIU_OR"):
-            self.Y += ((self.siteY) % 4+1)/5*30
+            self.Y = self.siteY//2 * 30 + ((self.siteY) % 2+0.5)/3*30
         if (siteType == "PLLE3_ADV"):
             self.Y += 13
 
@@ -369,4 +369,6 @@ for curSite in sites:
           + " BELs=> " + str(curSite.BELs).replace(" ", "").replace("\'", ""), file=exportfile)
 
 exportfile.close()
-os.system("zip ")
+os.system("zip -j "+targetPath+"/"+deviceName+"/" +
+          deviceName+"_exportSiteLocation.zip "+targetPath+"/"+deviceName+"/" +
+          deviceName+"_exportSiteLocation")
