@@ -15,7 +15,7 @@
 <area shape="rect" id="node32" href="$class_incremental_b_e_l_packer.html#ac1143687dd00783f9bfc01a17e82905d" title=" " alt="" coords="1271,922,1427,964"/>
 <area shape="rect" id="node33" href="$class_placement_info_1_1_placement_unpacked_cell.html#af1321b99c4ffb11a58f00b555f854ce6" title="Construct a new Placement Unpacked Cell object." alt="" coords="1223,988,1475,1029"/>
 <area shape="rect" id="node3" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="419,264,575,305"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="652,411,853,438"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="652,411,853,438"/>
 <area shape="rect" id="node8" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="657,360,848,387"/>
 <area shape="rect" id="node9" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="659,512,846,539"/>
 <area shape="rect" id="node10" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title=" " alt="" coords="675,244,831,285"/>

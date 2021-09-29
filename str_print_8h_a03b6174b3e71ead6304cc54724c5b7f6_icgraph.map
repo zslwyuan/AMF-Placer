@@ -18,7 +18,7 @@
 <area shape="rect" id="node22" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="187,621,343,663"/>
 <area shape="rect" id="node23" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="987,399,1164,440"/>
 <area shape="rect" id="node25" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="426,375,613,402"/>
-<area shape="rect" id="node26" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="975,917,1176,943"/>
+<area shape="rect" id="node26" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="975,917,1176,943"/>
 <area shape="rect" id="node27" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="715,841,843,867"/>
 <area shape="rect" id="node28" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="971,967,1179,994"/>
 <area shape="rect" id="node29" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="980,1018,1171,1045"/>

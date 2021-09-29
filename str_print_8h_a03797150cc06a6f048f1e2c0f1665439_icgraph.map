@@ -20,7 +20,7 @@
 <area shape="rect" id="node38" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="661,875,847,917"/>
 <area shape="rect" id="node39" href="$class_wirelength_optimizer.html#a431184067de089857b584da070404661" title="Construct a new Wirelength Optimizer object." alt="" coords="1478,1059,1622,1101"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="1199,49,1373,90"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="919,56,1121,83"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="919,56,1121,83"/>
 <area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="650,115,858,141"/>
 <area shape="rect" id="node8" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="927,5,1113,32"/>
 <area shape="rect" id="node9" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="921,107,1119,149"/>

@@ -1,5 +1,5 @@
 <map id="InitialPacker::findBRAMMacros" name="InitialPacker::findBRAMMacros">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1047,207,1074"/>
+<area shape="rect" id="node1" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="5,1047,207,1074"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="255,528,429,569"/>
 <area shape="rect" id="node19" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="255,692,429,733"/>
 <area shape="rect" id="node20" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="255,757,429,799"/>

@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="add a cell into the design information" alt="" coords="1065,100,1199,127"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="843,63,1017,105"/>
 <area shape="rect" id="node9" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="854,129,1006,156"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="343,5,545,32"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="343,5,545,32"/>
 <area shape="rect" id="node6" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="340,85,548,112"/>
 <area shape="rect" id="node7" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="602,159,789,185"/>
 <area shape="rect" id="node8" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="596,93,795,134"/>

@@ -1,6 +1,6 @@
 <map id="PlacementInfo::PlacementMacro::getCells" name="PlacementInfo::PlacementMacro::getCells">
 <area shape="rect" id="node1" title=" " alt="" coords="881,287,1056,329"/>
-<area shape="rect" id="node2" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="357,5,558,32"/>
+<area shape="rect" id="node2" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="357,5,558,32"/>
 <area shape="rect" id="node5" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="353,157,561,184"/>
 <area shape="rect" id="node6" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="362,56,553,83"/>
 <area shape="rect" id="node7" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="364,107,551,133"/>

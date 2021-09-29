@@ -1,7 +1,7 @@
 <map id="PlacementInfo::PlacementUnit::setWeight" name="PlacementInfo::PlacementUnit::setWeight">
 <area shape="rect" id="node1" title=" " alt="" coords="667,247,841,289"/>
 <area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="185,58,341,99"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title=" " alt="" coords="414,44,615,71"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="414,44,615,71"/>
 <area shape="rect" id="node6" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="411,95,619,121"/>
 <area shape="rect" id="node7" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="419,145,610,172"/>
 <area shape="rect" id="node8" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="421,196,608,223"/>
