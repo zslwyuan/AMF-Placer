@@ -121,11 +121,13 @@ class AMFPlacer
             if (true)
             {
                 // designInfo->enhanceFFControlSetNets();
+                timingOptimizer->enhanceNetWeight_LevelBased(10);
                 globalPlacer->clusterPlacement();
                 globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
                 globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5,
                                                           true, true);
 
+                timingOptimizer->enhanceNetWeight_LevelBased(10);
                 // designInfo->resetNetEnhanceRatio();
 
                 // placementInfo->updateLongPaths();
@@ -139,12 +141,11 @@ class AMFPlacer
 
                 // pack simple LUT-FF pairs and go through several global placement iterations
                 incrementalBELPacker = new IncrementalBELPacker(designInfo, deviceinfo, placementInfo, JSON);
-                incrementalBELPacker->LUTFFPairing(16.0);
+                incrementalBELPacker->LUTFFPairing(4.0);
                 incrementalBELPacker->FFPairing(4.0);
                 placementInfo->printStat();
                 print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
-                timingOptimizer->enhanceNetWeight_LevelBased(10);
                 globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
                 globalPlacer->setNeighborDisplacementUpperbound(3.0);
                 globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5,
@@ -154,7 +155,7 @@ class AMFPlacer
                 globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5,
                                                           true, true, timingOptimizer);
 
-                placementInfo->getDesignInfo()->resetNetEnhanceRatio();
+                // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
 
                 globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5,
                                                           true, false, timingOptimizer);

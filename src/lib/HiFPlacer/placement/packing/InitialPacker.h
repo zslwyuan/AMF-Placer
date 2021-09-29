@@ -69,6 +69,13 @@ class InitialPacker
      *
      */
     void findDSPMacros();
+
+    /**
+     * @brief detects BRAM macros and clusters the related cells into PlacementMacro
+     *
+     * If two BRAMs are interconnected via their "CAS" ports, they are cascaded.
+     *
+     */
     void findBRAMMacros();
     std::vector<DesignInfo::DesignCell *> checkCompatibleFFs(std::vector<DesignInfo::DesignCell *> FFs);
     void findCARRYMacros();

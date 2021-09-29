@@ -80,14 +80,14 @@ void InitialPacker::enhanceIONets()
         {
             if (net->getDriverUnits()[0]->isFixed())
             {
-                net->getDesignNet()->enhanceOverallNetEnhancement(2);
+                net->getDesignNet()->enhanceOverallNetEnhancement(1.5);
             }
         }
         else if (net->getUnitsBeDriven().size() == 1)
         {
             if (net->getUnitsBeDriven()[0]->isFixed())
             {
-                net->getDesignNet()->enhanceOverallNetEnhancement(2);
+                net->getDesignNet()->enhanceOverallNetEnhancement(1.5);
             }
         }
     }

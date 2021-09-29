@@ -570,19 +570,21 @@ void ClusterPlacer::setClusterNetsAdjMat()
                         assert((unsigned int)fixedPlacementUnit2LocId[UBeDriven] <
                                cluster2FixedUnitMat[clusterA].size());
                         cluster2FixedUnitMat[clusterA][fixedPlacementUnit2LocId[UBeDriven]] +=
-                            1.0 / (net->getPinOffsetsInUnit().size() - 1);
+                            net->getDesignNet()->getOverallEnhanceRatio() / (net->getPinOffsetsInUnit().size() - 1);
                     }
                     else if (!UBeDriven->isFixed() && driveU->isFixed())
                     {
                         assert(fixedPlacementUnit2LocId.find(driveU) != fixedPlacementUnit2LocId.end());
                         assert((unsigned int)fixedPlacementUnit2LocId[driveU] < cluster2FixedUnitMat[clusterB].size());
                         cluster2FixedUnitMat[clusterB][fixedPlacementUnit2LocId[driveU]] +=
-                            1.0 / (net->getPinOffsetsInUnit().size() - 1);
+                            net->getDesignNet()->getOverallEnhanceRatio() / (net->getPinOffsetsInUnit().size() - 1);
                     }
                     else if (!UBeDriven->isFixed() && !driveU->isFixed())
                     {
-                        clusterAdjMat[clusterA][clusterB] += 1.0 / (net->getPinOffsetsInUnit().size() - 1);
-                        clusterAdjMat[clusterB][clusterA] += 1.0 / (net->getPinOffsetsInUnit().size() - 1);
+                        clusterAdjMat[clusterA][clusterB] +=
+                            net->getDesignNet()->getOverallEnhanceRatio() / (net->getPinOffsetsInUnit().size() - 1);
+                        clusterAdjMat[clusterB][clusterA] +=
+                            net->getDesignNet()->getOverallEnhanceRatio() / (net->getPinOffsetsInUnit().size() - 1);
                     }
                 }
             }

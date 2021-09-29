@@ -147,8 +147,8 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         {
             WLOptimizer->GlobalPlacementQPSolve(pseudoNetWeight, j == 0, true, enableMacroPseudoNet2Site,
                                                 pseudoNetWeightConsiderNetNum,
-                                                (i > 1 && continuePreviousIteration) && hasUserDefinedClusterInfo &&
-                                                    progressRatio<0.5, progressRatio> 0.5);
+                                                (i > 1 || continuePreviousIteration) && hasUserDefinedClusterInfo &&
+                                                    progressRatio<0.6, progressRatio> 0.5);
         }
 
         lowerBoundHPWL = placementInfo->updateB2BAndGetTotalHPWL();
@@ -621,7 +621,7 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
     if (pseudoNetWeight < 0.0020)
         pseudoNetWeight *= 1.825;
     else
-        pseudoNetWeight *= 1.4 * (1 - progressRatio) + 1.05 * (progressRatio);
+        pseudoNetWeight *= 1.5 * (1 - progressRatio) + 1.01 * (progressRatio);
 
     historyHPWLs.push_back(upperBoundHPWL);
 

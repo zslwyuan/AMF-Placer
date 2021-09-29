@@ -434,6 +434,8 @@ void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeig
     float powFactor = 0.5 + 0.2 * placementInfo->getProgress();
     // std::ofstream outfile0("timingOptProc.log");
 
+    auto deviceInfo = placementInfo->getDeviceInfo();
+
     for (auto curNet : placementInfo->getPlacementNets())
     {
         auto designNet = curNet->getDesignNet();
@@ -469,6 +471,9 @@ void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeig
         int driverForwardLevel = timingNodes[srcCellId]->getForwardLevel();
         auto srcLoc = cellLoc[srcCellId];
 
+        int srcClockRegionXId, srcClockRegionYId;
+        deviceInfo->getClockRegionByLocation(srcLoc.X, srcLoc.Y, srcClockRegionXId, srcClockRegionYId);
+
         // outfile0 << "handling net:" << curNet->getDesignNet()->getName() << "\n";
         // outfile0 << "handling driverpin:" << pins[driverPinInNet]->getName()
         //          << " driverBackwardLevel:" << driverBackwardLevel << " locX:" << srcLoc.X << " locY:" << srcLoc.Y
@@ -496,6 +501,12 @@ void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeig
                 //          << "\n";
                 // calculate the distance
                 double dis = manhattanDis(srcLoc.X, srcLoc.Y, sinkLoc.X, sinkLoc.Y);
+
+                int sinkClockRegionXId, sinkClockRegionYId;
+                deviceInfo->getClockRegionByLocation(sinkLoc.X, sinkLoc.Y, sinkClockRegionXId, sinkClockRegionYId);
+
+                dis += std::abs(sinkClockRegionXId - srcClockRegionXId) * 10 +
+                       std::abs(sinkClockRegionYId - srcClockRegionYId) * 10;
 
                 // handle the potential sinkPins on the longest path by checking the backward level
                 if (succBackwardLevel + 1 >= levelThr)
