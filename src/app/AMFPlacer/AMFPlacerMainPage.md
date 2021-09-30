@@ -23,11 +23,11 @@ For commercial usage of this open-source project, users must contact authors (We
 
 **Documentation Hierarchy**
 
-* [Basic Project Introduction](@ref intro): motivation, features and some experimental results.
-* [Get Started](@ref getStarted): guideline to use the placer for your work.
-* [Benchmarks and Experimental Results](@ref benchmarkInfo): practical benchmarks for evaluation and some experimental results at current stages.
-* [Publications](@ref publication): some papers which are the fundamental parts of this project.
-* [Implementation Explanation](@ref explanation): the concrete explaination for the function module and the placement procedure.
+* [Basic Project Introduction](@ref _1_intro): motivation, features and some experimental results.
+* [Get Started](@ref _2_getStarted): guideline to use the placer for your work.
+* [Benchmarks and Experimental Results](@ref _3_benchmarkInfo): practical benchmarks for evaluation and some experimental results at current stages.
+* [Publications](@ref _4_publication): some papers which are the fundamental parts of this project.
+* [Implementation Explanation](@ref _5_explanation): the concrete explaination for the function module and the placement procedure.
 
 **Motivations**
 
