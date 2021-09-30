@@ -7,7 +7,7 @@
 3. A beginner-friendly placement framework with clear hierarchy and detailed Doxygen-based documentation. We hope that it can lower the overhead for people who are also interested in this research area.
 4. Currently, this framework is under development and it is still far from our goals and the practical demands, but we are happy to share our progress in this GitHub repository. If you have any questions/problems/suggestions, please contact feel free to contact us (tliang AT connect DOT ust DOT hk)
 
-/home/tingyuan/Dropbox/AMF-Placer
+
 **Features**
 
 1. supports placeemnt with a large number of mixed-size macros with shape constraints in practical FPGA applications.
