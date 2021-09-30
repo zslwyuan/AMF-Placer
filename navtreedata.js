@@ -25,12 +25,12 @@
 var NAVTREE =
 [
   [ "AMF-Placer", "index.html", [
-    [ "Benchmarks and Experimental Results", "benchmark_info.html", null ],
-    [ "Implementation Explanation", "explanation.html", null ],
-    [ "Get Started", "get_started.html", null ],
-    [ "Introduction", "intro.html", null ],
-    [ "Publications", "publication.html", null ],
-    [ "Runtime Log Explanation", "runtime_log.html", null ],
+    [ "Introduction", "_1_intro.html", null ],
+    [ "Get Started", "_2_get_started.html", null ],
+    [ "Benchmarks and Experimental Results", "_3_benchmark_info.html", null ],
+    [ "Publications", "_4_publication.html", null ],
+    [ "Implementation Explanation", "_5_explanation.html", null ],
+    [ "Runtime Log Explanation", "_6_runtime_log.html", null ],
     [ "AMF-Placer", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -69,18 +69,18 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_a_m_f_placer_8h.html",
-"class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d",
-"class_design_info.html#a79fc874e0e15d0ad16540982235dfbdb",
-"class_device_info_1_1_clock_region.html#a03bf0f8ed2eaa2b8117c11f6e474c2cc",
-"class_global_placer.html#a1212496b470862869bfd75b356c5d422",
-"class_macro_legalizer.html#ab6d505b7699ee54fe891823ce97e0623",
-"class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a88b06096ffbc50885c014e8512008ea8",
-"class_placement_info_1_1_compatible_placement_table.html#a83c4242f6fd3e31d0ba073f62fb9d03a",
-"class_placement_info_1_1_placement_unit.html#a01524a5f57253bd906ac03f1d0d302d0",
-"class_vivado_graph_util_1_1_vivado_cell.html#a886e1dc9e5b23a3b1a928f0f9355ab4e",
-"functions_q.html",
-"namespacepaint_benchmarks_results.html#a9d91cddf5b74bcaa731c3407e61f33ca",
+"_1_intro.html",
+"check_critical_path_8tcl_source.html",
+"class_design_info.html#a68661265c8e549ee8f3a0209f6df1163",
+"class_device_info.html#af2a89acda8ffdd35889bf07c0b0e7806",
+"class_global_placer.html",
+"class_macro_legalizer.html#aa7d0c899fb9ac66f9e22fb17e5db99fe",
+"class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77",
+"class_placement_info_1_1_compatible_placement_table.html#a4e5782e440657a0aa364bedea73021b3",
+"class_placement_info_1_1_placement_site_type_info.html#a6bd1d583e2bb476246ec672d427c4bea",
+"class_vivado_graph_util_1_1_vivado_cell.html#a0670694abeff3c04715302b680811144",
+"functions_m.html",
+"namespacepaint_benchmarks_results.html#a99c19b6efddf3f281fb3f86b06167afe",
 "struct_f_i_l_ebuf.html#aa86de919fc2f7fa7f7c82010b9fc9eeb"
 ];
 

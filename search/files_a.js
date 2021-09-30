@@ -15,6 +15,5 @@ var searchData=
   ['placementtiminginfo_2eh_12',['PlacementTimingInfo.h',['../_placement_timing_info_8h.html',1,'']]],
   ['placementtimingoptimizer_2ecc_13',['PlacementTimingOptimizer.cc',['../_placement_timing_optimizer_8cc.html',1,'']]],
   ['placementtimingoptimizer_2eh_14',['PlacementTimingOptimizer.h',['../_placement_timing_optimizer_8h.html',1,'']]],
-  ['processfuncinterface_2eh_15',['ProcessFuncInterface.h',['../_process_func_interface_8h.html',1,'']]],
-  ['publication_2emd_16',['publication.md',['../publication_8md.html',1,'']]]
+  ['processfuncinterface_2eh_15',['ProcessFuncInterface.h',['../_process_func_interface_8h.html',1,'']]]
 ];

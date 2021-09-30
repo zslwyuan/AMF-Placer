@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('explanation.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('_5_explanation.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,7 +86,7 @@ $(document).ready(function(){initNavTree('explanation.html',''); initResizable()
   <div class="headertitle"><div class="title">Implementation Explanation </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_doc_pages_explanation"></a> Here, we will explain the placement flow by going through the functionality of the major modules in the placer. Of course, you can also make full use of the Doxygen diagram to trace the call graphs to understand their relationship. We try to avoid multi-level class during implementation so it is easier for beginners to trace the call graphs.</p>
+<div class="textblock"><p ><a class="anchor" id="md_doc_pages__5_explanation"></a> Here, we will explain the placement flow by going through the functionality of the major modules in the placer. Of course, you can also make full use of the Doxygen diagram to trace the call graphs to understand their relationship. We try to avoid multi-level class during implementation so it is easier for beginners to trace the call graphs.</p>
 <ol type="1">
 <li><a class="el" href="class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections.">DesignInfo</a>: Information related to FPGA designs, including design cells and their interconnections.</li>
 <li><a class="el" href="class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion.">DeviceInfo</a>: Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion.</li>
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('explanation.html',''); initResizable()
 <li><a class="el" href="class_placement_timing_optimizer.html">PlacementTimingOptimizer</a>: based on the timing information and the placement information, adjusts some terms in the quadratic models which can improve the timing.</li>
 <li><a class="el" href="class_parallel_c_l_b_packer.html">ParallelCLBPacker</a>: finally packs LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.</li>
 </ol>
-<p >Below is the overall flow of <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> and a visualized procedure is shown in the figure below. If you are interested in the details of <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> runtime behaviors, you can find the concrete explanation <a class="el" href="runtime_log.html">here</a>.</p>
+<p >Below is the overall flow of <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> and a visualized procedure is shown in the figure below. If you are interested in the details of <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> runtime behaviors, you can find the concrete explanation <a class="el" href="_6_runtime_log.html">here</a>.</p>
 <ol type="1">
 <li><a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> will be constructed based on the <a class="el" href="class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections.">DesignInfo</a> and <a class="el" href="class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion.">DeviceInfo</a>.</li>
 <li>At the beginning, <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> will construct the <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> based on the <a class="el" href="class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections.">DesignInfo</a> and DeviceInfn.</li>

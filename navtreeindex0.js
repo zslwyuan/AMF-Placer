@@ -1,5 +1,11 @@
 var NAVTREEINDEX0 =
 {
+"_1_intro.html":[0],
+"_2_get_started.html":[1],
+"_3_benchmark_info.html":[2],
+"_4_publication.html":[3],
+"_5_explanation.html":[4],
+"_6_runtime_log.html":[5],
 "_a_m_f_placer_8h.html":[9,0,2,0,0,0],
 "_a_m_f_placer_8h_source.html":[9,0,2,0,0,0],
 "_c_l_b_legalizer_8cc.html":[9,0,2,1,0,2,1,0],
@@ -243,11 +249,5 @@ var NAVTREEINDEX0 =
 "analysis_scripts_2export_device_location_8py.html#acf28df334da96c0e95b0a17d5911f3f4":[9,0,0,0,2,1],
 "analysis_scripts_2export_device_location_8py_source.html":[9,0,0,0,2],
 "annotated.html":[8,0],
-"benchmark_info.html":[0],
-"check_critical_path_8tcl.html":[9,0,0,2,0],
-"check_critical_path_8tcl_source.html":[9,0,0,2,0],
-"class_a_m_f_placer.html":[8,0,2],
-"class_a_m_f_placer.html#a03ce22ef8b51b9534bc1b8f065080879":[8,0,2,3],
-"class_a_m_f_placer.html#a1f0908a0131fcf86efc2bab444ac7246":[8,0,2,8],
-"class_a_m_f_placer.html#a444b0835607905bb2b4942e393909d12":[8,0,2,7]
+"check_critical_path_8tcl.html":[9,0,0,2,0]
 };

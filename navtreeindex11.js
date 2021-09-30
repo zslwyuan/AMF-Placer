@@ -1,5 +1,7 @@
 var NAVTREEINDEX11 =
 {
+"namespacepaint_benchmarks_results.html#a99c19b6efddf3f281fb3f86b06167afe":[7,0,7,2],
+"namespacepaint_benchmarks_results.html#a9a393b6a3c13a2522e8efe88975faa84":[7,0,7,17],
 "namespacepaint_benchmarks_results.html#a9d91cddf5b74bcaa731c3407e61f33ca":[7,0,7,10],
 "namespacepaint_benchmarks_results.html#a9e43fdec1b7ab8cbb76f81681a5abbd0":[7,0,7,6],
 "namespacepaint_benchmarks_results.html#a9fb9f9c1cd04a2e2218a644445a83c78":[7,0,7,5],
@@ -206,10 +208,8 @@ var NAVTREEINDEX11 =
 "painter_curve_8py.html":[9,0,0,1,1,6],
 "painter_curve_8py.html#a79cd6b2cd0d8ba0d803beb4bf44ad019":[9,0,0,1,1,6,0],
 "painter_curve_8py_source.html":[9,0,0,1,1,6],
-"publication.html":[4],
 "read_zip_8h.html":[9,0,2,1,1,7],
 "read_zip_8h_source.html":[9,0,2,1,1,7],
-"runtime_log.html":[5],
 "simple_j_s_o_n_8h.html":[9,0,2,1,1,8],
 "simple_j_s_o_n_8h.html#a47b912b821d387118038fcd83de7692b":[9,0,2,1,1,8,1],
 "simple_j_s_o_n_8h.html#a49e658b63ca781f16ebdb15339b8411b":[9,0,2,1,1,8,0],

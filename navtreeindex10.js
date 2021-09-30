@@ -1,5 +1,9 @@
 var NAVTREEINDEX10 =
 {
+"functions_m.html":[8,3,0,13],
+"functions_n.html":[8,3,0,14],
+"functions_o.html":[8,3,0,15],
+"functions_p.html":[8,3,0,16],
 "functions_q.html":[8,3,0,17],
 "functions_r.html":[8,3,0,18],
 "functions_s.html":[8,3,0,19],
@@ -7,8 +11,8 @@ var NAVTREEINDEX10 =
 "functions_type.html":[8,3,3],
 "functions_u.html":[8,3,0,21],
 "functions_v.html":[8,3,0,22],
-"functions_vars.html":[8,3,2],
 "functions_vars.html":[8,3,2,0],
+"functions_vars.html":[8,3,2],
 "functions_vars_b.html":[8,3,2,1],
 "functions_vars_c.html":[8,3,2,2],
 "functions_vars_d.html":[8,3,2,3],
@@ -56,7 +60,6 @@ var NAVTREEINDEX10 =
 "get_pin_offset_8py.html#ae2aeae9a68f17b89bd49ef87851a519d":[9,0,0,1,0,1,13],
 "get_pin_offset_8py.html#afebd6ab0eee8639280d31ddac5a438a5":[9,0,0,1,0,1,5],
 "get_pin_offset_8py_source.html":[9,0,0,1,0,1],
-"get_started.html":[2],
 "globals.html":[9,1,0],
 "globals_defs.html":[9,1,5],
 "globals_enum.html":[9,1,3],
@@ -77,7 +80,6 @@ var NAVTREEINDEX10 =
 "gothrough_benchmarks_8py_source.html":[9,0,0,1,1,2],
 "hierarchy.html":[8,2],
 "index.html":[],
-"intro.html":[3],
 "main_8cc.html":[9,0,2,0,0,1],
 "main_8cc.html#a217dbf8b442f20279ea00b898af96f52":[9,0,2,0,0,1,0],
 "main_8cc_source.html":[9,0,2,0,0,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "namespacepaint_benchmarks_results.html#a69bd184abcf148a43146850c2e6ec0ac":[7,0,7,23],
 "namespacepaint_benchmarks_results.html#a6fe587971da7b7fcd87c63d69bfe2ce4":[7,0,7,9],
 "namespacepaint_benchmarks_results.html#a7b7d157be0dcc3a00b557a5da310b4aa":[7,0,7,4],
-"namespacepaint_benchmarks_results.html#a8eaebd71282e6d2a4bbdcea185a8a551":[7,0,7,7],
-"namespacepaint_benchmarks_results.html#a99c19b6efddf3f281fb3f86b06167afe":[7,0,7,2],
-"namespacepaint_benchmarks_results.html#a9a393b6a3c13a2522e8efe88975faa84":[7,0,7,17]
+"namespacepaint_benchmarks_results.html#a8eaebd71282e6d2a4bbdcea185a8a551":[7,0,7,7]
 };
