@@ -43,7 +43,8 @@ For commercial usage of this open-source project, users must contact authors (We
 3. parallelize the implementation of each stage of placement based on multi-threading
 4. modularized function implementation for easier further development
 5. flexible and extensible JSON-based placement configuration
-6. a set of pre-implementation benchmarks from latest practical FPGA applications
+6. support placement check-point importing/exporting
+7. a set of pre-implementation benchmarks from latest practical FPGA applications
 
 **Implementation Overview**
 

@@ -2,19 +2,14 @@
 
 In this section, we will explain the information that the placer prints in the terminal, to help users to understand what is going on with AMFPlacer. Please note that AMFPlacer can also dump more information to files as long as users set configurations.
 
-Below is an actual complete output in terminal when users run the command.
-
 ```bash
 ./AMFPlacer ../benchmarks/testConfig/OpenPiton.json
 ```
-<span style="background:#ffac33;color:#ff0d0d ">#1982d2</span> 
 
+Below is an complete output in actual order shown in the terminal when users run the command above.
 
-<span style="background:#0a6800;color:#18ff00">#1982d2</span> 
-
-#00fff2
-#00726c
-
+**1. Parse the placement configuration:** We implemented a simple JSON parser to parse the input placement configuration and here we let users to check whether the configuration is exactly the one they expect.
+<hr>
 <span style="background:#ffac33;color:#ff0d0d ">HiFPlacer WARNING: </span>&emsp;   Placer configuration is loaded and the information is shown below, please check: <br/>
 &emsp;   "ClusterPlacerVerbose"&emsp;   ====&emsp;   "false" <br/>
 &emsp;   "DrawNetAfterEachIteration"&emsp;   ====&emsp;   "false" <br/>
@@ -50,6 +45,10 @@ Below is an actual complete output in terminal when users run the command.
 &emsp;   "vivado extracted design information file"&emsp;   ====&emsp;   "../benchmarks/VCU108/design/OpenPiton/OpenPiton_allCellPinNet.zip" <br/>
 &emsp;   "vivado extracted device information file"&emsp;   ====&emsp;   "../benchmarks/VCU108/device/exportSiteLocation.zip" <br/>
 &emsp;   "y2xRatio"&emsp;   ====&emsp;   "0.4" <br/>
+<hr>
+
+**2. Load the device information:** AMFPlacer will load the device information from the files specified in the JSON files and print out some information for checking. The information will include: (1) whether some resource elements will be mapped in some other types during placement since they might share resources on the device; (2) how many clock regions are on the device and how they are organized; (3) the numbers/types of tiles/sites/BELs; (4) whether users have provided complete information of the device (some resources, which are not used by the design, can has no specification in the device files.)
+<hr>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   mapping BELType [SLICEM_CARRY8] to [SLICEL_CARRY8] when creating PlacementBins <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   mapping BELType [SLICEM_LUT] to [SLICEL_LUT] when creating PlacementBins <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   mapping BELType [SLICEM_FF] to [SLICEL_FF] when creating PlacementBins <br/>
@@ -63,6 +62,10 @@ Below is an actual complete output in terminal when users run the command.
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   Tile(28 types): AMS BRAM CFG_CFG CLEL_L CLEL_R CLE_M CLE_M_R CMAC_CMAC_FT DSP GTH_R GTY_QUAD_LEFT_FT HPIO_L HRIO_L ILMAC_ILMAC_FT PCIE RCLK_BRAM_L RCLK_BRAM_R RCLK_CLEL_L RCLK_CLEL_R RCLK_CLEL_R_L RCLK_CLEL_R_R RCLK_CLE_M_L RCLK_CLE_M_R RCLK_INT_L RCLK_INT_R RCLK_RCLK_BRAM_L_AUXCLMP_FT RCLK_RCLK_BRAM_L_BRAMCLMP_FT XIPHY_L  <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   Site(38 types): BITSLICE_CONTROL BITSLICE_RX_TX BITSLICE_TX BUFCE_LEAF_X16 BUFCE_ROW BUFGCE BUFGCE_DIV BUFGCTRL BUFG_GT BUFG_GT_SYNC CMAC_SITE CONFIG_SITE DSP48E2 GTHE3_CHANNEL GTHE3_COMMON GTYE3_CHANNEL GTYE3_COMMON HARD_SYNC HPIOB HPIOBDIFFINBUF HPIOBDIFFOUTBUF HPIO_VREF_SITE HRIO HRIODIFFINBUF HRIODIFFOUTBUF ILKN_SITE MMCME3_ADV PCIE_3_1 PLLE3_ADV PLL_SELECT_SITE RAMB181 RAMBFIFO18 RAMBFIFO36 RIU_OR SLICEL SLICEM SYSMONE1 XIPHY_FEEDTHROUGH  <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   BEL(131 types): A5LUT A6LUT AFF AFF2 B5LUT B6LUT BFF BFF2 BSCAN1 BSCAN2 BSCAN3 BSCAN4 BUFCE BUFCE0 BUFCE1 BUFCE10 BUFCE11 BUFCE12 BUFCE13 BUFCE14 BUFCE15 BUFCE2 BUFCE3 BUFCE4 BUFCE5 BUFCE6 BUFCE7 BUFCE8 BUFCE9 BUFGCE_DIV BUFGCTRL BUFG_GT BUFG_GT_SYNC C5LUT C6LUT CARRY8 CFF CFF2 CMAC CONTROL D5LUT D6LUT DCIRESET DFF DFF2 DIFFINBUF DIFFOUTBUF DNA_PORT DSP_ALU DSP_A_B_DATA DSP_C_DATA DSP_MULTIPLIER DSP_M_DATA DSP_OUTPUT DSP_PREADD DSP_PREADD_DATA E5LUT E6LUT EFF EFF2 EFUSE_USR F5LUT F6LUT F7MUX_AB F7MUX_CD F7MUX_EF F7MUX_GH F8MUX_BOT F8MUX_TOP F9MUX FFF FFF2 FRAME_ECC G5LUT G6LUT GCLK_TEST_DELAY GFF GFF2 GTHE3_CHANNEL GTHE3_COMMON GTYE3_CHANNEL GTYE3_COMMON H5LUT H6LUT HFF HFF2 HPIO_VREF1 HPIO_VREF2 IBUFCTRL IBUFDS0_GTE3 IBUFDS0_GTYE3 IBUFDS1_GTE3 IBUFDS1_GTYE3 ICAP_BOT ICAP_TOP ILKN INBUF IPAD1 IPAD2 MASTER_JTAG MMCME3_ADV OBUFDS0_GTE3 OBUFDS0_GTYE3 OBUFDS1_GTE3 OBUFDS1_GTYE3 OPAD1 OPAD2 OUTBUF OUTINV PAD PCIE_3_1 PLLE3_ADV PLL_SELECT PULL RAMB18E2_L RAMB18E2_U RAMB36E2 RAMBFIFO18 RAMBFIFO36E2 REFCLK0N REFCLK0P REFCLK1N REFCLK1P RIU_OR RXTX_BITSLICE STARTUP SYN_UNIT SYSMONE1 TRISTATE_TX_BITSLICE USR_ACCESS XIPHY_FEEDTHROUGH  <br/>
+<hr>
+
+**3. Load the design information:** AMFPlacer will load the design information from the files specified in the JSON files and print out some information for checking. The information will include: (1) whether there is any problem in the design file (e.g., duplicated elements dumped by Vivado); (2)  the numbers/types of elements in the design netlist; 
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Design Information Loading. (elapsed time: 3.503 s) <br/>
 <span style="background:#ffac33;color:#ff0d0d ">HiFPlacer WARNING: </span>&emsp;   get duplicated cells from the design archieve. Maybe bug in Vivado Tcl Libs. <br/>
 duplicated cell: DesignCell: (LUT5) chipset/chipset_impl/noc2_chip_to_xbar/ <br/>
@@ -104,6 +107,11 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   #LUTRAMCnt: 752 <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   #DSPCnt: 58 <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   #BRAMCnt: 147 <br/>
+<hr>
+
+
+**4. Load the legalization information and initialize PlacementInfo:** AMFPlacer will load the legalization information from the files specified in the JSON files and print out some information for checking. The information will mainly include the capability of different sites on device and which BELs can be mapped to which types of sites. After loading the legalization information, AMFPlacer will initialize a container of all the placement information.
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Loading compatiblePlacementTable (elapsed time: 23.758 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   There are 1 slot(s) in a site for cell type : (SLICEL_CARRY8). They are :CARRY8 <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   There are 1 slot(s) in a site for cell type : (SLICEM_CARRY8). They are :CARRY8 <br/>
@@ -147,6 +155,11 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   There are 1 slot(s) in a site for cell type : (OBUFDS_DUAL_BUF). They are :OUTINV <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   New Compatible Placement Table Loaded. (elapsed time: 23.759 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   New Placement Info Created. (elapsed time: 23.761 s) <br/>
+<hr>
+
+
+**5. Identify macros from the netlist:** AMFPlacer will identify the macros of various types from the netlist based on pre-defined patterns. A netlist with PlacementInfo::PlacementNet will be created for the placement. In this netlist, the macros will be instantiated as PlacementInfo::PlacementMacro while the other elements will be instantiated as PlacementInfo::PlacementUnpackedCell. 
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   InitialPacker Finding Macros (elapsed time: 23.761 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   #CARRY Macro: 523 <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   #CARRY Macro Cells: 32565 <br/>
@@ -170,6 +183,11 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   #Cells In Macro = 178515 <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   InitialPacker Loading Nets (elapsed time: 24.458 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   reload placementNets and #register-related PU=110625 (elapsed time: 25.308 s) <br/>
+<hr>
+
+
+**6. Initialize cell bin grid:** AMFPlacer will divide the device into a mesh grid of bins, and each bin (i.e., PlacementInfo::PlacementBinInfo) will record the elements locating in it. Based on these information, we can evaluate the cell density and find the neighbor elements during later cell spreading/area adjustion. Meanwhile, during building the grid, AMFPlacer will verify whether each types of elements (BEL) can be mapped to the bin grid.
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   set BEL type for each cell (elapsed time: 25.494 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   globalMinX: -0.400000 <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   globalMinY: 0.000000 <br/>
@@ -193,6 +211,11 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Bin Grid Size: Y: 96 X:18 (elapsed time: 25.754 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Bin Grid for Density Control Created (elapsed time: 25.754 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Device Information Verified for Design Information (elapsed time: 25.765 s) <br/>
+<hr>
+
+
+**7. Initialize timing information:** AMFPlacer will initialize the PlacementTimingInfo which is currently used to simply improve the timing of the placement. Here, we will create the DAG (timing graph) between combinational logic elements and timing end-points (e.g., registers, BRAMs, DSPs, IOs and clocks) and conduct levelization to identify long paths in the timing graph. Based on these information, we will enhance some nets in the original netlist. The more comprehensive STA engine will be merged in the following months.
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   PlacementTimingInfo: building simple timing graph (TimingNode is DesignCell) (elapsed time: 25.765 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   PlacementTimingInfo: Timing graph starts forward levalization (elapsed time: 26.249 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   PlacementTimingInfo: total level = 53 details: 0(141886), 1(50533), 2(26765), 3(21937), 4(8323), 5(7429), 6(7552), 7(5026), 8(5243), 9(3139), 10(4829), 11(2788), 12(2128), 13(9517), 14(1800), 15(5131), 16(6255), 17(5234), 18(4603), 19(2982), 20(1889), 21(3360), 22(670), 23(491), 24(230), 25(493), 26(220), 27(454), 28(491), 29(379), 30(471), 31(374), 32(230), 33(247), 34(222), 35(214), 36(202), 37(557), 38(1288), 39(1126), 40(712), 41(78), 42(22), 43(34), 44(18), 45(18), 46(18), 47(18), 48(18), 49(18), 50(18), 51(18), 52(4),  <br/>
@@ -203,6 +226,11 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#ffac33;color:#ff0d0d ">HiFPlacer WARNING: </span>&emsp;   pseudoNetWeightConsiderNetNum option is turn on: 0.004123 <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   PlacementTimingOptimizer: enhanceNetWeight_LevelBased starts. (elapsed time: 26.551 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   PlacementTimingOptimizer: enhanceNetWeight_LevelBased done (maxEnhancedRatio=5.763714) (elapsed time: 26.660 s) <br/>
+<hr>
+
+
+**8. Simulated annealing-based initial cluster-level placement:** Based on the connectivity and clock domains the design will be partitioned into several clusters and place on the device based on SA algorithm to get a better start point for later global placement iterations. We implement the SA algorithm in a multi-threading approach, where we start the independent SA procedures in different threads to cover more situations. Therefore, AMFPlacer will print out the resultant HPWL for each SA procedure.
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Cluster Placement Start. (elapsed time: 26.660 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Clustering Start. (elapsed time: 26.660 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   build a cluset (size=383) for clock [dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O]. <br/>
@@ -308,7 +336,7 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   Clock region untilization: <br/>
 0&emsp;   0&emsp;   0&emsp;   1&emsp;   0&emsp;    <br/>
 0&emsp;   2&emsp;   2&emsp;   7&emsp;   1&emsp;    <br/>
-0&emsp;   2&emsp;   3&emsp;   12  2&emsp;    <br/>
+0&emsp;   2&emsp;   3&emsp;   12&emsp; 2&emsp;    <br/>
 0&emsp;   2&emsp;   4&emsp;   5&emsp;   2&emsp;    <br/>
 0&emsp;   1&emsp;   2&emsp;   4&emsp;   2&emsp;    <br/>
 0&emsp;   1&emsp;   3&emsp;   3&emsp;   2&emsp;    <br/>
@@ -317,7 +345,7 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   Clock column untilization: <br/>
 0&emsp;   0&emsp;   0&emsp;   1&emsp;   0&emsp;    <br/>
 0&emsp;   2&emsp;   2&emsp;   5&emsp;   0&emsp;    <br/>
-0&emsp;   2&emsp;   3&emsp;   11  0&emsp;    <br/>
+0&emsp;   2&emsp;   3&emsp;   11&emsp;  0&emsp;    <br/>
 0&emsp;   0&emsp;   4&emsp;   3&emsp;   2&emsp;    <br/>
 0&emsp;   0&emsp;   0&emsp;   2&emsp;   2&emsp;    <br/>
 0&emsp;   0&emsp;   3&emsp;   3&emsp;   0&emsp;    <br/>
@@ -325,6 +353,10 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 0&emsp;   0&emsp;   0&emsp;   0&emsp;   0&emsp;    <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Cluster Placement Done. (elapsed time: 92.028 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   ClusterPlacement Total HPWL = 610080.855020 <br/>
+<hr>
+
+**9. Global placement iterations:** Now AMFPlacer will start the global placement iterations (wirelength optimization, cell spreading, legalization, area adjustion...). For each iteration, the placer will print information indicating the convergence progress, e.g., upper-bound HPWL, lower-bound HPWL, legalization displacement, overall pseudo net weights, and clock utilization. Meanwhile, for this placement, we let AMFPlacer to dump the locations of the elements to files for each iteration. This can be disabled in configuration file. The information can be visualized with Python script in "./benchmarks/analysisScripts". We strongly suggest users disable this behavior since disk IOs (element locations and compression) will significantly slow down the placement procedure.
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer GlobalPlacement_fixedCLB started (elapsed time: 92.046 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer: dumping coordinate archieve to: ../../../Documents/placerDumpData//./DumpAllCoordTrace-0.gz (elapsed time: 92.046 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer: dumped coordinate archieve to: ../../../Documents/placerDumpData//./DumpAllCoordTrace-0.gz (elapsed time: 92.799 s) <br/>
@@ -815,6 +847,10 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer: dumped coordinate archieve to: ../../../Documents/placerDumpData//./DumpAllCoordTrace-23.gz (elapsed time: 139.877 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer: dumping coordinate archieve to: FinalLUTFF-0.gz (elapsed time: 139.878 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer: dumped coordinate archieve to: FinalLUTFF-0.gz (elapsed time: 140.886 s) <br/>
+<hr>
+
+**10. Re-initialize the bin grid:** During the global placement, AMFPlacer will re-initialize the bin grid and make the bins smaller so the bin grid will be more fine-grained to conduct detailed cell spreading to resolve resource overflow in local regions.
+<hr>
 <span style="background:#ffac33;color:#ff0d0d ">HiFPlacer WARNING: </span>&emsp;   Site Type (ILKN_SITE) is not mapped to bin grid. e.g. [ILKN_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined. <br/>
 <span style="background:#ffac33;color:#ff0d0d ">HiFPlacer WARNING: </span>&emsp;   Site Type (HPIOBDIFFOUTBUF) is not mapped to bin grid. e.g. [HPIOBDIFFOUTBUF_X0Y11]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined. <br/>
 <span style="background:#ffac33;color:#ff0d0d ">HiFPlacer WARNING: </span>&emsp;   Site Type (PLL_SELECT_SITE) is not mapped to bin grid. e.g. [PLL_SELECT_SITE_X0Y0]. It might be not critical if the design will not utilize this kind of sites. Please check the compatible table you defined. <br/>
@@ -1202,6 +1238,10 @@ duplicated cell: DesignCell: (LUT5) chipset/offchip_processor_noc3_v2c/ <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer: dumped coordinate archieve to: ../../../Documents/placerDumpData//./DumpAllCoordTrace-36.gz (elapsed time: 184.654 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer: dumping coordinate archieve to: FinalLUTFF-1.gz (elapsed time: 184.655 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   GlobalPlacer: dumped coordinate archieve to: FinalLUTFF-1.gz (elapsed time: 185.662 s) <br/>
+<hr>
+
+**11. Map elements in long timing paths into clock regions:** Since cross-clock-region routing will lead to high delay, we set extra pseudonets to force the elements in the long paths placed in clock regions.
+<hr>
 <span style="background:#ffac33;color:#ff0d0d ">HiFPlacer WARNING: </span>&emsp;   PlacementTimingOptimizer: clustering long path in one clock region <br/>
 maxClockRegionWeight: 1408 totalClockRegionWeight:2261 #extractedCellIds=2261 #extractedPUs=665 pathLength=54 <br/>
 maxClockRegionWeight: 1370 totalClockRegionWeight:2254 #extractedCellIds=4515 #extractedPUs=1324 pathLength=54 <br/>
@@ -1221,6 +1261,12 @@ maxClockRegionWeight: 607 totalClockRegionWeight:623 #extractedCellIds=58425 #ex
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   PlacementTimingOptimizer: enhanceNetWeight_LevelBased starts. (elapsed time: 185.764 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   PlacementTimingOptimizer: enhanceNetWeight_LevelBased done (maxEnhancedRatio=5.763714) (elapsed time: 185.902 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   Current Total HPWL = 1582260.575034 <br/>
+<hr>
+
+
+
+**12. Incremental LUT/FF packing:** AMFPlacer will pack some LUTs/FFs which are close to each other in the middle of the placement procedure, which can reduce the problem size and facilitate convergence and final packing.
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   IncrementalBELPacker Pairing LUTs and FFs. (elapsed time: 185.919 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   IncrementalBELPacker: LUTTO1FFPackedCnt=0 <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   IncrementalBELPacker: LUTTOMultiFFPackedCnt=5306 <br/>
@@ -2617,6 +2663,10 @@ maxClockRegionWeight: 607 totalClockRegionWeight:623 #extractedCellIds=58425 #ex
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   upperBoundHPWL=757820.375000 <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   minHPWL=757820.375000 <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   Global Placer: B2B converge (elapsed time: 343.339 s) <br/>
+<hr>
+
+**13. Final packing:** AMFPlacer will pack elements into corresponding sites on the FPGA device with an improved parallelized algorithm.
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   MacroLegalizer: dumping MacroLegalization archieve to: BRAMDSPLegalizerDumpMacroLegalization-0.gz (elapsed time: 343.339 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   MacroLegalizer: dumped MacroLegalization archieve to: BRAMDSPLegalizerDumpMacroLegalization-0.gz (elapsed time: 343.342 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   MacroLegalizer: dumping MacroLegalization archieve to: CARRYMacroLegalizerDumpMacroLegalization-0.gz (elapsed time: 343.342 s) <br/>
@@ -2771,6 +2821,10 @@ maxClockRegionWeight: 607 totalClockRegionWeight:623 #extractedCellIds=58425 #ex
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   ParallelCLBPacker: there are 0 PUs left to be legalized and current displacement threshold for ripping up is 4.800000 (elapsed time: 412.303 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   there are 0 FFs(avgW=-nan) and 0 LUTs(avgW=-nan)  <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   ParallelCLBPacker::exceptionHandling done! (elapsed time: 412.303 s) <br/>
+<hr>
+
+**16. Fianlly export the placement result as Checkpoint/Tcl script:**
+<hr>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   ParallelCLBPacker: dumping CLBPacking archieve to: ../../../Documents/placerDumpData//./DumpCLBPacking-first-0.gz (elapsed time: 412.528 s) <br/>
 <span style="background:#0a6800;color:#18ff00">HiFPlacer STATUS:  </span>&emsp;   ParallelCLBPacker: dumped CLBPacking archieve to: ../../../Documents/placerDumpData//./DumpCLBPacking-first-0.gz (elapsed time: 416.070 s) <br/>
 <span style="background:#00726c;color:#00fff2">HiFPlacer INFO:  </span>&emsp;   #mappedPUCnt = 185805 <br/>
