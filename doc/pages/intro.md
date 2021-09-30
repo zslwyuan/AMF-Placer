@@ -53,25 +53,6 @@ Below is a hiearchy tree of this project. As for the details, please refer to th
         └── utils        // some minor utility functions
 ```
 
-
-**Some Experimental Results**
-
-Apart from the fundamental mechanisms to support macro placement, some optional optimization techniques are evaluated:
-
-1. SA-based initial placement
-2. interconnection-density-aware pseudo net weight
-3. utilization-guided search of spreading window
-4. forgetting-rate-based cell spreading update
-5. progressive macro legalization
-
-Below are the comparison data which are normalized. We will keep improving our implementation.
-
-<img src="data.png" alt="Experimental Data" title="Experimental Data" width="800" /> 
-
-Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.
-
-<img src="placement.png" alt="Placement" title="Placement" width="800" /> 
-
 **Dependencies**
 1. opengl, freeglut, glew
 2. eigen 3.3.8 (source code included)

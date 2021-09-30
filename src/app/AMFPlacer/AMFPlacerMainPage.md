@@ -25,6 +25,7 @@ For commercial usage of this open-source project, users must contact authors (We
 
 * [Basic Project Introduction](@ref intro): motivation, features and some experimental results.
 * [Get Started](@ref getStarted): guideline to use the placer for your work.
+* [Benchmarks and Experimental Results](@ref benchmarkInfo): practical benchmarks for evaluation and some experimental results at current stages.
 * [Publications](@ref publication): some papers which are the fundamental parts of this project.
 * [Implementation Explanation](@ref explanation): the concrete explaination for the function module and the placement procedure.
 
