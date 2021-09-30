@@ -2,6 +2,7 @@ var class_placement_timing_optimizer =
 [
     [ "PlacementTimingOptimizer", "class_placement_timing_optimizer.html#a1a0dadc3dffc30406d0e8728d907071a", null ],
     [ "~PlacementTimingOptimizer", "class_placement_timing_optimizer.html#a581a14b1393ddf4358af3ee246f2d19d", null ],
+    [ "clusterLongPathInOneClockRegion", "class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13", null ],
     [ "enhanceNetWeight_LevelBased", "class_placement_timing_optimizer.html#a9a4dab3fa9bfc2f1e9f9083e3a4d34c8", null ],
     [ "getDis", "class_placement_timing_optimizer.html#ae63503b3241a38821742547b2e96b0e2", null ],
     [ "getPois", "class_placement_timing_optimizer.html#a41d0851087015f4b169455b8ff005b21", null ],

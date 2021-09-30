@@ -19,6 +19,7 @@ var class_wirelength_optimizer =
     [ "solverWriteBackData", "class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b", null ],
     [ "updateB2BNetWeight", "class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794", null ],
     [ "updateB2BNetWeightWorker", "class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8", null ],
+    [ "updatePseudoNetForClockRegion", "class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c", null ],
     [ "updatePseudoNetForUserDefinedClusters", "class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9", null ],
     [ "directMacroLegalize", "class_wirelength_optimizer.html#a3447060fb5a4de21b98f72ec5963883e", null ],
     [ "generalNetWeight", "class_wirelength_optimizer.html#a4c0e97d41ee7c72b3ada1e179d1edca5", null ],

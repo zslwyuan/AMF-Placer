@@ -1,4 +1,6 @@
 <map id="PlacementTimingInfo::getSimplePlacementTimingInfo_PathLenSorted" name="PlacementTimingInfo::getSimplePlacementTimingInfo_PathLenSorted">
-<area shape="rect" id="node1" title=" " alt="" coords="224,5,411,61"/>
-<area shape="rect" id="node2" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="5,13,176,54"/>
+<area shape="rect" id="node1" title=" " alt="" coords="443,31,629,87"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,5,395,47"/>
+<area shape="rect" id="node4" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="194,71,365,112"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

@@ -6,7 +6,7 @@ var class_placement_timing_info_1_1_timing_graph =
     [ "~TimingGraph", "class_placement_timing_info_1_1_timing_graph.html#a2065e5889148fae7abf010a5d851d405", null ],
     [ "addEdgeBetween", "class_placement_timing_info_1_1_timing_graph.html#a39b64e4008879914fa3ecf162478b131", null ],
     [ "backwardLevelization", "class_placement_timing_info_1_1_timing_graph.html#a8200fa84bf5c84b277a0ecb2aa548a8b", null ],
-    [ "BFSFromNode", "class_placement_timing_info_1_1_timing_graph.html#a2f61696efcc7ea4ce612c7bdf9f5dc4a", null ],
+    [ "BFSFromNode", "class_placement_timing_info_1_1_timing_graph.html#a4793b2378cc7cfc71f18e7a6329a78d5", null ],
     [ "findALoopFromNode", "class_placement_timing_info_1_1_timing_graph.html#aa2f4a3e923afd88bcb7fb6ab39083818", null ],
     [ "forwardLevelization", "class_placement_timing_info_1_1_timing_graph.html#ae3b82205bd3755e782958cd81cd6366f", null ],
     [ "getEdges", "class_placement_timing_info_1_1_timing_graph.html#a83a198921ae941f667dceff3e8ca3ede", null ],

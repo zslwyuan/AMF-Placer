@@ -17,11 +17,12 @@ var searchData=
   ['updateparentcellnetinfo_14',['updateParentCellNetInfo',['../class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c',1,'DesignInfo::DesignPin']]],
   ['updateplacementunitswithspreadedcelllocations_15',['updatePlacementUnitsWithSpreadedCellLocations',['../class_general_spreader.html#a1414f843412957281cf5cd4ec92475ad',1,'GeneralSpreader']]],
   ['updateplacementunitswithspreadedcelllocationsworker_16',['updatePlacementUnitsWithSpreadedCellLocationsWorker',['../class_general_spreader.html#a39da1cce84c49100bdac69835f2b7271',1,'GeneralSpreader']]],
-  ['updatepseudonetforuserdefinedclusters_17',['updatePseudoNetForUserDefinedClusters',['../class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9',1,'WirelengthOptimizer']]],
-  ['updatepseudonetweight_18',['updatePseudoNetWeight',['../class_global_placer.html#a3ab05c4e6656eb025042e22016229b68',1,'GlobalPlacer']]],
-  ['updatepumatchinglocation_19',['updatePUMatchingLocation',['../class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63',1,'CLBLegalizer::updatePUMatchingLocation()'],['../class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee',1,'MacroLegalizer::updatePUMatchingLocation()']]],
-  ['updatescoreinsite_20',['updateScoreInSite',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['updatesitebingrid_21',['updateSiteBinGrid',['../class_placement_info.html#a92ccba93a41e3f77381cc47994e2e16b',1,'PlacementInfo']]],
-  ['updatestep_22',['updateStep',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8',1,'ParallelCLBPacker::PackingCLBSite']]],
-  ['userdefinedclusterbasedpartitioning_23',['userDefinedClusterBasedPartitioning',['../class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d',1,'ClusterPlacer']]]
+  ['updatepseudonetforclockregion_17',['updatePseudoNetForClockRegion',['../class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c',1,'WirelengthOptimizer']]],
+  ['updatepseudonetforuserdefinedclusters_18',['updatePseudoNetForUserDefinedClusters',['../class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9',1,'WirelengthOptimizer']]],
+  ['updatepseudonetweight_19',['updatePseudoNetWeight',['../class_global_placer.html#a3ab05c4e6656eb025042e22016229b68',1,'GlobalPlacer']]],
+  ['updatepumatchinglocation_20',['updatePUMatchingLocation',['../class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63',1,'CLBLegalizer::updatePUMatchingLocation()'],['../class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee',1,'MacroLegalizer::updatePUMatchingLocation()']]],
+  ['updatescoreinsite_21',['updateScoreInSite',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
+  ['updatesitebingrid_22',['updateSiteBinGrid',['../class_placement_info.html#a92ccba93a41e3f77381cc47994e2e16b',1,'PlacementInfo']]],
+  ['updatestep_23',['updateStep',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8',1,'ParallelCLBPacker::PackingCLBSite']]],
+  ['userdefinedclusterbasedpartitioning_24',['userDefinedClusterBasedPartitioning',['../class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d',1,'ClusterPlacer']]]
 ];
