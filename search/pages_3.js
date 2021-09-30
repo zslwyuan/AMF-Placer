@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['publications_0',['Publications',['../publication.html',1,'']]]
+  ['implementation_20explanation_0',['Implementation Explanation',['../explanation.html',1,'']]],
+  ['introduction_1',['Introduction',['../intro.html',1,'']]]
 ];

@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "AMF-Placer", "index.html", [
+    [ "Benchmarks and Experimental Results", "benchmark_info.html", null ],
     [ "Implementation Explanation", "explanation.html", null ],
     [ "Get Started", "get_started.html", null ],
     [ "Introduction", "intro.html", null ],
@@ -69,18 +70,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_m_f_placer_8h.html",
-"class_a_m_f_placer.html#a5b01fb2cf9d8f7f15a59892ed9a951ae",
-"class_design_info.html#a840c1d8fbec1298eb87452f1921d07dc",
-"class_device_info_1_1_clock_region.html#a078571146059793ccc87a611fc681e5a",
-"class_global_placer.html#a14f5dc4c74f1c09d1236cf50d6c55630",
-"class_macro_legalizer.html#ab838fb7a2bfb82f26c2be9ec228f408d",
-"class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a89990796f275bab27a8e510b74ce360e",
-"class_placement_info_1_1_compatible_placement_table.html#a8b99bc2a02ad48cfdd9de7b0640b7490",
-"class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037",
-"class_vivado_graph_util_1_1_vivado_cell.html#a90161b95bacc07736da85bd54950e413",
-"functions_r.html",
-"namespacepaint_benchmarks_results.html#a9e43fdec1b7ab8cbb76f81681a5abbd0",
-"struct_general_spreader_1_1_spread_region_1_1expand_op.html"
+"class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d",
+"class_design_info.html#a79fc874e0e15d0ad16540982235dfbdb",
+"class_device_info_1_1_clock_region.html#a03bf0f8ed2eaa2b8117c11f6e474c2cc",
+"class_global_placer.html#a1212496b470862869bfd75b356c5d422",
+"class_macro_legalizer.html#ab6d505b7699ee54fe891823ce97e0623",
+"class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a88b06096ffbc50885c014e8512008ea8",
+"class_placement_info_1_1_compatible_placement_table.html#a83c4242f6fd3e31d0ba073f62fb9d03a",
+"class_placement_info_1_1_placement_unit.html#a01524a5f57253bd906ac03f1d0d302d0",
+"class_vivado_graph_util_1_1_vivado_cell.html#a886e1dc9e5b23a3b1a928f0f9355ab4e",
+"functions_q.html",
+"namespacepaint_benchmarks_results.html#a9d91cddf5b74bcaa731c3407e61f33ca",
+"struct_f_i_l_ebuf.html#aa86de919fc2f7fa7f7c82010b9fc9eeb"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

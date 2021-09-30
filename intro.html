@@ -131,20 +131,7 @@ $(document).ready(function(){initNavTree('intro.html',''); initResizable(); });
 <div class="line">        │   │   └── placementTiming</div>
 <div class="line">        │   └── problemSolvers</div>
 <div class="line">        └── utils        // some minor utility functions</div>
-</div><!-- fragment --><p ><b>Some Experimental Results</b></p>
-<p >Apart from the fundamental mechanisms to support macro placement, some optional optimization techniques are evaluated:</p>
-<ol type="1">
-<li>SA-based initial placement</li>
-<li>interconnection-density-aware pseudo net weight</li>
-<li>utilization-guided search of spreading window</li>
-<li>forgetting-rate-based cell spreading update</li>
-<li>progressive macro legalization</li>
-</ol>
-<p >Below are the comparison data which are normalized. We will keep improving our implementation.</p>
-<p ><img src="data.png" alt="Experimental Data" title="Experimental Data" width="800" class="inline"/></p>
-<p >Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.</p>
-<p ><img src="placement.png" alt="Placement" title="Placement" width="800" class="inline"/></p>
-<p ><b>Dependencies</b></p><ol type="1">
+</div><!-- fragment --><p ><b>Dependencies</b></p><ol type="1">
 <li>opengl, freeglut, glew</li>
 <li>eigen 3.3.8 (source code included)</li>
 <li>MKL</li>

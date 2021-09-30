@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['implementation_20explanation_0',['Implementation Explanation',['../explanation.html',1,'']]],
-  ['introduction_1',['Introduction',['../intro.html',1,'']]]
+  ['get_20started_0',['Get Started',['../get_started.html',1,'']]]
 ];

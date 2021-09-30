@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AMF-Placer: AMF-Placer</title>
+<title>AMF-Placer: Benchmarks and Experimental Results</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('benchmark_info.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -83,66 +83,47 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">AMF-Placer </div></div>
+  <div class="headertitle"><div class="title">Benchmarks and Experimental Results </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>Introduction</h1>
-<p >AMF-Placer is an open-source analytical mixed-size FPGA placer supporting mixed-size placement on FPGA, with an interface to Xilinx Vivado. To speed up the convergence and improve the quality of the placement, AMF-Placer is equipped with a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Based on a set of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure can be accelerated by 2.41x on average. Detailed Docygen-based documentation can be accessed <b><a href="https://zslwyuan.github.io/AMF-Placer/">here</a></b>.</p>
-<p  align="center"></p>
-<p ><img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" class="inline"/> <img src="https://zslwyuan.github.io/AMF-Placer/MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" class="inline"/> <img src="https://zslwyuan.github.io/AMF-Placer/optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" class="inline"/> </p>
-<h1>License</h1>
-<p >This project is developed by <a href="https://eeweiz.home.ece.ust.hk/">Reconfiguration Computing Systems Lab</a>, Hong Kong University of Science and Technology (HKUST).</p>
-<p >For non-commercial usage of this open-source project, users should comply the Apache License attached in the root directory. For commercial usage of this open-source project, users must contact authors (Wei ZHANG, <a href="#" onclick="location.href='mai'+'lto:'+'eew'+'ei'+'z@u'+'st'+'.hk'; return false;">eewei<span style="display: none;">.nosp@m.</span>z@us<span style="display: none;">.nosp@m.</span>t.hk</a>; Tingyuan LIANG, <a href="#" onclick="location.href='mai'+'lto:'+'tli'+'an'+'g@c'+'on'+'nec'+'t.'+'ust'+'.h'+'k'; return false;">tlian<span style="display: none;">.nosp@m.</span>g@co<span style="display: none;">.nosp@m.</span>nnect<span style="display: none;">.nosp@m.</span>.ust<span style="display: none;">.nosp@m.</span>.hk</a>) for authorization.</p>
-<h1>Publications</h1>
-<p >[1] AMF-Placer: High-Performance Analytical Mixed-size Placer for FPGA<a href="https://github.com/zslwyuan/AMF-Placer/blob/main/doc/paper/iccad2021.pdf">(pre-print)</a> </p><div class="fragment"><div class="line">@INPROCEEDINGS{AMFPlacer,  author={Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Feng, Liang and Sinha, Sharad and Zhang, Wei},  booktitle={2021 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},   title={AMF-Placer: High-Performance Analytical Mixed-size Placer for FPGA},   year={2021},  volume={},  number={},  pages={1-6},}</div>
-</div><!-- fragment --><h1>Motivations</h1>
-<ol type="1">
-<li>Just reinvent the wheel for fun, try to build a complete flow and implement some state-of-art techniques in the latest paper.</li>
-<li>Resolve some existing constraints in some previous works and consider more practical situations, like FPGA mixed-size placement with a series of optimization.</li>
-<li>A beginner-friendly placement framework with clear hierarchy and detailed Doxygen-based documentation. We hope that it can lower the overhead for people who are also interested in this research area.</li>
-<li>Currently, this framework is under development and it is still far from our goals and the practical demands, but we are happy to share our progress in this GitHub repository. If you have any questions/problems/suggestions, please contact feel free to contact us (tliang AT connect DOT ust DOT hk)</li>
-</ol>
-<h1>Features</h1>
-<ol type="1">
-<li>supports placeemnt with a large number of mixed-size macros with shape constraints in practical FPGA applications.</li>
-<li>a set of optional optimization techniques to improve mixed-size FPGA placement QoR</li>
-<li>parallelize the implementation of each stage of placement based on multi-threading</li>
-<li>modularized function implementation for easier further development</li>
-<li>flexible and extensible JSON-based placement configuration</li>
-<li>support placement check-point importing/exporting</li>
-<li>a set of pre-implementation benchmarks from latest practical FPGA applications</li>
-</ol>
-<h1>Implementation Overview</h1>
-<p  align="center"></p>
-<p ><img src="https://zslwyuan.github.io/AMF-Placer/overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" class="inline"/> </p>
-<h1>Project Hiearchy</h1>
-<p >Below is a hiearchy tree of this project. As for the details, please refer to the class information and collaboration diagram in the Doxygen documentation and trace the implementation, e.g., <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a>, <a class="el" href="class_global_placer.html" title="GlobalPlacer accounts for the general iterations in global placement.">GlobalPlacer</a>, and <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a>. </p><div class="fragment"><div class="line">├── benchmarks  // benchmark information</div>
-<div class="line">│   ├── analysisScripts  // experimental result analysis Python scripts</div>
-<div class="line">│   ├── testConfig       // some test settings of placer</div>
-<div class="line">│   ├── VCU108           // information of design and device for VCU108</div>
-<div class="line">│   │   ├── compatibleTable    // mapping information between design and device</div>
-<div class="line">│   │   ├── design             // design information</div>
-<div class="line">│   │   └── device             // device information</div>
-<div class="line">│   └── vivadoScripts    // some Vivado Tcl scripts to extract design/device information</div>
-<div class="line">├── build                // potential target directory for built output</div>
-<div class="line">├── doc                  // documentation-related materials</div>
-<div class="line">└── src                  // source code of the project</div>
-<div class="line">    ├── app              // application (e.g., AMFPlacer)</div>
-<div class="line">    │   └── AMFPlacer    // A High-Performance Analytical Mixed-size Placer for FPGA</div>
-<div class="line">    └── lib              // libraries for application implementation</div>
-<div class="line">        ├── 3rdParty     // third-party libraries</div>
-<div class="line">        ├── HiFPlacer    // our placement function modules</div>
-<div class="line">        │   ├── designInfo</div>
-<div class="line">        │   ├── deviceInfo</div>
-<div class="line">        │   ├── placement</div>
-<div class="line">        │   │   ├── globalPlacement</div>
-<div class="line">        │   │   ├── legalization</div>
-<div class="line">        │   │   ├── packing</div>
-<div class="line">        │   │   ├── placementInfo</div>
-<div class="line">        │   │   └── placementTiming</div>
-<div class="line">        │   └── problemSolvers</div>
-<div class="line">        └── utils        // some minor utility functions</div>
-</div><!-- fragment --> <h1>Some Experimental Results</h1>
+<div class="textblock"><p ><a class="anchor" id="md_doc_pages_benchmarkInfo"></a> <b>Benchmarks</b></p>
+<p >As mentioned in the introduction, we collect the latest practical open-source benchmarks from various domains.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter">Benchmarks   </th><th class="markdownTableHeadCenter">Rosetta FaceDetection   </th><th class="markdownTableHeadCenter">SpooNN   </th><th class="markdownTableHeadCenter">OptimSoC   </th><th class="markdownTableHeadCenter">MiniMap2   </th><th class="markdownTableHeadCenter">OpenPiton   </th><th class="markdownTableHeadCenter">MemN2N   </th><th class="markdownTableHeadCenter">BLSTM   </th><th class="markdownTableHeadCenter">Rosetta DigitRecog    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">#LUT   </td><td class="markdownTableBodyCenter">68945   </td><td class="markdownTableBodyCenter">63095   </td><td class="markdownTableBodyCenter">186183   </td><td class="markdownTableBodyCenter">407586   </td><td class="markdownTableBodyCenter">180388   </td><td class="markdownTableBodyCenter">184997   </td><td class="markdownTableBodyCenter">118967   </td><td class="markdownTableBodyCenter">151636    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">#FF   </td><td class="markdownTableBodyCenter">56987   </td><td class="markdownTableBodyCenter">70987   </td><td class="markdownTableBodyCenter">248983   </td><td class="markdownTableBodyCenter">252624   </td><td class="markdownTableBodyCenter">111966   </td><td class="markdownTableBodyCenter">84694   </td><td class="markdownTableBodyCenter">54690   </td><td class="markdownTableBodyCenter">105580    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">#CARRY   </td><td class="markdownTableBodyCenter">4978   </td><td class="markdownTableBodyCenter">2091   </td><td class="markdownTableBodyCenter">1715   </td><td class="markdownTableBodyCenter">19826   </td><td class="markdownTableBodyCenter">1712   </td><td class="markdownTableBodyCenter">11528   </td><td class="markdownTableBodyCenter">2762   </td><td class="markdownTableBodyCenter">1970    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">#Mux   </td><td class="markdownTableBodyCenter">2177   </td><td class="markdownTableBodyCenter">217   </td><td class="markdownTableBodyCenter">27037   </td><td class="markdownTableBodyCenter">180   </td><td class="markdownTableBodyCenter">13696   </td><td class="markdownTableBodyCenter">4466   </td><td class="markdownTableBodyCenter">36210   </td><td class="markdownTableBodyCenter">4662    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">#LUTRAM   </td><td class="markdownTableBodyCenter">255   </td><td class="markdownTableBodyCenter">251   </td><td class="markdownTableBodyCenter">901   </td><td class="markdownTableBodyCenter">251   </td><td class="markdownTableBodyCenter">752   </td><td class="markdownTableBodyCenter">3500   </td><td class="markdownTableBodyCenter">1147   </td><td class="markdownTableBodyCenter">251    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">#DSP   </td><td class="markdownTableBodyCenter">101   </td><td class="markdownTableBodyCenter">165   </td><td class="markdownTableBodyCenter">51   </td><td class="markdownTableBodyCenter">528   </td><td class="markdownTableBodyCenter">58   </td><td class="markdownTableBodyCenter">312   </td><td class="markdownTableBodyCenter">258   </td><td class="markdownTableBodyCenter">1    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">#BRAM   </td><td class="markdownTableBodyCenter">141   </td><td class="markdownTableBodyCenter">208   </td><td class="markdownTableBodyCenter">218   </td><td class="markdownTableBodyCenter">283   </td><td class="markdownTableBodyCenter">147   </td><td class="markdownTableBodyCenter">148   </td><td class="markdownTableBodyCenter">812   </td><td class="markdownTableBodyCenter">379    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">#Cell   </td><td class="markdownTableBodyCenter">134450   </td><td class="markdownTableBodyCenter">137937   </td><td class="markdownTableBodyCenter">468150   </td><td class="markdownTableBodyCenter">681889   </td><td class="markdownTableBodyCenter">309145   </td><td class="markdownTableBodyCenter">289721   </td><td class="markdownTableBodyCenter">215101   </td><td class="markdownTableBodyCenter">265775    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">#Macro   </td><td class="markdownTableBodyCenter">3582   </td><td class="markdownTableBodyCenter">1135   </td><td class="markdownTableBodyCenter">21882   </td><td class="markdownTableBodyCenter">8746   </td><td class="markdownTableBodyCenter">8278   </td><td class="markdownTableBodyCenter">5775   </td><td class="markdownTableBodyCenter">14651   </td><td class="markdownTableBodyCenter">3061    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyCenter">#siteForMacro   </td><td class="markdownTableBodyCenter">55666   </td><td class="markdownTableBodyCenter">23079   </td><td class="markdownTableBodyCenter">89004   </td><td class="markdownTableBodyCenter">191263   </td><td class="markdownTableBodyCenter">48066   </td><td class="markdownTableBodyCenter">118960   </td><td class="markdownTableBodyCenter">171822   </td><td class="markdownTableBodyCenter">55754    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter">MacroRatio   </td><td class="markdownTableBodyCenter">40%   </td><td class="markdownTableBodyCenter">16%   </td><td class="markdownTableBodyCenter">19%   </td><td class="markdownTableBodyCenter">28%   </td><td class="markdownTableBodyCenter">15%   </td><td class="markdownTableBodyCenter">41%   </td><td class="markdownTableBodyCenter">80%   </td><td class="markdownTableBodyCenter">21%   </td></tr>
+</table>
+<ul>
+<li>Rosetta FaceDetection/DigitRecog: Y. Zhou, U. Gupta, S. Dai, R. Zhao, N. Srivastava, H. Jin, J. Featherston, Y.-H. Lai, G. Liu, G. A. Velasquez et al., “Rosetta: A realistic high-level synthesis benchmark suite for software programmable fpgas,” in Proceedings of the 2018 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays, 2018, pp. 269–278.</li>
+<li>SpooNN: K. Kara, “Spoonn: Fpga-based neural network inference library,” 2018.</li>
+<li>OptimSoC: S. Wallentowitz, P. Wagner, M. Tempelmeier, T. Wild, and A. Herkersdorf, “Open tiled manycore system-on-chip,” arXiv preprint arXiv:1304.5081, 2013.</li>
+<li>MiniMap2: L. Guo, J. Lau, Z. Ruan, P. Wei, and J. Cong, “Hardware acceleration of long read pairwise overlapping in genome sequencing: A race between fpga and gpu,” in 2019 IEEE 27th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM). IEEE, 2019, pp. 127–135.</li>
+<li>OpenPiton: J. Balkind, M. McKeown, Y. Fu, T. Nguyen, Y. Zhou, A. Lavrov, M. Shahrad, A. Fuchs, S. Payne, X. Liang et al., “Openpiton: An open source manycore research framework,” ACM SIGPLAN Notices, vol. 51, no. 4, pp. 217–232, 2016.</li>
+<li>MemN2N: S. Sukhbaatar, A. Szlam, J. Weston, and R. Fergus, “End-to-end memory networks,” arXiv preprint arXiv:1503.08895, 2015.</li>
+<li>BLSTM: V. Rybalkin, N. Wehn, M. R. Yousefi, and D. Stricker, “Hardware architecture of bidirectional long short-term memory neural network for optical character recognition,” in Design, Automation &amp; Test in Europe Conference &amp; Exhibition (DATE), 2017. IEEE, 2017, pp. 1390–1395.</li>
+</ul>
+<p ><b>Experimental Results</b></p>
 <p >Apart from the fundamental mechanisms to support macro placement, some optional optimization techniques are evaluated:</p>
 <ol type="1">
 <li>SA-based initial placement</li>
@@ -192,25 +173,8 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyCenter">baseline   </td><td class="markdownTableBodyCenter">1432535   </td><td class="markdownTableBodyCenter">1.258   </td><td class="markdownTableBodyCenter">297   </td><td class="markdownTableBodyCenter">1.086   </td><td class="markdownTableBodyCenter">1047885   </td><td class="markdownTableBodyCenter">1.442   </td><td class="markdownTableBodyCenter">298   </td><td class="markdownTableBodyCenter">1.288   </td><td class="markdownTableBodyCenter">1610425   </td><td class="markdownTableBodyCenter">2.010   </td><td class="markdownTableBodyCenter">547   </td><td class="markdownTableBodyCenter">1.942   </td><td class="markdownTableBodyCenter">907383   </td><td class="markdownTableBodyCenter">1.872   </td><td class="markdownTableBodyCenter">325   </td><td class="markdownTableBodyCenter">1.237   </td></tr>
 </table>
-<p ><img src="https://zslwyuan.github.io/AMF-Placer/data.png" alt="Experimental Data" title="Experimental Data" width="800" class="inline"/></p>
 <p >Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.</p>
-<p ><img src="https://zslwyuan.github.io/AMF-Placer/placement.png" alt="Placement" title="Placement" width="800" class="inline"/></p>
-<h1>Dependencies</h1>
-<ol type="1">
-<li>opengl, freeglut, glew</li>
-<li>eigen 3.3.8 (source code included)</li>
-<li>MKL</li>
-<li>PaToH (library included)</li>
-<li>osqp (source code included)</li>
-</ol>
-<h1>Todo List</h1>
-<ol type="1">
-<li>stable clock legalization</li>
-<li>basic static timing analysis (doing)</li>
-<li>timing term in analytical model (doing)</li>
-<li>timing-driven detailed placement</li>
-</ol>
-<p >(last updated Aug 17, 2021) </p>
+<p ><img src="placement.png" alt="Placement" title="Placement" width="800" class="inline"/> </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
