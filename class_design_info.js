@@ -115,6 +115,7 @@ var class_design_info =
     [ "isLUT", "class_design_info.html#a4c507342291fe723bb27d68e43f84474", null ],
     [ "isLUTRAM", "class_design_info.html#a68661265c8e549ee8f3a0209f6df1163", null ],
     [ "isMux", "class_design_info.html#add80f1a4b63c5bb8488951acee638ebd", null ],
+    [ "isShifter", "class_design_info.html#aaf2cf53b8b5526ef4d192104e6b9c34b", null ],
     [ "isTimingEndPoint", "class_design_info.html#a79fc874e0e15d0ad16540982235dfbdb", null ],
     [ "loadClocks", "class_design_info.html#a5ba9049f57138cb8ee8f9f43ac459d8d", null ],
     [ "loadUserDefinedClusterNets", "class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc", null ],

@@ -27,6 +27,7 @@ var class_design_info_1_1_design_cell =
     [ "isLUTRAM", "class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133", null ],
     [ "isMux", "class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4", null ],
     [ "isShift", "class_design_info_1_1_design_cell.html#abfe78549720e948cb327084dc4842f17", null ],
+    [ "isShifter", "class_design_info_1_1_design_cell.html#a03b6815c5d8200376e119a603c98c5dc", null ],
     [ "isTimingEndPoint", "class_design_info_1_1_design_cell.html#a98ec57a40f14540ba4ea33fbcd63153d", null ],
     [ "isVirtualCell", "class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e", null ],
     [ "originallyIsLUTRAM", "class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea", null ],

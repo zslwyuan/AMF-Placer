@@ -63,6 +63,7 @@ var class_global_placer =
     [ "pseudoNetWeight", "class_global_placer.html#a2b048fbb895e22f2073d02778d7e5d71", null ],
     [ "pseudoNetWeightConsiderNetNum", "class_global_placer.html#a4b1aa50168e25a1087c7538e534925c6", null ],
     [ "spreadingForgetRatio", "class_global_placer.html#a15164d7772c9bd1592d429b01438f75b", null ],
+    [ "timingOptEnabled", "class_global_placer.html#ac2e8e63134e659242a4d28c45e9d658c", null ],
     [ "updateMinHPWLAfterLegalization", "class_global_placer.html#acf0799877a81227fc896b939f9f249c0", null ],
     [ "upperBoundHPWL", "class_global_placer.html#a0391a164398e573a6b272919a431adca", null ],
     [ "verbose", "class_global_placer.html#ac35a6484c0944ad2d9948946fb4de459", null ],
