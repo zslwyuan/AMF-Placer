@@ -2,6 +2,7 @@ var class_a_m_f_placer =
 [
     [ "AMFPlacer", "class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d", null ],
     [ "~AMFPlacer", "class_a_m_f_placer.html#afff8ae40c342d0cf1f78978b62127564", null ],
+    [ "clearSomeAttributesCannotRecord", "class_a_m_f_placer.html#a3bc63638c6fcf4e1d4a2ec2cfa3c2b99", null ],
     [ "run", "class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981", null ],
     [ "designInfo", "class_a_m_f_placer.html#a03ce22ef8b51b9534bc1b8f065080879", null ],
     [ "deviceinfo", "class_a_m_f_placer.html#ac7cf3a0b0c2c5538565356abeda46bcb", null ],
