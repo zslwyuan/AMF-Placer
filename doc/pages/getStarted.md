@@ -30,6 +30,8 @@ Below is a command that users can try to run in the "build" directory. It will r
 ./AMFPlacer ../benchmarks/testConfig/OpenPiton.json
 ```
 
+Users may find that AMFPlacer prints somethings in the terminal and if you are interested in the details of those information, you can find the concrete explanation [here](@ref runtimeLog).
+
 **3. Set the Placement Configuration in JSON file**
 
 By checking the content of the JSON file in the command argument above, you may notice the major settings of our placer. 
