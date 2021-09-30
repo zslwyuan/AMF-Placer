@@ -91,6 +91,22 @@ class AMFPlacer
             delete initialPacker;
     }
 
+    void clearSomeAttributesCannotRecord()
+    {
+        for (auto PU : placementInfo->getPlacementUnits())
+        {
+            if (PU->isPacked())
+                PU->resetPacked();
+        }
+        for (auto pair : placementInfo->getPULegalXY().first)
+        {
+            if (pair.first->isFixed() && !pair.first->isLocked())
+            {
+                pair.first->setUnfixed();
+            }
+        }
+    }
+
     /**
      * @brief launch the analytical mixed-size FPGA placement procedure
      *
@@ -107,7 +123,6 @@ class AMFPlacer
 
         placementInfo->printStat();
         placementInfo->createGridBins(5.0, 5.0);
-        // placementInfo->createSiteBinGrid();
         placementInfo->verifyDeviceForDesign();
 
         placementInfo->buildSimpleTimingGraph();
@@ -116,103 +131,74 @@ class AMFPlacer
         // go through several glable placement iterations to get initial placement
         globalPlacer = new GlobalPlacer(placementInfo, JSON);
 
-        if (true)
-        {
-            if (true)
-            {
-                // designInfo->enhanceFFControlSetNets();
-                timingOptimizer->enhanceNetWeight_LevelBased(10);
-                globalPlacer->clusterPlacement();
-                globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
-                globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5,
-                                                          true, true);
+        // enable the timing optimization, start initial placement and global placement.
+        timingOptimizer->enhanceNetWeight_LevelBased(10);
+        globalPlacer->clusterPlacement();
+        globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5, true,
+                                                  true);
 
-                // designInfo->resetNetEnhanceRatio();
+        // create a more fine-grained bin-grid to properly spread the cells
+        placementInfo->createGridBins(2.0, 2.0);
+        placementInfo->adjustLUTFFUtilization(-10, true);
+        globalPlacer->spreading(-1);
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
+                                                  true);
 
-                // placementInfo->updateLongPaths();
-                placementInfo->createGridBins(2.0, 2.0);
-                placementInfo->adjustLUTFFUtilization(-10, true);
-                globalPlacer->spreading(-1);
-                globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5,
-                                                          true, true);
+        // strengthen the timing optimization, enable area adjustion and relax a bit the pseudo nets for more
+        // flexibility
+        timingOptimizer->clusterLongPathInOneClockRegion(20, 0.5);
+        timingOptimizer->enhanceNetWeight_LevelBased(10);
+        globalPlacer->setNeighborDisplacementUpperbound(3.0);
+        globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
 
-                timingOptimizer->clusterLongPathInOneClockRegion(20, 0.5);
-                timingOptimizer->enhanceNetWeight_LevelBased(10);
+        print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
-                print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
-
-                // pack simple LUT-FF pairs and go through several global placement iterations
-                incrementalBELPacker = new IncrementalBELPacker(designInfo, deviceinfo, placementInfo, JSON);
-                incrementalBELPacker->LUTFFPairing(4.0);
-                incrementalBELPacker->FFPairing(4.0);
-                placementInfo->printStat();
-                print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
-
-                globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
-                globalPlacer->setNeighborDisplacementUpperbound(3.0);
-                globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5,
-                                                          true, true, timingOptimizer);
-
-                globalPlacer->setNeighborDisplacementUpperbound(2.0);
-                globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5,
-                                                          true, true, timingOptimizer);
-
-                // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
-
-                globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5,
-                                                          true, false, timingOptimizer);
-
-                for (auto PU : placementInfo->getPlacementUnits())
-                {
-                    if (PU->isPacked())
-                        PU->resetPacked();
-                }
-                for (auto pair : placementInfo->getPULegalXY().first)
-                {
-                    if (pair.first->isFixed() && !pair.first->isLocked())
-                    {
-                        pair.first->setUnfixed();
-                    }
-                }
-                placementInfo->dumpPlacementUnitInformation("PUInfoBeforeFinalPacking");
-            }
-            placementInfo->loadPlacementUnitInformation("PUInfoBeforeFinalPacking.gz");
-            print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
-            parallelCLBPacker = new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.5, 0.5, 6,
-                                                      10, 0.1, "first");
-            parallelCLBPacker->packCLBs(30, true);
-            parallelCLBPacker->setPULocationToPackedSite();
-            timingOptimizer->setEdgesDelay();
-            placementInfo->checkClockUtilization(true);
-            print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
-            placementInfo->resetLUTFFDeterminedOccupation();
-            parallelCLBPacker->updatePackedMacro(true, true);
-            placementInfo->adjustLUTFFUtilization(1, true);
-            placementInfo->dumpCongestion("congestionInfo");
-
-            if (parallelCLBPacker)
-                delete parallelCLBPacker;
-            placementInfo->printStat();
-
-            for (auto PU : placementInfo->getPlacementUnits())
-            {
-                if (PU->isPacked())
-                    PU->resetPacked();
-            }
-            for (auto pair : placementInfo->getPULegalXY().first)
-            {
-                if (pair.first->isFixed() && !pair.first->isLocked())
-                {
-                    pair.first->setUnfixed();
-                }
-            }
-            placementInfo->dumpPlacementUnitInformation("PUInfoBeforeFinal");
-        }
-        placementInfo->updateB2BAndGetTotalHPWL();
-
-        placementInfo->loadPlacementUnitInformation("PUInfoBeforeFinal.gz");
+        // pack simple LUT-FF pairs and go through several global placement iterations
+        incrementalBELPacker = new IncrementalBELPacker(designInfo, deviceinfo, placementInfo, JSON);
+        incrementalBELPacker->LUTFFPairing(4.0);
+        incrementalBELPacker->FFPairing(4.0);
         placementInfo->printStat();
+        print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
+                                                  true, timingOptimizer);
+
+        globalPlacer->setNeighborDisplacementUpperbound(2.0);
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
+                                                  true, timingOptimizer);
+
+        // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
+
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5, true, false,
+                                                  timingOptimizer);
+
+        // currently, some fixed/packed flag cannot be stored in the check-point (TODO)
+        clearSomeAttributesCannotRecord();
+
+        // test the check-point mechanism
+        placementInfo->dumpPlacementUnitInformation("PUInfoBeforeFinalPacking");
+        placementInfo->loadPlacementUnitInformation("PUInfoBeforeFinalPacking.gz");
+        print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
+
+        // finally pack the elements into sites on the FPGA device
+        parallelCLBPacker =
+            new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.5, 0.5, 6, 10, 0.1, "first");
+        parallelCLBPacker->packCLBs(30, true);
+        parallelCLBPacker->setPULocationToPackedSite();
+        timingOptimizer->setEdgesDelay();
+        placementInfo->checkClockUtilization(true);
+        print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
+        placementInfo->resetLUTFFDeterminedOccupation();
+        parallelCLBPacker->updatePackedMacro(true, true);
+        placementInfo->adjustLUTFFUtilization(1, true);
+        placementInfo->dumpCongestion("congestionInfo");
+
+        if (parallelCLBPacker)
+            delete parallelCLBPacker;
+
+        // currently, some fixed/packed flag cannot be stored in the check-point (TODO)
+        clearSomeAttributesCannotRecord();
         placementInfo->dumpPlacementUnitInformation("PUInfoFinal");
         placementInfo->checkClockUtilization(true);
 
