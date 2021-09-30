@@ -58,9 +58,8 @@ We sincerely appreciate the kindly suggestions from reviewers, detailed explanat
 
 **Issue Report**
 
-This project is under active development and we do want to make the placer useful for people in the community. Therefore,
+This project is under active development and far from perfect. We do want to make the placer useful for people in the community. Therefore,
 * If you have any question/problem, please feel free to create a issue in the [GitHub Issue](https://github.com/zslwyuan/AMF-Placer/issues) or email us (Tingyuan LIANG, tliang AT connect DOT ust DOT hk)
 * We sincerely welcome code contribution to this project or suggestion in any approach!
-
 
 (last updated Aug 17, 2021)
