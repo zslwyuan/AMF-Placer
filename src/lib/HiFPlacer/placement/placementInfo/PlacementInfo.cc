@@ -1227,9 +1227,9 @@ void PlacementInfo::adjustLUTFFUtilization_Routability(bool enfore)
     {
         binOrderId++;
         assert(curBin);
-        if (curBin->getSwitchDemandForNets() > 90 && binOrderId < bins.size() * 0.3)
+        if (curBin->getSwitchDemandForNets() > 80 && binOrderId < bins.size() * 0.3)
         {
-            float infateRatio = 2 * (curBin->getSwitchDemandForNets() / 90);
+            float infateRatio = 2 * (curBin->getSwitchDemandForNets() / 80);
             if (infateRatio > 4)
                 infateRatio = 4;
             for (auto tmpCell : curBin->getCells())
@@ -1239,9 +1239,9 @@ void PlacementInfo::adjustLUTFFUtilization_Routability(bool enfore)
             }
             float LUTSupplyRatio = LUTBinGrid[curBin->Y()][curBin->X()]->getRequiredBinShrinkRatio() * 0.9;
             float FFSupplyRatio = FFBinGrid[curBin->Y()][curBin->X()]->getRequiredBinShrinkRatio() * 0.9;
-            if (LUTSupplyRatio > 0.8)
+            if (LUTSupplyRatio > 0.7)
                 LUTBinGrid[curBin->Y()][curBin->X()]->setRequiredBinShrinkRatio(LUTSupplyRatio);
-            if (FFSupplyRatio > 0.8)
+            if (FFSupplyRatio > 0.7)
                 FFBinGrid[curBin->Y()][curBin->X()]->setRequiredBinShrinkRatio(FFSupplyRatio);
         }
         // we don't recover the suppy until next creation of bin grid (i.e., createBinGrid), otherwise, you can
@@ -1254,7 +1254,7 @@ void PlacementInfo::adjustLUTFFUtilization_Routability(bool enfore)
                 FFBinGrid[curBin->Y()][curBin->X()]->setRequiredBinShrinkRatio(1);
             }
         }
-        else if (curBin->getSwitchDemandForNets() < 65)
+        else if (curBin->getSwitchDemandForNets() < 55)
         {
             if (LUTBinGrid[curBin->Y()][curBin->X()]->getRequiredBinShrinkRatio() < 0.999)
             {
@@ -1268,7 +1268,7 @@ void PlacementInfo::adjustLUTFFUtilization_Routability(bool enfore)
                 FFBinGrid[curBin->Y()][curBin->X()]->setRequiredBinShrinkRatio(FFSupplyRatio);
             }
         }
-        else if (curBin->getSwitchDemandForNets() < 80)
+        else if (curBin->getSwitchDemandForNets() < 70)
         {
             if (LUTBinGrid[curBin->Y()][curBin->X()]->getRequiredBinShrinkRatio() < 0.999)
             {

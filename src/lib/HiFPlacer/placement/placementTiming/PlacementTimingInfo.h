@@ -441,7 +441,9 @@ class PlacementTimingInfo
 
             pathLenSortedNodes = nodes;
             std::sort(pathLenSortedNodes.begin(), pathLenSortedNodes.end(), [](TimingNode *a, TimingNode *b) -> bool {
-                return a->getLongestPathLength() > b->getLongestPathLength();
+                return (a->getLongestPathLength() == b->getLongestPathLength())
+                           ? (a->getForwardLevel() < b->getForwardLevel())
+                           : (a->getLongestPathLength() > b->getLongestPathLength());
             });
         }
 
@@ -468,7 +470,7 @@ class PlacementTimingInfo
          * @param sizeThr the number limitation to avoid huge cluster
          * @return std::vector<int>
          */
-        std::vector<int> BFSFromNode(int startNodeId, unsigned sizeThr, std::set<int> &exceptionCells);
+        std::vector<int> BFSFromNode(int startNodeId, int pathLenThr, unsigned sizeThr, std::set<int> &exceptionCells);
 
         inline std::vector<TimingNode *> &getPathLenSortedNodes()
         {

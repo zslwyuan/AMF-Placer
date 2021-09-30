@@ -294,7 +294,8 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::traceForwardFromNod
 }
 
 template <typename nodeType>
-std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int startNodeId, unsigned int sizeThr,
+std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int startNodeId, int pathLenThr,
+                                                                         unsigned int sizeThr,
                                                                          std::set<int> &exceptionCells)
 {
     std::vector<int> resSucessors;
@@ -316,7 +317,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
         {
             int nextId = outEdge->getSink()->getId();
 
-            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() >= targetPathLen * 0.9)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
             {
                 if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
                 {
@@ -331,7 +332,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
         {
             int nextId = inEdge->getSource()->getId();
 
-            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() >= targetPathLen * 0.9)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
             {
                 if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
                 {

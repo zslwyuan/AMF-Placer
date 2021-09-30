@@ -4036,6 +4036,16 @@ class PlacementInfo
         simplePlacementTimingInfo->buildSimpleTimingGraph();
     }
 
+    /**
+     * @brief get the PlacementUnit Mapping to clock region centers for timing optimzation
+     *
+     * @return std::vector<std::tuple<PlacementUnit *, float, float>>&
+     */
+    std::vector<std::tuple<PlacementUnit *, float, float>> &getPU2ClockRegionCenters()
+    {
+        return PU2ClockRegionCenters;
+    }
+
   private:
     CompatiblePlacementTable *compatiblePlacementTable = nullptr;
     std::vector<PlacementUnit *> placementUnits;
@@ -4138,6 +4148,8 @@ class PlacementInfo
     std::set<PlacementUnit *> PUSetContainingFF;
     std::vector<PlacementUnit *> PUsContainingFF;
     std::vector<std::vector<PlacementUnit *>> longPaths;
+
+    std::vector<std::tuple<PlacementUnit *, float, float>> PU2ClockRegionCenters;
 
     /**
      * @brief the retangular clock region coverage of a clock net

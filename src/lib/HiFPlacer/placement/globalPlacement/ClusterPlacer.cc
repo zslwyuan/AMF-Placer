@@ -141,7 +141,8 @@ void ClusterPlacer::createLongPathClusterUnits()
             auto tmpPU = placementInfo->getPlacementUnitByCell(curCell);
             if (placementUnitId2ClusterUnitId[tmpPU->getId()] < 0)
             {
-                auto candidateCellIds = simpleTimingGraph->BFSFromNode(timingNode->getId(), 1000000, extractedCellIds);
+                auto candidateCellIds =
+                    simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLengthThr, 1000000, extractedCellIds);
                 std::set<PlacementInfo::PlacementUnit *> PUsInLongPaths;
                 PUsInLongPaths.clear();
                 for (auto &candidateCellId : candidateCellIds)

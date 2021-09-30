@@ -127,7 +127,6 @@ class AMFPlacer
                 globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5,
                                                           true, true);
 
-                timingOptimizer->enhanceNetWeight_LevelBased(10);
                 // designInfo->resetNetEnhanceRatio();
 
                 // placementInfo->updateLongPaths();
@@ -136,6 +135,9 @@ class AMFPlacer
                 globalPlacer->spreading(-1);
                 globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5,
                                                           true, true);
+
+                timingOptimizer->clusterLongPathInOneClockRegion(20, 0.5);
+                timingOptimizer->enhanceNetWeight_LevelBased(10);
 
                 print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 

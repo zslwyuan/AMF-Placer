@@ -30,6 +30,7 @@ class PlacementTimingOptimizer
     void propogateArrivalTime();
     void setEdgesDelay();
     void setPinsLocation();
+    void clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio);
 
     void initPois()
     {

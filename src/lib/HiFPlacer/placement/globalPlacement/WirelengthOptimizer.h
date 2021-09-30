@@ -97,6 +97,8 @@ class WirelengthOptimizer
     void updatePseudoNetForUserDefinedClusters(float pesudoNetWeight);
     void adjustHighFanoutPULocation(float pesudoNetWeight);
     void addPseudoNet_LevelBased(int levelThr, float pesudoNetWeight, double disExpected);
+    void updatePseudoNetForClockRegion(float pesudoNetWeight);
+
     inline double manhattanDis(double x0, double y0, double x1, double y1)
     {
         return std::abs(x0 - x1) + y2xRatio * std::abs(y0 - y1);

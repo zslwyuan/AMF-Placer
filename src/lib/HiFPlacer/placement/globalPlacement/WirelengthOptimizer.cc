@@ -178,6 +178,7 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
     }
 
     addPseudoNet2LoctionForAllPUs(pesudoNetWeight, considerNetNum);
+    updatePseudoNetForClockRegion((4.0 - placementInfo->getProgress()) * pesudoNetWeight);
 
     if (verbose)
         print_status("update B2B Net Weight Done.");
@@ -798,4 +799,29 @@ void WirelengthOptimizer::updatePseudoNetForUserDefinedClusters(float pesudoNetW
 
     print_warning("set user-defined cluster pseudo net for " + std::to_string(reallocatedPUs.size()) + " PU(s) and " +
                   std::to_string(reallocateCells) + " cell(s).");
+}
+
+void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
+{
+    if (pesudoNetWeight <= 0)
+        return;
+    auto &PU2ClockRegionCenter = placementInfo->getPU2ClockRegionCenters();
+
+    for (auto PUXY : PU2ClockRegionCenter)
+    {
+        auto curPU = std::get<0>(PUXY);
+        float cX = std::get<1>(PUXY);
+        float cY = std::get<2>(PUXY);
+        placementInfo->addPseudoNetsInPlacementInfo(
+            xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+            xSolver->solverData.objectiveVector, curPU, cX, pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio,
+            true, false);
+
+        placementInfo->addPseudoNetsInPlacementInfo(
+            ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
+            ySolver->solverData.objectiveVector, curPU, cY, pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio,
+            false, true);
+    }
+
+    print_warning("update pseudo net gor clockt egion");
 }
