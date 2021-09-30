@@ -403,6 +403,8 @@ class GlobalPlacer
      *
      */
     float neighborDisplacementUpperbound = -1.0;
+
+    bool timingOptEnabled = false;
 };
 
 #endif

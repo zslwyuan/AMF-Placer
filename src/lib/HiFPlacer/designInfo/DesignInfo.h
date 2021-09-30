@@ -903,6 +903,11 @@ class DesignInfo
                    cellType == CellType_BUFGCE_DIV || cellType == CellType_BUFGCTRL;
         }
 
+        inline bool isShifter()
+        {
+            return cellType == CellType_SRL16E || cellType == CellType_SRLC32E;
+        }
+
         /**
          * @brief check whether the cell is an endpoint in timing graph
          *
@@ -911,7 +916,8 @@ class DesignInfo
          */
         inline bool isTimingEndPoint()
         {
-            return (isFF() || isLUTRAM() || originallyIsLUTRAM() || isBRAM() || isDSP() || isIO() || isClockBuffer());
+            return (isFF() || isLUTRAM() || originallyIsLUTRAM() || isBRAM() || isDSP() || isIO() || isClockBuffer() ||
+                    isShifter());
         }
 
         /**
@@ -1232,6 +1238,10 @@ class DesignInfo
         return cellType == CellType_BUFGCE || cellType == CellType_BUFG_GT || cellType == CellType_BUFG_GT_SYNC ||
                cellType == CellType_BUFGCE_DIV || cellType == CellType_BUFGCTRL;
     }
+    inline bool isShifter(DesignCellType cellType)
+    {
+        return cellType == CellType_SRL16E || cellType == CellType_SRLC32E;
+    }
 
     /**
      * @brief check whether the cell type is an endpoint in timing graph
@@ -1243,7 +1253,7 @@ class DesignInfo
     inline bool isTimingEndPoint(DesignCellType cellType)
     {
         return (isFF(cellType) || isLUTRAM(cellType) || isBRAM(cellType) || isDSP(cellType) || isIO(cellType) ||
-                isClockBuffer(cellType));
+                isClockBuffer(cellType) || isShifter(cellType));
     }
 
     // clang-format off

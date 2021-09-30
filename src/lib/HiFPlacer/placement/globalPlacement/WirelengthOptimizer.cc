@@ -807,6 +807,9 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
         return;
     auto &PU2ClockRegionCenter = placementInfo->getPU2ClockRegionCenters();
 
+    if (PU2ClockRegionCenter.size() <= 0)
+        return;
+
     for (auto PUXY : PU2ClockRegionCenter)
     {
         auto curPU = std::get<0>(PUXY);
@@ -823,5 +826,5 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
             false, true);
     }
 
-    print_warning("update pseudo net gor clockt egion");
+    print_warning("update pseudo net for clockt egion");
 }

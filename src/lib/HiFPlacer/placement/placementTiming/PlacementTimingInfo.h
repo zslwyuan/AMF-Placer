@@ -381,8 +381,6 @@ class PlacementTimingInfo
          */
         void findALoopFromNode(std::vector<int> &nodeInPath, int startNode, int curNode, int level)
         {
-            if (level > 5)
-                return;
             if (level > 0 && curNode == startNode)
             {
                 for (auto nodeId : nodeInPath)

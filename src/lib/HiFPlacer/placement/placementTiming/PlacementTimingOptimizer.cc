@@ -186,7 +186,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             auto curCell = timingNode->getDesignNode();
 
             auto candidateCellIds =
-                simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLenThr, 1000000, extractedCellIds);
+                simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLenThr, 20000, extractedCellIds);
 
             if (candidateCellIds.size() >= 8)
             {
@@ -259,7 +259,8 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                         }
                     }
 
-                    if (maxClockRegionWeight > totalClockRegionWeight * 0.25 && maxClockRegionWeight >= 4)
+                    if ((maxClockRegionWeight > totalClockRegionWeight * 0.25) && totalClockRegionWeight < 20000 &&
+                        maxClockRegionWeight >= 4)
                     {
                         auto optClockRegion = YX2ClockRegion[optClockLocYX.first][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;
@@ -296,6 +297,14 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                                   << " #extractedCellIds=" << extractedCellIds.size()
                                   << " #extractedPUs=" << extractedPUs.size()
                                   << " pathLength=" << timingNode->getLongestPathLength() << "\n";
+                    }
+
+                    else if (totalClockRegionWeight >= 20000)
+                    {
+                        for (auto tmpCellId : candidateCellIds)
+                        {
+                            extractedCellIds.insert(tmpCellId);
+                        }
                     }
                 }
             }

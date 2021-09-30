@@ -20,6 +20,7 @@
     // "DumpLUTCoordTrace": "./DumpLUTCoordTrace",
     // "DumpDSPCoordTrace": "./DumpDSPCoordTrace",
     // "DumpFFCoordTrace": "./DumpFFCoordTrace",
+    "DumpAllCoordTrace": "./DumpAllCoordTrace",
     "GlobalPlacerPrintHPWL": "true",
     "DumpCLBPacking": "./DumpCLBPacking",
     "DumpLUTFFPair": "./DumpLUTFFPair",

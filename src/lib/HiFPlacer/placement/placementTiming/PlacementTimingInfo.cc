@@ -24,9 +24,7 @@ void PlacementTimingInfo::buildSimpleTimingGraph()
         auto newNode =
             new TimingGraph<DesignInfo::DesignCell>::TimingNode(curCell, simpleTimingGraph->getNodes().size());
 
-        if (designInfo->isFF(curCell->getOriCellType()) || designInfo->isLUTRAM(curCell->getOriCellType()) ||
-            designInfo->isBRAM(curCell->getOriCellType()) || designInfo->isDSP(curCell->getOriCellType()) ||
-            designInfo->isIO(curCell->getOriCellType()))
+        if (curCell->isTimingEndPoint())
         {
             newNode->setIsRegister();
         }
@@ -126,6 +124,16 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::fo
             }
         }
         curLevel++;
+
+        if (curLevel > 100)
+        {
+            print_warning("Reach level#" + std::to_string(curLevel) + " has " + std::to_string(curLevelIds.size()) +
+                          " nodes. It might mean that there are loops in timing graph.");
+            std::vector<int> nodeInPath;
+            nodeInPath.clear();
+            nodeInPath.push_back(curLevelIds[0]);
+            findALoopFromNode(nodeInPath, curLevelIds[0], curLevelIds[0], 0);
+        }
     }
 
     // some nodes are duplicated in some lower levels, remove them
