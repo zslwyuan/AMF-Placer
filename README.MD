@@ -118,7 +118,6 @@ Below are the comparison data which are normalized. We will keep improving our i
 | baseline |   1432535  | 1.258 |   297   | 1.086 |      1047885     | 1.442 |   298   | 1.288 |  1610425 | 2.010 |   547   | 1.942 |      907383      | 1.872 |   325   | 1.237 |
 
 
-<img src="https://zslwyuan.github.io/AMF-Placer/data.png" alt="Experimental Data" title="Experimental Data" width="800" /> 
 
 Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.
 
