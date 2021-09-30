@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['publications_0',['Publications',['../publication.html',1,'']]]
+  ['runtime_20log_20explanation_0',['Runtime Log Explanation',['../runtime_log.html',1,'']]]
 ];

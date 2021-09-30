@@ -102,7 +102,8 @@ $(document).ready(function(){initNavTree('get_started.html',''); initResizable()
 <p ><b>2. Run An Example</b></p>
 <p >Below is a command that users can try to run in the "build" directory. It will run the placement flow according to a given JSON configuration, where design/device/paramters are specified.</p>
 <div class="fragment"><div class="line">./AMFPlacer ../benchmarks/testConfig/OpenPiton.json</div>
-</div><!-- fragment --><p ><b>3. Set the Placement Configuration in JSON file</b></p>
+</div><!-- fragment --><p >Users may find that <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> prints somethings in the terminal and if you are interested in the details of those information, you can find the concrete explanation <a class="el" href="runtime_log.html">here</a>.</p>
+<p ><b>3. Set the Placement Configuration in JSON file</b></p>
 <p >By checking the content of the JSON file in the command argument above, you may notice the major settings of our placer. Generally, we need to let the placer know where are the data of the design and devices, whether the placer should dump some log text/archieve files for further checking or evaluation, and some parameters related to the algorithms in the placer.</p>
 <p >Below, we explain some of the settings. If users target at Xilinx VCU108, users may only need to change the parameters related to the design benchmark, which we mark with [DESIGN]. We also mark others parameters with [DEVICE], [DEBUG] and [PLACER]. Some optional parameters can be disable by commenting out by "//". Please be aware that no matter the value types are string or not, the value should be wrapper by " " as syntax requirement. </p><div class="fragment"><div class="line">{</div>
 <div class="line">    &quot;vivado extracted design information file&quot;: &quot;&quot; ,// ==&gt; the location of the design netlist zip file [DESIGN]</div>

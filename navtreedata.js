@@ -25,11 +25,11 @@
 var NAVTREE =
 [
   [ "AMF-Placer", "index.html", [
-    [ "legalizationIssue", "md_benchmarks__v_c_u108_device_legalization_issue.html", null ],
     [ "Implementation Explanation", "explanation.html", null ],
     [ "Get Started", "get_started.html", null ],
     [ "Introduction", "intro.html", null ],
     [ "Publications", "publication.html", null ],
+    [ "Runtime Log Explanation", "runtime_log.html", null ],
     [ "AMF-Placer", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -78,9 +78,9 @@ var NAVTREEINDEX =
 "class_placement_info_1_1_compatible_placement_table.html#aa22719d7e4d4b11381226b74cd507d73",
 "class_placement_info_1_1_placement_unit.html#a06cbf23f1032d78a25997e727374f415",
 "class_vivado_graph_util_1_1_vivado_cell.html#a9fd288e7e0f89a17577326c0e8a88c96",
-"functions_t.html",
-"namespacepaint_benchmarks_results.html#a9fb9f9c1cd04a2e2218a644445a83c78",
-"struct_general_spreader_1_1_spread_region_1_1expand_op.html#a461f9056aea1b986d00a1ae369612019"
+"functions_type.html",
+"namespacepaint_benchmarks_results.html#aa34f7523bcda477ae4fcef14f6dafc0d",
+"struct_general_spreader_1_1_spread_region_1_1expand_op.html#a5a07bf1328b3de731ec71eed1aebbd45"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
