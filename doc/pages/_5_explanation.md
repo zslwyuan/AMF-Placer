@@ -1,4 +1,4 @@
-# Implementation Explanation {#explanation}
+# Implementation Explanation {#_5_explanation}
 
 Here, we will explain the placement flow by going through the functionality of the major modules in the placer. Of course, you can also make full use of the Doxygen diagram to trace the call graphs to understand their relationship. We try to avoid multi-level class during implementation so it is easier for beginners to trace the call graphs.
 
@@ -17,7 +17,7 @@ Here, we will explain the placement flow by going through the functionality of t
 8. PlacementTimingOptimizer: based on the timing information and the placement information, adjusts some terms in the quadratic models which can improve the timing.
 9. ParallelCLBPacker: finally packs LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.
 
-Below is the overall flow of AMFPlacer and a visualized procedure is shown in the figure below. If you are interested in the details of AMFPlacer runtime behaviors, you can find the concrete explanation [here](@ref runtimeLog).
+Below is the overall flow of AMFPlacer and a visualized procedure is shown in the figure below. If you are interested in the details of AMFPlacer runtime behaviors, you can find the concrete explanation [here](@ref _6_runtimeLog).
 
 1. AMFPlacer will be constructed based on the DesignInfo and DeviceInfo. 
 2. At the beginning, AMFPlacer will construct the PlacementInfo based on the DesignInfo and DeviceInfn. 

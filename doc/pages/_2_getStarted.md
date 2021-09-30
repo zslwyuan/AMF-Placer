@@ -1,4 +1,4 @@
-# Get Started {#getStarted}
+# Get Started {#_2_getStarted}
 
 Here, we will go through some basic steps for users to build the placer and run a placement flow for a new design/device with a new placement configuration:
 1. Build the Placer
@@ -30,7 +30,7 @@ Below is a command that users can try to run in the "build" directory. It will r
 ./AMFPlacer ../benchmarks/testConfig/OpenPiton.json
 ```
 
-Users may find that AMFPlacer prints somethings in the terminal and if you are interested in the details of those information, you can find the concrete explanation [here](@ref runtimeLog).
+Users may find that AMFPlacer prints somethings in the terminal and if you are interested in the details of those information, you can find the concrete explanation [here](@ref _6_runtimeLog).
 
 **3. Set the Placement Configuration in JSON file**
 
