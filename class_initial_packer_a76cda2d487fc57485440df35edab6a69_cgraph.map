@@ -2,16 +2,16 @@
 <area shape="rect" id="node1" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="5,1170,133,1197"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a4533a5cb4da7ddecfdd6cfdea93fef92" title="calculate the proportion of the PlacementUnit objects with high interconnection density" alt="" coords="214,5,390,47"/>
 <area shape="rect" id="node3" href="$class_initial_packer.html#ab4192856f4321d686ca5113f9993c17f" title=" " alt="" coords="218,71,386,112"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="201,1073,403,1099"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="201,1073,403,1099"/>
 <area shape="rect" id="node17" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="545,1229,619,1255"/>
 <area shape="rect" id="node18" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="537,1279,627,1306"/>
-<area shape="rect" id="node20" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="198,714,406,741"/>
-<area shape="rect" id="node27" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementMacro" alt="" coords="207,1022,397,1049"/>
-<area shape="rect" id="node28" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="209,1330,395,1357"/>
-<area shape="rect" id="node30" href="$class_initial_packer.html#aa81da495335eae350a1e31505c899369" title=" " alt="" coords="213,956,391,997"/>
-<area shape="rect" id="node31" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title=" " alt="" coords="225,2261,379,2303"/>
-<area shape="rect" id="node39" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title=" " alt="" coords="224,1795,380,1836"/>
-<area shape="rect" id="node44" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title=" " alt="" coords="211,1170,393,1197"/>
+<area shape="rect" id="node20" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="198,714,406,741"/>
+<area shape="rect" id="node27" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="207,1022,397,1049"/>
+<area shape="rect" id="node28" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="209,1330,395,1357"/>
+<area shape="rect" id="node30" href="$class_initial_packer.html#aa81da495335eae350a1e31505c899369" title="other non&#45;Macro elements will be instantiated as PlacementInfo::PlacementUnpackedCell" alt="" coords="213,956,391,997"/>
+<area shape="rect" id="node31" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title="load the fixed elements (e.g., IOs) from the design file." alt="" coords="225,2261,379,2303"/>
+<area shape="rect" id="node39" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="224,1795,380,1836"/>
+<area shape="rect" id="node44" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="211,1170,393,1197"/>
 <area shape="rect" id="node45" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title=" " alt="" coords="262,2327,342,2354"/>
 <area shape="rect" id="node46" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="215,1861,389,1887"/>
 <area shape="rect" id="node48" href="$class_placement_info_1_1_compatible_placement_table.html#a3ea2f44470dec480669f06a2041f8d9f" title="set the mapping from cells in design netlist to BEL type ID for later processing." alt="" coords="181,867,423,908"/>
@@ -31,7 +31,7 @@
 <area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="987,1471,1139,1512"/>
 <area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="759,901,911,943"/>
 <area shape="rect" id="node21" href="$_initial_packer_8cc.html#a0fd0a2e1abc315a9956507a413459e1b" title=" " alt="" coords="525,339,639,366"/>
-<area shape="rect" id="node23" href="$class_initial_packer.html#a468e9bb1cecc4bcf35c57212bb4c52f7" title=" " alt="" coords="471,238,693,265"/>
+<area shape="rect" id="node23" href="$class_initial_packer.html#a468e9bb1cecc4bcf35c57212bb4c52f7" title="check the control set of the candidate FFs and select the control set with the most FFs to be packed ..." alt="" coords="471,238,693,265"/>
 <area shape="rect" id="node24" href="$class_design_info_1_1_design_net.html#ad61f1f1fc9c0be6b6ed23a6e49ecb56c" title="Get the vector reference of the pins driven by the net." alt="" coords="759,508,910,549"/>
 <area shape="rect" id="node25" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="483,593,681,635"/>
 <area shape="rect" id="node22" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="759,391,911,432"/>

@@ -1,6 +1,6 @@
 <map id="DeviceInfo::getSite" name="DeviceInfo::getSite">
 <area shape="rect" id="node1" title=" " alt="" coords="641,46,772,73"/>
-<area shape="rect" id="node2" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title=" " alt="" coords="425,5,579,47"/>
+<area shape="rect" id="node2" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title="load the fixed elements (e.g., IOs) from the design file." alt="" coords="425,5,579,47"/>
 <area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unpacked_cell.html#ac7d3b8b70966af2d4689019d1585a48d" title=" " alt="" coords="411,71,593,112"/>
 <area shape="rect" id="node3" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,15,327,42"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>

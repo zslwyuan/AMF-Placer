@@ -1,5 +1,5 @@
 <map id="InitialPacker::loadFixedPlacementUnits" name="InitialPacker::loadFixedPlacementUnits">
-<area shape="rect" id="node1" title=" " alt="" coords="5,158,160,199"/>
+<area shape="rect" id="node1" title="load the fixed elements (e.g., IOs) from the design file." alt="" coords="5,158,160,199"/>
 <area shape="rect" id="node2" href="$class_design_info.html#a580d4bec7fc849b1209a039d5f166624" title=" " alt="" coords="227,5,357,32"/>
 <area shape="rect" id="node3" href="$class_device_info.html#af80ea4926947a5bf90165e9051e159f7" title=" " alt="" coords="227,56,357,83"/>
 <area shape="rect" id="node4" href="$_initial_packer_8cc.html#a401e88bf9c8d2d965c8cd9614fcc172c" title=" " alt="" coords="209,107,375,133"/>

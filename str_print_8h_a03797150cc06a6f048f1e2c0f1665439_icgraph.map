@@ -23,9 +23,9 @@
 <area shape="rect" id="node41" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="705,611,891,653"/>
 <area shape="rect" id="node42" href="$class_wirelength_optimizer.html#a431184067de089857b584da070404661" title="Construct a new Wirelength Optimizer object." alt="" coords="1523,1243,1667,1285"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="1243,49,1417,90"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementMacro" alt="" coords="963,56,1165,83"/>
-<area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="694,115,902,141"/>
-<area shape="rect" id="node8" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title=" " alt="" coords="971,5,1157,32"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="963,56,1165,83"/>
+<area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="694,115,902,141"/>
+<area shape="rect" id="node8" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="971,5,1157,32"/>
 <area shape="rect" id="node9" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="965,107,1163,149"/>
 <area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="480,88,608,115"/>
 <area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,531,116,557"/>

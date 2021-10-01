@@ -15,7 +15,7 @@
 <area shape="rect" id="node12" href="$class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46" title=" " alt="" coords="753,273,913,315"/>
 <area shape="rect" id="node13" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="540,273,679,315"/>
 <area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="351,273,489,315"/>
-<area shape="rect" id="node16" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title=" " alt="" coords="729,339,937,366"/>
+<area shape="rect" id="node16" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="729,339,937,366"/>
 <area shape="rect" id="node17" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="169,339,297,366"/>
 <area shape="rect" id="node19" href="$class_design_info_1_1_control_set_info.html#a7a923ed95fb81c16a8551268bc1514cb" title="Construct a new Control Set Info object with signals of a given FF and a given ID." alt="" coords="747,397,920,439"/>
 </map>

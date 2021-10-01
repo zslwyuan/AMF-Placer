@@ -1,5 +1,5 @@
 <map id="InitialPacker::LUTFFPairing" name="InitialPacker::LUTFFPairing">
-<area shape="rect" id="node1" title=" " alt="" coords="5,678,188,705"/>
+<area shape="rect" id="node1" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="5,678,188,705"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="236,496,411,537"/>
 <area shape="rect" id="node19" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="236,561,411,603"/>
 <area shape="rect" id="node20" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="255,627,392,654"/>

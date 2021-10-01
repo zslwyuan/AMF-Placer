@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object." alt="" coords="411,5,692,47"/>
 <area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="187,101,339,127"/>
 <area shape="rect" id="node4" href="$class_device_info.html#acf972e842012f53c4087c8da7032bd8e" title="load BEL type remapping information since some cell can be placed in sites of different sites...." alt="" coords="464,123,639,164"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title=" " alt="" coords="473,188,629,229"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="473,188,629,229"/>
 <area shape="rect" id="node8" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,247,363,288"/>
 <area shape="rect" id="node9" href="$class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc" title="for user&#45;defined&#45;cluster&#45;based optimization, load the nets in a user&#45;defined cluster for later proces..." alt="" coords="459,305,644,347"/>
 <area shape="rect" id="node11" href="$simple_j_s_o_n_8h.html#a47b912b821d387118038fcd83de7692b" title=" " alt="" coords="496,371,607,398"/>

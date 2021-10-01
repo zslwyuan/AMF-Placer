@@ -14,7 +14,6 @@ var class_initial_packer =
     [ "findMuxMacros", "class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377", null ],
     [ "findUnpackedUnits", "class_initial_packer.html#aa81da495335eae350a1e31505c899369", null ],
     [ "loadFixedPlacementUnits", "class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c", null ],
-    [ "loadNets", "class_initial_packer.html#abb4f82dae44321d1b22a271059fb2820", null ],
     [ "loadOtherCLBMacros", "class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8", null ],
     [ "LUTFFPairing", "class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82", null ],
     [ "mapCarryRelatedRouteThru", "class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa", null ],

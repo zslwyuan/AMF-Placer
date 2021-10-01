@@ -1,5 +1,5 @@
 <map id="InitialPacker::loadOtherCLBMacros" name="InitialPacker::loadOtherCLBMacros">
-<area shape="rect" id="node1" title=" " alt="" coords="5,776,161,817"/>
+<area shape="rect" id="node1" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="5,776,161,817"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="225,463,400,504"/>
 <area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title=" " alt="" coords="464,5,639,47"/>
 <area shape="rect" id="node19" href="$class_placement_info_1_1_placement_macro.html#a1e000fe47cfe3a0fdc88e2fef72f5999" title="add information of a fixed cell" alt="" coords="225,528,400,569"/>
