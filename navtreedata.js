@@ -59,8 +59,6 @@ var NAVTREE =
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -70,18 +68,18 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_1_intro.html",
-"check_critical_path_8tcl_source.html",
-"class_design_info.html#a628b4842f8101b8f0b5ae3699c1e20e6",
-"class_device_info.html#af119eee6a138258915dc1a01e709eae0",
-"class_general_spreader_1_1_spread_region_1_1_sub_box.html#afcf4167da8529556bbe21a11310dabcb",
-"class_macro_legalizer.html#aa7d0c899fb9ac66f9e22fb17e5db99fe",
-"class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77",
-"class_placement_info_1_1_compatible_placement_table.html#a4e5782e440657a0aa364bedea73021b3",
-"class_placement_info_1_1_placement_site_type_info.html#a6bd1d583e2bb476246ec672d427c4bea",
-"class_vivado_graph_util_1_1_vivado_cell.html#a0670694abeff3c04715302b680811144",
-"functions_o.html",
-"namespacepaint_benchmarks_results.html#a9d91cddf5b74bcaa731c3407e61f33ca",
-"struct_general_spreader_1_1_spread_region_1_1expand_op.html#a1dcf5c4e088edbcd095f0ad8717219e6"
+"class_c_l_b_legalizer.html#a5a707c1b66106287af77b052a56a5abb",
+"class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc",
+"class_device_info_1_1_clock_region_1_1_clock_column.html#aba7cf71626bdec2c5a1dae074ffe77fb",
+"class_global_placer.html#aadb6ba900abf8a5d1c03e0fd7edd320c",
+"class_min_cost_bipartite_matcher.html#a69332995b52009a98cf11ccdb3d7fa3b",
+"class_placement_info.html",
+"class_placement_info_1_1_placement_bin_info.html#a5d2498d361530c5e6b4bc3de4dfb6236",
+"class_placement_info_1_1_placement_unit.html#a7939f4fe9625e17800463cba139a9ec0",
+"class_vivado_graph_util_1_1_vivado_pattern_cluster.html#aa95f06713387e241ce90137ae3c476e3",
+"get_pin_offset_8py.html#a8b0b21a442621b5b29a5bc2d9f7b7ee9",
+"namespacepainter.html#a89e6fac1a81c30e5ce88ae8e11c68622",
+"struct_q_p_solver_wrapper_1_1solver_settings_type.html#a4807330da1229f5c45a1fd52ca277af9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

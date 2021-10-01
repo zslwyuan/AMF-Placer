@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['eb_0',['EB',['../_g_l_draw_8cc.html#a6f9f255c8d93411ac8fba9cab5ec925e',1,'GLDraw.cc']]],
-  ['eva_1',['EVA',['../_g_l_draw_8cc.html#aefc67a8f2c22d345d31f117cec5f4057',1,'GLDraw.cc']]]
+  ['placementmacrotype_0',['PlacementMacroType',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0',1,'PlacementInfo::PlacementMacro']]],
+  ['placementunittype_1',['PlacementUnitType',['../class_placement_info.html#a8d1d25b4d5ebf18dd1e77f12abdcf738',1,'PlacementInfo']]]
 ];

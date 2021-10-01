@@ -6,8 +6,6 @@ var dir_87d18a4dc5174905bfd7d2dc734defe6 =
     [ "ExternalProcessFunc.h", "_external_process_func_8h.html", [
       [ "ExternalProcessFunc", "class_external_process_func.html", "class_external_process_func" ]
     ] ],
-    [ "GLDraw.cc", "_g_l_draw_8cc.html", "_g_l_draw_8cc" ],
-    [ "GLDraw.h", "_g_l_draw_8h.html", "_g_l_draw_8h" ],
     [ "ProcessFuncInterface.h", "_process_func_interface_8h.html", [
       [ "ProcessFuncInterface", "class_process_func_interface.html", "class_process_func_interface" ]
     ] ],
