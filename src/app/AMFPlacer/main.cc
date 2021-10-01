@@ -5,7 +5,7 @@
  * @version 0.1
  * @date 2021-05-31
  *
- * @copyright Copyright (c) 2021
+ * @copyright Copyright (c) 2021 Reconfiguration Computing Systems Lab, The Hong Kong University of Science and Technology. All rights reserved.
  *
  */
 
