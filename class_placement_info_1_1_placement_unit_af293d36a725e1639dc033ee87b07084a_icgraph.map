@@ -7,11 +7,11 @@
 <area shape="rect" id="node37" href="$struct_packing___p_ucompare.html#a0b10d9023d879cfda214bd903f1bec44" title=" " alt="" coords="2203,601,2353,643"/>
 <area shape="rect" id="node38" href="$_placement_info_8cc.html#a0f0f5e6d103770fbc53ac592f3798708" title=" " alt="" coords="2235,667,2321,694"/>
 <area shape="rect" id="node39" href="$class_cluster_placer.html#abeaa9dab584d4fbf266c7a9e26fd57e3" title="refine the elements in obtained clusters to ensure the cells in user&#45;defined clusters in the same clu..." alt="" coords="2185,719,2371,760"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title=" " alt="" coords="849,149,1073,191"/>
-<area shape="rect" id="node9" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title=" " alt="" coords="873,215,1049,256"/>
-<area shape="rect" id="node10" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title=" " alt="" coords="849,5,1073,47"/>
-<area shape="rect" id="node11" href="$class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title=" " alt="" coords="850,70,1073,126"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="648,149,801,191"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="849,149,1073,191"/>
+<area shape="rect" id="node9" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="873,215,1049,256"/>
+<area shape="rect" id="node10" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region" alt="" coords="849,5,1073,47"/>
+<area shape="rect" id="node11" href="$class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title="add pseudo net for user&#45;defined clusters" alt="" coords="850,70,1073,126"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="648,149,801,191"/>
 <area shape="rect" id="node5" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="417,212,596,253"/>
 <area shape="rect" id="node6" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,277,365,319"/>
 <area shape="rect" id="node8" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,212,365,253"/>

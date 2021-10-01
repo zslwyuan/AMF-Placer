@@ -1,10 +1,10 @@
 <map id="PlacementInfo::getTimingInfo" name="PlacementInfo::getTimingInfo">
 <area shape="rect" id="node1" title=" " alt="" coords="1205,165,1396,191"/>
-<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title=" " alt="" coords="943,67,1133,108"/>
+<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="943,67,1133,108"/>
 <area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="640,129,871,171"/>
 <area shape="rect" id="node9" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="953,187,1123,228"/>
 <area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a" title=" " alt="" coords="919,251,1157,307"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="679,64,832,105"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="679,64,832,105"/>
 <area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,64,592,105"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>

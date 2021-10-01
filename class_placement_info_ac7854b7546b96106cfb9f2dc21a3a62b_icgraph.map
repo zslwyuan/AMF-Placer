@@ -1,9 +1,9 @@
 <map id="PlacementInfo::getPU2ClockRegionCenters" name="PlacementInfo::getPU2ClockRegionCenters">
 <area shape="rect" id="node1" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="1191,39,1380,80"/>
 <area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="640,5,871,47"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title=" " alt="" coords="919,68,1143,109"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region" alt="" coords="919,68,1143,109"/>
 <area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,71,116,98"/>
-<area shape="rect" id="node5" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="679,71,832,112"/>
+<area shape="rect" id="node5" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="679,71,832,112"/>
 <area shape="rect" id="node6" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,71,592,112"/>
 <area shape="rect" id="node7" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,64,365,105"/>
 <area shape="rect" id="node8" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,129,365,171"/>

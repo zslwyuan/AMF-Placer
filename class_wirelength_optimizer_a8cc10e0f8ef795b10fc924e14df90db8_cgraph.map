@@ -1,5 +1,5 @@
 <map id="WirelengthOptimizer::updateB2BNetWeightWorker" name="WirelengthOptimizer::updateB2BNetWeightWorker">
-<area shape="rect" id="node1" title=" " alt="" coords="5,27,200,69"/>
+<area shape="rect" id="node1" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="5,27,200,69"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="248,5,468,32"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="262,57,454,98"/>
 </map>

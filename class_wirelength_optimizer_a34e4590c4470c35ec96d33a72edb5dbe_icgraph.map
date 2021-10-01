@@ -1,4 +1,4 @@
 <map id="WirelengthOptimizer::setMacroLegalizationParameters" name="WirelengthOptimizer::setMacroLegalizationParameters">
-<area shape="rect" id="node1" title=" " alt="" coords="279,5,497,47"/>
+<area shape="rect" id="node1" title="Set the macro legalization parameters." alt="" coords="279,5,497,47"/>
 <area shape="rect" id="node2" href="$class_global_placer.html#a769b91db354db2b152a69a311ec55320" title="Set the macro legalization parameters (including legalization counter and pseudo net weight)" alt="" coords="5,5,231,47"/>
 </map>

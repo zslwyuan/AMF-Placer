@@ -1,10 +1,10 @@
 <map id="PlacementInfo::getPULegalXY" name="PlacementInfo::getPULegalXY">
 <area shape="rect" id="node1" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="1156,147,1355,174"/>
-<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title=" " alt="" coords="919,31,1095,72"/>
+<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="919,31,1095,72"/>
 <area shape="rect" id="node8" href="$class_a_m_f_placer.html#a3bc63638c6fcf4e1d4a2ec2cfa3c2b99" title=" " alt="" coords="648,224,859,265"/>
 <area shape="rect" id="node9" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="907,122,1108,149"/>
 <area shape="rect" id="node11" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="413,122,600,149"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="677,5,830,47"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="677,5,830,47"/>
 <area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="417,5,596,47"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,71,365,112"/>
 <area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,5,365,47"/>

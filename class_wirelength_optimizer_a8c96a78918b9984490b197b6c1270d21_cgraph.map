@@ -1,5 +1,5 @@
 <map id="WirelengthOptimizer::addPseudoNetForMacros" name="WirelengthOptimizer::addPseudoNetForMacros">
-<area shape="rect" id="node1" title=" " alt="" coords="5,155,181,196"/>
+<area shape="rect" id="node1" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="5,155,181,196"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="240,71,417,112"/>
 <area shape="rect" id="node6" href="$class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="237,137,420,163"/>
 <area shape="rect" id="node7" href="$class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="229,187,428,214"/>

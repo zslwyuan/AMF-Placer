@@ -126,49 +126,61 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a81b9e1d98fcb88480813f3c97c7b8c97"><td class="mdescLeft">&#160;</td><td class="mdescRight">use quadratic model to estimate the HPWL and some timing/user-defined pseudo nets are involved for specific optimization  <a href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97">More...</a><br /></td></tr>
 <tr class="separator:a81b9e1d98fcb88480813f3c97c7b8c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c9381a4bd4242d48ce47b5c9cd93794"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794">updateB2BNetWeight</a> (float pesudoNetWeight, bool enableMacroPseudoNet2Site=false, bool considerNetNum=true, bool enableUserDefinedClusterOpt=false, bool timingOpt=false)</td></tr>
+<tr class="memdesc:a5c9381a4bd4242d48ce47b5c9cd93794"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the net weights in the quadratic model according to B2B net HPWL model.  <a href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794">More...</a><br /></td></tr>
 <tr class="separator:a5c9381a4bd4242d48ce47b5c9cd93794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a647eb3ec59e6f874060fb47cba1aba8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c">reloadPlacementInfo</a> ()</td></tr>
+<tr class="memdesc:a647eb3ec59e6f874060fb47cba1aba8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">re-initialize some parameters and optimizer configuration according to the <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a>  <a href="class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c">More...</a><br /></td></tr>
 <tr class="separator:a647eb3ec59e6f874060fb47cba1aba8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34e4590c4470c35ec96d33a72edb5dbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a34e4590c4470c35ec96d33a72edb5dbe">setMacroLegalizationParameters</a> (int cnt, float macroLegalizationWeight)</td></tr>
+<tr class="memdesc:a34e4590c4470c35ec96d33a72edb5dbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the macro legalization parameters.  <a href="class_wirelength_optimizer.html#a34e4590c4470c35ec96d33a72edb5dbe">More...</a><br /></td></tr>
 <tr class="separator:a34e4590c4470c35ec96d33a72edb5dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3914251cd679404226ae5b58e32a8265"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265">getMacroPseudoNetEnhanceCnt</a> ()</td></tr>
+<tr class="memdesc:a3914251cd679404226ae5b58e32a8265"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of the conducted macro iterations.  <a href="class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265">More...</a><br /></td></tr>
 <tr class="separator:a3914251cd679404226ae5b58e32a8265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade01efd3233d5a808dfde107f1c122f5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5">getMacroLegalizationWeight</a> ()</td></tr>
+<tr class="memdesc:ade01efd3233d5a808dfde107f1c122f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the net weight for macro legalization.  <a href="class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5">More...</a><br /></td></tr>
 <tr class="separator:ade01efd3233d5a808dfde107f1c122f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8cc10e0f8ef795b10fc924e14df90db8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8">updateB2BNetWeightWorker</a> (<a class="el" href="class_placement_info.html">PlacementInfo</a> *<a class="el" href="class_wirelength_optimizer.html#a7724f8f037b27aae87ba4da211030f15">placementInfo</a>, std::vector&lt; Eigen::Triplet&lt; float &gt; &gt; &amp;objectiveMatrixTripletList, std::vector&lt; float &gt; &amp;objectiveMatrixDiag, Eigen::VectorXd &amp;objectiveVector, float <a class="el" href="class_wirelength_optimizer.html#a4c0e97d41ee7c72b3ada1e179d1edca5">generalNetWeight</a>, float <a class="el" href="class_wirelength_optimizer.html#a6410dc0227f37b062eaf1f0fb84c10ad">y2xRatio</a>, bool updateX, bool updateY)</td></tr>
+<tr class="memdesc:a8cc10e0f8ef795b10fc924e14df90db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">a worker funtion for multi-threading net weight updating  <a href="class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8">More...</a><br /></td></tr>
 <tr class="separator:a8cc10e0f8ef795b10fc924e14df90db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:aa7862a173e4b6db619ea1f849a38bdf7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7">solverLoadData</a> ()</td></tr>
+<tr class="memdesc:aa7862a173e4b6db619ea1f849a38bdf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">load to placement location from <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> to the solver  <a href="class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7">More...</a><br /></td></tr>
 <tr class="separator:aa7862a173e4b6db619ea1f849a38bdf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65353609f933334ac11313cd05334dc6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a65353609f933334ac11313cd05334dc6">solverLoadFixedData</a> ()</td></tr>
+<tr class="memdesc:a65353609f933334ac11313cd05334dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">load to placement location of fixed PlacementUnits from <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> to the solver  <a href="class_wirelength_optimizer.html#a65353609f933334ac11313cd05334dc6">More...</a><br /></td></tr>
 <tr class="separator:a65353609f933334ac11313cd05334dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27d21c6da62056ba4d4496d7db667a8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b">solverWriteBackData</a> ()</td></tr>
+<tr class="memdesc:a27d21c6da62056ba4d4496d7db667a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">write placement location from the solver to the <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a>  <a href="class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b">More...</a><br /></td></tr>
 <tr class="separator:a27d21c6da62056ba4d4496d7db667a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c96a78918b9984490b197b6c1270d21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21">addPseudoNetForMacros</a> (float pesudoNetWeight, bool considerNetNum)</td></tr>
+<tr class="memdesc:a8c96a78918b9984490b197b6c1270d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">add the legalization pseudo nets to force macros move to the legal sites  <a href="class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21">More...</a><br /></td></tr>
 <tr class="separator:a8c96a78918b9984490b197b6c1270d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53d649c7613334884c4f01292b53e808"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a53d649c7613334884c4f01292b53e808">addExtraWeightToNetsInLongPath</a> (float pesudoNetWeight)</td></tr>
-<tr class="separator:a53d649c7613334884c4f01292b53e808"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2408cbe2566f7cca5fd1e200c5f44d70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70">addPseudoNet2LoctionForAllPUs</a> (float pesudoNetWeight, bool considerNetNum)</td></tr>
+<tr class="memdesc:a2408cbe2566f7cca5fd1e200c5f44d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the movement of PlacementUnit for WL optimization.  <a href="class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70">More...</a><br /></td></tr>
 <tr class="separator:a2408cbe2566f7cca5fd1e200c5f44d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac726db5290500852fb5b4788fdcb0dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9">updatePseudoNetForUserDefinedClusters</a> (float pesudoNetWeight)</td></tr>
+<tr class="memdesc:ac726db5290500852fb5b4788fdcb0dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">add pseudo net for user-defined clusters  <a href="class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9">More...</a><br /></td></tr>
 <tr class="separator:ac726db5290500852fb5b4788fdcb0dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac5c3efa85ee2a71ff4cd60b5f1acdbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#aac5c3efa85ee2a71ff4cd60b5f1acdbc">adjustHighFanoutPULocation</a> (float pesudoNetWeight)</td></tr>
-<tr class="separator:aac5c3efa85ee2a71ff4cd60b5f1acdbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78ce7c8180fb4f865eb2eb70e5d068e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0">addPseudoNet_LevelBased</a> (int levelThr, float pesudoNetWeight, double disExpected)</td></tr>
+<tr class="memdesc:a78ce7c8180fb4f865eb2eb70e5d068e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">add pseudo net for timing optimization based on the length of timing path and the span of the nets  <a href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0">More...</a><br /></td></tr>
 <tr class="separator:a78ce7c8180fb4f865eb2eb70e5d068e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b4ed59d2937e4117e528e9655053d7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c">updatePseudoNetForClockRegion</a> (float pesudoNetWeight)</td></tr>
+<tr class="memdesc:a5b4ed59d2937e4117e528e9655053d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add pseudo nets for clock region  <a href="class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c">More...</a><br /></td></tr>
 <tr class="separator:a5b4ed59d2937e4117e528e9655053d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e573e9f6494faa555f2b9ec171f5234"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234">manhattanDis</a> (double x0, double y0, double x1, double y1)</td></tr>
+<tr class="memdesc:a8e573e9f6494faa555f2b9ec171f5234"><td class="mdescLeft">&#160;</td><td class="mdescRight">evaluate the Mahattan distance between two locations  <a href="class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234">More...</a><br /></td></tr>
 <tr class="separator:a8e573e9f6494faa555f2b9ec171f5234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-methods" name="pri-static-methods"></a>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a7841e6156f0b110444be92eefc9cc7c2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a7841e6156f0b110444be92eefc9cc7c2">QPSolve</a> (<a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a> *&amp;curSolver)</td></tr>
+<tr class="memdesc:a7841e6156f0b110444be92eefc9cc7c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">call the cooresponding solver to solve the QP problem defined in the given <a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a>  <a href="class_wirelength_optimizer.html#a7841e6156f0b110444be92eefc9cc7c2">More...</a><br /></td></tr>
 <tr class="separator:a7841e6156f0b110444be92eefc9cc7c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -177,27 +189,35 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a7724f8f037b27aae87ba4da211030f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac77c96f408f2e676bd98864b41f9fdc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#ac77c96f408f2e676bd98864b41f9fdc1">xSolver</a> = nullptr</td></tr>
 <tr class="separator:ac77c96f408f2e676bd98864b41f9fdc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33cc904a55b50fa06576888f69e4e50c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a33cc904a55b50fa06576888f69e4e50c">ySolver</a> = nullptr</td></tr>
-<tr class="separator:a33cc904a55b50fa06576888f69e4e50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab49603c6a11b15236984251dfe0b69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a5ab49603c6a11b15236984251dfe0b69">ySolver</a> = nullptr</td></tr>
+<tr class="separator:a5ab49603c6a11b15236984251dfe0b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31ef65d51cd3a2cee148c240a4f7ce02"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a31ef65d51cd3a2cee148c240a4f7ce02">JSONCfg</a></td></tr>
 <tr class="separator:a31ef65d51cd3a2cee148c240a4f7ce02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4072816583e5c8923cc35736f84f0393"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a4072816583e5c8923cc35736f84f0393">verbose</a></td></tr>
 <tr class="separator:a4072816583e5c8923cc35736f84f0393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c0e97d41ee7c72b3ada1e179d1edca5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a4c0e97d41ee7c72b3ada1e179d1edca5">generalNetWeight</a> = 1.0</td></tr>
+<tr class="memdesc:a4c0e97d41ee7c72b3ada1e179d1edca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">a common factor indicate the overall strength of the nets in the QP model from external setting  <a href="class_wirelength_optimizer.html#a4c0e97d41ee7c72b3ada1e179d1edca5">More...</a><br /></td></tr>
 <tr class="separator:a4c0e97d41ee7c72b3ada1e179d1edca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6410dc0227f37b062eaf1f0fb84c10ad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a6410dc0227f37b062eaf1f0fb84c10ad">y2xRatio</a> = 1.0</td></tr>
+<tr class="memdesc:a6410dc0227f37b062eaf1f0fb84c10ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning in X-coordinate  <a href="class_wirelength_optimizer.html#a6410dc0227f37b062eaf1f0fb84c10ad">More...</a><br /></td></tr>
 <tr class="separator:a6410dc0227f37b062eaf1f0fb84c10ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7d137912da619f297a836bf471725a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#ac7d137912da619f297a836bf471725a9">useUnconstrainedCG</a> = true</td></tr>
+<tr class="memdesc:ac7d137912da619f297a836bf471725a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicate whether wirelength optimizer uses Eigen3, which cannot solve QP problem with constraints. If false, OSQP solver which can set constraints for the quadratic model, will be involved to replace Eigen3.  <a href="class_wirelength_optimizer.html#ac7d137912da619f297a836bf471725a9">More...</a><br /></td></tr>
 <tr class="separator:ac7d137912da619f297a836bf471725a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add0094daef574ec0a9924082f901478e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#add0094daef574ec0a9924082f901478e">MKLorNot</a> = false</td></tr>
+<tr class="memdesc:add0094daef574ec0a9924082f901478e"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicate whether wirelength optimizer is based on MKL library when using OSQP placer, which can set constraints for the quadratic model  <a href="class_wirelength_optimizer.html#add0094daef574ec0a9924082f901478e">More...</a><br /></td></tr>
 <tr class="separator:add0094daef574ec0a9924082f901478e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3447060fb5a4de21b98f72ec5963883e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a3447060fb5a4de21b98f72ec5963883e">directMacroLegalize</a> = false</td></tr>
+<tr class="memdesc:a3447060fb5a4de21b98f72ec5963883e"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicate whether we use direct macro legalization instread of the progressive legalization (2-phase legalization)  <a href="class_wirelength_optimizer.html#a3447060fb5a4de21b98f72ec5963883e">More...</a><br /></td></tr>
 <tr class="separator:a3447060fb5a4de21b98f72ec5963883e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49fe83507a34820e18b724b9e16cf65a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a49fe83507a34820e18b724b9e16cf65a">oriMacroLegalizationWeight</a> = 1.0</td></tr>
-<tr class="separator:a49fe83507a34820e18b724b9e16cf65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2163a080eb875eb14da45b5cdc05929c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a2163a080eb875eb14da45b5cdc05929c">userDefinedClusterFadeOutFactor</a> = 1.0</td></tr>
+<tr class="memdesc:a2163a080eb875eb14da45b5cdc05929c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the fade-out factor for the user-defined clusters  <a href="class_wirelength_optimizer.html#a2163a080eb875eb14da45b5cdc05929c">More...</a><br /></td></tr>
 <tr class="separator:a2163a080eb875eb14da45b5cdc05929c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fe83507a34820e18b724b9e16cf65a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#a49fe83507a34820e18b724b9e16cf65a">oriMacroLegalizationWeight</a> = 1.0</td></tr>
+<tr class="memdesc:a49fe83507a34820e18b724b9e16cf65a"><td class="mdescLeft">&#160;</td><td class="mdescRight">the net weight for macro legalization  <a href="class_wirelength_optimizer.html#a49fe83507a34820e18b724b9e16cf65a">More...</a><br /></td></tr>
+<tr class="separator:a49fe83507a34820e18b724b9e16cf65a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae979e2083ad96aa2dadf24151634e216"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wirelength_optimizer.html#ae979e2083ad96aa2dadf24151634e216">macroPseudoNetCnt</a> = 0</td></tr>
+<tr class="memdesc:ae979e2083ad96aa2dadf24151634e216"><td class="mdescLeft">&#160;</td><td class="mdescRight">the number of the conducted macro iterations  <a href="class_wirelength_optimizer.html#ae979e2083ad96aa2dadf24151634e216">More...</a><br /></td></tr>
 <tr class="separator:ae979e2083ad96aa2dadf24151634e216"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -293,44 +313,6 @@ Here is the call graph for this function:</div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a53d649c7613334884c4f01292b53e808" name="a53d649c7613334884c4f01292b53e808"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53d649c7613334884c4f01292b53e808">&#9670;&nbsp;</a></span>addExtraWeightToNetsInLongPath()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WirelengthOptimizer::addExtraWeightToNetsInLongPath </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>pesudoNetWeight</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">303</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_wirelength_optimizer_a53d649c7613334884c4f01292b53e808_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a53d649c7613334884c4f01292b53e808_cgraph" alt=""/></div>
-<map name="aclass_wirelength_optimizer_a53d649c7613334884c4f01292b53e808_cgraph" id="aclass_wirelength_optimizer_a53d649c7613334884c4f01292b53e808_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,233,76"/>
-<area shape="rect" href="class_placement_info.html#a31002e9f9505db4830e71b8b1eeb4837" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="289,5,467,47"/>
-<area shape="rect" href="class_placement_info.html#ac5727dfe232e8402b6f6c95ba2cc5d43" title="Get the Long Paths in the net list for later optimization." alt="" coords="281,71,475,98"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a2408cbe2566f7cca5fd1e200c5f44d70" name="a2408cbe2566f7cca5fd1e200c5f44d70"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2408cbe2566f7cca5fd1e200c5f44d70">&#9670;&nbsp;</a></span>addPseudoNet2LoctionForAllPUs()</h2>
 
@@ -365,7 +347,17 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00621">621</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
+<p>as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the movement of PlacementUnit for WL optimization. </p>
+<p >Please note that we can add the interconnect-aware factor into the pseudo nets so the macros can move slower compared to the fine-grained elements.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pesudoNetWeight</td><td>the common weight factor for pseudo nets </td></tr>
+    <tr><td class="paramname">considerNetNum</td><td>whether add the interconnection-density-aware factor to pseudo net weights </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00500">500</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>.</p>
 <div class="dynheader">
@@ -373,7 +365,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a2408cbe2566f7cca5fd1e200c5f44d70_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a2408cbe2566f7cca5fd1e200c5f44d70_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a2408cbe2566f7cca5fd1e200c5f44d70_cgraph" id="aclass_wirelength_optimizer_a2408cbe2566f7cca5fd1e200c5f44d70_cgraph">
-<area shape="rect" title=" " alt="" coords="5,136,229,177"/>
+<area shape="rect" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="5,136,229,177"/>
 <area shape="rect" href="class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="285,71,462,112"/>
 <area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="277,136,469,177"/>
 <area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="282,202,465,229"/>
@@ -387,8 +379,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a2408cbe2566f7cca5fd1e200c5f44d70_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a2408cbe2566f7cca5fd1e200c5f44d70_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a2408cbe2566f7cca5fd1e200c5f44d70_icgraph" id="aclass_wirelength_optimizer_a2408cbe2566f7cca5fd1e200c5f44d70_icgraph">
-<area shape="rect" title=" " alt="" coords="841,39,1065,80"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="640,39,793,80"/>
+<area shape="rect" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="841,39,1065,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -438,7 +430,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00424">424</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
+<p>add pseudo net for timing optimization based on the length of timing path and the span of the nets </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">levelThr</td><td>the threshold of the level of the timing path to trigger to timing optimzation </td></tr>
+    <tr><td class="paramname">pesudoNetWeight</td><td>the common weight factor for pseudo nets </td></tr>
+    <tr><td class="paramname">disExpected</td><td>the expected total length of timing paths </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">303</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>.</p>
 <div class="dynheader">
@@ -446,14 +448,14 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a78ce7c8180fb4f865eb2eb70e5d068e0_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a78ce7c8180fb4f865eb2eb70e5d068e0_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a78ce7c8180fb4f865eb2eb70e5d068e0_cgraph" id="aclass_wirelength_optimizer_a78ce7c8180fb4f865eb2eb70e5d068e0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,179,196,221"/>
+<area shape="rect" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="5,179,196,221"/>
 <area shape="rect" href="class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="247,5,461,32"/>
 <area shape="rect" href="class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="258,56,450,83"/>
 <area shape="rect" href="class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="244,107,464,133"/>
 <area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="263,157,445,184"/>
 <area shape="rect" href="class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="249,209,459,250"/>
 <area shape="rect" href="class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="259,275,449,301"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title=" " alt="" coords="285,326,423,367"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title="evaluate the Mahattan distance between two locations" alt="" coords="285,326,423,367"/>
 <area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="309,392,399,419"/>
 </map>
 </div>
@@ -462,8 +464,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a78ce7c8180fb4f865eb2eb70e5d068e0_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a78ce7c8180fb4f865eb2eb70e5d068e0_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a78ce7c8180fb4f865eb2eb70e5d068e0_icgraph" id="aclass_wirelength_optimizer_a78ce7c8180fb4f865eb2eb70e5d068e0_icgraph">
-<area shape="rect" title=" " alt="" coords="841,39,1032,80"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="640,39,793,80"/>
+<area shape="rect" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="841,39,1032,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -507,6 +509,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>add the legalization pseudo nets to force macros move to the legal sites </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pesudoNetWeight</td><td>the common weight factor for pseudo nets </td></tr>
+    <tr><td class="paramname">considerNetNum</td><td>whether add the interconnection-density-aware factor to pseudo net weights </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">225</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>.</p>
@@ -515,7 +526,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a8c96a78918b9984490b197b6c1270d21_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a8c96a78918b9984490b197b6c1270d21_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a8c96a78918b9984490b197b6c1270d21_cgraph" id="aclass_wirelength_optimizer_a8c96a78918b9984490b197b6c1270d21_cgraph">
-<area shape="rect" title=" " alt="" coords="5,155,181,196"/>
+<area shape="rect" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="5,155,181,196"/>
 <area shape="rect" href="class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="240,71,417,112"/>
 <area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="237,137,420,163"/>
 <area shape="rect" href="class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="229,187,428,214"/>
@@ -530,57 +541,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a8c96a78918b9984490b197b6c1270d21_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a8c96a78918b9984490b197b6c1270d21_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a8c96a78918b9984490b197b6c1270d21_icgraph" id="aclass_wirelength_optimizer_a8c96a78918b9984490b197b6c1270d21_icgraph">
-<area shape="rect" title=" " alt="" coords="841,39,1017,80"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="640,39,793,80"/>
+<area shape="rect" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="841,39,1017,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="aac5c3efa85ee2a71ff4cd60b5f1acdbc" name="aac5c3efa85ee2a71ff4cd60b5f1acdbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac5c3efa85ee2a71ff4cd60b5f1acdbc">&#9670;&nbsp;</a></span>adjustHighFanoutPULocation()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WirelengthOptimizer::adjustHighFanoutPULocation </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>pesudoNetWeight</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00351">351</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_wirelength_optimizer_aac5c3efa85ee2a71ff4cd60b5f1acdbc_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_aac5c3efa85ee2a71ff4cd60b5f1acdbc_cgraph" alt=""/></div>
-<map name="aclass_wirelength_optimizer_aac5c3efa85ee2a71ff4cd60b5f1acdbc_cgraph" id="aclass_wirelength_optimizer_aac5c3efa85ee2a71ff4cd60b5f1acdbc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,224,204,265"/>
-<area shape="rect" href="class_placement_info.html#a31002e9f9505db4830e71b8b1eeb4837" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="268,5,447,47"/>
-<area shape="rect" href="class_placement_info_1_1_placement_net.html#aa241ff513ed0b5c90b16863122107f26" title="Get the reference of the vector of the driver units that drive the net." alt="" coords="270,71,445,112"/>
-<area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="261,136,453,177"/>
-<area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="266,202,449,229"/>
-<area shape="rect" href="class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="270,253,445,295"/>
-<area shape="rect" href="class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="252,319,463,346"/>
-<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="312,370,403,397"/>
-<area shape="rect" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="308,421,407,447"/>
-<area shape="rect" href="class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="511,312,685,353"/>
 </map>
 </div>
 
@@ -609,7 +575,10 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00084">84</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>Get the net weight for macro legalization. </p>
+<dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00145">145</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00134">GlobalPlacer::getMacroLegalizationWeight()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00093">GlobalPlacer::GlobalPlacement_CLBElements()</a>.</p>
 <div class="dynheader">
@@ -617,7 +586,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_ade01efd3233d5a808dfde107f1c122f5_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_ade01efd3233d5a808dfde107f1c122f5_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_ade01efd3233d5a808dfde107f1c122f5_icgraph" id="aclass_wirelength_optimizer_ade01efd3233d5a808dfde107f1c122f5_icgraph">
-<area shape="rect" title=" " alt="" coords="437,39,628,80"/>
+<area shape="rect" title="Get the net weight for macro legalization." alt="" coords="437,39,628,80"/>
 <area shape="rect" href="class_global_placer.html#a34d54c12285caf69c091ddd806b8816d" title="Get the current macro legalization weight object." alt="" coords="164,5,389,47"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="176,71,377,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
@@ -649,7 +618,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00079">79</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>Get the number of the conducted macro iterations. </p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00135">135</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00124">GlobalPlacer::getMacroPseudoNetEnhanceCnt()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00093">GlobalPlacer::GlobalPlacement_CLBElements()</a>.</p>
 <div class="dynheader">
@@ -657,7 +629,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a3914251cd679404226ae5b58e32a8265_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a3914251cd679404226ae5b58e32a8265_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a3914251cd679404226ae5b58e32a8265_icgraph" id="aclass_wirelength_optimizer_a3914251cd679404226ae5b58e32a8265_icgraph">
-<area shape="rect" title=" " alt="" coords="413,39,631,80"/>
+<area shape="rect" title="Get the number of the conducted macro iterations." alt="" coords="413,39,631,80"/>
 <area shape="rect" href="class_global_placer.html#a418e40981906a19d68b14c773ab201f4" title="Get the number of macro pseudo net enhancements." alt="" coords="165,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
@@ -728,7 +700,7 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">pesudoNetWeight</td><td>the common weight factor for pseudo nets </td></tr>
     <tr><td class="paramname">firstIteration</td><td>indicates whether this is the first iteration of current round of WL optimization to control the data loading </td></tr>
     <tr><td class="paramname">forwardSolutionToNextIteration</td><td>if this round of WL optimization includes multiple iterations, do we forward the location data obtained in last iteration for later processing? </td></tr>
-    <tr><td class="paramname">enableMacroPseudoNet2Site</td><td></td></tr>
+    <tr><td class="paramname">enableMacroPseudoNet2Site</td><td>enable the legalization pseudo net to force macros move to the legal site </td></tr>
     <tr><td class="paramname">considerNetNum</td><td>whether add the interconnection-density-aware factor to pseudo net weights </td></tr>
     <tr><td class="paramname">enableUserDefinedClusterOpt</td><td>whether check user-defined cluster information to add pseudo nets </td></tr>
     <tr><td class="paramname">timingOpt</td><td>whether turn on the timing-oriented optimizations </td></tr>
@@ -747,23 +719,23 @@ Here is the call graph for this function:</div>
 <area shape="rect" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="5,173,184,214"/>
 <area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="801,35,891,62"/>
 <area shape="rect" href="class_q_p_solver_wrapper.html#a4d661af587ec252bc62b14d420cd6bce" title=" " alt="" coords="232,68,416,95"/>
-<area shape="rect" href="class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title=" " alt="" coords="255,157,393,198"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a65353609f933334ac11313cd05334dc6" title=" " alt="" coords="249,692,399,733"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title=" " alt="" coords="501,250,651,292"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="247,426,401,468"/>
+<area shape="rect" href="class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="255,157,393,198"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a65353609f933334ac11313cd05334dc6" title="load to placement location of fixed PlacementUnits from PlacementInfo to the solver" alt="" coords="249,692,399,733"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="501,250,651,292"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="247,426,401,468"/>
 <area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="750,90,942,132"/>
 <area shape="rect" href="class_placement_info.html#a00864f7c104c5bbac820accd054b12e1" title=" " alt="" coords="465,892,687,933"/>
 <area shape="rect" href="class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="741,594,951,620"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="1006,576,1181,617"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title=" " alt="" coords="464,485,688,526"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="464,485,688,526"/>
 <area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="755,492,937,519"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title=" " alt="" coords="481,368,671,409"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="481,368,671,409"/>
 <area shape="rect" href="class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="736,156,956,183"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title=" " alt="" coords="488,550,664,592"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="488,550,664,592"/>
 <area shape="rect" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="797,827,895,854"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title=" " alt="" coords="479,185,673,226"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title=" " alt="" coords="464,696,688,737"/>
-<area shape="rect" href="class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title=" " alt="" coords="465,812,687,868"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="479,185,673,226"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region" alt="" coords="464,696,688,737"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title="add pseudo net for user&#45;defined clusters" alt="" coords="465,812,687,868"/>
 <area shape="rect" href="class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="757,696,935,737"/>
 <area shape="rect" href="class_placement_info.html#a31002e9f9505db4830e71b8b1eeb4837" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="1004,641,1183,682"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="1006,706,1181,748"/>
@@ -772,7 +744,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="750,442,942,468"/>
 <area shape="rect" href="class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="741,208,951,249"/>
 <area shape="rect" href="class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="751,274,941,300"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title=" " alt="" coords="777,325,915,366"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title="evaluate the Mahattan distance between two locations" alt="" coords="777,325,915,366"/>
 <area shape="rect" href="class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="747,644,945,671"/>
 <area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="809,543,883,570"/>
 <area shape="rect" href="class_placement_info.html#ac7854b7546b96106cfb9f2dc21a3a62b" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="751,761,941,802"/>
@@ -844,17 +816,29 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00102">102</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>evaluate the Mahattan distance between two locations </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x0</td><td></td></tr>
+    <tr><td class="paramname">y0</td><td></td></tr>
+    <tr><td class="paramname">x1</td><td></td></tr>
+    <tr><td class="paramname">y1</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00424">addPseudoNet_LevelBased()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00234">234</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">addPseudoNet_LevelBased()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a8e573e9f6494faa555f2b9ec171f5234_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a8e573e9f6494faa555f2b9ec171f5234_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a8e573e9f6494faa555f2b9ec171f5234_icgraph" id="aclass_wirelength_optimizer_a8e573e9f6494faa555f2b9ec171f5234_icgraph">
-<area shape="rect" title=" " alt="" coords="1080,39,1219,80"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title=" " alt="" coords="841,39,1032,80"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="640,39,793,80"/>
+<area shape="rect" title="evaluate the Mahattan distance between two locations" alt="" coords="1080,39,1219,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="841,39,1032,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -888,6 +872,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>call the cooresponding solver to solve the QP problem defined in the given <a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">curSolver</td><td>a given <a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a647eb3ec59e6f874060fb47cba1aba8c" name="a647eb3ec59e6f874060fb47cba1aba8c"></a>
@@ -905,6 +897,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>re-initialize some parameters and optimizer configuration according to the <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> </p>
+<p ><a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> might change due to the loading of checkpoint or re-initialization of bin grid. Therefore, we need to let the WL optimizer to know the changes. </p>
+
 <p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">38</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00093">GlobalPlacer::GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00274">GlobalPlacer::GlobalPlacement_fixedCLB()</a>.</p>
@@ -913,7 +908,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a647eb3ec59e6f874060fb47cba1aba8c_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a647eb3ec59e6f874060fb47cba1aba8c_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a647eb3ec59e6f874060fb47cba1aba8c_cgraph" id="aclass_wirelength_optimizer_a647eb3ec59e6f874060fb47cba1aba8c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,99,152,141"/>
+<area shape="rect" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="5,99,152,141"/>
 <area shape="rect" href="class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="200,5,400,32"/>
 <area shape="rect" href="class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="200,56,400,83"/>
 <area shape="rect" href="class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="201,107,399,133"/>
@@ -926,7 +921,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a647eb3ec59e6f874060fb47cba1aba8c_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a647eb3ec59e6f874060fb47cba1aba8c_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a647eb3ec59e6f874060fb47cba1aba8c_icgraph" id="aclass_wirelength_optimizer_a647eb3ec59e6f874060fb47cba1aba8c_icgraph">
-<area shape="rect" title=" " alt="" coords="413,39,560,80"/>
+<area shape="rect" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="413,39,560,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
@@ -969,7 +964,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00073">73</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>Set the macro legalization parameters. </p>
+<p >The convergence of the placement is determined by some parameters and when we load the checkpoint from files, we also need to load the corresponding parameters for the optimizers.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cnt</td><td>the number of the conducted macro iterations </td></tr>
+    <tr><td class="paramname">macroLegalizationWeight</td><td>the net weight for macro legalization </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00124">124</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00145">GlobalPlacer::setMacroLegalizationParameters()</a>.</p>
 <div class="dynheader">
@@ -977,7 +982,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a34e4590c4470c35ec96d33a72edb5dbe_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a34e4590c4470c35ec96d33a72edb5dbe_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a34e4590c4470c35ec96d33a72edb5dbe_icgraph" id="aclass_wirelength_optimizer_a34e4590c4470c35ec96d33a72edb5dbe_icgraph">
-<area shape="rect" title=" " alt="" coords="279,5,497,47"/>
+<area shape="rect" title="Set the macro legalization parameters." alt="" coords="279,5,497,47"/>
 <area shape="rect" href="class_global_placer.html#a769b91db354db2b152a69a311ec55320" title="Set the macro legalization parameters (including legalization counter and pseudo net weight)" alt="" coords="5,5,231,47"/>
 </map>
 </div>
@@ -1007,6 +1012,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>load to placement location from <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> to the solver </p>
+
 <p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00087">87</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>.</p>
@@ -1015,7 +1022,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_aa7862a173e4b6db619ea1f849a38bdf7_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_aa7862a173e4b6db619ea1f849a38bdf7_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_aa7862a173e4b6db619ea1f849a38bdf7_cgraph" id="aclass_wirelength_optimizer_aa7862a173e4b6db619ea1f849a38bdf7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,144,47"/>
+<area shape="rect" title="load to placement location from PlacementInfo to the solver" alt="" coords="5,5,144,47"/>
 <area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="192,5,384,47"/>
 </map>
 </div>
@@ -1024,7 +1031,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_aa7862a173e4b6db619ea1f849a38bdf7_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_aa7862a173e4b6db619ea1f849a38bdf7_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_aa7862a173e4b6db619ea1f849a38bdf7_icgraph" id="aclass_wirelength_optimizer_aa7862a173e4b6db619ea1f849a38bdf7_icgraph">
-<area shape="rect" title=" " alt="" coords="640,39,779,80"/>
+<area shape="rect" title="load to placement location from PlacementInfo to the solver" alt="" coords="640,39,779,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -1057,6 +1064,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>load to placement location of fixed PlacementUnits from <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> to the solver </p>
+
 <p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00097">97</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>.</p>
@@ -1065,7 +1074,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a65353609f933334ac11313cd05334dc6_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a65353609f933334ac11313cd05334dc6_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a65353609f933334ac11313cd05334dc6_cgraph" id="aclass_wirelength_optimizer_a65353609f933334ac11313cd05334dc6_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,156,47"/>
+<area shape="rect" title="load to placement location of fixed PlacementUnits from PlacementInfo to the solver" alt="" coords="5,5,156,47"/>
 <area shape="rect" href="class_placement_info.html#a00864f7c104c5bbac820accd054b12e1" title=" " alt="" coords="204,5,427,47"/>
 </map>
 </div>
@@ -1074,7 +1083,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a65353609f933334ac11313cd05334dc6_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a65353609f933334ac11313cd05334dc6_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a65353609f933334ac11313cd05334dc6_icgraph" id="aclass_wirelength_optimizer_a65353609f933334ac11313cd05334dc6_icgraph">
-<area shape="rect" title=" " alt="" coords="640,39,791,80"/>
+<area shape="rect" title="load to placement location of fixed PlacementUnits from PlacementInfo to the solver" alt="" coords="640,39,791,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -1107,6 +1116,8 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>write placement location from the solver to the <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> </p>
+
 <p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00112">112</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>.</p>
@@ -1115,7 +1126,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a27d21c6da62056ba4d4496d7db667a8b_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a27d21c6da62056ba4d4496d7db667a8b_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a27d21c6da62056ba4d4496d7db667a8b_cgraph" id="aclass_wirelength_optimizer_a27d21c6da62056ba4d4496d7db667a8b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,35,156,76"/>
+<area shape="rect" title="write placement location from the solver to the PlacementInfo" alt="" coords="5,35,156,76"/>
 <area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="213,5,405,47"/>
 <area shape="rect" href="class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="204,71,415,98"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="463,64,637,105"/>
@@ -1126,7 +1137,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a27d21c6da62056ba4d4496d7db667a8b_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a27d21c6da62056ba4d4496d7db667a8b_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a27d21c6da62056ba4d4496d7db667a8b_icgraph" id="aclass_wirelength_optimizer_a27d21c6da62056ba4d4496d7db667a8b_icgraph">
-<area shape="rect" title=" " alt="" coords="640,39,791,80"/>
+<area shape="rect" title="write placement location from the solver to the PlacementInfo" alt="" coords="640,39,791,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -1180,6 +1191,19 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>update the net weights in the quadratic model according to B2B net HPWL model. </p>
+<p >In this procedure, we will not only consider the conventional nets/pseudonets in previous QP placer, but also include the legalization pseudo nets and timing-oriented pseudo nets to comprehensively optimize the placement in this part. Meanwhile, we allow users to define some clusters and let the WL optimizer take them into consideration during optimization.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pesudoNetWeight</td><td>the common weight factor for pseudo nets </td></tr>
+    <tr><td class="paramname">enableMacroPseudoNet2Site</td><td>enable the legalization pseudo net to force macros move to the legal site </td></tr>
+    <tr><td class="paramname">considerNetNum</td><td>whether add the interconnection-density-aware factor to pseudo net weights </td></tr>
+    <tr><td class="paramname">enableUserDefinedClusterOpt</td><td>whether check user-defined cluster information to add pseudo nets </td></tr>
+    <tr><td class="paramname">timingOpt</td><td>whether turn on the timing-oriented optimizations </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">143</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>.</p>
@@ -1188,17 +1212,17 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a5c9381a4bd4242d48ce47b5c9cd93794_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a5c9381a4bd4242d48ce47b5c9cd93794_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a5c9381a4bd4242d48ce47b5c9cd93794_cgraph" id="aclass_wirelength_optimizer_a5c9381a4bd4242d48ce47b5c9cd93794_cgraph">
-<area shape="rect" title=" " alt="" coords="5,337,159,378"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title=" " alt="" coords="207,146,431,188"/>
+<area shape="rect" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="5,337,159,378"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="207,146,431,188"/>
 <area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="497,136,680,163"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title=" " alt="" coords="223,297,414,338"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="223,297,414,338"/>
 <area shape="rect" href="class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="479,19,699,46"/>
 <area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="543,472,634,499"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title=" " alt="" coords="231,516,407,557"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="231,516,407,557"/>
 <area shape="rect" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="539,756,638,783"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title=" " alt="" coords="221,70,416,112"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title=" " alt="" coords="207,652,431,693"/>
-<area shape="rect" href="class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title=" " alt="" coords="207,806,430,862"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="221,70,416,112"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region" alt="" coords="207,652,431,693"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title="add pseudo net for user&#45;defined clusters" alt="" coords="207,806,430,862"/>
 <area shape="rect" href="class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="500,625,677,666"/>
 <area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="493,70,685,112"/>
 <area shape="rect" href="class_placement_info.html#a31002e9f9505db4830e71b8b1eeb4837" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="747,560,925,601"/>
@@ -1208,7 +1232,7 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="493,355,685,382"/>
 <area shape="rect" href="class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="484,406,693,448"/>
 <area shape="rect" href="class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="493,187,684,214"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title=" " alt="" coords="519,238,658,280"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title="evaluate the Mahattan distance between two locations" alt="" coords="519,238,658,280"/>
 <area shape="rect" href="class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="489,574,688,600"/>
 <area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="551,523,626,550"/>
 <area shape="rect" href="class_placement_info.html#ac7854b7546b96106cfb9f2dc21a3a62b" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="494,690,683,732"/>
@@ -1227,7 +1251,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a5c9381a4bd4242d48ce47b5c9cd93794_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a5c9381a4bd4242d48ce47b5c9cd93794_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a5c9381a4bd4242d48ce47b5c9cd93794_icgraph" id="aclass_wirelength_optimizer_a5c9381a4bd4242d48ce47b5c9cd93794_icgraph">
-<area shape="rect" title=" " alt="" coords="640,39,793,80"/>
+<area shape="rect" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -1307,6 +1331,22 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>a worker funtion for multi-threading net weight updating </p>
+<p >min_x 0.5 * x'Px + q'x s.t. l &lt;= Ax &lt;= u</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">placementInfo</td><td>the <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> for this placer to handle </td></tr>
+    <tr><td class="paramname">objectiveMatrixTripletList</td><td>a list of Eigen::Triplet used to describe the sparse matrix P of QP model </td></tr>
+    <tr><td class="paramname">objectiveMatrixDiag</td><td>a vector used to store the diagonal values in the sparse matrix P of QP model </td></tr>
+    <tr><td class="paramname">objectiveVector</td><td>a vector (i.e., Eigen::VectorXd) used to store the linear factors q' of QP model </td></tr>
+    <tr><td class="paramname">generalNetWeight</td><td>a common factor indicate the overall strength of the nets in the QP model from external setting </td></tr>
+    <tr><td class="paramname">y2xRatio</td><td>a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning in X-coordinate </td></tr>
+    <tr><td class="paramname">updateX</td><td>update the X-coordinate term in the quadratic problem </td></tr>
+    <tr><td class="paramname">updateY</td><td>update the X-coordinate term in the quadratic problem </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00204">204</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>.</p>
@@ -1315,7 +1355,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a8cc10e0f8ef795b10fc924e14df90db8_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a8cc10e0f8ef795b10fc924e14df90db8_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a8cc10e0f8ef795b10fc924e14df90db8_cgraph" id="aclass_wirelength_optimizer_a8cc10e0f8ef795b10fc924e14df90db8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,27,200,69"/>
+<area shape="rect" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="5,27,200,69"/>
 <area shape="rect" href="class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="248,5,468,32"/>
 <area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="262,57,454,98"/>
 </map>
@@ -1325,8 +1365,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a8cc10e0f8ef795b10fc924e14df90db8_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a8cc10e0f8ef795b10fc924e14df90db8_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a8cc10e0f8ef795b10fc924e14df90db8_icgraph" id="aclass_wirelength_optimizer_a8cc10e0f8ef795b10fc924e14df90db8_icgraph">
-<area shape="rect" title=" " alt="" coords="841,39,1036,80"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="640,39,793,80"/>
+<area shape="rect" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="841,39,1036,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -1360,7 +1400,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00804">804</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
+<p>add pseudo nets for clock region </p>
+<p >we find that when the nets route across the boundaries of clock regions will lead to high delay, therefore, we will try to force the long path located in the same clock regions for the timing optimization.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pesudoNetWeight</td><td>the common weight factor for pseudo nets </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00683">683</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>.</p>
 <div class="dynheader">
@@ -1368,7 +1417,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a5b4ed59d2937e4117e528e9655053d7c_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a5b4ed59d2937e4117e528e9655053d7c_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a5b4ed59d2937e4117e528e9655053d7c_cgraph" id="aclass_wirelength_optimizer_a5b4ed59d2937e4117e528e9655053d7c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,136,229,177"/>
+<area shape="rect" title="add pseudo nets for clock region" alt="" coords="5,136,229,177"/>
 <area shape="rect" href="class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="283,71,461,112"/>
 <area shape="rect" href="class_placement_info.html#ac7854b7546b96106cfb9f2dc21a3a62b" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="277,136,467,177"/>
 <area shape="rect" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="323,202,421,229"/>
@@ -1382,8 +1431,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_a5b4ed59d2937e4117e528e9655053d7c_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_a5b4ed59d2937e4117e528e9655053d7c_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_a5b4ed59d2937e4117e528e9655053d7c_icgraph" id="aclass_wirelength_optimizer_a5b4ed59d2937e4117e528e9655053d7c_icgraph">
-<area shape="rect" title=" " alt="" coords="841,39,1065,80"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="640,39,793,80"/>
+<area shape="rect" title="add pseudo nets for clock region" alt="" coords="841,39,1065,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -1417,7 +1466,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00717">717</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
+<p>add pseudo net for user-defined clusters </p>
+<p >We allow users to specify some clusters in the design and WL optimizer will try to push them togather during solving the QP problem</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pesudoNetWeight</td><td>the common weight factor for pseudo nets </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8cc_source.html#l00596">596</a> of file <a class="el" href="_wirelength_optimizer_8cc_source.html">WirelengthOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>.</p>
 <div class="dynheader">
@@ -1425,7 +1483,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_ac726db5290500852fb5b4788fdcb0dd9_cgraph.png" border="0" usemap="#aclass_wirelength_optimizer_ac726db5290500852fb5b4788fdcb0dd9_cgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_ac726db5290500852fb5b4788fdcb0dd9_cgraph" id="aclass_wirelength_optimizer_ac726db5290500852fb5b4788fdcb0dd9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,255,228,311"/>
+<area shape="rect" title="add pseudo net for user&#45;defined clusters" alt="" coords="5,255,228,311"/>
 <area shape="rect" href="class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="293,73,470,115"/>
 <area shape="rect" href="class_placement_info.html#add47297a7892d37d376e66c550fc1dd7" title=" " alt="" coords="285,146,477,173"/>
 <area shape="rect" href="class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="285,197,477,239"/>
@@ -1446,8 +1504,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_wirelength_optimizer_ac726db5290500852fb5b4788fdcb0dd9_icgraph.png" border="0" usemap="#aclass_wirelength_optimizer_ac726db5290500852fb5b4788fdcb0dd9_icgraph" alt=""/></div>
 <map name="aclass_wirelength_optimizer_ac726db5290500852fb5b4788fdcb0dd9_icgraph" id="aclass_wirelength_optimizer_ac726db5290500852fb5b4788fdcb0dd9_icgraph">
-<area shape="rect" title=" " alt="" coords="841,31,1064,87"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="640,39,793,80"/>
+<area shape="rect" title="add pseudo net for user&#45;defined clusters" alt="" coords="841,31,1064,87"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
 <area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
@@ -1478,7 +1536,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00116">116</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>indicate whether we use direct macro legalization instread of the progressive legalization (2-phase legalization) </p>
+<p >If we conduct direct macro legalization, pseudo net for legalization will be removed and macro will be placed to the cooresponding location according to the legalization result. </p>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00282">282</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
 
@@ -1504,7 +1565,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00112">112</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>a common factor indicate the overall strength of the nets in the QP model from external setting </p>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00251">251</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00204">updateB2BNetWeightWorker()</a>.</p>
 
@@ -1530,7 +1593,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00109">109</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00243">243</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
 
@@ -1556,9 +1619,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00120">120</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>the number of the conducted macro iterations </p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8h_source.html#l00079">getMacroPseudoNetEnhanceCnt()</a>, and <a class="el" href="_wirelength_optimizer_8h_source.html#l00073">setMacroLegalizationParameters()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00303">303</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8h_source.html#l00135">getMacroPseudoNetEnhanceCnt()</a>, and <a class="el" href="_wirelength_optimizer_8h_source.html#l00124">setMacroLegalizationParameters()</a>.</p>
 
 </div>
 </div>
@@ -1582,7 +1647,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00115">115</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>indicate whether wirelength optimizer is based on MKL library when using OSQP placer, which can set constraints for the quadratic model </p>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00272">272</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
 
@@ -1608,9 +1675,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00117">117</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>the net weight for macro legalization </p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8h_source.html#l00084">getMacroLegalizationWeight()</a>, and <a class="el" href="_wirelength_optimizer_8h_source.html#l00073">setMacroLegalizationParameters()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00297">297</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8h_source.html#l00145">getMacroLegalizationWeight()</a>, and <a class="el" href="_wirelength_optimizer_8h_source.html#l00124">setMacroLegalizationParameters()</a>.</p>
 
 </div>
 </div>
@@ -1634,9 +1703,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00107">107</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00239">239</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">addExtraWeightToNetsInLongPath()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00621">addPseudoNet2LoctionForAllPUs()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00424">addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00351">adjustHighFanoutPULocation()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00087">solverLoadData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00097">solverLoadFixedData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00112">solverWriteBackData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00204">updateB2BNetWeightWorker()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00804">updatePseudoNetForClockRegion()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00717">updatePseudoNetForUserDefinedClusters()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00500">addPseudoNet2LoctionForAllPUs()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00087">solverLoadData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00097">solverLoadFixedData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00112">solverWriteBackData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00204">updateB2BNetWeightWorker()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00683">updatePseudoNetForClockRegion()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00596">updatePseudoNetForUserDefinedClusters()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
 
 </div>
 </div>
@@ -1660,9 +1729,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00118">118</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>the fade-out factor for the user-defined clusters </p>
+<p >The user-defined clusters might not be perfect so we might need to gradually reduce their terms in the QP problem by this factor </p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00717">updatePseudoNetForUserDefinedClusters()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00291">291</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00596">updatePseudoNetForUserDefinedClusters()</a>.</p>
 
 </div>
 </div>
@@ -1686,7 +1758,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00114">114</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>indicate whether wirelength optimizer uses Eigen3, which cannot solve QP problem with constraints. If false, OSQP solver which can set constraints for the quadratic model, will be involved to replace Eigen3. </p>
+
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00265">265</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
 
@@ -1712,7 +1786,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00110">110</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00244">244</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
 
@@ -1738,9 +1812,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00108">108</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00241">241</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">addExtraWeightToNetsInLongPath()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00621">addPseudoNet2LoctionForAllPUs()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00424">addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00351">adjustHighFanoutPULocation()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00087">solverLoadData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00097">solverLoadFixedData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00112">solverWriteBackData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00804">updatePseudoNetForClockRegion()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00717">updatePseudoNetForUserDefinedClusters()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>, and <a class="el" href="_wirelength_optimizer_8h_source.html#l00039">~WirelengthOptimizer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00500">addPseudoNet2LoctionForAllPUs()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00087">solverLoadData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00097">solverLoadFixedData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00112">solverWriteBackData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00683">updatePseudoNetForClockRegion()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00596">updatePseudoNetForUserDefinedClusters()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>, and <a class="el" href="_wirelength_optimizer_8h_source.html#l00039">~WirelengthOptimizer()</a>.</p>
 
 </div>
 </div>
@@ -1764,14 +1838,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00113">113</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p>a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning in X-coordinate </p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00621">addPseudoNet2LoctionForAllPUs()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00424">addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00351">adjustHighFanoutPULocation()</a>, <a class="el" href="_wirelength_optimizer_8h_source.html#l00102">manhattanDis()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00204">updateB2BNetWeightWorker()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00804">updatePseudoNetForClockRegion()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00717">updatePseudoNetForUserDefinedClusters()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00258">258</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00500">addPseudoNet2LoctionForAllPUs()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8h_source.html#l00234">manhattanDis()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00204">updateB2BNetWeightWorker()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00683">updatePseudoNetForClockRegion()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00596">updatePseudoNetForUserDefinedClusters()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>.</p>
 
 </div>
 </div>
-<a id="a33cc904a55b50fa06576888f69e4e50c" name="a33cc904a55b50fa06576888f69e4e50c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33cc904a55b50fa06576888f69e4e50c">&#9670;&nbsp;</a></span>ySolver</h2>
+<a id="a5ab49603c6a11b15236984251dfe0b69" name="a5ab49603c6a11b15236984251dfe0b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab49603c6a11b15236984251dfe0b69">&#9670;&nbsp;</a></span>ySolver</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1780,7 +1856,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a> * WirelengthOptimizer::ySolver = nullptr</td>
+          <td class="memname"><a class="el" href="class_q_p_solver_wrapper.html">QPSolverWrapper</a>* WirelengthOptimizer::ySolver = nullptr</td>
         </tr>
       </table>
   </td>
@@ -1790,9 +1866,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00108">108</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_wirelength_optimizer_8h_source.html#l00242">242</a> of file <a class="el" href="_wirelength_optimizer_8h_source.html">WirelengthOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">addExtraWeightToNetsInLongPath()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00621">addPseudoNet2LoctionForAllPUs()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00424">addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00351">adjustHighFanoutPULocation()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00087">solverLoadData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00097">solverLoadFixedData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00112">solverWriteBackData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00804">updatePseudoNetForClockRegion()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00717">updatePseudoNetForUserDefinedClusters()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>, and <a class="el" href="_wirelength_optimizer_8h_source.html#l00039">~WirelengthOptimizer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00500">addPseudoNet2LoctionForAllPUs()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00303">addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00225">addPseudoNetForMacros()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00054">GlobalPlacementQPSolve()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00038">reloadPlacementInfo()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00087">solverLoadData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00097">solverLoadFixedData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00112">solverWriteBackData()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00143">updateB2BNetWeight()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00683">updatePseudoNetForClockRegion()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00596">updatePseudoNetForUserDefinedClusters()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00006">WirelengthOptimizer()</a>, and <a class="el" href="_wirelength_optimizer_8h_source.html#l00039">~WirelengthOptimizer()</a>.</p>
 
 </div>
 </div>

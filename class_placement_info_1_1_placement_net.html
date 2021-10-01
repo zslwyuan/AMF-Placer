@@ -160,7 +160,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6078d1a0b5b2e1fc99f79f149270e38f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_net.html#a6078d1a0b5b2e1fc99f79f149270e38f">drawNet</a> (float generalWeight=1.0)</td></tr>
 <tr class="separator:a6078d1a0b5b2e1fc99f79f149270e38f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67d9821b37a53f43690a56568c79b87c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c">addB2BNet</a> (std::vector&lt; Eigen::Triplet&lt; float &gt; &gt; &amp;objectiveMatrixTripletList, std::vector&lt; float &gt; &amp;objectiveMatrixDiag, Eigen::VectorXd &amp;objectiveVector, int puId0, int puId1, float pos0, float pos1, float pinOffset0, float pinOffset1, bool movable0, bool movable1, float w)</td></tr>
-<tr class="memdesc:a67d9821b37a53f43690a56568c79b87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">set weights of the terms in the quadratic problem  <a href="class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c">More...</a><br /></td></tr>
+<tr class="memdesc:a67d9821b37a53f43690a56568c79b87c"><td class="mdescLeft">&#160;</td><td class="mdescRight">set weights of the terms in the quadratic problem min_x 0.5 * x'Px + q'x s.t. l &lt;= Ax &lt;= u  <a href="class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c">More...</a><br /></td></tr>
 <tr class="separator:a67d9821b37a53f43690a56568c79b87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e1c6e68d82ff91971e1a3b8f1a59440"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementUnit</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_net.html#a2e1c6e68d82ff91971e1a3b8f1a59440">getPUSet</a> ()</td></tr>
 <tr class="separator:a2e1c6e68d82ff91971e1a3b8f1a59440"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -446,7 +446,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>set weights of the terms in the quadratic problem </p>
+<p>set weights of the terms in the quadratic problem min_x 0.5 * x'Px + q'x s.t. l &lt;= Ax &lt;= u </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">objectiveMatrixTripletList</td><td>The non-Diag elements in matrix Q, stored in the vector of Eigen Triplet (i,j,val) </td></tr>
@@ -465,7 +465,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02167">2167</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02169">2169</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02120">addPseudoNet_enhancePin2Pin()</a>, and <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>.</p>
 <div class="dynheader">
@@ -473,7 +473,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_info_1_1_placement_net_a67d9821b37a53f43690a56568c79b87c_icgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_net_a67d9821b37a53f43690a56568c79b87c_icgraph" alt=""/></div>
 <map name="aclass_placement_info_1_1_placement_net_a67d9821b37a53f43690a56568c79b87c_icgraph" id="aclass_placement_info_1_1_placement_net_a67d9821b37a53f43690a56568c79b87c_icgraph">
-<area shape="rect" title="set weights of the terms in the quadratic problem" alt="" coords="289,39,464,80"/>
+<area shape="rect" title="set weights of the terms in the quadratic problem min_x 0.5 * x&#39;Px + q&#39;x s.t. l &lt;= Ax &lt;= u" alt="" coords="289,39,464,80"/>
 <area shape="rect" href="class_placement_info_1_1_placement_net.html#af30c18e8e435944102dcb600d58dfbe6" title=" " alt="" coords="5,5,241,47"/>
 <area shape="rect" href="class_placement_info_1_1_placement_net.html#ab2f0304ff93a388d4ad21dabca919f99" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="8,71,239,112"/>
 </map>
@@ -576,7 +576,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="class_placement_info_1_1_placement_net_af30c18e8e435944102dcb600d58dfbe6_cgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_net_af30c18e8e435944102dcb600d58dfbe6_cgraph" alt=""/></div>
 <map name="aclass_placement_info_1_1_placement_net_af30c18e8e435944102dcb600d58dfbe6_cgraph" id="aclass_placement_info_1_1_placement_net_af30c18e8e435944102dcb600d58dfbe6_cgraph">
 <area shape="rect" title=" " alt="" coords="5,5,241,47"/>
-<area shape="rect" href="class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c" title="set weights of the terms in the quadratic problem" alt="" coords="289,5,464,47"/>
+<area shape="rect" href="class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c" title="set weights of the terms in the quadratic problem min_x 0.5 * x&#39;Px + q&#39;x s.t. l &lt;= Ax &lt;= u" alt="" coords="289,5,464,47"/>
 </map>
 </div>
 
@@ -643,7 +643,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02241">2241</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02243">2243</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -670,7 +670,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02265">2265</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02267">2267</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -731,17 +731,6 @@ Here is the call graph for this function:</div>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;PlacementUnit *&gt;&amp; </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01813">1813</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00351">WirelengthOptimizer::adjustHighFanoutPULocation()</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_placement_info_1_1_placement_net_aa241ff513ed0b5c90b16863122107f26_icgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_net_aa241ff513ed0b5c90b16863122107f26_icgraph" alt=""/></div>
-<map name="aclass_placement_info_1_1_placement_net_aa241ff513ed0b5c90b16863122107f26_icgraph" id="aclass_placement_info_1_1_placement_net_aa241ff513ed0b5c90b16863122107f26_icgraph">
-<area shape="rect" title="Get the reference of the vector of the driver units that drive the net." alt="" coords="252,5,427,47"/>
-<area shape="rect" href="class_wirelength_optimizer.html#aac5c3efa85ee2a71ff4cd60b5f1acdbc" title=" " alt="" coords="5,5,204,47"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -835,7 +824,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02223">2223</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02225">2225</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -862,7 +851,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02247">2247</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02249">2249</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -982,7 +971,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02218">2218</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02220">2220</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1009,7 +998,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02229">2229</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02231">2231</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1036,7 +1025,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02253">2253</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02255">2255</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1063,7 +1052,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02235">2235</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02237">2237</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1090,7 +1079,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02259">2259</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02261">2261</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1122,22 +1111,21 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01803">1803</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00351">WirelengthOptimizer::adjustHighFanoutPULocation()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00430">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00453">PlacementInfo::reloadNets()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00430">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00453">PlacementInfo::reloadNets()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_info_1_1_placement_net_a24b65537907b35b360960d9117d2c9c6_icgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_net_a24b65537907b35b360960d9117d2c9c6_icgraph" alt=""/></div>
 <map name="aclass_placement_info_1_1_placement_net_a24b65537907b35b360960d9117d2c9c6_icgraph" id="aclass_placement_info_1_1_placement_net_a24b65537907b35b360960d9117d2c9c6_icgraph">
-<area shape="rect" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="697,77,872,119"/>
-<area shape="rect" href="class_wirelength_optimizer.html#aac5c3efa85ee2a71ff4cd60b5f1acdbc" title=" " alt="" coords="431,5,629,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1e52ba10076d2038e0afce8a3aa75e18" title=" " alt="" coords="411,70,649,126"/>
-<area shape="rect" href="class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="443,150,617,177"/>
-<area shape="rect" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="185,12,341,53"/>
-<area shape="rect" href="class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,77,363,119"/>
-<area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="185,143,341,184"/>
-<area shape="rect" href="class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,209,327,235"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="193,260,334,301"/>
-<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,150,116,177"/>
+<area shape="rect" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="697,104,872,145"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1e52ba10076d2038e0afce8a3aa75e18" title=" " alt="" coords="411,63,649,119"/>
+<area shape="rect" href="class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="443,143,617,170"/>
+<area shape="rect" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="185,5,341,47"/>
+<area shape="rect" href="class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,71,363,112"/>
+<area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="185,136,341,177"/>
+<area shape="rect" href="class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,202,327,229"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="193,253,334,295"/>
+<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,143,116,170"/>
 </map>
 </div>
 
@@ -1196,7 +1184,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02271">2271</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02273">2273</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00453">PlacementInfo::reloadNets()</a>.</p>
 <div class="dynheader">
@@ -1313,7 +1301,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="class_placement_info_1_1_placement_net_ab2f0304ff93a388d4ad21dabca919f99_cgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_net_ab2f0304ff93a388d4ad21dabca919f99_cgraph" alt=""/></div>
 <map name="aclass_placement_info_1_1_placement_net_ab2f0304ff93a388d4ad21dabca919f99_cgraph" id="aclass_placement_info_1_1_placement_net_ab2f0304ff93a388d4ad21dabca919f99_cgraph">
 <area shape="rect" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="5,71,236,112"/>
-<area shape="rect" href="class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c" title="set weights of the terms in the quadratic problem" alt="" coords="284,5,459,47"/>
+<area shape="rect" href="class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c" title="set weights of the terms in the quadratic problem min_x 0.5 * x&#39;Px + q&#39;x s.t. l &lt;= Ax &lt;= u" alt="" coords="284,5,459,47"/>
 <area shape="rect" href="class_design_info_1_1_design_net.html#a6f7ff0c8b0053d536f05eb1c29deb468" title="Get the Overall Enhance Ratio (the entire net can be enhanced to a pre&#45;defined extent...." alt="" coords="288,71,455,112"/>
 <area shape="rect" href="class_design_info_1_1_design_net.html#a713c9da3d626cce524a3cb1df0cfd6d4" title="Get the Pin Pair Enhance Ratio (placer can customize some 2&#45;pin interconnections to make their weight..." alt="" coords="287,136,455,177"/>
 </map>
@@ -1392,7 +1380,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02288">2288</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02290">2290</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1418,9 +1406,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02286">2286</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02288">2288</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02241">getBottomPinY()</a>, <a class="el" href="_placement_info_8h_source.html#l01936">getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02243">getBottomPinY()</a>, <a class="el" href="_placement_info_8h_source.html#l01936">getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
 </div>
 </div>
@@ -1444,9 +1432,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02287">2287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02289">2289</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02241">getBottomPinY()</a>, <a class="el" href="_placement_info_8h_source.html#l02265">getBottomPUId()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02243">getBottomPinY()</a>, <a class="el" href="_placement_info_8h_source.html#l02267">getBottomPUId()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
 </div>
 </div>
@@ -1470,7 +1458,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02285">2285</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02287">2287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1496,9 +1484,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02278">2278</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02280">2280</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01833">getDesignNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02271">isGlobalClock()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, and <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01833">getDesignNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02273">isGlobalClock()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, and <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -1522,9 +1510,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02289">2289</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02291">2291</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02167">addB2BNet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02169">addB2BNet()</a>.</p>
 
 </div>
 </div>
@@ -1548,7 +1536,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02284">2284</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02286">2286</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01843">getId()</a>.</p>
 
@@ -1574,7 +1562,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02288">2288</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02290">2290</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1600,9 +1588,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02286">2286</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02288">2288</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01936">getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l02223">getLeftPinX()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01936">getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l02225">getLeftPinX()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
 </div>
 </div>
@@ -1626,9 +1614,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02287">2287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02289">2289</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02223">getLeftPinX()</a>, <a class="el" href="_placement_info_8h_source.html#l02247">getLeftPUId()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02225">getLeftPinX()</a>, <a class="el" href="_placement_info_8h_source.html#l02249">getLeftPUId()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
 </div>
 </div>
@@ -1652,7 +1640,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02285">2285</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02287">2287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1678,7 +1666,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02290">2290</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02292">2292</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>.</p>
 
@@ -1704,7 +1692,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02282">2282</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02284">2284</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02120">addPseudoNet_enhancePin2Pin()</a>, <a class="el" href="_placement_info_8h_source.html#l01953">getNewHPWLByTrying()</a>, <a class="el" href="_placement_info_8h_source.html#l01853">getPinOffsetsInUnit()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1730,9 +1718,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02283">2283</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02285">2285</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02218">getPUSet()</a>, and <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02220">getPUSet()</a>, and <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>.</p>
 
 </div>
 </div>
@@ -1756,7 +1744,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02288">2288</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02290">2290</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1782,9 +1770,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02286">2286</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02288">2288</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01936">getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l02229">getRightPinX()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01936">getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l02231">getRightPinX()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
 </div>
 </div>
@@ -1808,9 +1796,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02287">2287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02289">2289</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02229">getRightPinX()</a>, <a class="el" href="_placement_info_8h_source.html#l02253">getRightPUId()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02231">getRightPinX()</a>, <a class="el" href="_placement_info_8h_source.html#l02255">getRightPUId()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
 </div>
 </div>
@@ -1834,7 +1822,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02285">2285</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02287">2287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1860,7 +1848,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02288">2288</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02290">2290</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1886,9 +1874,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02286">2286</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02288">2288</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01936">getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l02235">getTopPinY()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01936">getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l02237">getTopPinY()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
 </div>
 </div>
@@ -1912,9 +1900,9 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02287">2287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02289">2289</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02235">getTopPinY()</a>, <a class="el" href="_placement_info_8h_source.html#l02259">getTopPUId()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02237">getTopPinY()</a>, <a class="el" href="_placement_info_8h_source.html#l02261">getTopPUId()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
 </div>
 </div>
@@ -1938,7 +1926,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02285">2285</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02287">2287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -1964,7 +1952,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02280">2280</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02282">2282</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01813">getDriverUnits()</a>, and <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>.</p>
 
@@ -1990,7 +1978,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02279">2279</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02281">2281</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02120">addPseudoNet_enhancePin2Pin()</a>, <a class="el" href="_placement_info_8h_source.html#l01953">getNewHPWLByTrying()</a>, <a class="el" href="_placement_info_8h_source.html#l01803">getUnits()</a>, <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>, <a class="el" href="_placement_info_8h_source.html#l02026">updateBound2BoundNetWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01866">updateNetBounds()</a>.</p>
 
@@ -2016,7 +2004,7 @@ false if all pins of the net is at the same location </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02281">2281</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l02283">2283</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01823">getUnitsBeDriven()</a>, and <a class="el" href="_placement_info_8h_source.html#l01747">PlacementNet()</a>.</p>
 

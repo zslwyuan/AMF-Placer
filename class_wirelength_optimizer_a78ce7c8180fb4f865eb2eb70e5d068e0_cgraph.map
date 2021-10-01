@@ -1,11 +1,11 @@
 <map id="WirelengthOptimizer::addPseudoNet_LevelBased" name="WirelengthOptimizer::addPseudoNet_LevelBased">
-<area shape="rect" id="node1" title=" " alt="" coords="5,179,196,221"/>
+<area shape="rect" id="node1" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="5,179,196,221"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="247,5,461,32"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="258,56,450,83"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="244,107,464,133"/>
 <area shape="rect" id="node5" href="$class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="263,157,445,184"/>
 <area shape="rect" id="node6" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="249,209,459,250"/>
 <area shape="rect" id="node7" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="259,275,449,301"/>
-<area shape="rect" id="node8" href="$class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title=" " alt="" coords="285,326,423,367"/>
+<area shape="rect" id="node8" href="$class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title="evaluate the Mahattan distance between two locations" alt="" coords="285,326,423,367"/>
 <area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="309,392,399,419"/>
 </map>

@@ -1,6 +1,6 @@
 <map id="print_info" name="print_info">
 <area shape="rect" id="node1" title=" " alt="" coords="1035,1201,1109,1227"/>
-<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title=" " alt="" coords="758,5,934,47"/>
+<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="758,5,934,47"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="756,275,936,316"/>
 <area shape="rect" id="node6" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="178,278,381,305"/>
 <area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,354,116,381"/>
@@ -44,7 +44,7 @@
 <area shape="rect" id="node48" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="753,443,939,484"/>
 <area shape="rect" id="node49" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="737,2411,955,2452"/>
 <area shape="rect" id="node50" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="733,2476,959,2517"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title=" " alt="" coords="473,5,627,47"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="473,5,627,47"/>
 <area shape="rect" id="node5" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="445,278,655,305"/>
 <area shape="rect" id="node10" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="195,1157,364,1199"/>
 <area shape="rect" id="node15" href="$class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d" title="initially cluster cells based on user&#45;defined clusters and conduct connectivity&#45;based partitioning ba..." alt="" coords="192,1299,367,1340"/>

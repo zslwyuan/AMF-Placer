@@ -2,11 +2,9 @@ var class_wirelength_optimizer =
 [
     [ "WirelengthOptimizer", "class_wirelength_optimizer.html#a431184067de089857b584da070404661", null ],
     [ "~WirelengthOptimizer", "class_wirelength_optimizer.html#abf14be2c0b76b515bdc136b06a6e197f", null ],
-    [ "addExtraWeightToNetsInLongPath", "class_wirelength_optimizer.html#a53d649c7613334884c4f01292b53e808", null ],
     [ "addPseudoNet2LoctionForAllPUs", "class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70", null ],
     [ "addPseudoNet_LevelBased", "class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0", null ],
     [ "addPseudoNetForMacros", "class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21", null ],
-    [ "adjustHighFanoutPULocation", "class_wirelength_optimizer.html#aac5c3efa85ee2a71ff4cd60b5f1acdbc", null ],
     [ "getMacroLegalizationWeight", "class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5", null ],
     [ "getMacroPseudoNetEnhanceCnt", "class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265", null ],
     [ "GlobalPlacementQPSolve", "class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97", null ],
@@ -33,5 +31,5 @@ var class_wirelength_optimizer =
     [ "verbose", "class_wirelength_optimizer.html#a4072816583e5c8923cc35736f84f0393", null ],
     [ "xSolver", "class_wirelength_optimizer.html#ac77c96f408f2e676bd98864b41f9fdc1", null ],
     [ "y2xRatio", "class_wirelength_optimizer.html#a6410dc0227f37b062eaf1f0fb84c10ad", null ],
-    [ "ySolver", "class_wirelength_optimizer.html#a33cc904a55b50fa06576888f69e4e50c", null ]
+    [ "ySolver", "class_wirelength_optimizer.html#a5ab49603c6a11b15236984251dfe0b69", null ]
 ];

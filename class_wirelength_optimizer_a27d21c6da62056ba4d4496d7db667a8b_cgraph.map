@@ -1,5 +1,5 @@
 <map id="WirelengthOptimizer::solverWriteBackData" name="WirelengthOptimizer::solverWriteBackData">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,156,76"/>
+<area shape="rect" id="node1" title="write placement location from the solver to the PlacementInfo" alt="" coords="5,35,156,76"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="213,5,405,47"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="204,71,415,98"/>
 <area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="463,64,637,105"/>

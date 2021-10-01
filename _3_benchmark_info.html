@@ -130,15 +130,14 @@ $(document).ready(function(){initNavTree('_3_benchmark_info.html',''); initResiz
 <li>interconnection-density-aware pseudo net weight</li>
 <li>utilization-guided search of spreading window</li>
 <li>forgetting-rate-based cell spreading update</li>
-<li><p class="startli">progressive macro legalization</p>
-<p class="startli">Since existing open-source analytical FPGA placers do not support mixed-size FPGA placement of aforementioned macros on Ultrascale devices, for comprehensive comparison, according to some state-of-the-art solutions, we implement baseline placement solution with the following features:</p>
-</li>
+<li>progressive macro legalization</li>
 </ol>
+<p >Since existing open-source analytical FPGA placers do not support mixed-size FPGA placement of aforementioned macros on Ultrascale devices, for comprehensive comparison, according to some state-of-the-art solutions, we implement baseline placement solution with the following features:</p>
 <ol type="1">
 <li>quadratic placement, cell spreading and clock region planning algorithms from RippleFPGA[1] and clock-aware initial clustering from [2].</li>
 <li>resource demand adjustment and packing algorithms from extended UTPlaceF[3]</li>
 <li>SA initial placement</li>
-<li>necessary modifications to support macro placement, e.g., macro legalization/packing, but without \emph{Tech2-5}</li>
+<li>necessary modifications to support macro placement, e.g., macro legalization/packing, but without Tech2-5 shown above.</li>
 <li>parallelized</li>
 </ol>
 <p >Below are the comparison data which are normalized. We will keep improving our implementation.</p>

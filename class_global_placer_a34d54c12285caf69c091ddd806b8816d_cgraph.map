@@ -1,4 +1,4 @@
 <map id="GlobalPlacer::getMacroLegalizationWeight" name="GlobalPlacer::getMacroLegalizationWeight">
 <area shape="rect" id="node1" title="Get the current macro legalization weight object." alt="" coords="5,5,231,47"/>
-<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5" title=" " alt="" coords="279,5,469,47"/>
+<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5" title="Get the net weight for macro legalization." alt="" coords="279,5,469,47"/>
 </map>

@@ -8,13 +8,13 @@
 <area shape="rect" id="node29" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="541,341,780,367"/>
 <area shape="rect" id="node30" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="565,1015,756,1042"/>
 <area shape="rect" id="node34" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="560,1066,761,1093"/>
-<area shape="rect" id="node37" href="$class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5" title=" " alt="" coords="277,788,467,829"/>
-<area shape="rect" id="node38" href="$class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265" title=" " alt="" coords="263,853,481,895"/>
+<area shape="rect" id="node37" href="$class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5" title="Get the net weight for macro legalization." alt="" coords="277,788,467,829"/>
+<area shape="rect" id="node38" href="$class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265" title="Get the number of the conducted macro iterations." alt="" coords="263,853,481,895"/>
 <area shape="rect" id="node39" href="$class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="281,919,463,946"/>
 <area shape="rect" id="node40" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="283,620,461,661"/>
 <area shape="rect" id="node41" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="279,686,465,713"/>
 <area shape="rect" id="node42" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="611,914,710,941"/>
-<area shape="rect" id="node43" href="$class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title=" " alt="" coords="299,431,445,472"/>
+<area shape="rect" id="node43" href="$class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="299,431,445,472"/>
 <area shape="rect" id="node44" href="$class_placement_info.html#a958489df28152a1f6d57ed1d300d0cea" title="Set the Macro Legalization Parameters." alt="" coords="255,1189,489,1231"/>
 <area shape="rect" id="node45" href="$class_placement_info.html#acf04c3cb841c54072879fb499d4c8617" title="record the minimum HPWL during placement procedure" alt="" coords="277,1255,467,1282"/>
 <area shape="rect" id="node46" href="$class_placement_info.html#ae4d7fbda04595b6a0563a0cb55b24c77" title="Set the Pseudo Net Weight according to a given value." alt="" coords="285,1307,459,1348"/>
