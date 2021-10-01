@@ -53,7 +53,7 @@ endif()
 
 # OSQP
 if (NOT TARGET osqpstatic)
-  message(STATUS "AMFPlacer fetching packages: `osqp` targets not found. Attempting to fetch contents...")
+  message(STATUS "AMFPlacer fetching packages: `osqp` targets not found. Attempting to find contents...")
   FetchContent_Declare(
     osqp
     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/osqp-src
