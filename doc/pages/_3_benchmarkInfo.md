@@ -37,6 +37,15 @@ Apart from the fundamental mechanisms to support macro placement, some optional 
 4. forgetting-rate-based cell spreading update
 5. progressive macro legalization
 
+ Since existing open-source analytical FPGA placers do not support mixed-size FPGA placement of aforementioned macros on Ultrascale devices, for comprehensive comparison, according to some state-of-the-art solutions, we implement baseline placement solution with the following features:
+ 
+1.  quadratic placement, cell spreading and clock region planning algorithms from RippleFPGA\[1\] and clock-aware initial clustering from \[2\].
+2.  resource demand adjustment and packing algorithms from extended UTPlaceF\[3\]
+3.  SA initial placement
+4.  necessary modifications to support macro placement, e.g., macro legalization/packing, but without \emph{Tech2-5}
+5.  parallelized
+
+
 Below are the comparison data which are normalized. We will keep improving our implementation.
 
 
@@ -67,3 +76,12 @@ Below are the comparison data which are normalized. We will keep improving our i
 Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.
 
 <img src="placement.png" alt="Placement" title="Placement" width="800" /> 
+
+
+**References in this page:**
+
+\[1\] C.-W. Pui, G. Chen, W.-K. Chow, K.-C. Lam, J. Kuang, P. Tu, H. Zhang, E. F. Young, and B. Yu, “Ripplefpga: A routability-driven placement for large-scale heterogeneous fpgas,” in 2016 IEEE/ACM International Conference on Computer-Aided Design (ICCAD). IEEE, 2016, pp. 1–8.
+
+\[2\] J. Chen, Z. Lin, Y.-C. Kuo, C.-C. Huang, Y.-W. Chang, S.-C. Chen, C.-H. Chiang, and S.-Y. Kuo, “Clock-aware placement for large-scale heterogeneous fpgas,” IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 39, no. 12, pp. 5042–5055, 2020.
+
+\[3\] W. Li, S. Dhar, and D. Z. Pan, “Utplacef: A routability-driven fpga placer with physical and congestion aware packing,” IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 37, no. 4, pp. 869–882, 2017.

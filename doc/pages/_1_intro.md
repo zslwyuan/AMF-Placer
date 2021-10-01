@@ -56,7 +56,7 @@ Below is a hiearchy tree of this project. As for the details, please refer to th
 **Dependencies**
 1. opengl, freeglut, glew
 2. eigen 3.3.8 (source code included)
-3. MKL
+3. MKL (optional)
 4. PaToH (library included)
 5. osqp (source code included)
 
