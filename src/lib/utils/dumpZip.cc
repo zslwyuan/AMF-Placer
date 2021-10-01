@@ -1,3 +1,14 @@
+/**
+ * @file dumpZip.cc
+ * @author Tingyuan LIANG (tliang@connect.ust.hk)
+ * @brief
+ * @version 0.1
+ * @date 2021-10-02
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
+
 #include "dumpZip.h"
 #include <assert.h>
 void writeStrToGZip(std::string fileName, std::stringstream &data)

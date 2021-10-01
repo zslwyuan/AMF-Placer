@@ -2149,7 +2149,8 @@ class PlacementInfo
 
         /**
          * @brief set weights of the terms in the quadratic problem
-         *   min_x 0.5 * x'Px + q'x
+         *
+         *  min_x 0.5 * x'Px + q'x
          *  s.t.  l <= Ax <= u
          *
          * @param objectiveMatrixTripletList The non-Diag elements in matrix Q, stored in the vector of Eigen Triplet

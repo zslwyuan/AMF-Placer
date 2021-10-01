@@ -1,3 +1,14 @@
+/**
+ * @file DeviceInfo.cc
+ * @author Tingyuan LIANG (tliang@connect.ust.hk)
+ * @brief This implementation file contains APIs' implementation for a standalone device.
+ * @version 0.1
+ * @date 2021-06-03
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
+
 #include "DeviceInfo.h"
 #include "readZip.h"
 #include "strPrint.h"

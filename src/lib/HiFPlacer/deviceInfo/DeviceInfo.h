@@ -1,3 +1,14 @@
+/**
+ * @file DeviceInfo.h
+ * @author Tingyuan LIANG (tliang@connect.ust.hk)
+ * @brief This header file contains the classes of data for a standalone device.
+ * @version 0.1
+ * @date 2021-06-03
+ *
+ * @copyright Copyright (c) 2021
+ *
+ */
+
 #ifndef _DeviceINFO
 #define _DeviceINFO
 
