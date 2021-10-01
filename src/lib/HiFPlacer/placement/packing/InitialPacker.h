@@ -63,7 +63,7 @@ class InitialPacker
                                                                      bool exactMatch = false);
 
     /**
-     * @brief detects DSP macros and clusters the related cells into PlacementMacro
+     * @brief detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro
      *
      * If two DSPs are interconnected via their "ACIN[", "BCIN[", "PCIN[" ports, they are cascaded.
      *
@@ -71,24 +71,88 @@ class InitialPacker
     void findDSPMacros();
 
     /**
-     * @brief detects BRAM macros and clusters the related cells into PlacementMacro
+     * @brief detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro
      *
      * If two BRAMs are interconnected via their "CAS" ports, they are cascaded.
      *
      */
     void findBRAMMacros();
+
+    /**
+     * @brief check the control set of the candidate FFs and select the control set with the most FFs to be packed in
+     * the carray macro
+     *
+     * @param FFs
+     * @return std::vector<DesignInfo::DesignCell *>
+     */
     std::vector<DesignInfo::DesignCell *> checkCompatibleFFs(std::vector<DesignInfo::DesignCell *> FFs);
+
+    /**
+     * @brief detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro
+     *
+     * If two CARRYs are interconnected via their "CI" ports, they are cascaded. Moreover, the directly-connected
+     * LUTs/FFs will be fitted into the macro, after verifying the compatibility. Meanwhile, route-thru virtual elements
+     * will be added into the macro to occupy the BEL resources
+     *
+     */
     void findCARRYMacros();
+
+    /**
+     * @brief detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro
+     *
+     * If two Mux are interconnected via their "I0/1" ports, they are cascaded. Moreover, the directly-connected
+     * LUTs/FFs will be fitted into the macro, after verifying the compatibility. Meanwhile, route-thru virtual elements
+     * will be added into the macro to occupy the BEL resources
+     *
+     */
     void findMuxMacros();
+
+    /**
+     * @brief load the special macros from the design file. vendors might allow users to specify some primitive macros
+     * (e.g. cross-clock-domain register pairs and fine-grained LUTRAM macros)
+     *
+     * @param RAMMacroListFromVivadoFileName a given design file indicate the special CLB macros in the design
+     */
     void loadOtherCLBMacros(std::string RAMMacroListFromVivadoFileName);
-    void findUnpackedUnits();
-    void loadFixedPlacementUnits(std::string fixedPlacementUnitsFromVivadoFileName);
-    void loadNets();
+
+    /**
+     * @brief directly pack some LUTs/FFs if the LUT has only one fan-out.
+     *
+     * According to our observation, this might not significantly improve the HPWL but it can help to get better timing.
+     *
+     */
     void LUTFFPairing();
-    void dumpMacroHighLight();
+
+    /**
+     * @brief other non-Macro elements will be instantiated as PlacementInfo::PlacementUnpackedCell
+     *
+     */
+    void findUnpackedUnits();
+
+    /**
+     * @brief load the fixed elements (e.g., IOs) from the design file.
+     *
+     * @param fixedPlacementUnitsFromVivadoFileName a given design file indicate the fixed elements and their locations
+     * on the device
+     */
+    void loadFixedPlacementUnits(std::string fixedPlacementUnitsFromVivadoFileName);
+
+    /**
+     * @brief enhance the nets connected to the IO ports
+     *
+     */
     void enhanceIONets();
 
+    void dumpMacroHighLight();
+
   private:
+    /**
+     * @brief control set information container used during initial packing.
+     *
+     * According to the Xilinx Ultrascale Architecture, the packing of FFs should meet some constraints of their
+     * connected nets.
+     *
+     */
     class PackedControlSet
     {
       public:
