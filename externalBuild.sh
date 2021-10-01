@@ -2,7 +2,7 @@ cd build
 shopt -s extglob
 rm * -rf
 rm .* -rf
-cmake ../../../Dropbox/HLSPlacer_Cpart/src
+cmake XXX/src  # Please specify the source code path
 make -j8
 # load MKL for parallelism
 # execute the line below before you run the placer in the terminal
