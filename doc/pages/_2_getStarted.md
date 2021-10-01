@@ -38,7 +38,7 @@ By checking the content of the JSON file in the command argument above, you may 
 Generally, we need to let the placer know where are the data of the design and devices, whether the placer should dump some log text/archieve files for further checking or evaluation, and some parameters related to the algorithms in the placer.
 
 Below, we explain some of the settings. If users target at Xilinx VCU108, users may only need to change the parameters related to the design benchmark, which we mark with \[DESIGN\]. We also mark others parameters with \[DEVICE\], \[DEBUG\] and \[PLACER\]. Some optional parameters can be disable by commenting out by "//". Please be aware that no matter the value types are string or not, the value should be wrapper by " " as syntax requirement.
-```json
+```cpp
 {
     "vivado extracted design information file": "" ,// ==> the location of the design netlist zip file [DESIGN]
     "vivado extracted device information file" : "" ,// ==> the location of the device zip file [DEVICE]
@@ -84,6 +84,7 @@ Below, we explain some of the settings. If users target at Xilinx VCU108, users 
     "y2xRatio": "" ,// ==> indicate the weight of Y routing net compared to X routing net [PLACER]
     "ClusterPlacerVerbose": "" ,//==> (Optional:default "false") indicate whether the SA cluster placer print outs detailed information during runtime [DEBUG]
     "GlobalPlacerVerbose":  "" ,//==> (Optional:default "false") indicate whether the global placer print outs detailed information during runtime [DEBUG]
+    "DirectMacroLegalize": "" ,//==> (Optional:default "false") indicate whether AMFPlacer use direct macro legalization instread of the progressive legalization (2-phase legalization)
     // "SpreaderSimpleExpland":  "" ,//==> (Optional:default "false") indicate whether the cell spreader finds the cell spreading window in a simple approach [PLACER]
     // "pseudoNetWeightConsiderNetNum" : "" ,// ==> (Optional:default "true") indicate whether the wirelength optimizer considers the interconnection density for psuedo net weight [PLACER]
     // "disableSpreadingConvergeRatio" :"" ,// ==> (Optional:default "false") indicate whether the cell spreader utilizes forget-rate-based cell spreading location update [PLACER]

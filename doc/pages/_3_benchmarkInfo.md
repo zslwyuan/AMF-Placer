@@ -37,12 +37,12 @@ Apart from the fundamental mechanisms to support macro placement, some optional 
 4. forgetting-rate-based cell spreading update
 5. progressive macro legalization
 
- Since existing open-source analytical FPGA placers do not support mixed-size FPGA placement of aforementioned macros on Ultrascale devices, for comprehensive comparison, according to some state-of-the-art solutions, we implement baseline placement solution with the following features:
+Since existing open-source analytical FPGA placers do not support mixed-size FPGA placement of aforementioned macros on Ultrascale devices, for comprehensive comparison, according to some state-of-the-art solutions, we implement baseline placement solution with the following features:
  
 1.  quadratic placement, cell spreading and clock region planning algorithms from RippleFPGA\[1\] and clock-aware initial clustering from \[2\].
 2.  resource demand adjustment and packing algorithms from extended UTPlaceF\[3\]
 3.  SA initial placement
-4.  necessary modifications to support macro placement, e.g., macro legalization/packing, but without \emph{Tech2-5}
+4.  necessary modifications to support macro placement, e.g., macro legalization/packing, but without Tech2-5 shown above.
 5.  parallelized
 
 
