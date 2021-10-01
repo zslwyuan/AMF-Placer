@@ -759,5 +759,5 @@ void ClusterPlacer::drawClusters()
                 lines.push_back(std::pair<int, int>(clusterA, clusterB));
             }
         }
-    paintClusterNodeLine(cluster2FP_XY, lines, cluster2FixedUnitMat, fixedX, fixedY);
+    // paintClusterNodeLine(cluster2FP_XY, lines, cluster2FixedUnitMat, fixedX, fixedY);
 }

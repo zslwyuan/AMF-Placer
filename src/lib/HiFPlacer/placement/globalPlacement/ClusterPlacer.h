@@ -15,7 +15,6 @@
 
 #include "DesignInfo.h"
 #include "DeviceInfo.h"
-#include "GLDraw.h"
 #include "GraphPartitioner.h"
 #include "PaToH/patoh.h"
 #include "PlacementInfo.h"

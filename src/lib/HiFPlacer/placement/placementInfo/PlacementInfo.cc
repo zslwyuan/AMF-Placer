@@ -11,7 +11,6 @@
  *
  */
 #include "PlacementInfo.h"
-#include "GLDraw.h"
 #include "readZip.h"
 #include "strPrint.h"
 #include "stringCheck.h"
@@ -683,7 +682,7 @@ void PlacementInfo::PlacementNet::drawNet(float generalWeight)
             lines.push_back(std::pair<int, int>(topPinId_net, pinId_net));
         }
     }
-    paintB2BNodeLine(nodexy, lines);
+    // paintB2BNodeLine(nodexy, lines);
 }
 
 void PlacementInfo::verifyDeviceForDesign()
