@@ -1,4 +1,4 @@
 <map id="PlacementInfo::PlacementNet::addPseudoNet_enhancePin2Pin" name="PlacementInfo::PlacementNet::addPseudoNet_enhancePin2Pin">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,241,47"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c" title="set weights of the terms in the quadratic problem min_x 0.5 * x&#39;Px + q&#39;x s.t. l &lt;= Ax &lt;= u" alt="" coords="289,5,464,47"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c" title="set weights of the terms in the quadratic problem" alt="" coords="289,5,464,47"/>
 </map>

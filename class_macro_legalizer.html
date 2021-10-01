@@ -426,7 +426,7 @@ Private Attributes</h2></td></tr>
 <p >(RAMB36E2 will be treated as 1+1 RAMB18E2, one of which is a virtual cell)</p>
 <p >The legalization procedure will only conduct rough legalization in the early iterations of global placement, and it will conduct exact legalization following rough legalization when the macros are close enough to their potential legal positions. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00032">32</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00043">43</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8ba20d872f549c7fd0eb833ca3be89e5" name="a8ba20d872f549c7fd0eb833ca3be89e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ba20d872f549c7fd0eb833ca3be89e5">&#9670;&nbsp;</a></span>MacroLegalizer()</h2>
@@ -484,7 +484,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00008">8</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00019">19</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
 </div>
 </div>
@@ -511,7 +511,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00048">48</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00059">59</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
 </div>
 </div>
@@ -541,9 +541,9 @@ Private Attributes</h2></td></tr>
 
 <p>Create a bipartite graph between PlacementUnit and potential DeviceSites. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00607">607</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00618">618</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -627,9 +627,9 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00148">148</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00159">159</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -690,9 +690,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00680">680</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00691">691</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00093">GlobalPlacer::GlobalPlacement_CLBElements()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00104">GlobalPlacer::GlobalPlacement_CLBElements()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -755,9 +755,9 @@ Here is the caller graph for this function:</div>
 <p>finally dynamic programming to legalize the macros which have been mapped to the columns. </p>
 <p >This function will call DP function for each specific type of macros </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00126">126</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00137">137</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -840,9 +840,9 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01098">1098</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01109">1109</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -911,9 +911,9 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01075">1075</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01086">1086</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -956,9 +956,9 @@ Here is the caller graph for this function:</div>
 
 <p>find candidate sites for the cells left to be matched </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00612">612</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00623">623</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1021,9 +1021,9 @@ Here is the caller graph for this function:</div>
 
 <p>find available sites for each specific macro type required by the constructor </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00359">359</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00370">370</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1087,9 +1087,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00494">494</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00505">505</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1164,9 +1164,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00094">94</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00105">105</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1256,9 +1256,9 @@ Here is the caller graph for this function:</div>
 <p >Exact legalization ensures elements in a macro are placed consecutively.</p>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00069">69</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00080">80</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00398">GlobalPlacer::macroLegalize()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">GlobalPlacer::updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">GlobalPlacer::macroLegalize()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00620">GlobalPlacer::updatePseudoNetWeight()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1301,9 +1301,9 @@ Here is the caller graph for this function:</div>
 <p >Rough legalization does not guarantee that elements in a macro are placed consecutively.</p>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00091">91</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00102">102</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00398">GlobalPlacer::macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">GlobalPlacer::macroLegalize()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1352,9 +1352,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00680">680</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00691">691</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1418,7 +1418,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00685">685</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00696">696</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1478,9 +1478,9 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00697">697</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00708">708</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00607">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00148">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00791">sortPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00618">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00159">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00802">sortPartition()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1565,7 +1565,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00737">737</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00748">748</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1632,7 +1632,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00766">766</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00777">777</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1671,9 +1671,9 @@ Here is the call graph for this function:</div>
 
 <p>get the PlacementMacro(s) which SHOULD be legalized </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00322">322</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00333">333</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1735,9 +1735,9 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00776">776</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00787">787</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00148">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00935">spreadMacros()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00159">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00946">spreadMacros()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1796,9 +1796,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00036">36</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00047">47</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00398">GlobalPlacer::macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">GlobalPlacer::macroLegalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1902,9 +1902,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01116">1116</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01127">1127</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1972,9 +1972,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00870">870</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00881">881</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00870">quick_sort_locX()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00881">quick_sort_locX()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2056,9 +2056,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00821">821</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00832">832</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00821">quick_sort_WLChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00832">quick_sort_WLChange()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2147,9 +2147,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00811">811</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00822">822</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00870">quick_sort_locX()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00821">quick_sort_WLChange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00881">quick_sort_locX()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00832">quick_sort_WLChange()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2227,7 +2227,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00861">861</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00872">872</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2274,9 +2274,9 @@ Here is the call graph for this function:</div>
 
 <p>clear the information of candidate sites for the cells left to be matched </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00637">637</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00648">648</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2319,9 +2319,9 @@ Here is the caller graph for this function:</div>
 
 <p>clear the mapping information and reset the mapping parameters </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00651">651</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00662">662</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2356,9 +2356,9 @@ Here is the caller graph for this function:</div>
 <p>reset the mapped flag of the involved sites. </p>
 <p >A mapped site will not be binded to another PlacementUnit. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01250">1250</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01261">1261</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00398">GlobalPlacer::macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">GlobalPlacer::macroLegalize()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2398,9 +2398,9 @@ Here is the caller graph for this function:</div>
 
 <p>resolve the overflow columns during fixed column legalization by spreading "outliers" to neighbor columns </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01058">1058</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01069">1069</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2454,9 +2454,9 @@ Here is the caller graph for this function:</div>
 <p>conduct rough legalization. </p>
 <p >Rough legalization does not guarantee that elements in a macro are placed consecutively. During rough legalization, each cell in a macro will be "legalized" individually as a general standard cell withouth the shape constraints. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00069">69</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00080">80</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2562,9 +2562,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00105">105</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00116">116</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00398">GlobalPlacer::macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">GlobalPlacer::macroLegalize()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2604,9 +2604,9 @@ Here is the caller graph for this function:</div>
 
 <p>Set the sites which are binded as mapped so they will not be mapped to other elements in the netlist. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01225">1225</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l01236">1236</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2674,9 +2674,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00791">791</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00802">802</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00811">RandomPivotPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00822">RandomPivotPartition()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2754,7 +2754,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00842">842</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00853">853</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2791,9 +2791,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00800">800</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00811">811</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2843,9 +2843,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00809">809</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00820">820</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00148">DPForMinHPWL()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00159">DPForMinHPWL()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2942,9 +2942,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00935">935</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00946">946</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3006,9 +3006,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00669">669</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00680">680</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00800">sortPUsByPU2Y()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00811">sortPUsByPU2Y()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3060,9 +3060,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00835">835</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00846">846</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00861">RandomPivotPartition()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00842">sortPartition()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00872">RandomPivotPartition()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00853">sortPartition()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3110,9 +3110,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00784">784</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00795">795</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00811">RandomPivotPartition()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00791">sortPartition()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00809">sortSitesBySiteY()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00822">RandomPivotPartition()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00802">sortPartition()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00820">sortSitesBySiteY()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -3163,9 +3163,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the matching in private list and update the list of cells which are not matched by the bi-partite matching </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00651">651</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00662">662</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3236,9 +3236,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00829">829</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8cc_source.html#l00840">840</a> of file <a class="el" href="_macro_legalizer_8cc_source.html">MacroLegalizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -3294,9 +3294,9 @@ Here is the caller graph for this function:</div>
 
 <p>the adjacent list of the bipartite graph </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00209">209</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00220">220</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00607">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00618">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 
 </div>
 </div>
@@ -3322,9 +3322,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the PlacementUnits in each column of BRAM site </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00361">361</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00372">372</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -3350,9 +3350,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the PlacementUnits in each column of BRAM Sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00325">325</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00336">336</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -3378,9 +3378,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the sites in each column of BRAM </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00307">307</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00318">318</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -3406,9 +3406,9 @@ Here is the caller graph for this function:</div>
 
 <p>the number of BRAM columns on the target device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00253">253</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00264">264</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -3434,9 +3434,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the number of cells (Macro contains multiple cells) in each column for BRAM </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00343">343</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00354">354</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -3462,9 +3462,9 @@ Here is the caller graph for this function:</div>
 
 <p>the floating-point X location of the BRAM columns on the device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00289">289</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00300">300</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>.</p>
 
 </div>
 </div>
@@ -3490,9 +3490,9 @@ Here is the caller graph for this function:</div>
 
 <p>the PlacementUnits which shoudl be mapped to BRAM site </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00410">410</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00421">421</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00322">getMacrosToLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00333">getMacrosToLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>.</p>
 
 </div>
 </div>
@@ -3518,9 +3518,9 @@ Here is the caller graph for this function:</div>
 
 <p>the number of BRAM rows on the target device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00271">271</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00282">282</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>.</p>
 
 </div>
 </div>
@@ -3546,9 +3546,9 @@ Here is the caller graph for this function:</div>
 
 <p>we are allowed to detect a excessive number (&gt;candidateNum) of initial candidates. candidateFactor is to control the excessive ratio. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00474">474</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00485">485</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00612">findMacroCell2SitesInDistance()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00105">setIntitialParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00623">findMacroCell2SitesInDistance()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00116">setIntitialParameters()</a>.</p>
 
 </div>
 </div>
@@ -3574,9 +3574,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the PlacementUnits in each column of CARRY site </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00373">373</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00384">384</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -3602,9 +3602,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the PlacementUnits in each column of CARRY </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00337">337</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00348">348</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -3630,9 +3630,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the sites in each column of CARRY </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00319">319</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00330">330</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -3658,9 +3658,9 @@ Here is the caller graph for this function:</div>
 
 <p>the number of CARRY columns on the target device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00265">265</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00276">276</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -3686,9 +3686,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the number of cells (Macro contains multiple cells) in each column for CARRY </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00355">355</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00366">366</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -3714,9 +3714,9 @@ Here is the caller graph for this function:</div>
 
 <p>the floating-point X location of the CARRY columns on the device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00301">301</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00312">312</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>.</p>
 
 </div>
 </div>
@@ -3742,9 +3742,9 @@ Here is the caller graph for this function:</div>
 
 <p>the PlacementUnits which shoudl be mapped to CARRY BEL </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00422">422</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00433">433</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00322">getMacrosToLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00333">getMacrosToLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>.</p>
 
 </div>
 </div>
@@ -3770,9 +3770,9 @@ Here is the caller graph for this function:</div>
 
 <p>the number of CARRY rows on the target device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00283">283</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00294">294</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>.</p>
 
 </div>
 </div>
@@ -3798,9 +3798,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the binding between design standard cells and DeviceSites as a vector of pairs </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00227">227</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00238">238</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00651">resetSettings()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01250">resetSitesMapped()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01225">setSitesMapped()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00651">updateMatchingAndUnmatchedMacroCells()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00662">resetSettings()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01261">resetSitesMapped()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01236">setSitesMapped()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00662">updateMatchingAndUnmatchedMacroCells()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -3826,9 +3826,9 @@ Here is the caller graph for this function:</div>
 
 <p>a reference of the locations of cells (in cellId order) </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00145">145</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00156">156</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00612">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00623">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -3854,9 +3854,9 @@ Here is the caller graph for this function:</div>
 
 <p>compatiblePlacementTable describes the type mapping from design to device, where a cell can be placed (which BEL in which site) </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00133">133</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00144">144</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>.</p>
 
 </div>
 </div>
@@ -3880,9 +3880,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00126">126</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00137">137</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>.</p>
 
 </div>
 </div>
@@ -3908,9 +3908,9 @@ Here is the caller graph for this function:</div>
 
 <p>displacement threshold to detect potential legal sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00241">241</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00252">252</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00612">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00651">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00623">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00662">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 
 </div>
 </div>
@@ -3936,9 +3936,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the PlacementUnits in each column of DSP site </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00367">367</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00378">378</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -3964,9 +3964,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the PlacementUnits in each column of DSP Sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00331">331</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00342">342</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -3992,9 +3992,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the sites in each column of DSP </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00313">313</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00324">324</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -4020,9 +4020,9 @@ Here is the caller graph for this function:</div>
 
 <p>the number of DSP columns on the target device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00259">259</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00270">270</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4048,9 +4048,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the number of cells (Macro contains multiple cells) in each column for DSP </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00349">349</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00360">360</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -4076,9 +4076,9 @@ Here is the caller graph for this function:</div>
 
 <p>the floating-point X location of the DSP columns on the device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00295">295</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00306">306</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>.</p>
 
 </div>
 </div>
@@ -4104,9 +4104,9 @@ Here is the caller graph for this function:</div>
 
 <p>the PlacementUnits which shoudl be mapped to DSP site </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00416">416</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00427">427</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00322">getMacrosToLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00333">getMacrosToLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>.</p>
 
 </div>
 </div>
@@ -4132,9 +4132,9 @@ Here is the caller graph for this function:</div>
 
 <p>the number of DSP rows on the target device </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00277">277</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00288">288</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>.</p>
 
 </div>
 </div>
@@ -4158,9 +4158,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00235">235</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00246">246</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>.</p>
 
 </div>
 </div>
@@ -4184,9 +4184,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00424">424</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00435">435</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -4210,9 +4210,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00426">426</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00437">437</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -4236,9 +4236,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00425">425</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00436">436</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01058">resolveOverflowColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01069">resolveOverflowColumns()</a>.</p>
 
 </div>
 </div>
@@ -4264,9 +4264,9 @@ Here is the caller graph for this function:</div>
 
 <p>the average displacement of exact legalization for the involved PlacementUnit </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00434">434</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00445">445</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00069">getAverageDisplacementOfExactLegalization()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00080">getAverageDisplacementOfExactLegalization()</a>.</p>
 
 </div>
 </div>
@@ -4293,9 +4293,9 @@ Here is the caller graph for this function:</div>
 <p>the average displacement of fixed column (but not exactly consective) legalization for the involved PlacementUnit </p>
 <p >During the fixed column legalization, cells in a macro will be constrainted on one column. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00443">443</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00454">454</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4321,9 +4321,9 @@ Here is the caller graph for this function:</div>
 
 <p>displacement threshold to detect potential legal sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00455">455</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00466">466</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00651">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00105">setIntitialParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00662">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00116">setIntitialParameters()</a>.</p>
 
 </div>
 </div>
@@ -4349,9 +4349,9 @@ Here is the caller graph for this function:</div>
 
 <p>a vector storing the cells in macros which SHOULD be legalized </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00165">165</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00176">176</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00322">getMacrosToLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00333">getMacrosToLegalize()</a>.</p>
 
 </div>
 </div>
@@ -4377,9 +4377,9 @@ Here is the caller graph for this function:</div>
 
 <p>the maximum number of final candidate sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00461">461</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00472">472</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00651">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00105">setIntitialParameters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00662">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00116">setIntitialParameters()</a>.</p>
 
 </div>
 </div>
@@ -4403,9 +4403,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00147">147</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00158">158</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00008">MacroLegalizer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00019">MacroLegalizer()</a>.</p>
 
 </div>
 </div>
@@ -4429,9 +4429,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00124">124</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00135">135</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4458,9 +4458,9 @@ Here is the caller graph for this function:</div>
 <p>record the mapping from cells to the candidate sites which are NOT binded to other cells </p>
 <p >Please be aware that a cell might be binded of multiple sites. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00185">185</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00196">196</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00607">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00618">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 
 </div>
 </div>
@@ -4486,9 +4486,9 @@ Here is the caller graph for this function:</div>
 
 <p>a cache record the candidate sites within a given displacement threshold for each cell in the macros </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00191">191</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00202">202</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00612">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00637">resetMacroCell2SitesInDistance()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00623">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00648">resetMacroCell2SitesInDistance()</a>.</p>
 
 </div>
 </div>
@@ -4514,9 +4514,9 @@ Here is the caller graph for this function:</div>
 
 <p>a vector storing the Design cells which have NOT been legalized </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00159">159</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00170">170</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00607">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00612">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00322">getMacrosToLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00008">MacroLegalizer()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00637">resetMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00651">updateMatchingAndUnmatchedMacroCells()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00618">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00623">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00333">getMacrosToLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00019">MacroLegalizer()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00648">resetMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00662">updateMatchingAndUnmatchedMacroCells()</a>.</p>
 
 </div>
 </div>
@@ -4542,9 +4542,9 @@ Here is the caller graph for this function:</div>
 
 <p>a map record the potential sites of different site types </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00177">177</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00188">188</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>.</p>
 
 </div>
 </div>
@@ -4570,9 +4570,9 @@ Here is the caller graph for this function:</div>
 
 <p>a vector of Cell Type string indicating the target types handled by this <a class="el" href="class_macro_legalizer.html" title="MacroLegalizer maps DSP/BRAM/CARRY macros to legal location.">MacroLegalizer</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00139">139</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00150">150</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00322">getMacrosToLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00333">getMacrosToLegalize()</a>.</p>
 
 </div>
 </div>
@@ -4598,9 +4598,9 @@ Here is the caller graph for this function:</div>
 
 <p>a set storing the macros which have NOT been legalized </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00171">171</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00182">182</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00322">getMacrosToLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00333">getMacrosToLegalize()</a>.</p>
 
 </div>
 </div>
@@ -4626,9 +4626,9 @@ Here is the caller graph for this function:</div>
 
 <p>a set of cells in macros binded to corresponding DeviceSites </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00215">215</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00226">226</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00651">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00651">updateMatchingAndUnmatchedMacroCells()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00662">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00662">updateMatchingAndUnmatchedMacroCells()</a>.</p>
 
 </div>
 </div>
@@ -4654,9 +4654,9 @@ Here is the caller graph for this function:</div>
 
 <p>a set of DeviceSites binded to corresponding PlacementUnits </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00221">221</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00232">232</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00651">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00651">updateMatchingAndUnmatchedMacroCells()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00662">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00662">updateMatchingAndUnmatchedMacroCells()</a>.</p>
 
 </div>
 </div>
@@ -4682,9 +4682,9 @@ Here is the caller graph for this function:</div>
 
 <p>the maximum number of final candidate sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00247">247</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00258">258</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00612">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00651">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00623">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00662">resetSettings()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 
 </div>
 </div>
@@ -4710,9 +4710,9 @@ Here is the caller graph for this function:</div>
 
 <p>min-cost bipartite matching solver for the legalization </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00153">153</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00164">164</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00651">updateMatchingAndUnmatchedMacroCells()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00048">~MacroLegalizer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00662">updateMatchingAndUnmatchedMacroCells()</a>, and <a class="el" href="_macro_legalizer_8h_source.html#l00059">~MacroLegalizer()</a>.</p>
 
 </div>
 </div>
@@ -4738,9 +4738,9 @@ Here is the caller graph for this function:</div>
 
 <p>the number of the parallel multi-threading workers to handle the legalization problems </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00467">467</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00478">478</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00008">MacroLegalizer()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00019">MacroLegalizer()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 
 </div>
 </div>
@@ -4764,9 +4764,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00125">125</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00136">136</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00612">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00359">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00697">getHPWLChange()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00322">getMacrosToLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00623">findMacroCell2SitesInDistance()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00370">findMacroType2AvailableSites()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00708">getHPWLChange()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00333">getMacrosToLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4793,9 +4793,9 @@ Here is the caller graph for this function:</div>
 <p>record the column id for the binded cells in involved PlacementUnits </p>
 <p >i.e., if a PlacementUnit is PlacementMacro, the cells in it might be allowed to bind to different columns during rough legalization. </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00404">404</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00415">415</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01116">mapMacrosToColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l01127">mapMacrosToColumns()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4819,9 +4819,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00375">375</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00386">386</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00148">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00008">MacroLegalizer()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01250">resetSitesMapped()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01225">setSitesMapped()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00159">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00019">MacroLegalizer()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01261">resetSitesMapped()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01236">setSitesMapped()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4848,9 +4848,9 @@ Here is the caller graph for this function:</div>
 <p>record the exact site X (column id) of involved PlacementUnits </p>
 <p >unused currently and just for debugging </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00395">395</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00406">406</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4876,9 +4876,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the mapping from PlacementUnits to exact DeviceSite location X </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00381">381</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00392">392</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00148">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00008">MacroLegalizer()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00159">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00019">MacroLegalizer()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4904,9 +4904,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the mapping from PlacementUnits to exact DeviceSite location Y </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00387">387</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00398">398</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00148">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00008">MacroLegalizer()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00800">sortPUsByPU2Y()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00159">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00019">MacroLegalizer()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00811">sortPUsByPU2Y()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -4932,9 +4932,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the binding between PlacementUnits and DeviceSites as a vector of pairs </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00233">233</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00244">244</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00148">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00680">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00069">getAverageDisplacementOfExactLegalization()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00651">resetSettings()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01250">resetSitesMapped()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01225">setSitesMapped()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00159">DPForMinHPWL()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00691">dumpMatching()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00080">getAverageDisplacementOfExactLegalization()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00662">resetSettings()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l01261">resetSitesMapped()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l01236">setSitesMapped()</a>.</p>
 
 </div>
 </div>
@@ -4960,9 +4960,9 @@ Here is the caller graph for this function:</div>
 
 <p>map sites to temperary indexes for bipartite matching </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00197">197</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00208">208</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00607">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00618">createBipartiteGraph()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>.</p>
 
 </div>
 </div>
@@ -4988,9 +4988,9 @@ Here is the caller graph for this function:</div>
 
 <p>the average displacement of rough legalization for the involved PlacementUnit </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00449">449</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00460">460</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00091">getAverageDisplacementOfRoughLegalization()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00102">getAverageDisplacementOfRoughLegalization()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -5016,9 +5016,9 @@ Here is the caller graph for this function:</div>
 
 <p>a vector for the candidate sites for bipartite matching </p>
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00203">203</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00214">214</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00607">createBipartiteGraph()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00651">updateMatchingAndUnmatchedMacroCells()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00618">createBipartiteGraph()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00662">updateMatchingAndUnmatchedMacroCells()</a>.</p>
 
 </div>
 </div>
@@ -5042,9 +5042,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00427">427</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00438">438</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00126">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00494">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00094">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00036">legalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00008">MacroLegalizer()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00069">roughlyLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00829">updatePUMatchingLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8cc_source.html#l00137">finalLegalizeBasedOnDP()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00505">findPossibleLegalLocation()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00105">fixedColumnLegalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00047">legalize()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00019">MacroLegalizer()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00080">roughlyLegalize()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00840">updatePUMatchingLocation()</a>.</p>
 
 </div>
 </div>
@@ -5068,9 +5068,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00428">428</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_macro_legalizer_8h_source.html#l00439">439</a> of file <a class="el" href="_macro_legalizer_8h_source.html">MacroLegalizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00680">getDisplacement()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00697">getHPWLChange()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00008">MacroLegalizer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_macro_legalizer_8h_source.html#l00691">getDisplacement()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00708">getHPWLChange()</a>, and <a class="el" href="_macro_legalizer_8cc_source.html#l00019">MacroLegalizer()</a>.</p>
 
 </div>
 </div>

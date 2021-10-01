@@ -1,7 +1,7 @@
 <map id="src/lib/utils/stringCheck.h" name="src/lib/utils/stringCheck.h">
 <area shape="rect" id="node1" title=" " alt="" coords="742,5,910,32"/>
 <area shape="rect" id="node2" href="$_design_info_8cc.html" title="This implementation file contains APIs&#39; implementation for a standalone design netlist." alt="" coords="5,80,167,121"/>
-<area shape="rect" id="node3" href="$_device_info_8cc.html" title=" " alt="" coords="191,80,352,121"/>
+<area shape="rect" id="node3" href="$_device_info_8cc.html" title="This implementation file contains APIs&#39; implementation for a standalone device." alt="" coords="191,80,352,121"/>
 <area shape="rect" id="node4" href="$_incremental_b_e_l_packer_8cc.html" title=" " alt="" coords="377,80,603,121"/>
 <area shape="rect" id="node5" href="$_initial_packer_8cc.html" title=" " alt="" coords="628,80,811,121"/>
 <area shape="rect" id="node6" href="$_parallel_c_l_b_packer_8h.html" title=" " alt="" coords="835,80,1030,121"/>

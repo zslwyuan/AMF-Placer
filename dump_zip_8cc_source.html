@@ -86,24 +86,25 @@ $(document).ready(function(){initNavTree('dump_zip_8cc_source.html',''); initRes
   <div class="headertitle"><div class="title">dumpZip.cc</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="dump_zip_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="dump_zip_8h.html">dumpZip.h</a>&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">    3</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a>(std::string fileName, std::stringstream &amp;data)</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>    <span class="comment">// we will use GZip from zlib</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    gzFile gz_file;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="comment">// open the file for writing in binary mode</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    gz_file = gzopen(fileName.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    assert(Z_NULL != gz_file);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// Get the size of the stream</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> file_size = <span class="keyword">sizeof</span>(char) * data.str().size();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">// Write the data</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    gzwrite(gz_file, (<span class="keywordtype">void</span> *)(data.str().data()), file_size);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="comment">// close the file</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    gzclose(gz_file);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
-<div class="ttc" id="adump_zip_8cc_html_a21c5a770aceed592dcbb296cacea5777"><div class="ttname"><a href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a></div><div class="ttdeci">void writeStrToGZip(std::string fileName, std::stringstream &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="dump_zip_8cc_source.html#l00003">dumpZip.cc:3</a></div></div>
+<a href="dump_zip_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="dump_zip_8h.html">dumpZip.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">   14</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a>(std::string fileName, std::stringstream &amp;data)</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="comment">// we will use GZip from zlib</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    gzFile gz_file;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">// open the file for writing in binary mode</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    gz_file = gzopen(fileName.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    assert(Z_NULL != gz_file);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="comment">// Get the size of the stream</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> file_size = <span class="keyword">sizeof</span>(char) * data.str().size();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="comment">// Write the data</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    gzwrite(gz_file, (<span class="keywordtype">void</span> *)(data.str().data()), file_size);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="comment">// close the file</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    gzclose(gz_file);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="ttc" id="adump_zip_8cc_html_a21c5a770aceed592dcbb296cacea5777"><div class="ttname"><a href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a></div><div class="ttdeci">void writeStrToGZip(std::string fileName, std::stringstream &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="dump_zip_8cc_source.html#l00014">dumpZip.cc:14</a></div></div>
 <div class="ttc" id="adump_zip_8h_html"><div class="ttname"><a href="dump_zip_8h.html">dumpZip.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

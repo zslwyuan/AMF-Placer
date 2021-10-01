@@ -5,7 +5,7 @@
 <area shape="rect" id="node50" title=" " alt="" coords="4926,95,4994,121"/>
 <area shape="rect" id="node3" href="$_c_l_b_legalizer_8h.html" title=" " alt="" coords="3505,244,3616,271"/>
 <area shape="rect" id="node4" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="3878,543,3973,569"/>
-<area shape="rect" id="node5" href="$_device_info_8h.html" title=" " alt="" coords="5620,617,5714,644"/>
+<area shape="rect" id="node5" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="5620,617,5714,644"/>
 <area shape="rect" id="node7" title=" " alt="" coords="2773,767,2828,793"/>
 <area shape="rect" id="node8" title=" " alt="" coords="5012,692,5080,719"/>
 <area shape="rect" id="node9" title=" " alt="" coords="2919,692,2986,719"/>

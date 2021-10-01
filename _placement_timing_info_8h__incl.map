@@ -1,7 +1,7 @@
 <map id="src/lib/HiFPlacer/placement/placementTiming/PlacementTimingInfo.h" name="src/lib/HiFPlacer/placement/placementTiming/PlacementTimingInfo.h">
 <area shape="rect" id="node1" title=" " alt="" coords="579,5,809,61"/>
 <area shape="rect" id="node2" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="479,109,573,136"/>
-<area shape="rect" id="node3" href="$_device_info_8h.html" title=" " alt="" coords="308,184,403,211"/>
+<area shape="rect" id="node3" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="308,184,403,211"/>
 <area shape="rect" id="node9" title=" " alt="" coords="541,333,596,360"/>
 <area shape="rect" id="node11" title=" " alt="" coords="76,259,144,285"/>
 <area shape="rect" id="node12" title=" " alt="" coords="169,259,235,285"/>

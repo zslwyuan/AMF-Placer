@@ -1,8 +1,8 @@
 <map id="src/lib/utils/strPrint.h" name="src/lib/utils/strPrint.h">
 <area shape="rect" id="node1" title=" " alt="" coords="3010,5,3151,32"/>
 <area shape="rect" id="node2" href="$_design_info_8cc.html" title="This implementation file contains APIs&#39; implementation for a standalone design netlist." alt="" coords="559,266,720,307"/>
-<area shape="rect" id="node3" href="$_device_info_8cc.html" title=" " alt="" coords="2831,169,2992,211"/>
-<area shape="rect" id="node4" href="$_device_info_8h.html" title=" " alt="" coords="2197,80,2359,121"/>
+<area shape="rect" id="node3" href="$_device_info_8cc.html" title="This implementation file contains APIs&#39; implementation for a standalone device." alt="" coords="2831,169,2992,211"/>
+<area shape="rect" id="node4" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="2197,80,2359,121"/>
 <area shape="rect" id="node21" href="$_incremental_b_e_l_packer_8cc.html" title=" " alt="" coords="3538,563,3765,605"/>
 <area shape="rect" id="node23" href="$_initial_packer_8cc.html" title=" " alt="" coords="2481,563,2664,605"/>
 <area shape="rect" id="node25" href="$_parallel_c_l_b_packer_8h.html" title=" " alt="" coords="3022,459,3217,501"/>

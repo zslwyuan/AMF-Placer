@@ -9,7 +9,7 @@
 <area shape="rect" id="node33" href="$string_check_8h.html" title=" " alt="" coords="2202,393,2303,420"/>
 <area shape="rect" id="node34" title=" " alt="" coords="2570,95,2629,121"/>
 <area shape="rect" id="node3" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="1659,319,1753,345"/>
-<area shape="rect" id="node4" href="$_device_info_8h.html" title=" " alt="" coords="1067,393,1161,420"/>
+<area shape="rect" id="node4" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="1067,393,1161,420"/>
 <area shape="rect" id="node10" title=" " alt="" coords="1305,543,1360,569"/>
 <area shape="rect" id="node13" title=" " alt="" coords="1173,468,1239,495"/>
 <area shape="rect" id="node14" title=" " alt="" coords="1768,468,1815,495"/>
