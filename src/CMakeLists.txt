@@ -26,14 +26,14 @@ include(FetchContent)
 # set(BOOST_ROOT "")
 
 set(Boost_USE_STATIC_LIBS OFF)
-set(BOOST_VER 1.75.0)
+set(BOOST_VER 1.65.1)
 set(Boost_NO_BOOST_CMAKE ON)
 set(BOOST_COMPONENTS filesystem program_options system log thread)
 ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
 
 # Workaround function to allow cmake call `find_package` twice. Avoide side effects from local variables, which are produced be `find_package`
 function(findBoost Required)
-    find_package(Boost ${BOOST_VER} EXACT ${Required} 
+    find_package(Boost ${BOOST_VER} ${Required} 
         COMPONENTS ${BOOST_COMPONENTS}
         OPTIONAL_COMPONENTS unit_test_framework
     )
