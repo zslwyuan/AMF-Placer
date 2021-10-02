@@ -9,6 +9,6 @@ include_directories(./ ../../../utils/ ../../designInfo/ ../../deviceInfo/ ../pl
 
 
 
-add_library(PlacementInfo ${curDirectory} ${BOOST_LIBS_REQUIRED} )
+add_library(PlacementInfo ${curDirectory})
 
 

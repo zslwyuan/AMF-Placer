@@ -85,15 +85,16 @@ include_directories(./lib/
 ./lib/3rdParty
 ./lib/HiFPlacer/problemSolvers
 ${abseil-cpp_SOURCE_DIR} 
+${Boost_INCLUDE_DIR}
 ${EIGEN3_INCLUDE_DIR}
 ${ZLIB_INCLUDE_DIRS}
 )
 
 link_directories(${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/)
 
-target_link_libraries(AMFPlacer ${BOOST_LIBS_REQUIRED} GlobalPlacer DesignInfo DeviceInfo PlacementInfo PlacementTiming Packing Legalization ProblemSolvers Utils
+target_link_libraries(AMFPlacer GlobalPlacer DesignInfo DeviceInfo PlacementInfo PlacementTiming Packing Legalization ProblemSolvers Utils
                         ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a 
                         pthread 
-                        GL GLU glut GLEW ${ZLIB_LIBRARIES})
-target_link_libraries(partitionHyperGraph ${BOOST_LIBS_REQUIRED} m ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a )
+                        GL GLU glut GLEW ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} )
+target_link_libraries(partitionHyperGraph  ${Boost_LIBRARIES}  m ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a )
 
