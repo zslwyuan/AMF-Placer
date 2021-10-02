@@ -1,5 +1,5 @@
 <map id="src/lib/HiFPlacer/placement/globalPlacement/WirelengthOptimizer.h" name="src/lib/HiFPlacer/placement/globalPlacement/WirelengthOptimizer.h">
-<area shape="rect" id="node1" title=" " alt="" coords="1081,5,1333,47"/>
+<area shape="rect" id="node1" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="1081,5,1333,47"/>
 <area shape="rect" id="node2" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="1809,393,1903,420"/>
 <area shape="rect" id="node3" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="1603,468,1698,495"/>
 <area shape="rect" id="node9" title=" " alt="" coords="2266,617,2321,644"/>
@@ -12,7 +12,7 @@
 <area shape="rect" id="node17" title=" " alt="" coords="2436,468,2508,495"/>
 <area shape="rect" id="node18" title=" " alt="" coords="144,393,235,420"/>
 <area shape="rect" id="node19" title=" " alt="" coords="713,393,839,420"/>
-<area shape="rect" id="node20" href="$_macro_legalizer_8h.html" title=" " alt="" coords="1815,95,1935,121"/>
+<area shape="rect" id="node20" href="$_macro_legalizer_8h.html" title="This header file contains the definitions of MacroLegalizer class and its internal modules and APIs w..." alt="" coords="1815,95,1935,121"/>
 <area shape="rect" id="node22" href="$_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="2025,244,2141,271"/>
 <area shape="rect" id="node26" title=" " alt="" coords="2894,393,2951,420"/>
 <area shape="rect" id="node27" title=" " alt="" coords="3077,393,3173,420"/>
@@ -29,7 +29,7 @@
 <area shape="rect" id="node33" href="$sys_info_8h.html" title=" " alt="" coords="3276,244,3351,271"/>
 <area shape="rect" id="node37" title=" " alt="" coords="1913,169,1970,196"/>
 <area shape="rect" id="node32" title=" " alt="" coords="2679,244,2867,271"/>
-<area shape="rect" id="node23" href="$_placement_timing_info_8h.html" title=" " alt="" coords="2272,319,2427,345"/>
+<area shape="rect" id="node23" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="2272,319,2427,345"/>
 <area shape="rect" id="node30" title=" " alt="" coords="2080,319,2165,345"/>
 <area shape="rect" id="node31" title=" " alt="" coords="2190,319,2247,345"/>
 <area shape="rect" id="node29" title=" " alt="" coords="2131,393,2205,420"/>

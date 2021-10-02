@@ -1,6 +1,6 @@
 <map id="src/lib/HiFPlacer/placement/legalization/CLBLegalizer.cc" name="src/lib/HiFPlacer/placement/legalization/CLBLegalizer.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="2791,5,2980,47"/>
-<area shape="rect" id="node2" href="$_c_l_b_legalizer_8h.html" title=" " alt="" coords="1218,95,1329,121"/>
+<area shape="rect" id="node1" title="This implementation file contains APIs&#39; implementation of the CLBLegalizer which maps CLBs (each of w..." alt="" coords="2791,5,2980,47"/>
+<area shape="rect" id="node2" href="$_c_l_b_legalizer_8h.html" title="This header file contains the definitions of CLBLegalizer class and its internal modules and APIs whi..." alt="" coords="1218,95,1329,121"/>
 <area shape="rect" id="node18" title=" " alt="" coords="2084,468,2156,495"/>
 <area shape="rect" id="node27" title=" " alt="" coords="2188,393,2263,420"/>
 <area shape="rect" id="node37" title=" " alt="" coords="2889,95,2948,121"/>
@@ -30,7 +30,7 @@
 <area shape="rect" id="node9" title=" " alt="" coords="2794,617,2857,644"/>
 <area shape="rect" id="node11" title=" " alt="" coords="2881,617,2962,644"/>
 <area shape="rect" id="node31" title=" " alt="" coords="803,244,991,271"/>
-<area shape="rect" id="node21" href="$_placement_timing_info_8h.html" title=" " alt="" coords="1056,319,1211,345"/>
+<area shape="rect" id="node21" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="1056,319,1211,345"/>
 <area shape="rect" id="node28" title=" " alt="" coords="1336,319,1421,345"/>
 <area shape="rect" id="node29" title=" " alt="" coords="1446,319,1573,345"/>
 <area shape="rect" id="node30" title=" " alt="" coords="1597,319,1654,345"/>

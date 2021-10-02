@@ -1,10 +1,10 @@
 <map id="src/lib/HiFPlacer/problemSolvers/SAPlacer.h" name="src/lib/HiFPlacer/problemSolvers/SAPlacer.h">
 <area shape="rect" id="node1" title=" " alt="" coords="259,5,429,47"/>
-<area shape="rect" id="node2" href="$_cluster_placer_8h.html" title=" " alt="" coords="129,95,343,136"/>
+<area shape="rect" id="node2" href="$_cluster_placer_8h.html" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="129,95,343,136"/>
 <area shape="rect" id="node8" href="$_s_a_placer_8cc.html" title=" " alt="" coords="367,95,537,136"/>
-<area shape="rect" id="node3" href="$_cluster_placer_8cc.html" title=" " alt="" coords="5,184,227,225"/>
-<area shape="rect" id="node4" href="$_global_placer_8h.html" title=" " alt="" coords="251,184,461,225"/>
-<area shape="rect" id="node5" href="$_a_m_f_placer_8h.html" title=" " alt="" coords="129,281,343,307"/>
-<area shape="rect" id="node7" href="$_global_placer_8cc.html" title=" " alt="" coords="367,273,585,315"/>
-<area shape="rect" id="node6" href="$main_8cc.html" title="AMF&#45;Placer Main file." alt="" coords="145,363,327,389"/>
+<area shape="rect" id="node3" href="$_cluster_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the ClusterPlacer which cluster nodes in th..." alt="" coords="5,184,227,225"/>
+<area shape="rect" id="node4" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="251,184,461,225"/>
+<area shape="rect" id="node5" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="129,281,343,307"/>
+<area shape="rect" id="node7" href="$_global_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the GlobalPlacer which organizes/configures..." alt="" coords="367,273,585,315"/>
+<area shape="rect" id="node6" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="145,363,327,389"/>
 </map>

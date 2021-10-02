@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"get_pin_offset_8py.html#a7829c2efee86f91219e2f4a4ab0d0e41":[9,0,0,1,0,1,12],
+"get_pin_offset_8py.html#a80680b686a7734bcf89607f868924370":[9,0,0,1,0,1,16],
 "get_pin_offset_8py.html#a8b0b21a442621b5b29a5bc2d9f7b7ee9":[9,0,0,1,0,1,6],
 "get_pin_offset_8py.html#a90dd12b362227113e073aad5979f71ab":[9,0,0,1,0,1,11],
 "get_pin_offset_8py.html#a97fd996168d3d60dbf9ebd0495f9faa2":[9,0,0,1,0,1,9],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "namespacepainter.html#a1a415b3d3bd8ec8dcf6fa629592d80d7":[7,0,8,20],
 "namespacepainter.html#a44c9b5f0a540389139d46deea899d3bd":[7,0,8,10],
 "namespacepainter.html#a4612f0128ccda822c9afa2add08c2e58":[7,0,8,17],
-"namespacepainter.html#a4e51645b6e915ae799215c5a7ab584d8":[7,0,8,8],
-"namespacepainter.html#a65c4e509f713ddf06afdd272cd4fd3dc":[7,0,8,14],
-"namespacepainter.html#a66d3622443e651dddff86b3d09bacfd7":[7,0,8,3]
+"namespacepainter.html#a4e51645b6e915ae799215c5a7ab584d8":[7,0,8,8]
 };

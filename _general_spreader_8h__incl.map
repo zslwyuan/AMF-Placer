@@ -1,5 +1,5 @@
 <map id="src/lib/HiFPlacer/placement/globalPlacement/GeneralSpreader.h" name="src/lib/HiFPlacer/placement/globalPlacement/GeneralSpreader.h">
-<area shape="rect" id="node1" title=" " alt="" coords="646,5,879,47"/>
+<area shape="rect" id="node1" title="This header file contains the definitions of GeneralSpreader class and its internal modules and APIs ..." alt="" coords="646,5,879,47"/>
 <area shape="rect" id="node2" href="$const_8h.html" title=" " alt="" coords="5,95,69,121"/>
 <area shape="rect" id="node3" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="817,244,911,271"/>
 <area shape="rect" id="node4" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="791,319,886,345"/>
@@ -19,7 +19,7 @@
 <area shape="rect" id="node8" title=" " alt="" coords="683,468,743,495"/>
 <area shape="rect" id="node9" title=" " alt="" coords="767,468,830,495"/>
 <area shape="rect" id="node11" title=" " alt="" coords="854,468,935,495"/>
-<area shape="rect" id="node20" href="$_placement_timing_info_8h.html" title=" " alt="" coords="1035,169,1189,196"/>
+<area shape="rect" id="node20" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="1035,169,1189,196"/>
 <area shape="rect" id="node23" title=" " alt="" coords="550,244,607,271"/>
 <area shape="rect" id="node25" title=" " alt="" coords="632,244,691,271"/>
 <area shape="rect" id="node27" title=" " alt="" coords="1327,169,1412,196"/>

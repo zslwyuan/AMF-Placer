@@ -1,6 +1,6 @@
 <map id="src/lib/HiFPlacer/placement/globalPlacement/ClusterPlacer.cc" name="src/lib/HiFPlacer/placement/globalPlacement/ClusterPlacer.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="3643,5,3864,47"/>
-<area shape="rect" id="node2" href="$_cluster_placer_8h.html" title=" " alt="" coords="2270,95,2381,121"/>
+<area shape="rect" id="node1" title="This implementation file contains APIs&#39; implementation of the ClusterPlacer which cluster nodes in th..." alt="" coords="3643,5,3864,47"/>
+<area shape="rect" id="node2" href="$_cluster_placer_8h.html" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="2270,95,2381,121"/>
 <area shape="rect" id="node18" title=" " alt="" coords="701,468,773,495"/>
 <area shape="rect" id="node27" title=" " alt="" coords="3192,393,3267,420"/>
 <area shape="rect" id="node48" title=" " alt="" coords="3757,95,3816,121"/>
@@ -30,7 +30,7 @@
 <area shape="rect" id="node9" title=" " alt="" coords="2814,617,2877,644"/>
 <area shape="rect" id="node11" title=" " alt="" coords="4106,617,4187,644"/>
 <area shape="rect" id="node35" href="$_external_process_func_8h.html" title=" " alt="" coords="2248,393,2403,420"/>
-<area shape="rect" id="node22" href="$_placement_timing_info_8h.html" title=" " alt="" coords="1303,319,1457,345"/>
+<area shape="rect" id="node22" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="1303,319,1457,345"/>
 <area shape="rect" id="node23" href="$dump_zip_8h.html" title=" " alt="" coords="549,393,632,420"/>
 <area shape="rect" id="node28" title=" " alt="" coords="909,319,995,345"/>
 <area shape="rect" id="node29" title=" " alt="" coords="1019,319,1146,345"/>
