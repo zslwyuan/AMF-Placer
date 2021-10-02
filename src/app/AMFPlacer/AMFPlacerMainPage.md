@@ -1,3 +1,5 @@
+![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)
+
 **Introduction**
 
 To enable the performance optimization of application mapping on modern field-programmable gate arrays (FPGAs),
