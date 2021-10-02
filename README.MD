@@ -1,5 +1,7 @@
 # AMF-Placer
 
+![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)
+
 ## Introduction
 
 AMF-Placer is an open-source analytical mixed-size FPGA placer supporting mixed-size placement on FPGA, with an interface to
