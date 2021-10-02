@@ -1,7 +1,8 @@
 /**
  * @file MacroLegalizer.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This header file contains the definitions of MacroLegalizer class and its internal modules and APIs which
+ * map DSP/BRAM/CARRY macros to legal location
  * @version 0.1
  * @date 2021-10-02
  *

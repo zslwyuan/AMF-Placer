@@ -1,7 +1,8 @@
 /**
  * @file WirelengthOptimizer.cc
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This implementation file contains APIs' implementation of the WirelengthOptimizer which builds numerical
+ * models based on the element locations and calls solvers to find an optimal solution of the placement.
  * @version 0.1
  * @date 2021-10-02
  *

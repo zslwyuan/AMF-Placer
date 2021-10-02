@@ -1,7 +1,8 @@
 /**
  * @file WirelengthOptimizer.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This header file contains the definitions of GlobalPlacer class and its internal modules and APIs which
+ * build numerical models based on the element locations and calls solvers to find an optimal solution of the placement.
  * @version 0.1
  * @date 2021-10-02
  *

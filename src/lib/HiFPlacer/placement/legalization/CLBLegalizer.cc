@@ -1,7 +1,8 @@
 /**
  * @file CLBLegalizer.cc
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This implementation file contains APIs' implementation of the CLBLegalizer which maps CLBs (each of which
+ * consists of one site) to legal location. e.g. LUTRAM, except those CLBs in CARRY8_Chain.
  * @version 0.1
  * @date 2021-10-02
  *

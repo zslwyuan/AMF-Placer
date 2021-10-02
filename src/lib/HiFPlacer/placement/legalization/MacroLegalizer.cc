@@ -1,7 +1,8 @@
 /**
  * @file MacroLegalizer.cc
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This implementation file contains APIs' implementation of the MacroLegalizer which maps DSP/BRAM/CARRY macros
+ * to legal location
  * @version 0.1
  * @date 2021-10-02
  *

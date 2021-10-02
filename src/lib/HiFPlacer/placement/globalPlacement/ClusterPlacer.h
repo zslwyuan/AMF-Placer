@@ -1,7 +1,9 @@
 /**
  * @file ClusterPlacer.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This header file contains the definitions of ClusterPlacer class and its internal modules and APIs which
+ * cluster nodes in the given netlist and place the clusters on the device based on simulated-annealing as initial
+ * placement.
  * @version 0.1
  * @date 2021-10-02
  *

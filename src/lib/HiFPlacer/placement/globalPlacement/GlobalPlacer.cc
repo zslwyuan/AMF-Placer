@@ -1,7 +1,8 @@
 /**
  * @file GlobalPlacer.cc
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief  This implementation file contains APIs' implementation of the GlobalPlacer which organizes/configures other
+ * modules to handle global placement.
  * @version 0.1
  * @date 2021-10-02
  *
@@ -45,6 +46,11 @@ GlobalPlacer::GlobalPlacer(PlacementInfo *placementInfo, std::map<std::string, s
     {
         dumpClockUtilization = JSONCfg["DumpClockUtilization"] == "true";
     }
+
+    if (JSONCfg.find("GlobalPlacerPrintHPWL") != JSONCfg.end())
+        printHPWL = JSONCfg["GlobalPlacerPrintHPWL"] == "true";
+
+    hasUserDefinedClusterInfo = JSONCfg.find("designCluster") != JSONCfg.end();
 
     clusterPlacer = new ClusterPlacer(placementInfo, JSONCfg, 10.0);
     WLOptimizer = new WirelengthOptimizer(placementInfo, JSONCfg, verbose);
@@ -106,20 +112,11 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
                                                bool enableMacroPseudoNet2Site, bool stopStrictly,
                                                PlacementTimingOptimizer *timingOptimizer)
 {
-
     print_status("GlobalPlacer GlobalPlacement_CLBElements started");
-
-    bool hasUserDefinedClusterInfo = JSONCfg.find("designCluster") != JSONCfg.end();
-
-    bool printHPWL = false;
-    if (JSONCfg.find("GlobalPlacerPrintHPWL") != JSONCfg.end())
-        printHPWL = JSONCfg["GlobalPlacerPrintHPWL"] == "true";
 
     WLOptimizer->reloadPlacementInfo();
 
     pseudoNetWeight = 1.0;
-    bool BLEUnpackedYet = !continuePreviousIteration;
-    bool shouldLegalize = !stopStrictly;
 
     if (!continuePreviousIteration || oriPseudoNetWeight < 0)
     {
@@ -149,7 +146,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
     int iterCntAfterMacrosFixed = 0;
 
     // global placement iterations
-    for (int i = 0; i < iterNum || (!stopStrictly && shouldLegalize); i++)
+    for (int i = 0; i < iterNum || (!stopStrictly); i++)
     {
 
         // lowerBound: Quadratic Programming based Wirelength Optimization
@@ -190,7 +187,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         // legalize macros (DSPs/BRAMs)
         if (enableMacroPseudoNet2Site)
         {
-            if (BLEUnpackedYet)
+            if (!continuePreviousIteration)
             {
                 if (i >= 8)
                 {
@@ -265,7 +262,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
             break;
         }
 
-        if (progressRatio > 0.98 && macroCloseToSite && BLEUnpackedYet)
+        if (progressRatio > 0.98 && macroCloseToSite && !continuePreviousIteration)
         {
             print_status("Global Placer: Should do packing now before further optimization");
             break;

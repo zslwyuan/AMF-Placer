@@ -1,11 +1,12 @@
 /**
  * @file AMFPlacer.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief The major file describing the overall workflow of AMFPlacer (an analytical mixed-size FPGA placer)
  * @version 0.1
  * @date 2021-06-03
  *
- * @copyright Copyright (c) 2021 Reconfiguration Computing Systems Lab, The Hong Kong University of Science and Technology. All rights reserved.
+ * @copyright Copyright (c) 2021 Reconfiguration Computing Systems Lab, The Hong Kong University of Science and
+ * Technology. All rights reserved.
  *
  */
 

@@ -1,7 +1,8 @@
 /**
  * @file InitialPacker.cc
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief  This implementation file contains APIs' implementation of the InitialPacker which identifies macros from the
+ * design netlist based on pattern matching
  * @version 0.1
  * @date 2021-10-02
  *

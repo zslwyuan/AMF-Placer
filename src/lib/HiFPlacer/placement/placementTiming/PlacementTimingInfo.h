@@ -1,7 +1,7 @@
 /**
  * @file PlacementTimingInfo.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief  This header file contains the classes of data which record the timing information related to placement.
  * @version 0.1
  * @date 2021-10-02
  *

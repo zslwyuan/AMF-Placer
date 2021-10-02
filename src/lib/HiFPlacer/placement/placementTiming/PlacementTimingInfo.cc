@@ -1,7 +1,7 @@
 /**
  * @file PlacementTimingInfo.cc
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This implementation file contains APIs' implementation for the timing information related to placement.
  * @version 0.1
  * @date 2021-10-02
  *

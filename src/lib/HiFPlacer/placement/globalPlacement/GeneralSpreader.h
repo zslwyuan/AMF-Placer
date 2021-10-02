@@ -1,7 +1,9 @@
 /**
  * @file GeneralSpreader.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This header file contains the definitions of GeneralSpreader class and its internal modules and APIs which
+ * account for the cell spreading, which controls the cell density of specific resource type, under the device
+ * constraints for specific regions.
  * @version 0.1
  * @date 2021-10-02
  *

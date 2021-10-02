@@ -1,11 +1,12 @@
 /**
  * @file main.cc
  * @author Tingyuan Liang (tliang@connect.ust.hk)
- * @brief AMF-Placer Main file
+ * @brief AMF-Placer Main file which directly pass the arguments to the AMFPacer workflow
  * @version 0.1
  * @date 2021-05-31
  *
- * @copyright Copyright (c) 2021 Reconfiguration Computing Systems Lab, The Hong Kong University of Science and Technology. All rights reserved.
+ * @copyright Copyright (c) 2021 Reconfiguration Computing Systems Lab, The Hong Kong University of Science and
+ * Technology. All rights reserved.
  *
  */
 
