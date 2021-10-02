@@ -166,6 +166,6 @@ link_directories(${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/)
 target_link_libraries(AMFPlacer GlobalPlacer DesignInfo DeviceInfo PlacementInfo PlacementTiming Packing Legalization ProblemSolvers Utils
                         ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a 
                         pthread 
-                        GL GLU glut GLEW ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} )
+                        ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} ) #GL GLU glut GLEW
 target_link_libraries(partitionHyperGraph  ${Boost_LIBRARIES}  m ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a )
 
