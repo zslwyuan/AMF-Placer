@@ -66,7 +66,7 @@ else()
 endif()
 
 find_package(ZLIB)
-
+find_package(Boost)
 add_subdirectory(lib)
 
 set(SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/app/AMFPlacer/main.cc)
