@@ -279,6 +279,10 @@ class InitialPacker
         std::vector<DesignInfo::DesignCell *> FFs;
     };
 
+    /**
+     * @brief SiteBELMapping is a contain recording the mapping between cells and BELs
+     *
+     */
     class SiteBELMapping
     {
       public:

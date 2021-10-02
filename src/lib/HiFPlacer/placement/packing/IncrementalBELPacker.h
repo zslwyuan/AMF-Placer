@@ -1,7 +1,9 @@
 /**
  * @file IncrementalBELPacker.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This header file contains the definitions of IncrementalBELPacker class and its internal modules and APIs
+ * which incrementally pack some LUTs/FFs during global placement based on their distance, interconnection density and
+ * compatibility
  * @version 0.1
  * @date 2021-10-02
  *
@@ -26,9 +28,22 @@
 #include <string>
 #include <vector>
 
+/**
+ * @brief  IncrementalBELPacker incrementally packs some LUTs/FFs during global placement based on their distance,
+ * interconnection density and compatibility
+ *
+ */
 class IncrementalBELPacker
 {
   public:
+    /**
+     * @brief Construct a new Incremental BEL Packer object
+     *
+     * @param designInfo given design information
+     * @param deviceInfo given device information
+     * @param placementInfo the PlacementInfo for this placer to handle
+     * @param JSONCfg  the user-defined placement configuration
+     */
     IncrementalBELPacker(DesignInfo *designInfo, DeviceInfo *deviceInfo, PlacementInfo *placementInfo,
                          std::map<std::string, std::string> &JSONCfg)
         : designInfo(designInfo), deviceInfo(deviceInfo), placementInfo(placementInfo),
@@ -46,8 +61,28 @@ class IncrementalBELPacker
         }
     }
 
+    /**
+     * @brief check whether two LUTs can be packed to share one BEL
+     *
+     * @param LUTA
+     * @param LUTB
+     */
     void isLUTsPackable(PlacementInfo::PlacementUnpackedCell *LUTA, PlacementInfo::PlacementUnpackedCell *LUTB);
+
+    /**
+     * @brief try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and
+     * connectivity
+     *
+     * @param disThreshold a given threshold
+     */
     void LUTFFPairing(float disThreshold);
+
+    /**
+     * @brief try to pair FFs in the design netlist which are neighbors according to a given threshold and the control
+     * set compatibility
+     *
+     * @param disThreshold a given threshold
+     */
     void FFPairing(float disThreshold);
 
     void dumpPairedLUTFF();
@@ -57,6 +92,11 @@ class IncrementalBELPacker
         return fabs(A.X - B.X) + y2xRatio * fabs(A.Y - B.Y);
     }
 
+    /**
+     * @brief FFLocation records the FF cell pointer and the location of the FF cell for kdt::KDTree construction which
+     * can help to find neighbors for cells
+     *
+     */
     class FFLocation : public std::array<float, 2>
     {
       public:

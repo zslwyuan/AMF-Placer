@@ -1,7 +1,8 @@
 /**
  * @file ExternalProcessFunc.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This header file contains the definitions of ExternalProcessFunc class and its internal modules and APIs
+ * which acts as a wrapper of an external exectable for multi-process scenario with shared memory
  * @version 0.1
  * @date 2021-10-02
  *
@@ -31,9 +32,22 @@
 #include <unistd.h>
 #include <unordered_set>
 
+/**
+ * @brief ExternalProcessFunc is a wrapper of an external exectable for multi-process scenario with shared memory
+ *
+ * With this wrapper, the external executable can communicate with this placer process via shared memeory.
+ *
+ */
 class ExternalProcessFunc
 {
   public:
+    /**
+     * @brief Construct a new External Process Func object
+     *
+     * @param executablePath the absolute path of the external executable
+     * @param shmSize the total size of the shared memory
+     * @param verbose whether the wrapper dumps information of this invocation.
+     */
     ExternalProcessFunc(std::string executablePath, unsigned int shmSize, bool verbose)
         : executablePath(executablePath), shmSize(shmSize), verbose(verbose)
     {
@@ -45,6 +59,10 @@ class ExternalProcessFunc
         deleteShareMemory();
     }
 
+    /**
+     * @brief Create a Share Memory object with random id
+     *
+     */
     void createShareMemory()
     {
         sharedid = rand() + getpid();

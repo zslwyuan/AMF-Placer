@@ -1,7 +1,8 @@
 /**
  * @file IncrementalBELPacker.cc
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This implementation file contains APIs' implementation of the IncrementalBELPacker which  incrementally packs
+ * some LUTs/FFs during global placement based on their distance, interconnection density and compatibility
  * @version 0.1
  * @date 2021-10-02
  *
