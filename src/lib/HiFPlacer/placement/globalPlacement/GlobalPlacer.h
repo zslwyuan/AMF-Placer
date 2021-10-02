@@ -2,7 +2,7 @@
  * @file GlobalPlacer.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
  * @brief This header file contains the definitions of GlobalPlacer class and its internal modules and APIs which
- * organizes/configures other modules to handle global placement.
+ * organize/configure other modules to handle global placement.
  * @version 0.1
  * @date 2021-10-02
  *

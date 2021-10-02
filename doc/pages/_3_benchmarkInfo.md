@@ -73,6 +73,16 @@ Below are the comparison data which are normalized. We will keep improving our i
 |   w/o tech5   |   1142927  | 1.003 |   301   | 1.098 |      997207      | 1.372 |   244   | 1.053 |  923670  | 1.153 |   353   | 1.252 |      722495      | 1.491 |   263   | 1.000 |
 | baseline |   1432535  | 1.258 |   297   | 1.086 |      1047885     | 1.442 |   298   | 1.288 |  1610425 | 2.010 |   547   | 1.942 |      907383      | 1.872 |   325   | 1.237 |
 
+The dominant algorithm for each stage in the proposed placement flow can be parallelized and in the table below, acceleration ratios are demonstrated by changing the number of threads and evaluating placement runtime.
+
+
+|\#threads |   Rosetta FaceDetect  | SpooNN  | OptimSoC  | MiniMap2  | OpenPiton  | Rosetta DigitRecog  | MemN2N  | BLSTM |
+|:--------:|:---------------------:|:-------:|:---------:|:---------:|:----------:|:-------------------:|:-------:|:-----:|
+|8 threads | 2.17x                 | 2.07x   | 2.50x     | 2.86x     | 2.63x      | 2.22x               | 2.61x   | 2.23x |
+|4 threads | 2.01x                 | 1.96x   | 2.29x     | 2.57x     | 2.37x      | 2.04x               | 2.35x   | 1.97x |
+|2 threads | 1.56x                 | 1.52x   | 1.64x     | 1.81x     | 1.65x      | 1.54x               | 1.68x   | 1.77x |
+|1 threads | 1.00x                 | 1.00x   | 1.00x     | 1.00x     | 1.00x      | 1.00x               | 1.00x   | 1.00x |
+
 Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.
 
 <img src="placement.png" alt="Placement" title="Placement" width="800" /> 
