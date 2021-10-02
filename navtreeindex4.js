@@ -1,9 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"class_global_placer.html#aac6b39caece97c88f0cbf0f522621391":[8,0,10,13],
-"class_global_placer.html#aad3c7d20f363b6c91a801106d9f28daa":[8,0,10,41],
-"class_global_placer.html#aadb6ba900abf8a5d1c03e0fd7edd320c":[8,0,10,0],
-"class_global_placer.html#ab40a26b53745e6f76418954ef214ba8d":[8,0,10,22],
 "class_global_placer.html#ab44fd3de84227b1c2080cc3654cf8965":[8,0,10,30],
 "class_global_placer.html#ab5bbb956273d2b87d2980c3dd5be87bc":[8,0,10,39],
 "class_global_placer.html#ac0760d86aa9edea6363de0160bc7242f":[8,0,10,42],
@@ -249,5 +245,9 @@ var NAVTREEINDEX4 =
 "class_min_cost_bipartite_matcher.html#a231c6e5fb3ceff297b27ac2ea82439d3":[8,0,15,5],
 "class_min_cost_bipartite_matcher.html#a2e88ac0af770f8b3f626cc1fd2566c40":[8,0,15,1],
 "class_min_cost_bipartite_matcher.html#a42f4449968e458600457564fbe9e605c":[8,0,15,9],
-"class_min_cost_bipartite_matcher.html#a4d58b7b38000fd820e2df2c3fc20a417":[8,0,15,4]
+"class_min_cost_bipartite_matcher.html#a4d58b7b38000fd820e2df2c3fc20a417":[8,0,15,4],
+"class_min_cost_bipartite_matcher.html#a51f6744c959eb7d84be06ca7f8c6e2f3":[8,0,15,15],
+"class_min_cost_bipartite_matcher.html#a672c245783787d8b89e097022a7afd60":[8,0,15,12],
+"class_min_cost_bipartite_matcher.html#a69332995b52009a98cf11ccdb3d7fa3b":[8,0,15,6],
+"class_min_cost_bipartite_matcher.html#a7517e8d009997e83e31cfccc9107329b":[8,0,15,3]
 };

@@ -1,9 +1,9 @@
 <map id="PlacementInfo::updateElementBinGrid" name="PlacementInfo::updateElementBinGrid">
 <area shape="rect" id="node1" title="map design cells to the bins in the bin grid." alt="" coords="911,209,1109,251"/>
-<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="187,5,343,47"/>
+<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="187,5,343,47"/>
 <area shape="rect" id="node4" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="165,71,366,112"/>
 <area shape="rect" id="node5" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="420,121,619,163"/>
-<area shape="rect" id="node6" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="689,180,845,221"/>
+<area shape="rect" id="node6" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="689,180,845,221"/>
 <area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="450,239,589,280"/>
 <area shape="rect" id="node8" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="675,363,860,390"/>
 <area shape="rect" id="node11" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title=" " alt="" coords="672,297,863,339"/>

@@ -2,8 +2,8 @@
 <area shape="rect" id="node1" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="1545,223,1756,250"/>
 <area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,9,395,50"/>
 <area shape="rect" id="node4" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="702,164,911,191"/>
-<area shape="rect" id="node6" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="1003,56,1159,97"/>
-<area shape="rect" id="node7" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="201,216,357,257"/>
+<area shape="rect" id="node6" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="1003,56,1159,97"/>
+<area shape="rect" id="node7" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="201,216,357,257"/>
 <area shape="rect" id="node8" href="$class_cluster_placer.html#a149784331309e2ae938933d1af6c6010" title="map PlacementUnit to cluster location" alt="" coords="1284,106,1456,148"/>
 <area shape="rect" id="node10" href="$class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="1295,274,1445,316"/>
 <area shape="rect" id="node14" href="$class_general_spreader.html#a1414f843412957281cf5cd4ec92475ad" title="update the information of the involved PlacementUnit(s)" alt="" coords="968,412,1195,453"/>

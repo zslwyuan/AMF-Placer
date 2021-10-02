@@ -92,13 +92,16 @@ $(document).ready(function(){initNavTree('class_incremental_b_e_l_packer.html','
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_incremental_b_e_l_packer.html" title="IncrementalBELPacker incrementally packs some LUTs/FFs during global placement based on their distanc...">IncrementalBELPacker</a> incrementally packs some LUTs/FFs during global placement based on their distance, interconnection density and compatibility.  
+ <a href="class_incremental_b_e_l_packer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for IncrementalBELPacker:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_incremental_b_e_l_packer__coll__graph.png" border="0" usemap="#a_incremental_b_e_l_packer_coll__map" alt="Collaboration graph"/></div>
 <map name="a_incremental_b_e_l_packer_coll__map" id="a_incremental_b_e_l_packer_coll__map">
-<area shape="rect" title=" " alt="" coords="142,288,298,315"/>
+<area shape="rect" title="IncrementalBELPacker incrementally packs some LUTs/FFs during global placement based on their distanc..." alt="" coords="142,288,298,315"/>
 <area shape="rect" href="class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="29,5,113,32"/>
 <area shape="rect" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="287,199,394,225"/>
 <area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="130,95,308,136"/>
@@ -110,17 +113,22 @@ Collaboration diagram for IncrementalBELPacker:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_incremental_b_e_l_packer_1_1_f_f_location.html">FFLocation</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_incremental_b_e_l_packer_1_1_f_f_location.html" title="FFLocation records the FF cell pointer and the location of the FF cell for kdt::KDTree construction w...">FFLocation</a> records the FF cell pointer and the location of the FF cell for kdt::KDTree construction which can help to find neighbors for cells.  <a href="class_incremental_b_e_l_packer_1_1_f_f_location.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad89cfb0f178ce902dcd04728d67dc86b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_incremental_b_e_l_packer.html#ad89cfb0f178ce902dcd04728d67dc86b">IncrementalBELPacker</a> (<a class="el" href="class_design_info.html">DesignInfo</a> *<a class="el" href="class_incremental_b_e_l_packer.html#af3848636557d62e14a0c32a77c17850b">designInfo</a>, <a class="el" href="class_device_info.html">DeviceInfo</a> *<a class="el" href="class_incremental_b_e_l_packer.html#a42647ad62dc8811d3a83d8a2b13800c1">deviceInfo</a>, <a class="el" href="class_placement_info.html">PlacementInfo</a> *<a class="el" href="class_incremental_b_e_l_packer.html#a571c9f98df70a36b2b4aab22d90b7b30">placementInfo</a>, std::map&lt; std::string, std::string &gt; &amp;<a class="el" href="class_incremental_b_e_l_packer.html#a8f3fa9376cff38446e51a9a0f3056c18">JSONCfg</a>)</td></tr>
+<tr class="memdesc:ad89cfb0f178ce902dcd04728d67dc86b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Incremental BEL Packer object.  <a href="class_incremental_b_e_l_packer.html#ad89cfb0f178ce902dcd04728d67dc86b">More...</a><br /></td></tr>
 <tr class="separator:ad89cfb0f178ce902dcd04728d67dc86b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1143687dd00783f9bfc01a17e82905d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_incremental_b_e_l_packer.html#ac1143687dd00783f9bfc01a17e82905d">isLUTsPackable</a> (<a class="el" href="class_placement_info_1_1_placement_unpacked_cell.html">PlacementInfo::PlacementUnpackedCell</a> *LUTA, <a class="el" href="class_placement_info_1_1_placement_unpacked_cell.html">PlacementInfo::PlacementUnpackedCell</a> *LUTB)</td></tr>
+<tr class="memdesc:ac1143687dd00783f9bfc01a17e82905d"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether two LUTs can be packed to share one BEL  <a href="class_incremental_b_e_l_packer.html#ac1143687dd00783f9bfc01a17e82905d">More...</a><br /></td></tr>
 <tr class="separator:ac1143687dd00783f9bfc01a17e82905d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a241df33330f3138754915482bf78a1e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6">LUTFFPairing</a> (float disThreshold)</td></tr>
+<tr class="memdesc:a241df33330f3138754915482bf78a1e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and connectivity  <a href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6">More...</a><br /></td></tr>
 <tr class="separator:a241df33330f3138754915482bf78a1e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcee4a24593847a9f0ad1a7e1fde0acc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc">FFPairing</a> (float disThreshold)</td></tr>
+<tr class="memdesc:afcee4a24593847a9f0ad1a7e1fde0acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">try to pair FFs in the design netlist which are neighbors according to a given threshold and the control set compatibility  <a href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc">More...</a><br /></td></tr>
 <tr class="separator:afcee4a24593847a9f0ad1a7e1fde0acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77e769556e6cf6e62d1413835a6679a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_incremental_b_e_l_packer.html#a77e769556e6cf6e62d1413835a6679a8">dumpPairedLUTFF</a> ()</td></tr>
 <tr class="separator:a77e769556e6cf6e62d1413835a6679a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,8 +173,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a62e7fe7710106da1b53e39045c39b49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00029">29</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<div class="textblock"><p ><a class="el" href="class_incremental_b_e_l_packer.html" title="IncrementalBELPacker incrementally packs some LUTs/FFs during global placement based on their distanc...">IncrementalBELPacker</a> incrementally packs some LUTs/FFs during global placement based on their distance, interconnection density and compatibility. </p>
+
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00036">36</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad89cfb0f178ce902dcd04728d67dc86b" name="ad89cfb0f178ce902dcd04728d67dc86b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad89cfb0f178ce902dcd04728d67dc86b">&#9670;&nbsp;</a></span>IncrementalBELPacker()</h2>
@@ -214,7 +223,18 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00032">32</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p>Construct a new Incremental BEL Packer object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">designInfo</td><td>given design information </td></tr>
+    <tr><td class="paramname">deviceInfo</td><td>given device information </td></tr>
+    <tr><td class="paramname">placementInfo</td><td>the <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> for this placer to handle </td></tr>
+    <tr><td class="paramname">JSONCfg</td><td>the user-defined placement configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00047">47</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
 </div>
 </div>
@@ -234,9 +254,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00406">406</a> of file <a class="el" href="_incremental_b_e_l_packer_8cc_source.html">IncrementalBELPacker.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00407">407</a> of file <a class="el" href="_incremental_b_e_l_packer_8cc_source.html">IncrementalBELPacker.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -253,8 +273,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_incremental_b_e_l_packer_a77e769556e6cf6e62d1413835a6679a8_icgraph.png" border="0" usemap="#aclass_incremental_b_e_l_packer_a77e769556e6cf6e62d1413835a6679a8_icgraph" alt=""/></div>
 <map name="aclass_incremental_b_e_l_packer_a77e769556e6cf6e62d1413835a6679a8_icgraph" id="aclass_incremental_b_e_l_packer_a77e769556e6cf6e62d1413835a6679a8_icgraph">
 <area shape="rect" title=" " alt="" coords="368,39,524,80"/>
-<area shape="rect" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="164,5,320,47"/>
-<area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="164,71,320,112"/>
+<area shape="rect" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,47"/>
+<area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,71,320,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
 </div>
@@ -277,7 +297,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">240</a> of file <a class="el" href="_incremental_b_e_l_packer_8cc_source.html">IncrementalBELPacker.cc</a>.</p>
+<p>try to pair FFs in the design netlist which are neighbors according to a given threshold and the control set compatibility </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disThreshold</td><td>a given threshold </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">241</a> of file <a class="el" href="_incremental_b_e_l_packer_8cc_source.html">IncrementalBELPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00115">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -285,7 +313,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_incremental_b_e_l_packer_afcee4a24593847a9f0ad1a7e1fde0acc_cgraph.png" border="0" usemap="#aclass_incremental_b_e_l_packer_afcee4a24593847a9f0ad1a7e1fde0acc_cgraph" alt=""/></div>
 <map name="aclass_incremental_b_e_l_packer_afcee4a24593847a9f0ad1a7e1fde0acc_cgraph" id="aclass_incremental_b_e_l_packer_afcee4a24593847a9f0ad1a7e1fde0acc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,1491,161,1532"/>
+<area shape="rect" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="5,1491,161,1532"/>
 <area shape="rect" href="class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="233,528,407,569"/>
 <area shape="rect" href="class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="233,1075,407,1116"/>
 <area shape="rect" href="class_incremental_b_e_l_packer.html#a77e769556e6cf6e62d1413835a6679a8" title=" " alt="" coords="242,1243,398,1284"/>
@@ -342,7 +370,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_incremental_b_e_l_packer_afcee4a24593847a9f0ad1a7e1fde0acc_icgraph.png" border="0" usemap="#aclass_incremental_b_e_l_packer_afcee4a24593847a9f0ad1a7e1fde0acc_icgraph" alt=""/></div>
 <map name="aclass_incremental_b_e_l_packer_afcee4a24593847a9f0ad1a7e1fde0acc_icgraph" id="aclass_incremental_b_e_l_packer_afcee4a24593847a9f0ad1a7e1fde0acc_icgraph">
-<area shape="rect" title=" " alt="" coords="164,5,320,47"/>
+<area shape="rect" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -383,17 +411,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00055">55</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00090">90</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_incremental_b_e_l_packer_a49fd1d1cf23b95a927a7b126b5aa075e_icgraph.png" border="0" usemap="#aclass_incremental_b_e_l_packer_a49fd1d1cf23b95a927a7b126b5aa075e_icgraph" alt=""/></div>
 <map name="aclass_incremental_b_e_l_packer_a49fd1d1cf23b95a927a7b126b5aa075e_icgraph" id="aclass_incremental_b_e_l_packer_a49fd1d1cf23b95a927a7b126b5aa075e_icgraph">
 <area shape="rect" title=" " alt="" coords="368,39,524,80"/>
-<area shape="rect" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="164,5,320,47"/>
-<area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="164,71,320,112"/>
+<area shape="rect" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,47"/>
+<area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,71,320,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
 </div>
@@ -426,13 +454,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00022">22</a> of file <a class="el" href="_incremental_b_e_l_packer_8cc_source.html">IncrementalBELPacker.cc</a>.</p>
+<p>check whether two LUTs can be packed to share one BEL </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">LUTA</td><td></td></tr>
+    <tr><td class="paramname">LUTB</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00023">23</a> of file <a class="el" href="_incremental_b_e_l_packer_8cc_source.html">IncrementalBELPacker.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_incremental_b_e_l_packer_ac1143687dd00783f9bfc01a17e82905d_cgraph.png" border="0" usemap="#aclass_incremental_b_e_l_packer_ac1143687dd00783f9bfc01a17e82905d_cgraph" alt=""/></div>
 <map name="aclass_incremental_b_e_l_packer_ac1143687dd00783f9bfc01a17e82905d_cgraph" id="aclass_incremental_b_e_l_packer_ac1143687dd00783f9bfc01a17e82905d_cgraph">
-<area shape="rect" title=" " alt="" coords="5,71,161,112"/>
+<area shape="rect" title="check whether two LUTs can be packed to share one BEL" alt="" coords="5,71,161,112"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unpacked_cell.html#a6aec31ccc07b70535548a268f802d042" title=" " alt="" coords="209,5,384,47"/>
 <area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="221,71,373,112"/>
 <area shape="rect" href="class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="221,136,373,177"/>
@@ -457,7 +494,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">31</a> of file <a class="el" href="_incremental_b_e_l_packer_8cc_source.html">IncrementalBELPacker.cc</a>.</p>
+<p>try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and connectivity </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">disThreshold</td><td>a given threshold </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">32</a> of file <a class="el" href="_incremental_b_e_l_packer_8cc_source.html">IncrementalBELPacker.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00115">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -465,7 +510,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_incremental_b_e_l_packer_a241df33330f3138754915482bf78a1e6_cgraph.png" border="0" usemap="#aclass_incremental_b_e_l_packer_a241df33330f3138754915482bf78a1e6_cgraph" alt=""/></div>
 <map name="aclass_incremental_b_e_l_packer_a241df33330f3138754915482bf78a1e6_cgraph" id="aclass_incremental_b_e_l_packer_a241df33330f3138754915482bf78a1e6_cgraph">
-<area shape="rect" title=" " alt="" coords="5,1473,161,1515"/>
+<area shape="rect" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="5,1473,161,1515"/>
 <area shape="rect" href="class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="233,528,407,569"/>
 <area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="499,920,651,961"/>
 <area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="499,985,651,1027"/>
@@ -522,7 +567,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_incremental_b_e_l_packer_a241df33330f3138754915482bf78a1e6_icgraph.png" border="0" usemap="#aclass_incremental_b_e_l_packer_a241df33330f3138754915482bf78a1e6_icgraph" alt=""/></div>
 <map name="aclass_incremental_b_e_l_packer_a241df33330f3138754915482bf78a1e6_icgraph" id="aclass_incremental_b_e_l_packer_a241df33330f3138754915482bf78a1e6_icgraph">
-<area shape="rect" title=" " alt="" coords="164,5,320,47"/>
+<area shape="rect" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,5,320,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -550,9 +595,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00094">94</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00134">134</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -576,9 +621,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00095">95</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00135">135</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -602,9 +647,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00093">93</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00133">133</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -628,9 +673,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00088">88</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00128">128</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -654,9 +699,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00085">85</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00125">125</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>.</p>
 
 </div>
 </div>
@@ -680,7 +725,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00086">86</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00126">126</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
 </div>
 </div>
@@ -704,9 +749,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00100">100</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00140">140</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>.</p>
 
 </div>
 </div>
@@ -730,7 +775,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00092">92</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00132">132</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
 </div>
 </div>
@@ -754,9 +799,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00096">96</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00136">136</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00406">dumpPairedLUTFF()</a>, and <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00032">IncrementalBELPacker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00407">dumpPairedLUTFF()</a>, and <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00047">IncrementalBELPacker()</a>.</p>
 
 </div>
 </div>
@@ -780,9 +825,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00101">101</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00141">141</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00406">dumpPairedLUTFF()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00407">dumpPairedLUTFF()</a>.</p>
 
 </div>
 </div>
@@ -806,9 +851,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00099">99</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00139">139</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00406">dumpPairedLUTFF()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00407">dumpPairedLUTFF()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -832,9 +877,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00087">87</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00127">127</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -858,9 +903,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00091">91</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00131">131</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -884,7 +929,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00097">97</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00137">137</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
 </div>
 </div>
@@ -908,9 +953,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00089">89</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00129">129</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -934,9 +979,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00090">90</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00130">130</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00031">LUTFFPairing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, and <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">LUTFFPairing()</a>.</p>
 
 </div>
 </div>
@@ -960,9 +1005,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00102">102</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00142">142</a> of file <a class="el" href="_incremental_b_e_l_packer_8h_source.html">IncrementalBELPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00240">FFPairing()</a>, <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00055">getCellDistance()</a>, and <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00032">IncrementalBELPacker()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">FFPairing()</a>, <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00090">getCellDistance()</a>, and <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00047">IncrementalBELPacker()</a>.</p>
 
 </div>
 </div>

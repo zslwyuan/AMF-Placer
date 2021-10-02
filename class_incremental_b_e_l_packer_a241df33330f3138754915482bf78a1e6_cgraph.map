@@ -1,5 +1,5 @@
 <map id="IncrementalBELPacker::LUTFFPairing" name="IncrementalBELPacker::LUTFFPairing">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1473,161,1515"/>
+<area shape="rect" id="node1" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="5,1473,161,1515"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="233,528,407,569"/>
 <area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="499,920,651,961"/>
 <area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="499,985,651,1027"/>

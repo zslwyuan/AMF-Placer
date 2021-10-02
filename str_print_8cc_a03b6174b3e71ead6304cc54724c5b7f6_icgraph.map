@@ -16,7 +16,7 @@
 <area shape="rect" id="node19" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="474,1711,626,1738"/>
 <area shape="rect" id="node20" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="777,560,915,601"/>
 <area shape="rect" id="node22" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="777,625,915,667"/>
-<area shape="rect" id="node23" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="201,648,357,689"/>
+<area shape="rect" id="node23" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="201,648,357,689"/>
 <area shape="rect" id="node24" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="757,1799,935,1840"/>
 <area shape="rect" id="node25" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="745,793,947,819"/>
 <area shape="rect" id="node26" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="486,869,614,895"/>
@@ -30,10 +30,10 @@
 <area shape="rect" id="node34" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="768,996,924,1037"/>
 <area shape="rect" id="node35" href="$class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc" title="for user&#45;defined&#45;cluster&#45;based optimization, load the nets in a user&#45;defined cluster for later proces..." alt="" coords="753,1565,939,1607"/>
 <area shape="rect" id="node36" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="755,1062,937,1089"/>
-<area shape="rect" id="node37" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="201,56,357,97"/>
+<area shape="rect" id="node37" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="201,56,357,97"/>
 <area shape="rect" id="node38" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="753,391,939,418"/>
 <area shape="rect" id="node39" href="$class_min_cost_bipartite_matcher.html#aeef9f17dcd9470695546f2868b14acf2" title=" " alt="" coords="761,1929,931,1971"/>
-<area shape="rect" id="node40" href="$class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title=" " alt="" coords="765,1995,927,2036"/>
+<area shape="rect" id="node40" href="$class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="765,1995,927,2036"/>
 <area shape="rect" id="node41" href="$class_global_placer.html#a70e5b49347ef9c73145c87968d06dc99" title=" " alt="" coords="763,2060,929,2101"/>
 <area shape="rect" id="node42" href="$class_design_info.html#a5c64afd9ea532c60965e7668a75dc79f" title=" " alt="" coords="777,2126,915,2153"/>
 <area shape="rect" id="node43" href="$class_device_info.html#ab618757f65f38f5854a73a770724d3d6" title=" " alt="" coords="777,2177,915,2203"/>

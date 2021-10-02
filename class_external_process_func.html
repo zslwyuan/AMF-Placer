@@ -91,15 +91,20 @@ $(document).ready(function(){initNavTree('class_external_process_func.html','');
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_external_process_func.html" title="ExternalProcessFunc is a wrapper of an external exectable for multi-process scenario with shared memo...">ExternalProcessFunc</a> is a wrapper of an external exectable for multi-process scenario with shared memory.  
+ <a href="class_external_process_func.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a801b559914740ba20cc4b8bc8d8e98b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_external_process_func.html#a801b559914740ba20cc4b8bc8d8e98b9">ExternalProcessFunc</a> (std::string <a class="el" href="class_external_process_func.html#a568e51da8cac6be493daf63364498522">executablePath</a>, unsigned int <a class="el" href="class_external_process_func.html#af86ef512e698cbfbe495fc54eee0880a">shmSize</a>, bool <a class="el" href="class_external_process_func.html#a1e657dbf94606029a658b58c81e7bfdb">verbose</a>)</td></tr>
+<tr class="memdesc:a801b559914740ba20cc4b8bc8d8e98b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new External Process Func object.  <a href="class_external_process_func.html#a801b559914740ba20cc4b8bc8d8e98b9">More...</a><br /></td></tr>
 <tr class="separator:a801b559914740ba20cc4b8bc8d8e98b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a157ba6c487c2ba4cb549419709438e81"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_external_process_func.html#a157ba6c487c2ba4cb549419709438e81">~ExternalProcessFunc</a> ()</td></tr>
 <tr class="separator:a157ba6c487c2ba4cb549419709438e81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4673460aa9c00a6c26d21ebcdbf58417"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_external_process_func.html#a4673460aa9c00a6c26d21ebcdbf58417">createShareMemory</a> ()</td></tr>
+<tr class="memdesc:a4673460aa9c00a6c26d21ebcdbf58417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a Share Memory object with random id.  <a href="class_external_process_func.html#a4673460aa9c00a6c26d21ebcdbf58417">More...</a><br /></td></tr>
 <tr class="separator:a4673460aa9c00a6c26d21ebcdbf58417"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a306ff671e2f863d3dfa8e4ed07242c9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_external_process_func.html#a306ff671e2f863d3dfa8e4ed07242c9f">deleteShareMemory</a> ()</td></tr>
 <tr class="separator:a306ff671e2f863d3dfa8e4ed07242c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,8 +129,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ae1c4d7de86dd64a2f6a25424e50ec25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00034">34</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<div class="textblock"><p ><a class="el" href="class_external_process_func.html" title="ExternalProcessFunc is a wrapper of an external exectable for multi-process scenario with shared memo...">ExternalProcessFunc</a> is a wrapper of an external exectable for multi-process scenario with shared memory. </p>
+<p >With this wrapper, the external executable can communicate with this placer process via shared memeory. </p>
+
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00041">41</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a801b559914740ba20cc4b8bc8d8e98b9" name="a801b559914740ba20cc4b8bc8d8e98b9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a801b559914740ba20cc4b8bc8d8e98b9">&#9670;&nbsp;</a></span>ExternalProcessFunc()</h2>
@@ -167,14 +174,24 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00037">37</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p>Construct a new External Process Func object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">executablePath</td><td>the absolute path of the external executable </td></tr>
+    <tr><td class="paramname">shmSize</td><td>the total size of the shared memory </td></tr>
+    <tr><td class="paramname">verbose</td><td>whether the wrapper dumps information of this invocation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00051">51</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_external_process_func_a801b559914740ba20cc4b8bc8d8e98b9_cgraph.png" border="0" usemap="#aclass_external_process_func_a801b559914740ba20cc4b8bc8d8e98b9_cgraph" alt=""/></div>
 <map name="aclass_external_process_func_a801b559914740ba20cc4b8bc8d8e98b9_cgraph" id="aclass_external_process_func_a801b559914740ba20cc4b8bc8d8e98b9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,156,47"/>
-<area shape="rect" href="class_external_process_func.html#a4673460aa9c00a6c26d21ebcdbf58417" title=" " alt="" coords="204,5,349,47"/>
+<area shape="rect" title="Construct a new External Process Func object." alt="" coords="5,5,156,47"/>
+<area shape="rect" href="class_external_process_func.html#a4673460aa9c00a6c26d21ebcdbf58417" title="Create a Share Memory object with random id." alt="" coords="204,5,349,47"/>
 </map>
 </div>
 
@@ -203,7 +220,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00043">43</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00057">57</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -240,16 +257,18 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00048">48</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p>Create a Share Memory object with random id. </p>
 
-<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00037">ExternalProcessFunc()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00066">66</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00051">ExternalProcessFunc()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_external_process_func_a4673460aa9c00a6c26d21ebcdbf58417_icgraph.png" border="0" usemap="#aclass_external_process_func_a4673460aa9c00a6c26d21ebcdbf58417_icgraph" alt=""/></div>
 <map name="aclass_external_process_func_a4673460aa9c00a6c26d21ebcdbf58417_icgraph" id="aclass_external_process_func_a4673460aa9c00a6c26d21ebcdbf58417_icgraph">
-<area shape="rect" title=" " alt="" coords="204,5,349,47"/>
-<area shape="rect" href="class_external_process_func.html#a801b559914740ba20cc4b8bc8d8e98b9" title=" " alt="" coords="5,5,156,47"/>
+<area shape="rect" title="Create a Share Memory object with random id." alt="" coords="204,5,349,47"/>
+<area shape="rect" href="class_external_process_func.html#a801b559914740ba20cc4b8bc8d8e98b9" title="Construct a new External Process Func object." alt="" coords="5,5,156,47"/>
 </map>
 </div>
 
@@ -278,9 +297,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00068">68</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00086">86</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00043">~ExternalProcessFunc()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00057">~ExternalProcessFunc()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -316,7 +335,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00088">88</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00106">106</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00086">GraphPartitioner&lt; NodeList, NetList &gt;::minCutBipartition()</a>.</p>
 <div class="dynheader">
@@ -334,8 +353,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_external_process_func_a063b1a01b42803027b7ffcb694bf2b6b_icgraph.png" border="0" usemap="#aclass_external_process_func_a063b1a01b42803027b7ffcb694bf2b6b_icgraph" alt=""/></div>
 <map name="aclass_external_process_func_a063b1a01b42803027b7ffcb694bf2b6b_icgraph" id="aclass_external_process_func_a063b1a01b42803027b7ffcb694bf2b6b_icgraph">
 <area shape="rect" title=" " alt="" coords="439,5,584,47"/>
-<area shape="rect" href="class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title=" " alt="" coords="228,5,391,47"/>
-<area shape="rect" href="class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" href="class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="228,5,391,47"/>
+<area shape="rect" href="class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="5,5,180,47"/>
 </map>
 </div>
 
@@ -364,7 +383,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00083">83</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00101">101</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00086">GraphPartitioner&lt; NodeList, NetList &gt;::minCutBipartition()</a>.</p>
 <div class="dynheader">
@@ -373,8 +392,8 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_external_process_func_a0ae60db9a279499c4df9047e8e3b77d1_icgraph.png" border="0" usemap="#aclass_external_process_func_a0ae60db9a279499c4df9047e8e3b77d1_icgraph" alt=""/></div>
 <map name="aclass_external_process_func_a0ae60db9a279499c4df9047e8e3b77d1_icgraph" id="aclass_external_process_func_a0ae60db9a279499c4df9047e8e3b77d1_icgraph">
 <area shape="rect" title=" " alt="" coords="439,5,584,47"/>
-<area shape="rect" href="class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title=" " alt="" coords="228,5,391,47"/>
-<area shape="rect" href="class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" href="class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="228,5,391,47"/>
+<area shape="rect" href="class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="5,5,180,47"/>
 </map>
 </div>
 
@@ -401,9 +420,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00099">99</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00117">117</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00088">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00106">execute()</a>.</p>
 
 </div>
 </div>
@@ -427,9 +446,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00102">102</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00120">120</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00048">createShareMemory()</a>, and <a class="el" href="_external_process_func_8h_source.html#l00088">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00066">createShareMemory()</a>, and <a class="el" href="_external_process_func_8h_source.html#l00106">execute()</a>.</p>
 
 </div>
 </div>
@@ -453,9 +472,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00098">98</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00116">116</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00048">createShareMemory()</a>, <a class="el" href="_external_process_func_8h_source.html#l00068">deleteShareMemory()</a>, and <a class="el" href="_external_process_func_8h_source.html#l00083">getSharedMemory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00066">createShareMemory()</a>, <a class="el" href="_external_process_func_8h_source.html#l00086">deleteShareMemory()</a>, and <a class="el" href="_external_process_func_8h_source.html#l00101">getSharedMemory()</a>.</p>
 
 </div>
 </div>
@@ -479,9 +498,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00097">97</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00115">115</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00048">createShareMemory()</a>, and <a class="el" href="_external_process_func_8h_source.html#l00068">deleteShareMemory()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00066">createShareMemory()</a>, and <a class="el" href="_external_process_func_8h_source.html#l00086">deleteShareMemory()</a>.</p>
 
 </div>
 </div>
@@ -505,9 +524,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00100">100</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00118">118</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00048">createShareMemory()</a>, and <a class="el" href="_external_process_func_8h_source.html#l00088">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00066">createShareMemory()</a>, and <a class="el" href="_external_process_func_8h_source.html#l00106">execute()</a>.</p>
 
 </div>
 </div>
@@ -531,9 +550,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00101">101</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_external_process_func_8h_source.html#l00119">119</a> of file <a class="el" href="_external_process_func_8h_source.html">ExternalProcessFunc.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00088">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_external_process_func_8h_source.html#l00106">execute()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,5 @@
 <map id="src/lib/utils/ExternalProcessFunc.h" name="src/lib/utils/ExternalProcessFunc.h">
-<area shape="rect" id="node1" title=" " alt="" coords="255,5,438,47"/>
+<area shape="rect" id="node1" title="This header file contains the definitions of ExternalProcessFunc class and its internal modules and A..." alt="" coords="255,5,438,47"/>
 <area shape="rect" id="node2" href="$_graph_partitioner_8h.html" title=" " alt="" coords="259,95,434,136"/>
 <area shape="rect" id="node3" href="$_cluster_placer_8h.html" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="129,184,343,225"/>
 <area shape="rect" id="node9" href="$_graph_partitioner_8cc.html" title=" " alt="" coords="368,184,549,225"/>

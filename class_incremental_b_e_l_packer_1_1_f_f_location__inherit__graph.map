@@ -1,4 +1,4 @@
 <map id="IncrementalBELPacker::FFLocation" name="IncrementalBELPacker::FFLocation">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,161,121"/>
+<area shape="rect" id="node1" title="FFLocation records the FF cell pointer and the location of the FF cell for kdt::KDTree construction w..." alt="" coords="5,80,161,121"/>
 <area shape="rect" id="node2" title=" " alt="" coords="16,5,151,32"/>
 </map>

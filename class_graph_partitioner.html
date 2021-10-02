@@ -93,42 +93,56 @@ $(document).ready(function(){initNavTree('class_graph_partitioner.html',''); ini
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_graph_partitioner.html" title="GraphPartitioner will recursively bi-partition the netlist (which could be netlist of clusters) based...">GraphPartitioner</a> will recursively bi-partition the netlist (which could be netlist of clusters) based on connectivitity and the net weights.  
+ <a href="class_graph_partitioner.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a76913be5dc96ae087c31bbbfb38a7f7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#a76913be5dc96ae087c31bbbfb38a7f7e">GraphPartitioner</a> (NodeList &amp;<a class="el" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>, NetList &amp;<a class="el" href="class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5">netList</a>, int <a class="el" href="class_graph_partitioner.html#a6daccde175526c26e4ea69dc90d2f855">minClusterCellNum</a>, int jobs, bool <a class="el" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>)</td></tr>
+<tr class="memdesc:a76913be5dc96ae087c31bbbfb38a7f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Graph Partitioner object.  <a href="class_graph_partitioner.html#a76913be5dc96ae087c31bbbfb38a7f7e">More...</a><br /></td></tr>
 <tr class="separator:a76913be5dc96ae087c31bbbfb38a7f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2c2187e0b807b8644de3e2a99644eca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#aa2c2187e0b807b8644de3e2a99644eca">~GraphPartitioner</a> ()</td></tr>
 <tr class="separator:aa2c2187e0b807b8644de3e2a99644eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26dfd199abf361bf2e9a3117226a2ea1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#a26dfd199abf361bf2e9a3117226a2ea1">solve</a> (int eachClusterDSPNum, int eachClusterBRAMNum)</td></tr>
+<tr class="memdesc:a26dfd199abf361bf2e9a3117226a2ea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">a caller which will start the partitioning procedure  <a href="class_graph_partitioner.html#a26dfd199abf361bf2e9a3117226a2ea1">More...</a><br /></td></tr>
 <tr class="separator:a26dfd199abf361bf2e9a3117226a2ea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72cf3a58504a15d65804c576571571f7"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::vector&lt; int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#a72cf3a58504a15d65804c576571571f7">getClusters</a> ()</td></tr>
+<tr class="memdesc:a72cf3a58504a15d65804c576571571f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the clusters after partitioning (each is a vector containing ids for nodes inside the clusters)  <a href="class_graph_partitioner.html#a72cf3a58504a15d65804c576571571f7">More...</a><br /></td></tr>
 <tr class="separator:a72cf3a58504a15d65804c576571571f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbaaa6d8fab189daf038ad7989955914"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::set&lt; int &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#abbaaa6d8fab189daf038ad7989955914">getClustersPUIdSets</a> ()</td></tr>
+<tr class="memdesc:abbaaa6d8fab189daf038ad7989955914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the clusters after partitioning (each is a set containing ids for nodes inside the clusters)  <a href="class_graph_partitioner.html#abbaaa6d8fab189daf038ad7989955914">More...</a><br /></td></tr>
 <tr class="separator:abbaaa6d8fab189daf038ad7989955914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0fe549726400f1a85b09d98859a8102"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102">minCutBipartition</a> (const std::vector&lt; int &gt; &amp;inputCluster, std::array&lt; std::vector&lt; int &gt;, 2 &gt; &amp;outputClusters, <a class="el" href="class_graph_partitioner.html">GraphPartitioner</a>&lt; NodeList, NetList &gt; *graphPartitioner, int eachClusterDSPNum, int eachClusterBRAMNum)</td></tr>
+<tr class="memdesc:af0fe549726400f1a85b09d98859a8102"><td class="mdescLeft">&#160;</td><td class="mdescRight">the actual function to call partitioner to conduct partitioning with given clusters and parameters  <a href="class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102">More...</a><br /></td></tr>
 <tr class="separator:af0fe549726400f1a85b09d98859a8102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac18ffed6039ce5aa0b0dfc1ffbc240d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#ac18ffed6039ce5aa0b0dfc1ffbc240d8">setMaxCutRate</a> (double _maxCutRate)</td></tr>
+<tr class="memdesc:ac18ffed6039ce5aa0b0dfc1ffbc240d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the max mincut rate.  <a href="class_graph_partitioner.html#ac18ffed6039ce5aa0b0dfc1ffbc240d8">More...</a><br /></td></tr>
 <tr class="separator:ac18ffed6039ce5aa0b0dfc1ffbc240d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac8d791b4e733431c2d4937e1823160b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9">recursiveMinCutPartition</a> (std::vector&lt; int &gt; &amp;inputCluster, <a class="el" href="class_graph_partitioner.html">GraphPartitioner</a>&lt; NodeList, NetList &gt; *graphPartitioner, int eachClusterDSPNum, int eachClusterBRAMNum)</td></tr>
+<tr class="memdesc:ac8d791b4e733431c2d4937e1823160b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">a recursive function which will recursively bi-partition the input cluster into two based on connectivity and some resouce constraints  <a href="class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9">More...</a><br /></td></tr>
 <tr class="separator:ac8d791b4e733431c2d4937e1823160b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ab047b1c05f26f671103a518ef6cbd43a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#ab047b1c05f26f671103a518ef6cbd43a">sortClustersBySize</a> ()</td></tr>
+<tr class="memdesc:ab047b1c05f26f671103a518ef6cbd43a"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort clusters by sizes to fix the output clusters' order for later processing and avoid the random factor due to the multi-process procedure  <a href="class_graph_partitioner.html#ab047b1c05f26f671103a518ef6cbd43a">More...</a><br /></td></tr>
 <tr class="separator:ab047b1c05f26f671103a518ef6cbd43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a68ef3145065258ed698827f928b05ccc"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#a68ef3145065258ed698827f928b05ccc">clusters</a></td></tr>
+<tr class="memdesc:a68ef3145065258ed698827f928b05ccc"><td class="mdescLeft">&#160;</td><td class="mdescRight">the resultant clusters (vectors) after partitioning  <a href="class_graph_partitioner.html#a68ef3145065258ed698827f928b05ccc">More...</a><br /></td></tr>
 <tr class="separator:a68ef3145065258ed698827f928b05ccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a780bde7004625fb3e50902b67da999e9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::set&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#a780bde7004625fb3e50902b67da999e9">ClusterPUIdSets</a></td></tr>
+<tr class="memdesc:a780bde7004625fb3e50902b67da999e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">the resultant clusters (set) after partitioning  <a href="class_graph_partitioner.html#a780bde7004625fb3e50902b67da999e9">More...</a><br /></td></tr>
 <tr class="separator:a780bde7004625fb3e50902b67da999e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d12658ae2a7d895bca0008a32e03764"><td class="memItemLeft" align="right" valign="top">sem_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#a0d12658ae2a7d895bca0008a32e03764">partitionSem</a></td></tr>
+<tr class="memdesc:a0d12658ae2a7d895bca0008a32e03764"><td class="mdescLeft">&#160;</td><td class="mdescRight">used to limit the number of processes for the parallel partitioning  <a href="class_graph_partitioner.html#a0d12658ae2a7d895bca0008a32e03764">More...</a><br /></td></tr>
 <tr class="separator:a0d12658ae2a7d895bca0008a32e03764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad31a114fe5fcf064eb4f7c6a85140659"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_partitioner.html#ad31a114fe5fcf064eb4f7c6a85140659">clustersLock</a></td></tr>
 <tr class="separator:ad31a114fe5fcf064eb4f7c6a85140659"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +161,16 @@ Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class NodeList, class NetList&gt;<br />
-class GraphPartitioner&lt; NodeList, NetList &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00033">33</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+class GraphPartitioner&lt; NodeList, NetList &gt;</div><p ><a class="el" href="class_graph_partitioner.html" title="GraphPartitioner will recursively bi-partition the netlist (which could be netlist of clusters) based...">GraphPartitioner</a> will recursively bi-partition the netlist (which could be netlist of clusters) based on connectivitity and the net weights. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">NodeList</td><td>given node list type </td></tr>
+    <tr><td class="paramname">NetList</td><td>given net list type </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00040">40</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a76913be5dc96ae087c31bbbfb38a7f7e" name="a76913be5dc96ae087c31bbbfb38a7f7e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a76913be5dc96ae087c31bbbfb38a7f7e">&#9670;&nbsp;</a></span>GraphPartitioner()</h2>
@@ -204,7 +226,19 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00036">36</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p>Construct a new Graph Partitioner object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nodeList</td><td>the node list (it should be a vector) </td></tr>
+    <tr><td class="paramname">netList</td><td>the net list (it should be a vector) </td></tr>
+    <tr><td class="paramname">minClusterCellNum</td><td>a constraint to set the minimum size of the cluster </td></tr>
+    <tr><td class="paramname">jobs</td><td>the number of parallel partitioning workers </td></tr>
+    <tr><td class="paramname">verbose</td><td>whether dumps detailed information </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00052">52</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 </div>
 </div>
@@ -233,7 +267,7 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00044">44</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00060">60</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 </div>
 </div>
@@ -263,7 +297,10 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00050">50</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p>Get the clusters after partitioning (each is a vector containing ids for nodes inside the clusters) </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::vector&lt;std::vector&lt;int&gt;&gt;&amp; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00077">77</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 </div>
 </div>
@@ -292,7 +329,10 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00055">55</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p>Get the clusters after partitioning (each is a set containing ids for nodes inside the clusters) </p>
+<dl class="section return"><dt>Returns</dt><dd>const std::vector&lt;std::set&lt;int&gt;&gt;&amp; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00087">87</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 </div>
 </div>
@@ -342,6 +382,19 @@ template&lt;class NodeList , class NetList &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>the actual function to call partitioner to conduct partitioning with given clusters and parameters </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputCluster</td><td>a given input cluster </td></tr>
+    <tr><td class="paramname">outputClusters</td><td>the resultant two clusters </td></tr>
+    <tr><td class="paramname">graphPartitioner</td><td>the partitioning worker (graphPartitioner) to handle this partitioning task (since this is a static function, we have to pass the worker as arguments to conduct partitioning) </td></tr>
+    <tr><td class="paramname">eachClusterDSPNum</td><td>a constraint to limit the maximum of the DSP in a cluster </td></tr>
+    <tr><td class="paramname">eachClusterBRAMNum</td><td>a constraint to limit the maximum of the BRAM in a cluster </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>unsigned </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="_graph_partitioner_8cc_source.html#l00086">86</a> of file <a class="el" href="_graph_partitioner_8cc_source.html">GraphPartitioner.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00049">GraphPartitioner&lt; NodeList, NetList &gt;::recursiveMinCutPartition()</a>.</p>
@@ -350,7 +403,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_graph_partitioner_af0fe549726400f1a85b09d98859a8102_cgraph.png" border="0" usemap="#aclass_graph_partitioner_af0fe549726400f1a85b09d98859a8102_cgraph" alt=""/></div>
 <map name="aclass_graph_partitioner_af0fe549726400f1a85b09d98859a8102_cgraph" id="aclass_graph_partitioner_af0fe549726400f1a85b09d98859a8102_cgraph">
-<area shape="rect" title=" " alt="" coords="5,123,168,164"/>
+<area shape="rect" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="5,123,168,164"/>
 <area shape="rect" href="class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b" title=" " alt="" coords="216,5,361,47"/>
 <area shape="rect" href="sys_info_8cc.html#a47001a6a70cbe0ca4ac1b6743e729ff1" title=" " alt="" coords="245,71,333,98"/>
 <area shape="rect" href="class_external_process_func.html#a0ae60db9a279499c4df9047e8e3b77d1" title=" " alt="" coords="216,123,361,164"/>
@@ -364,8 +417,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_graph_partitioner_af0fe549726400f1a85b09d98859a8102_icgraph.png" border="0" usemap="#aclass_graph_partitioner_af0fe549726400f1a85b09d98859a8102_icgraph" alt=""/></div>
 <map name="aclass_graph_partitioner_af0fe549726400f1a85b09d98859a8102_icgraph" id="aclass_graph_partitioner_af0fe549726400f1a85b09d98859a8102_icgraph">
-<area shape="rect" title=" " alt="" coords="228,5,391,47"/>
-<area shape="rect" href="class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title=" " alt="" coords="5,5,180,47"/>
+<area shape="rect" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="228,5,391,47"/>
+<area shape="rect" href="class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="5,5,180,47"/>
 </map>
 </div>
 
@@ -419,14 +472,25 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
+<p>a recursive function which will recursively bi-partition the input cluster into two based on connectivity and some resouce constraints </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputCluster</td><td>a given input cluster </td></tr>
+    <tr><td class="paramname">graphPartitioner</td><td>the partitioning worker (graphPartitioner) to handle this partitioning task (since this is a static function, we have to pass the worker as arguments to conduct partitioning) </td></tr>
+    <tr><td class="paramname">eachClusterDSPNum</td><td>a constraint to limit the maximum of the DSP in a cluster </td></tr>
+    <tr><td class="paramname">eachClusterBRAMNum</td><td>a constraint to limit the maximum of the BRAM in a cluster </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_graph_partitioner_8cc_source.html#l00049">49</a> of file <a class="el" href="_graph_partitioner_8cc_source.html">GraphPartitioner.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_graph_partitioner_ac8d791b4e733431c2d4937e1823160b9_cgraph.png" border="0" usemap="#aclass_graph_partitioner_ac8d791b4e733431c2d4937e1823160b9_cgraph" alt=""/></div>
 <map name="aclass_graph_partitioner_ac8d791b4e733431c2d4937e1823160b9_cgraph" id="aclass_graph_partitioner_ac8d791b4e733431c2d4937e1823160b9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,123,180,164"/>
-<area shape="rect" href="class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title=" " alt="" coords="228,123,391,164"/>
+<area shape="rect" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="5,123,180,164"/>
+<area shape="rect" href="class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="228,123,391,164"/>
 <area shape="rect" href="class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b" title=" " alt="" coords="439,5,584,47"/>
 <area shape="rect" href="sys_info_8cc.html#a47001a6a70cbe0ca4ac1b6743e729ff1" title=" " alt="" coords="467,71,555,98"/>
 <area shape="rect" href="class_external_process_func.html#a0ae60db9a279499c4df9047e8e3b77d1" title=" " alt="" coords="439,123,584,164"/>
@@ -464,7 +528,16 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00076">76</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p>Set the max mincut rate. </p>
+<p >if the partitioning lead to a high mincut rate, the partitioning should be canceled.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_maxCutRate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00137">137</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 </div>
 </div>
@@ -496,6 +569,15 @@ template&lt;class NodeList , class NetList &gt; </div>
       </table>
 </div><div class="memdoc">
 
+<p>a caller which will start the partitioning procedure </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eachClusterDSPNum</td><td>a constraint to limit the maximum of the DSP in a cluster </td></tr>
+    <tr><td class="paramname">eachClusterBRAMNum</td><td>a constraint to limit the maximum of the BRAM in a cluster </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_graph_partitioner_8cc_source.html#l00016">16</a> of file <a class="el" href="_graph_partitioner_8cc_source.html">GraphPartitioner.cc</a>.</p>
 
 </div>
@@ -521,6 +603,8 @@ template&lt;class NodeList , class NetList &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>sort clusters by sizes to fix the output clusters' order for later processing and avoid the random factor due to the multi-process procedure </p>
 
 <p class="definition">Definition at line <a class="el" href="_graph_partitioner_8cc_source.html#l00029">29</a> of file <a class="el" href="_graph_partitioner_8cc_source.html">GraphPartitioner.cc</a>.</p>
 
@@ -549,9 +633,11 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00083">83</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p>the resultant clusters (set) after partitioning </p>
 
-<p class="reference">Referenced by <a class="el" href="_graph_partitioner_8h_source.html#l00055">GraphPartitioner&lt; NodeList, NetList &gt;::getClustersPUIdSets()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00153">153</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_graph_partitioner_8h_source.html#l00087">GraphPartitioner&lt; NodeList, NetList &gt;::getClustersPUIdSets()</a>.</p>
 
 </div>
 </div>
@@ -577,9 +663,11 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00082">82</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p>the resultant clusters (vectors) after partitioning </p>
 
-<p class="reference">Referenced by <a class="el" href="_graph_partitioner_8h_source.html#l00050">GraphPartitioner&lt; NodeList, NetList &gt;::getClusters()</a>, <a class="el" href="_graph_partitioner_8h_source.html#l00055">GraphPartitioner&lt; NodeList, NetList &gt;::getClustersPUIdSets()</a>, and <a class="el" href="_graph_partitioner_8cc_source.html#l00049">GraphPartitioner&lt; NodeList, NetList &gt;::recursiveMinCutPartition()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00147">147</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_graph_partitioner_8h_source.html#l00077">GraphPartitioner&lt; NodeList, NetList &gt;::getClusters()</a>, <a class="el" href="_graph_partitioner_8h_source.html#l00087">GraphPartitioner&lt; NodeList, NetList &gt;::getClustersPUIdSets()</a>, and <a class="el" href="_graph_partitioner_8cc_source.html#l00049">GraphPartitioner&lt; NodeList, NetList &gt;::recursiveMinCutPartition()</a>.</p>
 
 </div>
 </div>
@@ -605,7 +693,7 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00085">85</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00160">160</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00049">GraphPartitioner&lt; NodeList, NetList &gt;::recursiveMinCutPartition()</a>.</p>
 
@@ -633,7 +721,7 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00085">85</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00160">160</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00086">GraphPartitioner&lt; NodeList, NetList &gt;::minCutBipartition()</a>.</p>
 
@@ -661,9 +749,9 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00087">87</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00162">162</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_graph_partitioner_8h_source.html#l00076">GraphPartitioner&lt; NodeList, NetList &gt;::setMaxCutRate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_graph_partitioner_8h_source.html#l00137">GraphPartitioner&lt; NodeList, NetList &gt;::setMaxCutRate()</a>.</p>
 
 </div>
 </div>
@@ -689,7 +777,7 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00091">91</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00166">166</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00086">GraphPartitioner&lt; NodeList, NetList &gt;::minCutBipartition()</a>.</p>
 
@@ -717,7 +805,7 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00090">90</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00165">165</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00086">GraphPartitioner&lt; NodeList, NetList &gt;::minCutBipartition()</a>.</p>
 
@@ -745,7 +833,7 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00089">89</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00164">164</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00086">GraphPartitioner&lt; NodeList, NetList &gt;::minCutBipartition()</a>.</p>
 
@@ -773,9 +861,11 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00084">84</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p>used to limit the number of processes for the parallel partitioning </p>
 
-<p class="reference">Referenced by <a class="el" href="_graph_partitioner_8h_source.html#l00036">GraphPartitioner&lt; NodeList, NetList &gt;::GraphPartitioner()</a>, and <a class="el" href="_graph_partitioner_8cc_source.html#l00049">GraphPartitioner&lt; NodeList, NetList &gt;::recursiveMinCutPartition()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00159">159</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_graph_partitioner_8h_source.html#l00052">GraphPartitioner&lt; NodeList, NetList &gt;::GraphPartitioner()</a>, and <a class="el" href="_graph_partitioner_8cc_source.html#l00049">GraphPartitioner&lt; NodeList, NetList &gt;::recursiveMinCutPartition()</a>.</p>
 
 </div>
 </div>
@@ -801,7 +891,7 @@ template&lt;class NodeList , class NetList &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00095">95</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_graph_partitioner_8h_source.html#l00175">175</a> of file <a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_graph_partitioner_8cc_source.html#l00086">GraphPartitioner&lt; NodeList, NetList &gt;::minCutBipartition()</a>.</p>
 

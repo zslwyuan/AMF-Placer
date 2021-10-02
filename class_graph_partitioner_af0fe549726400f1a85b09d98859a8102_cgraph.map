@@ -1,5 +1,5 @@
 <map id="GraphPartitioner::minCutBipartition" name="GraphPartitioner::minCutBipartition">
-<area shape="rect" id="node1" title=" " alt="" coords="5,123,168,164"/>
+<area shape="rect" id="node1" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="5,123,168,164"/>
 <area shape="rect" id="node2" href="$class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b" title=" " alt="" coords="216,5,361,47"/>
 <area shape="rect" id="node4" href="$sys_info_8cc.html#a47001a6a70cbe0ca4ac1b6743e729ff1" title=" " alt="" coords="245,71,333,98"/>
 <area shape="rect" id="node5" href="$class_external_process_func.html#a0ae60db9a279499c4df9047e8e3b77d1" title=" " alt="" coords="216,123,361,164"/>

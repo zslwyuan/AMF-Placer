@@ -11,7 +11,7 @@
 <area shape="rect" id="node21" href="$class_design_info.html#a5ba9049f57138cb8ee8f9f43ac459d8d" title="load the global clock signals from a design information file" alt="" coords="1495,120,1649,147"/>
 <area shape="rect" id="node22" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="166,499,365,541"/>
 <area shape="rect" id="node23" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="415,675,601,701"/>
-<area shape="rect" id="node24" href="$class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title=" " alt="" coords="1491,659,1653,701"/>
+<area shape="rect" id="node24" href="$class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="1491,659,1653,701"/>
 <area shape="rect" id="node26" href="$class_placement_info.html#aa6c7978a01c8f599d13ebe537fc67285" title="make the PlacementUnits in the long path closer to each other" alt="" coords="1477,725,1667,766"/>
 <area shape="rect" id="node27" href="$simple_j_s_o_n_8h.html#a47b912b821d387118038fcd83de7692b" title=" " alt="" coords="1517,791,1627,817"/>
 <area shape="rect" id="node29" href="$class_macro_legalizer.html#adda92ff94c3ef15945c99b82df0bb178" title="spread PlacementUnits accross columns to resolve resource overflow" alt="" coords="1473,841,1671,868"/>
@@ -32,7 +32,7 @@
 <area shape="rect" id="node18" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="938,441,1145,482"/>
 <area shape="rect" id="node19" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="660,448,869,475"/>
 <area shape="rect" id="node20" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,448,367,475"/>
-<area shape="rect" id="node25" href="$class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title=" " alt="" coords="1220,659,1395,701"/>
+<area shape="rect" id="node25" href="$class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="1220,659,1395,701"/>
 <area shape="rect" id="node28" href="$class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d" title="Construct a new AMFPlacer object according to a given placer configuration file." alt="" coords="1228,775,1387,801"/>
 <area shape="rect" id="node30" href="$class_macro_legalizer.html#a5a30f90a83079d26bf7e058997847542" title="resolve the overflow columns during fixed column legalization by spreading &quot;outliers&quot; to neighbor col..." alt="" coords="1203,826,1412,867"/>
 <area shape="rect" id="node31" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="948,750,1135,791"/>

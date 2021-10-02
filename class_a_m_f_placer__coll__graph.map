@@ -5,7 +5,7 @@
 <area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="234,725,411,766"/>
 <area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="250,560,395,587"/>
 <area shape="rect" id="node7" href="$class_initial_packer.html" title="InitialPacker will identify macros from the design netlist based on pattern matching." alt="" coords="1048,1033,1143,1060"/>
-<area shape="rect" id="node8" href="$class_incremental_b_e_l_packer.html" title=" " alt="" coords="1017,781,1173,808"/>
+<area shape="rect" id="node8" href="$class_incremental_b_e_l_packer.html" title="IncrementalBELPacker incrementally packs some LUTs/FFs during global placement based on their distanc..." alt="" coords="1017,781,1173,808"/>
 <area shape="rect" id="node17" href="$class_macro_legalizer.html" title="MacroLegalizer maps DSP/BRAM/CARRY macros to legal location." alt="" coords="1040,653,1151,680"/>
 <area shape="rect" id="node19" href="$class_c_l_b_legalizer.html" title="CLBLegalizer maps CLBs (each of which consists of one site) to legal location. e.g...." alt="" coords="1045,379,1145,405"/>
 <area shape="rect" id="node20" href="$class_parallel_c_l_b_packer.html" title=" " alt="" coords="1029,883,1161,909"/>

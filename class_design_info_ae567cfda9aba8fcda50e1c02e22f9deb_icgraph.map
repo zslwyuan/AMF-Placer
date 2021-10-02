@@ -20,8 +20,8 @@
 <area shape="rect" id="node14" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,833,624,860"/>
 <area shape="rect" id="node15" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,784,367,810"/>
 <area shape="rect" id="node19" href="$class_placement_info.html#ab3e0f7abb94737992d90bc284d1a7116" title=" " alt="" coords="937,390,1120,431"/>
-<area shape="rect" id="node21" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="441,608,597,650"/>
-<area shape="rect" id="node22" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="441,674,597,715"/>
+<area shape="rect" id="node21" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="441,608,597,650"/>
+<area shape="rect" id="node22" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="441,674,597,715"/>
 <area shape="rect" id="node23" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="195,550,336,591"/>
 <area shape="rect" id="node25" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="165,718,366,759"/>
 <area shape="rect" id="node26" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="166,835,365,876"/>

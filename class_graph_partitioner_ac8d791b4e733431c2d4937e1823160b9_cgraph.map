@@ -1,6 +1,6 @@
 <map id="GraphPartitioner::recursiveMinCutPartition" name="GraphPartitioner::recursiveMinCutPartition">
-<area shape="rect" id="node1" title=" " alt="" coords="5,123,180,164"/>
-<area shape="rect" id="node2" href="$class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title=" " alt="" coords="228,123,391,164"/>
+<area shape="rect" id="node1" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="5,123,180,164"/>
+<area shape="rect" id="node2" href="$class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="228,123,391,164"/>
 <area shape="rect" id="node3" href="$class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b" title=" " alt="" coords="439,5,584,47"/>
 <area shape="rect" id="node5" href="$sys_info_8cc.html#a47001a6a70cbe0ca4ac1b6743e729ff1" title=" " alt="" coords="467,71,555,98"/>
 <area shape="rect" id="node6" href="$class_external_process_func.html#a0ae60db9a279499c4df9047e8e3b77d1" title=" " alt="" coords="439,123,584,164"/>

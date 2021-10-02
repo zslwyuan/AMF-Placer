@@ -6,14 +6,14 @@
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="53,245,163,271"/>
 <area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77" title=" " alt="" coords="1143,325,1382,381"/>
 <area shape="rect" id="node8" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="836,208,1083,249"/>
-<area shape="rect" id="node10" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title=" " alt="" coords="304,429,460,471"/>
+<area shape="rect" id="node10" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="304,429,460,471"/>
 <area shape="rect" id="node11" href="$class_macro_legalizer.html#ad3d60bfec68dc4badcf933d793b4d1f9" title="find candidate sites for the cells left to be matched" alt="" coords="296,715,468,756"/>
 <area shape="rect" id="node14" href="$class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="1177,157,1348,199"/>
 <area shape="rect" id="node15" href="$class_placement_info.html#a95277820b83b80d5d0533073039cb2c3" title="find neibor device sites of a given cell from bin grid" alt="" coords="585,724,756,765"/>
 <area shape="rect" id="node17" href="$class_c_l_b_legalizer.html#a2add935df0c96989390f616634fca284" title="find candidate sites for the PlacementUnits left to be matched" alt="" coords="291,629,473,671"/>
 <area shape="rect" id="node20" href="$class_placement_info_1_1_compatible_placement_table.html#acb6784c1b88ff54941384d25fb481c23" title="Get the actual occupation of a specific cell." alt="" coords="1141,404,1384,445"/>
 <area shape="rect" id="node22" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="571,429,770,471"/>
-<area shape="rect" id="node23" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title=" " alt="" coords="304,267,460,308"/>
+<area shape="rect" id="node23" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="304,267,460,308"/>
 <area shape="rect" id="node24" href="$class_design_info.html#aa0491a189a3965806f2dacb153848615" title="get the id of the control set of a given FF" alt="" coords="1180,840,1345,881"/>
 <area shape="rect" id="node25" href="$class_placement_info_1_1_compatible_placement_table.html#a7de75eedea743377dd525c27fd111993" title="Get the inflate ratio of a cell." alt="" coords="1160,905,1365,947"/>
 <area shape="rect" id="node27" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="863,1253,1055,1295"/>

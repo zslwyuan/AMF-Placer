@@ -1,5 +1,5 @@
 <map id="IncrementalBELPacker::FFLocation" name="IncrementalBELPacker::FFLocation">
-<area shape="rect" id="node1" title=" " alt="" coords="16,483,172,524"/>
+<area shape="rect" id="node1" title="FFLocation records the FF cell pointer and the location of the FF cell for kdt::KDTree construction w..." alt="" coords="16,483,172,524"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,386,140,413"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unpacked_cell.html" title="the smallest, indivisible, representable component. It will include only one standard cell" alt="" coords="164,379,339,420"/>
 <area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand" alt="" coords="92,289,291,316"/>

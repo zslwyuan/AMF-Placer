@@ -1,5 +1,5 @@
 <map id="IncrementalBELPacker::FFPairing" name="IncrementalBELPacker::FFPairing">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1491,161,1532"/>
+<area shape="rect" id="node1" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="5,1491,161,1532"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="233,528,407,569"/>
 <area shape="rect" id="node19" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="233,1075,407,1116"/>
 <area shape="rect" id="node20" href="$class_incremental_b_e_l_packer.html#a77e769556e6cf6e62d1413835a6679a8" title=" " alt="" coords="242,1243,398,1284"/>
