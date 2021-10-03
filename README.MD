@@ -1,6 +1,8 @@
 # AMF-Placer
 
-![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)
+![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg) ![LoCCode](https://github.com/zslwyuan/AMF-Placer/blob/cloc_code/cloc_code.svg)
+ ![LoCCode](https://github.com/zslwyuan/AMF-Placer/blob/cloc_code/cloc_comment.svg)
+
 
 ## Introduction
 
