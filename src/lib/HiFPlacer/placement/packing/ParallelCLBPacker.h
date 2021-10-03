@@ -43,6 +43,9 @@
 /**
  * @brief a utility struct for the comparison between PlacementInfo::PlacementUnit according to PU ID
  *
+ * The default STL set for PlacementUnit pointers will lead to random iteration order of the PlacementUnits in a set and
+ * lead to slight variation in the final packing result.
+ *
  */
 struct Packing_PUcompare
 {

@@ -1,9 +1,6 @@
-![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)  <img src="https://github.com/zslwyuan/AMF-Placer/blob/cloc_code/cloc_code.svg" alt="LoCCode" title="LoCCode" height="18" /> 
-  <img src="https://github.com/zslwyuan/AMF-Placer/blob/cloc_code/cloc_comment.svg" alt="LoCComment" title="LoCComment" height="18" /> 
+![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)  <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_code.svg" alt="LoCCode" title="LoCCode" height="18" /> 
+  <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_comment.svg" alt="LoCComment" title="LoCComment" height="18" /> 
 
-
-![LoCCode](https://github.com/zslwyuan/AMF-Placer/blob/cloc_code/cloc_code.svg)
- ![LoCComment](https://github.com/zslwyuan/AMF-Placer/blob/cloc_code/cloc_comment.svg)
 
 **[Access The GitHub Project](https://github.com/zslwyuan/AMF-Placer)**
 
