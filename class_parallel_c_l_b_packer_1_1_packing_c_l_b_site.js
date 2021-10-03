@@ -2,7 +2,7 @@ var class_parallel_c_l_b_packer_1_1_packing_c_l_b_site =
 [
     [ "PackingCLBCluster", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster" ],
     [ "SiteBELMapping", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping.html", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping" ],
-    [ "PackingCLBSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a1db75ea062b1744c2436418a0375ebc2", null ],
+    [ "PackingCLBSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afd58ba6f07e4018e54e7bd4b42ab5f02", null ],
     [ "~PackingCLBSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a69d41f0f84fcf8d235d5035156035c1c", null ],
     [ "addCarry", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6", null ],
     [ "addLUTRAMMacro", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001", null ],
@@ -68,7 +68,7 @@ var class_parallel_c_l_b_packer_1_1_packing_c_l_b_site =
     [ "mappedLUTs", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0c285fba1687d3faa4b7710cb3ca6ccd", null ],
     [ "maxD", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a842474b1df0f3e8629bca5e63e6021e8", null ],
     [ "neighborPUs", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ae2663b838fc66537173c1297d54b27c0", null ],
-    [ "NNBR", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7dd29c8940bb649fe69a5cfe72d142f2", null ],
+    [ "numNeighbor", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8a593c074e44da10461e4d05d1c48f55", null ],
     [ "placementInfo", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a4409547b7d2581771b2f27be3383d0d7", null ],
     [ "PQSize", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0a28e0c804f8a04968679254f359c4d0", null ],
     [ "priorityQueue", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac7918d9390db79ace0bdc70b8a911be3", null ],
