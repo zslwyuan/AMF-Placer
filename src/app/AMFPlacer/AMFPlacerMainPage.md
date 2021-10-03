@@ -1,4 +1,7 @@
-![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)
+![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg) ![LoCCode](https://github.com/zslwyuan/AMF-Placer/blob/cloc_code/cloc_code.svg)
+ ![LoCComment](https://github.com/zslwyuan/AMF-Placer/blob/cloc_code/cloc_comment.svg)
+
+**[Access The GitHub Project](https://github.com/zslwyuan/AMF-Placer)**
 
 **Introduction**
 
@@ -12,7 +15,7 @@ a series of new techniques for wirelength optimization, cell spreading, packing,
 of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results
 indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the
 baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure
-can be accelerated by 2.41x on average. The project can be downloaded **[here](https://github.com/zslwyuan/AMF-Placer)**.
+can be accelerated by 2.41x on average. 
 
 <img src="OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />    <img src="MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" />   <img src="optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" /> 
 
