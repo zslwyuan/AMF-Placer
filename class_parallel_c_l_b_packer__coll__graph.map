@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker" name="ParallelCLBPacker">
-<area shape="rect" id="node1" title=" " alt="" coords="187,288,319,315"/>
+<area shape="rect" id="node1" title="ParallelCLBPacker will finally pack LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel appr..." alt="" coords="187,288,319,315"/>
 <area shape="rect" id="node2" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="49,5,133,32"/>
 <area shape="rect" id="node4" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="199,199,306,225"/>
 <area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="307,95,484,136"/>
