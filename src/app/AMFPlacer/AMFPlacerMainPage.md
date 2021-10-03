@@ -2,7 +2,8 @@
   <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_comment.svg" alt="LoCComment" title="LoCComment" height="18" /> 
 
 
-**[Access The GitHub Project](https://github.com/zslwyuan/AMF-Placer)**
+<a class="el" href="https://github.com/zslwyuan/AMF-Placer">Access The GitHub Project</a>
+
 
 **Introduction**
 
