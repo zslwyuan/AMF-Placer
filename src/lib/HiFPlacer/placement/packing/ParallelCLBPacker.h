@@ -40,6 +40,10 @@
 // in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 38, no. 11, pp. 2113-2126,
 // Nov. 2019, doi: 10.1109/TCAD.2018.2877017.
 
+/**
+ * @brief a utility struct for the comparison between PlacementInfo::PlacementUnit according to PU ID
+ *
+ */
 struct Packing_PUcompare
 {
     inline bool operator()(PlacementInfo::PlacementUnit *lhs, PlacementInfo::PlacementUnit *rhs) const
@@ -48,6 +52,18 @@ struct Packing_PUcompare
     }
 };
 
+/**
+ * @brief ParallelCLBPacker will finally pack LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.
+ *
+ * implemented based on the paper's Algorithm 1:
+ * W. Li and D. Z. Pan, "A New Paradigm for FPGA Placement Without Explicit Packing,"
+ * in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 38, no. 11, pp. 2113-2126,
+ * Nov. 2019, doi: 10.1109/TCAD.2018.2877017.
+ *
+ * We also provide many detailed optimization techniques according to our observation, macro constraints, timing
+ * demands, and the application characteristics.
+ *
+ */
 class ParallelCLBPacker
 {
   public:
