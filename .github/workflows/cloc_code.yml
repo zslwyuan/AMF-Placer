@@ -24,3 +24,5 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: zslwyuan/cloc-badge-action@1.6
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
