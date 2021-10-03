@@ -85,8 +85,9 @@ The dominant algorithm for each stage in the proposed placement flow can be para
 
 Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placement (lower ones): yellow for CARRY macros, red for MUX macros, green for BRAM macros, purple for DSP macros, blue for LUTRAM macros. The view of device is rotated left by 90 degree.
 
+<center>
 <img src="placement.png" alt="Placement" title="Placement" width="800" /> 
-
+</center>
 
 **References in this page:**
 

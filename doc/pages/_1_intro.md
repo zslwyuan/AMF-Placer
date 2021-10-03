@@ -19,7 +19,9 @@
 
 **Implementation Overview**
 
+<center>
 <img src="overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
+</center>
 
 **Project Hiearchy**
 

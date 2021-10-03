@@ -19,9 +19,9 @@ indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8
 baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure
 can be accelerated by 2.41x on average. 
 
-<p align="center">
+<center>
 <img src="OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />    <img src="MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" />   <img src="optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" /> 
-</p>
+</center>
 
 **License**
 
@@ -59,7 +59,9 @@ For commercial usage of this open-source project, users must contact authors (We
 
 **Implementation Overview**
 
+<center>
 <img src="overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
+</center>
 
 **Acknowledgement**
 
