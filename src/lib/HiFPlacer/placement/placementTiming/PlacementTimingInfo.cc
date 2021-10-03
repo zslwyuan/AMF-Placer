@@ -326,7 +326,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
     resSucessors.push_back(startNodeId);
     nodeSet.insert(startNodeId);
     nodeQ.push(startNodeId);
-    int targetPathLen = nodes[startNodeId]->getLongestPathLength();
+    // int targetPathLen = nodes[startNodeId]->getLongestPathLength();
 
     while (nodeQ.size() && nodeSet.size() < sizeThr)
     {
@@ -368,12 +368,12 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
 
 template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::propogateArrivalTime()
 {
-    for (unsigned int i = 1; i < forwardlevel2NodeIds.size(); i++)
-    {
-        for (auto curNode : forwardlevel2NodeIds[i])
-        {
-        }
-    }
+    // for (unsigned int i = 1; i < forwardlevel2NodeIds.size(); i++)
+    // {
+    //     for (auto curNode : forwardlevel2NodeIds[i])
+    //     {
+    //     }
+    // }
 }
 
 template class PlacementTimingInfo::TimingGraph<DesignInfo::DesignCell>;

@@ -33,4 +33,6 @@ Below is the overall flow of AMFPlacer and a visualized procedure is shown in th
 12. GlobalPlacer will enable PlacementInfo (i.e., set neighbor displacement upperbound to a positive value) to conduct packing-aware (Improved UTPlacerF solution, considering cell resource, timing and net density. Enable earlier cell packing determination based on history analysis. Enable parallel exception handling.) Please note that congestion-aware cell area adjustion will be automatically enabled during global placement according to the placement convergence progress.
 13. Finally, when global placement converges, ParallelCLBPacker will pack the elements into the corresponding DeviceSite / DeviceBEL.
 
+<center>
 <img src="overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
+</center>

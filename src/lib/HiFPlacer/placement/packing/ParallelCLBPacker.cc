@@ -39,12 +39,12 @@ void ParallelCLBPacker::prePackLegalizedMacros(PlacementInfo::PlacementMacro *tm
 }
 
 ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceInfo, PlacementInfo *placementInfo,
-                                     std::map<std::string, std::string> &JSONCfg, int unchangedIterationThr, int NNBR,
-                                     float deltaD, float curD, float maxD, int PQSize, float HPWLWeight,
-                                     std::string packerName, bool incrementalPacking)
+                                     std::map<std::string, std::string> &JSONCfg, int unchangedIterationThr,
+                                     int numNeighbor, float deltaD, float curD, float maxD, int PQSize,
+                                     float HPWLWeight, std::string packerName)
     : designInfo(designInfo), deviceInfo(deviceInfo), placementInfo(placementInfo), JSONCfg(JSONCfg),
-      unchangedIterationThr(unchangedIterationThr), NNBR(NNBR), deltaD(deltaD), curD(curD), maxD(maxD), PQSize(PQSize),
-      HPWLWeight(HPWLWeight), packerName(packerName), incrementalPacking(incrementalPacking),
+      unchangedIterationThr(unchangedIterationThr), numNeighbor(numNeighbor), deltaD(deltaD), curD(curD), maxD(maxD),
+      PQSize(PQSize), HPWLWeight(HPWLWeight), packerName(packerName),
       PUId2PackingCLBSite(placementInfo->getPlacementUnits().size(), nullptr),
       PUId2PackingCLBSiteCandidate(placementInfo->getPlacementUnits().size(), nullptr),
       placementUnits(placementInfo->getPlacementUnits()),
@@ -57,7 +57,7 @@ ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceI
         y2xRatio = std::stof(JSONCfg["y2xRatio"]);
     }
     // PlacementInfo *placementInfo, DeviceInfo::DeviceSite *CLBSite, int unchangedIterationThr,
-    //                        int NNBR, float deltaD, float curD, float maxD, int PQSize, float y2xRatio,
+    //                        int numNeighbor, float deltaD, float curD, float maxD, int PQSize, float y2xRatio,
     //                        std::vector<PackingCLBSite *> &PUId2PackingCLBSite
 
     std::string targetSiteType = "SLICEL";
@@ -67,7 +67,7 @@ ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceI
         if (curSite->isOccupied())
             continue;
         PackingCLBSite *tmpPackingSite =
-            new PackingCLBSite(placementInfo, curSite, unchangedIterationThr, NNBR, deltaD, curD, maxD, PQSize,
+            new PackingCLBSite(placementInfo, curSite, unchangedIterationThr, numNeighbor, deltaD, curD, maxD, PQSize,
                                y2xRatio, HPWLWeight, PUId2PackingCLBSite);
         deviceSite2PackingSite[curSite] = tmpPackingSite;
         packingSites.push_back(tmpPackingSite);
@@ -78,21 +78,19 @@ ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceI
         if (curSite->isOccupied())
             continue;
         PackingCLBSite *tmpPackingSite =
-            new PackingCLBSite(placementInfo, curSite, unchangedIterationThr, NNBR, deltaD, curD, maxD, PQSize,
+            new PackingCLBSite(placementInfo, curSite, unchangedIterationThr, numNeighbor, deltaD, curD, maxD, PQSize,
                                y2xRatio, HPWLWeight, PUId2PackingCLBSite);
         deviceSite2PackingSite[curSite] = tmpPackingSite;
         packingSites.push_back(tmpPackingSite);
     }
 
-    if (!incrementalPacking)
+    for (auto tmpMacro : placementMacros)
     {
-        for (auto tmpMacro : placementMacros)
-        {
-            prePackLegalizedMacros(tmpMacro);
-        }
-        if (deviceSite2PackingSite.size())
-            print_status("ParallelCLBPacker: CARRY macros are mapped to sites.");
+        prePackLegalizedMacros(tmpMacro);
     }
+    if (deviceSite2PackingSite.size())
+        print_status("ParallelCLBPacker: CARRY macros are mapped to sites.");
+
     int numPackingSites = packingSites.size();
     for (int i = 0; i < numPackingSites; i++)
     {

@@ -195,8 +195,6 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
         auto timingNode = timingNodes[nodeId];
         if (timingNode->getLongestPathLength() > pathLenThr)
         {
-            auto curCell = timingNode->getDesignNode();
-
             auto candidateCellIds =
                 simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLenThr, 20000, extractedCellIds);
 
@@ -332,5 +330,5 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
 void PlacementTimingOptimizer::propogateArrivalTime()
 {
     assert(timingInfo);
-    auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
+    // auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
 }

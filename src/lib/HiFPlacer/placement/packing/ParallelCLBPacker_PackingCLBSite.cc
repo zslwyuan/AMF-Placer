@@ -421,21 +421,21 @@ void ParallelCLBPacker::PackingCLBSite::updateStep(bool initial, bool debug)
         seedClusters[0]->clusterHash();
     }
 
-    if (neighborPUs.size() < NNBR && curD < maxD)
+    if (neighborPUs.size() < numNeighbor && curD < maxD)
     {
         if (initial)
         {
-            findNeiborPUsFromBinGrid(DesignInfo::CellType_LUT6, CLBSite->X(), CLBSite->Y(), 0, curD, NNBR,
+            findNeiborPUsFromBinGrid(DesignInfo::CellType_LUT6, CLBSite->X(), CLBSite->Y(), 0, curD, numNeighbor,
                                      PUId2PackingCLBSite, y2xRatio, &neighborPUs);
-            findNeiborPUsFromBinGrid(DesignInfo::CellType_FDCE, CLBSite->X(), CLBSite->Y(), 0, curD, NNBR,
+            findNeiborPUsFromBinGrid(DesignInfo::CellType_FDCE, CLBSite->X(), CLBSite->Y(), 0, curD, numNeighbor,
                                      PUId2PackingCLBSite, y2xRatio, &neighborPUs);
         }
         else
         {
             float newD = std::min(curD + deltaD, maxD);
-            findNeiborPUsFromBinGrid(DesignInfo::CellType_LUT6, CLBSite->X(), CLBSite->Y(), curD, newD, NNBR,
+            findNeiborPUsFromBinGrid(DesignInfo::CellType_LUT6, CLBSite->X(), CLBSite->Y(), curD, newD, numNeighbor,
                                      PUId2PackingCLBSite, y2xRatio, &neighborPUs);
-            findNeiborPUsFromBinGrid(DesignInfo::CellType_FDCE, CLBSite->X(), CLBSite->Y(), curD, newD, NNBR,
+            findNeiborPUsFromBinGrid(DesignInfo::CellType_FDCE, CLBSite->X(), CLBSite->Y(), curD, newD, numNeighbor,
                                      PUId2PackingCLBSite, y2xRatio, &neighborPUs);
             curD = newD;
         }

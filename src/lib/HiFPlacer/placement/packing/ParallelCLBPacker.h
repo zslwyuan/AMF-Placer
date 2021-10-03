@@ -70,10 +70,26 @@ struct Packing_PUcompare
 class ParallelCLBPacker
 {
   public:
+    /**
+     * @brief Construct a new Parallel CLB Packer object
+     *
+     * @param designInfo given design information
+     * @param deviceInfo given device information
+     * @param placementInfo the PlacementInfo for this placer to handle
+     * @param JSONCfg  the user-defined placement configuration
+     * @param unchangedIterationThr specify how many iterations a PlacementUnit should stay at the top priority of a
+     * site before we finally map it to the site
+     * @param numNeighbor the threshold number of cells for site
+     * @param deltaD the increase step of the neighbor search diameter
+     * @param curD current neighbor search diameter
+     * @param maxD the maximum constraint of the neighbor search diameter
+     * @param PQSize the size of priority queue (the low-priority candidates will be removed)
+     * @param HPWLWeight the factor of HPWL overhead in packing evaluation for a cell
+     * @param packerName the name of this packer
+     */
     ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceInfo, PlacementInfo *placementInfo,
-                      std::map<std::string, std::string> &JSONCfg, int unchangedIterationThr, int NNBR, float deltaD,
-                      float curD, float maxD, int PQSize, float HPWLWeight, std::string packerName,
-                      bool incrementalPacking = false);
+                      std::map<std::string, std::string> &JSONCfg, int unchangedIterationThr, int numNeighbor,
+                      float deltaD, float curD, float maxD, int PQSize, float HPWLWeight, std::string packerName);
 
     ~ParallelCLBPacker()
     {
@@ -254,11 +270,11 @@ class ParallelCLBPacker
     {
       public:
         PackingCLBSite(PlacementInfo *placementInfo, DeviceInfo::DeviceSite *CLBSite, int unchangedIterationThr,
-                       int NNBR, float deltaD, float curD, float maxD, unsigned int PQSize, float y2xRatio,
+                       int numNeighbor, float deltaD, float curD, float maxD, unsigned int PQSize, float y2xRatio,
                        float HPWLWeight, std::vector<PackingCLBSite *> &PUId2PackingCLBSite)
-            : placementInfo(placementInfo), CLBSite(CLBSite), unchangedIterationThr(unchangedIterationThr), NNBR(NNBR),
-              deltaD(deltaD), curD(curD), maxD(maxD), PQSize(PQSize), y2xRatio(y2xRatio), HPWLWeight(HPWLWeight),
-              PUId2PackingCLBSite(PUId2PackingCLBSite), determinedClusterInSite(nullptr)
+            : placementInfo(placementInfo), CLBSite(CLBSite), unchangedIterationThr(unchangedIterationThr),
+              numNeighbor(numNeighbor), deltaD(deltaD), curD(curD), maxD(maxD), PQSize(PQSize), y2xRatio(y2xRatio),
+              HPWLWeight(HPWLWeight), PUId2PackingCLBSite(PUId2PackingCLBSite), determinedClusterInSite(nullptr)
         {
             neighborPUs.clear();
             seedClusters.clear();
@@ -1182,7 +1198,7 @@ class ParallelCLBPacker
         PlacementInfo *placementInfo;
         DeviceInfo::DeviceSite *CLBSite;
         int unchangedIterationThr = 3;
-        unsigned int NNBR = 10;
+        unsigned int numNeighbor = 10;
         float deltaD = 1.0;
         float curD = 0;
         float maxD = 10;
@@ -1290,7 +1306,7 @@ class ParallelCLBPacker
     PlacementInfo *placementInfo;
     std::map<std::string, std::string> &JSONCfg;
     int unchangedIterationThr;
-    int NNBR;
+    int numNeighbor;
     float deltaD;
     float curD;
     float maxD;
