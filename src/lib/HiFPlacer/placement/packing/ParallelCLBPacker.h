@@ -97,6 +97,11 @@ class ParallelCLBPacker
             delete packingSite;
     }
 
+    /**
+     * @brief PackedControlSet stores the data of a combination of FFs within one control set (clock
+     * enable/preset-reset/clock) that can be packed in a site.
+     *
+     */
     class PackedControlSet
     {
       public:
@@ -105,12 +110,11 @@ class ParallelCLBPacker
             FFs.clear();
         };
 
-        // PackedControlSet(DesignInfo::DesignCell *curFF) : CSId(curFF->getControlSetInfo()->getId())
-        // {
-        //     FFs.clear();
-        //     FFs.push_back(curFF);
-        // };
-
+        /**
+         * @brief Construct a new Packed Control Set object by cloning another one
+         *
+         * @param anotherControlSet
+         */
         PackedControlSet(const PackedControlSet &anotherControlSet)
         {
             FFs.clear();
@@ -133,6 +137,12 @@ class ParallelCLBPacker
             }
         };
 
+        /**
+         * @brief  undate a new Packed Control Set object by cloning another one
+         *
+         * @param anotherControlSet
+         * @return PackedControlSet&
+         */
         PackedControlSet &operator=(const PackedControlSet &anotherControlSet)
         {
             FFs.clear();
@@ -158,16 +168,30 @@ class ParallelCLBPacker
 
         ~PackedControlSet(){};
 
+        /**
+         * @brief Get the the number of FFs in this control set
+         *
+         * @return unsigned int
+         */
         inline unsigned int getSize() const
         {
             return FFs.size();
         }
 
+        /**
+         * @brief get the FFs in this PackedControlSet
+         *
+         * @return const std::vector<DesignInfo::DesignCell *>&
+         */
         inline const std::vector<DesignInfo::DesignCell *> &getFFs() const
         {
             return FFs;
         }
 
+        /**
+         * @brief clear the control set information in this PackedControlSet (only when there is no FF in this set)
+         *
+         */
         inline void reset()
         {
             assert(FFs.size() == 0);
@@ -177,6 +201,11 @@ class ParallelCLBPacker
             CE = nullptr;
         }
 
+        /**
+         * @brief add a FF into this PackedControlSet and check the compatibility
+         *
+         * @param curFF a given FF cell
+         */
         inline void addFF(DesignInfo::DesignCell *curFF)
         {
             if (CSId < 0)
@@ -201,11 +230,22 @@ class ParallelCLBPacker
             FFs.push_back(curFF);
         }
 
+        /**
+         * @brief remove a specify i-th FF from this PackedControlSet
+         *
+         * @param i a specified index of the FF to be removed
+         */
         inline void removeXthFF(int i)
         {
             FFs.erase(FFs.begin() + i);
         }
 
+        /**
+         * @brief find the index in the list for a given FF cell pointer
+         *
+         * @param curFF a given FF cell
+         * @return int
+         */
         inline int findFF(DesignInfo::DesignCell *curFF)
         {
             for (unsigned int i = 0; i < FFs.size(); i++)
@@ -216,11 +256,25 @@ class ParallelCLBPacker
             return -1;
         }
 
+        /**
+         * @brief get the control set id of this PackedControlSet.
+         *
+         * The control set determines whether two FFs can be packed.
+         *
+         * @return int
+         */
         inline int getCSId() const
         {
             return CSId;
         }
 
+        /**
+         * @brief set the control set id of this PackedControlSet.
+         *
+         * The control set determines whether two FFs can be packed.
+         *
+         * @param _CSId the id of the target control set
+         */
         inline void setCSId(int _CSId)
         {
             CSId = _CSId;
@@ -250,6 +304,13 @@ class ParallelCLBPacker
             return FFType;
         }
 
+        /**
+         * @brief check whether this PackedControlSet can be compatible with a given control set ID
+         *
+         * @param inputCSId  the id of the target control set
+         * @return true
+         * @return false
+         */
         inline bool compatibleWith(int inputCSId)
         {
             if (CSId == -1)
@@ -266,9 +327,32 @@ class ParallelCLBPacker
         std::vector<DesignInfo::DesignCell *> FFs;
     };
 
+    /**
+     * @brief PackingCLBSite is a container for the packing information (parameters, candidates and packing status) of a
+     * specific DeviceInfo::DeviceSite
+     *
+     */
     class PackingCLBSite
     {
       public:
+        /**
+         * @brief Construct a new Packing CLB Site object
+         *
+         * @param placementInfo the PlacementInfo for this placer to handle
+         * @param CLBSite
+         * @param unchangedIterationThr specify how many iterations a PlacementUnit should stay at the top priority of a
+         * site before we finally map it to the site
+         * @param numNeighbor the threshold number of cells for site
+         * @param deltaD the increase step of the neighbor search diameter
+         * @param curD current neighbor search diameter
+         * @param maxD the maximum constraint of the neighbor search diameter
+         * @param PQSize the size of priority queue (the low-priority candidates will be removed)
+         * @param y2xRatio a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning
+         * in X-coordinate
+         * @param HPWLWeight the factor of HPWL overhead in packing evaluation for a cell
+         * @param PUId2PackingCLBSite the reference of a map (actually a vector) recording the mapping of PlacementUnits
+         * to the PackingCLBSites
+         */
         PackingCLBSite(PlacementInfo *placementInfo, DeviceInfo::DeviceSite *CLBSite, int unchangedIterationThr,
                        int numNeighbor, float deltaD, float curD, float maxD, unsigned int PQSize, float y2xRatio,
                        float HPWLWeight, std::vector<PackingCLBSite *> &PUId2PackingCLBSite)
@@ -296,9 +380,18 @@ class ParallelCLBPacker
             }
         }
 
+        /**
+         * @brief PackingCLBCluster is a container of cells/PlacementUnits which can be packed in the corresponding CLB
+         * site
+         *
+         */
         class PackingCLBCluster
         {
           public:
+            /**
+             * @brief Construct a new Packing CLB Cluster object (it should not be called.)
+             *
+             */
             PackingCLBCluster()
             {
                 assert(false && "PackingCLBCluster should not initialize without parameters \"parentPackingCLB\". This "
@@ -335,16 +428,32 @@ class ParallelCLBPacker
                 numMuxes = anotherPackingCLBCluster->getNumMuxes();
             }
 
+            /**
+             * @brief Get the Id of the PackingCLBCluster (just for debug information don't use it in algorithm)
+             *
+             * @return int
+             */
             inline int getId() const
             {
                 return id;
             }
 
+            /**
+             * @brief refresh the Id of the PackingCLBCluster so we can know it is changed.
+             *
+             */
             inline void refreshId()
             {
                 id = random();
             }
 
+            /**
+             * @brief check how many input pins will be needed if the two LUTs are packed.
+             *
+             * @param LUTA
+             * @param LUTB
+             * @return unsigned int
+             */
             inline unsigned int getPairPinNum(DesignInfo::DesignCell *LUTA, DesignInfo::DesignCell *LUTB)
             {
                 if (LUTA->getInputPins().size() == 6 || LUTB->getInputPins().size() == 6 || LUTA->isLUT6() ||
@@ -389,17 +498,99 @@ class ParallelCLBPacker
                 return totalPin;
             }
 
+            /**
+             * @brief conduct maximun cardinality matching algorithm to pair LUTs
+             *
+             * @param verbose
+             */
             void maxCardinalityMatching(bool verbose = false);
 
+            /**
+             * @brief Get the number of pins within this site for a given net (more pins are located in ont site will
+             * reduce the demand of routing resource)
+             *
+             * @param curNet a given net
+             * @return int
+             */
             int getInternalPinsNum(PlacementInfo::PlacementNet *curNet);
+
+            /**
+             * @brief check whether a control set can be placed in a given half CLB
+             *
+             * Since in current architecture, FFs are packed in half CLBs in the site. The control sets of half CLB
+             * pairs should be compatible.
+             *
+             * @param CSPtr a given control set pointer
+             * @param anotherHalfCLB the other one half CLB id in this half CLB pair
+             * @return true if the control set can be placed in the given half CLB
+             * @return false if the control set CANNOT be placed in the given half CLB
+             */
             bool compatibleInOneHalfCLB(DesignInfo::ControlSetInfo *CSPtr, int anotherHalfCLB);
+
+            /**
+             * @brief try to add a given LUT into this cluster
+             *
+             * @param curLUT a given LUT
+             * @return true if this attempt is successful
+             * @return false if this attempt FAILED.
+             */
             bool addLUT(DesignInfo::DesignCell *curLUT);
 
+            /**
+             * @brief try to add a given FF into a specific half CLB in this cluster
+             *
+             * @param curFF a given FF
+             * @param halfCLB the target half CLB id in this cluster
+             * @return true if this attempt is successful
+             * @return false if this attempt FAILED.
+             */
             bool addToFFSet(DesignInfo::DesignCell *curFF, int halfCLB);
+
+            /**
+             * @brief  try to add a given list of FFs  into a specific half CLB in this cluster
+             *
+             * @param curFFs a given list of FFs
+             * @param halfCLB the target half CLB id in this cluster
+             * @return true if this attempt is successful
+             * @return false if this attempt FAILED.
+             */
             bool addToFFSet(std::vector<DesignInfo::DesignCell *> curFFs, int halfCLB);
+
+            /**
+             * @brief try to add a given FF into this cluster
+             *
+             * @param curFF a given FF
+             * @param enforceHalfCLB (default -1/no limit) limit the candidate half CLB id for this FF
+             * @param enforceMainFFSlot (default false) constaint that the FF can be only placed in the main half CLB
+             * (the one connected to LUT6 output pins in the CLB site). There are two types of half CLBs, we call those
+             * connected to LUT6 output pins "main half CLB slots" and those connected to LUT5 output pins "secondary
+             * half CLB slots". Some FFs (especially the virtual ones) should be mapped to the "main" ones.
+             * @return true if this attempt is successful
+             * @return false if this attempt FAILED.
+             */
             bool addFF(DesignInfo::DesignCell *curFF, int enforceHalfCLB = -1, bool enforceMainFFSlot = false);
+
+            /**
+             * @brief try to add a given list of FFs into this cluster
+             *
+             * @param curFFs  a given list of FFs
+             * @param enforceHalfCLB (default -1/no limit) limit the candidate half CLB id for this FF
+             * @param enforceMainFFSlot (default false) constaint that the FF can be only placed in the main half CLB
+             * (the one connected to LUT6 output pins in the CLB site). There are two types of half CLBs, we call those
+             * connected to LUT6 output pins "main half CLB slots" and those connected to LUT5 output pins "secondary
+             * half CLB slots". Some FFs (especially the virtual ones) should be mapped to the "main" ones.
+             * @param isMuxMacro
+             * @return true if this attempt is successful
+             * @return false if this attempt FAILED.
+             */
             bool addFFGroup(std::vector<DesignInfo::DesignCell *> curFFs, int enforceHalfCLB, bool enforceMainFFSlot,
                             bool isMuxMacro);
+
+            /**
+             * @brief remove a specific LUT from this candidate cluster
+             *
+             * @param curLUT a given LUT
+             */
             void removeLUT(DesignInfo::DesignCell *curLUT)
             {
                 if (singleLUTs.find(curLUT) != singleLUTs.end())
@@ -425,6 +616,11 @@ class ParallelCLBPacker
                 assert(false && "should be erased successfully");
             }
 
+            /**
+             * @brief remove a specific FF from this candidate cluster
+             *
+             * @param curFF  a given FF
+             */
             void removeFF(DesignInfo::DesignCell *curFF)
             {
                 unsigned int i = -1;
@@ -444,6 +640,12 @@ class ParallelCLBPacker
                 assert(false && "should not reach here");
             }
 
+            /**
+             * @brief remove some PlacementInfo::PlacementUnit from the cluster for later determined cluster
+             * construction of this site
+             *
+             * @param tmpPU a given PlacementInfo::PlacementUnit to be removed
+             */
             void removePUToConstructDetCluster(PlacementInfo::PlacementUnit *tmpPU)
             {
                 assert(PUs.find(tmpPU) != PUs.end());
@@ -487,11 +689,6 @@ class ParallelCLBPacker
                 hashed = false;
             }
 
-            // the addPU implemented is based on the following paper's Algorithm 1:
-            // G. Chen et al., “RippleFPGA: Routability-Driven Simultaneous Packing and Placement for Modern FPGAs,”
-            // IEEE Trans. Comput.-Aided Des. Integr. Circuits Syst., vol. 37, no. 10, pp. 2022–2035,
-            //  Oct. 2018, doi: 10.1109/TCAD.2017.2778058.
-
             inline bool canPUInSite(PlacementInfo::PlacementUnit *tmpPU)
             {
                 if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
@@ -505,8 +702,29 @@ class ParallelCLBPacker
                 return true;
             }
 
+            /**
+             * @brief  try to add a given PlacementUnit into this cluster
+             *
+             * the addPU implemented is based on the following paper's Algorithm 1:
+             * G. Chen et al., “RippleFPGA: Routability-Driven Simultaneous Packing and Placement for Modern FPGAs,”
+             * IEEE Trans. Comput.-Aided Des. Integr. Circuits Syst., vol. 37, no. 10, pp. 2022–2035,
+             * Oct. 2018, doi: 10.1109/TCAD.2017.2778058.
+             *
+             * @param tmpPU a given PlacementUnit
+             * @param allowOverlap whether it is successful if there is
+             * @return true if this attempt is successful
+             * @return false if this attempt FAILED.
+             */
             bool addPU(PlacementInfo::PlacementUnit *tmpPU, bool allowOverlap = false);
 
+            /**
+             * @brief without modifying the original cluster container, try to add a given PlacementUnit into this
+             * cluster
+             *
+             * @param tmpPU a given PlacementUnit
+             * @return true if this attempt is successful
+             * @return false if this attempt FAILED.
+             */
             inline bool tryAddPU(PlacementInfo::PlacementUnit *tmpPU)
             {
                 PackingCLBCluster *fakeCluster = new PackingCLBCluster(this);
@@ -526,8 +744,20 @@ class ParallelCLBPacker
                 }
             }
 
+            /**
+             * @brief find/print the reason why the PlacementUnit fails to be added into this cluster
+             *
+             * @param tmpPU a given PlacementUnit
+             */
             void addPUFailReason(PlacementInfo::PlacementUnit *tmpPU);
 
+            /**
+             * @brief check whether the cluster contains a specific PlacementUnit
+             *
+             * @param tmpPU  a given PlacementUnit
+             * @return true if this attempt is successful
+             * @return false if this attempt FAILED.
+             */
             inline bool contains(PlacementInfo::PlacementUnit *tmpPU)
             {
                 return PUs.find(tmpPU) != PUs.end();
@@ -1091,6 +1321,12 @@ class ParallelCLBPacker
             return CARRYChainSiteOffset;
         }
 
+        /**
+         * @brief SiteBELMapping is a contain recording the mapping between cells and BELs.
+         *
+         * We hold the cell information in arrays of slots.
+         *
+         */
         class SiteBELMapping
         {
           public:
