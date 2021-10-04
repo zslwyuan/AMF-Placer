@@ -1,7 +1,7 @@
 <map id="ParallelCLBPacker::PackingCLBSite::addCarry" name="ParallelCLBPacker::PackingCLBSite::addCarry">
 <area shape="rect" id="node1" title=" " alt="" coords="5,520,180,561"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a06dea9d3c7967a6980094b6ea47e69fc" title=" " alt="" coords="228,49,467,105"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77" title=" " alt="" coords="228,129,467,185"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a06dea9d3c7967a6980094b6ea47e69fc" title="try to add a given FF into this cluster" alt="" coords="228,49,467,105"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77" title="try to add a given LUT into this cluster" alt="" coords="228,129,467,185"/>
 <area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title=" " alt="" coords="228,382,467,438"/>
 <area shape="rect" id="node13" href="$class_design_info_1_1_control_set_info.html#a9d63556d73079d3e896bf113ca8890ce" title=" " alt="" coords="261,461,434,503"/>
 <area shape="rect" id="node15" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title=" " alt="" coords="253,527,442,554"/>

@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::PackedControlSet::addFF" name="ParallelCLBPacker::PackedControlSet::addFF">
-<area shape="rect" id="node1" title=" " alt="" coords="5,201,176,243"/>
+<area shape="rect" id="node1" title="add a FF into this PackedControlSet and check the compatibility" alt="" coords="5,201,176,243"/>
 <area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#a3d028516589b1287becddb334b855acd" title=" " alt="" coords="224,5,397,47"/>
 <area shape="rect" id="node3" href="$class_design_info_1_1_control_set_info.html#af55d057f36efe3afa866041dd0143a67" title=" " alt="" coords="224,71,397,112"/>
 <area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a454e602731e3da9d6bc22cc217234ecd" title="Get the Control Set Info object of this cell." alt="" coords="235,136,387,177"/>

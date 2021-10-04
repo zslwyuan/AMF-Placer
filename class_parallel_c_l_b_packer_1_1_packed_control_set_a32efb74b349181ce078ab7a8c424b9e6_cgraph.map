@@ -1,10 +1,10 @@
 <map id="ParallelCLBPacker::PackedControlSet::PackedControlSet" name="ParallelCLBPacker::PackedControlSet::PackedControlSet">
-<area shape="rect" id="node1" title=" " alt="" coords="5,201,244,243"/>
+<area shape="rect" id="node1" title="Construct a new Packed Control Set object by cloning another one." alt="" coords="5,201,244,243"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a725575771bb92703a6cb486e4bc21cc3" title=" " alt="" coords="305,5,473,47"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a9cfd0e1c87ac5d7351d9ec846c499faa" title=" " alt="" coords="301,71,478,112"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#aa417fb26689759eae296708aa10d006f" title=" " alt="" coords="299,136,479,177"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#ae7126cc60cd0bd2d7a8ce6f8dffa6dc6" title=" " alt="" coords="302,201,477,243"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#aa417fb26689759eae296708aa10d006f" title="get the control set id of this PackedControlSet." alt="" coords="299,136,479,177"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#ae7126cc60cd0bd2d7a8ce6f8dffa6dc6" title="get the FFs in this PackedControlSet" alt="" coords="302,201,477,243"/>
 <area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a3ec9b398d28976d341524169d64a56eb" title=" " alt="" coords="292,267,487,308"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a8c2c1603ef89d0a18da0fb01ae26a090" title=" " alt="" coords="301,332,477,373"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a8c2c1603ef89d0a18da0fb01ae26a090" title="Get the the number of FFs in this control set." alt="" coords="301,332,477,373"/>
 <area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a0574d4f83c1de2366be7c82dd050852d" title=" " alt="" coords="305,397,474,439"/>
 </map>

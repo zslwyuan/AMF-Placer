@@ -1,4 +1,4 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,244,61"/>
+<area shape="rect" id="node1" title="Get the number of pins within this site for a given net (more pins are located in ont site will reduc..." alt="" coords="5,5,244,61"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="292,13,467,54"/>
 </map>

@@ -2,8 +2,8 @@
 <area shape="rect" id="node1" title="Get the Control Set Info object of this cell." alt="" coords="1203,104,1355,145"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="948,5,1123,47"/>
 <area shape="rect" id="node8" href="$class_initial_packer_1_1_packed_control_set.html#a28210c1c8b699373c703fb8ef3b8aadf" title=" " alt="" coords="943,71,1128,112"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#abc899d2c065e4647150b3b8c7a362ea3" title=" " alt="" coords="950,136,1121,177"/>
-<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title=" " alt="" coords="916,201,1155,257"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#abc899d2c065e4647150b3b8c7a362ea3" title="add a FF into this PackedControlSet and check the compatibility" alt="" coords="950,136,1121,177"/>
+<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title="try to add a given FF into a specific half CLB in this cluster" alt="" coords="916,201,1155,257"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,5,868,47"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,5,681,47"/>
 <area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,5,489,47"/>

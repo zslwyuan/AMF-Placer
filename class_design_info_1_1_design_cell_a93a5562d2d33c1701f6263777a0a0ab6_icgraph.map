@@ -1,6 +1,6 @@
 <map id="DesignInfo::DesignCell::getCellId" name="DesignInfo::DesignCell::getCellId">
 <area shape="rect" id="node1" title="Get the Cell Id in the cell list." alt="" coords="1443,514,1595,555"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77" title=" " alt="" coords="1143,5,1382,61"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77" title="try to add a given LUT into this cluster" alt="" coords="1143,5,1382,61"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="836,93,1083,134"/>
 <area shape="rect" id="node7" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="304,347,460,389"/>
 <area shape="rect" id="node8" href="$class_macro_legalizer.html#ad3d60bfec68dc4badcf933d793b4d1f9" title="find candidate sites for the cells left to be matched" alt="" coords="296,478,468,519"/>

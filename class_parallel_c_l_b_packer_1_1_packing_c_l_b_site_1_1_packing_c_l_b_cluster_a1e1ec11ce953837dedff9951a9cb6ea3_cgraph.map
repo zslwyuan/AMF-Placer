@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::removePUToConstructDetCluster" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::removePUToConstructDetCluster">
-<area shape="rect" id="node1" title=" " alt="" coords="5,45,244,101"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a799e40dbaef496514a61a1c7a9005833" title=" " alt="" coords="292,5,531,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a46d1fdefa1a396c3762d1c1b679c6f8c" title=" " alt="" coords="292,85,531,141"/>
+<area shape="rect" id="node1" title="remove some PlacementInfo::PlacementUnit from the cluster for later determined cluster construction o..." alt="" coords="5,45,244,101"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a799e40dbaef496514a61a1c7a9005833" title="remove a specific FF from this candidate cluster" alt="" coords="292,5,531,61"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a46d1fdefa1a396c3762d1c1b679c6f8c" title="remove a specific LUT from this candidate cluster" alt="" coords="292,85,531,141"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="DesignInfo::DesignCell::getOriCellType" name="DesignInfo::DesignCell::getOriCellType">
 <area shape="rect" id="node1" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="1272,215,1424,256"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="1017,5,1192,47"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#abc899d2c065e4647150b3b8c7a362ea3" title=" " alt="" coords="1019,71,1190,112"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title=" " alt="" coords="985,135,1224,191"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#abc899d2c065e4647150b3b8c7a362ea3" title="add a FF into this PackedControlSet and check the compatibility" alt="" coords="1019,71,1190,112"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title="try to add a given FF into a specific half CLB in this cluster" alt="" coords="985,135,1224,191"/>
 <area shape="rect" id="node10" href="$class_design_info_1_1_control_set_info.html#a0eb02bd55a5389a9348a8a682e6ed4d4" title="check if a FF is compatible with the control set" alt="" coords="1018,215,1191,256"/>
 <area shape="rect" id="node11" href="$_parallel_c_l_b_packer_8cc.html#a982f039565b9c69197d92d1617d102c9" title=" " alt="" coords="1063,281,1146,307"/>
 <area shape="rect" id="node15" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="1005,332,1204,373"/>

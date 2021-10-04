@@ -1,8 +1,8 @@
 <map id="DesignInfo::FFSRCompatible" name="DesignInfo::FFSRCompatible">
 <area shape="rect" id="node1" title=" " alt="" coords="1203,125,1392,151"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="948,5,1123,47"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title=" " alt="" coords="916,70,1155,126"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af8dcd7a3ac09c009bc31922fe2708aea" title=" " alt="" coords="916,150,1155,206"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title="try to add a given FF into a specific half CLB in this cluster" alt="" coords="916,70,1155,126"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af8dcd7a3ac09c009bc31922fe2708aea" title="check whether a control set can be placed in a given half CLB" alt="" coords="916,150,1155,206"/>
 <area shape="rect" id="node10" href="$class_design_info_1_1_control_set_info.html#a0eb02bd55a5389a9348a8a682e6ed4d4" title="check if a FF is compatible with the control set" alt="" coords="949,229,1122,271"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,5,868,47"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,5,681,47"/>
