@@ -15,7 +15,7 @@
 <area shape="rect" id="node41" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title=" " alt="" coords="197,354,435,410"/>
 <area shape="rect" id="node42" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a2200e5bc5ed226961baf26200359e72b" title=" " alt="" coords="197,1599,435,1655"/>
 <area shape="rect" id="node43" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a6e3b592eb8884c221226e78f353a90fa" title=" " alt="" coords="197,1679,435,1735"/>
-<area shape="rect" id="node44" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aac2af3cf4994099914200ba3ef16ba01" title=" " alt="" coords="197,1759,435,1815"/>
+<area shape="rect" id="node44" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aac2af3cf4994099914200ba3ef16ba01" title="Get the score if this cluster is mapped the site." alt="" coords="197,1759,435,1815"/>
 <area shape="rect" id="node45" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a801d7aa80e88d917d3b1ccefb32a98c3" title=" " alt="" coords="488,146,727,202"/>
 <area shape="rect" id="node46" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5ab99d8ecade11393b60d634eb44ffee" title=" " alt="" coords="212,1839,420,1895"/>
 <area shape="rect" id="node47" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="197,1166,435,1222"/>
@@ -46,7 +46,7 @@
 <area shape="rect" id="node37" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="521,1668,693,1695"/>
 <area shape="rect" id="node38" href="$class_placement_info_1_1_placement_bin_info.html#a33cbef70955f92b34e9fcf4b1cd435e9" title="Get the shortest Manhattan distance from the bin to a specific location." alt="" coords="500,1720,715,1761"/>
 <area shape="rect" id="node39" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="517,1485,698,1526"/>
-<area shape="rect" id="node48" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#afa82b0d5204297d0d25ee8a1e8bc608b" title=" " alt="" coords="488,1246,727,1302"/>
-<area shape="rect" id="node49" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af848a103caf3e766d3b1da6690ad8e65" title=" " alt="" coords="488,1326,727,1382"/>
+<area shape="rect" id="node48" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#afa82b0d5204297d0d25ee8a1e8bc608b" title="Get the set of the paired LUTs." alt="" coords="488,1246,727,1302"/>
+<area shape="rect" id="node49" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af848a103caf3e766d3b1da6690ad8e65" title="Get the set of single LUTs in this cluster (some other LUTs have been paired for packing)" alt="" coords="488,1326,727,1382"/>
 <area shape="rect" id="node50" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ada3d97286321e70af77d9ce5b6bd2cba" title="Construct a new Packing CLB Cluster object (it should not be called.)" alt="" coords="488,1406,727,1462"/>
 </map>

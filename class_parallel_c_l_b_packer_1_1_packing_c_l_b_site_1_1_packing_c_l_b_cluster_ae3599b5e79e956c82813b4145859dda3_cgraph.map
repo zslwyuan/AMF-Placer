@@ -1,0 +1,5 @@
+<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::isPUTypeCompatibleWithSiteType" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::isPUTypeCompatibleWithSiteType">
+<area shape="rect" id="node1" title="check whether the type of the given PlacementUnit is compatible with the site type" alt="" coords="5,31,244,87"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abe4be1f7465d7c4be7730df39bc0aa01" title=" " alt="" coords="292,5,483,47"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#ab91d27e474cd9c6638cde2fdd6bb1988" title=" " alt="" coords="311,71,464,112"/>
+</map>
