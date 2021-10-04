@@ -689,7 +689,14 @@ class ParallelCLBPacker
                 hashed = false;
             }
 
-            inline bool canPUInSite(PlacementInfo::PlacementUnit *tmpPU)
+            /**
+             * @brief check whether the type of the given PlacementUnit is compatible with the site type
+             *
+             * @param tmpPU a given PlacementUnit
+             * @return true the PU is compatible with the siet
+             * @return false the PU is NOT compatible with the siet
+             */
+            inline bool isPUTypeCompatibleWithSiteType(PlacementInfo::PlacementUnit *tmpPU)
             {
                 if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
                 {
@@ -773,17 +780,34 @@ class ParallelCLBPacker
                 return FFControlSets;
             }
 
+            /**
+             * @brief Get the set of single LUTs in this cluster (some other LUTs have been paired for packing)
+             *
+             * @return const std::set<DesignInfo::DesignCell *>&
+             */
             inline const std::set<DesignInfo::DesignCell *> &getSingleLUTs() const
             {
                 return singleLUTs;
             }
 
+            /**
+             * @brief remove a single LUT from the set of single LUTs in this cluster
+             *
+             * @param tmpLUT a given single LUT
+             */
             inline void removeSingleLUT(DesignInfo::DesignCell *tmpLUT)
             {
                 assert(singleLUTs.find(tmpLUT) != singleLUTs.end());
                 singleLUTs.erase(tmpLUT);
             }
 
+            /**
+             * @brief try to remove a single LUT from the single LUT set
+             *
+             * @param tmpLUT a given LUT
+             * @return true if the given LUT is found in the cluster set and can be removed
+             * @return false  if the given LUT is NOT found in the cluster set
+             */
             inline bool tryRemoveSingleLUT(DesignInfo::DesignCell *tmpLUT)
             {
                 if (singleLUTs.find(tmpLUT) != singleLUTs.end())
@@ -797,6 +821,13 @@ class ParallelCLBPacker
                 }
             }
 
+            /**
+             * @brief  try to remove a LUT from the set of paired LUTs
+             *
+             * @param tmpLUT a given LUT
+             * @return true if the given LUT is found in the set of paired LUTs and can be removed
+             * @return false  if the given LUT is NOT found in the set of paired LUTs
+             */
             inline bool tryRemoveSingleLUTFromPairs(DesignInfo::DesignCell *tmpLUT)
             {
                 for (auto pair : pairedLUTs)
@@ -817,6 +848,14 @@ class ParallelCLBPacker
                 return false;
             }
 
+            /**
+             * @brief   try to remove a pair of LUTs from the set of paired LUTs
+             *
+             * @param tmpLUTA a LUT in the pair
+             * @param tmpLUTB another LUT in the pair
+             * @return true if the given LUTs are found in the set of paired LUTs and can be removed
+             * @return false  if the given LUTs are NOT found in the set of paired LUTs
+             */
             inline bool tryRemoveLUTPairFromPairs(DesignInfo::DesignCell *tmpLUTA, DesignInfo::DesignCell *tmpLUTB)
             {
                 for (auto pair : pairedLUTs)
@@ -837,13 +876,27 @@ class ParallelCLBPacker
                 return false;
             }
 
+            /**
+             * @brief Get the set of the paired LUTs
+             *
+             * @return const std::set<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>>&
+             */
             inline const std::set<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>> &getPairedLUTs() const
             {
                 return pairedLUTs;
             }
 
-            inline bool isValid(const std::vector<PackingCLBSite *> &PUId2PackingCLBSite,
-                                PackingCLBSite *parentPackingCLBSite)
+            /**
+             * @brief check whether all the PlacementUnit in this cluster are valid (not bound to other sites) for this
+             * site
+             *
+             * @param PUId2PackingCLBSite the mapping from PUs to sites
+             * @param parentPackingCLBSite the site for this cluster
+             * @return true if all the PUs can be mapped to this site
+             * @return false if some of the PUs CANNOT be mapped to this site
+             */
+            inline bool areAllPUsValidForThisSite(const std::vector<PackingCLBSite *> &PUId2PackingCLBSite,
+                                                  PackingCLBSite *parentPackingCLBSite)
             {
                 for (auto tmpPU : PUs)
                 {
@@ -858,6 +911,11 @@ class ParallelCLBPacker
                 return true;
             }
 
+            /**
+             * @brief Get the score if this cluster is mapped the site
+             *
+             * @return float
+             */
             inline float getScoreInSite() const
             {
                 return scoreInSite;

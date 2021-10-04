@@ -38,7 +38,7 @@ void ParallelCLBPacker::PackingCLBSite::removeInvalidClustersFromPQ()
     int validCnt = 0;
     for (unsigned int i = 0; i < priorityQueue.size(); i++)
     {
-        if (priorityQueue[i]->isValid(PUId2PackingCLBSite, this))
+        if (priorityQueue[i]->areAllPUsValidForThisSite(PUId2PackingCLBSite, this))
         {
             priorityQueue[validCnt] = priorityQueue[i];
             validCnt++;
@@ -269,7 +269,7 @@ void ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs()
             else
             {
                 if (tmpSeedCluster->getPUs().size() == 0 && !isCarrySite && !isLUTRAMSite &&
-                    (tmpSeedCluster->canPUInSite(tmpPU)))
+                    (tmpSeedCluster->isPUTypeCompatibleWithSiteType(tmpPU)))
                 {
                     PackingCLBCluster *tmpCluster = new PackingCLBCluster(tmpSeedCluster);
                     tmpCluster->addPUFailReason(tmpPU);
@@ -278,7 +278,7 @@ void ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs()
                     assert(false);
                 }
                 assert(tmpCluster->getPUs().size() || isCarrySite || isLUTRAMSite ||
-                       !(tmpSeedCluster->canPUInSite(tmpPU)));
+                       !(tmpSeedCluster->isPUTypeCompatibleWithSiteType(tmpPU)));
                 delete tmpCluster;
                 tmpCluster = nullptr;
             }
