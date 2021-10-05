@@ -40,9 +40,9 @@
 <area shape="rect" id="node34" href="$class_c_l_b_legalizer.html#aff846bcfd2560b9909f67fa18a3ac875" title=" " alt="" coords="487,719,663,746"/>
 <area shape="rect" id="node33" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="226,655,403,696"/>
 <area shape="rect" id="node35" href="$class_c_l_b_legalizer.html#a04625906b909dea6057a3829319804a6" title=" " alt="" coords="223,720,407,761"/>
-<area shape="rect" id="node37" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac68ac5008469db43c6c065b245614e8e" title=" " alt="" coords="732,783,971,839"/>
-<area shape="rect" id="node38" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a801d7aa80e88d917d3b1ccefb32a98c3" title=" " alt="" coords="732,863,971,919"/>
-<area shape="rect" id="node42" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title=" " alt="" coords="732,943,971,999"/>
+<area shape="rect" id="node37" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac68ac5008469db43c6c065b245614e8e" title="get the HPWL change if a given PlacementUnit is moved to this site" alt="" coords="732,783,971,839"/>
+<area shape="rect" id="node38" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a801d7aa80e88d917d3b1ccefb32a98c3" title="incrementally update the score of this cluster by considering that only a given PlacementUnit will be..." alt="" coords="732,863,971,919"/>
+<area shape="rect" id="node42" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="732,943,971,999"/>
 <area shape="rect" id="node39" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="465,871,684,927"/>
 <area shape="rect" id="node41" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="13,1003,157,1044"/>
 <area shape="rect" id="node43" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="487,1003,662,1044"/>

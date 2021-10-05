@@ -1,7 +1,7 @@
 <map id="ParallelCLBPacker::PackingCLBSite::addLUTRAMMacro" name="ParallelCLBPacker::PackingCLBSite::addLUTRAMMacro">
 <area shape="rect" id="node1" title=" " alt="" coords="5,217,241,259"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title=" " alt="" coords="289,142,528,198"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title=" " alt="" coords="289,250,528,306"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title="we use a hash function to encode the cluster to easily check duplicated clusters in the candidates" alt="" coords="289,142,528,198"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="289,250,528,306"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7839574b3af61d1ad3117aa547dfce05" title=" " alt="" coords="589,5,797,47"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afbbc37ecef88e17c27b70d9982272e81" title=" " alt="" coords="595,70,790,126"/>
 <area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="605,149,780,191"/>

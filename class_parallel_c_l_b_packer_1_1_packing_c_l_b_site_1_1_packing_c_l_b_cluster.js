@@ -24,7 +24,6 @@ var class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster
     [ "getHashConst", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a75684299d4ecc96e82d73ed5f6619cc8", null ],
     [ "getHPWLChange", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a549567b91064847697e25874915a7898", null ],
     [ "getHPWLChangeForPU", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac68ac5008469db43c6c065b245614e8e", null ],
-    [ "getHPWLWeight", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a8c2dfbbaa499c699aa53d20931b96b23", null ],
     [ "getId", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7d43d0dfd6005acb8e40327862cad90e", null ],
     [ "getInternalPinsNum", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1e52ba10076d2038e0afce8a3aa75e18", null ],
     [ "getNumMuxes", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a956bdd3562fa3d798d3e52ce0fe4052f", null ],

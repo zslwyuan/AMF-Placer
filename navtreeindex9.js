@@ -1,8 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"class_vivado_graph_util_1_1_vivado_pattern_cluster.html#abaf8f0e7593136000301192d239efbf8":[7,0,12,3,1],
-"class_vivado_graph_util_1_1_vivado_pattern_cluster.html#ad98cd67318590f4b8773351bce9316a6":[8,0,1,3,5],
-"class_vivado_graph_util_1_1_vivado_pattern_cluster.html#ad98cd67318590f4b8773351bce9316a6":[7,0,12,3,5],
 "class_vivado_graph_util_1_1_vivado_pattern_cluster.html#add8e1402dbafb4dc6547c20b0dad6626":[8,0,1,3,4],
 "class_vivado_graph_util_1_1_vivado_pattern_cluster.html#add8e1402dbafb4dc6547c20b0dad6626":[7,0,12,3,4],
 "class_vivado_graph_util_1_1_vivado_pattern_cluster.html#af82ad4a23eff7676b20dde6510087665":[7,0,12,3,3],
@@ -249,5 +246,8 @@ var NAVTREEINDEX9 =
 "get_pin_offset_8py.html#a7829c2efee86f91219e2f4a4ab0d0e41":[9,0,0,1,0,1,12],
 "get_pin_offset_8py.html#a80680b686a7734bcf89607f868924370":[9,0,0,1,0,1,16],
 "get_pin_offset_8py.html#a8b0b21a442621b5b29a5bc2d9f7b7ee9":[9,0,0,1,0,1,6],
-"get_pin_offset_8py.html#a90dd12b362227113e073aad5979f71ab":[9,0,0,1,0,1,11]
+"get_pin_offset_8py.html#a90dd12b362227113e073aad5979f71ab":[9,0,0,1,0,1,11],
+"get_pin_offset_8py.html#a97fd996168d3d60dbf9ebd0495f9faa2":[9,0,0,1,0,1,9],
+"get_pin_offset_8py.html#aa77349ad3d9741a5685ad0ae5f1a62a8":[9,0,0,1,0,1,8],
+"get_pin_offset_8py.html#ac302d709c86cda98036fead333dd586c":[9,0,0,1,0,1,3]
 };

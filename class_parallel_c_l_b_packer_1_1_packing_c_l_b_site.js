@@ -25,7 +25,6 @@ var class_parallel_c_l_b_packer_1_1_packing_c_l_b_site =
     [ "getDetScore", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a646f810a147d094bed73b0b4514e7937", null ],
     [ "getFixedPairedLUTs", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcdd43f7720bc22ee98b4f723f77ca12", null ],
     [ "getHPWLChangeForPU", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8f89087f0c845cf7da3ca7cddf9b8f07", null ],
-    [ "getHPWLWeight", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a99c595f58838033f8de7ab2bed266e7c", null ],
     [ "getLUTRAMMacro", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2e8820284a04ee0a7d615769f324970e", null ],
     [ "getNeighborPUs", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a168bbf1ef919eb2416a2a96af81b685b", null ],
     [ "getPlacementInfo", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad460b2959e4362540e884149090aa204", null ],

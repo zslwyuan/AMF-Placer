@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite">
-<area shape="rect" id="node1" title=" " alt="" coords="996,41,1235,97"/>
+<area shape="rect" id="node1" title="incrementally update the score of this cluster by considering that only a given PlacementUnit will be..." alt="" coords="996,41,1235,97"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="729,5,948,61"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="769,85,908,126"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,85,681,126"/>

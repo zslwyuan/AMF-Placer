@@ -1,8 +1,5 @@
 var NAVTREEINDEX10 =
 {
-"get_pin_offset_8py.html#a97fd996168d3d60dbf9ebd0495f9faa2":[9,0,0,1,0,1,9],
-"get_pin_offset_8py.html#aa77349ad3d9741a5685ad0ae5f1a62a8":[9,0,0,1,0,1,8],
-"get_pin_offset_8py.html#ac302d709c86cda98036fead333dd586c":[9,0,0,1,0,1,3],
 "get_pin_offset_8py.html#ad3aa47a9dbe7f11711254de13698f8c7":[9,0,0,1,0,1,15],
 "get_pin_offset_8py.html#ada89fe6e87f76ab2906d7223037901dc":[9,0,0,1,0,1,1],
 "get_pin_offset_8py.html#ae2ae8d6684d75f4a6f83efbdcab832e6":[9,0,0,1,0,1,14],
@@ -249,5 +246,8 @@ var NAVTREEINDEX10 =
 "namespacepainter.html#a65c4e509f713ddf06afdd272cd4fd3dc":[7,0,8,14],
 "namespacepainter.html#a66d3622443e651dddff86b3d09bacfd7":[7,0,8,3],
 "namespacepainter.html#a89e6fac1a81c30e5ce88ae8e11c68622":[7,0,8,2],
-"namespacepainter.html#a8b07eb22f4a4366254c3ea670e0f5855":[7,0,8,11]
+"namespacepainter.html#a8b07eb22f4a4366254c3ea670e0f5855":[7,0,8,11],
+"namespacepainter.html#a8ba6aac493a172abdbbdc47c6ef0a50c":[7,0,8,16],
+"namespacepainter.html#a928334fbc6131fb1b33d8d6ba2859940":[7,0,8,12],
+"namespacepainter.html#a97948c97e538124cb5a0ccf13d7b0755":[7,0,8,15]
 };

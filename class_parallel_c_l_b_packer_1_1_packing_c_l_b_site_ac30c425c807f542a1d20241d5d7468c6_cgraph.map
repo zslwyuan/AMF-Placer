@@ -2,15 +2,15 @@
 <area shape="rect" id="node1" title=" " alt="" coords="5,520,180,561"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a06dea9d3c7967a6980094b6ea47e69fc" title="try to add a given FF into this cluster" alt="" coords="228,49,467,105"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77" title="try to add a given LUT into this cluster" alt="" coords="228,129,467,185"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title=" " alt="" coords="228,382,467,438"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title="we use a hash function to encode the cluster to easily check duplicated clusters in the candidates" alt="" coords="228,382,467,438"/>
 <area shape="rect" id="node13" href="$class_design_info_1_1_control_set_info.html#a9d63556d73079d3e896bf113ca8890ce" title=" " alt="" coords="261,461,434,503"/>
 <area shape="rect" id="node15" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title=" " alt="" coords="253,527,442,554"/>
 <area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a454e602731e3da9d6bc22cc217234ecd" title="Get the Control Set Info object of this cell." alt="" coords="271,579,423,620"/>
 <area shape="rect" id="node17" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ae113a0ab512bbd61cee586c6383f3c83" title=" " alt="" coords="228,643,467,699"/>
 <area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="271,723,423,764"/>
 <area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="271,788,423,829"/>
-<area shape="rect" id="node20" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a592c0413656822af69c9273b9597dc05" title=" " alt="" coords="228,274,467,330"/>
-<area shape="rect" id="node23" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title=" " alt="" coords="228,853,467,909"/>
+<area shape="rect" id="node20" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a592c0413656822af69c9273b9597dc05" title="a API to print the information of cluster" alt="" coords="228,274,467,330"/>
+<area shape="rect" id="node23" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="228,853,467,909"/>
 <area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="555,5,707,47"/>
 <area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="555,71,707,112"/>
 <area shape="rect" id="node7" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="555,136,707,177"/>
