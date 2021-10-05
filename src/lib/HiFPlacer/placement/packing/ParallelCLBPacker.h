@@ -405,7 +405,6 @@ class ParallelCLBPacker
                 FFControlSets.resize(4);
                 singleLUTs.clear();
                 pairedLUTs.clear();
-                HPWLWeight = parentPackingCLB->getHPWLWeight();
                 // nets.clear();
             }
             ~PackingCLBCluster(){};
@@ -424,7 +423,6 @@ class ParallelCLBPacker
                 totalConnectivityScore = anotherPackingCLBCluster->getTotalConnectivityScore();
                 totalCellNum = anotherPackingCLBCluster->getTotalCellNum();
                 totalLen = anotherPackingCLBCluster->getTotalLen();
-                HPWLWeight = anotherPackingCLBCluster->getHPWLWeight();
                 numMuxes = anotherPackingCLBCluster->getNumMuxes();
             }
 
@@ -921,15 +919,34 @@ class ParallelCLBPacker
                 return scoreInSite;
             }
 
+            /**
+             * @brief update the score of this cluster by considering HPWL, interconnection density, timing and etc
+             *
+             */
             void updateScoreInSite();
 
+            /**
+             * @brief incrementally update the score of this cluster by considering that only a given PlacementUnit will
+             * be added into this cluster
+             *
+             * @param tmpPU a given PlacementUnit
+             */
             void incrementalUpdateScoreInSite(PlacementInfo::PlacementUnit *tmpPU);
 
+            /**
+             * @brief Get the Parent Packing CLB site of this cluster (this can be used to get more device information)
+             *
+             * @return PackingCLBSite*
+             */
             inline PackingCLBSite *getParentPackingCLB() const
             {
                 return parentPackingCLB;
             }
 
+            /**
+             * @brief we use a hash function to encode the cluster to easily check duplicated clusters in the candidates
+             *
+             */
             void clusterHash()
             {
                 hashId = PUs.size();
@@ -968,6 +985,13 @@ class ParallelCLBPacker
                 hashed = true;
             }
 
+            /**
+             * @brief incrementally update the hash function with an additional PlacementUnit. This hash will be used to
+             * encode the cluster to easily check duplicated clusters in the candidates
+             *
+             * @param tmpPU
+             * @return int
+             */
             inline int clusterHashWithAdditionalPU(PlacementInfo::PlacementUnit *tmpPU)
             {
 
@@ -993,6 +1017,11 @@ class ParallelCLBPacker
                 return clusterHashId;
             }
 
+            /**
+             * @brief Get the hash code for this cluster
+             *
+             * @return int
+             */
             inline int getHash()
             {
                 if (!hashed)
@@ -1000,6 +1029,11 @@ class ParallelCLBPacker
                 return hashId;
             }
 
+            /**
+             * @brief Get the hash code of this cluster without changing the class variables of this cluster
+             *
+             * @return int
+             */
             inline int getHashConst() const
             {
                 int hashId = 0;
@@ -1023,31 +1057,73 @@ class ParallelCLBPacker
                 return hashId;
             }
 
+            /**
+             * @brief get the HPWL change if a given PlacementUnit is moved to this site
+             *
+             * @param tmpPU a given PlacementUnit
+             * @return float
+             */
             inline float getHPWLChangeForPU(PlacementInfo::PlacementUnit *tmpPU)
             {
                 return parentPackingCLB->getHPWLChangeForPU(tmpPU);
             }
 
+            /**
+             * @brief Get the connectivity term in the cluster score object
+             *
+             * @return float
+             */
             inline float getTotalConnectivityScore() const
             {
                 return totalConnectivityScore;
             }
+
+            /**
+             * @brief Get the HWPL change term in the cluster score object
+             *
+             * @return float
+             */
             inline float getHPWLChange() const
             {
                 return HPWLChange;
             }
+
+            /**
+             * @brief Get the total number of cells in this cluster
+             *
+             * @return int
+             */
             inline int getTotalCellNum() const
             {
                 return totalCellNum;
             }
+
+            /**
+             * @brief Get the total number of MUX cells in this cluster
+             *
+             * @return int
+             */
             inline int getNumMuxes() const
             {
                 return numMuxes;
             }
+
+            /**
+             * @brief Get the maximum length of the paths which involve this cluster
+             *
+             * @return int
+             */
             inline int getTotalLen() const
             {
                 return totalLen;
             }
+
+            /**
+             * @brief Get the total weights of cells in the cluster (each cell will have different weight in the
+             * placement)
+             *
+             * @return float
+             */
             inline float getTotalCellWeight() const
             {
                 float totalCellWeight = 0;
@@ -1073,11 +1149,14 @@ class ParallelCLBPacker
                 }
                 return totalCellWeight;
             }
-            inline float getHPWLWeight() const
-            {
-                return HPWLWeight;
-            }
 
+            /**
+             * @brief check whether the cluster contains a specific FF cell
+             *
+             * @param curFF a given FF cell
+             * @return true if the cluster contains a specific FF cell
+             * @return false if the cluster DOES NOT contain a specific FF cell
+             */
             inline bool containFF(DesignInfo::DesignCell *curFF)
             {
                 for (unsigned int i = 0; i < FFControlSets.size(); i++)
@@ -1088,6 +1167,10 @@ class ParallelCLBPacker
                 return false;
             }
 
+            /**
+             * @brief a API to print the information of cluster
+             *
+             */
             void printMyself();
 
             bool checkCellCorrectness(PlacementInfo::PlacementUnit *tmpPU, bool isAddPU);
@@ -1260,11 +1343,6 @@ class ParallelCLBPacker
                 changeHPWL += newHPWL - oriHPWL;
             }
             return changeHPWL;
-        }
-
-        inline float getHPWLWeight() const
-        {
-            return HPWLWeight;
         }
 
         inline void setDebug()
@@ -1607,7 +1685,6 @@ class ParallelCLBPacker
     int PQSize;
     float HPWLWeight;
     std::string packerName;
-    bool incrementalPacking;
 
     int DumpCLBPackingCnt = 0;
 

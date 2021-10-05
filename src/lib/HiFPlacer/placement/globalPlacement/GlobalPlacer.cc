@@ -419,7 +419,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
             return;
     }
 
-    if ((BRAMDSPLegalizer->getAverageDisplacementOfRoughLegalization() > 1.5 && progressRatio < 0.9 &&
+    if ((BRAMDSPLegalizer->getAverageDisplacementOfRoughLegalization() > 3 && progressRatio < 0.9 &&
          curIteration < 10) &&
         !macroLocked && !macrosBindedToSites && !directMacroLegalize)
     {
@@ -452,7 +452,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
         mCLBLegalizer->setIntitialParameters(20.0, 20, 2);
         CARRYMacroLegalizer->setIntitialParameters((float)2.0, 3, 2);
 
-        if (((averageMacroLegalDisplacement > 1 || averageMCLBLegalDisplacement > 2 ||
+        if (((averageMacroLegalDisplacement > 1 || averageMCLBLegalDisplacement > 3 ||
               averageCarryLegalDisplacement > 2)) ||
             !macroCloseToSite)
         {
@@ -473,33 +473,23 @@ void GlobalPlacer::macroLegalize(int curIteration)
             else
             {
                 macroCloseToSite = true;
+
                 if (averageMacroLegalDisplacement > 1)
-                {
-                    if (averageCarryLegalDisplacement > 2)
-                    {
-                        if (curIteration % 2 == 0 || averageCarryLegalDisplacement > 5000)
-                        {
-                            CARRYMacroLegalizer->resetSitesMapped();
-                        }
-                    }
-                    print_status("mCLBLegalizer: Launch.");
-                    mCLBLegalizer->resetSitesMapped();
-                    mCLBLegalizer->legalize(true);
-                    macroCloseToSite = false;
-                }
-                if (averageMCLBLegalDisplacement > 2)
                 {
                     print_status("BRAMDSPLegalizer: Launch.");
                     BRAMDSPLegalizer->resetSitesMapped();
                     BRAMDSPLegalizer->legalize(true, directMacroLegalize);
                     macroCloseToSite = false;
                 }
-                if (averageCarryLegalDisplacement > 2)
+                if (averageCarryLegalDisplacement > 2 || averageMCLBLegalDisplacement > 3)
                 {
                     if (curIteration % 2 == 0 || averageCarryLegalDisplacement > 5000)
                     {
-                        print_status("CARRYMacroLegalizer: Launch.");
+                        mCLBLegalizer->resetSitesMapped();
                         CARRYMacroLegalizer->resetSitesMapped();
+                        print_status("mCLBLegalizer: Launch.");
+                        mCLBLegalizer->legalize(true);
+                        print_status("CARRYMacroLegalizer: Launch.");
                         CARRYMacroLegalizer->legalize(true, directMacroLegalize);
                     }
                     macroCloseToSite = false;

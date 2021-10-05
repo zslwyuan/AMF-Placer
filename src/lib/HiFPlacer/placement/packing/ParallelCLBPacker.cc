@@ -272,7 +272,7 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
     print_status("ParallelCLBPacker: finish iterative packing");
     if (doExceptionHandling)
     {
-        assert(!incrementalPacking && "for incremental packing, it is not worthy to do exception handling");
+        // assert(!incrementalPacking && "for incremental packing, it is not worthy to do exception handling");
         exceptionHandling(true);
         for (auto tmpPackingSite : packingSites)
         {
