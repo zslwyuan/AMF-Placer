@@ -1,5 +1,13 @@
 var NAVTREEINDEX11 =
 {
+"namespacepainter.html#a4e51645b6e915ae799215c5a7ab584d8":[7,0,8,8],
+"namespacepainter.html#a65c4e509f713ddf06afdd272cd4fd3dc":[7,0,8,14],
+"namespacepainter.html#a66d3622443e651dddff86b3d09bacfd7":[7,0,8,3],
+"namespacepainter.html#a89e6fac1a81c30e5ce88ae8e11c68622":[7,0,8,2],
+"namespacepainter.html#a8b07eb22f4a4366254c3ea670e0f5855":[7,0,8,11],
+"namespacepainter.html#a8ba6aac493a172abdbbdc47c6ef0a50c":[7,0,8,16],
+"namespacepainter.html#a928334fbc6131fb1b33d8d6ba2859940":[7,0,8,12],
+"namespacepainter.html#a97948c97e538124cb5a0ccf13d7b0755":[7,0,8,15],
 "namespacepainter.html#a9f7174d43dc48e336457c543000febcf":[7,0,8,7],
 "namespacepainter.html#aa52b3c1a42d3afc16a69cd64248f3009":[7,0,8,18],
 "namespacepainter.html#ab990944de133968211ae478cb3ee0e0e":[7,0,8,9],
@@ -241,13 +249,5 @@ var NAVTREEINDEX11 =
 "struct_q_p_solver_wrapper_1_1solver_data_type.html#a283fedf75f5f63c2e4ba3b97b9fa0f1f":[8,0,22,0,3],
 "struct_q_p_solver_wrapper_1_1solver_data_type.html#a7d969444553ea6f5fbe3048e0c42b31d":[8,0,22,0,0],
 "struct_q_p_solver_wrapper_1_1solver_data_type.html#aa2280935df9773f6850842d6d2fb0c5f":[8,0,22,0,4],
-"struct_q_p_solver_wrapper_1_1solver_data_type.html#ae1ebac50f91ac8bcbb18335c959269ab":[8,0,22,0,1],
-"struct_q_p_solver_wrapper_1_1solver_settings_type.html":[8,0,22,1],
-"struct_q_p_solver_wrapper_1_1solver_settings_type.html#a0b67b6d848e253ffa302e3911d00af76":[8,0,22,1,4],
-"struct_q_p_solver_wrapper_1_1solver_settings_type.html#a430d5258ec8a6994e525d504a18eb741":[8,0,22,1,7],
-"struct_q_p_solver_wrapper_1_1solver_settings_type.html#a4807330da1229f5c45a1fd52ca277af9":[8,0,22,1,1],
-"struct_q_p_solver_wrapper_1_1solver_settings_type.html#a4a64f59d195339b8ef0c19a362edba49":[8,0,22,1,6],
-"struct_q_p_solver_wrapper_1_1solver_settings_type.html#a6d6d7f2774e6986fef955585dc4f8504":[8,0,22,1,3],
-"struct_q_p_solver_wrapper_1_1solver_settings_type.html#ac4f9a060326b4c30e608725d9648d097":[8,0,22,1,0],
-"struct_q_p_solver_wrapper_1_1solver_settings_type.html#ac87087e39dc268a6eda586f527acf895":[8,0,22,1,5]
+"struct_q_p_solver_wrapper_1_1solver_data_type.html#ae1ebac50f91ac8bcbb18335c959269ab":[8,0,22,0,1]
 };

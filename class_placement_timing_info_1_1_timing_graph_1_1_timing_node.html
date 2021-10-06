@@ -141,9 +141,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9b4ffe0d80a778a2645d717f5d6aa055"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html">TimingEdge</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a9b4ffe0d80a778a2645d717f5d6aa055">getOutEdges</a> ()</td></tr>
 <tr class="memdesc:a9b4ffe0d80a778a2645d717f5d6aa055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the outward edges from this <a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html" title="TimingNode is the node in TimingGraph, which could be pin or cell in the design netlist.">TimingNode</a>.  <a href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a9b4ffe0d80a778a2645d717f5d6aa055">More...</a><br /></td></tr>
 <tr class="separator:a9b4ffe0d80a778a2645d717f5d6aa055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a164d3124d74d006ccd8217af07afe52c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a164d3124d74d006ccd8217af07afe52c">sortOutEdgesByBackwardLevel</a> ()</td></tr>
+<tr class="memdesc:a164d3124d74d006ccd8217af07afe52c"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the outward edges by their sink node backward level  <a href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a164d3124d74d006ccd8217af07afe52c">More...</a><br /></td></tr>
+<tr class="separator:a164d3124d74d006ccd8217af07afe52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c81b078d256438efd5e6258af85c48b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html">TimingEdge</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a7c81b078d256438efd5e6258af85c48b">getInEdges</a> ()</td></tr>
 <tr class="memdesc:a7c81b078d256438efd5e6258af85c48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the inward edges to this <a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html" title="TimingNode is the node in TimingGraph, which could be pin or cell in the design netlist.">TimingNode</a>.  <a href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a7c81b078d256438efd5e6258af85c48b">More...</a><br /></td></tr>
 <tr class="separator:a7c81b078d256438efd5e6258af85c48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea3540c86eaeb4341db43ea033eb534f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#aea3540c86eaeb4341db43ea033eb534f">sortInEdgesByForwardLevel</a> ()</td></tr>
+<tr class="memdesc:aea3540c86eaeb4341db43ea033eb534f"><td class="mdescLeft">&#160;</td><td class="mdescRight">sort the inward edges by their source node forward level  <a href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#aea3540c86eaeb4341db43ea033eb534f">More...</a><br /></td></tr>
+<tr class="separator:aea3540c86eaeb4341db43ea033eb534f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -566,7 +572,7 @@ template&lt;typename nodeType &gt; </div>
 <p>Get the inward edges to this <a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html" title="TimingNode is the node in TimingGraph, which could be pin or cell in the design netlist.">TimingNode</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;TimingEdge *&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00226">226</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00237">237</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -763,6 +769,68 @@ template&lt;typename nodeType &gt; </div>
 
 </div>
 </div>
+<a id="aea3540c86eaeb4341db43ea033eb534f" name="aea3540c86eaeb4341db43ea033eb534f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea3540c86eaeb4341db43ea033eb534f">&#9670;&nbsp;</a></span>sortInEdgesByForwardLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename nodeType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_placement_timing_info_1_1_timing_graph.html">PlacementTimingInfo::TimingGraph</a>&lt; nodeType &gt;::TimingNode::sortInEdgesByForwardLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>sort the inward edges by their source node forward level </p>
+
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00246">246</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="a164d3124d74d006ccd8217af07afe52c" name="a164d3124d74d006ccd8217af07afe52c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a164d3124d74d006ccd8217af07afe52c">&#9670;&nbsp;</a></span>sortOutEdgesByBackwardLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename nodeType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_placement_timing_info_1_1_timing_graph.html">PlacementTimingInfo::TimingGraph</a>&lt; nodeType &gt;::TimingNode::sortOutEdgesByBackwardLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>sort the outward edges by their sink node backward level </p>
+
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00225">225</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a5c3bbea13393ace3aea0ed1185fac9f3" name="a5c3bbea13393ace3aea0ed1185fac9f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c3bbea13393ace3aea0ed1185fac9f3">&#9670;&nbsp;</a></span>arrivalConstaint</h2>
@@ -786,7 +854,7 @@ template&lt;typename nodeType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00239">239</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00261">261</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -814,7 +882,7 @@ template&lt;typename nodeType &gt; </div>
 
 <p>the distance toward the farthest successor register based on the path length (instead of delay) </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00262">262</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00284">284</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00160">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::calcLongestPath()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00182">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getBackwardLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00192">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getLongestPathLength()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00151">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::setBackwardLevel()</a>.</p>
 
@@ -844,7 +912,7 @@ template&lt;typename nodeType &gt; </div>
 
 <p>the pointer linked to the design element (pin or cell) </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00236">236</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00258">258</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00105">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getDesignNode()</a>.</p>
 
@@ -872,7 +940,7 @@ template&lt;typename nodeType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00263">263</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00285">285</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00206">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getDestLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00201">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::setDestLevel()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00145">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::setForwardLevel()</a>.</p>
 
@@ -902,7 +970,7 @@ template&lt;typename nodeType &gt; </div>
 
 <p>the distance toward the farthest predecessor register based on the path length (instead of delay) </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00255">255</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00277">277</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00160">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::calcLongestPath()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00171">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getForwardLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00192">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getLongestPathLength()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00145">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::setForwardLevel()</a>.</p>
 
@@ -930,7 +998,7 @@ template&lt;typename nodeType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00237">237</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00259">259</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00100">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getId()</a>.</p>
 
@@ -958,9 +1026,9 @@ template&lt;typename nodeType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00247">247</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00269">269</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00130">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::addInEdge()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00226">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getInEdges()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00093">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::TimingNode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00130">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::addInEdge()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00237">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getInEdges()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00246">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::sortInEdgesByForwardLevel()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00093">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::TimingNode()</a>.</p>
 
 </div>
 </div>
@@ -988,7 +1056,7 @@ template&lt;typename nodeType &gt; </div>
 
 <p>the node can have internal delay (e.g., cell delay) </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00245">245</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00267">267</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1082,7 @@ template&lt;typename nodeType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00246">246</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00268">268</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00125">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::checkIsRegister()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00114">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::setIsRegister()</a>.</p>
 
@@ -1042,7 +1110,7 @@ template&lt;typename nodeType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00238">238</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00260">260</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1138,7 @@ template&lt;typename nodeType &gt; </div>
 
 <p>the length of the longest path containing this <a class="el" href="class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html" title="TimingNode is the node in TimingGraph, which could be pin or cell in the design netlist.">TimingNode</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00269">269</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00291">291</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00160">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::calcLongestPath()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00192">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getLongestPathLength()</a>.</p>
 
@@ -1098,9 +1166,9 @@ template&lt;typename nodeType &gt; </div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00248">248</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00270">270</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00135">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::addOutEdge()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00216">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getOutEdges()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00093">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::TimingNode()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00135">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::addOutEdge()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00216">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::getOutEdges()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00225">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::sortOutEdgesByBackwardLevel()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00093">PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode::TimingNode()</a>.</p>
 
 </div>
 </div>

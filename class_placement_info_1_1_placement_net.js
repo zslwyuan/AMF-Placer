@@ -2,7 +2,7 @@ var class_placement_info_1_1_placement_net =
 [
     [ "_pinOffset", "struct_placement_info_1_1_placement_net_1_1__pin_offset.html", "struct_placement_info_1_1_placement_net_1_1__pin_offset" ],
     [ "pinOffset", "class_placement_info_1_1_placement_net.html#ab7235c19652991bf4b448829291c5a74", null ],
-    [ "PlacementNet", "class_placement_info_1_1_placement_net.html#a69b50e9a71bb43a1aa1efd2d71bc9039", null ],
+    [ "PlacementNet", "class_placement_info_1_1_placement_net.html#aeed7b5b6d86cd6b1a54a5abb495c1fbc", null ],
     [ "~PlacementNet", "class_placement_info_1_1_placement_net.html#a62680c28b41bb94bd446fef4c55eedca", null ],
     [ "addB2BNet", "class_placement_info_1_1_placement_net.html#a67d9821b37a53f43690a56568c79b87c", null ],
     [ "addPseudoNet_enhancePin2Pin", "class_placement_info_1_1_placement_net.html#af30c18e8e435944102dcb600d58dfbe6", null ],
@@ -40,6 +40,7 @@ var class_placement_info_1_1_placement_net =
     [ "leftPUX", "class_placement_info_1_1_placement_net.html#ad141c855603bd6782d3d92ccfd288ebc", null ],
     [ "minDist", "class_placement_info_1_1_placement_net.html#a0ce68d71aa0e306090f470411947894d", null ],
     [ "pinOffsetsInUnit", "class_placement_info_1_1_placement_net.html#a0cb9f4b51c6f22f66c428fe900266ab3", null ],
+    [ "placementInfo", "class_placement_info_1_1_placement_net.html#a8c3f946cf4a0d58ebcbb7149525e4250", null ],
     [ "PUSet", "class_placement_info_1_1_placement_net.html#a2be9f5ffc5914db94fae4c5527de71b8", null ],
     [ "rightPinId_net", "class_placement_info_1_1_placement_net.html#a717cd90722bcb26e637992cb6bd7ae29", null ],
     [ "rightPinX", "class_placement_info_1_1_placement_net.html#acffd12fabcbcebf56c99da4fee611f41", null ],
