@@ -1745,8 +1745,9 @@ class PlacementInfo
          * @param id
          * @param cellId2PlacementUnitVec
          */
-        PlacementNet(DesignInfo::DesignNet *designNet, int id, std::vector<PlacementUnit *> &cellId2PlacementUnitVec)
-            : designNet(designNet), id(id)
+        PlacementNet(DesignInfo::DesignNet *designNet, int id, std::vector<PlacementUnit *> &cellId2PlacementUnitVec,
+                     PlacementInfo *placementInfo)
+            : designNet(designNet), id(id), placementInfo(placementInfo)
         {
             unitsOfNetPins.clear();
             unitsOfDriverPins.clear();
@@ -2002,7 +2003,26 @@ class PlacementInfo
                     tmp_topY = pinY;
                 }
             }
-            return std::fabs(tmp_rightX - tmp_leftX) + y2xRatio * std::fabs(tmp_topY - tmp_bottomY);
+
+            int A_ClockRegionY, A_ClockRegionX;
+            placementInfo->getDeviceInfo()->getClockRegionByLocation(tmp_rightX, tmp_bottomY, A_ClockRegionX,
+                                                                     A_ClockRegionY);
+            std::pair<int, int> A_ClockLocYX(A_ClockRegionY, A_ClockRegionX);
+
+            int B_cellClockRegionY, B_cellClockRegionX;
+            placementInfo->getDeviceInfo()->getClockRegionByLocation(tmp_leftX, tmp_topY, B_cellClockRegionX,
+                                                                     B_cellClockRegionY);
+            std::pair<int, int> B_ClockLocYX(B_cellClockRegionY, B_cellClockRegionX);
+
+            float clockRegionOverhead = 0;
+            if (B_ClockLocYX != A_ClockLocYX)
+            {
+                clockRegionOverhead = std::abs(B_cellClockRegionX - A_ClockRegionX) * 15 +
+                                      std::abs(B_cellClockRegionY - A_ClockRegionY) * 6;
+            }
+
+            return std::fabs(tmp_rightX - tmp_leftX) + y2xRatio * std::fabs(tmp_topY - tmp_bottomY) +
+                   clockRegionOverhead;
         }
 
         /**
@@ -2285,7 +2305,9 @@ class PlacementInfo
         std::vector<PlacementUnit *> unitsOfPinsBeDriven;
         std::vector<pinOffset> pinOffsetsInUnit;
         std::set<PlacementUnit *> PUSet;
+
         int id;
+        PlacementInfo *placementInfo = nullptr;
         float leftPUX, rightPUX, topPUY, bottomPUY;
         float leftPinX, rightPinX, topPinY, bottomPinY;
         unsigned int leftPuId, rightPuId, topPuId, bottomPuId;
@@ -4043,9 +4065,9 @@ class PlacementInfo
     /**
      * @brief get the PlacementUnit Mapping to clock region centers for timing optimzation
      *
-     * @return std::vector<std::tuple<PlacementUnit *, float, float>>&
+     * @return std::map<PlacementUnit *, std::pair<float, float>>&
      */
-    std::vector<std::tuple<PlacementUnit *, float, float>> &getPU2ClockRegionCenters()
+    std::map<PlacementUnit *, std::pair<float, float>> &getPU2ClockRegionCenters()
     {
         return PU2ClockRegionCenters;
     }
@@ -4153,7 +4175,7 @@ class PlacementInfo
     std::vector<PlacementUnit *> PUsContainingFF;
     std::vector<std::vector<PlacementUnit *>> longPaths;
 
-    std::vector<std::tuple<PlacementUnit *, float, float>> PU2ClockRegionCenters;
+    std::map<PlacementUnit *, std::pair<float, float>> PU2ClockRegionCenters;
 
     /**
      * @brief the retangular clock region coverage of a clock net
