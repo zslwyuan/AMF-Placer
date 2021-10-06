@@ -285,7 +285,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                                 curPU->setAnchorLocationAndForgetTheOriginalOne(fX, fY);
                                 extractedPUs.insert(curPU);
 
-                                PU2ClockRegionCenter.emplace_back(curPU, fX, fY);
+                                PU2ClockRegionCenter[curPU] = std::pair<float, float>(fX, fY);
 
                                 if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
                                 {

@@ -704,9 +704,9 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
 
     for (auto PUXY : PU2ClockRegionCenter)
     {
-        auto curPU = std::get<0>(PUXY);
-        float cX = std::get<1>(PUXY);
-        float cY = std::get<2>(PUXY);
+        auto curPU = PUXY.first;
+        float cX = PUXY.second.first;
+        float cY = PUXY.second.second;
         placementInfo->addPseudoNetsInPlacementInfo(
             xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
             xSolver->solverData.objectiveVector, curPU, cX, pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio,
