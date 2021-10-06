@@ -25,7 +25,7 @@ var class_placement_info_1_1_placement_net =
     [ "getUnits", "class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6", null ],
     [ "getUnitsBeDriven", "class_placement_info_1_1_placement_net.html#a3305aa473e6850500a55b06b5fd99ce0", null ],
     [ "isGlobalClock", "class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3", null ],
-    [ "updateBound2BoundNetWeight", "class_placement_info_1_1_placement_net.html#ab2f0304ff93a388d4ad21dabca919f99", null ],
+    [ "updateBound2BoundNetWeight", "class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6", null ],
     [ "updateNetBounds", "class_placement_info_1_1_placement_net.html#a200c4f81d0affa45f335411d4cb21bc3", null ],
     [ "bottomPinId_net", "class_placement_info_1_1_placement_net.html#a41166f41373df1fd4a131a0eeeda4680", null ],
     [ "bottomPinY", "class_placement_info_1_1_placement_net.html#a4c86c94f3690489ce7936a6a6a923f85", null ],

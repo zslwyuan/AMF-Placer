@@ -303,7 +303,7 @@ $(document).ready(function(){initNavTree('_graph_partitioner_8cc_source.html',''
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.lock();</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">if</span> ((*cut &gt; maxCut || ((<span class="keywordtype">float</span>)outputClusters[0].size() / (<span class="keywordtype">float</span>)outputClusters[1].size() &lt; 0.5) ||</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>         ((<span class="keywordtype">float</span>)outputClusters[1].size() / (<span class="keywordtype">float</span>)outputClusters[0].size() &lt; 0.5)) &amp;&amp;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        (minCellClusterSize * 2 &gt; totalWeight &amp;&amp; totalDSPNum &lt;= 3 * eachClusterDSPNum &amp;&amp;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        (minCellClusterSize * 1.25 &gt; totalWeight &amp;&amp; totalDSPNum &lt;= 3 * eachClusterDSPNum &amp;&amp;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>         totalBRAMNum &lt;= 3 * eachClusterBRAMNum))</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    {</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="comment">// if (graphPartitioner-&gt;verbose)</span></div>

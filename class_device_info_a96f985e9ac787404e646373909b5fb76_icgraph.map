@@ -1,8 +1,9 @@
 <map id="DeviceInfo::getClockRegionByLocation" name="DeviceInfo::getClockRegionByLocation">
-<area shape="rect" id="node1" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="931,166,1112,207"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="701,78,881,119"/>
+<area shape="rect" id="node1" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="979,195,1160,237"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="725,78,905,119"/>
 <area shape="rect" id="node7" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,162,395,203"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_net.html#a7aed503da97a1dfd0e230aaba5fc3da1" title="Get the New HPWL By Trying to move a PlacementUnit object." alt="" coords="700,225,883,266"/>
+<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_net.html#a7aed503da97a1dfd0e230aaba5fc3da1" title="Get the New HPWL By Trying to move a PlacementUnit object." alt="" coords="724,225,907,266"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="700,290,931,331"/>
 <area shape="rect" id="node3" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="443,5,652,32"/>
 <area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,81,116,108"/>
 <area shape="rect" id="node6" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="447,107,648,149"/>
