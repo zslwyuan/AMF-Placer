@@ -182,7 +182,7 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
 
     if (timingOpt)
     {
-        addPseudoNet_LevelBased(20, (0.1 + 0.1 * placementInfo->getProgress()) * generalNetWeight, 30);
+        addPseudoNet_LevelBased(20, (0.1 + 0.1 * placementInfo->getProgress()) * generalNetWeight, 25);
     }
 
     if (enableUserDefinedClusterOpt)
@@ -191,7 +191,7 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
     }
 
     addPseudoNet2LoctionForAllPUs(pesudoNetWeight, considerNetNum);
-    updatePseudoNetForClockRegion((4.0 - placementInfo->getProgress()) * pesudoNetWeight);
+    // updatePseudoNetForClockRegion((4.0 - placementInfo->getProgress()) * pesudoNetWeight);
 
     if (verbose)
         print_status("update B2B Net Weight Done.");
@@ -395,11 +395,11 @@ void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeig
                 // calculate the distance
                 double dis = manhattanDis(srcLoc.X, srcLoc.Y, sinkLoc.X, sinkLoc.Y);
 
-                int sinkClockRegionXId, sinkClockRegionYId;
-                deviceInfo->getClockRegionByLocation(sinkLoc.X, sinkLoc.Y, sinkClockRegionXId, sinkClockRegionYId);
+                // int sinkClockRegionXId, sinkClockRegionYId;
+                // deviceInfo->getClockRegionByLocation(sinkLoc.X, sinkLoc.Y, sinkClockRegionXId, sinkClockRegionYId);
 
-                dis += std::abs(sinkClockRegionXId - srcClockRegionXId) * 10 +
-                       std::abs(sinkClockRegionYId - srcClockRegionYId) * 10;
+                // dis += std::abs(sinkClockRegionXId - srcClockRegionXId) * 10 +
+                //        std::abs(sinkClockRegionYId - srcClockRegionYId) * 10;
 
                 // handle the potential sinkPins on the longest path by checking the backward level
                 if (succBackwardLevel + 1 >= levelThr)

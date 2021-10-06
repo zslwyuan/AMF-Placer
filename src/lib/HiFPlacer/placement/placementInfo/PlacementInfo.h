@@ -2047,7 +2047,7 @@ class PlacementInfo
         inline void updateBound2BoundNetWeight(std::vector<Eigen::Triplet<float>> &objectiveMatrixTripletList,
                                                std::vector<float> &objectiveMatrixDiag,
                                                Eigen::VectorXd &objectiveVector, float generalWeight, float y2xRatio,
-                                               bool updateX, bool updateY)
+                                               bool updateX, bool updateY, bool checkClockRegion = false)
         {
             assert(updateX ^ updateY);
             if (pinOffsetsInUnit.size() <= 1)
@@ -2069,9 +2069,33 @@ class PlacementInfo
             else
                 w *= 2.5;
 
+            float tmp_rightX = getRightPinX(), tmp_bottomY = getBottomPinY(), tmp_leftX = getLeftPinX(),
+                  tmp_topY = getTopPinY();
+
+            int A_ClockRegionY, A_ClockRegionX;
+            placementInfo->getDeviceInfo()->getClockRegionByLocation(tmp_rightX, tmp_bottomY, A_ClockRegionX,
+                                                                     A_ClockRegionY);
+            std::pair<int, int> A_ClockLocYX(A_ClockRegionY, A_ClockRegionX);
+
+            int B_cellClockRegionY, B_cellClockRegionX;
+            placementInfo->getDeviceInfo()->getClockRegionByLocation(tmp_leftX, tmp_topY, B_cellClockRegionX,
+                                                                     B_cellClockRegionY);
+            std::pair<int, int> B_ClockLocYX(B_cellClockRegionY, B_cellClockRegionX);
+
+            float clockRegionW = 0;
+
             w *= designNet->getOverallEnhanceRatio();
             if (updateX)
             {
+                if (checkClockRegion && B_cellClockRegionX != A_ClockRegionX)
+                {
+                    clockRegionW = 1 + std::abs(B_cellClockRegionX - A_ClockRegionX) * 32 /
+                                           (float)(pinOffsetsInUnit.size() - 1) * 0.01;
+                    if (clockRegionW > 3)
+                        clockRegionW = 3;
+                    w *= clockRegionW;
+                }
+
                 // add net between left node and right node
                 addB2BNet(objectiveMatrixTripletList, objectiveMatrixDiag, objectiveVector, leftPuId, rightPuId,
                           leftPUX, rightPUX, pinOffsetsInUnit[leftPinId_net].x, pinOffsetsInUnit[rightPinId_net].x,
@@ -2104,6 +2128,15 @@ class PlacementInfo
             }
             if (updateY)
             {
+                if (checkClockRegion && B_cellClockRegionY != A_ClockRegionY)
+                {
+                    clockRegionW = 1 + std::abs(B_cellClockRegionY - A_ClockRegionY) * 32 /
+                                           (float)(pinOffsetsInUnit.size() - 1) * 0.01;
+                    if (clockRegionW > 3)
+                        clockRegionW = 3;
+                    w *= clockRegionW;
+                }
+
                 w *= y2xRatio;
 
                 // add net between top node and bottom node

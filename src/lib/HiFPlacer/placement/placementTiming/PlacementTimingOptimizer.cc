@@ -269,8 +269,8 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                         }
                     }
 
-                    if ((maxClockRegionWeight > totalClockRegionWeight * 0.25) && totalClockRegionWeight < 20000 &&
-                        maxClockRegionWeight >= 4)
+                    if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) &&
+                        totalClockRegionWeight < 20000 && maxClockRegionWeight >= 4)
                     {
                         auto optClockRegion = YX2ClockRegion[optClockLocYX.first][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;

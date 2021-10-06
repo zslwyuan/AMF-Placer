@@ -148,7 +148,6 @@ class AMFPlacer
 
         // strengthen the timing optimization, enable area adjustion and relax a bit the pseudo nets for more
         // flexibility
-        timingOptimizer->clusterLongPathInOneClockRegion(20, 0.5);
         timingOptimizer->enhanceNetWeight_LevelBased(10);
         globalPlacer->setNeighborDisplacementUpperbound(3.0);
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
@@ -165,6 +164,7 @@ class AMFPlacer
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
 
+        timingOptimizer->clusterLongPathInOneClockRegion(20, 0.25);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
