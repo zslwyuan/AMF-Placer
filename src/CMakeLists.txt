@@ -138,6 +138,12 @@ endif()
 
 find_package(ZLIB)
 
+include_directories(
+  ${Boost_INCLUDE_DIR}
+  ${EIGEN3_INCLUDE_DIR}
+  ${ZLIB_INCLUDE_DIRS}
+)
+
 add_subdirectory(lib)
 
 set(SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/app/AMFPlacer/main.cc)
@@ -156,9 +162,6 @@ include_directories(./lib/
 ./lib/3rdParty
 ./lib/HiFPlacer/problemSolvers
 ${abseil-cpp_SOURCE_DIR} 
-${Boost_INCLUDE_DIR}
-${EIGEN3_INCLUDE_DIR}
-${ZLIB_INCLUDE_DIRS}
 )
 
 link_directories(${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/)
