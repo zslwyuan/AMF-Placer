@@ -463,7 +463,7 @@ void PlacementInfo::reloadNets()
     clockNets.clear();
     for (DesignInfo::DesignNet *net : designInfo->getNets())
     {
-        PlacementNet *newPNet = new PlacementNet(net, placementNets.size(), cellId2PlacementUnitVec);
+        PlacementNet *newPNet = new PlacementNet(net, placementNets.size(), cellId2PlacementUnitVec, this);
         PlacementUnit *PUInNet = nullptr;
         bool isInternalNet = true;
         for (auto tmpPU : newPNet->getUnits())

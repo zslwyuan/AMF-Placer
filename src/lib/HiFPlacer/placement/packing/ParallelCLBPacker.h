@@ -1173,6 +1173,14 @@ class ParallelCLBPacker
              */
             void printMyself();
 
+            /**
+             * @brief a verification function to check whether the cells in this cluster are REALLY LEGAL.
+             *
+             * @param tmpPU
+             * @param isAddPU
+             * @return true
+             * @return false
+             */
             bool checkCellCorrectness(PlacementInfo::PlacementUnit *tmpPU, bool isAddPU);
 
             bool checkNumMuxCompatibleInFFSet(int i, int addNum);

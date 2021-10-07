@@ -18,6 +18,7 @@
 #include <algorithm>
 #include <set>
 #include <codecvt>
+#include <stack>
 
 PlacementTimingInfo::PlacementTimingInfo(DesignInfo *designInfo, DeviceInfo *deviceInfo,
                                          std::map<std::string, std::string> &JSONCfg)
@@ -182,12 +183,28 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::fo
         }
     }
 
+    longPathThresholdLevel = 1;
+
+    int thresholdLevelNum = nodes.size() * longPathThrRatio;
+    int cntNodes = 0;
     std::string levelInfoStr = " details: ";
     for (unsigned int i = 0; i < forwardlevel2NodeIds.size(); i++)
     {
         levelInfoStr += std::to_string(i) + "(" + std::to_string(forwardlevel2NodeIds[i].size()) + "), ";
+        cntNodes += forwardlevel2NodeIds[i].size();
+        if (cntNodes < thresholdLevelNum)
+        {
+            longPathThresholdLevel = i;
+        }
     }
+
+    for (unsigned int i = 0; i < nodes.size(); i++)
+    {
+        nodes[i]->sortInEdgesByForwardLevel();
+    }
+
     print_info("PlacementTimingInfo: total level = " + std::to_string(forwardlevel2NodeIds.size()) + levelInfoStr);
+    print_info("PlacementTimingInfo: long path threshold level = " + std::to_string(longPathThresholdLevel));
     print_status("PlacementTimingInfo: Timing graph finished forward levalization");
 }
 
@@ -247,6 +264,11 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::ba
                 filteredList.push_back(id);
         }
         backwardlevel2NodeIds[level] = filteredList;
+    }
+
+    for (unsigned int i = 0; i < nodes.size(); i++)
+    {
+        nodes[i]->sortOutEdgesByBackwardLevel();
     }
 
     print_status("PlacementTimingInfo: Timing graph finished backward levalization");
@@ -314,6 +336,81 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::traceForwardFromNod
 }
 
 template <typename nodeType>
+std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int startNodeId, int pathLenThr,
+                                                                         unsigned int sizeThr,
+                                                                         std::set<int> &exceptionCells)
+{
+    std::vector<int> resSucessors;
+    std::stack<int> nodeStack;
+    std::set<int> nodeSet;
+    nodeSet.clear();
+    resSucessors.clear();
+    nodeSet.insert(startNodeId);
+    resSucessors.push_back(startNodeId);
+    nodeStack.push(startNodeId);
+    int targetPathLen = nodes[startNodeId]->getLongestPathLength();
+
+    if (nodes[startNodeId]->getForwardLevel() > targetPathLen * 0.1)
+    {
+        return resSucessors;
+    }
+
+    bool forwarding = true;
+    while (nodeStack.size() && nodeSet.size() < sizeThr)
+    {
+        int curNode = nodeStack.top();
+        resSucessors.push_back(curNode);
+        nodeStack.pop();
+
+        if (forwarding)
+        {
+            bool findNext = false;
+            for (auto outEdge : nodes[curNode]->getOutEdges())
+            {
+                int nextId = outEdge->getSink()->getId();
+
+                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+                {
+                    if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                    {
+                        nodeSet.insert(nextId);
+                        nodeStack.push(nextId);
+                        findNext = true;
+                    }
+                }
+            }
+            if (!findNext)
+            {
+                forwarding = false;
+                return resSucessors;
+            }
+        }
+
+        if (!forwarding)
+        {
+            bool findNext = false;
+            for (auto inEdge : nodes[curNode]->getInEdges())
+            {
+                int nextId = inEdge->getSource()->getId();
+
+                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+                {
+                    if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                    {
+                        nodeSet.insert(nextId);
+                        nodeStack.push(nextId);
+                        findNext = true;
+                    }
+                }
+            }
+            if (!findNext)
+                forwarding = true;
+        }
+    }
+    return resSucessors;
+}
+
+template <typename nodeType>
 std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int startNodeId, int pathLenThr,
                                                                          unsigned int sizeThr,
                                                                          std::set<int> &exceptionCells)
@@ -328,39 +425,54 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
     nodeQ.push(startNodeId);
     // int targetPathLen = nodes[startNodeId]->getLongestPathLength();
 
+    bool forwarding = true;
     while (nodeQ.size() && nodeSet.size() < sizeThr)
     {
         int curNode = nodeQ.front();
         nodeQ.pop();
 
-        for (auto outEdge : nodes[curNode]->getOutEdges())
+        if (forwarding)
         {
-            int nextId = outEdge->getSink()->getId();
-
-            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            bool findNext = false;
+            for (auto outEdge : nodes[curNode]->getOutEdges())
             {
-                if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                int nextId = outEdge->getSink()->getId();
+
+                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
                 {
-                    resSucessors.push_back(nextId);
-                    nodeSet.insert(nextId);
-                    nodeQ.push(nextId);
+                    if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                    {
+                        resSucessors.push_back(nextId);
+                        nodeSet.insert(nextId);
+                        nodeQ.push(nextId);
+                        findNext = true;
+                    }
                 }
             }
+            if (!findNext)
+                forwarding = false;
         }
 
-        for (auto inEdge : nodes[curNode]->getInEdges())
+        if (!forwarding)
         {
-            int nextId = inEdge->getSource()->getId();
-
-            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            bool findNext = false;
+            for (auto inEdge : nodes[curNode]->getInEdges())
             {
-                if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                int nextId = inEdge->getSource()->getId();
+
+                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
                 {
-                    resSucessors.push_back(nextId);
-                    nodeSet.insert(nextId);
-                    nodeQ.push(nextId);
+                    if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                    {
+                        resSucessors.push_back(nextId);
+                        nodeSet.insert(nextId);
+                        nodeQ.push(nextId);
+                        findNext = true;
+                    }
                 }
             }
+            if (!findNext)
+                forwarding = true;
         }
     }
     return resSucessors;

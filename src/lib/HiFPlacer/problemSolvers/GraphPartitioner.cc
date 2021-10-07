@@ -226,7 +226,7 @@ unsigned GraphPartitioner<NodeList, NetList>::minCutBipartition(const std::vecto
     graphPartitioner->cntLock.lock();
     if ((*cut > maxCut || ((float)outputClusters[0].size() / (float)outputClusters[1].size() < 0.5) ||
          ((float)outputClusters[1].size() / (float)outputClusters[0].size() < 0.5)) &&
-        (minCellClusterSize * 2 > totalWeight && totalDSPNum <= 3 * eachClusterDSPNum &&
+        (minCellClusterSize * 1.25 > totalWeight && totalDSPNum <= 3 * eachClusterDSPNum &&
          totalBRAMNum <= 3 * eachClusterBRAMNum))
     {
         // if (graphPartitioner->verbose)

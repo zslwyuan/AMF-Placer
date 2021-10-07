@@ -219,6 +219,17 @@ class PlacementTimingInfo
             }
 
             /**
+             * @brief sort the outward edges by their sink node backward level
+             *
+             */
+            void sortOutEdgesByBackwardLevel()
+            {
+                std::sort(outEdges.begin(), outEdges.end(), [](TimingEdge *a, TimingEdge *b) -> bool {
+                    return a->getSink()->getBackwardLevel() < b->getSink()->getBackwardLevel();
+                });
+            }
+
+            /**
              * @brief Get the inward edges to this TimingNode
              *
              * @return std::vector<TimingEdge *>&
@@ -226,6 +237,17 @@ class PlacementTimingInfo
             inline std::vector<TimingEdge *> &getInEdges()
             {
                 return inEdges;
+            }
+
+            /**
+             * @brief sort the inward edges by their source node forward level
+             *
+             */
+            void sortInEdgesByForwardLevel()
+            {
+                std::sort(inEdges.begin(), inEdges.end(), [](TimingEdge *a, TimingEdge *b) -> bool {
+                    return a->getSource()->getForwardLevel() < b->getSource()->getForwardLevel();
+                });
             }
 
           private:
@@ -474,7 +496,7 @@ class PlacementTimingInfo
         std::vector<int> traceForwardFromNode(int targetId);
 
         /**
-         * @brief find the sucessors of a node in the long paths
+         * @brief BFS  the sucessors(predecessors) of a node in the long paths
          *
          * @param startNodeId start node Id
          * @param sizeThr the number limitation to avoid huge cluster
@@ -482,9 +504,28 @@ class PlacementTimingInfo
          */
         std::vector<int> BFSFromNode(int startNodeId, int pathLenThr, unsigned sizeThr, std::set<int> &exceptionCells);
 
+        /**
+         * @brief DFS the sucessors(predecessors) of a node in the long paths
+         *
+         * @param startNodeId start node Id
+         * @param sizeThr the number limitation to avoid huge cluster
+         * @return std::vector<int>
+         */
+        std::vector<int> DFSFromNode(int startNodeId, int pathLenThr, unsigned sizeThr, std::set<int> &exceptionCells);
+
         inline std::vector<TimingNode *> &getPathLenSortedNodes()
         {
             return pathLenSortedNodes;
+        }
+
+        inline int getLongPathThresholdLevel()
+        {
+            return longPathThresholdLevel;
+        }
+
+        inline void setLongPathThrRatio(float _r)
+        {
+            longPathThrRatio = _r;
         }
 
       private:
@@ -503,6 +544,9 @@ class PlacementTimingInfo
          *
          */
         std::vector<std::vector<int>> backwardlevel2NodeIds;
+
+        float longPathThrRatio = 0.9;
+        int longPathThresholdLevel = 1;
     };
 
     /**

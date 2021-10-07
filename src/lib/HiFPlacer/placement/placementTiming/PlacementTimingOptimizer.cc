@@ -269,8 +269,8 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                         }
                     }
 
-                    if ((maxClockRegionWeight > totalClockRegionWeight * 0.25) && totalClockRegionWeight < 20000 &&
-                        maxClockRegionWeight >= 4)
+                    if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) &&
+                        totalClockRegionWeight < 20000 && maxClockRegionWeight >= 4)
                     {
                         auto optClockRegion = YX2ClockRegion[optClockLocYX.first][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;
@@ -285,7 +285,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                                 curPU->setAnchorLocationAndForgetTheOriginalOne(fX, fY);
                                 extractedPUs.insert(curPU);
 
-                                PU2ClockRegionCenter.emplace_back(curPU, fX, fY);
+                                PU2ClockRegionCenter[curPU] = std::pair<float, float>(fX, fY);
 
                                 if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
                                 {
