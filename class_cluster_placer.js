@@ -25,6 +25,8 @@ var class_cluster_placer =
     [ "avgClusterSizeRequirement", "class_cluster_placer.html#a3190feea5462a06928cdc6fb5784cf88", null ],
     [ "basicGraphPartitioner", "class_cluster_placer.html#a2f930b482e9d6f71058cb343d1e9ed6c", null ],
     [ "clockBasedGraphPartitioner", "class_cluster_placer.html#aa1a18febd9af6964850c0df185a9b56a", null ],
+    [ "clockRegionXNum", "class_cluster_placer.html#a7880ecdf1c6ce95f3d4b9ea2c2a4df54", null ],
+    [ "clockRegionYNum", "class_cluster_placer.html#aab26070b670a945cdf02e13166767a67", null ],
     [ "cluster2FixedUnitMat", "class_cluster_placer.html#ab2ed2ed9a9623433fe4dfe245916bba5", null ],
     [ "cluster2FP_XY", "class_cluster_placer.html#af1c3c5fa98b99d5644b6de0a302ca6f7", null ],
     [ "cluster2XY", "class_cluster_placer.html#a3f581c5a605dfb37bcd90ac7f3919437", null ],

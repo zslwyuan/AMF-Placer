@@ -1,6 +1,9 @@
 <map id="ClusterPlacer::setClusterNetsAdjMat" name="ClusterPlacer::setClusterNetsAdjMat">
-<area shape="rect" id="node1" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="5,64,171,105"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a00864f7c104c5bbac820accd054b12e1" title=" " alt="" coords="219,5,441,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="220,71,440,98"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="234,123,426,164"/>
+<area shape="rect" id="node1" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="5,141,171,182"/>
+<area shape="rect" id="node2" href="$_cluster_placer_8cc.html#a5735b045bfe96dc29dca1cfb7f34116d" title=" " alt="" coords="277,5,383,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a00864f7c104c5bbac820accd054b12e1" title=" " alt="" coords="219,57,441,98"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="230,123,430,149"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="231,173,429,200"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="220,224,440,251"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="234,275,426,317"/>
 </map>
