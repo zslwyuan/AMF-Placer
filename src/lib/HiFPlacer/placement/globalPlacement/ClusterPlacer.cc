@@ -36,6 +36,9 @@ ClusterPlacer::ClusterPlacer(PlacementInfo *placementInfo, std::map<std::string,
         jobs = 1;
     }
 
+    clockRegionXNum = std::stoi(JSONCfg["clockRegionXNum"]);
+    clockRegionYNum = std::stoi(JSONCfg["clockRegionYNum"]);
+
     if (JSONCfg.find("RandomInitialPlacement") != JSONCfg.end())
     {
         randomInitialPlacement = JSONCfg["RandomInitialPlacement"] == "true";
@@ -148,14 +151,33 @@ void ClusterPlacer::createLongPathClusterUnits()
     unsigned int maxSize = 0;
     for (auto timingNode : timingNodes)
     {
-        if (timingNode->getLongestPathLength() > pathLengthThr)
+        if (timingNode->getLongestPathLength() > pathLengthThr && timingNode->getForwardLevel() > pathLengthThr * 0.333)
         {
             auto curCell = timingNode->getDesignNode();
             auto tmpPU = placementInfo->getPlacementUnitByCell(curCell);
             if (placementUnitId2ClusterUnitId[tmpPU->getId()] < 0)
             {
-                auto candidateCellIds =
-                    simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLengthThr, 1000000, extractedCellIds);
+                std::vector<int> candidateCellIds; //= simpleTimingGraph->BFSFromNode(timingNode->getId(),
+                                                   // pathLengthThr, 1000000, extractedCellIds);
+                candidateCellIds.clear();
+
+                if (timingNode->getOutEdges().size() >= 16)
+                {
+
+                    for (auto outEdge : timingNode->getOutEdges())
+                    {
+                        if (extractedCellIds.find(outEdge->getSink()->getId()) == extractedCellIds.end())
+                            candidateCellIds.push_back(outEdge->getSink()->getId());
+                    }
+
+                    // if (candidateCellIds.size() < 16)
+                    //     continue;
+                }
+                else
+                {
+                    continue;
+                }
+
                 std::set<PlacementInfo::PlacementUnit *> PUsInLongPaths;
                 PUsInLongPaths.clear();
                 for (auto &candidateCellId : candidateCellIds)
@@ -176,6 +198,23 @@ void ClusterPlacer::createLongPathClusterUnits()
                     assert(placementUnitId2ClusterUnitId[PUInPath->getId()] < 0);
                     placementUnitId2ClusterUnitId[PUInPath->getId()] = curClusterUnit->getId();
                     curClusterUnit->addPlacementUnit(PUInPath);
+
+                    if (!PUInPath->isFixed())
+                    {
+                        if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(PUInPath))
+                        {
+                            int cellId = unpackedCell->getCell()->getCellId();
+                            extractedCellIds.insert(cellId);
+                        }
+                        else if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(PUInPath))
+                        {
+                            for (auto tmpCell : curMacro->getCells())
+                            {
+                                int cellId = tmpCell->getCellId();
+                                extractedCellIds.insert(cellId);
+                            }
+                        }
+                    }
                 }
 
                 if (PUsInLongPaths.size() > maxSize)
@@ -361,7 +400,7 @@ void ClusterPlacer::clockBasedPartitioning(int minClusterCellNum, int eachCluste
                " global clocks and totally " + std::to_string(clusterUnits.size()) + " clock clusters are identified.");
 
     int clusterNumRecord = clusterUnits.size();
-    // createLongPathClusterUnits();
+    createLongPathClusterUnits();
     print_info("ClusterPlacer: There are totally " + std::to_string(clusterUnits.size() - clusterNumRecord) +
                " long-path clusters are identified.");
 
@@ -525,6 +564,26 @@ bool ClusterPlacer::isClustersToLarges()
     return false;
 }
 
+bool containIOCells(PlacementInfo::PlacementUnit *curPU)
+{
+    if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
+    {
+        return unpackedCell->getCell()->isIO();
+    }
+    else if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
+    {
+        for (auto tmpCell : curMacro->getCells())
+        {
+            if (tmpCell->isIO())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    return false;
+}
+
 void ClusterPlacer::setClusterNetsAdjMat()
 {
 
@@ -537,6 +596,8 @@ void ClusterPlacer::setClusterNetsAdjMat()
 
     fixedX.clear();
     fixedY.clear();
+
+    float clockRegionW = (placementInfo->getGlobalMaxX() - placementInfo->getGlobalMinX()) / clockRegionXNum;
 
     std::map<PlacementInfo::PlacementUnit *, int> fixedPlacementUnit2LocId;
     fixedPlacementUnit2LocId.clear();
@@ -551,8 +612,16 @@ void ClusterPlacer::setClusterNetsAdjMat()
                 {
                     int amo = fixedPlacementUnit2LocId.size();
                     fixedPlacementUnit2LocId[driveU] = amo;
-                    fixedX.push_back(driveU->X());
-                    fixedY.push_back(driveU->Y());
+                    if (containIOCells(driveU))
+                    {
+                        fixedX.push_back(driveU->X() + clockRegionW / 2.0);
+                        fixedY.push_back(driveU->Y());
+                    }
+                    else
+                    {
+                        fixedX.push_back(driveU->X());
+                        fixedY.push_back(driveU->Y());
+                    }
                 }
             }
 
@@ -571,8 +640,16 @@ void ClusterPlacer::setClusterNetsAdjMat()
                     {
                         int amo = fixedPlacementUnit2LocId.size();
                         fixedPlacementUnit2LocId[UBeDriven] = amo;
-                        fixedX.push_back(UBeDriven->X());
-                        fixedY.push_back(UBeDriven->Y());
+                        if (containIOCells(UBeDriven))
+                        {
+                            fixedX.push_back(UBeDriven->X() + clockRegionW / 2.0);
+                            fixedY.push_back(UBeDriven->Y());
+                        }
+                        else
+                        {
+                            fixedX.push_back(UBeDriven->X());
+                            fixedY.push_back(UBeDriven->Y());
+                        }
                     }
                 }
 

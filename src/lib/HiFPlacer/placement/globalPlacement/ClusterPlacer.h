@@ -148,6 +148,8 @@ class ClusterPlacer
     std::vector<PlacementInfo::ClusterUnit *> clusterUnits;
     std::vector<PlacementInfo::ClusterNet *> clusterNets;
 
+    int clockRegionXNum, clockRegionYNum;
+
     /**
      * @brief the parallel (multi-threading) worker number
      *
