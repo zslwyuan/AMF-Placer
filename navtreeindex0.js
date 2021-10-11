@@ -69,7 +69,8 @@ var NAVTREEINDEX0 =
 "_min_cost_bipartite_matcher_8h.html":[9,0,2,1,0,3,3],
 "_min_cost_bipartite_matcher_8h_source.html":[9,0,2,1,0,3,3],
 "_parallel_c_l_b_packer_8cc.html":[9,0,2,1,0,2,2,4],
-"_parallel_c_l_b_packer_8cc.html#a982f039565b9c69197d92d1617d102c9":[9,0,2,1,0,2,2,4,0],
+"_parallel_c_l_b_packer_8cc.html#a26fb856dc508059a8744a3ab61473f2e":[9,0,2,1,0,2,2,4,0],
+"_parallel_c_l_b_packer_8cc.html#a982f039565b9c69197d92d1617d102c9":[9,0,2,1,0,2,2,4,1],
 "_parallel_c_l_b_packer_8cc_source.html":[9,0,2,1,0,2,2,4],
 "_parallel_c_l_b_packer_8h.html":[9,0,2,1,0,2,2,5],
 "_parallel_c_l_b_packer_8h.html#a10fbe910a90188f5be1f19479a4a395e":[9,0,2,1,0,2,2,5,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a":[8,0,3,15],
 "class_c_l_b_legalizer.html#a596d21a5cf6331aa0b4371e7f5fafbce":[8,0,3,38],
 "class_c_l_b_legalizer.html#a5a707c1b66106287af77b052a56a5abb":[8,0,3,58],
-"class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61":[8,0,3,17],
-"class_c_l_b_legalizer.html#a65d0fc2a198f55fc259d02a4373011aa":[8,0,3,66]
+"class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61":[8,0,3,17]
 };

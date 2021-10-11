@@ -1,8 +1,8 @@
 <map id="GeneralSpreader::SpreadRegion::smartFindExpandDirection" name="GeneralSpreader::SpreadRegion::smartFindExpandDirection">
-<area shape="rect" id="node1" title="find the legal expansion direction" alt="" coords="1167,35,1373,76"/>
-<area shape="rect" id="node2" href="$class_general_spreader.html#af7490de679695e56211d1cc11fb3c6ce" title="obtain a SpreadRegion by expanding a cell spreading window from an overflow bin" alt="" coords="895,42,1119,69"/>
-<area shape="rect" id="node3" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="620,35,847,76"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="413,42,572,69"/>
+<area shape="rect" id="node1" title="find the legal expansion direction" alt="" coords="1167,5,1373,47"/>
+<area shape="rect" id="node2" href="$class_general_spreader.html#af7490de679695e56211d1cc11fb3c6ce" title="obtain a SpreadRegion by expanding a cell spreading window from an overflow bin" alt="" coords="895,13,1119,39"/>
+<area shape="rect" id="node3" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="620,5,847,47"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="413,13,572,39"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,42,116,69"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

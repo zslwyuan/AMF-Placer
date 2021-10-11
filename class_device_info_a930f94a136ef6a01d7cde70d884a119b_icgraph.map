@@ -1,10 +1,10 @@
 <map id="DeviceInfo::getClockRegions" name="DeviceInfo::getClockRegions">
-<area shape="rect" id="node1" title=" " alt="" coords="995,85,1183,112"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization" alt="" coords="700,13,947,54"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="733,78,913,119"/>
-<area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,162,395,203"/>
-<area shape="rect" id="node4" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="443,5,652,32"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,81,116,108"/>
-<area shape="rect" id="node7" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="447,107,648,149"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="178,5,381,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="967,78,1155,105"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization" alt="" coords="672,5,919,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="705,71,885,112"/>
+<area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="680,136,911,177"/>
+<area shape="rect" id="node4" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,27,624,54"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,129,366,171"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,27,367,54"/>
 </map>
