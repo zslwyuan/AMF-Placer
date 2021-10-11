@@ -90,11 +90,12 @@ class DesignInfo
         CellType_RAM32X1D,
         CellType_RAM32X1S,
         CellType_RAM64X1S,
-        CellType_RAM64M8,
+        CellType_RAM64M8, // these are LUTRAMs
+
         CellType_FIFO36E2,
         CellType_FIFO18E2,
         CellType_RAMB18E2,
-        CellType_RAMB36E2, // these are LUTRAMs
+        CellType_RAMB36E2, // these are BRAMs
 
         CellType_BUFGCE,
         CellType_BUFG_GT,

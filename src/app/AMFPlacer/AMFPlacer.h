@@ -133,24 +133,21 @@ class AMFPlacer
         globalPlacer = new GlobalPlacer(placementInfo, JSON);
 
         // enable the timing optimization, start initial placement and global placement.
-        timingOptimizer->enhanceNetWeight_LevelBased(10);
+
         globalPlacer->clusterPlacement();
         globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5, true,
                                                   true);
 
-        // create a more fine-grained bin-grid to properly spread the cells
+        // designInfo->resetNetEnhanceRatio();
+
+        // placementInfo->updateLongPaths();
         placementInfo->createGridBins(2.0, 2.0);
         placementInfo->adjustLUTFFUtilization(-10, true);
-        globalPlacer->spreading(-1);
+        timingOptimizer->enhanceNetWeight_LevelBased(10);
+        // globalPlacer->spreading(-1);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true);
-
-        // strengthen the timing optimization, enable area adjustion and relax a bit the pseudo nets for more
-        // flexibility
-        timingOptimizer->enhanceNetWeight_LevelBased(10);
-        globalPlacer->setNeighborDisplacementUpperbound(3.0);
-        globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
 
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
@@ -161,15 +158,18 @@ class AMFPlacer
         placementInfo->printStat();
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
+        timingOptimizer->enhanceNetWeight_LevelBased(10);
+        globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
+        globalPlacer->setNeighborDisplacementUpperbound(3.0);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
 
-        timingOptimizer->clusterLongPathInOneClockRegion(20, 0.25);
+        placementInfo->getDesignInfo()->resetNetEnhanceRatio();
+
+        // timingOptimizer->clusterLongPathInOneClockRegion(20, 0.5);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
-
-        // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
 
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5, true, false,
                                                   timingOptimizer);

@@ -71,13 +71,15 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                     continue;
 
                 float enhanceRatio;
-                float overflowRatio = std::pow((float)targetPathLen / levelThr, 0.85);
+                float overflowRatio = std::pow((float)targetPathLen / levelThr, 1.75 / 2);
                 // if (overflowRatio > 10)
                 //     overflowRatio = 10;
                 if (pinNum < 600)
-                    enhanceRatio = 1.2 * (overflowRatio + 0.0025 * pinNum);
+                    enhanceRatio = 1.5 * (overflowRatio + 0.0025 * pinNum);
                 else
-                    enhanceRatio = 1.2 * (overflowRatio + 1.5);
+                    enhanceRatio = 1.5 * (overflowRatio + 1.5);
+
+                enhanceRatio = std::sqrt(enhanceRatio);
                 if (enhanceRatio > maxEnhanceRatio)
                     maxEnhanceRatio = enhanceRatio;
                 curPinA->getNet()->enhanceOverallNetEnhancement(enhanceRatio);
@@ -198,7 +200,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             auto candidateCellIds =
                 simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLenThr, 20000, extractedCellIds);
 
-            if (candidateCellIds.size() >= 8)
+            if (candidateCellIds.size() >= pathLenThr)
             {
                 std::set<PlacementInfo::PlacementUnit *> PUsInLongPaths;
                 PUsInLongPaths.clear();
@@ -229,7 +231,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                             int clockRegionX, clockRegionY;
                             auto tmpLoc = cellLoc[cellId];
                             deviceInfo->getClockRegionByLocation(tmpLoc.X, tmpLoc.Y, clockRegionX, clockRegionY);
-                            std::pair<int, int> tmpClockLocYX(clockRegionY, clockRegionX);
+                            std::pair<int, int> tmpClockLocYX(-1, clockRegionX);
                             if (clockRegionYX2Cnt.find(tmpClockLocYX) == clockRegionYX2Cnt.end())
                             {
                                 clockRegionYX2Cnt[tmpClockLocYX] = 0;
@@ -252,7 +254,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                                 auto tmpLoc = cellLoc[cellId];
                                 deviceInfo->getClockRegionByLocation(tmpLoc.X, tmpLoc.Y, clockRegionX, clockRegionY);
 
-                                std::pair<int, int> tmpClockLocYX(clockRegionY, clockRegionX);
+                                std::pair<int, int> tmpClockLocYX(-1, clockRegionX);
                                 if (clockRegionYX2Cnt.find(tmpClockLocYX) == clockRegionYX2Cnt.end())
                                 {
                                     clockRegionYX2Cnt[tmpClockLocYX] = 0;
@@ -272,7 +274,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                     if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) &&
                         totalClockRegionWeight < 20000 && maxClockRegionWeight >= 4)
                     {
-                        auto optClockRegion = YX2ClockRegion[optClockLocYX.first][optClockLocYX.second];
+                        auto optClockRegion = YX2ClockRegion[0][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;
                         float cY = (optClockRegion->getTop() + optClockRegion->getBottom()) / 2;
                         for (auto curPU : PUsInLongPaths)
@@ -280,7 +282,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                             if (!curPU->isFixed())
                             {
                                 float fX = cX;
-                                float fY = cY;
+                                float fY = curPU->Y();
                                 placementInfo->legalizeXYInArea(curPU, fX, fY);
                                 curPU->setAnchorLocationAndForgetTheOriginalOne(fX, fY);
                                 extractedPUs.insert(curPU);

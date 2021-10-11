@@ -789,6 +789,25 @@ class PlacementInfo
             return switchDemandForNets;
         }
 
+        /**
+         * @brief Set the clock region X for this bin
+         *
+         * @param _x
+         */
+        inline void setClockRegionX(int _x)
+        {
+            clockRegionX = _x;
+        }
+
+        /**
+         * @brief Get the clock region X for this bin
+         *
+         */
+        inline int getClockRegionX()
+        {
+            return clockRegionX;
+        }
+
       private:
         std::string sharedCellType;
         std::vector<DeviceInfo::DeviceSite *> correspondingSites;
@@ -815,6 +834,8 @@ class PlacementInfo
         float switchDemandForNets = 0.0;
         float switchSupplyForNets = 0.0; // only consider the general sites (DSP/BRAM/SLICE)
         std::mutex mtx;
+
+        int clockRegionX = -1;
     };
 
     /**
@@ -2015,11 +2036,10 @@ class PlacementInfo
             std::pair<int, int> B_ClockLocYX(B_cellClockRegionY, B_cellClockRegionX);
 
             float clockRegionOverhead = 0;
-            if (B_ClockLocYX != A_ClockLocYX)
-            {
-                clockRegionOverhead = std::abs(B_cellClockRegionX - A_ClockRegionX) * 15 +
-                                      std::abs(B_cellClockRegionY - A_ClockRegionY) * 6;
-            }
+            // if (B_ClockLocYX != A_ClockLocYX)
+            // {
+            //     clockRegionOverhead = std::abs(B_cellClockRegionX - A_ClockRegionX) * 15;
+            // }
 
             return std::fabs(tmp_rightX - tmp_leftX) + y2xRatio * std::fabs(tmp_topY - tmp_bottomY) +
                    clockRegionOverhead;
@@ -2093,7 +2113,7 @@ class PlacementInfo
                                            (float)(pinOffsetsInUnit.size() - 1) * 0.01;
                     if (clockRegionW > 3)
                         clockRegionW = 3;
-                    w *= clockRegionW;
+                    // w *= clockRegionW;
                 }
 
                 // add net between left node and right node
@@ -2128,14 +2148,6 @@ class PlacementInfo
             }
             if (updateY)
             {
-                if (checkClockRegion && B_cellClockRegionY != A_ClockRegionY)
-                {
-                    clockRegionW = 1 + std::abs(B_cellClockRegionY - A_ClockRegionY) * 32 /
-                                           (float)(pinOffsetsInUnit.size() - 1) * 0.01;
-                    if (clockRegionW > 3)
-                        clockRegionW = 3;
-                    w *= clockRegionW;
-                }
 
                 w *= y2xRatio;
 

@@ -382,7 +382,6 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
             if (!findNext)
             {
                 forwarding = false;
-                return resSucessors;
             }
         }
 

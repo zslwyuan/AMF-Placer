@@ -474,7 +474,7 @@ class PlacementTimingInfo
             pathLenSortedNodes = nodes;
             std::sort(pathLenSortedNodes.begin(), pathLenSortedNodes.end(), [](TimingNode *a, TimingNode *b) -> bool {
                 return (a->getLongestPathLength() == b->getLongestPathLength())
-                           ? (a->getForwardLevel() < b->getForwardLevel())
+                           ? (a->getForwardLevel() > b->getForwardLevel())
                            : (a->getLongestPathLength() > b->getLongestPathLength());
             });
         }

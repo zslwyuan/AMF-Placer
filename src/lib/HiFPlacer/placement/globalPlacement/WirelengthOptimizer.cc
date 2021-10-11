@@ -395,11 +395,10 @@ void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeig
                 // calculate the distance
                 double dis = manhattanDis(srcLoc.X, srcLoc.Y, sinkLoc.X, sinkLoc.Y);
 
-                // int sinkClockRegionXId, sinkClockRegionYId;
-                // deviceInfo->getClockRegionByLocation(sinkLoc.X, sinkLoc.Y, sinkClockRegionXId, sinkClockRegionYId);
+                int sinkClockRegionXId, sinkClockRegionYId;
+                deviceInfo->getClockRegionByLocation(sinkLoc.X, sinkLoc.Y, sinkClockRegionXId, sinkClockRegionYId);
 
-                // dis += std::abs(sinkClockRegionXId - srcClockRegionXId) * 10 +
-                //        std::abs(sinkClockRegionYId - srcClockRegionYId) * 10;
+                // dis += std::abs(sinkClockRegionXId - srcClockRegionXId) * 10;
 
                 // handle the potential sinkPins on the longest path by checking the backward level
                 if (succBackwardLevel + 1 >= levelThr)
@@ -452,6 +451,11 @@ void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeig
                 //          << "\n";
                 // calculate the distance
                 double dis = manhattanDis(srcLoc.X, srcLoc.Y, sinkLoc.X, sinkLoc.Y);
+
+                int sinkClockRegionXId, sinkClockRegionYId;
+                deviceInfo->getClockRegionByLocation(sinkLoc.X, sinkLoc.Y, sinkClockRegionXId, sinkClockRegionYId);
+
+                // dis += std::abs(sinkClockRegionXId - srcClockRegionXId) * 10;
 
                 // handle the potential sinkPins on the longest path by checking the backward level
                 if (succBackwardLevel >= driverBackwardLevel - 3)

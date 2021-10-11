@@ -1253,6 +1253,26 @@ void ParallelCLBPacker::dumpDSPBRAMPlacementTcl(std::ofstream &outfileTcl)
     }
 }
 
+bool containLUTRAMCells(PlacementInfo::PlacementUnit *curPU)
+{
+    if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
+    {
+        return unpackedCell->getCell()->originallyIsLUTRAM();
+    }
+    else if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
+    {
+        for (auto tmpCell : curMacro->getCells())
+        {
+            if (tmpCell->originallyIsLUTRAM())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    return false;
+}
+
 void ParallelCLBPacker::dumpCLBPlacementTcl(std::ofstream &outfileTcl, bool packingRelatedToLUT6_2)
 {
     std::string placementStr = "";
@@ -1294,6 +1314,23 @@ void ParallelCLBPacker::dumpCLBPlacementTcl(std::ofstream &outfileTcl, bool pack
                             cnt++;
                             placementStr += "  " + slotMapping.MuxF7[i][j]->getName() + "  " + CLBSite->getName() +
                                             "/" + slotMapping.MuxF7SlotNames[i][j] + "  \n";
+                        }
+                    }
+                }
+            }
+            else if (tmpPackingSite->checkIsLUTRAMSite())
+            {
+                auto tmpMacro = tmpPackingSite->getLUTRAMMacro();
+                if (containLUTRAMCells(tmpMacro))
+                {
+                    if (tmpMacro->getFixedCellInfoVec().size() % 2 ==
+                        0) // if the number of fixed cells is odd, there might be weird errors from Vivado.
+                    {
+                        for (unsigned int i = 0; i < tmpMacro->getFixedCellInfoVec().size(); i++)
+                        {
+                            DesignInfo::DesignCell *curCell = tmpMacro->getFixedCellInfoVec()[i].cell;
+                            placementStr += "  " + curCell->getName() + "  " + CLBSite->getName() + "/" +
+                                            tmpMacro->getFixedCellInfoVec()[i].BELName + "  \n";
                         }
                     }
                 }

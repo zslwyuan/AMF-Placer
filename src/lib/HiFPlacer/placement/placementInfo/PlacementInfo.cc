@@ -271,6 +271,7 @@ void PlacementInfo::PlacementBinInfo::addSiteIntoBin(DeviceInfo::DeviceSite *cur
     {
         correspondingSites.push_back(curSite);
         capacity += compatiblePlacementTable->sharedCellType2BELNames[sharedCellType].size();
+        setClockRegionX(curSite->getClockRegionX());
     }
     else
     {
@@ -421,6 +422,19 @@ void PlacementInfo::createGridBins(float _binWidth, float _binHeight)
                 break;
         }
     }
+
+    // for (auto &tmpBinGrid : SharedBELTypeBinGrid)
+    // {
+    //     for (auto &tmpRow : tmpBinGrid)
+    //         for (unsigned int i = 2; i < tmpRow.size(); i++)
+    //         {
+    //             if (tmpRow[i]->getClockRegionX() != tmpRow[i - 1]->getClockRegionX())
+    //             {
+    //                 tmpRow[i - 1]->setRequiredBinShrinkRatio(0.75);
+    //                 tmpRow[i]->setRequiredBinShrinkRatio(0.75);
+    //             }
+    //         }
+    // }
 
     std::set<std::string> siteTypeNotMapped;
     if (countedSites.size() < deviceInfo->getSites().size())
