@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::_siteWithScore" name="ParallelCLBPacker::_siteWithScore">
-<area shape="rect" id="node1" title=" " alt="" coords="1921,362,2059,403"/>
+<area shape="rect" id="node1" title="helper struct for candidate site sorting" alt="" coords="1921,362,2059,403"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html" title="PackingCLBSite is a container for the packing information (parameters, candidates and packing status)..." alt="" coords="1541,407,1680,449"/>
 <area shape="rect" id="node13" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html" title="PackingCLBCluster is a container of cells/PlacementUnits which can be packed in the corresponding CLB..." alt="" coords="1871,439,2109,481"/>
 <area shape="rect" id="node3" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="1237,128,1344,155"/>

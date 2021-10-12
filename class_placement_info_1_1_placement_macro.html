@@ -563,7 +563,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,379,363,420"/>
 <area shape="rect" href="class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="429,365,611,391"/>
 <area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="185,444,341,485"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="193,509,334,551"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="193,509,334,551"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,386,116,413"/>
 <area shape="rect" href="class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,222,327,249"/>
 </map>
@@ -701,7 +701,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="399,295,555,337"/>
 <area shape="rect" href="class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="386,361,569,388"/>
 <area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,294,320,335"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="171,406,313,447"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="171,406,313,447"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,272,116,299"/>
 <area shape="rect" href="class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="178,219,306,245"/>
 </map>
@@ -1083,7 +1083,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01607">1607</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00335">InitialPacker::findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00739">InitialPacker::findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00209">InitialPacker::findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01126">InitialPacker::findMuxMacros()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00684">ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFSite()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01372">InitialPacker::loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00516">InitialPacker::mapCarryRelatedRouteThru()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01047">ParallelCLBPacker::PackingCLBSite::mapMuxF7Macro()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00908">ParallelCLBPacker::PackingCLBSite::mapMuxF8Macro()</a>, <a class="el" href="_placement_info_8cc_source.html#l00714">operator&lt;&lt;()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_initial_packer_8cc_source.html#l00335">InitialPacker::findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00739">InitialPacker::findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00209">InitialPacker::findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01126">InitialPacker::findMuxMacros()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00684">ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01372">InitialPacker::loadOtherCLBMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00516">InitialPacker::mapCarryRelatedRouteThru()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01047">ParallelCLBPacker::PackingCLBSite::mapMuxF7Macro()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00908">ParallelCLBPacker::PackingCLBSite::mapMuxF8Macro()</a>, <a class="el" href="_placement_info_8cc_source.html#l00714">operator&lt;&lt;()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1094,13 +1094,13 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="353,157,561,184"/>
 <area shape="rect" href="class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="362,56,553,83"/>
 <area shape="rect" href="class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="364,107,551,133"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a95869e6f3fc7e59347ce2889d73a71ce" title=" " alt="" coords="618,208,825,264"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5c1b5eb03904f127097c825ec900705f" title="greedily find the exact slots for the LUTs/FFs in the site" alt="" coords="618,208,825,264"/>
 <area shape="rect" href="class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="379,277,535,318"/>
 <area shape="rect" href="class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="622,287,821,329"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6ce6ab50b41b747826397da9c13a89ff" title="map cells in MUXF7 macro to CLB slot" alt="" coords="609,405,833,446"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6adb673f74d9954f73a49c88db60ac68" title="map cells in MUXF8 macro to CLB slot" alt="" coords="609,470,833,511"/>
 <area shape="rect" href="_placement_info_8cc.html#a0f0f5e6d103770fbc53ac592f3798708" title=" " alt="" coords="679,536,764,563"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="164,369,305,410"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="164,369,305,410"/>
 <area shape="rect" href="class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="171,132,299,159"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,347,116,373"/>
 </map>
@@ -1209,16 +1209,16 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01724">1724</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00684">ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFSite()</a>, <a class="el" href="_placement_info_8cc_source.html#l00714">operator&lt;&lt;()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00015">ParallelCLBPacker::prePackLegalizedMacros()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00684">ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()</a>, <a class="el" href="_placement_info_8cc_source.html#l00714">operator&lt;&lt;()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00015">ParallelCLBPacker::prePackLegalizedMacros()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_info_1_1_placement_macro_ad1d97e835581847571928f7b84318ff7_icgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_macro_ad1d97e835581847571928f7b84318ff7_icgraph" alt=""/></div>
 <map name="aclass_placement_info_1_1_placement_macro_ad1d97e835581847571928f7b84318ff7_icgraph" id="aclass_placement_info_1_1_placement_macro_ad1d97e835581847571928f7b84318ff7_icgraph">
 <area shape="rect" title=" " alt="" coords="447,78,621,119"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a95869e6f3fc7e59347ce2889d73a71ce" title=" " alt="" coords="192,5,399,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5c1b5eb03904f127097c825ec900705f" title="greedily find the exact slots for the LUTs/FFs in the site" alt="" coords="192,5,399,61"/>
 <area shape="rect" href="_placement_info_8cc.html#a0f0f5e6d103770fbc53ac592f3798708" title=" " alt="" coords="253,85,338,112"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title=" " alt="" coords="211,137,379,178"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="211,137,379,178"/>
 <area shape="rect" href="class_parallel_c_l_b_packer.html#a0eaa8cf35b2dc598df118be1d4ed0d34" title="Construct a new Parallel CLB Packer object." alt="" coords="5,137,144,178"/>
 </map>
 </div>
@@ -1461,7 +1461,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_placement_info_1_1_placement_macro_ab7530c5a864f2260d9c868b25e7604d4_icgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_macro_ab7530c5a864f2260d9c868b25e7604d4_icgraph" alt=""/></div>
 <map name="aclass_placement_info_1_1_placement_macro_ab7530c5a864f2260d9c868b25e7604d4_icgraph" id="aclass_placement_info_1_1_placement_macro_ab7530c5a864f2260d9c868b25e7604d4_icgraph">
 <area shape="rect" title=" " alt="" coords="868,118,1043,159"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a977fe1bd59bce4a4f1671ef8abe69c76" title=" " alt="" coords="609,5,807,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a977fe1bd59bce4a4f1671ef8abe69c76" title="find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mappe..." alt="" coords="609,5,807,61"/>
 <area shape="rect" href="class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="609,85,807,126"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6ce6ab50b41b747826397da9c13a89ff" title="map cells in MUXF7 macro to CLB slot" alt="" coords="596,150,820,191"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6adb673f74d9954f73a49c88db60ac68" title="map cells in MUXF8 macro to CLB slot" alt="" coords="596,215,820,257"/>

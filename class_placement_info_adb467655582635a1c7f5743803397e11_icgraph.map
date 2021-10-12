@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title="set the legalization of some PlacementUnit objects" alt="" coords="1129,143,1328,170"/>
 <area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="879,5,1057,47"/>
 <area shape="rect" id="node7" href="$class_macro_legalizer.html#a77e9e1f1fbbf77fb805b34d57d3198f4" title="finally dynamic programming to legalize the macros which have been mapped to the columns." alt="" coords="875,136,1061,177"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="436,228,577,269"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="436,228,577,269"/>
 <area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="859,71,1077,112"/>
 <area shape="rect" id="node11" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="855,201,1081,243"/>
 <area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="653,78,802,105"/>

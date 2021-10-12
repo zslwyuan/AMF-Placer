@@ -4,9 +4,9 @@
 <area shape="rect" id="node4" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="419,65,620,107"/>
 <area shape="rect" id="node5" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="166,123,365,164"/>
 <area shape="rect" id="node6" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="187,188,343,229"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="450,239,589,280"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="450,239,589,280"/>
 <area shape="rect" id="node8" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="675,355,860,382"/>
-<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title=" " alt="" coords="672,289,863,331"/>
+<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="672,289,863,331"/>
 <area shape="rect" id="node12" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="688,410,847,437"/>
 <area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,225,116,251"/>
 <area shape="rect" id="node9" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,355,624,382"/>

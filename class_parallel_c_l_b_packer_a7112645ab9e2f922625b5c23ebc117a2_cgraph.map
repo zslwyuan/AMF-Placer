@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::setPULocationToPackedSite" name="ParallelCLBPacker::setPULocationToPackedSite">
-<area shape="rect" id="node1" title=" " alt="" coords="5,159,196,200"/>
+<area shape="rect" id="node1" title="update the location of PlacementUnits according to the packing result" alt="" coords="5,159,196,200"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="244,125,443,167"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="244,191,443,232"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="504,5,671,47"/>

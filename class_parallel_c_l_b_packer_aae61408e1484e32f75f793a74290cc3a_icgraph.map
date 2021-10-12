@@ -1,6 +1,6 @@
 <map id="ParallelCLBPacker::dumpPlacementTcl" name="ParallelCLBPacker::dumpPlacementTcl">
 <area shape="rect" id="node1" title=" " alt="" coords="537,5,676,47"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="351,5,489,47"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,5,303,47"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,5,303,47"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

@@ -270,8 +270,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab0426a131d3a82735ccffa94c915026a"><td class="mdescLeft">&#160;</td><td class="mdescRight">a verification function to check whether the cells in this cluster are REALLY LEGAL.  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ab0426a131d3a82735ccffa94c915026a">More...</a><br /></td></tr>
 <tr class="separator:ab0426a131d3a82735ccffa94c915026a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89990796f275bab27a8e510b74ce360e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a89990796f275bab27a8e510b74ce360e">checkNumMuxCompatibleInFFSet</a> (int i, int addNum)</td></tr>
+<tr class="memdesc:a89990796f275bab27a8e510b74ce360e"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether a specific number of Muxes can be compatible with a specific FFset for packing  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a89990796f275bab27a8e510b74ce360e">More...</a><br /></td></tr>
 <tr class="separator:a89990796f275bab27a8e510b74ce360e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f34ace3d5500bde637290ecdde79a4a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a">getPlacementUnitMaxPathLen</a> (<a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementInfo::PlacementUnit</a> *curPU)</td></tr>
+<tr class="memdesc:a5f34ace3d5500bde637290ecdde79a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the max length of paths involving a given PlacementUnit.  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a">More...</a><br /></td></tr>
 <tr class="separator:a5f34ace3d5500bde637290ecdde79a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -285,32 +287,44 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a67fc814584509f33539233b897d07524"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a67fc814584509f33539233b897d07524">numMuxes</a> = 0</td></tr>
 <tr class="separator:a67fc814584509f33539233b897d07524"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5b494a721d04cb3628c4dead6af7283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html">PackingCLBSite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af5b494a721d04cb3628c4dead6af7283">parentPackingCLB</a> = nullptr</td></tr>
+<tr class="memdesc:af5b494a721d04cb3628c4dead6af7283"><td class="mdescLeft">&#160;</td><td class="mdescRight">the paraent CLB site for this cluster  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af5b494a721d04cb3628c4dead6af7283">More...</a><br /></td></tr>
 <tr class="separator:af5b494a721d04cb3628c4dead6af7283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a883826e41a0e22d9d6390e1feb5b5dce"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a883826e41a0e22d9d6390e1feb5b5dce">scoreInSite</a> = -100000000</td></tr>
+<tr class="memdesc:a883826e41a0e22d9d6390e1feb5b5dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">the evaluation score of packing for this cluster  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a883826e41a0e22d9d6390e1feb5b5dce">More...</a><br /></td></tr>
 <tr class="separator:a883826e41a0e22d9d6390e1feb5b5dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40d1fcc64cf200aad28c8f06933338a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a40d1fcc64cf200aad28c8f06933338a4">hashId</a> = -3654</td></tr>
+<tr class="memdesc:a40d1fcc64cf200aad28c8f06933338a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">a hash id to record the elements in this cluster  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a40d1fcc64cf200aad28c8f06933338a4">More...</a><br /></td></tr>
 <tr class="separator:a40d1fcc64cf200aad28c8f06933338a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74526fa718d6febf60afd5cd54e9b906"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a74526fa718d6febf60afd5cd54e9b906">hashed</a> = false</td></tr>
 <tr class="separator:a74526fa718d6febf60afd5cd54e9b906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc973acceeed93491603201fa5f2a3a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#afc973acceeed93491603201fa5f2a3a4">id</a> = -1</td></tr>
+<tr class="memdesc:afc973acceeed93491603201fa5f2a3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">the unique id for each cluster  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#afc973acceeed93491603201fa5f2a3a4">More...</a><br /></td></tr>
 <tr class="separator:afc973acceeed93491603201fa5f2a3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9714d9ffd0c7499d53e84a75d40e88ea"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementInfo::PlacementUnit</a> *, <a class="el" href="struct_packing___p_ucompare.html">Packing_PUcompare</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a9714d9ffd0c7499d53e84a75d40e88ea">PUs</a></td></tr>
 <tr class="separator:a9714d9ffd0c7499d53e84a75d40e88ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa98b6dfa68cdb764118688856a508e92"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aa98b6dfa68cdb764118688856a508e92">totalConnectivityScore</a> = 0</td></tr>
+<tr class="memdesc:aa98b6dfa68cdb764118688856a508e92"><td class="mdescLeft">&#160;</td><td class="mdescRight">the connectivity score for this cluster  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aa98b6dfa68cdb764118688856a508e92">More...</a><br /></td></tr>
 <tr class="separator:aa98b6dfa68cdb764118688856a508e92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc9d1edb02b495633e30be5ab22926e3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#adc9d1edb02b495633e30be5ab22926e3">HPWLChange</a> = 0</td></tr>
+<tr class="memdesc:adc9d1edb02b495633e30be5ab22926e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">the HPWL term for the wirelength optimization  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#adc9d1edb02b495633e30be5ab22926e3">More...</a><br /></td></tr>
 <tr class="separator:adc9d1edb02b495633e30be5ab22926e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3a7b325ef153428857bf73fd647b43d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af3a7b325ef153428857bf73fd647b43d">totalCellNum</a> = 0</td></tr>
+<tr class="memdesc:af3a7b325ef153428857bf73fd647b43d"><td class="mdescLeft">&#160;</td><td class="mdescRight">the cell number term in the cluster score  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af3a7b325ef153428857bf73fd647b43d">More...</a><br /></td></tr>
 <tr class="separator:af3a7b325ef153428857bf73fd647b43d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b70692bf05d73e58e37f3e8df67d6ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0b70692bf05d73e58e37f3e8df67d6ab">totalLen</a> = 0</td></tr>
+<tr class="memdesc:a0b70692bf05d73e58e37f3e8df67d6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">the term of timing (paths) in the packing score  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0b70692bf05d73e58e37f3e8df67d6ab">More...</a><br /></td></tr>
 <tr class="separator:a0b70692bf05d73e58e37f3e8df67d6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b661421cb1c3c2d0d8137962eb00d63"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1b661421cb1c3c2d0d8137962eb00d63">HPWLWeight</a> = 0.01</td></tr>
+<tr class="memdesc:a1b661421cb1c3c2d0d8137962eb00d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">the configurable weight for the wirelength in the cluster score  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1b661421cb1c3c2d0d8137962eb00d63">More...</a><br /></td></tr>
 <tr class="separator:a1b661421cb1c3c2d0d8137962eb00d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d81242fa27bccb38544668e52ce056"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_parallel_c_l_b_packer_1_1_packed_control_set.html">PackedControlSet</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a48d81242fa27bccb38544668e52ce056">FFControlSets</a></td></tr>
+<tr class="memdesc:a48d81242fa27bccb38544668e52ce056"><td class="mdescLeft">&#160;</td><td class="mdescRight">the control set information for this cluster  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a48d81242fa27bccb38544668e52ce056">More...</a><br /></td></tr>
 <tr class="separator:a48d81242fa27bccb38544668e52ce056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca8d14e75fb71a665374c10e45ff7266"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aca8d14e75fb71a665374c10e45ff7266">singleLUTs</a></td></tr>
+<tr class="memdesc:aca8d14e75fb71a665374c10e45ff7266"><td class="mdescLeft">&#160;</td><td class="mdescRight">the set of LUTs have not been paired with other LUTs in the clutser  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aca8d14e75fb71a665374c10e45ff7266">More...</a><br /></td></tr>
 <tr class="separator:aca8d14e75fb71a665374c10e45ff7266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3204c65650b3adf0e147abdd1711f08b"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::pair&lt; <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *, <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a3204c65650b3adf0e147abdd1711f08b">pairedLUTs</a></td></tr>
+<tr class="memdesc:a3204c65650b3adf0e147abdd1711f08b"><td class="mdescLeft">&#160;</td><td class="mdescRight">the paired LUTs in the cluster  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a3204c65650b3adf0e147abdd1711f08b">More...</a><br /></td></tr>
 <tr class="separator:a3204c65650b3adf0e147abdd1711f08b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -353,10 +367,10 @@ Here is the caller graph for this function:</div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_ada3d97286321e70af77d9ce5b6bd2cba_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_ada3d97286321e70af77d9ce5b6bd2cba_icgraph">
 <area shape="rect" title="Construct a new Packing CLB Cluster object (it should not be called.)" alt="" coords="1203,5,1441,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="916,5,1155,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,13,868,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,13,681,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,13,489,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,13,303,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,13,868,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,13,681,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,13,489,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,13,303,54"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>
 </div>
@@ -515,7 +529,7 @@ false if this attempt FAILED. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00223">223</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html">ParallelCLBPacker_PackingCLBCluster.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">ParallelCLBPacker::PackingCLBSite::addCarry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">ParallelCLBPacker::PackingCLBSite::addCarry()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -523,10 +537,10 @@ Here is the caller graph for this function:</div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a06dea9d3c7967a6980094b6ea47e69fc_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a06dea9d3c7967a6980094b6ea47e69fc_icgraph">
 <area shape="rect" title="try to add a given FF into this cluster" alt="" coords="1139,5,1377,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="916,13,1091,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,13,868,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,13,681,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,13,489,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,13,303,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,13,868,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,13,681,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,13,489,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,13,303,54"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>
 </div>
@@ -628,7 +642,7 @@ false if this attempt FAILED. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00100">100</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html">ParallelCLBPacker_PackingCLBCluster.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">ParallelCLBPacker::PackingCLBSite::addCarry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">ParallelCLBPacker::PackingCLBSite::addCarry()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -648,10 +662,10 @@ Here is the caller graph for this function:</div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a7bddc200c7d2404963bed65ad5ccbb77_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a7bddc200c7d2404963bed65ad5ccbb77_icgraph">
 <area shape="rect" title="try to add a given LUT into this cluster" alt="" coords="1139,5,1377,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="916,13,1091,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,13,868,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,13,681,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,13,489,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,13,303,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,13,868,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,13,681,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,13,489,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,13,303,54"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>
 </div>
@@ -717,11 +731,11 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="try to add a given PlacementUnit into this cluster" alt="" coords="1203,119,1441,175"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="926,5,1145,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af5d2130285d47decadf51abe644e18ea" title=" " alt="" coords="933,85,1138,141"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,191,868,233"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,191,868,233"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="916,216,1155,272"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,191,681,233"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,191,489,233"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,191,303,233"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,191,681,233"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,191,489,233"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,191,303,233"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,199,116,225"/>
 </map>
 </div>
@@ -984,6 +998,19 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>check whether a specific number of Muxes can be compatible with a specific FFset for packing </p>
+<p >Since Mux will use some register input wires for the select signal, we have to check whether the packing is possible for this situation</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>the id for the FF set </td></tr>
+    <tr><td class="paramname">addNum</td><td>the number of Muxes we want to add into the CLB </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the given number of Muxes can be added. </dd>
+<dd>
+false if the given number of Muxes CANNOT be added. </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00253">253</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html">ParallelCLBPacker_PackingCLBCluster.cc</a>.</p>
 
 </div>
@@ -1015,7 +1042,7 @@ false </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">950</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01420">ParallelCLBPacker::PackingCLBSite::addLUTRAMMacro()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00236">ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01025">getHash()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01519">ParallelCLBPacker::PackingCLBSite::addLUTRAMMacro()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00236">ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01025">getHash()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1038,10 +1065,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="1017,71,1253,112"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="739,211,958,267"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="1016,135,1255,191"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="779,67,918,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,67,681,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,67,489,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,67,303,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="779,67,918,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,67,681,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,67,489,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,67,303,108"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,74,116,101"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aebaa1fd4c02b8c8025317bd77e5d19cd" title="incrementally update the hash function with an additional PlacementUnit. This hash will be used to en..." alt="" coords="729,131,968,187"/>
 </map>
@@ -1269,7 +1296,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00776">776</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00838">operator&lt;&lt;()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00733">tryAddPU()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00838">operator&lt;&lt;()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00733">tryAddPU()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1280,10 +1307,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="993,71,1078,98"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="916,122,1155,178"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="916,202,1155,258"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,108,868,149"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,108,681,149"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,108,489,149"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,108,303,149"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,108,868,149"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,108,681,149"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,108,489,149"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,108,303,149"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,115,116,142"/>
 </map>
 </div>
@@ -1340,10 +1367,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Get the hash code for this cluster." alt="" coords="1016,85,1255,141"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aebaa1fd4c02b8c8025317bd77e5d19cd" title="incrementally update the hash function with an additional PlacementUnit. This hash will be used to en..." alt="" coords="729,5,968,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="739,85,958,141"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="779,165,918,206"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,165,681,206"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,165,489,206"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,165,303,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="779,165,918,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,165,681,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,165,489,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,165,303,206"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,172,116,199"/>
 </map>
 </div>
@@ -1589,7 +1616,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01106">1106</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01439">ParallelCLBPacker::PackingCLBSite::checkIsMuxSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">ParallelCLBPacker::PackingCLBSite::checkIsMuxSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1598,7 +1625,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Get the total number of MUX cells in this cluster." alt="" coords="527,41,765,97"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5286ef6fe44a2827163314175d1ecf83" title=" " alt="" coords="251,13,468,54"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="240,77,479,133"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title=" " alt="" coords="5,5,192,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,5,192,61"/>
 </map>
 </div>
 
@@ -1642,10 +1669,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="993,5,1078,32"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="916,56,1155,112"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="916,136,1155,192"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,143,868,185"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,143,681,185"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,143,489,185"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,143,303,185"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,143,868,185"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,143,681,185"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,143,489,185"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,143,303,185"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,151,116,177"/>
 </map>
 </div>
@@ -1758,10 +1785,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Get the Parent Packing CLB site of this cluster (this can be used to get more device information)" alt="" coords="1016,56,1255,112"/>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="806,5,891,32"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="729,56,968,112"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="779,135,918,177"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,135,681,177"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,135,489,177"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,135,303,177"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="779,135,918,177"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,135,681,177"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,135,489,177"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,135,303,177"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,143,116,169"/>
 </map>
 </div>
@@ -1792,13 +1819,23 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01188">1188</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>Get the max length of paths involving a given PlacementUnit. </p>
+<p >(unused currently) during packing, we should consider timing factors and the critical path should be assigned top priority.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">curPU</td><td>a given PlacementUnit </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01208">1208</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a5f34ace3d5500bde637290ecdde79a4a_cgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a5f34ace3d5500bde637290ecdde79a4a_cgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a5f34ace3d5500bde637290ecdde79a4a_cgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a5f34ace3d5500bde637290ecdde79a4a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,63,244,119"/>
+<area shape="rect" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="5,63,244,119"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad460b2959e4362540e884149090aa204" title=" " alt="" coords="292,5,519,47"/>
 <area shape="rect" href="class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="301,71,510,112"/>
 <area shape="rect" href="class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="310,137,501,163"/>
@@ -1841,14 +1878,14 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title=" " alt="" coords="1016,155,1255,211"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="739,5,958,61"/>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="806,85,891,112"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title=" " alt="" coords="540,147,679,189"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="540,147,679,189"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="729,187,968,243"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="779,266,918,307"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="779,266,918,307"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7b15e8778b4bf3c57bab17edc4928720" title=" " alt="" coords="738,331,959,387"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,198,303,239"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,198,303,239"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,205,116,232"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,230,681,271"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,227,489,269"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,230,681,271"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,227,489,269"/>
 </map>
 </div>
 
@@ -1889,12 +1926,12 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_aac2af3cf4994099914200ba3ef16ba01_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_aac2af3cf4994099914200ba3ef16ba01_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_aac2af3cf4994099914200ba3ef16ba01_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_aac2af3cf4994099914200ba3ef16ba01_icgraph">
 <area shape="rect" title="Get the score if this cluster is mapped the site." alt="" coords="1016,54,1255,110"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,72,681,113"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,72,681,113"/>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="806,35,891,62"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="729,86,968,142"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="779,165,918,206"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,72,489,113"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,72,303,113"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="779,165,918,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,72,489,113"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,72,303,113"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,79,116,106"/>
 </map>
 </div>
@@ -1939,10 +1976,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="993,5,1078,32"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="916,56,1155,112"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="916,136,1155,192"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,143,868,185"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,143,681,185"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,143,489,185"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,143,303,185"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,143,868,185"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,143,681,185"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,143,489,185"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,143,303,185"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,151,116,177"/>
 </map>
 </div>
@@ -2036,9 +2073,9 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a4f34cb2d7d9e31105dcf5bc0297e6780_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a4f34cb2d7d9e31105dcf5bc0297e6780_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a4f34cb2d7d9e31105dcf5bc0297e6780_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a4f34cb2d7d9e31105dcf5bc0297e6780_icgraph">
 <area shape="rect" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="729,5,968,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,13,681,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,13,489,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,13,303,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,13,681,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,13,489,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,13,303,54"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>
 </div>
@@ -2173,10 +2210,10 @@ Here is the caller graph for this function:</div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a801d7aa80e88d917d3b1ccefb32a98c3_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a801d7aa80e88d917d3b1ccefb32a98c3_icgraph">
 <area shape="rect" title="incrementally update the score of this cluster by considering that only a given PlacementUnit will be..." alt="" coords="996,41,1235,97"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="729,5,948,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="769,85,908,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,85,681,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,85,489,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,85,303,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="769,85,908,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,85,681,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,85,489,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,85,303,126"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,92,116,119"/>
 </map>
 </div>
@@ -2263,7 +2300,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a5c2b50544d1e2288a0fceb1e93a10004_cgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a5c2b50544d1e2288a0fceb1e93a10004_cgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a5c2b50544d1e2288a0fceb1e93a10004_cgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a5c2b50544d1e2288a0fceb1e93a10004_cgraph">
 <area shape="rect" title="conduct maximun cardinality matching algorithm to pair LUTs" alt="" coords="5,45,244,101"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1" title=" " alt="" coords="312,5,511,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1" title="check whether a given cell is unpackable" alt="" coords="312,5,511,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af423d1ee6ada68bf164aef48e9baf2c5" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="292,85,531,141"/>
 <area shape="rect" href="class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="579,59,731,101"/>
 <area shape="rect" href="class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="579,125,731,166"/>
@@ -2291,7 +2328,7 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00933">933</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html">ParallelCLBPacker_PackingCLBCluster.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">ParallelCLBPacker::PackingCLBSite::addCarry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">ParallelCLBPacker::PackingCLBSite::addCarry()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2310,10 +2347,10 @@ Here is the caller graph for this function:</div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a592c0413656822af69c9273b9597dc05_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a592c0413656822af69c9273b9597dc05_icgraph">
 <area shape="rect" title="a API to print the information of cluster" alt="" coords="1139,5,1377,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="916,13,1091,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,13,868,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,13,681,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,13,489,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,13,303,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,13,868,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,13,681,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,13,489,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,13,303,54"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>
 </div>
@@ -2594,10 +2631,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_ac692f7fbfff75aca6d1a150609784a91_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_ac692f7fbfff75aca6d1a150609784a91_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_ac692f7fbfff75aca6d1a150609784a91_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_ac692f7fbfff75aca6d1a150609784a91_icgraph">
 <area shape="rect" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="916,5,1155,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,13,868,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,13,681,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,13,489,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,13,303,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,13,868,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,13,681,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,13,489,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,13,303,54"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>
 </div>
@@ -2751,7 +2788,7 @@ false if the given LUT is NOT found in the set of paired LUTs </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00459">459</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html">ParallelCLBPacker_PackingCLBCluster.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01420">ParallelCLBPacker::PackingCLBSite::addLUTRAMMacro()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">ParallelCLBPacker::PackingCLBSite::addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01519">ParallelCLBPacker::PackingCLBSite::addLUTRAMMacro()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2771,11 +2808,11 @@ Here is the caller graph for this function:</div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a7260913b3b98f930167728b86b5631da_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster_a7260913b3b98f930167728b86b5631da_icgraph">
 <area shape="rect" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="1200,86,1439,142"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="947,5,1121,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,93,868,135"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,152,681,193"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,93,868,135"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,152,681,193"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="916,123,1152,164"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,152,489,193"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,152,303,193"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,152,489,193"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,152,303,193"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,159,116,186"/>
 </map>
 </div>
@@ -2803,7 +2840,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01241">1241</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the control set information for this cluster </p>
+<p >please note that some of these LUT/FFs are belong to CARRY chain, which is not shown in PUs </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01321">1321</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01160">containFF()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00776">getFFControlSets()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01127">getTotalCellWeight()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00400">PackingCLBCluster()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00622">removeFF()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00733">tryAddPU()</a>.</p>
 
@@ -2829,7 +2869,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01224">1224</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01261">1261</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">clusterHash()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01025">getHash()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00647">removePUToConstructDetCluster()</a>.</p>
 
@@ -2855,7 +2895,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01223">1223</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>a hash id to record the elements in this cluster </p>
+<p >Some clusters have the same elements (hashid) but they might have different index due to the combination (packing) order. We can use this hash id to remove duplicate candidates. </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01260">1260</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">clusterHash()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01025">getHash()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01037">getHashConst()</a>.</p>
 
@@ -2881,7 +2924,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01230">1230</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the HPWL term for the wirelength optimization </p>
+<p >We want the packing will not significantly increase the HPWL </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01285">1285</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01086">getHPWLChange()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
 
@@ -2907,7 +2953,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01233">1233</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the configurable weight for the wirelength in the cluster score </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01308">1308</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2931,7 +2979,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01226">1226</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the unique id for each cluster </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01267">1267</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00434">getId()</a>.</p>
 
@@ -2957,7 +3007,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01216">1216</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01236">1236</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2981,7 +3031,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01217">1217</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01237">1237</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -3005,7 +3055,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01218">1218</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01238">1238</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -3029,7 +3079,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01219">1219</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01239">1239</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01106">getNumMuxes()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00647">removePUToConstructDetCluster()</a>.</p>
 
@@ -3055,7 +3105,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01243">1243</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the paired LUTs in the cluster </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01333">1333</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00882">getPairedLUTs()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01127">getTotalCellWeight()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00015">maxCardinalityMatching()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00400">PackingCLBCluster()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00592">removeLUT()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00733">tryAddPU()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00857">tryRemoveLUTPairFromPairs()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00829">tryRemoveSingleLUTFromPairs()</a>.</p>
 
@@ -3081,9 +3133,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01221">1221</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the paraent CLB site for this cluster </p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">clusterHash()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01066">getHPWLChangeForPU()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00941">getParentPackingCLB()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01188">getPlacementUnitMaxPathLen()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01127">getTotalCellWeight()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00697">isPUTypeCompatibleWithSiteType()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00015">maxCardinalityMatching()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01245">1245</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">clusterHash()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01066">getHPWLChangeForPU()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00941">getParentPackingCLB()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01208">getPlacementUnitMaxPathLen()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01127">getTotalCellWeight()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00697">isPUTypeCompatibleWithSiteType()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00015">maxCardinalityMatching()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
 
 </div>
 </div>
@@ -3107,7 +3161,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01227">1227</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01268">1268</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00896">areAllPUsValidForThisSite()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">clusterHash()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00766">contains()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01037">getHashConst()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00771">getPUs()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00400">PackingCLBCluster()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00647">removePUToConstructDetCluster()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00733">tryAddPU()</a>.</p>
 
@@ -3133,7 +3187,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01222">1222</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the evaluation score of packing for this cluster </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01251">1251</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00917">getScoreInSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
 
@@ -3159,7 +3215,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01242">1242</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the set of LUTs have not been paired with other LUTs in the clutser </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01327">1327</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00786">getSingleLUTs()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01127">getTotalCellWeight()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00015">maxCardinalityMatching()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00400">PackingCLBCluster()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00592">removeLUT()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00796">removeSingleLUT()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00733">tryAddPU()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00809">tryRemoveSingleLUT()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00829">tryRemoveSingleLUTFromPairs()</a>.</p>
 
@@ -3185,7 +3243,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01231">1231</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the cell number term in the cluster score </p>
+<p >We want the large PlacementUnits can have a relatively higher priority in packing since the high displacement of these elements might lead to bad routing. </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01294">1294</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01096">getTotalCellNum()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
 
@@ -3211,7 +3272,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01229">1229</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the connectivity score for this cluster </p>
+<p >We want more nets become the internal nets inside the CLB sites so the number of nets between sites can be reduced. </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01277">1277</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01076">getTotalConnectivityScore()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
 
@@ -3237,7 +3301,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01232">1232</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the term of timing (paths) in the packing score </p>
+<p >We will accumulate the max length of paths for each elements in the cluster </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01302">1302</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01116">getTotalLen()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00412">PackingCLBCluster()</a>.</p>
 

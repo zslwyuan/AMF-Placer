@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::checkPackedPUsAndUnpackedPUs" name="ParallelCLBPacker::checkPackedPUsAndUnpackedPUs">
-<area shape="rect" id="node1" title=" " alt="" coords="5,27,240,69"/>
+<area shape="rect" id="node1" title="check the packing status for all the PlacementUnits" alt="" coords="5,27,240,69"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="305,5,463,32"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="288,57,480,98"/>
 <area shape="rect" id="node3" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="535,5,673,32"/>

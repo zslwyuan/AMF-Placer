@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::findNeiborSitesFromBinGrid" name="ParallelCLBPacker::findNeiborSitesFromBinGrid">
-<area shape="rect" id="node1" title=" " alt="" coords="5,115,188,157"/>
+<area shape="rect" id="node1" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="5,115,188,157"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a3f7002b061b18917a7aaa09000e44d25" title="Get the Bin Grid object." alt="" coords="257,5,430,32"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_bin_info.html#afbbb0cec92073cb3212f9dfd048ab2a2" title="Get the reference of the set of sites in the bin." alt="" coords="243,57,443,98"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="257,123,429,149"/>

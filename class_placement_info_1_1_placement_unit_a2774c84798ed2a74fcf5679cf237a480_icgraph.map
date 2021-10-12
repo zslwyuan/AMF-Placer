@@ -6,11 +6,11 @@
 <area shape="rect" id="node16" href="$_placement_info_8cc.html#a0f0f5e6d103770fbc53ac592f3798708" title=" " alt="" coords="1385,397,1470,424"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="1031,5,1250,61"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af5d2130285d47decadf51abe644e18ea" title=" " alt="" coords="1038,85,1243,141"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="811,223,949,265"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="811,223,949,265"/>
 <area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="1021,216,1260,272"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="566,223,710,265"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,223,489,265"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,289,303,330"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="566,223,710,265"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,223,489,265"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,289,303,330"/>
 <area shape="rect" id="node9" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,325,116,352"/>
 <area shape="rect" id="node13" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="537,347,739,389"/>
 <area shape="rect" id="node14" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="1061,397,1220,424"/>

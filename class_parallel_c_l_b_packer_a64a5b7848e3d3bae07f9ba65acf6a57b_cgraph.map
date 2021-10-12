@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::packCLBsIteration" name="ParallelCLBPacker::packCLBsIteration">
-<area shape="rect" id="node1" title=" " alt="" coords="5,41,144,83"/>
+<area shape="rect" id="node1" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="5,41,144,83"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="215,5,407,47"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a6e3b592eb8884c221226e78f353a90fa" title=" " alt="" coords="192,70,431,126"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::ripUpAndLegalizae" name="ParallelCLBPacker::ripUpAndLegalizae">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1173,144,1214"/>
+<area shape="rect" id="node1" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="5,1173,144,1214"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="229,789,403,830"/>
 <area shape="rect" id="node21" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abe4be1f7465d7c4be7730df39bc0aa01" title=" " alt="" coords="796,606,987,648"/>
 <area shape="rect" id="node23" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="488,236,727,292"/>
@@ -10,7 +10,7 @@
 <area shape="rect" id="node31" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a59f26ce47aec73ec5f0205c11aba2671" title=" " alt="" coords="205,1245,427,1286"/>
 <area shape="rect" id="node32" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcb7fcca09b57c7b7abf4b211cbaaac4" title=" " alt="" coords="192,1310,440,1352"/>
 <area shape="rect" id="node33" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acf2b8bb615ccffc237f000d2af9e44ac" title=" " alt="" coords="221,1375,411,1431"/>
-<area shape="rect" id="node34" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title=" " alt="" coords="225,1454,407,1496"/>
+<area shape="rect" id="node34" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="225,1454,407,1496"/>
 <area shape="rect" id="node40" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a86c5c11ca29c3eb66fcc36f6b1f1d502" title=" " alt="" coords="212,1519,420,1575"/>
 <area shape="rect" id="node41" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="197,354,435,410"/>
 <area shape="rect" id="node42" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a2200e5bc5ed226961baf26200359e72b" title="Get the Parent Packing CLB site of this cluster (this can be used to get more device information)" alt="" coords="197,1599,435,1655"/>

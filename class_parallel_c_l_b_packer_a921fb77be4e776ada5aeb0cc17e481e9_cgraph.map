@@ -1,11 +1,11 @@
 <map id="ParallelCLBPacker::exceptionPULegalize" name="ParallelCLBPacker::exceptionPULegalize">
-<area shape="rect" id="node1" title=" " alt="" coords="5,529,149,571"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title=" " alt="" coords="517,181,699,223"/>
+<area shape="rect" id="node1" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="5,529,149,571"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="517,181,699,223"/>
 <area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a86c5c11ca29c3eb66fcc36f6b1f1d502" title=" " alt="" coords="504,442,712,498"/>
 <area shape="rect" id="node11" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="1383,828,1557,869"/>
 <area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aac2af3cf4994099914200ba3ef16ba01" title="Get the score if this cluster is mapped the site." alt="" coords="489,522,727,578"/>
 <area shape="rect" id="node13" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="197,305,436,361"/>
-<area shape="rect" id="node17" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="247,1013,386,1055"/>
+<area shape="rect" id="node17" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="247,1013,386,1055"/>
 <area shape="rect" id="node30" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="782,1569,1021,1625"/>
 <area shape="rect" id="node49" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="229,1801,404,1843"/>
 <area shape="rect" id="node50" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="229,1867,404,1908"/>

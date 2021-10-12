@@ -1,10 +1,10 @@
 <map id="ParallelCLBPacker::packCLBs" name="ParallelCLBPacker::packCLBs">
-<area shape="rect" id="node1" title=" " alt="" coords="5,721,144,762"/>
+<area shape="rect" id="node1" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="5,721,144,762"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="218,318,357,359"/>
 <area shape="rect" id="node26" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="503,485,593,512"/>
-<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="218,581,357,622"/>
-<area shape="rect" id="node43" href="$class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title=" " alt="" coords="218,721,357,762"/>
-<area shape="rect" id="node44" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title=" " alt="" coords="192,1017,383,1058"/>
+<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="218,581,357,622"/>
+<area shape="rect" id="node43" href="$class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="218,721,357,762"/>
+<area shape="rect" id="node44" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="192,1017,383,1058"/>
 <area shape="rect" id="node45" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="449,1017,647,1058"/>
 <area shape="rect" id="node46" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="1020,1057,1219,1098"/>
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="479,99,617,141"/>
@@ -31,15 +31,15 @@
 <area shape="rect" id="node18" href="$class_placement_info_1_1_compatible_placement_table.html#ab0eda5a61e6b57c45261526dfe8346cf" title="Get the Potential BEL Type IDs for a specific cell object." alt="" coords="1577,579,1841,621"/>
 <area shape="rect" id="node20" href="$class_placement_info_1_1_compatible_placement_table.html#a5cfe1024c3908d336040aa5df6a9daf3" title="Get the Actual Occupation By Cell Id." alt="" coords="1287,200,1529,256"/>
 <area shape="rect" id="node22" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="1051,456,1188,483"/>
-<area shape="rect" id="node29" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title=" " alt="" coords="431,537,665,578"/>
-<area shape="rect" id="node30" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="476,730,620,771"/>
+<area shape="rect" id="node29" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title="check the packing status for all the PlacementUnits" alt="" coords="431,537,665,578"/>
+<area shape="rect" id="node30" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="476,730,620,771"/>
 <area shape="rect" id="node41" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="1325,697,1491,738"/>
-<area shape="rect" id="node31" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title=" " alt="" coords="1028,507,1211,549"/>
+<area shape="rect" id="node31" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="1028,507,1211,549"/>
 <area shape="rect" id="node32" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a86c5c11ca29c3eb66fcc36f6b1f1d502" title=" " alt="" coords="1015,897,1223,953"/>
 <area shape="rect" id="node33" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="745,850,920,891"/>
 <area shape="rect" id="node34" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aac2af3cf4994099914200ba3ef16ba01" title="Get the score if this cluster is mapped the site." alt="" coords="1000,675,1239,731"/>
 <area shape="rect" id="node35" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="713,435,952,491"/>
-<area shape="rect" id="node36" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="763,915,902,957"/>
+<area shape="rect" id="node36" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="763,915,902,957"/>
 <area shape="rect" id="node38" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="1000,805,1239,861"/>
 <area shape="rect" id="node39" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="745,667,920,709"/>
 <area shape="rect" id="node40" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="745,733,920,774"/>

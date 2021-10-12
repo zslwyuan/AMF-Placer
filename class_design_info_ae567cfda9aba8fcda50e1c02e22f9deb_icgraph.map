@@ -23,12 +23,12 @@
 <area shape="rect" id="node20" href="$class_placement_info.html#ab3e0f7abb94737992d90bc284d1a7116" title=" " alt="" coords="937,478,1120,519"/>
 <area shape="rect" id="node22" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="441,749,597,790"/>
 <area shape="rect" id="node23" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="441,814,597,855"/>
-<area shape="rect" id="node24" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="195,697,336,738"/>
+<area shape="rect" id="node24" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="195,697,336,738"/>
 <area shape="rect" id="node26" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="165,1033,366,1074"/>
 <area shape="rect" id="node27" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="166,1098,365,1139"/>
-<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="450,982,589,1023"/>
+<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="450,982,589,1023"/>
 <area shape="rect" id="node29" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="683,661,869,688"/>
-<area shape="rect" id="node30" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title=" " alt="" coords="681,931,871,973"/>
+<area shape="rect" id="node30" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="681,931,871,973"/>
 <area shape="rect" id="node31" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="697,880,855,907"/>
 <area shape="rect" id="node32" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,865,366,906"/>
 </map>

@@ -20,10 +20,10 @@
 <area shape="rect" id="node18" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="1873,649,2109,691"/>
 <area shape="rect" id="node19" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="1595,447,1814,503"/>
 <area shape="rect" id="node20" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="1872,505,2111,561"/>
-<area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="1635,607,1774,648"/>
-<area shape="rect" id="node15" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="1377,591,1521,632"/>
-<area shape="rect" id="node16" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="1147,537,1286,579"/>
-<area shape="rect" id="node17" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="655,457,794,499"/>
+<area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="1635,607,1774,648"/>
+<area shape="rect" id="node15" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="1377,591,1521,632"/>
+<area shape="rect" id="node16" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="1147,537,1286,579"/>
+<area shape="rect" id="node17" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="655,457,794,499"/>
 <area shape="rect" id="node21" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aebaa1fd4c02b8c8025317bd77e5d19cd" title="incrementally update the hash function with an additional PlacementUnit. This hash will be used to en..." alt="" coords="1585,527,1824,583"/>
 <area shape="rect" id="node23" href="$class_c_l_b_legalizer.html#a9e0ca44a72e181eeb2190ca789a4e841" title="Create a bipartite graph between PlacementUnit and potential DeviceSites." alt="" coords="1121,303,1312,344"/>
 <area shape="rect" id="node28" href="$class_c_l_b_legalizer.html#ac1882cd54fe5a09b1aea978f2a342a24" title="DP function for the legalization of a specific type of PlacementUnits in the same column." alt="" coords="1890,393,2093,419"/>

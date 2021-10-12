@@ -32,7 +32,7 @@
 <area shape="rect" id="node19" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization." alt="" coords="11,573,205,599"/>
 <area shape="rect" id="node21" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="876,404,1043,445"/>
 <area shape="rect" id="node26" href="$class_placement_info.html#a2bf332ca08ad7cc8f73f21c4ed83724b" title="Get the inflate ratio of a cell." alt="" coords="877,905,1042,947"/>
-<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title=" " alt="" coords="553,1521,788,1563"/>
+<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title="check the packing status for all the PlacementUnits" alt="" coords="553,1521,788,1563"/>
 <area shape="rect" id="node29" href="$class_cluster_placer.html#a195e11693047920316c329564598052d" title="initially cluster cells based on clock domains" alt="" coords="583,1587,758,1628"/>
 <area shape="rect" id="node30" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="585,1652,756,1693"/>
 <area shape="rect" id="node31" href="$class_cluster_placer.html#aaf3bcf89de5c55e2e0706ed2e328239a" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="563,1717,778,1759"/>
@@ -41,7 +41,7 @@
 <area shape="rect" id="node34" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title=" " alt="" coords="579,789,762,845"/>
 <area shape="rect" id="node35" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="562,1050,779,1077"/>
 <area shape="rect" id="node36" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title="get the PlacementMacro(s) which SHOULD be legalized" alt="" coords="582,1101,759,1143"/>
-<area shape="rect" id="node37" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a95869e6f3fc7e59347ce2889d73a71ce" title=" " alt="" coords="567,1166,774,1222"/>
+<area shape="rect" id="node37" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5c1b5eb03904f127097c825ec900705f" title="greedily find the exact slots for the LUTs/FFs in the site" alt="" coords="567,1166,774,1222"/>
 <area shape="rect" id="node38" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a92bbec6e8c1899d04dab2a6ba9251651" title=" " alt="" coords="559,1246,782,1302"/>
 <area shape="rect" id="node39" href="$class_cluster_placer.html#abeaa9dab584d4fbf266c7a9e26fd57e3" title="refine the elements in obtained clusters to ensure the cells in user&#45;defined clusters in the same clu..." alt="" coords="578,1325,763,1367"/>
 <area shape="rect" id="node40" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="557,868,784,909"/>

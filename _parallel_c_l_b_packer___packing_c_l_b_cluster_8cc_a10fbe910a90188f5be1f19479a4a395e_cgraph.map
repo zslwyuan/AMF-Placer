@@ -4,7 +4,7 @@
 <area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afbbc37ecef88e17c27b70d9982272e81" title=" " alt="" coords="163,70,357,126"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abe4be1f7465d7c4be7730df39bc0aa01" title=" " alt="" coords="165,149,355,191"/>
 <area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ae113a0ab512bbd61cee586c6383f3c83" title=" " alt="" coords="141,214,379,270"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcdd43f7720bc22ee98b4f723f77ca12" title=" " alt="" coords="139,293,381,335"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcdd43f7720bc22ee98b4f723f77ca12" title="Get the fixed pairs of LUTs which should NOT be broken." alt="" coords="139,293,381,335"/>
 <area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a75684299d4ecc96e82d73ed5f6619cc8" title="Get the hash code of this cluster without changing the class variables of this cluster." alt="" coords="141,358,379,414"/>
 <area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7d43d0dfd6005acb8e40327862cad90e" title="Get the Id of the PackingCLBCluster (just for debug information don&#39;t use it in algorithm)" alt="" coords="141,438,379,494"/>
 <area shape="rect" id="node9" href="$class_device_info_1_1_device_element.html#aeb68936902acc7288fc46a983f402db5" title=" " alt="" coords="171,517,349,559"/>

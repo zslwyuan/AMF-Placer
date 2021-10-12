@@ -9,7 +9,7 @@
 <area shape="rect" id="node15" href="$class_placement_timing_optimizer.html#a8e6810c2be22ebbe719229c7e6237adb" title=" " alt="" coords="1227,649,1406,690"/>
 <area shape="rect" id="node17" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#ab4484e67518a9cb6593ae2e550769a1c" title="split horizontally the SubBox into smaller ones and assign cells to them" alt="" coords="1213,466,1420,508"/>
 <area shape="rect" id="node18" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#adc5cc5479c1a558406f690680ffb4049" title="split vertically the SubBox into smaller ones and assign cells to them" alt="" coords="1213,532,1420,573"/>
-<area shape="rect" id="node19" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="683,708,824,749"/>
+<area shape="rect" id="node19" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="683,708,824,749"/>
 <area shape="rect" id="node20" href="$class_general_spreader.html#a1414f843412957281cf5cd4ec92475ad" title="update the information of the involved PlacementUnit(s)" alt="" coords="915,330,1141,372"/>
 <area shape="rect" id="node23" href="$class_general_spreader.html#a39da1cce84c49100bdac69835f2b7271" title="multi&#45;threading workers for updating the information of the involved PlacementUnit(s)" alt="" coords="1189,336,1444,377"/>
 <area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="677,258,830,300"/>

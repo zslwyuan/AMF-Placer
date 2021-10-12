@@ -1,7 +1,7 @@
 <map id="ParallelCLBPacker::exceptionHandling" name="ParallelCLBPacker::exceptionHandling">
-<area shape="rect" id="node1" title=" " alt="" coords="5,399,144,441"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title=" " alt="" coords="192,49,427,90"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="237,399,381,441"/>
+<area shape="rect" id="node1" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="5,399,144,441"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title="check the packing status for all the PlacementUnits" alt="" coords="192,49,427,90"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="237,399,381,441"/>
 <area shape="rect" id="node47" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="226,217,393,258"/>
 <area shape="rect" id="node49" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="272,465,347,492"/>
 <area shape="rect" id="node50" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="264,516,355,543"/>
@@ -10,12 +10,12 @@
 <area shape="rect" id="node4" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="817,5,954,32"/>
 <area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1671,257,1823,298"/>
 <area shape="rect" id="node7" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1883,257,2060,298"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title=" " alt="" coords="794,391,977,433"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="794,391,977,433"/>
 <area shape="rect" id="node16" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a86c5c11ca29c3eb66fcc36f6b1f1d502" title=" " alt="" coords="781,508,989,564"/>
 <area shape="rect" id="node17" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="1660,1469,1835,1510"/>
 <area shape="rect" id="node18" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aac2af3cf4994099914200ba3ef16ba01" title="Get the score if this cluster is mapped the site." alt="" coords="766,588,1005,644"/>
 <area shape="rect" id="node19" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="475,196,713,252"/>
-<area shape="rect" id="node23" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="525,1057,663,1098"/>
+<area shape="rect" id="node23" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="525,1057,663,1098"/>
 <area shape="rect" id="node29" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="1059,1541,1298,1597"/>
 <area shape="rect" id="node45" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="507,275,681,317"/>
 <area shape="rect" id="node46" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="507,341,681,382"/>

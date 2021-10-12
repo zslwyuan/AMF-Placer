@@ -1,6 +1,5 @@
 var NAVTREEINDEX10 =
 {
-"functions_y.html":[8,3,0,25],
 "functions_~.html":[8,3,0,26],
 "get_pin_offset_8py.html":[9,0,0,1,0,1],
 "get_pin_offset_8py.html#a0ab7a9445fbcb479aafa6d675c26cbb4":[9,0,0,1,0,1,4],
@@ -249,5 +248,6 @@ var NAVTREEINDEX10 =
 "namespacepaint_summary.html#a53c62a9e7d06c20c0f5f3e0e0a2e5f6a":[7,0,11,1],
 "namespacepaint_summary.html#a666a53ca335e56f4cbec602072c037d7":[7,0,11,8],
 "namespacepaint_summary.html#aab7fbebc1e1c3b3974fb4156c35405c4":[7,0,11,7],
-"namespacepaint_summary.html#abc170bfddbcfbfd946f9e9528cb23dd8":[7,0,11,4]
+"namespacepaint_summary.html#abc170bfddbcfbfd946f9e9528cb23dd8":[7,0,11,4],
+"namespacepaint_summary.html#abf8635fcb2b09d0d6b8558c773bd3d78":[7,0,11,2]
 };

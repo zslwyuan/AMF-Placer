@@ -7,10 +7,10 @@
 <area shape="rect" id="node23" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title="try to add a given FF into a specific half CLB in this cluster" alt="" coords="1147,287,1385,343"/>
 <area shape="rect" id="node24" href="$_parallel_c_l_b_packer_8cc.html#a982f039565b9c69197d92d1617d102c9" title=" " alt="" coords="1225,23,1307,50"/>
 <area shape="rect" id="node28" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="900,440,1099,481"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="930,80,1069,121"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="693,75,837,116"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="451,71,589,112"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="194,49,333,91"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="930,80,1069,121"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="693,75,837,116"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="451,71,589,112"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="194,49,333,91"/>
 <area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,221,116,247"/>
 <area shape="rect" id="node9" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="185,311,341,352"/>
 <area shape="rect" id="node10" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="419,558,621,585"/>
@@ -22,7 +22,7 @@
 <area shape="rect" id="node17" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,115,363,156"/>
 <area shape="rect" id="node18" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="429,507,611,534"/>
 <area shape="rect" id="node19" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="185,180,341,221"/>
-<area shape="rect" id="node20" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="193,245,334,287"/>
+<area shape="rect" id="node20" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="193,245,334,287"/>
 <area shape="rect" id="node11" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,478,327,505"/>
 <area shape="rect" id="node25" href="$class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46" title=" " alt="" coords="919,12,1079,53"/>
 <area shape="rect" id="node26" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="695,7,834,48"/>

@@ -1,7 +1,7 @@
 <map id="ParallelCLBPacker::ParallelCLBPacker" name="ParallelCLBPacker::ParallelCLBPacker">
 <area shape="rect" id="node1" title="Construct a new Parallel CLB Packer object." alt="" coords="5,57,144,98"/>
 <area shape="rect" id="node2" href="$class_device_info.html#a1ec4f9ac803f0d37ea7d331de133b27c" title="Get sites of a specfic type." alt="" coords="192,5,369,32"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title=" " alt="" coords="197,57,365,98"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="197,57,365,98"/>
 <area shape="rect" id="node6" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="235,123,326,149"/>
 <area shape="rect" id="node4" href="$class_placement_info_1_1_placement_macro.html#ad1d97e835581847571928f7b84318ff7" title=" " alt="" coords="432,27,607,69"/>
 <area shape="rect" id="node5" href="$class_placement_info.html#a510251876a8d91d751f8cb4d01be0492" title="get the sites occupied by the legalized PlacementUnit objects" alt="" coords="417,93,621,120"/>

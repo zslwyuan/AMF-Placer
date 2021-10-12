@@ -140,6 +140,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a69d41f0f84fcf8d235d5035156035c1c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a69d41f0f84fcf8d235d5035156035c1c">~PackingCLBSite</a> ()</td></tr>
 <tr class="separator:a69d41f0f84fcf8d235d5035156035c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0edacd1fa534989848aa12330578759e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0edacd1fa534989848aa12330578759e">isPQTopCompletelyAccptedByCells</a> ()</td></tr>
+<tr class="memdesc:a0edacd1fa534989848aa12330578759e"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether all the PlacementUnit in the top cluster in the priority queue have been assigned to this CLB site  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0edacd1fa534989848aa12330578759e">More...</a><br /></td></tr>
 <tr class="separator:a0edacd1fa534989848aa12330578759e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af10d9a00f87776066e145275b4407202"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementInfo::PlacementUnit</a> *, <a class="el" href="struct_packing___p_ucompare.html">Packing_PUcompare</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202">findNeiborPUsFromBinGrid</a> (<a class="el" href="class_design_info.html#a35becde3c1203126956e2fbd1b6ab51b">DesignInfo::DesignCellType</a> curCellType, float targetX, float targetY, float displacementLowerbound, float displacementUpperbound, int PUNumThreshold, const std::vector&lt; <a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html">PackingCLBSite</a> * &gt; &amp;<a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a42968aca7fee285ff8f879a7daa1157a">PUId2PackingCLBSite</a>, float <a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0fbbe66511c40bf75b08f8f6b39609e6">y2xRatio</a>, std::set&lt; <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementInfo::PlacementUnit</a> *, <a class="el" href="struct_packing___p_ucompare.html">Packing_PUcompare</a> &gt; *res=nullptr)</td></tr>
 <tr class="separator:af10d9a00f87776066e145275b4407202"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,22 +211,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6ce6ab50b41b747826397da9c13a89ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">map cells in MUXF7 macro to CLB slot  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6ce6ab50b41b747826397da9c13a89ff">More...</a><br /></td></tr>
 <tr class="separator:a6ce6ab50b41b747826397da9c13a89ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a977fe1bd59bce4a4f1671ef8abe69c76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a977fe1bd59bce4a4f1671ef8abe69c76">findMuxFromHalfCLB</a> (<a class="el" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a> *MUXF8Macro)</td></tr>
+<tr class="memdesc:a977fe1bd59bce4a4f1671ef8abe69c76"><td class="mdescLeft">&#160;</td><td class="mdescRight">find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mapped to a control set in this site)  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a977fe1bd59bce4a4f1671ef8abe69c76">More...</a><br /></td></tr>
 <tr class="separator:a977fe1bd59bce4a4f1671ef8abe69c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a861af96a7c28a05866c630d109d0267b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a861af96a7c28a05866c630d109d0267b">greedyMapMuxForCommonLUTFFSite</a> ()</td></tr>
-<tr class="separator:a861af96a7c28a05866c630d109d0267b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95869e6f3fc7e59347ce2889d73a71ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a95869e6f3fc7e59347ce2889d73a71ce">greedyMapForCommonLUTFFSite</a> ()</td></tr>
-<tr class="separator:a95869e6f3fc7e59347ce2889d73a71ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5df031b4caa4320511b2fa507182731f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5df031b4caa4320511b2fa507182731f">finalMapToSlotsForCommonLUTFFSite</a> ()</td></tr>
-<tr class="separator:a5df031b4caa4320511b2fa507182731f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bfb0fd6f00a7aef5f6bef22fc21bc3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7bfb0fd6f00a7aef5f6bef22fc21bc3d">greedyMapMuxForCommonLUTFFInSite</a> ()</td></tr>
+<tr class="memdesc:a7bfb0fd6f00a7aef5f6bef22fc21bc3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">find the slots in the site for Muxes  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7bfb0fd6f00a7aef5f6bef22fc21bc3d">More...</a><br /></td></tr>
+<tr class="separator:a7bfb0fd6f00a7aef5f6bef22fc21bc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c1b5eb03904f127097c825ec900705f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5c1b5eb03904f127097c825ec900705f">greedyMapForCommonLUTFFInSite</a> ()</td></tr>
+<tr class="memdesc:a5c1b5eb03904f127097c825ec900705f"><td class="mdescLeft">&#160;</td><td class="mdescRight">greedily find the exact slots for the LUTs/FFs in the site  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5c1b5eb03904f127097c825ec900705f">More...</a><br /></td></tr>
+<tr class="separator:a5c1b5eb03904f127097c825ec900705f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a89b034eda846c09b437103276a06be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8a89b034eda846c09b437103276a06be">finalMapToSlotsForCommonLUTFFInSite</a> ()</td></tr>
+<tr class="memdesc:a8a89b034eda846c09b437103276a06be"><td class="mdescLeft">&#160;</td><td class="mdescRight">finally map LUTs/FFs to the exact slots in the sites  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8a89b034eda846c09b437103276a06be">More...</a><br /></td></tr>
+<tr class="separator:a8a89b034eda846c09b437103276a06be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a194daf0509a1ac9e452350235a990c96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96">finalMapToSlots</a> ()</td></tr>
+<tr class="memdesc:a194daf0509a1ac9e452350235a990c96"><td class="mdescLeft">&#160;</td><td class="mdescRight">finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96">More...</a><br /></td></tr>
 <tr class="separator:a194daf0509a1ac9e452350235a990c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcdd43f7720bc22ee98b4f723f77ca12"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::pair&lt; <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *, <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> * &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcdd43f7720bc22ee98b4f723f77ca12">getFixedPairedLUTs</a> ()</td></tr>
+<tr class="memdesc:abcdd43f7720bc22ee98b4f723f77ca12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the fixed pairs of LUTs which should NOT be broken.  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcdd43f7720bc22ee98b4f723f77ca12">More...</a><br /></td></tr>
 <tr class="separator:abcdd43f7720bc22ee98b4f723f77ca12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd99e94d6995e75a5d02594ac0609837"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afd99e94d6995e75a5d02594ac0609837">getConflictLUTs</a> ()</td></tr>
+<tr class="memdesc:afd99e94d6995e75a5d02594ac0609837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the LUTs which CANNOT be paired.  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afd99e94d6995e75a5d02594ac0609837">More...</a><br /></td></tr>
 <tr class="separator:afd99e94d6995e75a5d02594ac0609837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc0e6cdc5c4a8762125b8dcd13d812b1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1">conflictLUTsContain</a> (<a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *tmpCell)</td></tr>
+<tr class="memdesc:acc0e6cdc5c4a8762125b8dcd13d812b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether a given cell is unpackable  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1">More...</a><br /></td></tr>
 <tr class="separator:acc0e6cdc5c4a8762125b8dcd13d812b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63bff5bb19f278b0b2c282f813f18812"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping.html">SiteBELMapping</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a63bff5bb19f278b0b2c282f813f18812">getSlotMapping</a> () const</td></tr>
+<tr class="memdesc:a63bff5bb19f278b0b2c282f813f18812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the slot(BEL) mapping of the cells.  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a63bff5bb19f278b0b2c282f813f18812">More...</a><br /></td></tr>
 <tr class="separator:a63bff5bb19f278b0b2c282f813f18812"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
@@ -235,23 +245,29 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2f25012576427b5be4ce3d9e28c66949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_info_1_1_device_site.html">DeviceInfo::DeviceSite</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2f25012576427b5be4ce3d9e28c66949">CLBSite</a></td></tr>
 <tr class="separator:a2f25012576427b5be4ce3d9e28c66949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6c09cfbd0e0863382915918a7719c53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aa6c09cfbd0e0863382915918a7719c53">unchangedIterationThr</a> = 3</td></tr>
+<tr class="memdesc:aa6c09cfbd0e0863382915918a7719c53"><td class="mdescLeft">&#160;</td><td class="mdescRight">specify how many iterations a PlacementUnit should stay at the top priority of a site before we finally map it to the site  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aa6c09cfbd0e0863382915918a7719c53">More...</a><br /></td></tr>
 <tr class="separator:aa6c09cfbd0e0863382915918a7719c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a593c074e44da10461e4d05d1c48f55"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8a593c074e44da10461e4d05d1c48f55">numNeighbor</a> = 10</td></tr>
+<tr class="memdesc:a8a593c074e44da10461e4d05d1c48f55"><td class="mdescLeft">&#160;</td><td class="mdescRight">the threshold number of cells for site  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8a593c074e44da10461e4d05d1c48f55">More...</a><br /></td></tr>
 <tr class="separator:a8a593c074e44da10461e4d05d1c48f55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae67c159c22cdd33f0b1509f0560f4cad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ae67c159c22cdd33f0b1509f0560f4cad">deltaD</a> = 1.0</td></tr>
+<tr class="memdesc:ae67c159c22cdd33f0b1509f0560f4cad"><td class="mdescLeft">&#160;</td><td class="mdescRight">the increase step of the neighbor search diameter  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ae67c159c22cdd33f0b1509f0560f4cad">More...</a><br /></td></tr>
 <tr class="separator:ae67c159c22cdd33f0b1509f0560f4cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b48096a53ac561a2eb27a20841cf3bf"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0b48096a53ac561a2eb27a20841cf3bf">curD</a> = 0</td></tr>
+<tr class="memdesc:a0b48096a53ac561a2eb27a20841cf3bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">current neighbor search diameter  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0b48096a53ac561a2eb27a20841cf3bf">More...</a><br /></td></tr>
 <tr class="separator:a0b48096a53ac561a2eb27a20841cf3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a842474b1df0f3e8629bca5e63e6021e8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a842474b1df0f3e8629bca5e63e6021e8">maxD</a> = 10</td></tr>
+<tr class="memdesc:a842474b1df0f3e8629bca5e63e6021e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">the maximum constraint of the neighbor search diameter  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a842474b1df0f3e8629bca5e63e6021e8">More...</a><br /></td></tr>
 <tr class="separator:a842474b1df0f3e8629bca5e63e6021e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a28e0c804f8a04968679254f359c4d0"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0a28e0c804f8a04968679254f359c4d0">PQSize</a> = 10</td></tr>
+<tr class="memdesc:a0a28e0c804f8a04968679254f359c4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">the size of priority queue (the low-priority candidates will be removed)  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0a28e0c804f8a04968679254f359c4d0">More...</a><br /></td></tr>
 <tr class="separator:a0a28e0c804f8a04968679254f359c4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fbbe66511c40bf75b08f8f6b39609e6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0fbbe66511c40bf75b08f8f6b39609e6">y2xRatio</a> = 1.0</td></tr>
+<tr class="memdesc:a0fbbe66511c40bf75b08f8f6b39609e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning in X-coordinate  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0fbbe66511c40bf75b08f8f6b39609e6">More...</a><br /></td></tr>
 <tr class="separator:a0fbbe66511c40bf75b08f8f6b39609e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad59b8408020cbff5f2faf17bac58351b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad59b8408020cbff5f2faf17bac58351b">HPWLWeight</a> = 0.01</td></tr>
+<tr class="memdesc:ad59b8408020cbff5f2faf17bac58351b"><td class="mdescLeft">&#160;</td><td class="mdescRight">the factor of HPWL overhead in packing evaluation for a cell  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad59b8408020cbff5f2faf17bac58351b">More...</a><br /></td></tr>
 <tr class="separator:ad59b8408020cbff5f2faf17bac58351b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7a4c4aef8da7f5b0a4766318957056f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ab7a4c4aef8da7f5b0a4766318957056f">recordTop</a> = -1</td></tr>
-<tr class="separator:ab7a4c4aef8da7f5b0a4766318957056f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5b04ce50a8cfc10db81b3c963d50b1a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af5b04ce50a8cfc10db81b3c963d50b1a">unchangeIterationCnt</a> = 0</td></tr>
 <tr class="separator:af5b04ce50a8cfc10db81b3c963d50b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2663b838fc66537173c1297d54b27c0"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementInfo::PlacementUnit</a> *, <a class="el" href="struct_packing___p_ucompare.html">Packing_PUcompare</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ae2663b838fc66537173c1297d54b27c0">neighborPUs</a></td></tr>
@@ -461,7 +477,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">1366</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">1465</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
@@ -504,10 +520,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_ac30c425c807f542a1d20241d5d7468c6_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_ac30c425c807f542a1d20241d5d7468c6_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_ac30c425c807f542a1d20241d5d7468c6_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_ac30c425c807f542a1d20241d5d7468c6_icgraph">
 <area shape="rect" title=" " alt="" coords="916,5,1091,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,5,868,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,5,681,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,5,489,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,5,303,47"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,5,868,47"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,5,681,47"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,5,489,47"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,5,303,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -537,7 +553,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01420">1420</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01519">1519</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
@@ -564,10 +580,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a30f0fba796286e9b609853529ec90001_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a30f0fba796286e9b609853529ec90001_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a30f0fba796286e9b609853529ec90001_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a30f0fba796286e9b609853529ec90001_icgraph">
 <area shape="rect" title=" " alt="" coords="916,5,1152,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,5,868,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,5,681,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,5,489,47"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,5,303,47"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,5,868,47"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,5,681,47"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,5,489,47"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,5,303,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -597,20 +613,20 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01434">1434</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01533">1533</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">finalMapToSlots()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">finalMapToSlots()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a59f26ce47aec73ec5f0205c11aba2671_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a59f26ce47aec73ec5f0205c11aba2671_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a59f26ce47aec73ec5f0205c11aba2671_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a59f26ce47aec73ec5f0205c11aba2671_icgraph">
 <area shape="rect" title=" " alt="" coords="964,49,1187,90"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title=" " alt="" coords="729,5,916,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="753,85,892,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,85,681,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,85,489,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,85,303,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="729,5,916,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="753,85,892,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,85,681,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,85,489,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,85,303,126"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,92,116,119"/>
 </map>
 </div>
@@ -640,20 +656,20 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01448">1448</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01547">1547</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">finalMapToSlots()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">finalMapToSlots()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_abcb7fcca09b57c7b7abf4b211cbaaac4_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_abcb7fcca09b57c7b7abf4b211cbaaac4_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_abcb7fcca09b57c7b7abf4b211cbaaac4_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_abcb7fcca09b57c7b7abf4b211cbaaac4_icgraph">
 <area shape="rect" title=" " alt="" coords="964,49,1212,90"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title=" " alt="" coords="729,5,916,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="753,85,892,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,85,681,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,85,489,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,85,303,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="729,5,916,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="753,85,892,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,85,681,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,85,489,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,85,303,126"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,92,116,119"/>
 </map>
 </div>
@@ -683,9 +699,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01439">1439</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">1538</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">finalMapToSlots()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">finalMapToSlots()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -701,7 +717,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5286ef6fe44a2827163314175d1ecf83_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5286ef6fe44a2827163314175d1ecf83_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5286ef6fe44a2827163314175d1ecf83_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5286ef6fe44a2827163314175d1ecf83_icgraph">
 <area shape="rect" title=" " alt="" coords="240,13,457,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title=" " alt="" coords="5,5,192,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,5,192,61"/>
 </map>
 </div>
 
@@ -730,20 +746,20 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01429">1429</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01528">1528</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">finalMapToSlots()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">finalMapToSlots()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_acf2b8bb615ccffc237f000d2af9e44ac_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_acf2b8bb615ccffc237f000d2af9e44ac_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_acf2b8bb615ccffc237f000d2af9e44ac_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_acf2b8bb615ccffc237f000d2af9e44ac_icgraph">
 <area shape="rect" title=" " alt="" coords="964,41,1155,97"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title=" " alt="" coords="729,5,916,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="753,85,892,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,85,681,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,85,489,126"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,85,303,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="729,5,916,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="753,85,892,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,85,681,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,85,489,126"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,85,303,126"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,92,116,119"/>
 </map>
 </div>
@@ -774,7 +790,19 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01567">1567</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>check whether a given cell is unpackable </p>
+<p >some driver LUTs of CARRY/MUX cannot be paired</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tmpCell</td><td>the given cell </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the cell CANNOT be paired with other LUTs </dd>
+<dd>
+false if the cell CAN be paired with other LUTs </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01714">1714</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00015">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::maxCardinalityMatching()</a>.</p>
 <div class="dynheader">
@@ -782,7 +810,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_acc0e6cdc5c4a8762125b8dcd13d812b1_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_acc0e6cdc5c4a8762125b8dcd13d812b1_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_acc0e6cdc5c4a8762125b8dcd13d812b1_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_acc0e6cdc5c4a8762125b8dcd13d812b1_icgraph">
-<area shape="rect" title=" " alt="" coords="292,5,491,61"/>
+<area shape="rect" title="check whether a given cell is unpackable" alt="" coords="292,5,491,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5c2b50544d1e2288a0fceb1e93a10004" title="conduct maximun cardinality matching algorithm to pair LUTs" alt="" coords="5,5,244,61"/>
 </map>
 </div>
@@ -812,20 +840,22 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">1532</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">1658</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a194daf0509a1ac9e452350235a990c96_cgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a194daf0509a1ac9e452350235a990c96_cgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a194daf0509a1ac9e452350235a990c96_cgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a194daf0509a1ac9e452350235a990c96_cgraph">
-<area shape="rect" title=" " alt="" coords="5,201,192,257"/>
+<area shape="rect" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,201,192,257"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a59f26ce47aec73ec5f0205c11aba2671" title=" " alt="" coords="253,5,475,47"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcb7fcca09b57c7b7abf4b211cbaaac4" title=" " alt="" coords="240,71,488,112"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5286ef6fe44a2827163314175d1ecf83" title=" " alt="" coords="255,136,473,177"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acf2b8bb615ccffc237f000d2af9e44ac" title=" " alt="" coords="269,201,459,257"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aceaebfba8c5bd1f2db6f5c4c29ede32b" title=" " alt="" coords="271,281,457,337"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5df031b4caa4320511b2fa507182731f" title=" " alt="" coords="270,361,458,417"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a861af96a7c28a05866c630d109d0267b" title=" " alt="" coords="259,441,469,497"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8a89b034eda846c09b437103276a06be" title="finally map LUTs/FFs to the exact slots in the sites" alt="" coords="265,361,463,417"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7bfb0fd6f00a7aef5f6bef22fc21bc3d" title="find the slots in the site for Muxes" alt="" coords="259,441,469,497"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a956bdd3562fa3d798d3e52ce0fe4052f" title="Get the total number of MUX cells in this cluster." alt="" coords="536,129,775,185"/>
 </map>
 </div>
@@ -849,27 +879,27 @@ Here is the call graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00474">474</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">finalMapToSlots()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">finalMapToSlots()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_aceaebfba8c5bd1f2db6f5c4c29ede32b_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_aceaebfba8c5bd1f2db6f5c4c29ede32b_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_aceaebfba8c5bd1f2db6f5c4c29ede32b_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_aceaebfba8c5bd1f2db6f5c4c29ede32b_icgraph">
 <area shape="rect" title=" " alt="" coords="240,5,427,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title=" " alt="" coords="5,5,192,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,5,192,61"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5df031b4caa4320511b2fa507182731f" name="a5df031b4caa4320511b2fa507182731f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5df031b4caa4320511b2fa507182731f">&#9670;&nbsp;</a></span>finalMapToSlotsForCommonLUTFFSite()</h2>
+<a id="a8a89b034eda846c09b437103276a06be" name="a8a89b034eda846c09b437103276a06be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a89b034eda846c09b437103276a06be">&#9670;&nbsp;</a></span>finalMapToSlotsForCommonLUTFFInSite()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFSite </td>
+          <td class="memname">void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -877,16 +907,18 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>finally map LUTs/FFs to the exact slots in the sites </p>
+
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01426">1426</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">finalMapToSlots()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">finalMapToSlots()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5df031b4caa4320511b2fa507182731f_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5df031b4caa4320511b2fa507182731f_icgraph" alt=""/></div>
-<map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5df031b4caa4320511b2fa507182731f_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5df031b4caa4320511b2fa507182731f_icgraph">
-<area shape="rect" title=" " alt="" coords="240,5,428,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title=" " alt="" coords="5,5,192,61"/>
+<div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a8a89b034eda846c09b437103276a06be_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a8a89b034eda846c09b437103276a06be_icgraph" alt=""/></div>
+<map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a8a89b034eda846c09b437103276a06be_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a8a89b034eda846c09b437103276a06be_icgraph">
+<area shape="rect" title="finally map LUTs/FFs to the exact slots in the sites" alt="" coords="240,5,439,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,5,192,61"/>
 </map>
 </div>
 
@@ -908,13 +940,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mapped to a control set in this site) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">MUXF8Macro</td><td>a given Mux macro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01169">1169</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a977fe1bd59bce4a4f1671ef8abe69c76_cgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a977fe1bd59bce4a4f1671ef8abe69c76_cgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a977fe1bd59bce4a4f1671ef8abe69c76_cgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a977fe1bd59bce4a4f1671ef8abe69c76_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,204,61"/>
+<area shape="rect" title="find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mappe..." alt="" coords="5,5,204,61"/>
 <area shape="rect" href="class_placement_info_1_1_placement_macro.html#ab7530c5a864f2260d9c868b25e7604d4" title=" " alt="" coords="252,13,427,54"/>
 </map>
 </div>
@@ -1076,7 +1117,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01453">1453</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01552">1552</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::clusterHash()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00838">operator&lt;&lt;()</a>, and <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00933">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::printMyself()</a>.</p>
 <div class="dynheader">
@@ -1092,10 +1133,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="1017,161,1253,202"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="739,5,958,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="1016,81,1255,137"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="779,165,918,206"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,165,681,206"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,165,489,206"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,165,303,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="779,165,918,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,165,681,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,165,489,206"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,165,303,206"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,172,116,199"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aebaa1fd4c02b8c8025317bd77e5d19cd" title="incrementally update the hash function with an additional PlacementUnit. This hash will be used to en..." alt="" coords="729,85,968,141"/>
 </map>
@@ -1126,7 +1167,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01463">1463</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01562">1562</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::clusterHash()</a>, and <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00838">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
@@ -1141,10 +1182,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="1017,71,1253,112"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="739,211,958,267"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="1016,135,1255,191"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="779,67,918,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,67,681,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,67,489,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,67,303,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="779,67,918,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,67,681,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,67,489,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,67,303,108"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,74,116,101"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aebaa1fd4c02b8c8025317bd77e5d19cd" title="incrementally update the hash function with an additional PlacementUnit. This hash will be used to en..." alt="" coords="729,131,968,187"/>
 </map>
@@ -1175,7 +1216,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01293">1293</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01392">1392</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00697">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::isPUTypeCompatibleWithSiteType()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00838">operator&lt;&lt;()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00933">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::printMyself()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
@@ -1187,11 +1228,11 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ae3599b5e79e956c82813b4145859dda3" title="check whether the type of the given PlacementUnit is compatible with the site type" alt="" coords="1139,5,1377,61"/>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="1215,85,1301,112"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a592c0413656822af69c9273b9597dc05" title="a API to print the information of cluster" alt="" coords="1139,136,1377,192"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,179,868,221"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,179,868,221"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="916,147,1091,189"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,179,681,221"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,179,489,221"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,179,303,221"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,179,681,221"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,179,489,221"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,179,303,221"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,187,116,213"/>
 </map>
 </div>
@@ -1221,7 +1262,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01563">1563</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>Get the LUTs which CANNOT be paired. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::set&lt;DesignInfo::DesignCell *&gt;&amp; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01700">1700</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -1248,7 +1292,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01308">1308</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01407">1407</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
@@ -1257,10 +1301,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a86c5c11ca29c3eb66fcc36f6b1f1d502_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a86c5c11ca29c3eb66fcc36f6b1f1d502_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a86c5c11ca29c3eb66fcc36f6b1f1d502_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a86c5c11ca29c3eb66fcc36f6b1f1d502_icgraph">
 <area shape="rect" title=" " alt="" coords="916,5,1124,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,13,681,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,42,868,83"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,13,489,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,13,303,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,13,681,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,42,868,83"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,13,489,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,13,303,54"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>
 </div>
@@ -1290,7 +1334,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01303">1303</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01402">1402</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -1317,7 +1361,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01559">1559</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>Get the fixed pairs of LUTs which should NOT be broken. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::set&lt;std::pair&lt;DesignInfo::DesignCell *, DesignInfo::DesignCell *&gt;&gt;&amp; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01690">1690</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00838">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
@@ -1325,7 +1372,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_abcdd43f7720bc22ee98b4f723f77ca12_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_abcdd43f7720bc22ee98b4f723f77ca12_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_abcdd43f7720bc22ee98b4f723f77ca12_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_abcdd43f7720bc22ee98b4f723f77ca12_icgraph">
-<area shape="rect" title=" " alt="" coords="139,5,381,47"/>
+<area shape="rect" title="Get the fixed pairs of LUTs which should NOT be broken." alt="" coords="139,5,381,47"/>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="5,13,91,39"/>
 </map>
 </div>
@@ -1356,7 +1403,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01320">1320</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01419">1419</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01066">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getHPWLChangeForPU()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00504">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite()</a>, and <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00459">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::updateScoreInSite()</a>.</p>
 <div class="dynheader">
@@ -1380,10 +1427,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a801d7aa80e88d917d3b1ccefb32a98c3" title="incrementally update the score of this cluster by considering that only a given PlacementUnit will be..." alt="" coords="1200,85,1439,141"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="1200,195,1439,251"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="925,20,1143,76"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,202,868,243"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,265,681,306"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,265,489,306"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,265,303,306"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,202,868,243"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,265,681,306"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,265,489,306"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,265,303,306"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,272,116,299"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="947,202,1121,243"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="916,267,1152,309"/>
@@ -1415,7 +1462,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01458">1458</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01557">1557</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::clusterHash()</a>.</p>
 <div class="dynheader">
@@ -1429,10 +1476,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="1017,71,1253,112"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="739,211,958,267"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="1016,135,1255,191"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="779,67,918,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,67,681,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,67,489,108"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,67,303,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="779,67,918,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,67,681,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,67,489,108"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,67,303,108"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,74,116,101"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aebaa1fd4c02b8c8025317bd77e5d19cd" title="incrementally update the hash function with an additional PlacementUnit. This hash will be used to en..." alt="" coords="729,131,968,187"/>
 </map>
@@ -1463,7 +1510,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01265">1265</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01364">1364</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -1490,20 +1537,20 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01361">1361</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01460">1460</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01188">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPlacementUnitMaxPathLen()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01127">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getTotalCellWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01208">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPlacementUnitMaxPathLen()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01127">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getTotalCellWeight()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_ad460b2959e4362540e884149090aa204_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_ad460b2959e4362540e884149090aa204_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_ad460b2959e4362540e884149090aa204_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_ad460b2959e4362540e884149090aa204_icgraph">
 <area shape="rect" title=" " alt="" coords="1016,53,1243,94"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a" title=" " alt="" coords="729,5,968,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="729,5,968,61"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="729,85,968,141"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,93,681,134"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,93,489,134"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,93,303,134"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,93,681,134"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,93,489,134"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,93,303,134"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,100,116,127"/>
 </map>
 </div>
@@ -1533,7 +1580,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01287">1287</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01386">1386</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -1560,7 +1607,10 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01572">1572</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>Get the slot(BEL) mapping of the cells. </p>
+<dl class="section return"><dt>Returns</dt><dd>const <a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping.html" title="SiteBELMapping is a contain recording the mapping between cells and BELs.">SiteBELMapping</a>&amp; </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01724">1724</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -1587,7 +1637,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01298">1298</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01397">1397</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00838">operator&lt;&lt;()</a>, and <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00933">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::printMyself()</a>.</p>
 <div class="dynheader">
@@ -1599,24 +1649,24 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="1215,5,1301,32"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a592c0413656822af69c9273b9597dc05" title="a API to print the information of cluster" alt="" coords="1139,56,1377,112"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="916,63,1091,105"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,63,868,105"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,63,681,105"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,63,489,105"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,63,303,105"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,63,868,105"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,63,681,105"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,63,489,105"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,63,303,105"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,71,116,97"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a95869e6f3fc7e59347ce2889d73a71ce" name="a95869e6f3fc7e59347ce2889d73a71ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95869e6f3fc7e59347ce2889d73a71ce">&#9670;&nbsp;</a></span>greedyMapForCommonLUTFFSite()</h2>
+<a id="a5c1b5eb03904f127097c825ec900705f" name="a5c1b5eb03904f127097c825ec900705f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c1b5eb03904f127097c825ec900705f">&#9670;&nbsp;</a></span>greedyMapForCommonLUTFFInSite()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFSite </td>
+          <td class="memname">void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1624,13 +1674,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>greedily find the exact slots for the LUTs/FFs in the site </p>
+
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00684">684</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a95869e6f3fc7e59347ce2889d73a71ce_cgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a95869e6f3fc7e59347ce2889d73a71ce_cgraph" alt=""/></div>
-<map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a95869e6f3fc7e59347ce2889d73a71ce_cgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a95869e6f3fc7e59347ce2889d73a71ce_cgraph">
-<area shape="rect" title=" " alt="" coords="5,63,212,119"/>
+<div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5c1b5eb03904f127097c825ec900705f_cgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5c1b5eb03904f127097c825ec900705f_cgraph" alt=""/></div>
+<map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5c1b5eb03904f127097c825ec900705f_cgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5c1b5eb03904f127097c825ec900705f_cgraph">
+<area shape="rect" title="greedily find the exact slots for the LUTs/FFs in the site" alt="" coords="5,63,212,119"/>
 <area shape="rect" href="class_placement_info_1_1_placement_macro.html#a10685875692186ba2a95623ec871637c" title=" " alt="" coords="269,5,443,47"/>
 <area shape="rect" href="class_placement_info_1_1_placement_macro.html#ad1d97e835581847571928f7b84318ff7" title=" " alt="" coords="269,71,443,112"/>
 <area shape="rect" href="class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="260,136,452,177"/>
@@ -1641,14 +1693,14 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a861af96a7c28a05866c630d109d0267b" name="a861af96a7c28a05866c630d109d0267b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a861af96a7c28a05866c630d109d0267b">&#9670;&nbsp;</a></span>greedyMapMuxForCommonLUTFFSite()</h2>
+<a id="a7bfb0fd6f00a7aef5f6bef22fc21bc3d" name="a7bfb0fd6f00a7aef5f6bef22fc21bc3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bfb0fd6f00a7aef5f6bef22fc21bc3d">&#9670;&nbsp;</a></span>greedyMapMuxForCommonLUTFFInSite()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFSite </td>
+          <td class="memname">void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1656,16 +1708,18 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>find the slots in the site for Muxes </p>
+
 <p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01189">1189</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">finalMapToSlots()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">finalMapToSlots()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a861af96a7c28a05866c630d109d0267b_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a861af96a7c28a05866c630d109d0267b_icgraph" alt=""/></div>
-<map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a861af96a7c28a05866c630d109d0267b_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a861af96a7c28a05866c630d109d0267b_icgraph">
-<area shape="rect" title=" " alt="" coords="240,5,451,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title=" " alt="" coords="5,5,192,61"/>
+<div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a7bfb0fd6f00a7aef5f6bef22fc21bc3d_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a7bfb0fd6f00a7aef5f6bef22fc21bc3d_icgraph" alt=""/></div>
+<map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a7bfb0fd6f00a7aef5f6bef22fc21bc3d_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a7bfb0fd6f00a7aef5f6bef22fc21bc3d_icgraph">
+<area shape="rect" title="find the slots in the site for Muxes" alt="" coords="240,5,451,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,5,192,61"/>
 </map>
 </div>
 
@@ -1694,7 +1748,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01282">1282</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01381">1381</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -1721,7 +1775,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01246">1246</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>check whether all the PlacementUnit in the top cluster in the priority queue have been assigned to this CLB site </p>
+<dl class="section return"><dt>Returns</dt><dd>true if all the PlacementUnits in the top cluster in the priority queue have been assigned to this CLB site </dd>
+<dd>
+false if some of the PlacementUnits in the top cluster in the priority queue have NOT been assigned to this CLB site yet (maybe unassigned yet or maybe assigned to some other CLB sites) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01345">1345</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -1995,7 +2054,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01356">1356</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01455">1455</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2023,7 +2082,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01313">1313</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01412">1412</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00613">ParallelCLBPacker::ripUpAndLegalizae()</a>.</p>
 <div class="dynheader">
@@ -2032,10 +2091,10 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5ab99d8ecade11393b60d634eb44ffee_icgraph.png" border="0" usemap="#aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5ab99d8ecade11393b60d634eb44ffee_icgraph" alt=""/></div>
 <map name="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5ab99d8ecade11393b60d634eb44ffee_icgraph" id="aclass_parallel_c_l_b_packer_1_1_packing_c_l_b_site_a5ab99d8ecade11393b60d634eb44ffee_icgraph">
 <area shape="rect" title=" " alt="" coords="916,5,1124,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title=" " alt="" coords="729,13,868,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title=" " alt="" coords="537,13,681,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title=" " alt="" coords="351,13,489,54"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title=" " alt="" coords="164,13,303,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,13,868,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,13,681,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,13,489,54"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,13,303,54"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>
 </div>
@@ -2122,9 +2181,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01602">1602</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01795">1795</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01453">getCarryMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01552">getCarryMacro()</a>.</p>
 
 </div>
 </div>
@@ -2148,9 +2207,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01604">1604</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01797">1797</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01463">getCarrySiteOffset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01562">getCarrySiteOffset()</a>.</p>
 
 </div>
 </div>
@@ -2174,9 +2233,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01579">1579</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01731">1731</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01293">getCLBSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01320">getHPWLChangeForPU()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01392">getCLBSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01419">getHPWLChangeForPU()</a>.</p>
 
 </div>
 </div>
@@ -2200,9 +2259,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01613">1613</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01806">1806</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01567">conflictLUTsContain()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01563">getConflictLUTs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01714">conflictLUTsContain()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01700">getConflictLUTs()</a>.</p>
 
 </div>
 </div>
@@ -2226,7 +2285,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01583">1583</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>current neighbor search diameter </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01756">1756</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2250,9 +2311,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01606">1606</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01799">1799</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01356">setDebug()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01455">setDebug()</a>.</p>
 
 </div>
 </div>
@@ -2276,7 +2337,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01582">1582</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the increase step of the neighbor search diameter </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01750">1750</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2300,9 +2363,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01597">1597</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01790">1790</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01420">addLUTRAMMacro()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01439">checkIsMuxSite()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01532">finalMapToSlots()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01308">getDeterminedClusterInSite()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01313">setDeterminedClusterInSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00371">~PackingCLBSite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01519">addLUTRAMMacro()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">checkIsMuxSite()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01658">finalMapToSlots()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01407">getDeterminedClusterInSite()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01412">setDeterminedClusterInSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00371">~PackingCLBSite()</a>.</p>
 
 </div>
 </div>
@@ -2326,9 +2389,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01598">1598</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01791">1791</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01303">getDetScore()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01402">getDetScore()</a>.</p>
 
 </div>
 </div>
@@ -2352,9 +2415,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01612">1612</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01805">1805</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">addCarry()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">addCarry()</a>.</p>
 
 </div>
 </div>
@@ -2378,9 +2441,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01611">1611</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01804">1804</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01559">getFixedPairedLUTs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01690">getFixedPairedLUTs()</a>.</p>
 
 </div>
 </div>
@@ -2404,7 +2467,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01587">1587</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the factor of HPWL overhead in packing evaluation for a cell </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01781">1781</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00504">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite()</a>, and <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00459">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::updateScoreInSite()</a>.</p>
 
@@ -2430,9 +2495,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01600">1600</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01793">1793</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01434">checkIsCarrySite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01429">checkIsPrePackedSite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01533">checkIsCarrySite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01528">checkIsPrePackedSite()</a>.</p>
 
 </div>
 </div>
@@ -2456,9 +2521,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01601">1601</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01794">1794</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01448">checkIsLUTRAMSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01429">checkIsPrePackedSite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01547">checkIsLUTRAMSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01528">checkIsPrePackedSite()</a>.</p>
 
 </div>
 </div>
@@ -2482,9 +2547,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01603">1603</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01796">1796</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01420">addLUTRAMMacro()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01458">getLUTRAMMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01519">addLUTRAMMacro()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01557">getLUTRAMMacro()</a>.</p>
 
 </div>
 </div>
@@ -2508,7 +2573,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01608">1608</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01801">1801</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2532,7 +2597,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01610">1610</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01803">1803</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2556,7 +2621,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01609">1609</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01802">1802</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2580,7 +2645,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01584">1584</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the maximum constraint of the neighbor search diameter </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01762">1762</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2604,9 +2671,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01591">1591</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01784">1784</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01265">getNeighborPUs()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00356">PackingCLBSite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01364">getNeighborPUs()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00356">PackingCLBSite()</a>.</p>
 
 </div>
 </div>
@@ -2630,7 +2697,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01581">1581</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the threshold number of cells for site </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01744">1744</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2654,9 +2723,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01578">1578</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01730">1730</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01361">getPlacementInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01460">getPlacementInfo()</a>.</p>
 
 </div>
 </div>
@@ -2680,7 +2749,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01585">1585</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>the size of priority queue (the low-priority candidates will be removed) </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01768">1768</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2704,9 +2775,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01594">1594</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01787">1787</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01287">getPriorityQueueTop()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01282">hasValidPQTop()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01246">isPQTopCompletelyAccptedByCells()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00356">PackingCLBSite()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00015">refreshPrioryQueue()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00371">~PackingCLBSite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01386">getPriorityQueueTop()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01381">hasValidPQTop()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01345">isPQTopCompletelyAccptedByCells()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00356">PackingCLBSite()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00015">refreshPrioryQueue()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00371">~PackingCLBSite()</a>.</p>
 
 </div>
 </div>
@@ -2730,7 +2801,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01595">1595</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01788">1788</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00356">PackingCLBSite()</a>.</p>
 
@@ -2756,33 +2827,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01596">1596</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01789">1789</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00896">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::areAllPUsValidForThisSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01246">isPQTopCompletelyAccptedByCells()</a>.</p>
-
-</div>
-</div>
-<a id="ab7a4c4aef8da7f5b0a4766318957056f" name="ab7a4c4aef8da7f5b0a4766318957056f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7a4c4aef8da7f5b0a4766318957056f">&#9670;&nbsp;</a></span>recordTop</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ParallelCLBPacker::PackingCLBSite::recordTop = -1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01589">1589</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00896">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::areAllPUsValidForThisSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01345">isPQTopCompletelyAccptedByCells()</a>.</p>
 
 </div>
 </div>
@@ -2806,7 +2853,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01593">1593</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01786">1786</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00356">PackingCLBSite()</a>.</p>
 
@@ -2832,9 +2879,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01614">1614</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01807">1807</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01366">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01572">getSlotMapping()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01465">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01724">getSlotMapping()</a>.</p>
 
 </div>
 </div>
@@ -2858,7 +2905,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01580">1580</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>specify how many iterations a PlacementUnit should stay at the top priority of a site before we finally map it to the site </p>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01738">1738</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2882,7 +2931,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01590">1590</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01783">1783</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2906,9 +2955,11 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01586">1586</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p>a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning in X-coordinate </p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01320">getHPWLChangeForPU()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01298">getY2xRatio()</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01775">1775</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01419">getHPWLChangeForPU()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01397">getY2xRatio()</a>.</p>
 
 </div>
 </div>

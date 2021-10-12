@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::updatePackedMacro" name="ParallelCLBPacker::updatePackedMacro">
-<area shape="rect" id="node1" title=" " alt="" coords="5,1193,147,1235"/>
+<area shape="rect" id="node1" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="5,1193,147,1235"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="218,560,393,601"/>
 <area shape="rect" id="node20" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="218,737,393,779"/>
 <area shape="rect" id="node21" href="$class_placement_info.html#aa3d473459650af9a742d1f5c4a8c7b42" title="remove the legalization information of a PlacementUnit object" alt="" coords="197,803,413,844"/>
