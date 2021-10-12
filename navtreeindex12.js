@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"struct_placement_info_1_1_placement_site_type_info_1_1location.html":[8,0,18,11,0],
+"struct_placement_info_1_1_placement_site_type_info_1_1location.html#aad6963e15572a4c1bd08013e8821ef43":[8,0,18,11,0,1],
 "struct_placement_info_1_1_placement_site_type_info_1_1location.html#acf2986955232817aa25cfc69bfa893a8":[8,0,18,11,0,0],
 "struct_q_p_solver_wrapper_1_1solver_data_type.html":[8,0,22,0],
 "struct_q_p_solver_wrapper_1_1solver_data_type.html#a1b8db2526ed6bc30dca6b906e704d669":[8,0,22,0,2],

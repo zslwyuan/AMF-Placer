@@ -2,6 +2,6 @@
 <area shape="rect" id="node1" title="Get the width of a bin in grid." alt="" coords="668,42,853,69"/>
 <area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#ab4484e67518a9cb6593ae2e550769a1c" title="split horizontally the SubBox into smaller ones and assign cells to them" alt="" coords="413,5,620,47"/>
 <area shape="rect" id="node3" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="437,71,596,98"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,64,365,105"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,35,365,76"/>
 <area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,71,116,98"/>
 </map>

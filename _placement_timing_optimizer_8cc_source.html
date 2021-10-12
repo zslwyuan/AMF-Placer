@@ -260,7 +260,7 @@ $(document).ready(function(){initNavTree('_placement_timing_optimizer_8cc_source
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keyword">auto</span> &amp;cellLoc = <a class="code hl_variable" href="class_placement_timing_optimizer.html#afb113ebed3102242f303b732db947148">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9">getCellId2location</a>();</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keyword">auto</span> <a class="code hl_variable" href="class_placement_timing_optimizer.html#a68169ba404ca2670a062c282d068b003">deviceInfo</a> = <a class="code hl_variable" href="class_placement_timing_optimizer.html#afb113ebed3102242f303b732db947148">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#adf045317e0e782adb5d40dae47bb6720">getDeviceInfo</a>();</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keyword">auto</span> YX2ClockRegion = <a class="code hl_variable" href="class_placement_timing_optimizer.html#a68169ba404ca2670a062c282d068b003">deviceInfo</a>-&gt;<a class="code hl_function" href="class_device_info.html#a930f94a136ef6a01d7cde70d884a119b">getClockRegions</a>();</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keyword">auto</span> PU2ClockRegionCenter = <a class="code hl_variable" href="class_placement_timing_optimizer.html#afb113ebed3102242f303b732db947148">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#aeff88485fec1f8a6e75670f737e42466">getPU2ClockRegionCenters</a>();</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keyword">auto</span> &amp;PU2ClockRegionCenter = <a class="code hl_variable" href="class_placement_timing_optimizer.html#afb113ebed3102242f303b732db947148">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#aeff88485fec1f8a6e75670f737e42466">getPU2ClockRegionCenters</a>();</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    PU2ClockRegionCenter.clear();</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    std::set&lt;int&gt; extractedCellIds;</div>
@@ -277,7 +277,7 @@ $(document).ready(function(){initNavTree('_placement_timing_optimizer_8cc_source
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <span class="keyword">auto</span> candidateCellIds =</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                simpleTimingGraph-&gt;BFSFromNode(timingNode-&gt;getId(), pathLenThr, 20000, extractedCellIds);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keywordflow">if</span> (candidateCellIds.size() &gt;= pathLenThr)</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            <span class="keywordflow">if</span> (candidateCellIds.size() &gt;= pathLenThr * 0.8)</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            {</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                std::set&lt;PlacementInfo::PlacementUnit *&gt; PUsInLongPaths;</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                PUsInLongPaths.clear();</div>
@@ -349,68 +349,69 @@ $(document).ready(function(){initNavTree('_placement_timing_optimizer_8cc_source
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>                    }</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                    <span class="keywordflow">if</span> ((maxClockRegionWeight &gt; totalClockRegionWeight * clusterThrRatio) &amp;&amp;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                        totalClockRegionWeight &lt; 20000 &amp;&amp; maxClockRegionWeight &gt;= 4)</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                    {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                        <span class="keyword">auto</span> optClockRegion = YX2ClockRegion[0][optClockLocYX.second];</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                        <span class="keywordtype">float</span> cX = (optClockRegion-&gt;getLeft() + optClockRegion-&gt;getRight()) / 2;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                        <span class="keywordtype">float</span> cY = (optClockRegion-&gt;getTop() + optClockRegion-&gt;getBottom()) / 2;</div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> curPU : PUsInLongPaths)</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                        {</div>
-<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                            <span class="keywordflow">if</span> (!curPU-&gt;isFixed())</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                            {</div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                                <span class="keywordtype">float</span> fX = cX;</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                                <span class="keywordtype">float</span> fY = curPU-&gt;Y();</div>
-<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                                <a class="code hl_variable" href="class_placement_timing_optimizer.html#afb113ebed3102242f303b732db947148">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#abec52af63f0dc9d260793fd798e2834d">legalizeXYInArea</a>(curPU, fX, fY);</div>
-<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                                curPU-&gt;setAnchorLocationAndForgetTheOriginalOne(fX, fY);</div>
-<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                                extractedPUs.insert(curPU);</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                                PU2ClockRegionCenter[curPU] = std::pair&lt;float, float&gt;(fX, fY);</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                                <span class="keywordflow">if</span> (<span class="keyword">auto</span> unpackedCell = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_placement_info_1_1_placement_unpacked_cell.html">PlacementInfo::PlacementUnpackedCell</a> *<span class="keyword">&gt;</span>(curPU))</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                                {</div>
-<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                                    <span class="keywordtype">int</span> cellId = unpackedCell-&gt;getCell()-&gt;getCellId();</div>
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                                    extractedCellIds.insert(cellId);</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                                }</div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">auto</span> curMacro = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a> *<span class="keyword">&gt;</span>(curPU))</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                                {</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpCell : curMacro-&gt;getCells())</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                                    {</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                                        <span class="keywordtype">int</span> cellId = tmpCell-&gt;getCellId();</div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                                        extractedCellIds.insert(cellId);</div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                                    }</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                                }</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                            }</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                        }</div>
-<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                        std::cout &lt;&lt; <span class="stringliteral">&quot;maxClockRegionWeight: &quot;</span> &lt;&lt; maxClockRegionWeight</div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                                  &lt;&lt; <span class="stringliteral">&quot; totalClockRegionWeight:&quot;</span> &lt;&lt; totalClockRegionWeight</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                                  &lt;&lt; <span class="stringliteral">&quot; #extractedCellIds=&quot;</span> &lt;&lt; extractedCellIds.size()</div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                                  &lt;&lt; <span class="stringliteral">&quot; #extractedPUs=&quot;</span> &lt;&lt; extractedPUs.size()</div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                                  &lt;&lt; <span class="stringliteral">&quot; pathLength=&quot;</span> &lt;&lt; timingNode-&gt;getLongestPathLength() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                    }</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span> </div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (totalClockRegionWeight &gt;= 20000)</div>
-<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                    {</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpCellId : candidateCellIds)</div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                        {</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                            extractedCellIds.insert(tmpCellId);</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                        }</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                    }</div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                }</div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            }</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        }</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        {</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        }</div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    }</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;ClusterPlacer: largest long-path cluster size=&quot;</span> + std::to_string(maxSize));</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>}</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno"><a class="line" href="class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f">  332</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f">PlacementTimingOptimizer::propogateArrivalTime</a>()</div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>{</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    assert(<a class="code hl_variable" href="class_placement_timing_optimizer.html#a49d680de3726f5057d3db11c1e9fb486">timingInfo</a>);</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="comment">// auto timingGraph = timingInfo-&gt;getSimplePlacementTimingGraph();</span></div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>}</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                        (maxClockRegionWeight &lt; totalClockRegionWeight * 0.95) &amp;&amp; totalClockRegionWeight &lt; 20000 &amp;&amp;</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                        maxClockRegionWeight &gt;= 4)</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                    {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                        <span class="keyword">auto</span> optClockRegion = YX2ClockRegion[0][optClockLocYX.second];</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                        <span class="keywordtype">float</span> cX = (optClockRegion-&gt;getLeft() + optClockRegion-&gt;getRight()) / 2;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>                        <span class="keywordtype">float</span> cY = (optClockRegion-&gt;getTop() + optClockRegion-&gt;getBottom()) / 2;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> curPU : PUsInLongPaths)</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                        {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                            <span class="keywordflow">if</span> (!curPU-&gt;isFixed())</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                            {</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                                <span class="keywordtype">float</span> fX = cX;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                                <span class="keywordtype">float</span> fY = curPU-&gt;Y();</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                                <a class="code hl_variable" href="class_placement_timing_optimizer.html#afb113ebed3102242f303b732db947148">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#abec52af63f0dc9d260793fd798e2834d">legalizeXYInArea</a>(curPU, fX, fY);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                                <span class="comment">// curPU-&gt;setAnchorLocationAndForgetTheOriginalOne(fX, fY);</span></div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                                extractedPUs.insert(curPU);</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                                PU2ClockRegionCenter[curPU] = std::pair&lt;float, float&gt;(fX, fY);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                                <span class="keywordflow">if</span> (<span class="keyword">auto</span> unpackedCell = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_placement_info_1_1_placement_unpacked_cell.html">PlacementInfo::PlacementUnpackedCell</a> *<span class="keyword">&gt;</span>(curPU))</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                                {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                                    <span class="keywordtype">int</span> cellId = unpackedCell-&gt;getCell()-&gt;getCellId();</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                                    extractedCellIds.insert(cellId);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                                }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>                                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="keyword">auto</span> curMacro = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a> *<span class="keyword">&gt;</span>(curPU))</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                                {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpCell : curMacro-&gt;getCells())</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                                    {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                                        <span class="keywordtype">int</span> cellId = tmpCell-&gt;getCellId();</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                                        extractedCellIds.insert(cellId);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                                    }</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                                }</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                            }</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                        }</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                        std::cout &lt;&lt; <span class="stringliteral">&quot;maxClockRegionWeight: &quot;</span> &lt;&lt; maxClockRegionWeight</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                                  &lt;&lt; <span class="stringliteral">&quot; totalClockRegionWeight:&quot;</span> &lt;&lt; totalClockRegionWeight</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                                  &lt;&lt; <span class="stringliteral">&quot; #extractedCellIds=&quot;</span> &lt;&lt; extractedCellIds.size()</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                                  &lt;&lt; <span class="stringliteral">&quot; #extractedPUs=&quot;</span> &lt;&lt; extractedPUs.size()</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                                  &lt;&lt; <span class="stringliteral">&quot; pathLength=&quot;</span> &lt;&lt; timingNode-&gt;getLongestPathLength() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                    }</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (totalClockRegionWeight &gt;= 20000)</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                    {</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpCellId : candidateCellIds)</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                        {</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                            extractedCellIds.insert(tmpCellId);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                        }</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>                    }</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                }</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>            }</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>        }</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>        {</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        }</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    }</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;ClusterPlacer: largest long-path cluster size=&quot;</span> + std::to_string(maxSize));</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>}</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno"><a class="line" href="class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f">  333</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f">PlacementTimingOptimizer::propogateArrivalTime</a>()</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>{</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    assert(<a class="code hl_variable" href="class_placement_timing_optimizer.html#a49d680de3726f5057d3db11c1e9fb486">timingInfo</a>);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <span class="comment">// auto timingGraph = timingInfo-&gt;getSimplePlacementTimingGraph();</span></div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>}</div>
 <div class="ttc" id="a_placement_timing_optimizer_8h_html"><div class="ttname"><a href="_placement_timing_optimizer_8h.html">PlacementTimingOptimizer.h</a></div></div>
 <div class="ttc" id="aclass_design_info_1_1_design_pin_html"><div class="ttname"><a href="class_design_info_1_1_design_pin.html">DesignInfo::DesignPin</a></div><div class="ttdoc">A design pin on a design cell connected to a net.</div><div class="ttdef"><b>Definition:</b> <a href="_design_info_8h_source.html#l00263">DesignInfo.h:264</a></div></div>
 <div class="ttc" id="aclass_design_info_html_a1a2a05acb9f692e774aa6b05da1c3ee7"><div class="ttname"><a href="class_design_info.html#a1a2a05acb9f692e774aa6b05da1c3ee7">DesignInfo::getPins</a></div><div class="ttdeci">std::vector&lt; DesignPin * &gt; &amp; getPins()</div><div class="ttdef"><b>Definition:</b> <a href="_design_info_8h_source.html#l01470">DesignInfo.h:1470</a></div></div>
@@ -436,7 +437,7 @@ $(document).ready(function(){initNavTree('_placement_timing_optimizer_8cc_source
 <div class="ttc" id="aclass_placement_timing_optimizer_html_a07f1239ff5bb2a0c43ea3185a49acc2e"><div class="ttname"><a href="class_placement_timing_optimizer.html#a07f1239ff5bb2a0c43ea3185a49acc2e">PlacementTimingOptimizer::initPois</a></div><div class="ttdeci">void initPois()</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_optimizer_8h_source.html#l00047">PlacementTimingOptimizer.h:47</a></div></div>
 <div class="ttc" id="aclass_placement_timing_optimizer_html_a18d6d379bddec8655e2d44e3da9ee6b3"><div class="ttname"><a href="class_placement_timing_optimizer.html#a18d6d379bddec8655e2d44e3da9ee6b3">PlacementTimingOptimizer::xDelayUnit</a></div><div class="ttdeci">float xDelayUnit</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_optimizer_8h_source.html#l00089">PlacementTimingOptimizer.h:89</a></div></div>
 <div class="ttc" id="aclass_placement_timing_optimizer_html_a1a0dadc3dffc30406d0e8728d907071a"><div class="ttname"><a href="class_placement_timing_optimizer.html#a1a0dadc3dffc30406d0e8728d907071a">PlacementTimingOptimizer::PlacementTimingOptimizer</a></div><div class="ttdeci">PlacementTimingOptimizer(PlacementInfo *placementInfo, std::map&lt; std::string, std::string &gt; &amp;JSONCfg)</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer.cc:18</a></div></div>
-<div class="ttc" id="aclass_placement_timing_optimizer_html_a2a43802b7e6de1c49e5da1a0c94bda2f"><div class="ttname"><a href="class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f">PlacementTimingOptimizer::propogateArrivalTime</a></div><div class="ttdeci">void propogateArrivalTime()</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_optimizer_8cc_source.html#l00332">PlacementTimingOptimizer.cc:332</a></div></div>
+<div class="ttc" id="aclass_placement_timing_optimizer_html_a2a43802b7e6de1c49e5da1a0c94bda2f"><div class="ttname"><a href="class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f">PlacementTimingOptimizer::propogateArrivalTime</a></div><div class="ttdeci">void propogateArrivalTime()</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_optimizer_8cc_source.html#l00333">PlacementTimingOptimizer.cc:333</a></div></div>
 <div class="ttc" id="aclass_placement_timing_optimizer_html_a41d0f6cf20373a02a6125ce7c976f82e"><div class="ttname"><a href="class_placement_timing_optimizer.html#a41d0f6cf20373a02a6125ce7c976f82e">PlacementTimingOptimizer::JSONCfg</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; &amp; JSONCfg</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_optimizer_8h_source.html#l00079">PlacementTimingOptimizer.h:79</a></div></div>
 <div class="ttc" id="aclass_placement_timing_optimizer_html_a49d680de3726f5057d3db11c1e9fb486"><div class="ttname"><a href="class_placement_timing_optimizer.html#a49d680de3726f5057d3db11c1e9fb486">PlacementTimingOptimizer::timingInfo</a></div><div class="ttdeci">PlacementTimingInfo * timingInfo</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_optimizer_8h_source.html#l00074">PlacementTimingOptimizer.h:74</a></div></div>
 <div class="ttc" id="aclass_placement_timing_optimizer_html_a68169ba404ca2670a062c282d068b003"><div class="ttname"><a href="class_placement_timing_optimizer.html#a68169ba404ca2670a062c282d068b003">PlacementTimingOptimizer::deviceInfo</a></div><div class="ttdeci">DeviceInfo * deviceInfo</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_optimizer_8h_source.html#l00076">PlacementTimingOptimizer.h:76</a></div></div>
