@@ -15,11 +15,11 @@
 
 #include "DesignInfo.h"
 #include "DeviceInfo.h"
-#include "const.h"
-#include "dumpZip.h"
 #include "KDTree/KDTree.h"
 #include "MaximalCardinalityMatching/MaximalCardinalityMatching.h"
 #include "PlacementInfo.h"
+#include "const.h"
+#include "dumpZip.h"
 #include "readZip.h"
 #include "strPrint.h"
 #include "stringCheck.h"
@@ -64,7 +64,7 @@ struct Packing_PUcompare
  * Nov. 2019, doi: 10.1109/TCAD.2018.2877017.
  *
  * We also provide many detailed optimization techniques according to our observation, macro constraints, timing
- * demands, and the application characteristics.
+ * demands, and the application characteristics to improve the packing efficiency and quality.
  *
  */
 class ParallelCLBPacker
@@ -1183,8 +1183,28 @@ class ParallelCLBPacker
              */
             bool checkCellCorrectness(PlacementInfo::PlacementUnit *tmpPU, bool isAddPU);
 
+            /**
+             * @brief check whether a specific number of Muxes can be compatible with a specific FFset for packing
+             *
+             * Since Mux will use some register input wires for the select signal, we have to check whether the packing
+             * is possible for this situation
+             *
+             * @param i the id for the FF set
+             * @param addNum the number of Muxes we want to add into the CLB
+             * @return true if the given number of Muxes can be added.
+             * @return false if the given number of Muxes CANNOT be added.
+             */
             bool checkNumMuxCompatibleInFFSet(int i, int addNum);
 
+            /**
+             * @brief Get the max length of paths involving a given PlacementUnit
+             *
+             * (unused currently) during packing, we should consider timing factors and the critical path should be
+             * assigned top priority.
+             *
+             * @param curPU a given PlacementUnit
+             * @return int
+             */
             inline int getPlacementUnitMaxPathLen(PlacementInfo::PlacementUnit *curPU)
             {
 
@@ -1218,18 +1238,73 @@ class ParallelCLBPacker
             const unsigned int MaxNum_LUTSite = 8;
             int numMuxes = 0;
 
+            /**
+             * @brief the paraent CLB site for this cluster
+             *
+             */
             PackingCLBSite *parentPackingCLB = nullptr;
+
+            /**
+             * @brief the evaluation score of packing for this cluster
+             *
+             */
             float scoreInSite = -100000000;
+
+            /**
+             * @brief a hash id to record the elements in this cluster
+             *
+             * Some clusters have the same elements (hashid) but they might have different index due to the combination
+             * (packing) order. We can use this hash id to remove duplicate candidates.
+             *
+             */
             int hashId = -3654;
             bool hashed = false;
 
+            /**
+             * @brief the unique id for each cluster
+             *
+             */
             int id = -1;
             std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> PUs;
 
+            /**
+             * @brief the connectivity score for this cluster
+             *
+             * We want more nets become the internal nets inside the CLB sites so the number of nets between sites can
+             * be reduced.
+             *
+             */
             float totalConnectivityScore = 0;
+
+            /**
+             * @brief the HPWL term for the wirelength optimization
+             *
+             * We want the packing will not significantly increase the HPWL
+             *
+             */
             float HPWLChange = 0;
+
+            /**
+             * @brief the cell number term in the cluster score
+             *
+             * We want the large PlacementUnits can have a relatively higher priority in packing since the high
+             * displacement of these elements might lead to bad routing.
+             *
+             */
             int totalCellNum = 0;
+
+            /**
+             * @brief the term of timing (paths) in the packing score
+             *
+             * We will accumulate the max length of paths for each elements in the cluster
+             *
+             */
             int totalLen = 0;
+
+            /**
+             * @brief the configurable weight for the wirelength in the cluster score
+             *
+             */
             float HPWLWeight = 0.01;
 
             // int muxF7Limit = 2;
@@ -1237,12 +1312,36 @@ class ParallelCLBPacker
             // std::map<PlacementInfo::PlacementNet *, float> net2ConnectivityScore;
             // std::set<PlacementInfo::PlacementNet *> nets;
 
-            // please note that some of these LUT/FFs are belong to CARRY chain, which is not shown in PUs
+            /**
+             * @brief the control set information for this cluster
+             *
+             * please note that some of these LUT/FFs are belong to CARRY chain, which is not shown in PUs
+             *
+             */
             std::vector<PackedControlSet> FFControlSets;
+
+            /**
+             * @brief the set of LUTs have not been paired with other LUTs in the clutser
+             *
+             */
             std::set<DesignInfo::DesignCell *> singleLUTs;
+
+            /**
+             * @brief the paired LUTs in the cluster
+             *
+             */
             std::set<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>> pairedLUTs;
         };
 
+        /**
+         * @brief check whether all the PlacementUnit in the top cluster in the priority queue have been assigned to
+         * this CLB site
+         *
+         * @return true if all the PlacementUnits in the top cluster in the priority queue have been assigned to
+         * this CLB site
+         * @return false if some of the PlacementUnits in the top cluster in the priority queue have NOT been assigned
+         * to this CLB site yet (maybe unassigned yet or maybe assigned to some other CLB sites)
+         */
         inline bool isPQTopCompletelyAccptedByCells()
         {
             auto qTop = priorityQueue[0];
@@ -1525,10 +1624,37 @@ class ParallelCLBPacker
          */
         void mapMuxF7Macro(int halfCLBOffset, PlacementInfo::PlacementMacro *MUXF7Macro);
 
+        /**
+         * @brief find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mapped
+         * to a control set in this site)
+         *
+         * @param MUXF8Macro a given Mux macro
+         * @return int
+         */
         int findMuxFromHalfCLB(PlacementInfo::PlacementMacro *MUXF8Macro);
-        void greedyMapMuxForCommonLUTFFSite();
-        void greedyMapForCommonLUTFFSite();
-        void finalMapToSlotsForCommonLUTFFSite();
+
+        /**
+         * @brief find the slots in the site for Muxes
+         *
+         */
+        void greedyMapMuxForCommonLUTFFInSite();
+
+        /**
+         * @brief greedily find the exact slots for the LUTs/FFs in the site
+         *
+         */
+        void greedyMapForCommonLUTFFInSite();
+
+        /**
+         * @brief finally map LUTs/FFs to the exact slots in the sites
+         *
+         */
+        void finalMapToSlotsForCommonLUTFFInSite();
+
+        /**
+         * @brief finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site
+         *
+         */
         void finalMapToSlots()
         {
             if (determinedClusterInSite)
@@ -1542,12 +1668,12 @@ class ParallelCLBPacker
                 }
                 else if (checkIsMuxSite())
                 {
-                    greedyMapMuxForCommonLUTFFSite();
+                    greedyMapMuxForCommonLUTFFInSite();
                 }
                 else if (!checkIsPrePackedSite() && !checkIsMuxSite())
                 {
                     // LUTS-FFs Packing
-                    finalMapToSlotsForCommonLUTFFSite();
+                    finalMapToSlotsForCommonLUTFFInSite();
                 }
                 else
                 {
@@ -1556,19 +1682,45 @@ class ParallelCLBPacker
             }
         }
 
+        /**
+         * @brief Get the fixed pairs of LUTs which should NOT be broken
+         *
+         * @return std::set<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>>&
+         */
         std::set<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>> &getFixedPairedLUTs()
         {
             return fixedPairedLUTs;
         }
+
+        /**
+         * @brief Get the LUTs which CANNOT be paired
+         *
+         * @return std::set<DesignInfo::DesignCell *>&
+         */
         std::set<DesignInfo::DesignCell *> &getConflictLUTs()
         {
             return conflictLUTs;
         }
+
+        /**
+         * @brief check whether a given cell is unpackable
+         *
+         * some driver LUTs of CARRY/MUX cannot be paired
+         *
+         * @param tmpCell the given cell
+         * @return true if the cell CANNOT be paired with other LUTs
+         * @return false if the cell CAN be paired with other LUTs
+         */
         bool conflictLUTsContain(DesignInfo::DesignCell *tmpCell)
         {
             return conflictLUTs.find(tmpCell) != conflictLUTs.end();
         }
 
+        /**
+         * @brief Get the slot(BEL) mapping of the cells
+         *
+         * @return const SiteBELMapping&
+         */
         const SiteBELMapping &getSlotMapping() const
         {
             return slotMapping;
@@ -1577,16 +1729,57 @@ class ParallelCLBPacker
       private:
         PlacementInfo *placementInfo;
         DeviceInfo::DeviceSite *CLBSite;
+
+        /**
+         * @brief specify how many iterations a PlacementUnit should stay at the top priority of a
+         * site before we finally map it to the site
+         *
+         */
         int unchangedIterationThr = 3;
+
+        /**
+         * @brief the threshold number of cells for site
+         *
+         */
         unsigned int numNeighbor = 10;
+
+        /**
+         * @brief the increase step of the neighbor search diameter
+         *
+         */
         float deltaD = 1.0;
+
+        /**
+         * @brief current neighbor search diameter
+         *
+         */
         float curD = 0;
+
+        /**
+         * @brief the maximum constraint of the neighbor search diameter
+         *
+         */
         float maxD = 10;
+
+        /**
+         * @brief the size of priority queue (the low-priority candidates will be removed)
+         *
+         */
         unsigned int PQSize = 10;
+
+        /**
+         * @brief  a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning
+         * in X-coordinate
+         *
+         */
         float y2xRatio = 1.0;
+
+        /**
+         * @brief the factor of HPWL overhead in packing evaluation for a cell
+         *
+         */
         float HPWLWeight = 0.01;
 
-        int recordTop = -1;
         int unchangeIterationCnt = 0;
         std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> neighborPUs;
         // std::map<PlacementInfo::PlacementUnit *, float> PU2HPWLChange;
@@ -1614,10 +1807,10 @@ class ParallelCLBPacker
         SiteBELMapping slotMapping;
     };
 
-    void prePackLegalizedMacros(PlacementInfo::PlacementMacro *tmpMacro);
-    void packCLBsIteration(bool initial, bool debug = false);
-    void packCLBs(int packIterNum, bool doExceptionHandling, bool debug = false);
-
+    /**
+     * @brief helper struct for candidate site sorting
+     *
+     */
     typedef struct _siteWithScore
     {
         PackingCLBSite *site;
@@ -1628,6 +1821,10 @@ class ParallelCLBPacker
         }
     } siteWithScore;
 
+    /**
+     * @brief PULocation is a helper class to find the neighbor PlacementUnits with KD-Tree
+     *
+     */
     class PULocation : public std::array<float, 2>
     {
       public:
@@ -1659,22 +1856,115 @@ class ParallelCLBPacker
         PlacementInfo::PlacementUnit *PU;
     };
 
+    /**
+     * @brief Load the information of some packed macros like LUTRAM/Crossing-Clock-Domain FFs/Carry Chains have been
+     * legalized.
+     *
+     * @param tmpMacro
+     */
+    void prePackLegalizedMacros(PlacementInfo::PlacementMacro *tmpMacro);
+
+    /**
+     * @brief update the packing cluster candidates for each CLB site and determine some mapping from elements to sites
+     * according to the "confidence".
+     *
+     * @param initial indicate whether it is the first round of the packing iteration
+     * @param debug whether print out debugging information
+     */
+    void packCLBsIteration(bool initial, bool debug = false);
+
+    /**
+     * @brief packing the PlacementUnits (which are compatible to CLB sites) into CLB sites
+     *
+     * @param packIterNum the number of packing iteration
+     * @param doExceptionHandling conduct exception handling if some PlacementUnits fail to be legalized during the
+     * parallel procedure
+     * @param debug whether print out debugging information
+     */
+    void packCLBs(int packIterNum, bool doExceptionHandling, bool debug = false);
+
+    /**
+     * @brief handle the PlacementUnits that cannot be packed during the parallel procedure
+     *
+     * @param verbose whether dumping information for debugging
+     */
     void exceptionHandling(bool verbose = false);
 
+    /**
+     * @brief find the neighbors of specific cell type with given coordinate center
+     *
+     * @param curCellType the given cell type
+     * @param targetX center X
+     * @param targetY center Y
+     * @param displacementLowerbound the lower bound threshold of neighbors' displacement from the center (the neighbors
+     * with low displacement might be tried by previous procedure)
+     * @param displacementUpperbound  the upper bound threshold of neighbors' displacement from the center
+     * @param y2xRatio a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning
+     * in X-coordinate
+     * @return std::vector<DeviceInfo::DeviceSite *>*
+     */
     std::vector<DeviceInfo::DeviceSite *> *findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCellType,
                                                                       float targetX, float targetY,
                                                                       float displacementLowerbound,
                                                                       float displacementUpperbound, float y2xRatio);
 
+    /**
+     * @brief try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into CLB
+     * site
+     *
+     * @param curPU a PlacementUnit which has NOT been legalized/packed
+     * @param displacementThreshold the displacement threshold to find the neighbor site candidate
+     * @param verbose whether print out debugging information
+     * @return true if the PlacementUnit is legalized/packed successfully
+     * @return false  if the PlacementUnit CANNOT be legalized/packed successfully in this iteration
+     */
     bool exceptionPULegalize(PlacementInfo::PlacementUnit *curPU, float displacementThreshold, bool verbose);
+
+    /**
+     * @brief try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site. The evicted
+     * PlacementUnits which are originally packed in this site and cannot be packed now will try to find other CLB sites
+     * to pack
+     *
+     * @param curTargetPackingSite a given CLB site
+     * @param curPU a given PlacementUnit
+     * @param displacementThreshold the displacement threshold for the evicted PlacementUnits to find the neighbor site
+     * candidates
+     * @param packingSite2DeterminedCluster the mapping between PlacementUnit and CLB sites
+     * @param verbose whether print out debugging information
+     * @return true if such re-packing is sucessful for the involved CLB sites and PlacementUnits
+     * @return false if such re-packing FAILS for the involved CLB sites and PlacementUnits
+     */
     bool ripUpAndLegalizae(
         PackingCLBSite *curTargetPackingSite, PlacementInfo::PlacementUnit *curPU, float displacementThreshold,
         std::map<PackingCLBSite *, PackingCLBSite::PackingCLBCluster *> &packingSite2DeterminedCluster, bool verbose);
+
+    /**
+     * @brief check the packing status for all the PlacementUnits
+     *
+     */
     void checkPackedPUsAndUnpackedPUs();
 
+    /**
+     * @brief update the location of PlacementUnits according to the packing result
+     *
+     */
     void setPULocationToPackedSite();
+
+    /**
+     * @brief Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro
+     *
+     * @param setPUPseudoNetToCLBSite  whether set the legalization pseudo nets for those packed PlacementUnits after
+     * updateing
+     * @param setCLBFixed whether fix the locations of the packed PlacementUnits after updateing
+     */
     void updatePackedMacro(bool setPUPseudoNetToCLBSite = false, bool setCLBFixed = false);
+
+    /**
+     * @brief set the packed attribute for the packed PlacementUnits
+     *
+     */
     void setPUsToBePacked();
+
     void dumpFinalPacking();
     void dumpDSPBRAMPlacementTcl(std::ofstream &outfileTcl);
     void dumpCLBPlacementTcl(std::ofstream &outfileTcl, bool packingRelatedToLUT6_2);
@@ -1685,12 +1975,48 @@ class ParallelCLBPacker
     DeviceInfo *deviceInfo;
     PlacementInfo *placementInfo;
     std::map<std::string, std::string> &JSONCfg;
+
+    /**
+     * @brief specify how many iterations a PlacementUnit should stay at the top priority of a
+     * site before we finally map it to the site
+     *
+     */
     int unchangedIterationThr;
+
+    /**
+     * @brief the threshold number of cells for site
+     *
+     */
     int numNeighbor;
+
+    /**
+     * @brief the increase step of the neighbor search diameter
+     *
+     */
     float deltaD;
+
+    /**
+     * @brief current neighbor search diameter
+     *
+     */
     float curD;
+
+    /**
+     * @brief the maximum constraint of the neighbor search diameter
+     *
+     */
     float maxD;
+
+    /**
+     * @brief the size of priority queue (the low-priority candidates will be removed)
+     *
+     */
     int PQSize;
+
+    /**
+     * @brief the factor of HPWL overhead in packing evaluation for a cell
+     *
+     */
     float HPWLWeight;
     std::string packerName;
 

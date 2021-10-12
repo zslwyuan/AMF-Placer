@@ -179,3 +179,5 @@ Users can directly "Open Implemented Design" and source the tcl file generated b
 <center>
 <img src="openImpl.png" align="center" alt="openImpled Design" title="openImpled Design" width="200" /> 
 </center>
+
+This placement loading flow might be a bit tricky since we are trying to be compatible with Vivado. Theoratically, since we utilize "catch" in the Tcl script to handle the errors, the flow should not be stopped by those minor exceptions and we have tested this flow with Vivado 2019-2021. If you encounter unexpected problems, please feel free to let us know in [GitHub Issue](https://github.com/zslwyuan/AMF-Placer/issues).

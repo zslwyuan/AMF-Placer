@@ -681,7 +681,7 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite()
     }
 }
 
-void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFSite()
+void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
 {
     std::map<DesignInfo::DesignCell *, DesignInfo::DesignCell *> FF2LUT;
     for (auto &FFSet : determinedClusterInSite->getFFControlSets())
@@ -1186,7 +1186,7 @@ int ParallelCLBPacker::PackingCLBSite::findMuxFromHalfCLB(PlacementInfo::Placeme
     return resHalfCLB;
 }
 
-void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFSite()
+void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite()
 {
     std::vector<PlacementInfo::PlacementMacro *> MUXF7Macros;
     std::vector<PlacementInfo::PlacementMacro *> MUXF8Macros;
@@ -1423,13 +1423,13 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFSite()
     }
 }
 
-void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFSite()
+void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite()
 {
     assert(!checkIsPrePackedSite() && !checkIsMuxSite());
     assert(fixedPairedLUTs.size() == 0 && conflictLUTs.size() == 0);
     assert(determinedClusterInSite->getSingleLUTs().size() + determinedClusterInSite->getPairedLUTs().size() <= 8);
 
-    greedyMapForCommonLUTFFSite();
+    greedyMapForCommonLUTFFInSite();
 }
 
 void ParallelCLBPacker::PackingCLBSite::mapLUTRAMRelatedCellsToSlots(PlacementInfo::PlacementMacro *_LUTRAMMacro)
