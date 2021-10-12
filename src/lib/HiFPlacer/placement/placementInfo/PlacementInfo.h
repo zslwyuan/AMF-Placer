@@ -1366,7 +1366,7 @@ class PlacementInfo
                 addDSP();
             if (cell->isFF())
                 addFF();
-            if (cell->isLUTRAM())
+            if (cell->isLUTRAM() || cell->originallyIsLUTRAM())
                 addLUTRAM();
             if (cell->isLUT())
                 addLUT();
@@ -1481,7 +1481,7 @@ class PlacementInfo
                     if (curCell->isFF())
                         addFF();
                 }
-                if (curCell->isLUTRAM())
+                if (curCell->isLUTRAM() || curCell->originallyIsLUTRAM())
                     addLUTRAM();
                 if (curCell->isLUT())
                     addLUT();
@@ -1549,7 +1549,7 @@ class PlacementInfo
                 addDSP();
             // if (vCell->isFF())
             //     addFF();
-            if (vCell->isLUTRAM())
+            if (vCell->isLUTRAM() || vCell->originallyIsLUTRAM())
                 addLUTRAM();
             if (vCell->isLUT())
                 addLUT();
@@ -1594,7 +1594,7 @@ class PlacementInfo
                 addDSP();
             // if (vCell->isFF())
             //     addFF();
-            if (vCell->isLUTRAM())
+            if (vCell->isLUTRAM() || vCell->originallyIsLUTRAM())
                 addLUTRAM();
             if (vCell->isLUT())
                 addLUT();
