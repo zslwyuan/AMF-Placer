@@ -38,6 +38,8 @@ void InitialPacker::pack()
         loadOtherCLBMacros(JSONCfg["unpredictable macro file"]);
     }
 
+    findLUTRAMMacros();
+
     LUTFFPairing();
 
     print_status("InitialPacker Finding unpacked units");
@@ -269,9 +271,9 @@ void InitialPacker::findDSPMacros()
         placementUnits.push_back(curMacro);
     }
 
-    int cellInBRAMMacrosCnt = 0;
+    int cellInDSPMacrosCnt = 0;
     for (auto macro : res)
-        cellInBRAMMacrosCnt += macro->getCells().size();
+        cellInDSPMacrosCnt += macro->getCells().size();
 
     // std::cout << "highlight_objects -color yellow [get_cells { ";
     // for (auto macro : res)
@@ -280,8 +282,53 @@ void InitialPacker::findDSPMacros()
     // std::cout << "}]\n";
 
     print_info("#DSP Macro: " + std::to_string(res.size()));
-    print_info("#DSP Macro Cells: " + std::to_string(cellInBRAMMacrosCnt));
+    print_info("#DSP Macro Cells: " + std::to_string(cellInDSPMacrosCnt));
     print_status("DSP Macro Extracted.");
+}
+
+void InitialPacker::findLUTRAMMacros()
+{
+    std::vector<PlacementInfo::PlacementMacro *> res;
+    res.clear();
+
+    std::vector<DesignInfo::DesignCell *> &curCellsInDesign = designInfo->getCells();
+    int curNumCells = designInfo->getNumCells();
+    for (int curCellId = 0; curCellId < curNumCells; curCellId++)
+    {
+        auto curCell = curCellsInDesign[curCellId];
+        if (!curCell->originallyIsLUTRAM())
+            continue;
+
+        if (cellInMacros.find(curCell) != cellInMacros.end())
+            continue;
+
+        PlacementInfo::PlacementMacro *curMacro = new PlacementInfo::PlacementMacro(
+            curCell->getName(), placementUnits.size(), PlacementInfo::PlacementMacro::PlacementMacroType_MCLB);
+
+        curMacro->addOccupiedSite(0, 1);
+        curMacro->addCell(curCell, curCell->getCellType(), 0, 0);
+        assert(cellInMacros.find(curCell) == cellInMacros.end());
+        cellInMacros.insert(curCell);
+        cellId2PlacementUnit[curCell->getElementIdInType()] = curMacro;
+        curMacro->setWeight(16);
+        res.push_back(curMacro);
+        placementMacros.push_back(curMacro);
+        placementUnits.push_back(curMacro);
+    }
+
+    int cellInLUTRAMMacrosCnt = 0;
+    for (auto macro : res)
+        cellInLUTRAMMacrosCnt += macro->getCells().size();
+
+    // std::cout << "highlight_objects -color yellow [get_cells { ";
+    // for (auto macro : res)
+    //     for (auto cell : macro->getCells())
+    //         std::cout << " " << cell->getName();
+    // std::cout << "}]\n";
+
+    print_info("#LUTRAM Predictable Macro: " + std::to_string(res.size()));
+    print_info("#LUTRAM Predictable Macro Cells: " + std::to_string(cellInLUTRAMMacrosCnt));
+    print_status("LUTRAM Predictable Macro Extracted.");
 }
 
 // BRAM with CAS* connected to other BRAM should be a Macro

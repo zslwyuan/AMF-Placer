@@ -1324,13 +1324,27 @@ void ParallelCLBPacker::dumpCLBPlacementTcl(std::ofstream &outfileTcl, bool pack
                 if (containLUTRAMCells(tmpMacro))
                 {
                     if (tmpMacro->getFixedCellInfoVec().size() % 2 ==
-                        0) // if the number of fixed cells is odd, there might be weird errors from Vivado.
+                        0) // if the number of fixed cells is odd and >1, there might be weird errors from Vivado.
                     {
-                        for (unsigned int i = 0; i < tmpMacro->getFixedCellInfoVec().size(); i++)
+                        if (tmpMacro->getFixedCellInfoVec().size() > 0)
                         {
-                            DesignInfo::DesignCell *curCell = tmpMacro->getFixedCellInfoVec()[i].cell;
-                            placementStr += "  " + curCell->getName() + "  " + CLBSite->getName() + "/" +
-                                            tmpMacro->getFixedCellInfoVec()[i].BELName + "  \n";
+                            for (unsigned int i = 0; i < tmpMacro->getFixedCellInfoVec().size(); i++)
+                            {
+                                DesignInfo::DesignCell *curCell = tmpMacro->getFixedCellInfoVec()[i].cell;
+                                placementStr += "  " + curCell->getName() + "  " + CLBSite->getName() + "/" +
+                                                tmpMacro->getFixedCellInfoVec()[i].BELName + "  \n";
+                            }
+                        }
+                        else
+                        {
+                            placementStr += "  " + tmpMacro->getName() + "  " + CLBSite->getName() + "/H6LUT  \n";
+                        }
+                    }
+                    else
+                    {
+                        if (tmpMacro->getFixedCellInfoVec().size() == 1)
+                        {
+                            placementStr += "  " + tmpMacro->getName() + "  " + CLBSite->getName() + "/H6LUT  \n";
                         }
                     }
                 }

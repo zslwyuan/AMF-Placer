@@ -84,6 +84,13 @@ class InitialPacker
     void findDSPMacros();
 
     /**
+     * @brief detects LUTRAM macros and clusters the related cells into PlacementInfo::PlacementMacro
+     *
+     *
+     */
+    void findLUTRAMMacros();
+
+    /**
      * @brief detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro
      *
      * If two BRAMs are interconnected via their "CAS" ports, they are cascaded.
