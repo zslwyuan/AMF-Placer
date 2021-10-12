@@ -24,9 +24,9 @@
 #include <set>
 #include <sstream>
 #include <string>
-#include <vector>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <vector>
 
 inline bool exists_test(const std::string &name)
 {
@@ -38,7 +38,7 @@ std::map<std::string, std::string> parseJSONFile(std::string JSONFileName)
 {
     assert(exists_test(JSONFileName));
     std::ifstream infile(JSONFileName.c_str());
-
+    assert(infile.good());
     std::string line;
 
     std::string entireStr;

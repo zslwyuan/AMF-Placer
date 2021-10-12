@@ -12,6 +12,8 @@
 
 #include "dumpZip.h"
 #include <assert.h>
+#include <sys/stat.h>
+
 void writeStrToGZip(std::string fileName, std::stringstream &data)
 {
     // we will use GZip from zlib
@@ -26,4 +28,14 @@ void writeStrToGZip(std::string fileName, std::stringstream &data)
     gzwrite(gz_file, (void *)(data.str().data()), file_size);
     // close the file
     gzclose(gz_file);
+}
+
+bool fileExists(const std::string &filename)
+{
+    struct stat buf;
+    if (stat(filename.c_str(), &buf) != -1)
+    {
+        return true;
+    }
+    return false;
 }

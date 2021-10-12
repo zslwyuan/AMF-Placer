@@ -14,10 +14,11 @@
 #include "readZip.h"
 #include "strPrint.h"
 #include "stringCheck.h"
-#include <iomanip>
 #include <assert.h>
 #include <cmath>
+#include <iomanip>
 #include <queue>
+#include <sys/stat.h>
 
 PlacementInfo::PlacementInfo(DesignInfo *designInfo, DeviceInfo *deviceInfo,
                              std::map<std::string, std::string> &JSONCfg)
@@ -80,6 +81,8 @@ PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable(std::string ce
 
     // load cell occupation of BELs
     std::ifstream infile0(cellType2fixedAmoFileName.c_str());
+    assert(infile0.good());
+
     std::string line;
 
     std::string cellTypeStr;
@@ -108,6 +111,7 @@ PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable(std::string ce
 
     // load cell mapping to BEL shared virtual type
     std::ifstream infile1(cellType2sharedCellTypeFileName.c_str());
+    assert(infile1.good());
     std::string cell2BELType;
 
     std::set<std::string> involvedSharedBELStr;
@@ -153,6 +157,7 @@ PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable(std::string ce
 
     // load BEL shared virtual type to real compatible BEL type
     std::ifstream infile2(sharedCellType2BELtypeFileName.c_str());
+    assert(infile2.good());
     std::string compatibleBELTypeStrs, sharedCellTypeStr, siteTypeStr;
 
     while (std::getline(infile2, line))
@@ -1598,6 +1603,10 @@ void PlacementInfo::loadPlacementUnitInformation(std::string locFile)
     PULegalXY.second.clear();
 
     std::string unzipCmnd = "gzip -c -d " + locFile;
+
+    struct stat checkbuf;
+    assert(stat(locFile.c_str(), &checkbuf) != -1);
+
     FILEbuf sbuf(popen(unzipCmnd.c_str(), "r"));
     std::istream infile(&sbuf);
     // std::ifstream infile(designTextFileName.c_str());

@@ -13,11 +13,11 @@
 #include "PlacementTimingInfo.h"
 #include "PlacementInfo.h"
 
-#include <cmath>
-#include <queue>
 #include <algorithm>
-#include <set>
+#include <cmath>
 #include <codecvt>
+#include <queue>
+#include <set>
 #include <stack>
 
 PlacementTimingInfo::PlacementTimingInfo(DesignInfo *designInfo, DeviceInfo *deviceInfo,
@@ -350,7 +350,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
     nodeStack.push(startNodeId);
     int targetPathLen = nodes[startNodeId]->getLongestPathLength();
 
-    if (nodes[startNodeId]->getForwardLevel() > targetPathLen * 0.1)
+    if (nodes[startNodeId]->getForwardLevel() > targetPathLen * 0.2)
     {
         return resSucessors;
     }
@@ -382,6 +382,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
             if (!findNext)
             {
                 forwarding = false;
+                return resSucessors;
             }
         }
 

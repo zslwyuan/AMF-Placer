@@ -13,8 +13,8 @@
 #include "readZip.h"
 #include "strPrint.h"
 #include "stringCheck.h"
-#include <regex>
 #include <assert.h>
+#include <regex>
 
 void DesignInfo::DesignPin::updateParentCellNetInfo()
 {
@@ -288,6 +288,8 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
 void DesignInfo::loadClocks(std::string clockFileName)
 {
     std::ifstream clockFile(clockFileName);
+    assert(clockFile.good());
+
     while (clockFile.peek() != EOF)
     {
         std::string clockDriverPinName;

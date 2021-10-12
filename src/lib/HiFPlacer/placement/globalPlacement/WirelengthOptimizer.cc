@@ -191,7 +191,7 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
     }
 
     addPseudoNet2LoctionForAllPUs(pesudoNetWeight, considerNetNum);
-    // updatePseudoNetForClockRegion((4.0 - placementInfo->getProgress()) * pesudoNetWeight);
+    updatePseudoNetForClockRegion((1.1 - placementInfo->getProgress()) * pesudoNetWeight);
 
     if (verbose)
         print_status("update B2B Net Weight Done.");
@@ -710,17 +710,19 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
     {
         auto curPU = PUXY.first;
         float cX = PUXY.second.first;
-        float cY = PUXY.second.second;
-        placementInfo->addPseudoNetsInPlacementInfo(
-            xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
-            xSolver->solverData.objectiveVector, curPU, cX, pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio,
-            true, false);
+        float cY = curPU->Y();
 
-        placementInfo->addPseudoNetsInPlacementInfo(
-            ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
-            ySolver->solverData.objectiveVector, curPU, cY, pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio,
-            false, true);
+        if (std::fabs(curPU->X() - cX) > 3)
+            placementInfo->addPseudoNetsInPlacementInfo(
+                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                xSolver->solverData.objectiveVector, curPU, cX, pesudoNetWeight * curPU->getNetsSetPtr()->size(),
+                y2xRatio, true, false);
+
+        // placementInfo->addPseudoNetsInPlacementInfo(
+        //     ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
+        //     ySolver->solverData.objectiveVector, curPU, cY, pesudoNetWeight * curPU->getNetsSetPtr()->size(),
+        //     y2xRatio, false, true);
     }
 
-    print_warning("update pseudo net for clockt egion");
+    print_warning("update pseudo net of clockt region for " + std::to_string(PU2ClockRegionCenter.size()) + " PUs");
 }

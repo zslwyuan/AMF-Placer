@@ -13,11 +13,11 @@
 #include "DesignInfo.h"
 #include "DeviceInfo.h"
 #include "GlobalPlacer.h"
-#include "PlacementTimingOptimizer.h"
-#include "ParallelCLBPacker.h"
 #include "IncrementalBELPacker.h"
 #include "InitialPacker.h"
+#include "ParallelCLBPacker.h"
 #include "PlacementInfo.h"
+#include "PlacementTimingOptimizer.h"
 #include "utils/simpleJSON.h"
 #include <iostream>
 #include <omp.h>
@@ -161,15 +161,18 @@ class AMFPlacer
         timingOptimizer->enhanceNetWeight_LevelBased(10);
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
         globalPlacer->setNeighborDisplacementUpperbound(3.0);
+        globalPlacer->spreading(-1);
+        timingOptimizer->clusterLongPathInOneClockRegion(20, 0.5);
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
+                                                  true, timingOptimizer);
+
+        placementInfo->getPU2ClockRegionCenters().clear();
+        globalPlacer->setNeighborDisplacementUpperbound(2.0);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
 
         placementInfo->getDesignInfo()->resetNetEnhanceRatio();
-
-        // timingOptimizer->clusterLongPathInOneClockRegion(20, 0.5);
-        globalPlacer->setNeighborDisplacementUpperbound(2.0);
-        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
-                                                  true, timingOptimizer);
+        timingOptimizer->enhanceNetWeight_LevelBased(10);
 
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5, true, false,
                                                   timingOptimizer);

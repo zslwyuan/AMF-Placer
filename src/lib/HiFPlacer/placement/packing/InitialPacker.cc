@@ -1378,6 +1378,7 @@ void InitialPacker::loadOtherCLBMacros(std::string RAMMacroListFromVivadoFileNam
     res.clear();
 
     std::ifstream infile(RAMMacroListFromVivadoFileName.c_str());
+    assert(infile.good());
 
     std::string line;
     std::getline(infile, line);
@@ -1595,6 +1596,7 @@ void InitialPacker::loadFixedPlacementUnits(std::string fixedPlacementUnitsFromV
 {
     fixedPlacementUnits.clear();
     std::ifstream infile(fixedPlacementUnitsFromVivadoFileName.c_str());
+    assert(infile.good());
 
     std::string line;
     std::getline(infile, line);

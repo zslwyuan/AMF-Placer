@@ -183,7 +183,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     auto &cellLoc = placementInfo->getCellId2location();
     auto deviceInfo = placementInfo->getDeviceInfo();
     auto YX2ClockRegion = deviceInfo->getClockRegions();
-    auto PU2ClockRegionCenter = placementInfo->getPU2ClockRegionCenters();
+    auto &PU2ClockRegionCenter = placementInfo->getPU2ClockRegionCenters();
     PU2ClockRegionCenter.clear();
 
     std::set<int> extractedCellIds;
@@ -200,7 +200,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             auto candidateCellIds =
                 simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLenThr, 20000, extractedCellIds);
 
-            if (candidateCellIds.size() >= pathLenThr)
+            if (candidateCellIds.size() >= pathLenThr * 0.8)
             {
                 std::set<PlacementInfo::PlacementUnit *> PUsInLongPaths;
                 PUsInLongPaths.clear();
@@ -272,7 +272,8 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                     }
 
                     if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) &&
-                        totalClockRegionWeight < 20000 && maxClockRegionWeight >= 4)
+                        (maxClockRegionWeight < totalClockRegionWeight * 0.95) && totalClockRegionWeight < 20000 &&
+                        maxClockRegionWeight >= 4)
                     {
                         auto optClockRegion = YX2ClockRegion[0][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;
@@ -284,7 +285,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                                 float fX = cX;
                                 float fY = curPU->Y();
                                 placementInfo->legalizeXYInArea(curPU, fX, fY);
-                                curPU->setAnchorLocationAndForgetTheOriginalOne(fX, fY);
+                                // curPU->setAnchorLocationAndForgetTheOriginalOne(fX, fY);
                                 extractedPUs.insert(curPU);
 
                                 PU2ClockRegionCenter[curPU] = std::pair<float, float>(fX, fY);
