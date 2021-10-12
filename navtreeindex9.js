@@ -1,5 +1,6 @@
 var NAVTREEINDEX9 =
 {
+"class_vivado_graph_util_1_1_vivado_net.html#a980a9b654d6ef4ee9542fbb74582550f":[8,0,1,2,1],
 "class_vivado_graph_util_1_1_vivado_net.html#a980a9b654d6ef4ee9542fbb74582550f":[7,0,12,2,1],
 "class_vivado_graph_util_1_1_vivado_net.html#ad7f2a0667677d82e257ed6aa37116725":[8,0,1,2,0],
 "class_vivado_graph_util_1_1_vivado_net.html#ad7f2a0667677d82e257ed6aa37116725":[7,0,12,2,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX9 =
 "functions_vars_x.html":[8,3,2,22],
 "functions_vars_y.html":[8,3,2,23],
 "functions_w.html":[8,3,0,23],
-"functions_x.html":[8,3,0,24],
-"functions_y.html":[8,3,0,25]
+"functions_x.html":[8,3,0,24]
 };

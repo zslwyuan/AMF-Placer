@@ -11,6 +11,7 @@ var class_initial_packer =
     [ "findBRAMMacros", "class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f", null ],
     [ "findCARRYMacros", "class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18", null ],
     [ "findDSPMacros", "class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958", null ],
+    [ "findLUTRAMMacros", "class_initial_packer.html#a7b172c529adc0aad6f45f19e919ca213", null ],
     [ "findMuxMacros", "class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377", null ],
     [ "findUnpackedUnits", "class_initial_packer.html#aa81da495335eae350a1e31505c899369", null ],
     [ "loadFixedPlacementUnits", "class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c", null ],

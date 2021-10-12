@@ -1,5 +1,6 @@
 var NAVTREEINDEX11 =
 {
+"namespacepaint_summary.html#abf8635fcb2b09d0d6b8558c773bd3d78":[7,0,11,2],
 "namespacepaint_summary.html#ae6da9ad021b2a877d8afda2c03bbbca9":[7,0,11,0],
 "namespacepainter.html":[7,0,8],
 "namespacepainter.html#a0be08d86a697c8d731137b9990e6660d":[7,0,8,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX11 =
 "struct_placement_info_1_1_placement_net_1_1__pin_offset.html#a4613e8400724b1ada383d8d4da421ad0":[8,0,18,9,0,0],
 "struct_placement_info_1_1_placement_net_1_1__pin_offset.html#a9f69bf95869b2fdd970724f2ce578a26":[8,0,18,9,0,2],
 "struct_placement_info_1_1_placement_net_1_1__pin_offset.html#af0961a05683631c3db2630e24279c00e":[8,0,18,9,0,1],
-"struct_placement_info_1_1_placement_site_type_info_1_1location.html":[8,0,18,11,0],
-"struct_placement_info_1_1_placement_site_type_info_1_1location.html#aad6963e15572a4c1bd08013e8821ef43":[8,0,18,11,0,1]
+"struct_placement_info_1_1_placement_site_type_info_1_1location.html":[8,0,18,11,0]
 };

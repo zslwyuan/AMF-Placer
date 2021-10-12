@@ -1,16 +1,17 @@
 <map id="PlacementInfo::PlacementUnit::setWeight" name="PlacementInfo::PlacementUnit::setWeight">
-<area shape="rect" id="node1" title=" " alt="" coords="667,247,841,289"/>
-<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="185,58,341,99"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="414,44,615,71"/>
-<area shape="rect" id="node6" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="411,95,619,121"/>
-<area shape="rect" id="node7" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="419,145,610,172"/>
-<area shape="rect" id="node8" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="421,196,608,223"/>
-<area shape="rect" id="node9" href="$class_initial_packer.html#aa81da495335eae350a1e31505c899369" title="other non&#45;Macro elements will be instantiated as PlacementInfo::PlacementUnpackedCell" alt="" coords="425,247,604,289"/>
-<area shape="rect" id="node10" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="437,313,593,354"/>
-<area shape="rect" id="node11" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,393,363,434"/>
-<area shape="rect" id="node12" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="423,379,606,405"/>
-<area shape="rect" id="node13" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="185,458,341,499"/>
-<area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="193,523,334,565"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,400,116,427"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,225,327,252"/>
+<area shape="rect" id="node1" title=" " alt="" coords="677,268,852,309"/>
+<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="185,83,341,124"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="419,43,621,70"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="416,94,624,121"/>
+<area shape="rect" id="node7" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="425,145,615,171"/>
+<area shape="rect" id="node8" href="$class_initial_packer.html#a7b172c529adc0aad6f45f19e919ca213" title="detects LUTRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="411,195,629,222"/>
+<area shape="rect" id="node9" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="427,246,613,273"/>
+<area shape="rect" id="node10" href="$class_initial_packer.html#aa81da495335eae350a1e31505c899369" title="other non&#45;Macro elements will be instantiated as PlacementInfo::PlacementUnpackedCell" alt="" coords="431,297,609,339"/>
+<area shape="rect" id="node11" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="442,363,598,404"/>
+<area shape="rect" id="node12" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,443,363,484"/>
+<area shape="rect" id="node13" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="429,429,611,455"/>
+<area shape="rect" id="node14" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="185,508,341,549"/>
+<area shape="rect" id="node15" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title=" " alt="" coords="193,573,334,615"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,450,116,477"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,246,327,273"/>
 </map>

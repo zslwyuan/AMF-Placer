@@ -1401,322 +1401,336 @@ $(document).ready(function(){initNavTree('_parallel_c_l_b_packer_8cc_source.html
 <div class="line"><a id="l01324" name="l01324"></a><span class="lineno"> 1324</span>                <span class="keywordflow">if</span> (<a class="code hl_function" href="_parallel_c_l_b_packer_8cc.html#a26fb856dc508059a8744a3ab61473f2e">containLUTRAMCells</a>(tmpMacro))</div>
 <div class="line"><a id="l01325" name="l01325"></a><span class="lineno"> 1325</span>                {</div>
 <div class="line"><a id="l01326" name="l01326"></a><span class="lineno"> 1326</span>                    <span class="keywordflow">if</span> (tmpMacro-&gt;getFixedCellInfoVec().size() % 2 ==</div>
-<div class="line"><a id="l01327" name="l01327"></a><span class="lineno"> 1327</span>                        0) <span class="comment">// if the number of fixed cells is odd, there might be weird errors from Vivado.</span></div>
+<div class="line"><a id="l01327" name="l01327"></a><span class="lineno"> 1327</span>                        0) <span class="comment">// if the number of fixed cells is odd and &gt;1, there might be weird errors from Vivado.</span></div>
 <div class="line"><a id="l01328" name="l01328"></a><span class="lineno"> 1328</span>                    {</div>
-<div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; tmpMacro-&gt;getFixedCellInfoVec().size(); i++)</div>
+<div class="line"><a id="l01329" name="l01329"></a><span class="lineno"> 1329</span>                        <span class="keywordflow">if</span> (tmpMacro-&gt;getFixedCellInfoVec().size() &gt; 0)</div>
 <div class="line"><a id="l01330" name="l01330"></a><span class="lineno"> 1330</span>                        {</div>
-<div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span>                            <a class="code hl_class" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *curCell = tmpMacro-&gt;getFixedCellInfoVec()[i].cell;</div>
-<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span>                            placementStr += <span class="stringliteral">&quot;  &quot;</span> + curCell-&gt;<a class="code hl_function" href="class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5">getName</a>() + <span class="stringliteral">&quot;  &quot;</span> + CLBSite-&gt;getName() + <span class="stringliteral">&quot;/&quot;</span> +</div>
-<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span>                                            tmpMacro-&gt;getFixedCellInfoVec()[i].BELName + <span class="stringliteral">&quot;  \n&quot;</span>;</div>
-<div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span>                        }</div>
-<div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span>                    }</div>
-<div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span>                }</div>
-<div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span>            }</div>
-<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span> </div>
-<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
-<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span>            {</div>
-<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
-<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span>                {</div>
-<div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
+<div class="line"><a id="l01331" name="l01331"></a><span class="lineno"> 1331</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i = 0; i &lt; tmpMacro-&gt;getFixedCellInfoVec().size(); i++)</div>
+<div class="line"><a id="l01332" name="l01332"></a><span class="lineno"> 1332</span>                            {</div>
+<div class="line"><a id="l01333" name="l01333"></a><span class="lineno"> 1333</span>                                <a class="code hl_class" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *curCell = tmpMacro-&gt;getFixedCellInfoVec()[i].cell;</div>
+<div class="line"><a id="l01334" name="l01334"></a><span class="lineno"> 1334</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + curCell-&gt;<a class="code hl_function" href="class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5">getName</a>() + <span class="stringliteral">&quot;  &quot;</span> + CLBSite-&gt;getName() + <span class="stringliteral">&quot;/&quot;</span> +</div>
+<div class="line"><a id="l01335" name="l01335"></a><span class="lineno"> 1335</span>                                                tmpMacro-&gt;getFixedCellInfoVec()[i].BELName + <span class="stringliteral">&quot;  \n&quot;</span>;</div>
+<div class="line"><a id="l01336" name="l01336"></a><span class="lineno"> 1336</span>                            }</div>
+<div class="line"><a id="l01337" name="l01337"></a><span class="lineno"> 1337</span>                        }</div>
+<div class="line"><a id="l01338" name="l01338"></a><span class="lineno"> 1338</span>                        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01339" name="l01339"></a><span class="lineno"> 1339</span>                        {</div>
+<div class="line"><a id="l01340" name="l01340"></a><span class="lineno"> 1340</span>                            placementStr += <span class="stringliteral">&quot;  &quot;</span> + tmpMacro-&gt;getName() + <span class="stringliteral">&quot;  &quot;</span> + CLBSite-&gt;getName() + <span class="stringliteral">&quot;/H6LUT  \n&quot;</span>;</div>
+<div class="line"><a id="l01341" name="l01341"></a><span class="lineno"> 1341</span>                        }</div>
+<div class="line"><a id="l01342" name="l01342"></a><span class="lineno"> 1342</span>                    }</div>
+<div class="line"><a id="l01343" name="l01343"></a><span class="lineno"> 1343</span>                    <span class="keywordflow">else</span></div>
 <div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span>                    {</div>
-<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span>                        <span class="keywordflow">if</span> (slotMapping.LUTs[i][j][k])</div>
+<div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span>                        <span class="keywordflow">if</span> (tmpMacro-&gt;getFixedCellInfoVec().size() == 1)</div>
 <div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span>                        {</div>
-<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span>                            <span class="keywordflow">if</span> (slotMapping.LUTs[i][j][k]-&gt;isVirtualCell())</div>
-<div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span>                                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>                            assert(slotMapping.LUTs[i][j][k]-&gt;isLUT());</div>
-<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span>                            <span class="keywordtype">char</span> LUTCode = (i * 4 + k) + <span class="charliteral">&#39;A&#39;</span>;</div>
-<div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span>                            <span class="keywordflow">if</span> (j == 0)</div>
-<div class="line"><a id="l01352" name="l01352"></a><span class="lineno"> 1352</span>                            {</div>
-<div class="line"><a id="l01353" name="l01353"></a><span class="lineno"> 1353</span>                                std::string LUTSiteName = std::string(1, LUTCode) + <span class="stringliteral">&quot;6LUT&quot;</span>;</div>
-<div class="line"><a id="l01354" name="l01354"></a><span class="lineno"> 1354</span>                                <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>++;</div>
-<div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + slotMapping.LUTs[i][j][k]-&gt;getName() + <span class="stringliteral">&quot; &quot;</span> + CLBSite-&gt;getName() +</div>
-<div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>                                                <span class="stringliteral">&quot;/&quot;</span> + LUTSiteName + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span>                            }</div>
-<div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span>                            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>                            {</div>
-<div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>                                <span class="keywordflow">if</span> (slotMapping.LUTs[i][j][k]-&gt;getOriCellType() == <a class="code hl_enumvalue" href="class_design_info.html#a35becde3c1203126956e2fbd1b6ab51baf9c7320a2d0958a56b35353d93762c79">DesignInfo::CellType_LUT6_2</a>)</div>
-<div class="line"><a id="l01361" name="l01361"></a><span class="lineno"> 1361</span>                                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01362" name="l01362"></a><span class="lineno"> 1362</span> </div>
-<div class="line"><a id="l01363" name="l01363"></a><span class="lineno"> 1363</span>                                std::string LUTSiteName = std::string(1, LUTCode) + <span class="stringliteral">&quot;5LUT&quot;</span>;</div>
-<div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span>                                <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>++;</div>
-<div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + slotMapping.LUTs[i][j][k]-&gt;getName() + <span class="stringliteral">&quot; &quot;</span> + CLBSite-&gt;getName() +</div>
-<div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span>                                                <span class="stringliteral">&quot;/&quot;</span> + LUTSiteName + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>                            }</div>
-<div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span>                        }</div>
-<div class="line"><a id="l01369" name="l01369"></a><span class="lineno"> 1369</span>                    }</div>
-<div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span>                }</div>
-<div class="line"><a id="l01371" name="l01371"></a><span class="lineno"> 1371</span>            }</div>
-<div class="line"><a id="l01372" name="l01372"></a><span class="lineno"> 1372</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
-<div class="line"><a id="l01373" name="l01373"></a><span class="lineno"> 1373</span>            {</div>
-<div class="line"><a id="l01374" name="l01374"></a><span class="lineno"> 1374</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
-<div class="line"><a id="l01375" name="l01375"></a><span class="lineno"> 1375</span>                {</div>
-<div class="line"><a id="l01376" name="l01376"></a><span class="lineno"> 1376</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
-<div class="line"><a id="l01377" name="l01377"></a><span class="lineno"> 1377</span>                    {</div>
-<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span>                        <span class="keywordflow">if</span> (slotMapping.FFs[i][j][k])</div>
-<div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>                        {</div>
-<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span>                            <span class="keywordflow">if</span> (slotMapping.FFs[i][j][k]-&gt;isVirtualCell())</div>
-<div class="line"><a id="l01381" name="l01381"></a><span class="lineno"> 1381</span>                                <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>                            assert(slotMapping.FFs[i][j][k]-&gt;isFF());</div>
-<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>                            <span class="keyword">auto</span> PU = <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57">getPlacementUnitByCell</a>(slotMapping.FFs[i][j][k]);</div>
-<div class="line"><a id="l01384" name="l01384"></a><span class="lineno"> 1384</span>                            <span class="keywordflow">if</span> (<span class="keyword">auto</span> tmpMacro = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a> *<span class="keyword">&gt;</span>(PU))</div>
-<div class="line"><a id="l01385" name="l01385"></a><span class="lineno"> 1385</span>                            {</div>
-<div class="line"><a id="l01386" name="l01386"></a><span class="lineno"> 1386</span>                                <span class="keywordflow">if</span> (tmpMacro-&gt;getMacroType() ==</div>
-<div class="line"><a id="l01387" name="l01387"></a><span class="lineno"> 1387</span>                                    <a class="code hl_class" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a>::</div>
-<div class="line"><a id="l01388" name="l01388"></a><span class="lineno"> 1388</span>                                        PlacementMacroType_LCLB) <span class="comment">// currently we failed to predict the LCLB macros, so</span></div>
-<div class="line"><a id="l01389" name="l01389"></a><span class="lineno"> 1389</span>                                                                 <span class="comment">// leave it to Vivado placement.</span></div>
-<div class="line"><a id="l01390" name="l01390"></a><span class="lineno"> 1390</span>                                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01391" name="l01391"></a><span class="lineno"> 1391</span>                            }</div>
-<div class="line"><a id="l01392" name="l01392"></a><span class="lineno"> 1392</span>                            <span class="keywordtype">char</span> FFCode = (i * 4 + k) + <span class="charliteral">&#39;A&#39;</span>;</div>
-<div class="line"><a id="l01393" name="l01393"></a><span class="lineno"> 1393</span>                            <span class="keywordflow">if</span> (j == 0)</div>
-<div class="line"><a id="l01394" name="l01394"></a><span class="lineno"> 1394</span>                            {</div>
-<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>                                std::string FFSiteName = std::string(1, FFCode) + <span class="stringliteral">&quot;FF&quot;</span>;</div>
-<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span>                                <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>++;</div>
-<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + slotMapping.FFs[i][j][k]-&gt;getName() + <span class="stringliteral">&quot; &quot;</span> + CLBSite-&gt;getName() +</div>
-<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>                                                <span class="stringliteral">&quot;/&quot;</span> + FFSiteName + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span>                            }</div>
-<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span>                            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>                            {</div>
-<div class="line"><a id="l01402" name="l01402"></a><span class="lineno"> 1402</span>                                std::string FFSiteName = std::string(1, FFCode) + <span class="stringliteral">&quot;FF2&quot;</span>;</div>
-<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>                                <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>++;</div>
-<div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + slotMapping.FFs[i][j][k]-&gt;getName() + <span class="stringliteral">&quot; &quot;</span> + CLBSite-&gt;getName() +</div>
-<div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span>                                                <span class="stringliteral">&quot;/&quot;</span> + FFSiteName + <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>                            }</div>
-<div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span>                        }</div>
-<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>                    }</div>
-<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>                }</div>
-<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>            }</div>
-<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>        }</div>
-<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a> &gt; 100)</div>
-<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>        {</div>
-<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>            <span class="keywordflow">if</span> (placementStr != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>            {</div>
-<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>                outfileTcl &lt;&lt; <span class="stringliteral">&quot;set result &quot;</span></div>
-<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>                           &lt;&lt; <span class="stringliteral">&quot;[catch {place_cell {&quot;</span> &lt;&lt; placementStr &lt;&lt; <span class="stringliteral">&quot;}}]\n&quot;</span></div>
-<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>                           &lt;&lt; <span class="stringliteral">&quot;if {$result} {\n incr errorNum \nputs $fo \&quot;&quot;</span> &lt;&lt; placementStr &lt;&lt; <span class="stringliteral">&quot;\&quot;\n}\n&quot;</span>;</div>
-<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>                placementStr = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>            }</div>
-<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>            <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a> = 0;</div>
-<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>        }</div>
-<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>    }</div>
-<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>    <span class="keywordflow">if</span> (placementStr != <span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>    {</div>
-<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>        outfileTcl &lt;&lt; <span class="stringliteral">&quot;set result &quot;</span></div>
-<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>                   &lt;&lt; <span class="stringliteral">&quot;[catch {place_cell {&quot;</span> &lt;&lt; placementStr &lt;&lt; <span class="stringliteral">&quot;}}]\n&quot;</span></div>
-<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>                   &lt;&lt; <span class="stringliteral">&quot;if {$result} {\n incr errorNum \nputs $fo \&quot;&quot;</span> &lt;&lt; placementStr &lt;&lt; <span class="stringliteral">&quot;\&quot;\n}\n&quot;</span>;</div>
-<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>    }</div>
-<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>}</div>
-<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span> </div>
-<div class="line"><a id="l01432" name="l01432"></a><span class="lineno"><a class="line" href="class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a"> 1432</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a">ParallelCLBPacker::dumpPlacementTcl</a>(std::string dumpTclFile)</div>
-<div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>{</div>
-<div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span>    std::ofstream outfileTcl(dumpTclFile);</div>
-<div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;set fo [open \&quot;./placementError\&quot; \&quot;w\&quot;]\nplace_design -unplace\nset errorNum 0\n&quot;</span>;</div>
-<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>    <a class="code hl_function" href="class_parallel_c_l_b_packer.html#acdccd594e78ef05cf0b0769cc11bc244">dumpDSPBRAMPlacementTcl</a>(outfileTcl);</div>
-<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span>    <a class="code hl_function" href="class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46">dumpCLBPlacementTcl</a>(outfileTcl, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span>    <span class="comment">// Except LUT6_2 cells, remove the packing information in Vivado and use our packing</span></div>
-<div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;set_property HLUTNM {} [get_cells -hierarchical *]\n&quot;</span>;</div>
-<div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;set_property SOFT_HLUTNM {} [get_cells -hierarchical *]\n&quot;</span>;</div>
-<div class="line"><a id="l01441" name="l01441"></a><span class="lineno"> 1441</span>    <a class="code hl_function" href="class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46">dumpCLBPlacementTcl</a>(outfileTcl, <span class="keyword">false</span>);</div>
-<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>    <span class="comment">// outfileTcl &lt;&lt; &quot;place_design\n&quot;;</span></div>
-<div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;$errorNum\n&quot;</span>;</div>
-<div class="line"><a id="l01444" name="l01444"></a><span class="lineno"> 1444</span> </div>
-<div class="line"><a id="l01445" name="l01445"></a><span class="lineno"> 1445</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;place_design\nroute_design\n&quot;</span>;</div>
-<div class="line"><a id="l01446" name="l01446"></a><span class="lineno"> 1446</span>    outfileTcl.close();</div>
-<div class="line"><a id="l01447" name="l01447"></a><span class="lineno"> 1447</span>}</div>
-<div class="line"><a id="l01448" name="l01448"></a><span class="lineno"> 1448</span> </div>
-<div class="line"><a id="l01449" name="l01449"></a><span class="lineno"><a class="line" href="class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1"> 1449</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1">ParallelCLBPacker::dumpFinalPacking</a>()</div>
-<div class="line"><a id="l01450" name="l01450"></a><span class="lineno"> 1450</span>{</div>
-<div class="line"><a id="l01451" name="l01451"></a><span class="lineno"> 1451</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>.find(<span class="stringliteral">&quot;DumpCLBPacking&quot;</span>) != <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>.end())</div>
-<div class="line"><a id="l01452" name="l01452"></a><span class="lineno"> 1452</span>    {</div>
-<div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span>        std::string dumpTclFile =</div>
-<div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span>            <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>[<span class="stringliteral">&quot;DumpCLBPacking&quot;</span>] + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a72cf30a0ea00de06e013653a854ec6b7">packerName</a> + <span class="stringliteral">&quot;-&quot;</span> + std::to_string(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a23ee6dccb4acf42dc5ac79986e86baa9">DumpCLBPackingCnt</a>) + <span class="stringliteral">&quot;.tcl&quot;</span>;</div>
-<div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>        std::string dumpFile =</div>
-<div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span>            <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>[<span class="stringliteral">&quot;DumpCLBPacking&quot;</span>] + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a72cf30a0ea00de06e013653a854ec6b7">packerName</a> + <span class="stringliteral">&quot;-&quot;</span> + std::to_string(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a23ee6dccb4acf42dc5ac79986e86baa9">DumpCLBPackingCnt</a>) + <span class="stringliteral">&quot;.gz&quot;</span>;</div>
-<div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span> </div>
-<div class="line"><a id="l01458" name="l01458"></a><span class="lineno"> 1458</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumping CLBPacking archieve to: &quot;</span> + dumpFile);</div>
-<div class="line"><a id="l01459" name="l01459"></a><span class="lineno"> 1459</span> </div>
-<div class="line"><a id="l01460" name="l01460"></a><span class="lineno"> 1460</span>        std::stringstream outfile0;</div>
-<div class="line"><a id="l01461" name="l01461"></a><span class="lineno"> 1461</span> </div>
-<div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPackingSite : <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a3f30dad3b20b0033779d61a97d139a7f">packingSites</a>)</div>
-<div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span>        {</div>
-<div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>            <span class="keywordflow">if</span> (tmpPackingSite-&gt;getDeterminedClusterInSite())</div>
-<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>            {</div>
-<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>                outfile0 &lt;&lt; tmpPackingSite-&gt;getDeterminedClusterInSite() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>                <span class="keywordflow">if</span> (tmpPackingSite-&gt;checkIsCarrySite())</div>
-<div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>                {</div>
-<div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>                    outfile0 &lt;&lt; <span class="stringliteral">&quot;LUTSlots:\n&quot;</span>;</div>
-<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
-<div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span>                    {</div>
-<div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
-<div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span>                        {</div>
-<div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
-<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span>                            {</div>
-<div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>                                <span class="keywordflow">if</span> (tmpPackingSite-&gt;getSlotMapping().LUTs[i][j][k])</div>
-<div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>                                {</div>
-<div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span>                                    outfile0 &lt;&lt; <span class="stringliteral">&quot;i,j,k:&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; k &lt;&lt; <span class="stringliteral">&quot;   &quot;</span></div>
-<div class="line"><a id="l01479" name="l01479"></a><span class="lineno"> 1479</span>                                             &lt;&lt; tmpPackingSite-&gt;getSlotMapping().LUTs[i][j][k] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span>                                }</div>
-<div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>                            }</div>
-<div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>                        }</div>
-<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>                    }</div>
-<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>                }</div>
-<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>                <span class="keywordflow">if</span> (tmpPackingSite-&gt;checkIsCarrySite())</div>
-<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>                {</div>
-<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span>                    outfile0 &lt;&lt; <span class="stringliteral">&quot;FFSlots:\n&quot;</span>;</div>
-<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
-<div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>                    {</div>
-<div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
-<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>                        {</div>
-<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
-<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>                            {</div>
-<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>                                <span class="keywordflow">if</span> (tmpPackingSite-&gt;getSlotMapping().FFs[i][j][k])</div>
-<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>                                {</div>
-<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>                                    outfile0 &lt;&lt; <span class="stringliteral">&quot;i,j,k:&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; k &lt;&lt; <span class="stringliteral">&quot;   &quot;</span></div>
-<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>                                             &lt;&lt; tmpPackingSite-&gt;getSlotMapping().FFs[i][j][k] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>                                }</div>
-<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>                            }</div>
-<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>                        }</div>
-<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>                    }</div>
-<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>                }</div>
-<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>            }</div>
-<div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>        }</div>
-<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span> </div>
-<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>        <a class="code hl_function" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a>(dumpFile, outfile0);</div>
-<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumped CLBPacking archieve to: &quot;</span> + dumpFile);</div>
-<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span> </div>
-<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>        std::vector&lt;PackingCLBSite *&gt; <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>;</div>
-<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>.clear();</div>
-<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>.resize(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635">getPlacementUnits</a>().size(), <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span> </div>
-<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>        std::vector&lt;DeviceInfo::DeviceSite *&gt; PUId2NeighborSite(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635">getPlacementUnits</a>().size(), <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>        <span class="keywordtype">int</span> mappedPUCnt = 0;</div>
-<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> packingSite : <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a3f30dad3b20b0033779d61a97d139a7f">packingSites</a>)</div>
-<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>        {</div>
-<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>            <span class="keywordflow">if</span> (packingSite)</div>
-<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>            {</div>
-<div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span>                <span class="keywordflow">if</span> (packingSite-&gt;getDeterminedClusterInSite())</div>
-<div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span>                {</div>
-<div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPU : packingSite-&gt;getDeterminedClusterInSite()-&gt;getPUs())</div>
-<div class="line"><a id="l01522" name="l01522"></a><span class="lineno"> 1522</span>                    {</div>
-<div class="line"><a id="l01523" name="l01523"></a><span class="lineno"> 1523</span>                        assert(!<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>[tmpPU-&gt;getId()]);</div>
-<div class="line"><a id="l01524" name="l01524"></a><span class="lineno"> 1524</span>                        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>[tmpPU-&gt;getId()] = packingSite;</div>
-<div class="line"><a id="l01525" name="l01525"></a><span class="lineno"> 1525</span>                        mappedPUCnt++;</div>
-<div class="line"><a id="l01526" name="l01526"></a><span class="lineno"> 1526</span>                    }</div>
-<div class="line"><a id="l01527" name="l01527"></a><span class="lineno"> 1527</span>                }</div>
-<div class="line"><a id="l01528" name="l01528"></a><span class="lineno"> 1528</span>            }</div>
-<div class="line"><a id="l01529" name="l01529"></a><span class="lineno"> 1529</span>        }</div>
-<div class="line"><a id="l01530" name="l01530"></a><span class="lineno"> 1530</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> packingSite : <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a3f30dad3b20b0033779d61a97d139a7f">packingSites</a>)</div>
-<div class="line"><a id="l01531" name="l01531"></a><span class="lineno"> 1531</span>        {</div>
-<div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>            <span class="keywordflow">if</span> (packingSite)</div>
-<div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span>            {</div>
-<div class="line"><a id="l01534" name="l01534"></a><span class="lineno"> 1534</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPU : packingSite-&gt;getNeighborPUs())</div>
-<div class="line"><a id="l01535" name="l01535"></a><span class="lineno"> 1535</span>                {</div>
-<div class="line"><a id="l01536" name="l01536"></a><span class="lineno"> 1536</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>[tmpPU-&gt;getId()])</div>
-<div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span>                    <span class="keywordflow">if</span> (!PUId2NeighborSite[tmpPU-&gt;getId()])</div>
-<div class="line"><a id="l01539" name="l01539"></a><span class="lineno"> 1539</span>                    {</div>
-<div class="line"><a id="l01540" name="l01540"></a><span class="lineno"> 1540</span>                        PUId2NeighborSite[tmpPU-&gt;getId()] = packingSite-&gt;getCLBSite();</div>
-<div class="line"><a id="l01541" name="l01541"></a><span class="lineno"> 1541</span>                    }</div>
-<div class="line"><a id="l01542" name="l01542"></a><span class="lineno"> 1542</span>                    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01543" name="l01543"></a><span class="lineno"> 1543</span>                    {</div>
-<div class="line"><a id="l01544" name="l01544"></a><span class="lineno"> 1544</span>                        <span class="keywordtype">float</span> oriDis = std::abs(PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;X() - tmpPU-&gt;X()) +</div>
-<div class="line"><a id="l01545" name="l01545"></a><span class="lineno"> 1545</span>                                       <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1">y2xRatio</a> * std::abs(PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;Y() - tmpPU-&gt;Y());</div>
-<div class="line"><a id="l01546" name="l01546"></a><span class="lineno"> 1546</span>                        <span class="keywordtype">float</span> newDis = std::abs(packingSite-&gt;getCLBSite()-&gt;X() - tmpPU-&gt;X()) +</div>
-<div class="line"><a id="l01547" name="l01547"></a><span class="lineno"> 1547</span>                                       <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1">y2xRatio</a> * std::abs(packingSite-&gt;getCLBSite()-&gt;Y() - tmpPU-&gt;Y());</div>
-<div class="line"><a id="l01548" name="l01548"></a><span class="lineno"> 1548</span>                        <span class="keywordflow">if</span> (oriDis &gt; newDis)</div>
-<div class="line"><a id="l01549" name="l01549"></a><span class="lineno"> 1549</span>                        {</div>
-<div class="line"><a id="l01550" name="l01550"></a><span class="lineno"> 1550</span>                            PUId2NeighborSite[tmpPU-&gt;getId()] = packingSite-&gt;getCLBSite();</div>
-<div class="line"><a id="l01551" name="l01551"></a><span class="lineno"> 1551</span>                        }</div>
-<div class="line"><a id="l01552" name="l01552"></a><span class="lineno"> 1552</span>                    }</div>
-<div class="line"><a id="l01553" name="l01553"></a><span class="lineno"> 1553</span>                }</div>
-<div class="line"><a id="l01554" name="l01554"></a><span class="lineno"> 1554</span>            }</div>
-<div class="line"><a id="l01555" name="l01555"></a><span class="lineno"> 1555</span>        }</div>
-<div class="line"><a id="l01556" name="l01556"></a><span class="lineno"> 1556</span> </div>
-<div class="line"><a id="l01557" name="l01557"></a><span class="lineno"> 1557</span>        <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;#mappedPUCnt = &quot;</span> + std::to_string(mappedPUCnt));</div>
-<div class="line"><a id="l01558" name="l01558"></a><span class="lineno"> 1558</span> </div>
-<div class="line"><a id="l01559" name="l01559"></a><span class="lineno"> 1559</span>        dumpFile = <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>[<span class="stringliteral">&quot;DumpCLBPacking&quot;</span>] + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a72cf30a0ea00de06e013653a854ec6b7">packerName</a> + <span class="stringliteral">&quot;-unpackablePUs-&quot;</span> +</div>
-<div class="line"><a id="l01560" name="l01560"></a><span class="lineno"> 1560</span>                   std::to_string(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a23ee6dccb4acf42dc5ac79986e86baa9">DumpCLBPackingCnt</a>) + <span class="stringliteral">&quot;.gz&quot;</span>;</div>
-<div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumping unpackable PUs archieve to: &quot;</span> + dumpFile);</div>
-<div class="line"><a id="l01562" name="l01562"></a><span class="lineno"> 1562</span>        std::stringstream outfile1;</div>
-<div class="line"><a id="l01563" name="l01563"></a><span class="lineno"> 1563</span> </div>
-<div class="line"><a id="l01564" name="l01564"></a><span class="lineno"> 1564</span>        <span class="keywordtype">int</span> PUNeedMappingCnt = 0;</div>
-<div class="line"><a id="l01565" name="l01565"></a><span class="lineno"> 1565</span>        std::set&lt;PlacementInfo::PlacementUnit *, Packing_PUcompare&gt; dumpedPUs;</div>
-<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>        dumpedPUs.clear();</div>
-<div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpCell : <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f">getCells</a>())</div>
-<div class="line"><a id="l01568" name="l01568"></a><span class="lineno"> 1568</span>        {</div>
-<div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span>            <span class="keywordflow">if</span> (tmpCell-&gt;isLUT() || tmpCell-&gt;isFF())</div>
-<div class="line"><a id="l01570" name="l01570"></a><span class="lineno"> 1570</span>            {</div>
-<div class="line"><a id="l01571" name="l01571"></a><span class="lineno"> 1571</span>                <span class="keyword">auto</span> tmpPU = <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57">getPlacementUnitByCell</a>(tmpCell);</div>
-<div class="line"><a id="l01572" name="l01572"></a><span class="lineno"> 1572</span>                <span class="keywordflow">if</span> (tmpPU-&gt;isPacked())</div>
-<div class="line"><a id="l01573" name="l01573"></a><span class="lineno"> 1573</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01574" name="l01574"></a><span class="lineno"> 1574</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> tmpMacro = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a> *<span class="keyword">&gt;</span>(tmpPU))</div>
-<div class="line"><a id="l01575" name="l01575"></a><span class="lineno"> 1575</span>                {</div>
-<div class="line"><a id="l01576" name="l01576"></a><span class="lineno"> 1576</span>                    <span class="keywordflow">if</span> (tmpMacro-&gt;getMacroType() == <a class="code hl_enumvalue" href="class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a94f3204dd76e427d14fe68f8cb544e3d">PlacementInfo::PlacementMacro::PlacementMacroType_CARRY</a> ||</div>
-<div class="line"><a id="l01577" name="l01577"></a><span class="lineno"> 1577</span>                        tmpMacro-&gt;getMacroType() == <a class="code hl_enumvalue" href="class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a1f89986e01ab53a03b07da60428a466c">PlacementInfo::PlacementMacro::PlacementMacroType_MCLB</a>)</div>
-<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>                    {</div>
-<div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>                        <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span>                    }</div>
-<div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>                }</div>
-<div class="line"><a id="l01582" name="l01582"></a><span class="lineno"> 1582</span>                <span class="keywordflow">if</span> (dumpedPUs.find(tmpPU) != dumpedPUs.end())</div>
-<div class="line"><a id="l01583" name="l01583"></a><span class="lineno"> 1583</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01584" name="l01584"></a><span class="lineno"> 1584</span>                dumpedPUs.insert(tmpPU);</div>
-<div class="line"><a id="l01585" name="l01585"></a><span class="lineno"> 1585</span>                PUNeedMappingCnt++;</div>
-<div class="line"><a id="l01586" name="l01586"></a><span class="lineno"> 1586</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>[tmpPU-&gt;getId()])</div>
+<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span>                            placementStr += <span class="stringliteral">&quot;  &quot;</span> + tmpMacro-&gt;getName() + <span class="stringliteral">&quot;  &quot;</span> + CLBSite-&gt;getName() + <span class="stringliteral">&quot;/H6LUT  \n&quot;</span>;</div>
+<div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span>                        }</div>
+<div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>                    }</div>
+<div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span>                }</div>
+<div class="line"><a id="l01351" name="l01351"></a><span class="lineno"> 1351</span>            }</div>
+<div class="line"><a id="l01352" name="l01352"></a><span class="lineno"> 1352</span> </div>
+<div class="line"><a id="l01353" name="l01353"></a><span class="lineno"> 1353</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line"><a id="l01354" name="l01354"></a><span class="lineno"> 1354</span>            {</div>
+<div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
+<div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>                {</div>
+<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
+<div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span>                    {</div>
+<div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>                        <span class="keywordflow">if</span> (slotMapping.LUTs[i][j][k])</div>
+<div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>                        {</div>
+<div class="line"><a id="l01361" name="l01361"></a><span class="lineno"> 1361</span>                            <span class="keywordflow">if</span> (slotMapping.LUTs[i][j][k]-&gt;isVirtualCell())</div>
+<div class="line"><a id="l01362" name="l01362"></a><span class="lineno"> 1362</span>                                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01363" name="l01363"></a><span class="lineno"> 1363</span>                            assert(slotMapping.LUTs[i][j][k]-&gt;isLUT());</div>
+<div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span>                            <span class="keywordtype">char</span> LUTCode = (i * 4 + k) + <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span>                            <span class="keywordflow">if</span> (j == 0)</div>
+<div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span>                            {</div>
+<div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>                                std::string LUTSiteName = std::string(1, LUTCode) + <span class="stringliteral">&quot;6LUT&quot;</span>;</div>
+<div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span>                                <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>++;</div>
+<div class="line"><a id="l01369" name="l01369"></a><span class="lineno"> 1369</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + slotMapping.LUTs[i][j][k]-&gt;getName() + <span class="stringliteral">&quot; &quot;</span> + CLBSite-&gt;getName() +</div>
+<div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span>                                                <span class="stringliteral">&quot;/&quot;</span> + LUTSiteName + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01371" name="l01371"></a><span class="lineno"> 1371</span>                            }</div>
+<div class="line"><a id="l01372" name="l01372"></a><span class="lineno"> 1372</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01373" name="l01373"></a><span class="lineno"> 1373</span>                            {</div>
+<div class="line"><a id="l01374" name="l01374"></a><span class="lineno"> 1374</span>                                <span class="keywordflow">if</span> (slotMapping.LUTs[i][j][k]-&gt;getOriCellType() == <a class="code hl_enumvalue" href="class_design_info.html#a35becde3c1203126956e2fbd1b6ab51baf9c7320a2d0958a56b35353d93762c79">DesignInfo::CellType_LUT6_2</a>)</div>
+<div class="line"><a id="l01375" name="l01375"></a><span class="lineno"> 1375</span>                                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01376" name="l01376"></a><span class="lineno"> 1376</span> </div>
+<div class="line"><a id="l01377" name="l01377"></a><span class="lineno"> 1377</span>                                std::string LUTSiteName = std::string(1, LUTCode) + <span class="stringliteral">&quot;5LUT&quot;</span>;</div>
+<div class="line"><a id="l01378" name="l01378"></a><span class="lineno"> 1378</span>                                <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>++;</div>
+<div class="line"><a id="l01379" name="l01379"></a><span class="lineno"> 1379</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + slotMapping.LUTs[i][j][k]-&gt;getName() + <span class="stringliteral">&quot; &quot;</span> + CLBSite-&gt;getName() +</div>
+<div class="line"><a id="l01380" name="l01380"></a><span class="lineno"> 1380</span>                                                <span class="stringliteral">&quot;/&quot;</span> + LUTSiteName + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01381" name="l01381"></a><span class="lineno"> 1381</span>                            }</div>
+<div class="line"><a id="l01382" name="l01382"></a><span class="lineno"> 1382</span>                        }</div>
+<div class="line"><a id="l01383" name="l01383"></a><span class="lineno"> 1383</span>                    }</div>
+<div class="line"><a id="l01384" name="l01384"></a><span class="lineno"> 1384</span>                }</div>
+<div class="line"><a id="l01385" name="l01385"></a><span class="lineno"> 1385</span>            }</div>
+<div class="line"><a id="l01386" name="l01386"></a><span class="lineno"> 1386</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line"><a id="l01387" name="l01387"></a><span class="lineno"> 1387</span>            {</div>
+<div class="line"><a id="l01388" name="l01388"></a><span class="lineno"> 1388</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
+<div class="line"><a id="l01389" name="l01389"></a><span class="lineno"> 1389</span>                {</div>
+<div class="line"><a id="l01390" name="l01390"></a><span class="lineno"> 1390</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
+<div class="line"><a id="l01391" name="l01391"></a><span class="lineno"> 1391</span>                    {</div>
+<div class="line"><a id="l01392" name="l01392"></a><span class="lineno"> 1392</span>                        <span class="keywordflow">if</span> (slotMapping.FFs[i][j][k])</div>
+<div class="line"><a id="l01393" name="l01393"></a><span class="lineno"> 1393</span>                        {</div>
+<div class="line"><a id="l01394" name="l01394"></a><span class="lineno"> 1394</span>                            <span class="keywordflow">if</span> (slotMapping.FFs[i][j][k]-&gt;isVirtualCell())</div>
+<div class="line"><a id="l01395" name="l01395"></a><span class="lineno"> 1395</span>                                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01396" name="l01396"></a><span class="lineno"> 1396</span>                            assert(slotMapping.FFs[i][j][k]-&gt;isFF());</div>
+<div class="line"><a id="l01397" name="l01397"></a><span class="lineno"> 1397</span>                            <span class="keyword">auto</span> PU = <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57">getPlacementUnitByCell</a>(slotMapping.FFs[i][j][k]);</div>
+<div class="line"><a id="l01398" name="l01398"></a><span class="lineno"> 1398</span>                            <span class="keywordflow">if</span> (<span class="keyword">auto</span> tmpMacro = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a> *<span class="keyword">&gt;</span>(PU))</div>
+<div class="line"><a id="l01399" name="l01399"></a><span class="lineno"> 1399</span>                            {</div>
+<div class="line"><a id="l01400" name="l01400"></a><span class="lineno"> 1400</span>                                <span class="keywordflow">if</span> (tmpMacro-&gt;getMacroType() ==</div>
+<div class="line"><a id="l01401" name="l01401"></a><span class="lineno"> 1401</span>                                    <a class="code hl_class" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a>::</div>
+<div class="line"><a id="l01402" name="l01402"></a><span class="lineno"> 1402</span>                                        PlacementMacroType_LCLB) <span class="comment">// currently we failed to predict the LCLB macros, so</span></div>
+<div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span>                                                                 <span class="comment">// leave it to Vivado placement.</span></div>
+<div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span>                                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span>                            }</div>
+<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>                            <span class="keywordtype">char</span> FFCode = (i * 4 + k) + <span class="charliteral">&#39;A&#39;</span>;</div>
+<div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span>                            <span class="keywordflow">if</span> (j == 0)</div>
+<div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>                            {</div>
+<div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>                                std::string FFSiteName = std::string(1, FFCode) + <span class="stringliteral">&quot;FF&quot;</span>;</div>
+<div class="line"><a id="l01410" name="l01410"></a><span class="lineno"> 1410</span>                                <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>++;</div>
+<div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + slotMapping.FFs[i][j][k]-&gt;getName() + <span class="stringliteral">&quot; &quot;</span> + CLBSite-&gt;getName() +</div>
+<div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>                                                <span class="stringliteral">&quot;/&quot;</span> + FFSiteName + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>                            }</div>
+<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>                            {</div>
+<div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>                                std::string FFSiteName = std::string(1, FFCode) + <span class="stringliteral">&quot;FF2&quot;</span>;</div>
+<div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>                                <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>++;</div>
+<div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span>                                placementStr += <span class="stringliteral">&quot;  &quot;</span> + slotMapping.FFs[i][j][k]-&gt;getName() + <span class="stringliteral">&quot; &quot;</span> + CLBSite-&gt;getName() +</div>
+<div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span>                                                <span class="stringliteral">&quot;/&quot;</span> + FFSiteName + <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>                            }</div>
+<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>                        }</div>
+<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>                    }</div>
+<div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>                }</div>
+<div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>            }</div>
+<div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>        }</div>
+<div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a> &gt; 100)</div>
+<div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span>        {</div>
+<div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>            <span class="keywordflow">if</span> (placementStr != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>            {</div>
+<div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>                outfileTcl &lt;&lt; <span class="stringliteral">&quot;set result &quot;</span></div>
+<div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>                           &lt;&lt; <span class="stringliteral">&quot;[catch {place_cell {&quot;</span> &lt;&lt; placementStr &lt;&lt; <span class="stringliteral">&quot;}}]\n&quot;</span></div>
+<div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>                           &lt;&lt; <span class="stringliteral">&quot;if {$result} {\n incr errorNum \nputs $fo \&quot;&quot;</span> &lt;&lt; placementStr &lt;&lt; <span class="stringliteral">&quot;\&quot;\n}\n&quot;</span>;</div>
+<div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span>                placementStr = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span>            }</div>
+<div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>            <a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a> = 0;</div>
+<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>        }</div>
+<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span>    }</div>
+<div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span>    <span class="keywordflow">if</span> (placementStr != <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span>    {</div>
+<div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>        outfileTcl &lt;&lt; <span class="stringliteral">&quot;set result &quot;</span></div>
+<div class="line"><a id="l01441" name="l01441"></a><span class="lineno"> 1441</span>                   &lt;&lt; <span class="stringliteral">&quot;[catch {place_cell {&quot;</span> &lt;&lt; placementStr &lt;&lt; <span class="stringliteral">&quot;}}]\n&quot;</span></div>
+<div class="line"><a id="l01442" name="l01442"></a><span class="lineno"> 1442</span>                   &lt;&lt; <span class="stringliteral">&quot;if {$result} {\n incr errorNum \nputs $fo \&quot;&quot;</span> &lt;&lt; placementStr &lt;&lt; <span class="stringliteral">&quot;\&quot;\n}\n&quot;</span>;</div>
+<div class="line"><a id="l01443" name="l01443"></a><span class="lineno"> 1443</span>    }</div>
+<div class="line"><a id="l01444" name="l01444"></a><span class="lineno"> 1444</span>}</div>
+<div class="line"><a id="l01445" name="l01445"></a><span class="lineno"> 1445</span> </div>
+<div class="line"><a id="l01446" name="l01446"></a><span class="lineno"><a class="line" href="class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a"> 1446</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a">ParallelCLBPacker::dumpPlacementTcl</a>(std::string dumpTclFile)</div>
+<div class="line"><a id="l01447" name="l01447"></a><span class="lineno"> 1447</span>{</div>
+<div class="line"><a id="l01448" name="l01448"></a><span class="lineno"> 1448</span>    std::ofstream outfileTcl(dumpTclFile);</div>
+<div class="line"><a id="l01449" name="l01449"></a><span class="lineno"> 1449</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;set fo [open \&quot;./placementError\&quot; \&quot;w\&quot;]\nplace_design -unplace\nset errorNum 0\n&quot;</span>;</div>
+<div class="line"><a id="l01450" name="l01450"></a><span class="lineno"> 1450</span>    <a class="code hl_function" href="class_parallel_c_l_b_packer.html#acdccd594e78ef05cf0b0769cc11bc244">dumpDSPBRAMPlacementTcl</a>(outfileTcl);</div>
+<div class="line"><a id="l01451" name="l01451"></a><span class="lineno"> 1451</span>    <a class="code hl_function" href="class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46">dumpCLBPlacementTcl</a>(outfileTcl, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l01452" name="l01452"></a><span class="lineno"> 1452</span>    <span class="comment">// Except LUT6_2 cells, remove the packing information in Vivado and use our packing</span></div>
+<div class="line"><a id="l01453" name="l01453"></a><span class="lineno"> 1453</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;set_property HLUTNM {} [get_cells -hierarchical *]\n&quot;</span>;</div>
+<div class="line"><a id="l01454" name="l01454"></a><span class="lineno"> 1454</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;set_property SOFT_HLUTNM {} [get_cells -hierarchical *]\n&quot;</span>;</div>
+<div class="line"><a id="l01455" name="l01455"></a><span class="lineno"> 1455</span>    <a class="code hl_function" href="class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46">dumpCLBPlacementTcl</a>(outfileTcl, <span class="keyword">false</span>);</div>
+<div class="line"><a id="l01456" name="l01456"></a><span class="lineno"> 1456</span>    <span class="comment">// outfileTcl &lt;&lt; &quot;place_design\n&quot;;</span></div>
+<div class="line"><a id="l01457" name="l01457"></a><span class="lineno"> 1457</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;$errorNum\n&quot;</span>;</div>
+<div class="line"><a id="l01458" name="l01458"></a><span class="lineno"> 1458</span> </div>
+<div class="line"><a id="l01459" name="l01459"></a><span class="lineno"> 1459</span>    outfileTcl &lt;&lt; <span class="stringliteral">&quot;place_design\nroute_design\n&quot;</span>;</div>
+<div class="line"><a id="l01460" name="l01460"></a><span class="lineno"> 1460</span>    outfileTcl.close();</div>
+<div class="line"><a id="l01461" name="l01461"></a><span class="lineno"> 1461</span>}</div>
+<div class="line"><a id="l01462" name="l01462"></a><span class="lineno"> 1462</span> </div>
+<div class="line"><a id="l01463" name="l01463"></a><span class="lineno"><a class="line" href="class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1"> 1463</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1">ParallelCLBPacker::dumpFinalPacking</a>()</div>
+<div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span>{</div>
+<div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>.find(<span class="stringliteral">&quot;DumpCLBPacking&quot;</span>) != <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>.end())</div>
+<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>    {</div>
+<div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span>        std::string dumpTclFile =</div>
+<div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>            <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>[<span class="stringliteral">&quot;DumpCLBPacking&quot;</span>] + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a72cf30a0ea00de06e013653a854ec6b7">packerName</a> + <span class="stringliteral">&quot;-&quot;</span> + std::to_string(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a23ee6dccb4acf42dc5ac79986e86baa9">DumpCLBPackingCnt</a>) + <span class="stringliteral">&quot;.tcl&quot;</span>;</div>
+<div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>        std::string dumpFile =</div>
+<div class="line"><a id="l01470" name="l01470"></a><span class="lineno"> 1470</span>            <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>[<span class="stringliteral">&quot;DumpCLBPacking&quot;</span>] + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a72cf30a0ea00de06e013653a854ec6b7">packerName</a> + <span class="stringliteral">&quot;-&quot;</span> + std::to_string(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a23ee6dccb4acf42dc5ac79986e86baa9">DumpCLBPackingCnt</a>) + <span class="stringliteral">&quot;.gz&quot;</span>;</div>
+<div class="line"><a id="l01471" name="l01471"></a><span class="lineno"> 1471</span> </div>
+<div class="line"><a id="l01472" name="l01472"></a><span class="lineno"> 1472</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumping CLBPacking archieve to: &quot;</span> + dumpFile);</div>
+<div class="line"><a id="l01473" name="l01473"></a><span class="lineno"> 1473</span> </div>
+<div class="line"><a id="l01474" name="l01474"></a><span class="lineno"> 1474</span>        std::stringstream outfile0;</div>
+<div class="line"><a id="l01475" name="l01475"></a><span class="lineno"> 1475</span> </div>
+<div class="line"><a id="l01476" name="l01476"></a><span class="lineno"> 1476</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPackingSite : <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a3f30dad3b20b0033779d61a97d139a7f">packingSites</a>)</div>
+<div class="line"><a id="l01477" name="l01477"></a><span class="lineno"> 1477</span>        {</div>
+<div class="line"><a id="l01478" name="l01478"></a><span class="lineno"> 1478</span>            <span class="keywordflow">if</span> (tmpPackingSite-&gt;getDeterminedClusterInSite())</div>
+<div class="line"><a id="l01479" name="l01479"></a><span class="lineno"> 1479</span>            {</div>
+<div class="line"><a id="l01480" name="l01480"></a><span class="lineno"> 1480</span>                outfile0 &lt;&lt; tmpPackingSite-&gt;getDeterminedClusterInSite() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01481" name="l01481"></a><span class="lineno"> 1481</span>                <span class="keywordflow">if</span> (tmpPackingSite-&gt;checkIsCarrySite())</div>
+<div class="line"><a id="l01482" name="l01482"></a><span class="lineno"> 1482</span>                {</div>
+<div class="line"><a id="l01483" name="l01483"></a><span class="lineno"> 1483</span>                    outfile0 &lt;&lt; <span class="stringliteral">&quot;LUTSlots:\n&quot;</span>;</div>
+<div class="line"><a id="l01484" name="l01484"></a><span class="lineno"> 1484</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line"><a id="l01485" name="l01485"></a><span class="lineno"> 1485</span>                    {</div>
+<div class="line"><a id="l01486" name="l01486"></a><span class="lineno"> 1486</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
+<div class="line"><a id="l01487" name="l01487"></a><span class="lineno"> 1487</span>                        {</div>
+<div class="line"><a id="l01488" name="l01488"></a><span class="lineno"> 1488</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
+<div class="line"><a id="l01489" name="l01489"></a><span class="lineno"> 1489</span>                            {</div>
+<div class="line"><a id="l01490" name="l01490"></a><span class="lineno"> 1490</span>                                <span class="keywordflow">if</span> (tmpPackingSite-&gt;getSlotMapping().LUTs[i][j][k])</div>
+<div class="line"><a id="l01491" name="l01491"></a><span class="lineno"> 1491</span>                                {</div>
+<div class="line"><a id="l01492" name="l01492"></a><span class="lineno"> 1492</span>                                    outfile0 &lt;&lt; <span class="stringliteral">&quot;i,j,k:&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; k &lt;&lt; <span class="stringliteral">&quot;   &quot;</span></div>
+<div class="line"><a id="l01493" name="l01493"></a><span class="lineno"> 1493</span>                                             &lt;&lt; tmpPackingSite-&gt;getSlotMapping().LUTs[i][j][k] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01494" name="l01494"></a><span class="lineno"> 1494</span>                                }</div>
+<div class="line"><a id="l01495" name="l01495"></a><span class="lineno"> 1495</span>                            }</div>
+<div class="line"><a id="l01496" name="l01496"></a><span class="lineno"> 1496</span>                        }</div>
+<div class="line"><a id="l01497" name="l01497"></a><span class="lineno"> 1497</span>                    }</div>
+<div class="line"><a id="l01498" name="l01498"></a><span class="lineno"> 1498</span>                }</div>
+<div class="line"><a id="l01499" name="l01499"></a><span class="lineno"> 1499</span>                <span class="keywordflow">if</span> (tmpPackingSite-&gt;checkIsCarrySite())</div>
+<div class="line"><a id="l01500" name="l01500"></a><span class="lineno"> 1500</span>                {</div>
+<div class="line"><a id="l01501" name="l01501"></a><span class="lineno"> 1501</span>                    outfile0 &lt;&lt; <span class="stringliteral">&quot;FFSlots:\n&quot;</span>;</div>
+<div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 2; i++)</div>
+<div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span>                    {</div>
+<div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span>                        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k = 0; k &lt; 4; k++)</div>
+<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>                        {</div>
+<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>                            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; 2; j++)</div>
+<div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>                            {</div>
+<div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>                                <span class="keywordflow">if</span> (tmpPackingSite-&gt;getSlotMapping().FFs[i][j][k])</div>
+<div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>                                {</div>
+<div class="line"><a id="l01510" name="l01510"></a><span class="lineno"> 1510</span>                                    outfile0 &lt;&lt; <span class="stringliteral">&quot;i,j,k:&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; j &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; k &lt;&lt; <span class="stringliteral">&quot;   &quot;</span></div>
+<div class="line"><a id="l01511" name="l01511"></a><span class="lineno"> 1511</span>                                             &lt;&lt; tmpPackingSite-&gt;getSlotMapping().FFs[i][j][k] &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01512" name="l01512"></a><span class="lineno"> 1512</span>                                }</div>
+<div class="line"><a id="l01513" name="l01513"></a><span class="lineno"> 1513</span>                            }</div>
+<div class="line"><a id="l01514" name="l01514"></a><span class="lineno"> 1514</span>                        }</div>
+<div class="line"><a id="l01515" name="l01515"></a><span class="lineno"> 1515</span>                    }</div>
+<div class="line"><a id="l01516" name="l01516"></a><span class="lineno"> 1516</span>                }</div>
+<div class="line"><a id="l01517" name="l01517"></a><span class="lineno"> 1517</span>            }</div>
+<div class="line"><a id="l01518" name="l01518"></a><span class="lineno"> 1518</span>        }</div>
+<div class="line"><a id="l01519" name="l01519"></a><span class="lineno"> 1519</span> </div>
+<div class="line"><a id="l01520" name="l01520"></a><span class="lineno"> 1520</span>        <a class="code hl_function" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a>(dumpFile, outfile0);</div>
+<div class="line"><a id="l01521" name="l01521"></a><span class="lineno"> 1521</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumped CLBPacking archieve to: &quot;</span> + dumpFile);</div>
+<div class="line"><a id="l01522" name="l01522"></a><span class="lineno"> 1522</span> </div>
+<div class="line"><a id="l01523" name="l01523"></a><span class="lineno"> 1523</span>        std::vector&lt;PackingCLBSite *&gt; <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>;</div>
+<div class="line"><a id="l01524" name="l01524"></a><span class="lineno"> 1524</span>        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>.clear();</div>
+<div class="line"><a id="l01525" name="l01525"></a><span class="lineno"> 1525</span>        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>.resize(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635">getPlacementUnits</a>().size(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l01526" name="l01526"></a><span class="lineno"> 1526</span> </div>
+<div class="line"><a id="l01527" name="l01527"></a><span class="lineno"> 1527</span>        std::vector&lt;DeviceInfo::DeviceSite *&gt; PUId2NeighborSite(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635">getPlacementUnits</a>().size(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l01528" name="l01528"></a><span class="lineno"> 1528</span>        <span class="keywordtype">int</span> mappedPUCnt = 0;</div>
+<div class="line"><a id="l01529" name="l01529"></a><span class="lineno"> 1529</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> packingSite : <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a3f30dad3b20b0033779d61a97d139a7f">packingSites</a>)</div>
+<div class="line"><a id="l01530" name="l01530"></a><span class="lineno"> 1530</span>        {</div>
+<div class="line"><a id="l01531" name="l01531"></a><span class="lineno"> 1531</span>            <span class="keywordflow">if</span> (packingSite)</div>
+<div class="line"><a id="l01532" name="l01532"></a><span class="lineno"> 1532</span>            {</div>
+<div class="line"><a id="l01533" name="l01533"></a><span class="lineno"> 1533</span>                <span class="keywordflow">if</span> (packingSite-&gt;getDeterminedClusterInSite())</div>
+<div class="line"><a id="l01534" name="l01534"></a><span class="lineno"> 1534</span>                {</div>
+<div class="line"><a id="l01535" name="l01535"></a><span class="lineno"> 1535</span>                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPU : packingSite-&gt;getDeterminedClusterInSite()-&gt;getPUs())</div>
+<div class="line"><a id="l01536" name="l01536"></a><span class="lineno"> 1536</span>                    {</div>
+<div class="line"><a id="l01537" name="l01537"></a><span class="lineno"> 1537</span>                        assert(!<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>[tmpPU-&gt;getId()]);</div>
+<div class="line"><a id="l01538" name="l01538"></a><span class="lineno"> 1538</span>                        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>[tmpPU-&gt;getId()] = packingSite;</div>
+<div class="line"><a id="l01539" name="l01539"></a><span class="lineno"> 1539</span>                        mappedPUCnt++;</div>
+<div class="line"><a id="l01540" name="l01540"></a><span class="lineno"> 1540</span>                    }</div>
+<div class="line"><a id="l01541" name="l01541"></a><span class="lineno"> 1541</span>                }</div>
+<div class="line"><a id="l01542" name="l01542"></a><span class="lineno"> 1542</span>            }</div>
+<div class="line"><a id="l01543" name="l01543"></a><span class="lineno"> 1543</span>        }</div>
+<div class="line"><a id="l01544" name="l01544"></a><span class="lineno"> 1544</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> packingSite : <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a3f30dad3b20b0033779d61a97d139a7f">packingSites</a>)</div>
+<div class="line"><a id="l01545" name="l01545"></a><span class="lineno"> 1545</span>        {</div>
+<div class="line"><a id="l01546" name="l01546"></a><span class="lineno"> 1546</span>            <span class="keywordflow">if</span> (packingSite)</div>
+<div class="line"><a id="l01547" name="l01547"></a><span class="lineno"> 1547</span>            {</div>
+<div class="line"><a id="l01548" name="l01548"></a><span class="lineno"> 1548</span>                <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPU : packingSite-&gt;getNeighborPUs())</div>
+<div class="line"><a id="l01549" name="l01549"></a><span class="lineno"> 1549</span>                {</div>
+<div class="line"><a id="l01550" name="l01550"></a><span class="lineno"> 1550</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>[tmpPU-&gt;getId()])</div>
+<div class="line"><a id="l01551" name="l01551"></a><span class="lineno"> 1551</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01552" name="l01552"></a><span class="lineno"> 1552</span>                    <span class="keywordflow">if</span> (!PUId2NeighborSite[tmpPU-&gt;getId()])</div>
+<div class="line"><a id="l01553" name="l01553"></a><span class="lineno"> 1553</span>                    {</div>
+<div class="line"><a id="l01554" name="l01554"></a><span class="lineno"> 1554</span>                        PUId2NeighborSite[tmpPU-&gt;getId()] = packingSite-&gt;getCLBSite();</div>
+<div class="line"><a id="l01555" name="l01555"></a><span class="lineno"> 1555</span>                    }</div>
+<div class="line"><a id="l01556" name="l01556"></a><span class="lineno"> 1556</span>                    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01557" name="l01557"></a><span class="lineno"> 1557</span>                    {</div>
+<div class="line"><a id="l01558" name="l01558"></a><span class="lineno"> 1558</span>                        <span class="keywordtype">float</span> oriDis = std::abs(PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;X() - tmpPU-&gt;X()) +</div>
+<div class="line"><a id="l01559" name="l01559"></a><span class="lineno"> 1559</span>                                       <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1">y2xRatio</a> * std::abs(PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;Y() - tmpPU-&gt;Y());</div>
+<div class="line"><a id="l01560" name="l01560"></a><span class="lineno"> 1560</span>                        <span class="keywordtype">float</span> newDis = std::abs(packingSite-&gt;getCLBSite()-&gt;X() - tmpPU-&gt;X()) +</div>
+<div class="line"><a id="l01561" name="l01561"></a><span class="lineno"> 1561</span>                                       <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1">y2xRatio</a> * std::abs(packingSite-&gt;getCLBSite()-&gt;Y() - tmpPU-&gt;Y());</div>
+<div class="line"><a id="l01562" name="l01562"></a><span class="lineno"> 1562</span>                        <span class="keywordflow">if</span> (oriDis &gt; newDis)</div>
+<div class="line"><a id="l01563" name="l01563"></a><span class="lineno"> 1563</span>                        {</div>
+<div class="line"><a id="l01564" name="l01564"></a><span class="lineno"> 1564</span>                            PUId2NeighborSite[tmpPU-&gt;getId()] = packingSite-&gt;getCLBSite();</div>
+<div class="line"><a id="l01565" name="l01565"></a><span class="lineno"> 1565</span>                        }</div>
+<div class="line"><a id="l01566" name="l01566"></a><span class="lineno"> 1566</span>                    }</div>
+<div class="line"><a id="l01567" name="l01567"></a><span class="lineno"> 1567</span>                }</div>
+<div class="line"><a id="l01568" name="l01568"></a><span class="lineno"> 1568</span>            }</div>
+<div class="line"><a id="l01569" name="l01569"></a><span class="lineno"> 1569</span>        }</div>
+<div class="line"><a id="l01570" name="l01570"></a><span class="lineno"> 1570</span> </div>
+<div class="line"><a id="l01571" name="l01571"></a><span class="lineno"> 1571</span>        <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;#mappedPUCnt = &quot;</span> + std::to_string(mappedPUCnt));</div>
+<div class="line"><a id="l01572" name="l01572"></a><span class="lineno"> 1572</span> </div>
+<div class="line"><a id="l01573" name="l01573"></a><span class="lineno"> 1573</span>        dumpFile = <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a83136f5aa891362ea4306eb74f2d5cf9">JSONCfg</a>[<span class="stringliteral">&quot;DumpCLBPacking&quot;</span>] + <span class="stringliteral">&quot;-&quot;</span> + <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a72cf30a0ea00de06e013653a854ec6b7">packerName</a> + <span class="stringliteral">&quot;-unpackablePUs-&quot;</span> +</div>
+<div class="line"><a id="l01574" name="l01574"></a><span class="lineno"> 1574</span>                   std::to_string(<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a23ee6dccb4acf42dc5ac79986e86baa9">DumpCLBPackingCnt</a>) + <span class="stringliteral">&quot;.gz&quot;</span>;</div>
+<div class="line"><a id="l01575" name="l01575"></a><span class="lineno"> 1575</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumping unpackable PUs archieve to: &quot;</span> + dumpFile);</div>
+<div class="line"><a id="l01576" name="l01576"></a><span class="lineno"> 1576</span>        std::stringstream outfile1;</div>
+<div class="line"><a id="l01577" name="l01577"></a><span class="lineno"> 1577</span> </div>
+<div class="line"><a id="l01578" name="l01578"></a><span class="lineno"> 1578</span>        <span class="keywordtype">int</span> PUNeedMappingCnt = 0;</div>
+<div class="line"><a id="l01579" name="l01579"></a><span class="lineno"> 1579</span>        std::set&lt;PlacementInfo::PlacementUnit *, Packing_PUcompare&gt; dumpedPUs;</div>
+<div class="line"><a id="l01580" name="l01580"></a><span class="lineno"> 1580</span>        dumpedPUs.clear();</div>
+<div class="line"><a id="l01581" name="l01581"></a><span class="lineno"> 1581</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpCell : <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f">getCells</a>())</div>
+<div class="line"><a id="l01582" name="l01582"></a><span class="lineno"> 1582</span>        {</div>
+<div class="line"><a id="l01583" name="l01583"></a><span class="lineno"> 1583</span>            <span class="keywordflow">if</span> (tmpCell-&gt;isLUT() || tmpCell-&gt;isFF())</div>
+<div class="line"><a id="l01584" name="l01584"></a><span class="lineno"> 1584</span>            {</div>
+<div class="line"><a id="l01585" name="l01585"></a><span class="lineno"> 1585</span>                <span class="keyword">auto</span> tmpPU = <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57">getPlacementUnitByCell</a>(tmpCell);</div>
+<div class="line"><a id="l01586" name="l01586"></a><span class="lineno"> 1586</span>                <span class="keywordflow">if</span> (tmpPU-&gt;isPacked())</div>
 <div class="line"><a id="l01587" name="l01587"></a><span class="lineno"> 1587</span>                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01588" name="l01588"></a><span class="lineno"> 1588</span>                outfile1 &lt;&lt; tmpPU;</div>
-<div class="line"><a id="l01589" name="l01589"></a><span class="lineno"> 1589</span>                <span class="keywordflow">if</span> (PUId2NeighborSite[tmpPU-&gt;getId()])</div>
-<div class="line"><a id="l01590" name="l01590"></a><span class="lineno"> 1590</span>                {</div>
-<div class="line"><a id="l01591" name="l01591"></a><span class="lineno"> 1591</span>                    outfile1 &lt;&lt; <span class="stringliteral">&quot;candidate neighbor site: &quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480">getName</a>()</div>
-<div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>                             &lt;&lt; <span class="stringliteral">&quot; X:&quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;X()</div>
-<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>                             &lt;&lt; <span class="stringliteral">&quot; Y:&quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;Y() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>                    outfile1 &lt;&lt; tmpCell</div>
-<div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>                             &lt;&lt; <span class="stringliteral">&quot; estimated util:&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d">getActualOccupationByCellId</a>(tmpCell-&gt;getCellId())</div>
-<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>                             &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span>                }</div>
-<div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>                {</div>
-<div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>                    std::vector&lt;DeviceInfo::DeviceSite *&gt; *candidateSites =</div>
-<div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span>                        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a95277820b83b80d5d0533073039cb2c3">findNeiborSiteFromBinGrid</a>(tmpCell, tmpPU-&gt;X(), tmpPU-&gt;Y(), 5.0, 10);</div>
-<div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>                    <span class="keywordflow">if</span> (candidateSites-&gt;size())</div>
-<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>                    {</div>
-<div class="line"><a id="l01604" name="l01604"></a><span class="lineno"> 1604</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpSite : *candidateSites)</div>
-<div class="line"><a id="l01605" name="l01605"></a><span class="lineno"> 1605</span>                        {</div>
-<div class="line"><a id="l01606" name="l01606"></a><span class="lineno"> 1606</span>                            <span class="keywordflow">if</span> (!PUId2NeighborSite[tmpPU-&gt;getId()])</div>
-<div class="line"><a id="l01607" name="l01607"></a><span class="lineno"> 1607</span>                            {</div>
-<div class="line"><a id="l01608" name="l01608"></a><span class="lineno"> 1608</span>                                PUId2NeighborSite[tmpPU-&gt;getId()] = tmpSite;</div>
-<div class="line"><a id="l01609" name="l01609"></a><span class="lineno"> 1609</span>                            }</div>
-<div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span>                            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span>                            {</div>
-<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>                                <span class="keywordtype">float</span> oriDis = std::abs(PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;X() - tmpPU-&gt;X()) +</div>
-<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span>                                               <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1">y2xRatio</a> * std::abs(PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;Y() - tmpPU-&gt;Y());</div>
-<div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>                                <span class="keywordtype">float</span> newDis = std::abs(tmpSite-&gt;X() - tmpPU-&gt;X()) +</div>
-<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>                                               <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1">y2xRatio</a> * std::abs(tmpSite-&gt;Y() - tmpPU-&gt;Y());</div>
-<div class="line"><a id="l01616" name="l01616"></a><span class="lineno"> 1616</span>                                <span class="keywordflow">if</span> (oriDis &gt; newDis)</div>
-<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>                                {</div>
-<div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>                                    PUId2NeighborSite[tmpPU-&gt;getId()] = tmpSite;</div>
-<div class="line"><a id="l01619" name="l01619"></a><span class="lineno"> 1619</span>                                }</div>
-<div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span>                            }</div>
-<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>                        }</div>
-<div class="line"><a id="l01622" name="l01622"></a><span class="lineno"> 1622</span>                    }</div>
-<div class="line"><a id="l01623" name="l01623"></a><span class="lineno"> 1623</span>                    <span class="keyword">delete</span> candidateSites;</div>
-<div class="line"><a id="l01624" name="l01624"></a><span class="lineno"> 1624</span>                    outfile1 &lt;&lt; <span class="stringliteral">&quot;closed neighbor site: &quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;getName()</div>
-<div class="line"><a id="l01625" name="l01625"></a><span class="lineno"> 1625</span>                             &lt;&lt; <span class="stringliteral">&quot; X:&quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;X()</div>
-<div class="line"><a id="l01626" name="l01626"></a><span class="lineno"> 1626</span>                             &lt;&lt; <span class="stringliteral">&quot; Y:&quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;Y() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01627" name="l01627"></a><span class="lineno"> 1627</span>                    outfile1 &lt;&lt; tmpCell</div>
-<div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span>                             &lt;&lt; <span class="stringliteral">&quot; estimated util:&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d">getActualOccupationByCellId</a>(tmpCell-&gt;getCellId())</div>
-<div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span>                             &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span>                }</div>
-<div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span>            }</div>
-<div class="line"><a id="l01632" name="l01632"></a><span class="lineno"> 1632</span>        }</div>
-<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>        <a class="code hl_function" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a>(dumpFile, outfile1);</div>
-<div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumped unpackable PUs archieve to: &quot;</span> + dumpFile);</div>
-<div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>        <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;#PUNeedMappingCnt = &quot;</span> + std::to_string(PUNeedMappingCnt));</div>
-<div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span> </div>
-<div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumping placementTcl archieve to: &quot;</span> + dumpTclFile);</div>
-<div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span>        <a class="code hl_function" href="class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a">dumpPlacementTcl</a>(dumpTclFile);</div>
-<div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumped placementTcl archieve to: &quot;</span> + dumpTclFile);</div>
-<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a23ee6dccb4acf42dc5ac79986e86baa9">DumpCLBPackingCnt</a>++;</div>
-<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>    }</div>
-<div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span>}</div>
+<div class="line"><a id="l01588" name="l01588"></a><span class="lineno"> 1588</span>                <span class="keywordflow">if</span> (<span class="keyword">auto</span> tmpMacro = <span class="keyword">dynamic_cast&lt;</span><a class="code hl_class" href="class_placement_info_1_1_placement_macro.html">PlacementInfo::PlacementMacro</a> *<span class="keyword">&gt;</span>(tmpPU))</div>
+<div class="line"><a id="l01589" name="l01589"></a><span class="lineno"> 1589</span>                {</div>
+<div class="line"><a id="l01590" name="l01590"></a><span class="lineno"> 1590</span>                    <span class="keywordflow">if</span> (tmpMacro-&gt;getMacroType() == <a class="code hl_enumvalue" href="class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a94f3204dd76e427d14fe68f8cb544e3d">PlacementInfo::PlacementMacro::PlacementMacroType_CARRY</a> ||</div>
+<div class="line"><a id="l01591" name="l01591"></a><span class="lineno"> 1591</span>                        tmpMacro-&gt;getMacroType() == <a class="code hl_enumvalue" href="class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a1f89986e01ab53a03b07da60428a466c">PlacementInfo::PlacementMacro::PlacementMacroType_MCLB</a>)</div>
+<div class="line"><a id="l01592" name="l01592"></a><span class="lineno"> 1592</span>                    {</div>
+<div class="line"><a id="l01593" name="l01593"></a><span class="lineno"> 1593</span>                        <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01594" name="l01594"></a><span class="lineno"> 1594</span>                    }</div>
+<div class="line"><a id="l01595" name="l01595"></a><span class="lineno"> 1595</span>                }</div>
+<div class="line"><a id="l01596" name="l01596"></a><span class="lineno"> 1596</span>                <span class="keywordflow">if</span> (dumpedPUs.find(tmpPU) != dumpedPUs.end())</div>
+<div class="line"><a id="l01597" name="l01597"></a><span class="lineno"> 1597</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01598" name="l01598"></a><span class="lineno"> 1598</span>                dumpedPUs.insert(tmpPU);</div>
+<div class="line"><a id="l01599" name="l01599"></a><span class="lineno"> 1599</span>                PUNeedMappingCnt++;</div>
+<div class="line"><a id="l01600" name="l01600"></a><span class="lineno"> 1600</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">PUId2PackingCLBSite</a>[tmpPU-&gt;getId()])</div>
+<div class="line"><a id="l01601" name="l01601"></a><span class="lineno"> 1601</span>                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l01602" name="l01602"></a><span class="lineno"> 1602</span>                outfile1 &lt;&lt; tmpPU;</div>
+<div class="line"><a id="l01603" name="l01603"></a><span class="lineno"> 1603</span>                <span class="keywordflow">if</span> (PUId2NeighborSite[tmpPU-&gt;getId()])</div>
+<div class="line"><a id="l01604" name="l01604"></a><span class="lineno"> 1604</span>                {</div>
+<div class="line"><a id="l01605" name="l01605"></a><span class="lineno"> 1605</span>                    outfile1 &lt;&lt; <span class="stringliteral">&quot;candidate neighbor site: &quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480">getName</a>()</div>
+<div class="line"><a id="l01606" name="l01606"></a><span class="lineno"> 1606</span>                             &lt;&lt; <span class="stringliteral">&quot; X:&quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;X()</div>
+<div class="line"><a id="l01607" name="l01607"></a><span class="lineno"> 1607</span>                             &lt;&lt; <span class="stringliteral">&quot; Y:&quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;Y() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01608" name="l01608"></a><span class="lineno"> 1608</span>                    outfile1 &lt;&lt; tmpCell</div>
+<div class="line"><a id="l01609" name="l01609"></a><span class="lineno"> 1609</span>                             &lt;&lt; <span class="stringliteral">&quot; estimated util:&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d">getActualOccupationByCellId</a>(tmpCell-&gt;getCellId())</div>
+<div class="line"><a id="l01610" name="l01610"></a><span class="lineno"> 1610</span>                             &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01611" name="l01611"></a><span class="lineno"> 1611</span>                }</div>
+<div class="line"><a id="l01612" name="l01612"></a><span class="lineno"> 1612</span>                <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01613" name="l01613"></a><span class="lineno"> 1613</span>                {</div>
+<div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>                    std::vector&lt;DeviceInfo::DeviceSite *&gt; *candidateSites =</div>
+<div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>                        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a95277820b83b80d5d0533073039cb2c3">findNeiborSiteFromBinGrid</a>(tmpCell, tmpPU-&gt;X(), tmpPU-&gt;Y(), 5.0, 10);</div>
+<div class="line"><a id="l01616" name="l01616"></a><span class="lineno"> 1616</span>                    <span class="keywordflow">if</span> (candidateSites-&gt;size())</div>
+<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>                    {</div>
+<div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>                        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpSite : *candidateSites)</div>
+<div class="line"><a id="l01619" name="l01619"></a><span class="lineno"> 1619</span>                        {</div>
+<div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span>                            <span class="keywordflow">if</span> (!PUId2NeighborSite[tmpPU-&gt;getId()])</div>
+<div class="line"><a id="l01621" name="l01621"></a><span class="lineno"> 1621</span>                            {</div>
+<div class="line"><a id="l01622" name="l01622"></a><span class="lineno"> 1622</span>                                PUId2NeighborSite[tmpPU-&gt;getId()] = tmpSite;</div>
+<div class="line"><a id="l01623" name="l01623"></a><span class="lineno"> 1623</span>                            }</div>
+<div class="line"><a id="l01624" name="l01624"></a><span class="lineno"> 1624</span>                            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l01625" name="l01625"></a><span class="lineno"> 1625</span>                            {</div>
+<div class="line"><a id="l01626" name="l01626"></a><span class="lineno"> 1626</span>                                <span class="keywordtype">float</span> oriDis = std::abs(PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;X() - tmpPU-&gt;X()) +</div>
+<div class="line"><a id="l01627" name="l01627"></a><span class="lineno"> 1627</span>                                               <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1">y2xRatio</a> * std::abs(PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;Y() - tmpPU-&gt;Y());</div>
+<div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span>                                <span class="keywordtype">float</span> newDis = std::abs(tmpSite-&gt;X() - tmpPU-&gt;X()) +</div>
+<div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span>                                               <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1">y2xRatio</a> * std::abs(tmpSite-&gt;Y() - tmpPU-&gt;Y());</div>
+<div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span>                                <span class="keywordflow">if</span> (oriDis &gt; newDis)</div>
+<div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span>                                {</div>
+<div class="line"><a id="l01632" name="l01632"></a><span class="lineno"> 1632</span>                                    PUId2NeighborSite[tmpPU-&gt;getId()] = tmpSite;</div>
+<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>                                }</div>
+<div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span>                            }</div>
+<div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>                        }</div>
+<div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span>                    }</div>
+<div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span>                    <span class="keyword">delete</span> candidateSites;</div>
+<div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span>                    outfile1 &lt;&lt; <span class="stringliteral">&quot;closed neighbor site: &quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;getName()</div>
+<div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>                             &lt;&lt; <span class="stringliteral">&quot; X:&quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;X()</div>
+<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>                             &lt;&lt; <span class="stringliteral">&quot; Y:&quot;</span> &lt;&lt; PUId2NeighborSite[tmpPU-&gt;getId()]-&gt;Y() &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>                    outfile1 &lt;&lt; tmpCell</div>
+<div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span>                             &lt;&lt; <span class="stringliteral">&quot; estimated util:&quot;</span> &lt;&lt; <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a0d53e3e7f128348e2e3bd4135271ef9d">placementInfo</a>-&gt;<a class="code hl_function" href="class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d">getActualOccupationByCellId</a>(tmpCell-&gt;getCellId())</div>
+<div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>                             &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span>                }</div>
+<div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span>            }</div>
+<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>        }</div>
+<div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span>        <a class="code hl_function" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a>(dumpFile, outfile1);</div>
+<div class="line"><a id="l01648" name="l01648"></a><span class="lineno"> 1648</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumped unpackable PUs archieve to: &quot;</span> + dumpFile);</div>
+<div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>        <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;#PUNeedMappingCnt = &quot;</span> + std::to_string(PUNeedMappingCnt));</div>
+<div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span> </div>
+<div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumping placementTcl archieve to: &quot;</span> + dumpTclFile);</div>
+<div class="line"><a id="l01652" name="l01652"></a><span class="lineno"> 1652</span>        <a class="code hl_function" href="class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a">dumpPlacementTcl</a>(dumpTclFile);</div>
+<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>        <a class="code hl_function" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab">print_status</a>(<span class="stringliteral">&quot;ParallelCLBPacker: dumped placementTcl archieve to: &quot;</span> + dumpTclFile);</div>
+<div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span>        <a class="code hl_variable" href="class_parallel_c_l_b_packer.html#a23ee6dccb4acf42dc5ac79986e86baa9">DumpCLBPackingCnt</a>++;</div>
+<div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>    }</div>
+<div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>}</div>
 <div class="ttc" id="a_parallel_c_l_b_packer_8cc_html_a26fb856dc508059a8744a3ab61473f2e"><div class="ttname"><a href="_parallel_c_l_b_packer_8cc.html#a26fb856dc508059a8744a3ab61473f2e">containLUTRAMCells</a></div><div class="ttdeci">bool containLUTRAMCells(PlacementInfo::PlacementUnit *curPU)</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l01256">ParallelCLBPacker.cc:1256</a></div></div>
 <div class="ttc" id="a_parallel_c_l_b_packer_8cc_html_a982f039565b9c69197d92d1617d102c9"><div class="ttname"><a href="_parallel_c_l_b_packer_8cc.html#a982f039565b9c69197d92d1617d102c9">hasLUT62</a></div><div class="ttdeci">bool hasLUT62(ParallelCLBPacker::PackingCLBSite::SiteBELMapping &amp;slots)</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l01132">ParallelCLBPacker.cc:1132</a></div></div>
 <div class="ttc" id="a_parallel_c_l_b_packer_8h_html"><div class="ttname"><a href="_parallel_c_l_b_packer_8h.html">ParallelCLBPacker.h</a></div></div>
@@ -1788,10 +1802,10 @@ $(document).ready(function(){initNavTree('_parallel_c_l_b_packer_8cc_source.html
 <div class="ttc" id="aclass_parallel_c_l_b_packer_html_a921fb77be4e776ada5aeb0cc17e481e9"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9">ParallelCLBPacker::exceptionPULegalize</a></div><div class="ttdeci">bool exceptionPULegalize(PlacementInfo::PlacementUnit *curPU, float displacementThreshold, bool verbose)</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker.cc:497</a></div></div>
 <div class="ttc" id="aclass_parallel_c_l_b_packer_html_a930172ec0e061e6b84413383beffd8f9"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#a930172ec0e061e6b84413383beffd8f9">ParallelCLBPacker::placementUnpackedCells</a></div><div class="ttdeci">std::vector&lt; PlacementInfo::PlacementUnpackedCell * &gt; &amp; placementUnpackedCells</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8h_source.html#l01703">ParallelCLBPacker.h:1703</a></div></div>
 <div class="ttc" id="aclass_parallel_c_l_b_packer_html_aa1b22c32acdb41fbd3d9cc890ee88b27"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#aa1b22c32acdb41fbd3d9cc890ee88b27">ParallelCLBPacker::numNeighbor</a></div><div class="ttdeci">int numNeighbor</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8h_source.html#l01689">ParallelCLBPacker.h:1689</a></div></div>
-<div class="ttc" id="aclass_parallel_c_l_b_packer_html_aae61408e1484e32f75f793a74290cc3a"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a">ParallelCLBPacker::dumpPlacementTcl</a></div><div class="ttdeci">void dumpPlacementTcl(std::string dumpTclFile)</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l01432">ParallelCLBPacker.cc:1432</a></div></div>
+<div class="ttc" id="aclass_parallel_c_l_b_packer_html_aae61408e1484e32f75f793a74290cc3a"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a">ParallelCLBPacker::dumpPlacementTcl</a></div><div class="ttdeci">void dumpPlacementTcl(std::string dumpTclFile)</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l01446">ParallelCLBPacker.cc:1446</a></div></div>
 <div class="ttc" id="aclass_parallel_c_l_b_packer_html_aaf51c1970267bc6971b9dafb47cabf46"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46">ParallelCLBPacker::dumpCLBPlacementTcl</a></div><div class="ttdeci">void dumpCLBPlacementTcl(std::ofstream &amp;outfileTcl, bool packingRelatedToLUT6_2)</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l01276">ParallelCLBPacker.cc:1276</a></div></div>
 <div class="ttc" id="aclass_parallel_c_l_b_packer_html_ab1186dbc5b144732ab56a0459001e39d"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#ab1186dbc5b144732ab56a0459001e39d">ParallelCLBPacker::deviceSite2PackingSite</a></div><div class="ttdeci">std::map&lt; DeviceInfo::DeviceSite *, PackingCLBSite * &gt; deviceSite2PackingSite</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8h_source.html#l01708">ParallelCLBPacker.h:1708</a></div></div>
-<div class="ttc" id="aclass_parallel_c_l_b_packer_html_abd5e0da3fe8cf5319d1209c947b925c1"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1">ParallelCLBPacker::dumpFinalPacking</a></div><div class="ttdeci">void dumpFinalPacking()</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l01449">ParallelCLBPacker.cc:1449</a></div></div>
+<div class="ttc" id="aclass_parallel_c_l_b_packer_html_abd5e0da3fe8cf5319d1209c947b925c1"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1">ParallelCLBPacker::dumpFinalPacking</a></div><div class="ttdeci">void dumpFinalPacking()</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l01463">ParallelCLBPacker.cc:1463</a></div></div>
 <div class="ttc" id="aclass_parallel_c_l_b_packer_html_abeb4dbf8cb60d43bef4430d7251a5034"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#abeb4dbf8cb60d43bef4430d7251a5034">ParallelCLBPacker::deviceInfo</a></div><div class="ttdeci">DeviceInfo * deviceInfo</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8h_source.html#l01685">ParallelCLBPacker.h:1685</a></div></div>
 <div class="ttc" id="aclass_parallel_c_l_b_packer_html_ac433d301bdac5eff2efb28364c8e422a"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#ac433d301bdac5eff2efb28364c8e422a">ParallelCLBPacker::PUId2PackingCLBSite</a></div><div class="ttdeci">std::vector&lt; PackingCLBSite * &gt; PUId2PackingCLBSite</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8h_source.html#l01699">ParallelCLBPacker.h:1699</a></div></div>
 <div class="ttc" id="aclass_parallel_c_l_b_packer_html_ac5bac1353af81a435309a199c0690bf1"><div class="ttname"><a href="class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1">ParallelCLBPacker::prePackLegalizedMacros</a></div><div class="ttdeci">void prePackLegalizedMacros(PlacementInfo::PlacementMacro *tmpMacro)</div><div class="ttdef"><b>Definition:</b> <a href="_parallel_c_l_b_packer_8cc_source.html#l00015">ParallelCLBPacker.cc:15</a></div></div>
