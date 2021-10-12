@@ -1,5 +1,5 @@
 <map id="PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell" name="PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell">
-<area shape="rect" id="node1" title="Construct a new Placement Unpacked Cell object." alt="" coords="5,431,257,472"/>
+<area shape="rect" id="node1" title="Construct a new Placement Unpacked Cell object." alt="" coords="5,463,257,504"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="305,5,480,47"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="305,71,480,112"/>
 <area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="305,136,480,177"/>
@@ -14,4 +14,5 @@
 <area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="317,724,469,765"/>
 <area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="317,789,469,831"/>
 <area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="317,855,469,896"/>
+<area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="317,920,469,961"/>
 </map>

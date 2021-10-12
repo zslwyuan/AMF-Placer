@@ -1,5 +1,5 @@
 <map id="PlacementInfo::PlacementMacro::addCell" name="PlacementInfo::PlacementMacro::addCell">
-<area shape="rect" id="node1" title="add a real cell into the macro with its offsets in the macro" alt="" coords="5,496,180,537"/>
+<area shape="rect" id="node1" title="add a real cell into the macro with its offsets in the macro" alt="" coords="5,528,180,569"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="228,5,403,47"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="228,71,403,112"/>
 <area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="228,136,403,177"/>
@@ -15,5 +15,6 @@
 <area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="239,789,391,831"/>
 <area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="239,855,391,896"/>
 <area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="239,920,391,961"/>
-<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="239,985,391,1027"/>
+<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="239,985,391,1027"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="239,1051,391,1092"/>
 </map>
