@@ -72,14 +72,14 @@ var NAVTREEINDEX =
 "class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc",
 "class_device_info_1_1_clock_region_1_1_clock_column.html#aba7cf71626bdec2c5a1dae074ffe77fb",
 "class_global_placer.html#aac6b39caece97c88f0cbf0f522621391",
-"class_min_cost_bipartite_matcher.html#a4d58b7b38000fd820e2df2c3fc20a417",
-"class_placement_info.html#a000ecf3bebd0e1624472a0ec8c74cf64",
-"class_placement_info_1_1_placement_bin_info.html#a49cba47b4da1fb7cd819d8c79f984127",
-"class_placement_info_1_1_placement_unit.html#a6cdc4204bc7761ceb99ca2cc33fb6a11",
-"class_vivado_graph_util_1_1_vivado_core_cluster.html#a852bc103d264fed417f31faebc2d575b",
-"functions_vars_r.html",
-"namespacepaint_placement.html#afc64b6f04c34484dc3cfcc8fadb25ecd",
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html"
+"class_min_cost_bipartite_matcher.html#a42f4449968e458600457564fbe9e605c",
+"class_placement_info.html",
+"class_placement_info_1_1_placement_bin_info.html#a462a0d802762eedd82b010a845fd4a33",
+"class_placement_info_1_1_placement_unit.html#a65d98672b86525b34e7fff3b47e87c22",
+"class_vivado_graph_util_1_1_vivado_core_cluster.html#a83e60529877989b61091da11484b047d",
+"functions_vars_p.html",
+"namespacepaint_placement.html#af0911322a80519c426bdc1ed19bae1ce",
+"struct_placement_info_1_1_location.html#a95ca2a314c793fae8fe61aa1b1ac5df5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

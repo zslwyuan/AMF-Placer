@@ -64,6 +64,7 @@ var class_macro_legalizer =
     [ "CARRYRowNum", "class_macro_legalizer.html#a8fc566e496ec30091f3256d7b81cc943", null ],
     [ "cellLevelMatching", "class_macro_legalizer.html#ac6a8203d1e66638d1b24f24816d9a325", null ],
     [ "cellLoc", "class_macro_legalizer.html#a21f00755e628b93bad65c035eb72effc", null ],
+    [ "clockRegionAware", "class_macro_legalizer.html#a68db1ebd8e8ef756fe15a3941805c314", null ],
     [ "compatiblePlacementTable", "class_macro_legalizer.html#a5c5b73f976f1ba73b6d514fe11bfff5f", null ],
     [ "deviceInfo", "class_macro_legalizer.html#ab1f05662c570b9a85916357fc60aa9f2", null ],
     [ "displacementThreshold", "class_macro_legalizer.html#ac99f1d1cd624b0c60cf9daa5d0be9800", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX12 =
 {
+"struct_placement_info_1_1_location.html#a95ca2a314c793fae8fe61aa1b1ac5df5":[8,0,18,5,1],
 "struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html":[8,0,18,8,0],
 "struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a10e7d69acf96ca6385df3fc0164d2fa2":[8,0,18,8,0,2],
 "struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a542abb189d63d79a41a574a8c404bd6e":[8,0,18,8,0,1],
