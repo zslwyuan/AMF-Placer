@@ -471,6 +471,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeff88485fec1f8a6e75670f737e42466"><td class="memItemLeft" align="right" valign="top">std::map&lt; <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementUnit</a> *, std::pair&lt; float, float &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info.html#aeff88485fec1f8a6e75670f737e42466">getPU2ClockRegionCenters</a> ()</td></tr>
 <tr class="memdesc:aeff88485fec1f8a6e75670f737e42466"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a> Mapping to clock region centers for timing optimzation  <a href="class_placement_info.html#aeff88485fec1f8a6e75670f737e42466">More...</a><br /></td></tr>
 <tr class="separator:aeff88485fec1f8a6e75670f737e42466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac18f726c75937363f52be34154f4468c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info.html#ac18f726c75937363f52be34154f4468c">getLongPathThresholdLevel</a> ()</td></tr>
+<tr class="separator:ac18f726c75937363f52be34154f4468c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80bec37ddde34d28be1b2c43a99aa614"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info.html#a80bec37ddde34d28be1b2c43a99aa614">getMediumPathThresholdLevel</a> ()</td></tr>
+<tr class="separator:a80bec37ddde34d28be1b2c43a99aa614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
@@ -586,6 +590,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ab4cf385efea85fc732af7c067c91a453"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info.html#ab4cf385efea85fc732af7c067c91a453">y2xRatio</a> = 1.0</td></tr>
 <tr class="memdesc:ab4cf385efea85fc732af7c067c91a453"><td class="mdescLeft">&#160;</td><td class="mdescRight">a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning in X-coordinate  <a href="class_placement_info.html#ab4cf385efea85fc732af7c067c91a453">More...</a><br /></td></tr>
 <tr class="separator:ab4cf385efea85fc732af7c067c91a453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4cbbeb641b3009831370f5f7d02a117"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info.html#aa4cbbeb641b3009831370f5f7d02a117">longPathThresholdLevel</a> = 10</td></tr>
+<tr class="memdesc:aa4cbbeb641b3009831370f5f7d02a117"><td class="mdescLeft">&#160;</td><td class="mdescRight">the long path threshold for timing optimization  <a href="class_placement_info.html#aa4cbbeb641b3009831370f5f7d02a117">More...</a><br /></td></tr>
+<tr class="separator:aa4cbbeb641b3009831370f5f7d02a117"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab403342181eb09f603d5c144c84ba550"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info.html#ab403342181eb09f603d5c144c84ba550">mediumPathThresholdLevel</a> = 5</td></tr>
+<tr class="memdesc:ab403342181eb09f603d5c144c84ba550"><td class="mdescLeft">&#160;</td><td class="mdescRight">the medium path threshold for timing optimization  <a href="class_placement_info.html#ab403342181eb09f603d5c144c84ba550">More...</a><br /></td></tr>
+<tr class="separator:ab403342181eb09f603d5c144c84ba550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a334a5f1e5dee75572e2af3d4b0ce3642"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info.html#a334a5f1e5dee75572e2af3d4b0ce3642">dumpPlacementUnitLocationCnt</a> = 0</td></tr>
 <tr class="separator:a334a5f1e5dee75572e2af3d4b0ce3642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4573be18123d679a62335d51dbd9d4e5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info.html#a4573be18123d679a62335d51dbd9d4e5">oriPseudoNetWeight</a> = -1</td></tr>
@@ -1388,10 +1398,12 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_info_acaa7520c9a32ed41e4e327b54c3b9a3c_cgraph.png" border="0" usemap="#aclass_placement_info_acaa7520c9a32ed41e4e327b54c3b9a3c_cgraph" alt=""/></div>
 <map name="aclass_placement_info_acaa7520c9a32ed41e4e327b54c3b9a3c_cgraph" id="aclass_placement_info_acaa7520c9a32ed41e4e327b54c3b9a3c_cgraph">
-<area shape="rect" title="call timing info to build simple timing graph" alt="" coords="5,23,184,65"/>
-<area shape="rect" href="class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="232,23,401,65"/>
-<area shape="rect" href="class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="449,5,587,32"/>
-<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="473,56,563,83"/>
+<area shape="rect" title="call timing info to build simple timing graph" alt="" coords="5,89,184,130"/>
+<area shape="rect" href="class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="251,23,421,65"/>
+<area shape="rect" href="class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc" title=" " alt="" coords="241,89,431,130"/>
+<area shape="rect" href="class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20" title=" " alt="" coords="232,154,440,195"/>
+<area shape="rect" href="class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="488,5,625,32"/>
+<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="511,56,602,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -3615,6 +3627,33 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ac18f726c75937363f52be34154f4468c" name="ac18f726c75937363f52be34154f4468c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18f726c75937363f52be34154f4468c">&#9670;&nbsp;</a></span>getLongPathThresholdLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlacementInfo::getLongPathThresholdLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04122">4122</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+
+</div>
+</div>
 <a id="a2eba7c4b800cefadc1122619e3047e8e" name="a2eba7c4b800cefadc1122619e3047e8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2eba7c4b800cefadc1122619e3047e8e">&#9670;&nbsp;</a></span>getMacroLegalizationWeight()</h2>
 
@@ -3778,6 +3817,33 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="5,13,201,39"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a80bec37ddde34d28be1b2c43a99aa614" name="a80bec37ddde34d28be1b2c43a99aa614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80bec37ddde34d28be1b2c43a99aa614">&#9670;&nbsp;</a></span>getMediumPathThresholdLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlacementInfo::getMediumPathThresholdLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04127">4127</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -4762,7 +4828,7 @@ Here is the caller graph for this function:</div>
 <p>get the <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a> Mapping to clock region centers for timing optimzation </p>
 <dl class="section return"><dt>Returns</dt><dd>std::map&lt;PlacementUnit *, std::pair&lt;float, float&gt;&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04115">4115</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04117">4117</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00183">PlacementTimingOptimizer::clusterLongPathInOneClockRegion()</a>, <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00700">WirelengthOptimizer::updatePseudoNetForClockRegion()</a>.</p>
 <div class="dynheader">
@@ -6739,7 +6805,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04211">4211</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04223">4223</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01117">adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03498">getBinGridH()</a>, and <a class="el" href="_placement_info_8h_source.html#l03221">getGridXY()</a>.</p>
 
@@ -6765,7 +6831,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04210">4210</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04222">4222</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01117">adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03488">getBinGridW()</a>, and <a class="el" href="_placement_info_8h_source.html#l03221">getGridXY()</a>.</p>
 
@@ -6791,7 +6857,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04129">4129</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04141">4141</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03669">findNeiborSiteFromBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03757">getCellId2CellBinInfo()</a>, <a class="el" href="_placement_info_8h_source.html#l03606">setCellBinInfo()</a>, <a class="el" href="_placement_info_8h_source.html#l03624">transferCellBinInfo()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01528">updateCells2PlacementUnits()</a>.</p>
 
@@ -6817,7 +6883,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04130">4130</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04142">4142</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00917">adjustLUTFFUtilization_Packablity()</a>, <a class="el" href="_placement_info_8cc_source.html#l01860">checkClockUtilization()</a>, <a class="el" href="_placement_info_8h_source.html#l02892">findNeiborLUTFFsFromBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03473">getCellId2location()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00821">updateElementBinGrid()</a>.</p>
 
@@ -6843,7 +6909,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04127">4127</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04139">4139</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02713">getCellId2PlacementUnit()</a>, <a class="el" href="_placement_info_8h_source.html#l03419">getPULocationByCellLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03325">isLegalLocation()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01528">updateCells2PlacementUnits()</a>.</p>
 
@@ -6869,7 +6935,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04128">4128</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04140">4140</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02717">getCellId2PlacementUnitVec()</a>, <a class="el" href="_placement_info_8h_source.html#l03003">getPlacementUnitByCell()</a>, <a class="el" href="_placement_info_8h_source.html#l03010">getPlacementUnitByCellId()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8h_source.html#l01769">PlacementInfo::PlacementNet::PlacementNet()</a>, <a class="el" href="_placement_info_8cc_source.html#l00472">reloadNets()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01528">updateCells2PlacementUnits()</a>.</p>
 
@@ -6895,7 +6961,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04126">4126</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04138">4138</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02709">getCellInMacros()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00261">printStat()</a>.</p>
 
@@ -6921,7 +6987,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04267">4267</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04279">4279</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00057">PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable()</a>, <a class="el" href="_placement_info_8h_source.html#l02615">loadCompatiblePlacementTable()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>.</p>
 
@@ -6947,7 +7013,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04268">4268</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04280">4280</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00057">PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable()</a>, <a class="el" href="_placement_info_8h_source.html#l02615">loadCompatiblePlacementTable()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>.</p>
 
@@ -6973,7 +7039,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04257">4257</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04269">4269</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01860">checkClockUtilization()</a>.</p>
 
@@ -6999,7 +7065,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04216">4216</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04228">4228</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01860">checkClockUtilization()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00472">reloadNets()</a>.</p>
 
@@ -7025,7 +7091,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04217">4217</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04229">4229</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01860">checkClockUtilization()</a>.</p>
 
@@ -7051,7 +7117,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04121">4121</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04133">4133</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00273">PlacementInfo::PlacementBinInfo::addSiteIntoBin()</a>, <a class="el" href="_placement_info_8cc_source.html#l01389">adjustLUTFFUtilization()</a>, <a class="el" href="_placement_info_8cc_source.html#l01308">adjustLUTFFUtilization_Clocking()</a>, <a class="el" href="_placement_info_8cc_source.html#l00917">adjustLUTFFUtilization_Packablity()</a>, <a class="el" href="_placement_info_8cc_source.html#l01117">adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_placement_info_8cc_source.html#l01356">adjustLUTFFUtilization_Routability_Reset()</a>, <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8h_source.html#l02840">getActualOccupation()</a>, <a class="el" href="_placement_info_8h_source.html#l02878">getActualOccupationByCellId()</a>, <a class="el" href="_placement_info_8h_source.html#l02856">getcellId2Occupation()</a>, <a class="el" href="_placement_info_8h_source.html#l02623">getCompatiblePlacementTable()</a>, <a class="el" href="_placement_info_8h_source.html#l02851">getInflateRatio()</a>, <a class="el" href="_placement_info_8h_source.html#l02867">getOccupation()</a>, <a class="el" href="_placement_info_8h_source.html#l02815">getPotentialBELTypeIDs()</a>, <a class="el" href="_placement_info_8h_source.html#l02825">getSharedBELTypeId()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, <a class="el" href="_placement_info_8h_source.html#l02628">setBELTypeForCells()</a>, <a class="el" href="_placement_info_8cc_source.html#l00707">verifyDeviceForDesign()</a>, and <a class="el" href="_placement_info_8h_source.html#l02580">~PlacementInfo()</a>.</p>
 
@@ -7077,7 +7143,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04132">4132</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04144">4144</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01525">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_placement_info_8h_source.html#l03762">getCells()</a>, <a class="el" href="_placement_info_8h_source.html#l03180">getDesignInfo()</a>, <a class="el" href="_placement_info_8h_source.html#l03963">getDeterminedOccupation()</a>, <a class="el" href="_placement_info_8h_source.html#l02725">getNumCells()</a>, <a class="el" href="_placement_info_8h_source.html#l02615">loadCompatiblePlacementTable()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l00261">printStat()</a>, <a class="el" href="_placement_info_8cc_source.html#l00472">reloadNets()</a>, <a class="el" href="_placement_info_8h_source.html#l03951">resetLUTFFDeterminedOccupation()</a>, <a class="el" href="_placement_info_8cc_source.html#l00184">PlacementInfo::CompatiblePlacementTable::setBELTypeForCells()</a>, <a class="el" href="_placement_info_8h_source.html#l02628">setBELTypeForCells()</a>, <a class="el" href="_placement_info_8h_source.html#l03976">setDeterminedOccupation()</a>, <a class="el" href="_placement_info_8h_source.html#l03624">transferCellBinInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l01528">updateCells2PlacementUnits()</a>, <a class="el" href="_placement_info_8cc_source.html#l00821">updateElementBinGrid()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00707">verifyDeviceForDesign()</a>.</p>
 
@@ -7103,7 +7169,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04133">4133</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04145">4145</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01308">adjustLUTFFUtilization_Clocking()</a>, <a class="el" href="_placement_info_8cc_source.html#l01860">checkClockUtilization()</a>, <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03208">getBELType2FalseBELType()</a>, <a class="el" href="_placement_info_8h_source.html#l03185">getDeviceInfo()</a>, <a class="el" href="_placement_info_8h_source.html#l02615">loadCompatiblePlacementTable()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l00184">PlacementInfo::CompatiblePlacementTable::setBELTypeForCells()</a>, and <a class="el" href="_placement_info_8h_source.html#l01382">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>.</p>
 
@@ -7129,7 +7195,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04277">4277</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04301">4301</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01566">dumpPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01539">dumpVivadoPlacementTclWithPULegalizationInfo()</a>.</p>
 
@@ -7158,7 +7224,7 @@ Here is the caller graph for this function:</div>
 <p>right boundary of the bin grid </p>
 <p >the coverage of bin grid is a bit larger than the device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04186">4186</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04198">4198</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l02810">getDeviceMaxEdgeLength()</a>, and <a class="el" href="_placement_info_8h_source.html#l02775">getGlobalBinMaxLocX()</a>.</p>
 
@@ -7187,7 +7253,7 @@ Here is the caller graph for this function:</div>
 <p>bottom boundary of the bin grid </p>
 <p >the coverage of bin grid is a bit larger than the device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04193">4193</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04205">4205</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l02810">getDeviceMaxEdgeLength()</a>, and <a class="el" href="_placement_info_8h_source.html#l02785">getGlobalBinMaxLocY()</a>.</p>
 
@@ -7213,7 +7279,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04195">4195</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04207">4207</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03036">addB2BNetInPlacementInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l01117">adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03275">enforceLegalizeXYInArea()</a>, <a class="el" href="_placement_info_8h_source.html#l03419">getPULocationByCellLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03325">isLegalLocation()</a>, and <a class="el" href="_placement_info_8h_source.html#l03237">legalizeXYInArea()</a>.</p>
 
@@ -7239,7 +7305,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04125">4125</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04137">4137</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02701">getFixedPlacementUnits()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>.</p>
 
@@ -7267,7 +7333,7 @@ Here is the caller graph for this function:</div>
 
 <p>Bin Grid includes all types of sites, mainly for congestion evalution. </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04208">4208</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04220">4220</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01117">adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01407">dumpCongestion()</a>.</p>
 
@@ -7295,7 +7361,7 @@ Here is the caller graph for this function:</div>
 
 <p>right boundary of the device </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04160">4160</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04172">4172</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8h_source.html#l03275">enforceLegalizeXYInArea()</a>, <a class="el" href="_placement_info_8h_source.html#l02735">getGlobalMaxX()</a>, <a class="el" href="_placement_info_8h_source.html#l03419">getPULocationByCellLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03325">isLegalLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03237">legalizeXYInArea()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00261">printStat()</a>.</p>
 
@@ -7323,7 +7389,7 @@ Here is the caller graph for this function:</div>
 
 <p>top boundary of the device </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04165">4165</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04177">4177</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8h_source.html#l03275">enforceLegalizeXYInArea()</a>, <a class="el" href="_placement_info_8h_source.html#l02745">getGlobalMaxY()</a>, <a class="el" href="_placement_info_8h_source.html#l03419">getPULocationByCellLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03325">isLegalLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03237">legalizeXYInArea()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00261">printStat()</a>.</p>
 
@@ -7351,7 +7417,7 @@ Here is the caller graph for this function:</div>
 
 <p>left boundary of the device </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04150">4150</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04162">4162</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8h_source.html#l03275">enforceLegalizeXYInArea()</a>, <a class="el" href="_placement_info_8h_source.html#l02755">getGlobalMinX()</a>, <a class="el" href="_placement_info_8h_source.html#l03419">getPULocationByCellLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03325">isLegalLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03237">legalizeXYInArea()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00261">printStat()</a>.</p>
 
@@ -7379,7 +7445,7 @@ Here is the caller graph for this function:</div>
 
 <p>bottom boundary of the device </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04155">4155</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04167">4167</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8h_source.html#l03275">enforceLegalizeXYInArea()</a>, <a class="el" href="_placement_info_8h_source.html#l02765">getGlobalMinY()</a>, <a class="el" href="_placement_info_8h_source.html#l03419">getPULocationByCellLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03325">isLegalLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03237">legalizeXYInArea()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00261">printStat()</a>.</p>
 
@@ -7405,7 +7471,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04266">4266</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04278">4278</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03904">getMacroPseudoNetEnhanceCnt()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>.</p>
 
@@ -7431,7 +7497,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04283">4283</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04307">4307</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00917">adjustLUTFFUtilization_Packablity()</a>.</p>
 
@@ -7457,9 +7523,37 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04221">4221</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04233">4233</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04090">getLongPaths()</a>, <a class="el" href="_placement_info_8cc_source.html#l00639">optimizeLongPaths()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00551">updateLongPaths()</a>.</p>
+
+</div>
+</div>
+<a id="aa4cbbeb641b3009831370f5f7d02a117" name="aa4cbbeb641b3009831370f5f7d02a117"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4cbbeb641b3009831370f5f7d02a117">&#9670;&nbsp;</a></span>longPathThresholdLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlacementInfo::longPathThresholdLevel = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the long path threshold for timing optimization </p>
+
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04293">4293</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04105">buildSimpleTimingGraph()</a>, and <a class="el" href="_placement_info_8h_source.html#l04122">getLongPathThresholdLevel()</a>.</p>
 
 </div>
 </div>
@@ -7485,7 +7579,7 @@ Here is the caller graph for this function:</div>
 
 <p>Bin Grid for LUTs and FFs, mainly for searching neighbor elements during packing. </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04202">4202</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04214">4214</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00917">adjustLUTFFUtilization_Packablity()</a>, <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, and <a class="el" href="_placement_info_8h_source.html#l02892">findNeiborLUTFFsFromBinGrid()</a>.</p>
 
@@ -7511,7 +7605,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04286">4286</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04310">4310</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01389">adjustLUTFFUtilization()</a>, <a class="el" href="_placement_info_8cc_source.html#l00917">adjustLUTFFUtilization_Packablity()</a>, and <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>.</p>
 
@@ -7537,7 +7631,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04281">4281</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04305">4305</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03924">getMacroLegalizationWeight()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l03939">setMacroLegalizationParameters()</a>.</p>
 
@@ -7563,9 +7657,37 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04280">4280</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04304">4304</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03904">getMacroPseudoNetEnhanceCnt()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l03939">setMacroLegalizationParameters()</a>.</p>
+
+</div>
+</div>
+<a id="ab403342181eb09f603d5c144c84ba550" name="ab403342181eb09f603d5c144c84ba550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab403342181eb09f603d5c144c84ba550">&#9670;&nbsp;</a></span>mediumPathThresholdLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlacementInfo::mediumPathThresholdLevel = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>the medium path threshold for timing optimization </p>
+
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04299">4299</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04105">buildSimpleTimingGraph()</a>, and <a class="el" href="_placement_info_8h_source.html#l04127">getMediumPathThresholdLevel()</a>.</p>
 
 </div>
 </div>
@@ -7589,7 +7711,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04285">4285</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04309">4309</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04074">getMinHPWL()</a>, and <a class="el" href="_placement_info_8h_source.html#l04069">setMinHPWL()</a>.</p>
 
@@ -7615,7 +7737,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04279">4279</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04303">4303</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03890">getPseudoNetWeight()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l03878">setPseudoNetWeight()</a>.</p>
 
@@ -7641,7 +7763,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04131">4131</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04143">4143</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03478">getPinId2location()</a>.</p>
 
@@ -7667,7 +7789,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04124">4124</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04136">4136</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02697">getPlacementMacros()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>.</p>
 
@@ -7693,7 +7815,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04213">4213</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04225">4225</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01117">adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_placement_info_8h_source.html#l02705">getPlacementNets()</a>, <a class="el" href="_placement_info_8h_source.html#l03803">getTotalHPWL()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l00472">reloadNets()</a>, <a class="el" href="_placement_info_8h_source.html#l03777">updateB2BAndGetTotalHPWL()</a>, and <a class="el" href="_placement_info_8h_source.html#l02580">~PlacementInfo()</a>.</p>
 
@@ -7722,7 +7844,7 @@ Here is the caller graph for this function:</div>
 <p>the progress ratio, indicating the progress of the placement convergence. </p>
 <p >the progress ratio is usually HPWL_lower / HPWL_upper </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04264">4264</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04276">4276</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03833">getProgress()</a>, and <a class="el" href="_placement_info_8h_source.html#l03823">setProgress()</a>.</p>
 
@@ -7748,7 +7870,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04214">4214</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04226">4226</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03767">getPlacementUnitId2Nets()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00472">reloadNets()</a>.</p>
 
@@ -7774,7 +7896,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04122">4122</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04134">4134</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00917">adjustLUTFFUtilization_Packablity()</a>, <a class="el" href="_placement_info_8cc_source.html#l01117">adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_placement_info_8h_source.html#l04040">calculateNetNumDistributionOfPUs()</a>, <a class="el" href="_placement_info_8h_source.html#l02693">getPlacementUnits()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l00261">printStat()</a>, <a class="el" href="_placement_info_8cc_source.html#l00472">reloadNets()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00821">updateElementBinGrid()</a>.</p>
 
@@ -7800,7 +7922,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04123">4123</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04135">4135</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02721">getPlacementUnpackedCells()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>.</p>
 
@@ -7826,9 +7948,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04223">4223</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04235">4235</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04115">getPU2ClockRegionCenters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04117">getPU2ClockRegionCenters()</a>.</p>
 
 </div>
 </div>
@@ -7854,7 +7976,7 @@ Here is the caller graph for this function:</div>
 
 <p>a mapping from PlaceuementUnit objects to device sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04145">4145</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04157">4157</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03587">deleteLegalizationInfoFor()</a>, <a class="el" href="_placement_info_8cc_source.html#l01566">dumpPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8h_source.html#l03554">getPULegalSite()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8h_source.html#l03575">resetPULegalInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l03541">setPULegalSite()</a>.</p>
 
@@ -7882,7 +8004,7 @@ Here is the caller graph for this function:</div>
 
 <p>a mapping from PlaceuementUnit objects to legalized locations </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04140">4140</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04152">4152</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03587">deleteLegalizationInfoFor()</a>, <a class="el" href="_placement_info_8h_source.html#l03566">getPULegalXY()</a>, <a class="el" href="_placement_info_8cc_source.html#l01595">loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8h_source.html#l03575">resetPULegalInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l03521">setPULegalXY()</a>.</p>
 
@@ -7908,7 +8030,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04220">4220</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04232">4232</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00472">reloadNets()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00551">updateLongPaths()</a>.</p>
 
@@ -7934,7 +8056,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04219">4219</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04231">4231</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00472">reloadNets()</a>.</p>
 
@@ -7960,7 +8082,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04284">4284</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04308">4308</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04040">calculateNetNumDistributionOfPUs()</a>, and <a class="el" href="_placement_info_8h_source.html#l04058">getPUWithManyNetsRatio()</a>.</p>
 
@@ -7986,7 +8108,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04196">4196</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04208">4208</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8h_source.html#l03669">findNeiborSiteFromBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l02982">getBinGrid()</a>, <a class="el" href="_placement_info_8cc_source.html#l00813">resetElementBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03624">transferCellBinInfo()</a>, and <a class="el" href="_placement_info_8h_source.html#l02580">~PlacementInfo()</a>.</p>
 
@@ -8012,7 +8134,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04269">4269</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04281">4281</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00057">PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable()</a>, <a class="el" href="_placement_info_8h_source.html#l02615">loadCompatiblePlacementTable()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>.</p>
 
@@ -8038,7 +8160,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04134">4134</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04146">4146</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04105">buildSimpleTimingGraph()</a>, <a class="el" href="_placement_info_8h_source.html#l03190">getTimingInfo()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>.</p>
 
@@ -8064,7 +8186,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04209">4209</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04221">4221</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l02998">getSiteBinGrid()</a>, <a class="el" href="_placement_info_8cc_source.html#l01495">resetSiteBinGrid()</a>, and <a class="el" href="_placement_info_8h_source.html#l02580">~PlacementInfo()</a>.</p>
 
@@ -8093,7 +8215,7 @@ Here is the caller graph for this function:</div>
 <p>left boundary of the bin grid </p>
 <p >the coverage of bin grid is a bit larger than the device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04172">4172</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04184">4184</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l02810">getDeviceMaxEdgeLength()</a>, <a class="el" href="_placement_info_8h_source.html#l02795">getGlobalBinMinLocX()</a>, and <a class="el" href="_placement_info_8h_source.html#l03221">getGridXY()</a>.</p>
 
@@ -8122,7 +8244,7 @@ Here is the caller graph for this function:</div>
 <p>bottom boundary of the bin grid </p>
 <p >the coverage of bin grid is a bit larger than the device. </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04179">4179</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04191">4191</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00290">createGridBins()</a>, <a class="el" href="_placement_info_8cc_source.html#l01427">createSiteBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l02810">getDeviceMaxEdgeLength()</a>, <a class="el" href="_placement_info_8h_source.html#l02805">getGlobalBinMinLocY()</a>, and <a class="el" href="_placement_info_8h_source.html#l03221">getGridXY()</a>.</p>
 
@@ -8150,7 +8272,7 @@ Here is the caller graph for this function:</div>
 
 <p>a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning in X-coordinate </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04275">4275</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l04287">4287</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02186">PlacementInfo::PlacementNet::addPseudoNet_enhancePin2Pin()</a>, <a class="el" href="_placement_info_8h_source.html#l03105">addPseudoNetsInPlacementInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l01117">adjustLUTFFUtilization_Routability()</a>, <a class="el" href="_placement_info_8h_source.html#l02892">findNeiborLUTFFsFromBinGrid()</a>, <a class="el" href="_placement_info_8h_source.html#l03654">getDisplacement()</a>, <a class="el" href="_placement_info_8h_source.html#l01959">PlacementInfo::PlacementNet::getHPWL()</a>, <a class="el" href="_placement_info_8h_source.html#l01976">PlacementInfo::PlacementNet::getNewHPWLByTrying()</a>, <a class="el" href="_placement_info_8h_source.html#l03803">getTotalHPWL()</a>, <a class="el" href="_placement_info_8cc_source.html#l00023">PlacementInfo()</a>, <a class="el" href="_placement_info_8h_source.html#l03777">updateB2BAndGetTotalHPWL()</a>, and <a class="el" href="_placement_info_8h_source.html#l02067">PlacementInfo::PlacementNet::updateBound2BoundNetWeight()</a>.</p>
 

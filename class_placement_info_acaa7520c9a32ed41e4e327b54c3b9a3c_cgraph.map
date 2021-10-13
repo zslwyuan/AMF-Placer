@@ -1,6 +1,8 @@
 <map id="PlacementInfo::buildSimpleTimingGraph" name="PlacementInfo::buildSimpleTimingGraph">
-<area shape="rect" id="node1" title="call timing info to build simple timing graph" alt="" coords="5,23,184,65"/>
-<area shape="rect" id="node2" href="$class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="232,23,401,65"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="449,5,587,32"/>
-<area shape="rect" id="node4" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="473,56,563,83"/>
+<area shape="rect" id="node1" title="call timing info to build simple timing graph" alt="" coords="5,89,184,130"/>
+<area shape="rect" id="node2" href="$class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="251,23,421,65"/>
+<area shape="rect" id="node5" href="$class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc" title=" " alt="" coords="241,89,431,130"/>
+<area shape="rect" id="node6" href="$class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20" title=" " alt="" coords="232,154,440,195"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="488,5,625,32"/>
+<area shape="rect" id="node4" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="511,56,602,83"/>
 </map>

@@ -12,6 +12,7 @@ var class_placement_timing_info_1_1_timing_graph =
     [ "forwardLevelization", "class_placement_timing_info_1_1_timing_graph.html#ae3b82205bd3755e782958cd81cd6366f", null ],
     [ "getEdges", "class_placement_timing_info_1_1_timing_graph.html#a83a198921ae941f667dceff3e8ca3ede", null ],
     [ "getLongPathThresholdLevel", "class_placement_timing_info_1_1_timing_graph.html#a0379005feb60777958ed70a532360596", null ],
+    [ "getMediumPathThresholdLevel", "class_placement_timing_info_1_1_timing_graph.html#a9fc678bd27641040f496ea417571b6d1", null ],
     [ "getNodes", "class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e", null ],
     [ "getPathLenSortedNodes", "class_placement_timing_info_1_1_timing_graph.html#a1043e21b484f92c759a24649f8f9239e", null ],
     [ "insertTimingNode", "class_placement_timing_info_1_1_timing_graph.html#a5658250b96475ab87516ac268ac50345", null ],
@@ -25,6 +26,8 @@ var class_placement_timing_info_1_1_timing_graph =
     [ "forwardlevel2NodeIds", "class_placement_timing_info_1_1_timing_graph.html#ac29e3278ac4095c8e4286e2c82e9a6e5", null ],
     [ "longPathThresholdLevel", "class_placement_timing_info_1_1_timing_graph.html#afeadd4a6aaad0df64b10510b9a9c4ddb", null ],
     [ "longPathThrRatio", "class_placement_timing_info_1_1_timing_graph.html#acf5f72552cbe2017c12960d07964e32d", null ],
+    [ "mediumPathThresholdLevel", "class_placement_timing_info_1_1_timing_graph.html#afe1a17fee57d1c13cc9f1fbbe86f8e72", null ],
+    [ "mediumPathThrRatio", "class_placement_timing_info_1_1_timing_graph.html#a5098caf8604dba63fbba831f50c3b950", null ],
     [ "nodes", "class_placement_timing_info_1_1_timing_graph.html#ac9148947663ded1bf22d7a41375917ee", null ],
     [ "pathLenSortedNodes", "class_placement_timing_info_1_1_timing_graph.html#a8eb31abcf160f82d65deca1b11d56e2a", null ]
 ];

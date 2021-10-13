@@ -131,6 +131,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9bbeb12a52894eb4168f255e3e2e073"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_placement_timing_info_1_1_timing_graph.html">TimingGraph</a>&lt; <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073">getSimplePlacementTimingGraph</a> ()</td></tr>
 <tr class="memdesc:ae9bbeb12a52894eb4168f255e3e2e073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Simple Placement Timing Graph object.  <a href="class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073">More...</a><br /></td></tr>
 <tr class="separator:ae9bbeb12a52894eb4168f255e3e2e073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9751ae32acb35ef568ecceb9e393e0dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc">getLongPathThresholdLevel</a> ()</td></tr>
+<tr class="separator:a9751ae32acb35ef568ecceb9e393e0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1611fa85052e36071d12f6980e7cdb20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20">getMediumPathThresholdLevel</a> ()</td></tr>
+<tr class="separator:a1611fa85052e36071d12f6980e7cdb20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -267,6 +271,84 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a9751ae32acb35ef568ecceb9e393e0dc" name="a9751ae32acb35ef568ecceb9e393e0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9751ae32acb35ef568ecceb9e393e0dc">&#9670;&nbsp;</a></span>getLongPathThresholdLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlacementTimingInfo::getLongPathThresholdLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00600">600</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04105">PlacementInfo::buildSimpleTimingGraph()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_placement_timing_info_a9751ae32acb35ef568ecceb9e393e0dc_icgraph.png" border="0" usemap="#aclass_placement_timing_info_a9751ae32acb35ef568ecceb9e393e0dc_icgraph" alt=""/></div>
+<map name="aclass_placement_timing_info_a9751ae32acb35ef568ecceb9e393e0dc_icgraph" id="aclass_placement_timing_info_a9751ae32acb35ef568ecceb9e393e0dc_icgraph">
+<area shape="rect" title=" " alt="" coords="391,5,581,47"/>
+<area shape="rect" href="class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph" alt="" coords="164,5,343,47"/>
+<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1611fa85052e36071d12f6980e7cdb20" name="a1611fa85052e36071d12f6980e7cdb20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1611fa85052e36071d12f6980e7cdb20">&#9670;&nbsp;</a></span>getMediumPathThresholdLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlacementTimingInfo::getMediumPathThresholdLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00605">605</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04105">PlacementInfo::buildSimpleTimingGraph()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_placement_timing_info_a1611fa85052e36071d12f6980e7cdb20_icgraph.png" border="0" usemap="#aclass_placement_timing_info_a1611fa85052e36071d12f6980e7cdb20_icgraph" alt=""/></div>
+<map name="aclass_placement_timing_info_a1611fa85052e36071d12f6980e7cdb20_icgraph" id="aclass_placement_timing_info_a1611fa85052e36071d12f6980e7cdb20_icgraph">
+<area shape="rect" title=" " alt="" coords="391,5,599,47"/>
+<area shape="rect" href="class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph" alt="" coords="164,5,343,47"/>
+<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ae9bbeb12a52894eb4168f255e3e2e073" name="ae9bbeb12a52894eb4168f255e3e2e073"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9bbeb12a52894eb4168f255e3e2e073">&#9670;&nbsp;</a></span>getSimplePlacementTimingGraph()</h2>
 
@@ -293,7 +375,7 @@ Here is the caller graph for this function:</div>
 <p>Get the Simple Placement Timing Graph object. </p>
 <dl class="section return"><dt>Returns</dt><dd>TimingGraph&lt;DesignInfo::DesignCell&gt;* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00578">578</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00595">595</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00183">PlacementTimingOptimizer::clusterLongPathInOneClockRegion()</a>, <a class="el" href="_cluster_placer_8cc_source.html#l00142">ClusterPlacer::createLongPathClusterUnits()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00134">PlacementTimingOptimizer::setEdgesDelay()</a>.</p>
 <div class="dynheader">
@@ -342,7 +424,7 @@ Here is the caller graph for this function:</div>
 <p>Get the Simple Timing Info object which regard design cells as timing nodes. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;TimingGraph&lt;DesignInfo::DesignCell&gt;::TimingNode *&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00563">563</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00580">580</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00316">WirelengthOptimizer::addPseudoNet_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">PlacementTimingOptimizer::enhanceNetWeight_LevelBased()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01208">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPlacementUnitMaxPathLen()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00134">PlacementTimingOptimizer::setEdgesDelay()</a>.</p>
 <div class="dynheader">
@@ -388,7 +470,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00568">568</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00585">585</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00183">PlacementTimingOptimizer::clusterLongPathInOneClockRegion()</a>, and <a class="el" href="_cluster_placer_8cc_source.html#l00142">ClusterPlacer::createLongPathClusterUnits()</a>.</p>
 <div class="dynheader">
@@ -431,7 +513,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00584">584</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00611">611</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00031">buildSimpleTimingGraph()</a>.</p>
 
@@ -457,7 +539,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00585">585</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00612">612</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -481,7 +563,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00588">588</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00615">615</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00023">PlacementTimingInfo()</a>.</p>
 
@@ -507,9 +589,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00590">590</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00617">617</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00031">buildSimpleTimingGraph()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00578">getSimplePlacementTimingGraph()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00563">getSimplePlacementTimingInfo()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00568">getSimplePlacementTimingInfo_PathLenSorted()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00047">~PlacementTimingInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00031">buildSimpleTimingGraph()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00600">getLongPathThresholdLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00605">getMediumPathThresholdLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00595">getSimplePlacementTimingGraph()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00580">getSimplePlacementTimingInfo()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00585">getSimplePlacementTimingInfo_PathLenSorted()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00047">~PlacementTimingInfo()</a>.</p>
 
 </div>
 </div>
@@ -533,7 +615,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00591">591</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00618">618</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00023">PlacementTimingInfo()</a>.</p>
 

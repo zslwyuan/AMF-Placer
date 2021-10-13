@@ -1,5 +1,14 @@
 var NAVTREEINDEX11 =
 {
+"namespacepaint_placement.html#afc64b6f04c34484dc3cfcc8fadb25ecd":[7,0,10,11],
+"namespacepaint_summary.html":[7,0,11],
+"namespacepaint_summary.html#a098c8614cd714a8d3d021826baf5a34e":[7,0,11,9],
+"namespacepaint_summary.html#a1a4cf98c7fbf53963c96c58223e8f108":[7,0,11,3],
+"namespacepaint_summary.html#a2ec5c2ee2a8fc8a3edb0d96ce190d1b3":[7,0,11,5],
+"namespacepaint_summary.html#a3c198b75c8c8c8351e5115d5a10cbd67":[7,0,11,6],
+"namespacepaint_summary.html#a53c62a9e7d06c20c0f5f3e0e0a2e5f6a":[7,0,11,1],
+"namespacepaint_summary.html#a666a53ca335e56f4cbec602072c037d7":[7,0,11,8],
+"namespacepaint_summary.html#aab7fbebc1e1c3b3974fb4156c35405c4":[7,0,11,7],
 "namespacepaint_summary.html#abc170bfddbcfbfd946f9e9528cb23dd8":[7,0,11,4],
 "namespacepaint_summary.html#abf8635fcb2b09d0d6b8558c773bd3d78":[7,0,11,2],
 "namespacepaint_summary.html#ae6da9ad021b2a877d8afda2c03bbbca9":[7,0,11,0],
@@ -240,14 +249,5 @@ var NAVTREEINDEX11 =
 "struct_placement_info_1_1_cell_bin_info.html#ae41eaadd2067a933f6b0d668355af685":[8,0,18,1,0],
 "struct_placement_info_1_1_location.html":[8,0,18,5],
 "struct_placement_info_1_1_location.html#a7a8a335444a6e21e4ab97ba49d9d78b6":[8,0,18,5,0],
-"struct_placement_info_1_1_location.html#a95ca2a314c793fae8fe61aa1b1ac5df5":[8,0,18,5,1],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html":[8,0,18,8,0],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a10e7d69acf96ca6385df3fc0164d2fa2":[8,0,18,8,0,2],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a542abb189d63d79a41a574a8c404bd6e":[8,0,18,8,0,1],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a86f835a18967b2f92ee9f7b23353928f":[8,0,18,8,0,0],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a9f901b80b7261bae930345ea85ad67ed":[8,0,18,8,0,3],
-"struct_placement_info_1_1_placement_net_1_1__pin_offset.html":[8,0,18,9,0],
-"struct_placement_info_1_1_placement_net_1_1__pin_offset.html#a4613e8400724b1ada383d8d4da421ad0":[8,0,18,9,0,0],
-"struct_placement_info_1_1_placement_net_1_1__pin_offset.html#a9f69bf95869b2fdd970724f2ce578a26":[8,0,18,9,0,2],
-"struct_placement_info_1_1_placement_net_1_1__pin_offset.html#af0961a05683631c3db2630e24279c00e":[8,0,18,9,0,1]
+"struct_placement_info_1_1_location.html#a95ca2a314c793fae8fe61aa1b1ac5df5":[8,0,18,5,1]
 };
