@@ -1659,7 +1659,9 @@ void InitialPacker::loadFixedPlacementUnits(std::string fixedPlacementUnitsFromV
 
 void InitialPacker::dumpMacroHighLight()
 {
-    std::ofstream tmpColorFile("color.tcl");
+    std::ofstream tmpColorFile(JSONCfg["dumpDirectory"] + "/color.tcl");
+    assert(tmpColorFile.is_open() && tmpColorFile.good() &&
+           "The path for dumping elements' highlight colors does not exist and please check your path settings");
     // 2 -> carry
     // 1 -> DSP
     // 3 -> BRAM

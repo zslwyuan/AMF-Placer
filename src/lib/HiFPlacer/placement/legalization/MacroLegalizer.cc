@@ -696,7 +696,8 @@ void MacroLegalizer::dumpMatching(bool fixedColumn, bool enforce)
     {
         std::string dumpFile = "";
         if (enforce)
-            dumpFile = legalizerName + "DumpMacroLegalization-" + std::to_string(DumpMacroLegalizationCnt) + ".gz";
+            dumpFile = JSONCfg["dumpDirectory"] + legalizerName + "DumpMacroLegalization-" +
+                       std::to_string(DumpMacroLegalizationCnt) + ".gz";
         else
             dumpFile = JSONCfg["DumpMacroLegalization"] + "-" + legalizerName +
                        std::to_string(DumpMacroLegalizationCnt) + ".gz";

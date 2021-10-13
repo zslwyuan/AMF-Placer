@@ -21,7 +21,7 @@ void writeStrToGZip(std::string fileName, std::stringstream &data)
     // open the file for writing in binary mode
     gz_file = gzopen(fileName.c_str(), "wb");
 
-    assert(Z_NULL != gz_file);
+    assert(Z_NULL != gz_file && "The zip file should be created successfully and please check your path settings.");
     // Get the size of the stream
     unsigned long int file_size = sizeof(char) * data.str().size();
     // Write the data

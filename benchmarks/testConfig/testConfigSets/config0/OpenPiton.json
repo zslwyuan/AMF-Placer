@@ -45,6 +45,6 @@
     // "disableSpreadingConvergeRatio" : "true",
     "drawClusters": "false",
     "MKL": "true",
-    "dumpDirectory": "../../../Documents/placerDumpData/"
+    "dumpDirectory": "./dumpData_OpenPiton"
     //"useUnconstrainedCG" : "false"
 }

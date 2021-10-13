@@ -46,6 +46,6 @@
     "disableSpreadingConvergeRatio" : "true",
     "drawClusters": "false",
     "MKL": "true",
-    "dumpDirectory": "../../../Documents/placerDumpData/"
+    "dumpDirectory": "./dumpData_faceDetect"
     //"useUnconstrainedCG" : "false"
 }

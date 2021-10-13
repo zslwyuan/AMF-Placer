@@ -613,7 +613,8 @@ void CLBLegalizer::dumpMatching(bool fixedColumn, bool enforce)
     {
         std::string dumpFile = "";
         if (enforce)
-            dumpFile = "DumpCLBLegalization-" + std::to_string(DumpCLBLegalizationCnt) + ".gz";
+            dumpFile =
+                JSONCfg["dumpDirectory"] + "DumpCLBLegalization-" + std::to_string(DumpCLBLegalizationCnt) + ".gz";
         else
             dumpFile = JSONCfg["DumpCLBLegalization"] + "-" + std::to_string(DumpCLBLegalizationCnt) + ".gz";
 

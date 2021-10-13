@@ -879,7 +879,8 @@ void GlobalPlacer::dumpLUTFFCoordinate(bool enforced)
     }
     else
     {
-        std::string dumpFile = +"FinalLUTFF-" + std::to_string(LUTFFCoordinateDumpCnt) + ".gz";
+        std::string dumpFile =
+            JSONCfg["dumpDirectory"] + "FinalLUTFF-" + std::to_string(LUTFFCoordinateDumpCnt) + ".gz";
         print_status("GlobalPlacer: dumping coordinate archieve to: " + dumpFile);
         LUTFFCoordinateDumpCnt++;
         if (dumpFile != "")

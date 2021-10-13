@@ -76,15 +76,23 @@ std::map<std::string, std::string> parseJSONFile(std::string JSONFileName)
             jsonBlock.substr(quote3Loc + 1, quote4Loc - quote3Loc - 1);
     }
 
-    if (res.find("dumpDirectory") != res.end())
+    if (res.find("dumpDirectory") == res.end())
     {
-        std::map<std::string, std::string>::iterator it;
-        for (it = res.begin(); it != res.end(); it++)
+        res["dumpDirectory"] = "./";
+    }
+    else
+    {
+        res["dumpDirectory"] += "/";
+    }
+
+    std::map<std::string, std::string>::iterator it;
+    for (it = res.begin(); it != res.end(); it++)
+    {
+        if (it->first == "dumpDirectory")
+            continue;
+        if (it->first.find("dump") != std::string::npos || it->first.find("Dump") != std::string::npos)
         {
-            if (it->first.find("dump") != std::string::npos || it->first.find("Dump") != std::string::npos)
-            {
-                res[it->first] = res["dumpDirectory"] + "/" + it->second;
-            }
+            res[it->first] = res["dumpDirectory"] + "/" + it->second;
         }
     }
 

@@ -19,6 +19,7 @@
 #include "PlacementInfo.h"
 #include "PlacementTimingOptimizer.h"
 #include "utils/simpleJSON.h"
+#include <boost/filesystem.hpp>
 #include <iostream>
 #include <omp.h>
 
@@ -57,6 +58,12 @@ class AMFPlacer
         assert(JSON.find("cellType2sharedCellType file") != JSON.end());
         assert(JSON.find("sharedCellType2BELtype file") != JSON.end());
         assert(JSON.find("GlobalPlacementIteration") != JSON.end());
+        if (JSON.find("dumpDirectory") != JSON.end())
+        {
+            if (!fileExists(JSON["dumpDirectory"]))
+                assert(boost::filesystem::create_directories(JSON["dumpDirectory"]) &&
+                       "the specified dump directory should be created successfully.");
+        }
 
         oriTime = std::chrono::steady_clock::now();
 
@@ -181,8 +188,8 @@ class AMFPlacer
         clearSomeAttributesCannotRecord();
 
         // test the check-point mechanism
-        placementInfo->dumpPlacementUnitInformation("PUInfoBeforeFinalPacking");
-        placementInfo->loadPlacementUnitInformation("PUInfoBeforeFinalPacking.gz");
+        placementInfo->dumpPlacementUnitInformation(JSON["dumpDirectory"] + "/PUInfoBeforeFinalPacking");
+        placementInfo->loadPlacementUnitInformation(JSON["dumpDirectory"] + "/PUInfoBeforeFinalPacking.gz");
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
         // finally pack the elements into sites on the FPGA device
@@ -196,14 +203,14 @@ class AMFPlacer
         placementInfo->resetLUTFFDeterminedOccupation();
         parallelCLBPacker->updatePackedMacro(true, true);
         placementInfo->adjustLUTFFUtilization(1, true);
-        placementInfo->dumpCongestion("congestionInfo");
+        placementInfo->dumpCongestion(JSON["dumpDirectory"] + "/congestionInfo");
 
         if (parallelCLBPacker)
             delete parallelCLBPacker;
 
         // currently, some fixed/packed flag cannot be stored in the check-point (TODO)
         clearSomeAttributesCannotRecord();
-        placementInfo->dumpPlacementUnitInformation("PUInfoFinal");
+        placementInfo->dumpPlacementUnitInformation(JSON["dumpDirectory"] + "/PUInfoFinal");
         placementInfo->checkClockUtilization(true);
 
         print_status("Placement Done");
