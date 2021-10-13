@@ -518,9 +518,24 @@ class PlacementTimingInfo
             return pathLenSortedNodes;
         }
 
+        /**
+         * @brief Get the long path threshold level
+         *
+         * @return int
+         */
         inline int getLongPathThresholdLevel()
         {
             return longPathThresholdLevel;
+        }
+
+        /**
+         * @brief Get the medium path threshold level
+         *
+         * @return int
+         */
+        inline int getMediumPathThresholdLevel()
+        {
+            return mediumPathThresholdLevel;
         }
 
         inline void setLongPathThrRatio(float _r)
@@ -545,8 +560,10 @@ class PlacementTimingInfo
          */
         std::vector<std::vector<int>> backwardlevel2NodeIds;
 
-        float longPathThrRatio = 0.9;
+        float longPathThrRatio = 0.95;
+        float mediumPathThrRatio = 0.8;
         int longPathThresholdLevel = 1;
+        int mediumPathThresholdLevel = 1;
     };
 
     /**
@@ -578,6 +595,16 @@ class PlacementTimingInfo
     inline TimingGraph<DesignInfo::DesignCell> *getSimplePlacementTimingGraph()
     {
         return simpleTimingGraph;
+    }
+
+    inline int getLongPathThresholdLevel()
+    {
+        return simpleTimingGraph->getLongPathThresholdLevel();
+    }
+
+    inline int getMediumPathThresholdLevel()
+    {
+        return simpleTimingGraph->getMediumPathThresholdLevel();
     }
 
   private:

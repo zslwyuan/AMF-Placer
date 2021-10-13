@@ -83,10 +83,10 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio)
         }
         if (loopCnt > 1000)
         {
-            print_info("found " + std::to_string(overflowBins.size()) + " overflowed bins");
-            print_info("found " + std::to_string(totalCellNum) + " cells in them");
+            print_warning("still found " + std::to_string(overflowBins.size()) + " overflowed bins");
+            print_warning("still found " + std::to_string(totalCellNum) + " cells in them");
             print_warning("failed to solve the overflow bins with better result.");
-            print_info("spread for " + std::to_string(loopCnt) + " iterations");
+            print_warning("has been spread for " + std::to_string(loopCnt) + " iterations");
             break;
         }
         historyTotalCellNum.push_back(totalCellNum);
@@ -108,9 +108,9 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio)
             improved /= (float)historyTotalCellNum[historyTotalCellNum.size() - 1];
             if (improved < 0.01)
             {
-                print_info("found " + std::to_string(overflowBins.size()) + " overflowed bins");
-                print_info("found " + std::to_string(totalCellNum) + " cells in them");
-                print_info("spread for " + std::to_string(loopCnt) + " iterations");
+                // print_info("found " + std::to_string(overflowBins.size()) + " overflowed bins");
+                // print_info("found " + std::to_string(totalCellNum) + " cells in them");
+                // print_info("spread for " + std::to_string(loopCnt) + " iterations");
                 break;
             }
         }

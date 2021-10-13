@@ -4105,6 +4105,8 @@ class PlacementInfo
     void buildSimpleTimingGraph()
     {
         simplePlacementTimingInfo->buildSimpleTimingGraph();
+        longPathThresholdLevel = simplePlacementTimingInfo->getLongPathThresholdLevel();
+        mediumPathThresholdLevel = simplePlacementTimingInfo->getMediumPathThresholdLevel();
     }
 
     /**
@@ -4115,6 +4117,16 @@ class PlacementInfo
     std::map<PlacementUnit *, std::pair<float, float>> &getPU2ClockRegionCenters()
     {
         return PU2ClockRegionCenters;
+    }
+
+    inline int getLongPathThresholdLevel()
+    {
+        return longPathThresholdLevel;
+    }
+
+    inline int getMediumPathThresholdLevel()
+    {
+        return mediumPathThresholdLevel;
     }
 
   private:
@@ -4273,6 +4285,18 @@ class PlacementInfo
      * in X-coordinate
      */
     float y2xRatio = 1.0;
+
+    /**
+     * @brief the long path threshold for timing optimization
+     *
+     */
+    int longPathThresholdLevel = 10;
+
+    /**
+     * @brief the medium path threshold for timing optimization
+     *
+     */
+    int mediumPathThresholdLevel = 5;
 
     int dumpPlacementUnitLocationCnt = 0;
 

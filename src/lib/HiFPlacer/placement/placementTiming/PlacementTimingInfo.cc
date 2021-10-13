@@ -186,16 +186,22 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::fo
     longPathThresholdLevel = 1;
 
     int thresholdLevelNum = nodes.size() * longPathThrRatio;
+    int mediumThresholdLevelNum = nodes.size() * mediumPathThrRatio;
     int cntNodes = 0;
     std::string levelInfoStr = " details: ";
     for (unsigned int i = 0; i < forwardlevel2NodeIds.size(); i++)
     {
-        levelInfoStr += std::to_string(i) + "(" + std::to_string(forwardlevel2NodeIds[i].size()) + "), ";
-        cntNodes += forwardlevel2NodeIds[i].size();
         if (cntNodes < thresholdLevelNum)
         {
             longPathThresholdLevel = i;
         }
+        if (cntNodes < mediumThresholdLevelNum)
+        {
+            mediumPathThresholdLevel = i;
+        }
+        cntNodes += forwardlevel2NodeIds[i].size();
+        levelInfoStr += std::to_string(i) + "(" + std::to_string(forwardlevel2NodeIds[i].size()) + ", " +
+                        std::to_string((float)cntNodes / nodes.size()) + "), ";
     }
 
     for (unsigned int i = 0; i < nodes.size(); i++)
@@ -205,6 +211,7 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::fo
 
     print_info("PlacementTimingInfo: total level = " + std::to_string(forwardlevel2NodeIds.size()) + levelInfoStr);
     print_info("PlacementTimingInfo: long path threshold level = " + std::to_string(longPathThresholdLevel));
+    print_info("PlacementTimingInfo: medium path threshold level = " + std::to_string(mediumPathThresholdLevel));
     print_status("PlacementTimingInfo: Timing graph finished forward levalization");
 }
 
