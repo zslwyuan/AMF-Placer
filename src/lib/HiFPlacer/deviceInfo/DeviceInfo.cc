@@ -304,7 +304,8 @@ void DeviceInfo::loadPCIEPinOffset(std::string specialPinOffsetFileName)
 {
 
     std::ifstream infile(specialPinOffsetFileName.c_str());
-    assert(infile.good());
+    assert(infile.good() &&
+           "The file for special pin offset information does not exist and please check your path settings");
 
     std::string line;
     std::string refpinname, fill0, fill1, fill2;
@@ -479,7 +480,8 @@ void DeviceInfo::loadBELType2FalseBELType(std::string curFileName)
 {
     std::string line;
     std::ifstream infile(curFileName.c_str());
-    assert(infile.good());
+    assert(infile.good() &&
+           "The mergedSharedCellType2sharedCellType file does not exist and please check your path settings");
     BELType2FalseBELType.clear();
     while (std::getline(infile, line))
     {

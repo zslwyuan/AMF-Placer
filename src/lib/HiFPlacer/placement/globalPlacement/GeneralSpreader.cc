@@ -1204,6 +1204,8 @@ void GeneralSpreader::dumpSiteGridDensity(std::string dumpFileName)
         placementInfo->getBinGrid(placementInfo->getSharedBELTypeId(sharedCellType));
 
     std::ofstream outfile0(dumpFileName.c_str());
+    assert(outfile0.is_open() && outfile0.good() &&
+           "The path for site density dumping does not exist and please check your path settings");
     for (auto &row : curBinGrid)
     {
         for (auto curBin : row)

@@ -1378,7 +1378,7 @@ void InitialPacker::loadOtherCLBMacros(std::string RAMMacroListFromVivadoFileNam
     res.clear();
 
     std::ifstream infile(RAMMacroListFromVivadoFileName.c_str());
-    assert(infile.good());
+    assert(infile.good() && "Unpredictable Macro file does not exist and please check your path settings");
 
     std::string line;
     std::getline(infile, line);
@@ -1596,7 +1596,7 @@ void InitialPacker::loadFixedPlacementUnits(std::string fixedPlacementUnitsFromV
 {
     fixedPlacementUnits.clear();
     std::ifstream infile(fixedPlacementUnitsFromVivadoFileName.c_str());
-    assert(infile.good());
+    assert(infile.good() && "Fixed Element file does not exist and please check your path settings");
 
     std::string line;
     std::getline(infile, line);

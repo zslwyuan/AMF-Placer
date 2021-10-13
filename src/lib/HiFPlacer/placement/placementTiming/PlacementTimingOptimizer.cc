@@ -40,6 +40,9 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
         std::string dumpFileName = JSONCfg["PlacementTimingOptimizer_EnhanceNetWeightLevelBasedLog"];
         print_status("PlacementTimingOptimizer: dumping enhanceNetWeight_LevelBased to: " + dumpFileName);
         outfile0.open(dumpFileName.c_str());
+        assert(outfile0.is_open() && outfile0.good() &&
+               "The path for PlacementTimingOptimizer_EnhanceNetWeightLevelBasedLog does not exist and please check "
+               "your path settings");
     }
 
     print_status("PlacementTimingOptimizer: enhanceNetWeight_LevelBased starts.");
@@ -140,6 +143,9 @@ void PlacementTimingOptimizer::setEdgesDelay()
         std::string dumpFileName = JSONCfg["PlacementTimingOptimizer_EdgesDelayLog"];
         print_status("PlacementTimingOptimizer: dumping enhanceNetWeight_LevelBased to: " + dumpFileName);
         outfile0.open(dumpFileName.c_str());
+        assert(outfile0.is_open() && outfile0.good() &&
+               "The path for PlacementTimingOptimizer_EdgesDelayLog does not exist and please check "
+               "your path settings");
     }
 
     assert(timingInfo);

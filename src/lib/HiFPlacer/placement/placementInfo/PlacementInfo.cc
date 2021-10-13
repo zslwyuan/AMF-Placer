@@ -81,7 +81,7 @@ PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable(std::string ce
 
     // load cell occupation of BELs
     std::ifstream infile0(cellType2fixedAmoFileName.c_str());
-    assert(infile0.good());
+    assert(infile0.good() && "cellType2fixedAmoFile file does not exist and please check your path settings");
 
     std::string line;
 
@@ -111,7 +111,7 @@ PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable(std::string ce
 
     // load cell mapping to BEL shared virtual type
     std::ifstream infile1(cellType2sharedCellTypeFileName.c_str());
-    assert(infile1.good());
+    assert(infile1.good() && "cellType2sharedCellType file does not exist and please check your path settings");
     std::string cell2BELType;
 
     std::set<std::string> involvedSharedBELStr;
@@ -157,7 +157,7 @@ PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable(std::string ce
 
     // load BEL shared virtual type to real compatible BEL type
     std::ifstream infile2(sharedCellType2BELtypeFileName.c_str());
-    assert(infile2.good());
+    assert(infile2.good() && "sharedCellType2BELtype file does not exist and please check your path settings");
     std::string compatibleBELTypeStrs, sharedCellTypeStr, siteTypeStr;
 
     while (std::getline(infile2, line))
@@ -1411,6 +1411,8 @@ void PlacementInfo::dumpCongestion(std::string dumpFileName)
     std::vector<std::vector<PlacementInfo::PlacementBinInfo *>> &curBinGrid = globalBinGrid;
 
     std::ofstream outfile0(dumpFileName.c_str());
+    assert(outfile0.is_open() && outfile0.good() &&
+           "The path for congestion dumping does not exist and please check your path settings");
     for (auto &row : curBinGrid)
     {
         for (auto curBin : row)

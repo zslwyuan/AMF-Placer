@@ -768,6 +768,8 @@ void ClusterPlacer::dumpClusters()
     {
         print_status("dumping cluster information to " + dumpClustersFile);
         std::ofstream outfile0((dumpClustersFile + ".tcl").c_str());
+        assert(outfile0.is_open() && outfile0.good() &&
+               "The path for cluster result dumping does not exist and please check your path settings");
         for (unsigned int cluster_id = 0; cluster_id < clusters.size(); cluster_id++)
         {
             outfile0 << "# placed at region coordinate: X " << cluster2XY[cluster_id].first << " Y "

@@ -10,6 +10,7 @@
  *
  */
 #include "DesignInfo.h"
+#include "dumpZip.h"
 #include "readZip.h"
 #include "strPrint.h"
 #include "stringCheck.h"
@@ -288,7 +289,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
 void DesignInfo::loadClocks(std::string clockFileName)
 {
     std::ifstream clockFile(clockFileName);
-    assert(clockFile.good());
+    assert(clockFile.good() && "The clock file does not exist and please check your path settings");
 
     while (clockFile.peek() != EOF)
     {
@@ -400,9 +401,10 @@ void DesignInfo::loadUserDefinedClusterNets()
 {
     if (JSONCfg.find("designCluster") != JSONCfg.end())
     {
-        std::string patterFile = std::string(JSONCfg["designCluster"]);
+        std::string clusterFile = std::string(JSONCfg["designCluster"]);
+        assert(fileExists(clusterFile) && "designCluster file does not exist and please check your path settings");
         print_status("Design User-Defined Cluster Information Loading.");
-        std::string unzipCmnd = "unzip -p " + patterFile;
+        std::string unzipCmnd = "unzip -p " + clusterFile;
         FILEbuf sbuf(popen(unzipCmnd.c_str(), "r"));
         std::istream infile(&sbuf);
         std::string line;
