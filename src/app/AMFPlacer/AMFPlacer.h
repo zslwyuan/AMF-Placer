@@ -174,12 +174,11 @@ class AMFPlacer
                                                   true, timingOptimizer);
 
         placementInfo->getPU2ClockRegionCenters().clear();
+        placementInfo->getDesignInfo()->resetNetEnhanceRatio();
+        timingOptimizer->enhanceNetWeight_LevelBased(10);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
-
-        placementInfo->getDesignInfo()->resetNetEnhanceRatio();
-        timingOptimizer->enhanceNetWeight_LevelBased(10);
 
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5, true, false,
                                                   timingOptimizer);
