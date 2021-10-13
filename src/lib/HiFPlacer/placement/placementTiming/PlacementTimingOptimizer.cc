@@ -74,7 +74,7 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                     continue;
 
                 float enhanceRatio;
-                float overflowRatio = std::pow((float)targetPathLen / levelThr, 1.75 / 2);
+                float overflowRatio = std::pow((float)0.8 * targetPathLen / levelThr, 1.75 / 2);
                 // if (overflowRatio > 10)
                 //     overflowRatio = 10;
                 if (pinNum < 600)
@@ -198,7 +198,8 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     extractedPUs.clear();
 
     unsigned int maxSize = 0;
-    for (unsigned int nodeId = 0; nodeId < timingNodes.size() * 0.1; nodeId++)
+    for (unsigned int nodeId = 0;
+         nodeId < timingNodes.size() * 0.1 && extractedCellIds.size() < timingNodes.size() * 0.2; nodeId++)
     {
         auto timingNode = timingNodes[nodeId];
         if (timingNode->getLongestPathLength() > pathLenThr)

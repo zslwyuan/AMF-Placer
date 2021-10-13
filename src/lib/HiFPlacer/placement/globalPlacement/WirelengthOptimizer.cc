@@ -182,7 +182,8 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
 
     if (timingOpt)
     {
-        addPseudoNet_LevelBased(20, (0.1 + 0.1 * placementInfo->getProgress()) * generalNetWeight, 25);
+        addPseudoNet_LevelBased(placementInfo->getLongPathThresholdLevel(),
+                                (0.1 + 0.1 * placementInfo->getProgress()) * generalNetWeight, 25);
     }
 
     if (enableUserDefinedClusterOpt)
@@ -711,13 +712,22 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
         auto curPU = PUXY.first;
         float cX = PUXY.second.first;
         float cY = curPU->Y();
-
-        if (std::fabs(curPU->X() - cX) > 3)
+        if (std::fabs(curPU->X() - cX) > 6)
+            placementInfo->addPseudoNetsInPlacementInfo(
+                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                xSolver->solverData.objectiveVector, curPU, cX,
+                pesudoNetWeight * std::pow(curPU->getNetsSetPtr()->size(), 1.1), y2xRatio, true, false);
+        else if (std::fabs(curPU->X() - cX) > 3)
             placementInfo->addPseudoNetsInPlacementInfo(
                 xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                 xSolver->solverData.objectiveVector, curPU, cX, pesudoNetWeight * curPU->getNetsSetPtr()->size(),
                 y2xRatio, true, false);
-
+        else
+            placementInfo->addPseudoNetsInPlacementInfo(
+                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                xSolver->solverData.objectiveVector, curPU, cX,
+                std::fabs(curPU->X() - cX) / 3 * pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true,
+                false);
         // placementInfo->addPseudoNetsInPlacementInfo(
         //     ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
         //     ySolver->solverData.objectiveVector, curPU, cY, pesudoNetWeight * curPU->getNetsSetPtr()->size(),

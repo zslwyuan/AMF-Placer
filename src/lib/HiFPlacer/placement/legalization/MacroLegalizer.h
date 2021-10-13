@@ -439,6 +439,7 @@ class MacroLegalizer
     bool enableCARRYLegalization = false;
     bool verbose = false;
     float y2xRatio = 1.0;
+    bool clockRegionAware = false;
 
     /**
      * @brief the average displacement of exact legalization for the involved PlacementUnit

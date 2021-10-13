@@ -44,6 +44,11 @@ MacroLegalizer::MacroLegalizer(std::string legalizerName, PlacementInfo *placeme
     {
         nJobs = std::stoi(JSONCfg["jobs"]);
     }
+
+    if (legalizerName.find("CARRY") != std::string::npos)
+    {
+        clockRegionAware = true;
+    }
 }
 
 void MacroLegalizer::legalize(bool exactLegalization, bool directLegalization)

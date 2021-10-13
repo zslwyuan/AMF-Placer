@@ -1309,7 +1309,7 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
 {
     print_status("PlacementInfo: adjusting FF utilization based on Clock Utilization");
 
-    float infateRatio = 1.1;
+    float infateRatio = 1.5;
     std::vector<float> &compatiblePlacementTable_cellId2InfationRatio =
         compatiblePlacementTable->getcellId2InfationRatio();
 
@@ -1338,7 +1338,8 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
                                 {
                                     if (addedCells.find(cellId) == addedCells.end())
                                     {
-                                        compatiblePlacementTable_cellId2InfationRatio[cellId] *= infateRatio;
+                                        if (compatiblePlacementTable_cellId2InfationRatio[cellId] < 4)
+                                            compatiblePlacementTable_cellId2InfationRatio[cellId] *= infateRatio;
                                         addedCells.insert(cellId);
                                     }
                                 }
@@ -1399,8 +1400,8 @@ void PlacementInfo::adjustLUTFFUtilization(float neighborDisplacementUpperbound,
         compatiblePlacementTable->resetCellOccupationToDefault();
     }
     adjustLUTFFUtilization_Routability(enfore);
-    // if (getProgress() > 0.8)
-    //     adjustLUTFFUtilization_Clocking();
+    if (getProgress() > 0.8)
+        adjustLUTFFUtilization_Clocking();
     LUTFFUtilizationAdjusted = true;
 }
 

@@ -149,9 +149,12 @@ class AMFPlacer
         // designInfo->resetNetEnhanceRatio();
 
         // placementInfo->updateLongPaths();
+        int longPathThr = placementInfo->getLongPathThresholdLevel();
+        int mediumPathThr = placementInfo->getMediumPathThresholdLevel();
+
         placementInfo->createGridBins(2.0, 2.0);
         placementInfo->adjustLUTFFUtilization(-10, true);
-        timingOptimizer->enhanceNetWeight_LevelBased(10);
+        timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         // globalPlacer->spreading(-1);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true);
@@ -165,17 +168,17 @@ class AMFPlacer
         placementInfo->printStat();
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
-        timingOptimizer->enhanceNetWeight_LevelBased(10);
+        timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
         globalPlacer->setNeighborDisplacementUpperbound(3.0);
         globalPlacer->spreading(-1);
-        timingOptimizer->clusterLongPathInOneClockRegion(20, 0.5);
+        timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
 
         placementInfo->getPU2ClockRegionCenters().clear();
         placementInfo->getDesignInfo()->resetNetEnhanceRatio();
-        timingOptimizer->enhanceNetWeight_LevelBased(10);
+        timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
