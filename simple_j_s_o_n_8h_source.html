@@ -153,29 +153,37 @@ $(document).ready(function(){initNavTree('simple_j_s_o_n_8h_source.html',''); in
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            jsonBlock.substr(quote3Loc + 1, quote4Loc - quote3Loc - 1);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (res.find(<span class="stringliteral">&quot;dumpDirectory&quot;</span>) != res.end())</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (res.find(<span class="stringliteral">&quot;dumpDirectory&quot;</span>) == res.end())</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::map&lt;std::string, std::string&gt;::iterator it;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">for</span> (it = res.begin(); it != res.end(); it++)</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (it-&gt;first.find(<span class="stringliteral">&quot;dump&quot;</span>) != std::string::npos || it-&gt;first.find(<span class="stringliteral">&quot;Dump&quot;</span>) != std::string::npos)</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                res[it-&gt;first] = res[<span class="stringliteral">&quot;dumpDirectory&quot;</span>] + <span class="stringliteral">&quot;/&quot;</span> + it-&gt;second;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            }</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_function" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a>(<span class="stringliteral">&quot;Placer configuration is loaded and the information is shown below, please check:&quot;</span>);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> pair : res)</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;   \&quot;&quot;</span> &lt;&lt; pair.first &lt;&lt; <span class="stringliteral">&quot;\&quot;   ====   \&quot;&quot;</span> &lt;&lt; pair.second &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        res[<span class="stringliteral">&quot;dumpDirectory&quot;</span>] = <span class="stringliteral">&quot;./&quot;</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        res[<span class="stringliteral">&quot;dumpDirectory&quot;</span>] += <span class="stringliteral">&quot;/&quot;</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    std::map&lt;std::string, std::string&gt;::iterator it;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">for</span> (it = res.begin(); it != res.end(); it++)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">if</span> (it-&gt;first == <span class="stringliteral">&quot;dumpDirectory&quot;</span>)</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (it-&gt;first.find(<span class="stringliteral">&quot;dump&quot;</span>) != std::string::npos || it-&gt;first.find(<span class="stringliteral">&quot;Dump&quot;</span>) != std::string::npos)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            res[it-&gt;first] = res[<span class="stringliteral">&quot;dumpDirectory&quot;</span>] + <span class="stringliteral">&quot;/&quot;</span> + it-&gt;second;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_function" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a>(<span class="stringliteral">&quot;Placer configuration is loaded and the information is shown below, please check:&quot;</span>);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> pair : res)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;   \&quot;&quot;</span> &lt;&lt; pair.first &lt;&lt; <span class="stringliteral">&quot;\&quot;   ====   \&quot;&quot;</span> &lt;&lt; pair.second &lt;&lt; <span class="stringliteral">&quot;\&quot;\n&quot;</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="asimple_j_s_o_n_8h_html_a47b912b821d387118038fcd83de7692b"><div class="ttname"><a href="simple_j_s_o_n_8h.html#a47b912b821d387118038fcd83de7692b">parseJSONFile</a></div><div class="ttdeci">std::map&lt; std::string, std::string &gt; parseJSONFile(std::string JSONFileName)</div><div class="ttdef"><b>Definition:</b> <a href="simple_j_s_o_n_8h_source.html#l00037">simpleJSON.h:37</a></div></div>
 <div class="ttc" id="asimple_j_s_o_n_8h_html_a49e658b63ca781f16ebdb15339b8411b"><div class="ttname"><a href="simple_j_s_o_n_8h.html#a49e658b63ca781f16ebdb15339b8411b">exists_test</a></div><div class="ttdeci">bool exists_test(const std::string &amp;name)</div><div class="ttdef"><b>Definition:</b> <a href="simple_j_s_o_n_8h_source.html#l00031">simpleJSON.h:31</a></div></div>
 <div class="ttc" id="astr_print_8cc_html_a03797150cc06a6f048f1e2c0f1665439"><div class="ttname"><a href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a></div><div class="ttdeci">void print_warning(std::string tmp_string)</div><div class="ttdef"><b>Definition:</b> <a href="str_print_8cc_source.html#l00045">strPrint.cc:45</a></div></div>

@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('dump_zip_8cc_source.html',''); initRes
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="comment">// open the file for writing in binary mode</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    gz_file = gzopen(fileName.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    assert(Z_NULL != gz_file);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    assert(Z_NULL != gz_file &amp;&amp; <span class="stringliteral">&quot;The zip file should be created successfully and please check your path settings.&quot;</span>);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// Get the size of the stream</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> file_size = <span class="keyword">sizeof</span>(char) * data.str().size();</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// Write the data</span></div>
