@@ -13,7 +13,7 @@
 // limitations under the License.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*This code is modified by Tingyuan LIANG for ReguPlacer to remove some warnings and involved MKL library*/
+/*This code is modified by Tingyuan LIANG for HiFPlacer to remove some warnings and involved MKL library*/
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <algorithm>
@@ -33,8 +33,9 @@
 
 // Fails to compile if OSQP's typedefs change. This lets us avoid including
 // osqp.h in osqp++.h.
-// static_assert(std::is_same_v<osqp::c_int, ::c_int>, "OSQP's c_int typedef does not match the definition in osqp++.h.");
-// static_assert(std::is_same_v<c_float, double>, "OSQP's c_float typedef is unexpectedly not the same as double");
+// static_assert(std::is_same_v<osqp::c_int, ::c_int>, "OSQP's c_int typedef does not match the definition in
+// osqp++.h."); static_assert(std::is_same_v<c_float, double>, "OSQP's c_float typedef is unexpectedly not the same as
+// double");
 
 static_assert(sizeof(OSQPSettings) == 176, "The size of OSQPSettings has changed unexpectedly. Make sure "
                                            "that the map between ::OSQPSettings and osqp::OsqpSettings "

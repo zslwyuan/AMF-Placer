@@ -952,23 +952,23 @@ class ParallelCLBPacker
                 hashId = PUs.size();
                 if (parentPackingCLB->getCarryMacro())
                 {
-                    hashId += ReguPlacer_hashprimes[(unsigned char)(~(parentPackingCLB->getCarrySiteOffset()) & 0xff)];
+                    hashId += HiFPlacer_hashprimes[(unsigned char)(~(parentPackingCLB->getCarrySiteOffset()) & 0xff)];
                     hashId %= 10001777;
                     hashId +=
-                        ReguPlacer_hashprimes[(unsigned char)(~(parentPackingCLB->getCarryMacro()->getId()) & 0xff)];
+                        HiFPlacer_hashprimes[(unsigned char)(~(parentPackingCLB->getCarryMacro()->getId()) & 0xff)];
                     hashId %= 10001777;
                 }
                 if (parentPackingCLB->getLUTRAMMacro())
                 {
                     hashId +=
-                        ReguPlacer_hashprimes[(unsigned char)(~(parentPackingCLB->getLUTRAMMacro()->getId()) & 0xff)];
+                        HiFPlacer_hashprimes[(unsigned char)(~(parentPackingCLB->getLUTRAMMacro()->getId()) & 0xff)];
                     hashId %= 10001777;
                 }
                 for (auto tmpPU : PUs)
                 {
                     if (auto unpackCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(tmpPU))
                     {
-                        hashId += ReguPlacer_hashprimes[(unsigned char)(~(unpackCell->getCell()->getCellId()) & 0xff)] *
+                        hashId += HiFPlacer_hashprimes[(unsigned char)(~(unpackCell->getCell()->getCellId()) & 0xff)] *
                                   unpackCell->getCell()->getCellId();
                         hashId %= 10001777;
                     }
@@ -976,7 +976,7 @@ class ParallelCLBPacker
                     {
                         for (auto tmpCell : curMacro->getCells())
                         {
-                            hashId += ReguPlacer_hashprimes[(unsigned char)(~(tmpCell->getCellId()) & 0xff)] *
+                            hashId += HiFPlacer_hashprimes[(unsigned char)(~(tmpCell->getCellId()) & 0xff)] *
                                       tmpCell->getCellId();
                             hashId %= 10001777;
                         }
@@ -1000,7 +1000,7 @@ class ParallelCLBPacker
                 if (auto unpackCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(tmpPU))
                 {
                     clusterHashId +=
-                        ReguPlacer_hashprimes[(unsigned char)(~(unpackCell->getCell()->getCellId()) & 0xff)] *
+                        HiFPlacer_hashprimes[(unsigned char)(~(unpackCell->getCell()->getCellId()) & 0xff)] *
                         unpackCell->getCell()->getCellId();
                     clusterHashId %= 10001777;
                 }
@@ -1008,7 +1008,7 @@ class ParallelCLBPacker
                 {
                     for (auto tmpCell : curMacro->getCells())
                     {
-                        clusterHashId += ReguPlacer_hashprimes[(unsigned char)(~(tmpCell->getCellId()) & 0xff)] *
+                        clusterHashId += HiFPlacer_hashprimes[(unsigned char)(~(tmpCell->getCellId()) & 0xff)] *
                                          tmpCell->getCellId();
                         clusterHashId %= 10001777;
                     }

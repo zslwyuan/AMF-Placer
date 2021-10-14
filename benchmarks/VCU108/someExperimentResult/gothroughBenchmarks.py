@@ -14,6 +14,6 @@ for i in range(0, 9):
         configName = "config"+str(i)
         Path("../outputs/"+benchmarkName+"/").mkdir(parents=True, exist_ok=True)
         outputFileName = "../outputs/"+benchmarkName+"/"+configName
-        print("running command: ", "./ReguPlacer " +
+        print("running command: ", "./AMFPlacer " +
               mypath+"/"+filename + " > "+outputFileName)
-        os.system("./ReguPlacer "+mypath+"/"+filename + " > "+outputFileName)
+        os.system("./AMFPlacer "+mypath+"/"+filename + " > "+outputFileName)

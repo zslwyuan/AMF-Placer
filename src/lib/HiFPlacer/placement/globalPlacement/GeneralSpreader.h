@@ -947,7 +947,7 @@ class GeneralSpreader
             {
                 // Random selection of pivot.
                 int pvt, n;
-                n = ReguPlacer_hashprimes[low & 0xff];
+                n = HiFPlacer_hashprimes[low & 0xff];
                 pvt = low + n % (high - low + 1); // Randomizing the pivot value from sub-array.
                 std::swap(cellIds[high], cellIds[pvt]);
                 return Partition(cellIds, low, high, Xsort);

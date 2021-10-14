@@ -23,7 +23,7 @@ benchmarkName = "OpenPiton"
 # benchmarkName = "minimap2"
 # benchmarkName = "MemN2N"
 archive = zipfile.ZipFile(
-    "../ReguPlacer_build/benchmarks/VCU108/design/"+(benchmarkName)+"/"+(benchmarkName)+"_allCellPinNet.zip", 'r')
+    "../../benchmarks/VCU108/design/"+(benchmarkName)+"/"+(benchmarkName)+"_allCellPinNet.zip", 'r')
 textFile = archive.read(""+(benchmarkName)+"_allCellPinNet")
 
 VivadoCells = VivadoGraphUtil.loadCellInfoFromFile(textFile)
