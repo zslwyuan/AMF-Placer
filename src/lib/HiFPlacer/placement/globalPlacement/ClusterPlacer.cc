@@ -144,10 +144,12 @@ void ClusterPlacer::createLongPathClusterUnits()
     // handle the long paths
     auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo_PathLenSorted();
     auto simpleTimingGraph = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph();
-    int pathLengthThr = 20;
+    int pathLengthThr = placementInfo->getLongPathThresholdLevel();
     std::set<int> extractedCellIds;
     extractedCellIds.clear();
 
+    print_status("ClusterPlacer:: create long path cluster units (pathLengthThr=" + std::to_string(pathLengthThr) +
+                 ")");
     unsigned int maxSize = 0;
     for (auto timingNode : timingNodes)
     {
@@ -586,7 +588,6 @@ bool containIOCells(PlacementInfo::PlacementUnit *curPU)
 
 void ClusterPlacer::setClusterNetsAdjMat()
 {
-
     clusterAdjMat = std::vector<std::vector<float>>(clusters.size(), std::vector<float>(clusters.size(), 0));
     clusterCLBCellWeights = std::vector<float>(clusters.size(), 0);
     clusterDSPCellWeights = std::vector<float>(clusters.size(), 0);
@@ -762,7 +763,6 @@ void ClusterPlacer::placeUnitBaseOnClusterPlacement(const std::vector<std::pair<
 
 void ClusterPlacer::dumpClusters()
 {
-
     std::string dumpClustersFile = JSONCfg["Dump Cluster file"];
     if (dumpClustersFile != "")
     {

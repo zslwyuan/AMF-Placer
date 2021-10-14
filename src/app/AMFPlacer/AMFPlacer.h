@@ -135,6 +135,8 @@ class AMFPlacer
 
         placementInfo->buildSimpleTimingGraph();
         PlacementTimingOptimizer *timingOptimizer = new PlacementTimingOptimizer(placementInfo, JSON);
+        int longPathThr = placementInfo->getLongPathThresholdLevel();
+        int mediumPathThr = placementInfo->getMediumPathThresholdLevel();
 
         // go through several glable placement iterations to get initial placement
         globalPlacer = new GlobalPlacer(placementInfo, JSON);
@@ -145,12 +147,6 @@ class AMFPlacer
         globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5, true,
                                                   true);
-
-        // designInfo->resetNetEnhanceRatio();
-
-        // placementInfo->updateLongPaths();
-        int longPathThr = placementInfo->getLongPathThresholdLevel();
-        int mediumPathThr = placementInfo->getMediumPathThresholdLevel();
 
         placementInfo->createGridBins(2.0, 2.0);
         placementInfo->adjustLUTFFUtilization(-10, true);
@@ -171,11 +167,12 @@ class AMFPlacer
         timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
         globalPlacer->setNeighborDisplacementUpperbound(3.0);
-        globalPlacer->spreading(-1);
-        timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
-        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
-                                                  true, timingOptimizer);
+        globalPlacer->GlobalPlacement_CLBElements(2, true, 5, true, true, timingOptimizer);
 
+        timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
+
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9 - 2, true, 5,
+                                                  true, true, timingOptimizer);
         placementInfo->getPU2ClockRegionCenters().clear();
         placementInfo->getDesignInfo()->resetNetEnhanceRatio();
         timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
