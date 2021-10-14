@@ -1,6 +1,6 @@
 <map id="PlacementInfo::adjustLUTFFUtilization" name="PlacementInfo::adjustLUTFFUtilization">
 <area shape="rect" id="node1" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="620,5,867,32"/>
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,32"/>
 <area shape="rect" id="node3" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="413,31,572,57"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,82,365,123"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,27,365,69"/>
 </map>

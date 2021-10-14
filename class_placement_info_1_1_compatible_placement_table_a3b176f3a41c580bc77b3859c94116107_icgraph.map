@@ -1,7 +1,7 @@
 <map id="PlacementInfo::CompatiblePlacementTable::resetCellOccupationToDefault" name="PlacementInfo::CompatiblePlacementTable::resetCellOccupationToDefault">
 <area shape="rect" id="node1" title="forget the occupation adjustment by packing feasibility and routing congestion" alt="" coords="915,5,1153,61"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="620,20,867,47"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,45,116,72"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 <area shape="rect" id="node4" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="413,45,572,72"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,97,365,138"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,42,365,83"/>
 </map>
