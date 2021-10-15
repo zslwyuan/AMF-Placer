@@ -11,20 +11,12 @@ var namespaces_dup =
       [ "results", "namespacecoord_density_visualization.html#aa0d19ee9b35fb1506dd808f2815cb2dc", null ]
     ] ],
     [ "densityVisualization", "namespacedensity_visualization.html", [
-      [ "arrayList", "namespacedensity_visualization.html#ab398a3a926dbd15b035d8d950d301b43", null ],
-      [ "bins", "namespacedensity_visualization.html#ada2e06bde7576eab9b369cd3d1509c45", null ],
-      [ "bottom", "namespacedensity_visualization.html#aaa7f3df5c2c6586b570f66c740fad3ee", null ],
-      [ "curList", "namespacedensity_visualization.html#a9c86fc613144cec7cf2583c4ec80d676", null ],
+      [ "arrayList", "namespacedensity_visualization.html#a3ff7008c7dc0a3a00deddb2d1d614c6e", null ],
+      [ "curList", "namespacedensity_visualization.html#ab6f3afb077d50c455369a80886277797", null ],
       [ "densityFileList", "namespacedensity_visualization.html#a399f71b05d855bdcaf3b83b882a1dc2e", null ],
-      [ "fig", "namespacedensity_visualization.html#ad19419fc05e37f2324749c8873b9bb3a", null ],
       [ "file", "namespacedensity_visualization.html#a8bbe83121ec8e038b430450b0350d325", null ],
       [ "im", "namespacedensity_visualization.html#a388e4bb6a3257c71d8da392a76ffc76b", null ],
-      [ "left", "namespacedensity_visualization.html#a6a7a9377c01394dbc08abfdb381a7f96", null ],
-      [ "numpy_array", "namespacedensity_visualization.html#a21250a6f00ff249f62b8a40d78a36242", null ],
-      [ "range", "namespacedensity_visualization.html#a2d285cfe7cf89003575a5649b686f495", null ],
-      [ "right", "namespacedensity_visualization.html#a700a1bf5b516ec912f4387d9e52171a7", null ],
-      [ "top", "namespacedensity_visualization.html#ade38cf216d920437886d357bc2add19e", null ],
-      [ "x", "namespacedensity_visualization.html#af6c79d981df64da7b91cbf69af05f262", null ]
+      [ "numpy_array", "namespacedensity_visualization.html#a21250a6f00ff249f62b8a40d78a36242", null ]
     ] ],
     [ "exportDeviceLocation", "namespaceexport_device_location.html", "namespaceexport_device_location" ],
     [ "figProcess", "namespacefig_process.html", [
@@ -121,31 +113,6 @@ var namespaces_dup =
       [ "std1X", "namespacepainter.html#af298104754f54c2e750ff1e03e971f48", null ],
       [ "std1Y", "namespacepainter.html#a1a415b3d3bd8ec8dcf6fa629592d80d7", null ]
     ] ],
-    [ "painterCurve", "namespacepainter_curve.html", [
-      [ "loadData", "namespacepainter_curve.html#ae2eaeb04f4e012b667debfe431b7329f", null ],
-      [ "FGX", "namespacepainter_curve.html#aeedde96522d33a433c7a77f6eb765750", null ],
-      [ "FGY", "namespacepainter_curve.html#a58f770686c7d3371f9d3878f858eeef5", null ],
-      [ "fileNames", "namespacepainter_curve.html#af91c1eebee2d9a03af20ebcadecf5bed", null ],
-      [ "forgetLastSpreadLocFile", "namespacepainter_curve.html#a1827e9d16d0e74ef99f4c16cfd02f917", null ],
-      [ "label", "namespacepainter_curve.html#ae6ca7ac03bddfd757ec8640a6ac5f131", null ],
-      [ "marker", "namespacepainter_curve.html#a93d8a0514c47ba920d572321b2b257f0", null ],
-      [ "mec", "namespacepainter_curve.html#ab41681e74c60bea9183b3c5e8b9f2ef2", null ],
-      [ "mfc", "namespacepainter_curve.html#a42cbc4c10a455394eb00a52aa9534dc7", null ],
-      [ "ms", "namespacepainter_curve.html#adaf69c7a9185acc12d181dcd3cd2c625", null ],
-      [ "ripplePseudoNetFile", "namespacepainter_curve.html#a50a9a85b22635937fa3a65d2d20a2f78", null ],
-      [ "RPX", "namespacepainter_curve.html#a7b79fef6005ac7a7c0ea2bce5724f132", null ],
-      [ "RPY", "namespacepainter_curve.html#ab11c436dbb75c2046d15fc4a7497b315", null ],
-      [ "SEX", "namespacepainter_curve.html#ab142043af9a1949ea9906a2dda3e0962", null ],
-      [ "SEY", "namespacepainter_curve.html#a45ac8d8102d8fbc571d23e95c5305335", null ],
-      [ "simpleExanpandFile", "namespacepainter_curve.html#af5db3b2d809ec760e2ac52536867a1ef", null ],
-      [ "std0File", "namespacepainter_curve.html#a82b679961ec605fcdb7c3a9b4ae31495", null ],
-      [ "std0X", "namespacepainter_curve.html#a42e2000f930e2e06a69d6dbc326a59b1", null ],
-      [ "std0Y", "namespacepainter_curve.html#aa3b9e77432dfedd8c62322aaf574fad4", null ],
-      [ "std1File", "namespacepainter_curve.html#a16eb2d7ffae8bcc7dfd9f5a506e73465", null ],
-      [ "std1X", "namespacepainter_curve.html#ada0dbfec5ab300ed2f9282efe6e41d72", null ],
-      [ "std1Y", "namespacepainter_curve.html#a30f1ee0364fdcd9395a812c0e8c532f9", null ],
-      [ "tmpFile", "namespacepainter_curve.html#af4b843826ec0584f29eec6d977e182ad", null ]
-    ] ],
     [ "paintPlacement", "namespacepaint_placement.html", [
       [ "draw", "namespacepaint_placement.html#a0a9bf320d1ead9d6fe5857129ab19451", null ],
       [ "draw_rect", "namespacepaint_placement.html#a35d1187e4d0404fa23bbb93dea7a0e92", null ],
@@ -167,18 +134,6 @@ var namespaces_dup =
       [ "window", "namespacepaint_placement.html#a5f8a3ad8dc9491fc7a32964718bfb240", null ],
       [ "x", "namespacepaint_placement.html#af0911322a80519c426bdc1ed19bae1ce", null ],
       [ "y", "namespacepaint_placement.html#a797ee56938c5e0199512d8ff7b685971", null ]
-    ] ],
-    [ "paintSummary", "namespacepaint_summary.html", [
-      [ "ax", "namespacepaint_summary.html#ae6da9ad021b2a877d8afda2c03bbbca9", null ],
-      [ "ax2", "namespacepaint_summary.html#a53c62a9e7d06c20c0f5f3e0e0a2e5f6a", null ],
-      [ "color", "namespacepaint_summary.html#abf8635fcb2b09d0d6b8558c773bd3d78", null ],
-      [ "df", "namespacepaint_summary.html#a1a4cf98c7fbf53963c96c58223e8f108", null ],
-      [ "fig", "namespacepaint_summary.html#abc170bfddbcfbfd946f9e9528cb23dd8", null ],
-      [ "kind", "namespacepaint_summary.html#a2ec5c2ee2a8fc8a3edb0d96ce190d1b3", null ],
-      [ "loc", "namespacepaint_summary.html#a3c198b75c8c8c8351e5115d5a10cbd67", null ],
-      [ "position", "namespacepaint_summary.html#aab7fbebc1e1c3b3974fb4156c35405c4", null ],
-      [ "s", "namespacepaint_summary.html#a666a53ca335e56f4cbec602072c037d7", null ],
-      [ "width", "namespacepaint_summary.html#a098c8614cd714a8d3d021826baf5a34e", null ]
     ] ],
     [ "VivadoGraphUtil", "namespace_vivado_graph_util.html", "namespace_vivado_graph_util" ]
 ];

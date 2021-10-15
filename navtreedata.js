@@ -35,7 +35,7 @@ var NAVTREE =
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", "namespacemembers_dup" ],
+        [ "All", "namespacemembers.html", null ],
         [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
@@ -68,18 +68,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_1_intro.html",
-"class_c_l_b_legalizer.html#a65d0fc2a198f55fc259d02a4373011aa",
-"class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc",
-"class_device_info_1_1_clock_region_1_1_clock_column.html#aba7cf71626bdec2c5a1dae074ffe77fb",
-"class_global_placer.html#aac6b39caece97c88f0cbf0f522621391",
-"class_min_cost_bipartite_matcher.html#a42f4449968e458600457564fbe9e605c",
-"class_placement_info.html",
-"class_placement_info_1_1_placement_bin_info.html#a462a0d802762eedd82b010a845fd4a33",
-"class_placement_info_1_1_placement_unit.html#a65d98672b86525b34e7fff3b47e87c22",
-"class_vivado_graph_util_1_1_vivado_core_cluster.html#a83e60529877989b61091da11484b047d",
-"functions_vars_s.html",
-"namespacepaint_summary.html",
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a9f901b80b7261bae930345ea85ad67ed"
+"class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8",
+"class_design_info_1_1_design_cell.html",
+"class_device_info_1_1_device_element.html#aa62b08e3f8f3fda017672522db8c9373",
+"class_global_placer.html#af145ce3e88666b609057e32c59b7f5ff",
+"class_parallel_c_l_b_packer.html#a0eaa8cf35b2dc598df118be1d4ed0d34",
+"class_placement_info.html#a208307a1154031c179292ed4b0bea1fc",
+"class_placement_info_1_1_placement_bin_info.html#a945ac49f67f09dc25299a462a3de742f",
+"class_placement_info_1_1_placement_unit.html#aa856b9c33cc37728bd2b2c3a7a1cf08e",
+"class_vivado_graph_util_1_1_vivado_pattern_cluster.html#aa95f06713387e241ce90137ae3c476e3",
+"get_pin_offset_8py.html#a230d681b4032f7871d7f87c40ccf3dbb",
+"paint_benchmarks_results_8py.html#a7b7d157be0dcc3a00b557a5da310b4aa"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
