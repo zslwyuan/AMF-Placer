@@ -86,19 +86,7 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                 if (enhanceRatio > maxEnhanceRatio)
                     maxEnhanceRatio = enhanceRatio;
                 curPinA->getNet()->enhanceOverallNetEnhancement(enhanceRatio);
-                if (curPinA->getName() ==
-                    "chip/tile1/g_ariane_core.core/ariane/id_stage_i/issue_q[sbe][pc][63]_i_1__0/O")
-                {
-                    float tmpV = curPinA->getNet()->getOverallEnhanceRatio();
-                    print_warning("THE PIN is enhanced by " + std::to_string(enhanceRatio) + " targetPathLen=" +
-                                  std::to_string(targetPathLen) + " totalEnhance=" + std::to_string(tmpV));
-                    print_warning("THE PIN is enhanced by " + std::to_string(enhanceRatio) + " targetPathLen=" +
-                                  std::to_string(targetPathLen) + " totalEnhance=" + std::to_string(tmpV));
-                    print_warning("THE PIN is enhanced by " + std::to_string(enhanceRatio) + " targetPathLen=" +
-                                  std::to_string(targetPathLen) + " totalEnhance=" + std::to_string(tmpV));
-                    print_warning("THE PIN is enhanced by " + std::to_string(enhanceRatio) + " targetPathLen=" +
-                                  std::to_string(targetPathLen) + " totalEnhance=" + std::to_string(tmpV));
-                }
+
                 if (printOut)
                 {
                     outfile0 << "enhanced net: [ " << curPinA->getName()
