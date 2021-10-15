@@ -32,9 +32,9 @@ plt.plot(SEX, SEY, marker=',', mec='r', mfc='w',label='simpleExpand')
 #plt.plot(RPX,RPY, marker='.', ms=10,label='RippleFPGA PseudoNetWeight')
 plt.plot(FGX,FGY, marker='.', ms=10,label='forget location in last iteration')
 
-plt.legend()  # 让图例生效
-plt.xlabel("runtime(s)") #X轴标签
-plt.ylabel("HPWL") #Y轴标签
+plt.legend()  
+plt.xlabel("runtime(s)") 
+plt.ylabel("HPWL")
 plt.margins(0)
 plt.show()
 
