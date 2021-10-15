@@ -1,10 +1,5 @@
 var NAVTREEINDEX12 =
 {
-"struct_placement_info_1_1_location.html#a95ca2a314c793fae8fe61aa1b1ac5df5":[8,0,18,5,1],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html":[8,0,18,8,0],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a10e7d69acf96ca6385df3fc0164d2fa2":[8,0,18,8,0,2],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a542abb189d63d79a41a574a8c404bd6e":[8,0,18,8,0,1],
-"struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a86f835a18967b2f92ee9f7b23353928f":[8,0,18,8,0,0],
 "struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html#a9f901b80b7261bae930345ea85ad67ed":[8,0,18,8,0,3],
 "struct_placement_info_1_1_placement_net_1_1__pin_offset.html":[8,0,18,9,0],
 "struct_placement_info_1_1_placement_net_1_1__pin_offset.html#a4613e8400724b1ada383d8d4da421ad0":[8,0,18,9,0,0],

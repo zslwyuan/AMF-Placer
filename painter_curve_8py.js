@@ -1,4 +1,26 @@
 var painter_curve_8py =
 [
-    [ "loadData", "painter_curve_8py.html#a79cd6b2cd0d8ba0d803beb4bf44ad019", null ]
+    [ "loadData", "painter_curve_8py.html#ae2eaeb04f4e012b667debfe431b7329f", null ],
+    [ "FGX", "painter_curve_8py.html#aeedde96522d33a433c7a77f6eb765750", null ],
+    [ "FGY", "painter_curve_8py.html#a58f770686c7d3371f9d3878f858eeef5", null ],
+    [ "fileNames", "painter_curve_8py.html#af91c1eebee2d9a03af20ebcadecf5bed", null ],
+    [ "forgetLastSpreadLocFile", "painter_curve_8py.html#a1827e9d16d0e74ef99f4c16cfd02f917", null ],
+    [ "label", "painter_curve_8py.html#ae6ca7ac03bddfd757ec8640a6ac5f131", null ],
+    [ "marker", "painter_curve_8py.html#a93d8a0514c47ba920d572321b2b257f0", null ],
+    [ "mec", "painter_curve_8py.html#ab41681e74c60bea9183b3c5e8b9f2ef2", null ],
+    [ "mfc", "painter_curve_8py.html#a42cbc4c10a455394eb00a52aa9534dc7", null ],
+    [ "ms", "painter_curve_8py.html#adaf69c7a9185acc12d181dcd3cd2c625", null ],
+    [ "ripplePseudoNetFile", "painter_curve_8py.html#a50a9a85b22635937fa3a65d2d20a2f78", null ],
+    [ "RPX", "painter_curve_8py.html#a7b79fef6005ac7a7c0ea2bce5724f132", null ],
+    [ "RPY", "painter_curve_8py.html#ab11c436dbb75c2046d15fc4a7497b315", null ],
+    [ "SEX", "painter_curve_8py.html#ab142043af9a1949ea9906a2dda3e0962", null ],
+    [ "SEY", "painter_curve_8py.html#a45ac8d8102d8fbc571d23e95c5305335", null ],
+    [ "simpleExanpandFile", "painter_curve_8py.html#af5db3b2d809ec760e2ac52536867a1ef", null ],
+    [ "std0File", "painter_curve_8py.html#a82b679961ec605fcdb7c3a9b4ae31495", null ],
+    [ "std0X", "painter_curve_8py.html#a42e2000f930e2e06a69d6dbc326a59b1", null ],
+    [ "std0Y", "painter_curve_8py.html#aa3b9e77432dfedd8c62322aaf574fad4", null ],
+    [ "std1File", "painter_curve_8py.html#a16eb2d7ffae8bcc7dfd9f5a506e73465", null ],
+    [ "std1X", "painter_curve_8py.html#ada0dbfec5ab300ed2f9282efe6e41d72", null ],
+    [ "std1Y", "painter_curve_8py.html#a30f1ee0364fdcd9395a812c0e8c532f9", null ],
+    [ "tmpFile", "painter_curve_8py.html#af4b843826ec0584f29eec6d977e182ad", null ]
 ];

@@ -2,7 +2,7 @@ var searchData=
 [
   ['paintbenchmarksresults_2epy_0',['paintBenchmarksResults.py',['../paint_benchmarks_results_8py.html',1,'']]],
   ['painter_2epy_1',['painter.py',['../painter_8py.html',1,'']]],
-  ['paintercurve_2epy_2',['painterCurve.py',['../outputs_2_b_l_s_t_m__mid_density_2painter_curve_8py.html',1,'(Global Namespace)'],['../painter_curve_8py.html',1,'(Global Namespace)']]],
+  ['paintercurve_2epy_2',['painterCurve.py',['../painter_curve_8py.html',1,'']]],
   ['paintplacement_2epy_3',['paintPlacement.py',['../paint_placement_8py.html',1,'']]],
   ['paintsummary_2epy_4',['paintSummary.py',['../paint_summary_8py.html',1,'']]],
   ['parallelclbpacker_2ecc_5',['ParallelCLBPacker.cc',['../_parallel_c_l_b_packer_8cc.html',1,'']]],

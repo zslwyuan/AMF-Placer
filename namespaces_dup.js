@@ -122,7 +122,7 @@ var namespaces_dup =
       [ "std1Y", "namespacepainter.html#a1a415b3d3bd8ec8dcf6fa629592d80d7", null ]
     ] ],
     [ "painterCurve", "namespacepainter_curve.html", [
-      [ "loadData", "namespacepainter_curve.html#a79cd6b2cd0d8ba0d803beb4bf44ad019", null ],
+      [ "loadData", "namespacepainter_curve.html#ae2eaeb04f4e012b667debfe431b7329f", null ],
       [ "FGX", "namespacepainter_curve.html#aeedde96522d33a433c7a77f6eb765750", null ],
       [ "FGY", "namespacepainter_curve.html#a58f770686c7d3371f9d3878f858eeef5", null ],
       [ "fileNames", "namespacepainter_curve.html#af91c1eebee2d9a03af20ebcadecf5bed", null ],

@@ -10,7 +10,7 @@ var searchData=
   ['loadclocks_7',['loadClocks',['../class_design_info.html#a5ba9049f57138cb8ee8f9f43ac459d8d',1,'DesignInfo::loadClocks()'],['../namespace_vivado_graph_util.html#a27b0d1b842ee7cd8672979d95d98c125',1,'VivadoGraphUtil.loadClocks(clockFileName)']]],
   ['loadclusters_8',['loadClusters',['../namespace_vivado_graph_util.html#a90024d42d7ceb35ec30d0f5989eb606a',1,'VivadoGraphUtil']]],
   ['loadcompatibleplacementtable_9',['loadCompatiblePlacementTable',['../class_placement_info.html#a48c3f35082a8cad77c13e158da1cf1f5',1,'PlacementInfo']]],
-  ['loaddata_10',['loadData',['../namespacepainter.html#abb2188555f0e164bac9f32d431293ffc',1,'painter.loadData()'],['../namespacepainter_curve.html#a79cd6b2cd0d8ba0d803beb4bf44ad019',1,'painterCurve.loadData()']]],
+  ['loaddata_10',['loadData',['../namespacepainter_curve.html#ae2eaeb04f4e012b667debfe431b7329f',1,'painterCurve.loadData()'],['../namespacepainter.html#abb2188555f0e164bac9f32d431293ffc',1,'painter.loadData()']]],
   ['loadfixedblocks_11',['loadFixedBlocks',['../namespace_vivado_graph_util.html#a5361414865877f8472320ad7ae3dceb8',1,'VivadoGraphUtil']]],
   ['loadfixedplacementunits_12',['loadFixedPlacementUnits',['../class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c',1,'InitialPacker']]],
   ['loadotherclbmacros_13',['loadOtherCLBMacros',['../class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8',1,'InitialPacker']]],
