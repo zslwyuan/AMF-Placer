@@ -7,8 +7,7 @@ var searchData=
   ['hifplacer_5fhashprimes_4',['HiFPlacer_hashprimes',['../const_8h.html#a890056c93bca36c1e4864fcc33f9f54d',1,'const.h']]],
   ['historyaveragedisplacement_5',['historyAverageDisplacement',['../class_global_placer.html#ac0760d86aa9edea6363de0160bc7242f',1,'GlobalPlacer']]],
   ['historyhpwls_6',['historyHPWLs',['../class_global_placer.html#a2e18be150ca186a2337d0f4be37ef54f',1,'GlobalPlacer']]],
-  ['hpwl_7',['HPWL',['../namespacepaint_benchmarks_results.html#aa34f7523bcda477ae4fcef14f6dafc0d',1,'paintBenchmarksResults']]],
-  ['hpwlchange_8',['HPWLChange',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#adc9d1edb02b495633e30be5ab22926e3',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['hpwlchangelittle_9',['HPWLChangeLittle',['../class_global_placer.html#a639eb753ac031abc61beb91567b572d6',1,'GlobalPlacer']]],
-  ['hpwlweight_10',['HPWLWeight',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1b661421cb1c3c2d0d8137962eb00d63',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::HPWLWeight()'],['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad59b8408020cbff5f2faf17bac58351b',1,'ParallelCLBPacker::PackingCLBSite::HPWLWeight()'],['../class_parallel_c_l_b_packer.html#ada0b5e0abfeb7db1c3069a543afe3c2e',1,'ParallelCLBPacker::HPWLWeight()']]]
+  ['hpwlchange_7',['HPWLChange',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#adc9d1edb02b495633e30be5ab22926e3',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
+  ['hpwlchangelittle_8',['HPWLChangeLittle',['../class_global_placer.html#a639eb753ac031abc61beb91567b572d6',1,'GlobalPlacer']]],
+  ['hpwlweight_9',['HPWLWeight',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1b661421cb1c3c2d0d8137962eb00d63',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::HPWLWeight()'],['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad59b8408020cbff5f2faf17bac58351b',1,'ParallelCLBPacker::PackingCLBSite::HPWLWeight()'],['../class_parallel_c_l_b_packer.html#ada0b5e0abfeb7db1c3069a543afe3c2e',1,'ParallelCLBPacker::HPWLWeight()']]]
 ];

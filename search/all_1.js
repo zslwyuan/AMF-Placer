@@ -71,6 +71,5 @@ var searchData=
   ['averagemacrolegaldisplacement_68',['averageMacroLegalDisplacement',['../class_global_placer.html#a4d362e43d170d01d1be3c5014212ef01',1,'GlobalPlacer']]],
   ['averagemclblegaldisplacement_69',['averageMCLBLegalDisplacement',['../class_global_placer.html#a2c36508da5605e7c5b572d61c0ac0f2c',1,'GlobalPlacer']]],
   ['avgclustersizerequirement_70',['avgClusterSizeRequirement',['../class_cluster_placer.html#a3190feea5462a06928cdc6fb5784cf88',1,'ClusterPlacer']]],
-  ['ax_71',['ax',['../namespaceexport_device_location.html#a09f3dfca96b43505b4e4db0ccd7540e4',1,'exportDeviceLocation.ax()'],['../namespacepaint_benchmarks_results.html#a30e3da6b2a3d3eeb7fd6694099657f6d',1,'paintBenchmarksResults.ax()']]],
-  ['ax2_72',['ax2',['../namespacepaint_benchmarks_results.html#a43b70e3a67af6a68917b3c7a682d3e93',1,'paintBenchmarksResults']]]
+  ['ax_71',['ax',['../namespaceexport_device_location.html#a09f3dfca96b43505b4e4db0ccd7540e4',1,'exportDeviceLocation']]]
 ];

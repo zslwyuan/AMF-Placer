@@ -12,9 +12,8 @@ var searchData=
   ['hifplacer_5fhashprimes_9',['HiFPlacer_hashprimes',['../const_8h.html#a890056c93bca36c1e4864fcc33f9f54d',1,'const.h']]],
   ['historyaveragedisplacement_10',['historyAverageDisplacement',['../class_global_placer.html#ac0760d86aa9edea6363de0160bc7242f',1,'GlobalPlacer']]],
   ['historyhpwls_11',['historyHPWLs',['../class_global_placer.html#a2e18be150ca186a2337d0f4be37ef54f',1,'GlobalPlacer']]],
-  ['hpwl_12',['HPWL',['../namespacepaint_benchmarks_results.html#aa34f7523bcda477ae4fcef14f6dafc0d',1,'paintBenchmarksResults']]],
-  ['hpwlchange_13',['HPWLChange',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#adc9d1edb02b495633e30be5ab22926e3',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['hpwlchangelittle_14',['HPWLChangeLittle',['../class_global_placer.html#a639eb753ac031abc61beb91567b572d6',1,'GlobalPlacer']]],
-  ['hpwlweight_15',['HPWLWeight',['../class_parallel_c_l_b_packer.html#ada0b5e0abfeb7db1c3069a543afe3c2e',1,'ParallelCLBPacker::HPWLWeight()'],['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad59b8408020cbff5f2faf17bac58351b',1,'ParallelCLBPacker::PackingCLBSite::HPWLWeight()'],['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1b661421cb1c3c2d0d8137962eb00d63',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::HPWLWeight()']]],
-  ['hypergraphpartitioning_16',['hypergraphPartitioning',['../class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2',1,'ClusterPlacer']]]
+  ['hpwlchange_12',['HPWLChange',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#adc9d1edb02b495633e30be5ab22926e3',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
+  ['hpwlchangelittle_13',['HPWLChangeLittle',['../class_global_placer.html#a639eb753ac031abc61beb91567b572d6',1,'GlobalPlacer']]],
+  ['hpwlweight_14',['HPWLWeight',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad59b8408020cbff5f2faf17bac58351b',1,'ParallelCLBPacker::PackingCLBSite::HPWLWeight()'],['../class_parallel_c_l_b_packer.html#ada0b5e0abfeb7db1c3069a543afe3c2e',1,'ParallelCLBPacker::HPWLWeight()'],['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1b661421cb1c3c2d0d8137962eb00d63',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::HPWLWeight()']]],
+  ['hypergraphpartitioning_15',['hypergraphPartitioning',['../class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2',1,'ClusterPlacer']]]
 ];

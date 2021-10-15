@@ -184,164 +184,167 @@ $(document).ready(function(){initNavTree('_graph_partitioner_8cc_source.html',''
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">// Constraints</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordtype">unsigned</span> minCellClusterSize = graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a6daccde175526c26e4ea69dc90d2f855">minClusterCellNum</a>;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (totalDSPNum &lt;= eachClusterDSPNum &amp;&amp; totalBRAMNum &lt;= eachClusterBRAMNum)</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    {</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">if</span> (<span class="keywordtype">double</span>(minCellClusterSize) &gt; 0.8 * totalWeight)</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">if</span> (graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>)</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>                <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;partitioning iter#&quot;</span> + std::to_string(<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>) + <span class="stringliteral">&quot; #curNode: &quot;</span> +</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                           std::to_string(inputCluster.size()) + <span class="stringliteral">&quot; totalWeight=&quot;</span> + std::to_string(totalWeight) +</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                           <span class="stringliteral">&quot; minCellClusterSize &gt; 0.8 * totalWeight =&gt; SHOULD CONTINUE PARTITIONING&quot;</span>);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        }</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.lock();</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <span class="keywordflow">if</span> (graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>)</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;partitioning iter#&quot;</span> + std::to_string(<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>) + <span class="stringliteral">&quot; #curNode: &quot;</span> +</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                       std::to_string(inputCluster.size()) + <span class="stringliteral">&quot; #totalDSPNum: &quot;</span> + std::to_string(totalDSPNum) +</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                       <span class="stringliteral">&quot; #totalBRAMNum: &quot;</span> + std::to_string(totalBRAMNum) + <span class="stringliteral">&quot; SHOULD CONTINUE PARTITIONING&quot;</span>);</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.unlock();</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    }</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordflow">if</span> (0.4 * <span class="keywordtype">double</span>(minCellClusterSize) &gt; totalWeight)</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (inputCluster.size() &lt; minCellClusterSize / 5)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">if</span> (totalDSPNum &lt;= eachClusterDSPNum &amp;&amp; totalBRAMNum &lt;= eachClusterBRAMNum)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">if</span> (<span class="keywordtype">double</span>(minCellClusterSize) &gt; 0.8 * totalWeight)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">if</span> (graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>)</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;partitioning iter#&quot;</span> + std::to_string(<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>) + <span class="stringliteral">&quot; #curNode: &quot;</span> +</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                           std::to_string(inputCluster.size()) + <span class="stringliteral">&quot; totalWeight=&quot;</span> + std::to_string(totalWeight) +</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                           <span class="stringliteral">&quot; minCellClusterSize &gt; 0.8 * totalWeight =&gt; SHOULD CONTINUE PARTITIONING&quot;</span>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    {</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.lock();</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>)</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;partitioning iter#&quot;</span> + std::to_string(<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>) + <span class="stringliteral">&quot; #curNode: &quot;</span> +</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                       std::to_string(inputCluster.size()) + <span class="stringliteral">&quot; #totalDSPNum: &quot;</span> + std::to_string(totalDSPNum) +</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                       <span class="stringliteral">&quot; #totalBRAMNum: &quot;</span> + std::to_string(totalBRAMNum) + <span class="stringliteral">&quot; SHOULD CONTINUE PARTITIONING&quot;</span>);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.unlock();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    }</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">// map placement unit to hyperNodes for PaToH</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keywordtype">int</span> numHyperNodes = 0; <span class="comment">// num of placement unit</span></div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    std::vector&lt;int&gt; placementUnit2hyperNode(graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>.size(), -1);</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> instId : inputCluster)</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        placementUnit2hyperNode[instId] = numHyperNodes++;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="keywordflow">if</span> (0.4 * <span class="keywordtype">double</span>(minCellClusterSize) &gt; totalWeight)</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">// map placement unit to hyperNodes for PaToH</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">int</span> numHyperNodes = 0; <span class="comment">// num of placement unit</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    std::vector&lt;int&gt; placementUnit2hyperNode(graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>.size(), -1);</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordtype">int</span> numPlacementNets = 0;</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    std::vector&lt;bool&gt; isCsdNet(graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5">netList</a>.size(), <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">int</span> numPlacementPins = 0;</div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> net : graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5">netList</a>)</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordtype">bool</span> exist = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPU : net-&gt;getUnits())</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        {</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            <span class="keywordflow">if</span> (placementUnit2hyperNode[tmpPU-&gt;getId()] != -1)</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            {</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                ++numPlacementPins;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                exist = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            }</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">if</span> (exist)</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            ++numPlacementNets;</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            isCsdNet[net-&gt;getId()] = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        }</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> shareMemorySize = 6 + numHyperNodes + numPlacementNets + 1 + numPlacementPins + numHyperNodes + 2;</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_class" href="class_external_process_func.html">ExternalProcessFunc</a> *externalProc =</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keyword">new</span> <a class="code hl_class" href="class_external_process_func.html">ExternalProcessFunc</a>(<a class="code hl_function" href="sys_info_8cc.html#a47001a6a70cbe0ca4ac1b6743e729ff1">getExePath</a>() + <span class="stringliteral">&quot;/partitionHyperGraph&quot;</span>, shareMemorySize * 4, graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>);</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">int</span> *shareMemory = (<span class="keywordtype">int</span> *)externalProc-&gt;<a class="code hl_function" href="class_external_process_func.html#a0ae60db9a279499c4df9047e8e3b77d1">getSharedMemory</a>();</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    shareMemory[0] = numHyperNodes;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    shareMemory[1] = numPlacementNets;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    shareMemory[2] = numPlacementPins;</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordtype">double</span> final_imbal = std::max(0.5 - <span class="keywordtype">double</span>(minCellClusterSize) / totalWeight, 0.4);</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    *(<span class="keywordtype">double</span> *)(shareMemory + 3) = final_imbal;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keywordtype">int</span> *cut = shareMemory + 5;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordtype">int</span> *cwghts = shareMemory + 6;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">int</span> *xpins = cwghts + numHyperNodes;</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">int</span> *pins = xpins + numPlacementNets + 1;</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">int</span> *partvec = pins + numPlacementPins;</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordtype">int</span> *partweights = partvec + numHyperNodes;</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">int</span> *hyperNode2placementUnit = <span class="keyword">new</span> <span class="keywordtype">int</span>[numHyperNodes];</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> instId : inputCluster)</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        hyperNode2placementUnit[placementUnit2hyperNode[instId]] = instId;</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numHyperNodes; ++i)</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        assert((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)hyperNode2placementUnit[i] &lt; graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>.size());</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        cwghts[i] = graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>[hyperNode2placementUnit[i]]-&gt;getWeight();</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        partvec[i] = -1;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    }</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="comment">// map placement nets to hypernet for PaToH</span></div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">int</span> maxCut = maxCutRate * numPlacementNets;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="comment">// hyper net to hyper nodes</span></div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    xpins[0] = 0;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordtype">int</span> indexNet = 0, indexPin = 0;</div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> net : graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5">netList</a>)</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    {</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <span class="keywordflow">if</span> (isCsdNet[net-&gt;getId()])</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        {</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPU : net-&gt;getUnits())</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                <span class="keywordflow">if</span> (placementUnit2hyperNode[tmpPU-&gt;getId()] != -1)</div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>                    pins[indexPin++] = placementUnit2hyperNode[tmpPU-&gt;getId()];</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            xpins[++indexNet] = indexPin;</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        }</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    }</div>
-<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    assert(indexPin == numPlacementPins &amp;&amp; indexNet == numPlacementNets);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="comment">// call external process to execute</span></div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    externalProc-&gt;<a class="code hl_function" href="class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b">execute</a>();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> instId : inputCluster)</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        placementUnit2hyperNode[instId] = numHyperNodes++;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">int</span> numPlacementNets = 0;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    std::vector&lt;bool&gt; isCsdNet(graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5">netList</a>.size(), <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">int</span> numPlacementPins = 0;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> net : graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5">netList</a>)</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordtype">bool</span> exist = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPU : net-&gt;getUnits())</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        {</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keywordflow">if</span> (placementUnit2hyperNode[tmpPU-&gt;getId()] != -1)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                ++numPlacementPins;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                exist = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <span class="keywordflow">if</span> (exist)</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        {</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            ++numPlacementNets;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            isCsdNet[net-&gt;getId()] = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> shareMemorySize = 6 + numHyperNodes + numPlacementNets + 1 + numPlacementPins + numHyperNodes + 2;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <a class="code hl_class" href="class_external_process_func.html">ExternalProcessFunc</a> *externalProc =</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="keyword">new</span> <a class="code hl_class" href="class_external_process_func.html">ExternalProcessFunc</a>(<a class="code hl_function" href="sys_info_8cc.html#a47001a6a70cbe0ca4ac1b6743e729ff1">getExePath</a>() + <span class="stringliteral">&quot;/partitionHyperGraph&quot;</span>, shareMemorySize * 4, graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <span class="keywordtype">int</span> *shareMemory = (<span class="keywordtype">int</span> *)externalProc-&gt;<a class="code hl_function" href="class_external_process_func.html#a0ae60db9a279499c4df9047e8e3b77d1">getSharedMemory</a>();</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    shareMemory[0] = numHyperNodes;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    shareMemory[1] = numPlacementNets;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    shareMemory[2] = numPlacementPins;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordtype">double</span> final_imbal = std::max(0.5 - <span class="keywordtype">double</span>(minCellClusterSize) / totalWeight, 0.4);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    *(<span class="keywordtype">double</span> *)(shareMemory + 3) = final_imbal;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keywordtype">int</span> *cut = shareMemory + 5;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <span class="keywordtype">int</span> *cwghts = shareMemory + 6;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordtype">int</span> *xpins = cwghts + numHyperNodes;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">int</span> *pins = xpins + numPlacementNets + 1;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">int</span> *partvec = pins + numPlacementPins;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordtype">int</span> *partweights = partvec + numHyperNodes;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keywordtype">int</span> *hyperNode2placementUnit = <span class="keyword">new</span> <span class="keywordtype">int</span>[numHyperNodes];</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> instId : inputCluster)</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        hyperNode2placementUnit[placementUnit2hyperNode[instId]] = instId;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numHyperNodes; ++i)</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>        assert((<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>)hyperNode2placementUnit[i] &lt; graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>.size());</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        cwghts[i] = graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>[hyperNode2placementUnit[i]]-&gt;getWeight();</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        partvec[i] = -1;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    }</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="comment">// map placement nets to hypernet for PaToH</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordtype">int</span> maxCut = maxCutRate * numPlacementNets;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="comment">// hyper net to hyper nodes</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    xpins[0] = 0;</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <span class="keywordtype">int</span> indexNet = 0, indexPin = 0;</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> net : graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5">netList</a>)</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        <span class="keywordflow">if</span> (isCsdNet[net-&gt;getId()])</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">for</span> (<span class="keyword">auto</span> tmpPU : net-&gt;getUnits())</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>                <span class="keywordflow">if</span> (placementUnit2hyperNode[tmpPU-&gt;getId()] != -1)</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>                    pins[indexPin++] = placementUnit2hyperNode[tmpPU-&gt;getId()];</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            xpins[++indexNet] = indexPin;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    }</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    assert(indexPin == numPlacementPins &amp;&amp; indexNet == numPlacementNets);</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">// Postprocessing</span></div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numHyperNodes; ++i)</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>        outputClusters[partvec[i]].push_back(inputCluster[i]);</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordtype">int</span> totalWeight0 = 0;</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> PUId : outputClusters[0])</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        totalWeight0 += graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>[PUId]-&gt;getWeight();</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keywordtype">int</span> totalWeight1 = 0;</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> PUId : outputClusters[1])</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        totalWeight1 += graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>[PUId]-&gt;getWeight();</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordtype">unsigned</span> minClusterTotalWeight = std::min(totalWeight0, totalWeight1);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <span class="keywordtype">double</span> imbal = 0.5 - double(minClusterTotalWeight) / totalWeight;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="comment">// call external process to execute</span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    externalProc-&gt;<a class="code hl_function" href="class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b">execute</a>();</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="comment">// Postprocessing</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; numHyperNodes; ++i)</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>        outputClusters[partvec[i]].push_back(inputCluster[i]);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="keywordtype">int</span> totalWeight0 = 0;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> PUId : outputClusters[0])</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        totalWeight0 += graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>[PUId]-&gt;getWeight();</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordtype">int</span> totalWeight1 = 0;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> PUId : outputClusters[1])</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        totalWeight1 += graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a2a2589566c6505a4100840c769b42e9d">nodeList</a>[PUId]-&gt;getWeight();</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.lock();</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordflow">if</span> ((*cut &gt; maxCut || ((<span class="keywordtype">float</span>)outputClusters[0].size() / (<span class="keywordtype">float</span>)outputClusters[1].size() &lt; 0.5) ||</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>         ((<span class="keywordtype">float</span>)outputClusters[1].size() / (<span class="keywordtype">float</span>)outputClusters[0].size() &lt; 0.5)) &amp;&amp;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        (minCellClusterSize * 1.25 &gt; totalWeight &amp;&amp; totalDSPNum &lt;= 3 * eachClusterDSPNum &amp;&amp;</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>         totalBRAMNum &lt;= 3 * eachClusterBRAMNum))</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="comment">// if (graphPartitioner-&gt;verbose)</span></div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>        <a class="code hl_function" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a>(<span class="stringliteral">&quot;partitioned iter#&quot;</span> + std::to_string(<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>) + <span class="stringliteral">&quot; #node: &quot;</span> + std::to_string(numHyperNodes) +</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                      <span class="stringliteral">&quot; #net: &quot;</span> + std::to_string(numPlacementNets) + <span class="stringliteral">&quot; max_cut: &quot;</span> + std::to_string(maxCut) +</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                      <span class="stringliteral">&quot; max_imbal: &quot;</span> + std::to_string(final_imbal) + <span class="stringliteral">&quot; get too large cut: &quot;</span> + std::to_string(*cut) +</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>                      <span class="stringliteral">&quot; failed to find cut meeting requirements of min-cut or size balance. cluster[0].size=&quot;</span> +</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                      std::to_string(outputClusters[0].size()) +</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                      <span class="stringliteral">&quot; cluster[1].size=&quot;</span> + std::to_string(outputClusters[1].size()));</div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        outputClusters[0].clear();</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>        outputClusters[1].clear();</div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    }</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        <span class="keywordflow">if</span> (graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>)</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;partitioned iter#&quot;</span> + std::to_string(<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>) + <span class="stringliteral">&quot; #node: &quot;</span> + std::to_string(numHyperNodes) +</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                       <span class="stringliteral">&quot; #net: &quot;</span> + std::to_string(numPlacementNets) + <span class="stringliteral">&quot; max_cut: &quot;</span> + std::to_string(maxCut) +</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                       <span class="stringliteral">&quot; max_imbal: &quot;</span> + std::to_string(final_imbal) + <span class="stringliteral">&quot; succeed with &quot;</span> +</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                       std::to_string(partweights[0]) + <span class="stringliteral">&quot; and &quot;</span> + std::to_string(partweights[1]) +</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                       <span class="stringliteral">&quot; (cut: &quot;</span> + std::to_string(*cut) + <span class="stringliteral">&quot;, imbal: &quot;</span> + std::to_string(imbal) + <span class="stringliteral">&quot;)&quot;</span> +</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                       <span class="stringliteral">&quot;cluster[0].size=&quot;</span> + std::to_string(outputClusters[0].size()) +</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                       <span class="stringliteral">&quot; cluster[1].size=&quot;</span> + std::to_string(outputClusters[1].size()));</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    }</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    ++<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.unlock();</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordtype">unsigned</span> minClusterTotalWeight = std::min(totalWeight0, totalWeight1);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="keywordtype">double</span> imbal = 0.5 - double(minClusterTotalWeight) / totalWeight;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.lock();</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">if</span> ((*cut &gt; maxCut || ((<span class="keywordtype">float</span>)outputClusters[0].size() / (<span class="keywordtype">float</span>)outputClusters[1].size() &lt; 0.666) ||</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>         ((<span class="keywordtype">float</span>)outputClusters[1].size() / (<span class="keywordtype">float</span>)outputClusters[0].size() &lt; 0.666)) &amp;&amp;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        (minCellClusterSize * 1.25 &gt; totalWeight &amp;&amp; totalDSPNum &lt;= 3 * eachClusterDSPNum &amp;&amp;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>         totalBRAMNum &lt;= 3 * eachClusterBRAMNum))</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="comment">// if (graphPartitioner-&gt;verbose)</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <a class="code hl_function" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a>(<span class="stringliteral">&quot;partitioned iter#&quot;</span> + std::to_string(<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>) + <span class="stringliteral">&quot; #node: &quot;</span> + std::to_string(numHyperNodes) +</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                      <span class="stringliteral">&quot; #net: &quot;</span> + std::to_string(numPlacementNets) + <span class="stringliteral">&quot; max_cut: &quot;</span> + std::to_string(maxCut) +</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                      <span class="stringliteral">&quot; max_imbal: &quot;</span> + std::to_string(final_imbal) + <span class="stringliteral">&quot; get too large cut: &quot;</span> + std::to_string(*cut) +</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                      <span class="stringliteral">&quot; failed to find cut meeting requirements of min-cut or size balance. cluster[0].size=&quot;</span> +</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                      std::to_string(outputClusters[0].size()) +</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                      <span class="stringliteral">&quot; cluster[1].size=&quot;</span> + std::to_string(outputClusters[1].size()));</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        outputClusters[0].clear();</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        outputClusters[1].clear();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    }</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <span class="keywordflow">if</span> (graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#a68e9d7beb94a63bca98869cc2ee1bac3">verbose</a>)</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            <a class="code hl_function" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a>(<span class="stringliteral">&quot;partitioned iter#&quot;</span> + std::to_string(<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>) + <span class="stringliteral">&quot; #node: &quot;</span> + std::to_string(numHyperNodes) +</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                       <span class="stringliteral">&quot; #net: &quot;</span> + std::to_string(numPlacementNets) + <span class="stringliteral">&quot; max_cut: &quot;</span> + std::to_string(maxCut) +</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                       <span class="stringliteral">&quot; max_imbal: &quot;</span> + std::to_string(final_imbal) + <span class="stringliteral">&quot; succeed with &quot;</span> +</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                       std::to_string(partweights[0]) + <span class="stringliteral">&quot; and &quot;</span> + std::to_string(partweights[1]) +</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                       <span class="stringliteral">&quot; (cut: &quot;</span> + std::to_string(*cut) + <span class="stringliteral">&quot;, imbal: &quot;</span> + std::to_string(imbal) + <span class="stringliteral">&quot;)&quot;</span> +</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                       <span class="stringliteral">&quot;cluster[0].size=&quot;</span> + std::to_string(outputClusters[0].size()) +</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>                       <span class="stringliteral">&quot; cluster[1].size=&quot;</span> + std::to_string(outputClusters[1].size()));</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    }</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordtype">int</span> res = *cut;</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keyword">delete</span>[] hyperNode2placementUnit;</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keyword">delete</span> externalProc;</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">return</span> res;</div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>}</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    ++<a class="code hl_variable" href="namespaceexport_device_location.html#ac5d0b6bfd0a61ef60816fe46b2a226bd">cnt</a>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    graphPartitioner-&gt;<a class="code hl_variable" href="class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050">cntLock</a>.unlock();</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="keywordtype">int</span> res = *cut;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">delete</span>[] hyperNode2placementUnit;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keyword">delete</span> externalProc;</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="comment">// declare involved templates</span></div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="class_graph_partitioner.html">GraphPartitioner&lt;std::vector&lt;PlacementInfo::PlacementUnit *&gt;</a>,</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                                std::vector&lt;PlacementInfo::PlacementNet *&gt;&gt;;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="class_graph_partitioner.html">GraphPartitioner&lt;std::vector&lt;PlacementInfo::ClusterUnit *&gt;</a>, std::vector&lt;PlacementInfo::ClusterNet *&gt;&gt;;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">return</span> res;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>}</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="comment">// declare involved templates</span></div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="class_graph_partitioner.html">GraphPartitioner&lt;std::vector&lt;PlacementInfo::PlacementUnit *&gt;</a>,</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>                                std::vector&lt;PlacementInfo::PlacementNet *&gt;&gt;;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="keyword">template</span> <span class="keyword">class </span><a class="code hl_class" href="class_graph_partitioner.html">GraphPartitioner&lt;std::vector&lt;PlacementInfo::ClusterUnit *&gt;</a>, std::vector&lt;PlacementInfo::ClusterNet *&gt;&gt;;</div>
 <div class="ttc" id="a_graph_partitioner_8h_html"><div class="ttname"><a href="_graph_partitioner_8h.html">GraphPartitioner.h</a></div></div>
 <div class="ttc" id="aclass_external_process_func_html"><div class="ttname"><a href="class_external_process_func.html">ExternalProcessFunc</a></div><div class="ttdoc">ExternalProcessFunc is a wrapper of an external exectable for multi-process scenario with shared memo...</div><div class="ttdef"><b>Definition:</b> <a href="_external_process_func_8h_source.html#l00041">ExternalProcessFunc.h:42</a></div></div>
 <div class="ttc" id="aclass_external_process_func_html_a063b1a01b42803027b7ffcb694bf2b6b"><div class="ttname"><a href="class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b">ExternalProcessFunc::execute</a></div><div class="ttdeci">void execute()</div><div class="ttdef"><b>Definition:</b> <a href="_external_process_func_8h_source.html#l00106">ExternalProcessFunc.h:106</a></div></div>

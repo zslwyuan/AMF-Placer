@@ -13,7 +13,7 @@ var searchData=
   ['tiley_10',['tileY',['../namespaceexport_device_location.html#ac6b16efa13efbb4f0899bebd17c573d6',1,'exportDeviceLocation']]],
   ['timinginfo_11',['timingInfo',['../class_placement_timing_optimizer.html#a49d680de3726f5057d3db11c1e9fb486',1,'PlacementTimingOptimizer']]],
   ['timingoptenabled_12',['timingOptEnabled',['../class_global_placer.html#ac2e8e63134e659242a4d28c45e9d658c',1,'GlobalPlacer']]],
-  ['tmpfile_13',['tmpFile',['../namespacenet_distributation_visualize.html#a53fded05f31babb8295cebe15690eee6',1,'netDistributationVisualize.tmpFile()'],['../namespaceexport_device_location.html#a8204fc5d04b5afb33326dbd9b09afb25',1,'exportDeviceLocation.tmpFile()']]],
+  ['tmpfile_13',['tmpFile',['../namespaceexport_device_location.html#a8204fc5d04b5afb33326dbd9b09afb25',1,'exportDeviceLocation']]],
   ['tmploc_14',['tmploc',['../namespaceget_pin_offset.html#ad3aa47a9dbe7f11711254de13698f8c7',1,'getPinOffset']]],
   ['tmpsiteinfo_15',['tmpSiteInfo',['../namespaceexport_device_location.html#a3a6c5bce2489cccea1d272f520dcce9a',1,'exportDeviceLocation']]],
   ['tolerence_16',['tolerence',['../struct_q_p_solver_wrapper_1_1solver_settings_type.html#a0b67b6d848e253ffa302e3911d00af76',1,'QPSolverWrapper::solverSettingsType']]],
@@ -25,7 +25,7 @@ var searchData=
   ['toppuy_22',['topPUY',['../class_placement_info_1_1_placement_net.html#a8f524454588ebd41bb6b8dfd8c741d78',1,'PlacementInfo::PlacementNet']]],
   ['topregiony_23',['topRegionY',['../struct_placement_info_1_1___clock_net_coverage.html#a1c84e0ed9bb4a0346c5d7f2c6d9fa616',1,'PlacementInfo::_ClockNetCoverage']]],
   ['topsitey_24',['topSiteY',['../class_device_info_1_1_clock_region.html#aefdb168b01a80cfd957cf3e31a9f6733',1,'DeviceInfo::ClockRegion']]],
-  ['topy_25',['topY',['../class_placement_info_1_1_placement_site_bin_info.html#a5e1ae1b84414eee7ed26fcb090e29f02',1,'PlacementInfo::PlacementSiteBinInfo::topY()'],['../class_device_info_1_1_clock_region.html#a6ecc1f96952889625b490e7c10ca17f5',1,'DeviceInfo::ClockRegion::topY()'],['../class_placement_info_1_1_placement_bin_info.html#a4affbe87abb295edbd5e09564666125a',1,'PlacementInfo::PlacementBinInfo::topY()'],['../class_placement_info_1_1_placement_hybrid_bin_info.html#a5e087e2656cab970ab9ce0c992c830b5',1,'PlacementInfo::PlacementHybridBinInfo::topY()']]],
+  ['topy_25',['topY',['../class_placement_info_1_1_placement_hybrid_bin_info.html#a5e087e2656cab970ab9ce0c992c830b5',1,'PlacementInfo::PlacementHybridBinInfo::topY()'],['../class_placement_info_1_1_placement_site_bin_info.html#a5e1ae1b84414eee7ed26fcb090e29f02',1,'PlacementInfo::PlacementSiteBinInfo::topY()'],['../class_placement_info_1_1_placement_bin_info.html#a4affbe87abb295edbd5e09564666125a',1,'PlacementInfo::PlacementBinInfo::topY()'],['../class_device_info_1_1_clock_region.html#a6ecc1f96952889625b490e7c10ca17f5',1,'DeviceInfo::ClockRegion::topY()']]],
   ['topyop_26',['topYOp',['../struct_general_spreader_1_1_spread_region_1_1expand_op.html#ae65bb6ed266ff3454a4d6132ea522118',1,'GeneralSpreader::SpreadRegion::expandOp']]],
   ['totalbramnum_27',['totalBRAMNum',['../class_placement_info_1_1_cluster_unit.html#a5f404f932ba95372d29e37eb21dc2a00',1,'PlacementInfo::ClusterUnit']]],
   ['totalcapacity_28',['totalCapacity',['../class_general_spreader_1_1_spread_region.html#a212f30b059dd040451c7f4f71c3ade73',1,'GeneralSpreader::SpreadRegion']]],
@@ -33,10 +33,9 @@ var searchData=
   ['totalconnectivityscore_30',['totalConnectivityScore',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aa98b6dfa68cdb764118688856a508e92',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['totaldspnum_31',['totalDSPNum',['../class_placement_info_1_1_cluster_unit.html#a11481ae67aee36d03959c71ca86bff7f',1,'PlacementInfo::ClusterUnit']]],
   ['totallen_32',['totalLen',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0b70692bf05d73e58e37f3e8df67d6ab',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['totalnum_33',['totalNum',['../namespacenet_distributation_visualize.html#a54b52fe7382a76693d176ea016bab7f4',1,'netDistributationVisualize']]],
-  ['totalutilization_34',['totalUtilization',['../class_general_spreader_1_1_spread_region.html#a027061786a09d4b8bf58a77f9b82bcc4',1,'GeneralSpreader::SpreadRegion']]],
-  ['totalweight_35',['totalWeight',['../class_placement_info_1_1_cluster_unit.html#a759335f54b8f3716f92199f3aa2e06a0',1,'PlacementInfo::ClusterUnit']]],
-  ['true_36',['True',['../namespacegothrough_benchmarks.html#af77b6121a5c17f055453604ff118832f',1,'gothroughBenchmarks']]],
-  ['type_37',['type',['../class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083',1,'DeviceInfo::DeviceElement::type()'],['../class_design_info_1_1_design_element.html#a0ab5c559fcb022b3033a141e67e46cdd',1,'DesignInfo::DesignElement::type()']]],
-  ['type2cells_38',['type2Cells',['../class_design_info.html#a2e94f4948c646ff032960efb452b89cd',1,'DesignInfo']]]
+  ['totalutilization_33',['totalUtilization',['../class_general_spreader_1_1_spread_region.html#a027061786a09d4b8bf58a77f9b82bcc4',1,'GeneralSpreader::SpreadRegion']]],
+  ['totalweight_34',['totalWeight',['../class_placement_info_1_1_cluster_unit.html#a759335f54b8f3716f92199f3aa2e06a0',1,'PlacementInfo::ClusterUnit']]],
+  ['true_35',['True',['../namespacegothrough_benchmarks.html#af77b6121a5c17f055453604ff118832f',1,'gothroughBenchmarks']]],
+  ['type_36',['type',['../class_design_info_1_1_design_element.html#a0ab5c559fcb022b3033a141e67e46cdd',1,'DesignInfo::DesignElement::type()'],['../class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083',1,'DeviceInfo::DeviceElement::type()']]],
+  ['type2cells_37',['type2Cells',['../class_design_info.html#a2e94f4948c646ff032960efb452b89cd',1,'DesignInfo']]]
 ];

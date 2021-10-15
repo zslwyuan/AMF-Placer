@@ -33,7 +33,7 @@ var searchData=
   ['removelut_30',['removeLUT',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a46d1fdefa1a396c3762d1c1b679c6f8c',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['removeputoconstructdetcluster_31',['removePUToConstructDetCluster',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1e1ec11ce953837dedff9951a9cb6ea3',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['removesinglelut_32',['removeSingleLUT',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7006a758d2893dd4b77184ace5765d2e',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['removexthff_33',['removeXthFF',['../class_initial_packer_1_1_packed_control_set.html#afc1ab3534cf815f23564f54b62002847',1,'InitialPacker::PackedControlSet::removeXthFF()'],['../class_parallel_c_l_b_packer_1_1_packed_control_set.html#ac23e0fe3aee8ff7122ce4ccb4b6f7a89',1,'ParallelCLBPacker::PackedControlSet::removeXthFF()']]],
+  ['removexthff_33',['removeXthFF',['../class_parallel_c_l_b_packer_1_1_packed_control_set.html#ac23e0fe3aee8ff7122ce4ccb4b6f7a89',1,'ParallelCLBPacker::PackedControlSet::removeXthFF()'],['../class_initial_packer_1_1_packed_control_set.html#afc1ab3534cf815f23564f54b62002847',1,'InitialPacker::PackedControlSet::removeXthFF()']]],
   ['renewid_34',['renewId',['../class_placement_info_1_1_placement_unit.html#ae1098e8c361ed19caf723ed8bd5c9fba',1,'PlacementInfo::PlacementUnit']]],
   ['replaceall_35',['replaceAll',['../string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930',1,'replaceAll(std::string &amp;str, const std::string from, const std::string to):&#160;stringCheck.cc'],['../string_check_8h.html#aea65d8aaf45377aa73450b1f4b0e1930',1,'replaceAll(std::string &amp;str, const std::string from, const std::string to):&#160;stringCheck.cc']]],
   ['requiredbinshrinkratio_36',['requiredBinShrinkRatio',['../class_placement_info_1_1_placement_bin_info.html#a62fc9c6a2554aa6b3c703a3b2424ede5',1,'PlacementInfo::PlacementBinInfo']]],
@@ -49,7 +49,7 @@ var searchData=
   ['resetclusterinfo_46',['resetClusterInfo',['../class_cluster_placer.html#a8b0b60255df9780c038e5a9d6cf50e3b',1,'ClusterPlacer']]],
   ['resetelementbingrid_47',['resetElementBinGrid',['../class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d',1,'PlacementInfo']]],
   ['resetenhanceratio_48',['resetEnhanceRatio',['../class_design_info_1_1_design_net.html#accdca20b6ddeee1d6af67fbd1c3d67e0',1,'DesignInfo::DesignNet']]],
-  ['resetlutffdeterminedoccupation_49',['resetLUTFFDeterminedOccupation',['../class_placement_info.html#a39eb9359bec6f297a503a2cb333c50d3',1,'PlacementInfo::resetLUTFFDeterminedOccupation()'],['../class_design_info.html#af16aa5e078ed21683c2919fbe22fdb64',1,'DesignInfo::resetLUTFFDeterminedOccupation()']]],
+  ['resetlutffdeterminedoccupation_49',['resetLUTFFDeterminedOccupation',['../class_design_info.html#af16aa5e078ed21683c2919fbe22fdb64',1,'DesignInfo::resetLUTFFDeterminedOccupation()'],['../class_placement_info.html#a39eb9359bec6f297a503a2cb333c50d3',1,'PlacementInfo::resetLUTFFDeterminedOccupation()']]],
   ['resetmacrocell2sitesindistance_50',['resetMacroCell2SitesInDistance',['../class_macro_legalizer.html#a071fa22616c6c216bc60c4aa71acbe4c',1,'MacroLegalizer']]],
   ['resetmapped_51',['resetMapped',['../class_device_info_1_1_device_site.html#a355be03186b6a80ee197bad3df7303da',1,'DeviceInfo::DeviceSite']]],
   ['resetnetenhanceratio_52',['resetNetEnhanceRatio',['../class_design_info.html#a78761a5ebcef384b7427db683693a0fd',1,'DesignInfo']]],
@@ -81,6 +81,5 @@ var searchData=
   ['roughlylegalize_78',['roughlyLegalize',['../class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6',1,'CLBLegalizer::roughlyLegalize()'],['../class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc',1,'MacroLegalizer::roughlyLegalize()']]],
   ['row_79',['row',['../class_placement_info_1_1_placement_site_bin_info.html#a339adcbf981c3a00f3081c8633bd6bd4',1,'PlacementInfo::PlacementSiteBinInfo::row()'],['../class_placement_info_1_1_placement_hybrid_bin_info.html#ade58c1c853cd67784c0c6c63fbf48e2d',1,'PlacementInfo::PlacementHybridBinInfo::row()'],['../class_placement_info_1_1_placement_bin_info.html#ad1fd61475fd0c201604579144b978427',1,'PlacementInfo::PlacementBinInfo::row()']]],
   ['run_80',['run',['../class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981',1,'AMFPlacer']]],
-  ['runtime_81',['runtime',['../namespacepaint_benchmarks_results.html#a5142c1d117c31cafdcaeb0d7c1dc61da',1,'paintBenchmarksResults']]],
-  ['runtime_20log_20explanation_82',['Runtime Log Explanation',['../_6_runtime_log.html',1,'']]]
+  ['runtime_20log_20explanation_81',['Runtime Log Explanation',['../_6_runtime_log.html',1,'']]]
 ];
