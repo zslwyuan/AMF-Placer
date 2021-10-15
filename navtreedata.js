@@ -78,7 +78,7 @@ var NAVTREEINDEX =
 "class_placement_info_1_1_placement_unit.html#aa856b9c33cc37728bd2b2c3a7a1cf08e",
 "class_vivado_graph_util_1_1_vivado_pattern_cluster.html#aa95f06713387e241ce90137ae3c476e3",
 "get_pin_offset_8py.html#a230d681b4032f7871d7f87c40ccf3dbb",
-"paint_benchmarks_results_8py.html#a7b7d157be0dcc3a00b557a5da310b4aa"
+"paint_placement_8py.html#a743812739e99ff9ce201e7b066884a99"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
