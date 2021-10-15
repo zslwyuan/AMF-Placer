@@ -74,7 +74,7 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                     continue;
 
                 float enhanceRatio;
-                float overflowRatio = std::pow((float)0.8 * targetPathLen / levelThr, 1.75 / 2);
+                float overflowRatio = std::pow((float)0.8 * targetPathLen / levelThr, 1);
                 // if (overflowRatio > 10)
                 //     overflowRatio = 10;
                 if (pinNum < 600)
@@ -86,6 +86,19 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                 if (enhanceRatio > maxEnhanceRatio)
                     maxEnhanceRatio = enhanceRatio;
                 curPinA->getNet()->enhanceOverallNetEnhancement(enhanceRatio);
+                if (curPinA->getName() ==
+                    "chip/tile1/g_ariane_core.core/ariane/id_stage_i/issue_q[sbe][pc][63]_i_1__0/O")
+                {
+                    float tmpV = curPinA->getNet()->getOverallEnhanceRatio();
+                    print_warning("THE PIN is enhanced by " + std::to_string(enhanceRatio) + " targetPathLen=" +
+                                  std::to_string(targetPathLen) + " totalEnhance=" + std::to_string(tmpV));
+                    print_warning("THE PIN is enhanced by " + std::to_string(enhanceRatio) + " targetPathLen=" +
+                                  std::to_string(targetPathLen) + " totalEnhance=" + std::to_string(tmpV));
+                    print_warning("THE PIN is enhanced by " + std::to_string(enhanceRatio) + " targetPathLen=" +
+                                  std::to_string(targetPathLen) + " totalEnhance=" + std::to_string(tmpV));
+                    print_warning("THE PIN is enhanced by " + std::to_string(enhanceRatio) + " targetPathLen=" +
+                                  std::to_string(targetPathLen) + " totalEnhance=" + std::to_string(tmpV));
+                }
                 if (printOut)
                 {
                     outfile0 << "enhanced net: [ " << curPinA->getName()
@@ -198,8 +211,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     extractedPUs.clear();
 
     unsigned int maxSize = 0;
-    for (unsigned int nodeId = 0;
-         nodeId < timingNodes.size() * 0.1 && extractedCellIds.size() < timingNodes.size() * 0.2; nodeId++)
+    for (unsigned int nodeId = 0; nodeId < timingNodes.size() * 0.1; nodeId++)
     {
         auto timingNode = timingNodes[nodeId];
         if (timingNode->getLongestPathLength() > pathLenThr)
@@ -279,8 +291,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                     }
 
                     if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) &&
-                        (maxClockRegionWeight < totalClockRegionWeight * 0.95) && totalClockRegionWeight < 20000 &&
-                        maxClockRegionWeight >= 4)
+                        (maxClockRegionWeight < totalClockRegionWeight * 0.95) && maxClockRegionWeight >= 4)
                     {
                         auto optClockRegion = YX2ClockRegion[0][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;

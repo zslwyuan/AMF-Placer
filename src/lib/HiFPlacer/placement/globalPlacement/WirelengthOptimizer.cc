@@ -192,7 +192,7 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
     }
 
     addPseudoNet2LoctionForAllPUs(pesudoNetWeight, considerNetNum);
-    updatePseudoNetForClockRegion((1.1 - placementInfo->getProgress()) * pesudoNetWeight);
+    updatePseudoNetForClockRegion((1.25 - placementInfo->getProgress()) * pesudoNetWeight);
 
     if (verbose)
         print_status("update B2B Net Weight Done.");

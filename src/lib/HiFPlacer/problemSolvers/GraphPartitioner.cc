@@ -107,6 +107,9 @@ unsigned GraphPartitioner<NodeList, NetList>::minCutBipartition(const std::vecto
     // Constraints
     unsigned minCellClusterSize = graphPartitioner->minClusterCellNum;
 
+    if (inputCluster.size() < minCellClusterSize / 5)
+        return 0;
+
     if (totalDSPNum <= eachClusterDSPNum && totalBRAMNum <= eachClusterBRAMNum)
     {
         if (double(minCellClusterSize) > 0.8 * totalWeight)
@@ -224,8 +227,8 @@ unsigned GraphPartitioner<NodeList, NetList>::minCutBipartition(const std::vecto
     double imbal = 0.5 - double(minClusterTotalWeight) / totalWeight;
 
     graphPartitioner->cntLock.lock();
-    if ((*cut > maxCut || ((float)outputClusters[0].size() / (float)outputClusters[1].size() < 0.5) ||
-         ((float)outputClusters[1].size() / (float)outputClusters[0].size() < 0.5)) &&
+    if ((*cut > maxCut || ((float)outputClusters[0].size() / (float)outputClusters[1].size() < 0.666) ||
+         ((float)outputClusters[1].size() / (float)outputClusters[0].size() < 0.666)) &&
         (minCellClusterSize * 1.25 > totalWeight && totalDSPNum <= 3 * eachClusterDSPNum &&
          totalBRAMNum <= 3 * eachClusterBRAMNum))
     {

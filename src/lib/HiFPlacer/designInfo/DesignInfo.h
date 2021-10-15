@@ -637,6 +637,7 @@ class DesignInfo
         inline void resetEnhanceRatio()
         {
             pinIdPinIdInNet2EnhanceRatio.clear();
+            overallEnhanceRatio = 1;
         }
 
         /**
