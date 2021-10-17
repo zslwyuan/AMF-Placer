@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('_7_portability_to_vivado_problem.html'
 <div class="line">    to bel FFF. SET/RESET Difference</div>
 </div><!-- fragment --><center> <img src="aliasNet.png" alt="Alias Nets" title="Alias Nets" width="800" class="inline"/> </center><p >The problems above might stop your loading of the generated Tcl file from AMF-Placer. We provide a script "benchmarks/helperPythonScripts/removeFailurePartFromTcl.py" for user as walk-around solution. Please copy the last target BEL location like the one highlighted in the screenshot below.</p>
 <center> <img src="tclErrorExample.png" alt="Error Example" title="Error Example" width="800" class="inline"/> </center><p >Then use the script to generate a new Tcl script which will continue the placement loading and bypassing the command cause the error. An example to use the script is shown below:</p>
-<div class="fragment"><div class="line">python removeFailurePartFromTcl.py  -i ./DumpCLBPacking-first-0.tcl -o ./new.tcl -e SLICE_X118Y50/FFF</div>
+<div class="fragment"><div class="line">python removeFailurePartFromTcl.py  -i ./DumpCLBPacking-first-0.tcl -o ./new.tcl -e SLICE_X118Y51/FFF</div>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
