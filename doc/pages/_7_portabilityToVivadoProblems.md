@@ -1,6 +1,6 @@
 # Existing Problems When Exporting To Vivado {#_7_portabilityToVivadoProblem}
 
-Some users want to use our AMF-Placer as the bridge between their proposed implementation and Vivado. Since the detailed implementation of Vivado is unclear for us and AMF-Placer is still under development for many practical demands, we want users to know our current problems/limitations without being trapped during their implementation/experiment.
+Some users might want to use our AMF-Placer as the bridge between their proposed implementation and Vivado. Since the detailed implementation of Vivado is unclear for us and AMF-Placer is still under development for many practical demands, we want users to know our current problems/limitations without being trapped during their implementation/experiment.
 
 Below are some problems/potential causes that we have found:
 
@@ -27,11 +27,23 @@ ERROR: [Vivado 12-1409] Cannot set loc and bel property of instance(s)
 The problems above might stop your loading of the generated Tcl file from AMF-Placer. We provide a script "benchmarks/helperPythonScripts/removeFailurePartFromTcl.py" for user as walk-around solution. Please copy the last target BEL location like the one highlighted in the screenshot below.
 
 <center>
-<img src="tclErrorExample.png" alt="Error Example" title="Error Example" width="800" /> 
+<img src="tclErrorExample.png" alt="Packing Error Example" title="Packing Error Example" width="800" /> 
 </center>
 
 Then use the script to generate a new Tcl script which will continue the placement loading and bypassing the command cause the error. An example to use the script is shown below:
 
 ```
 python removeFailurePartFromTcl.py  -i ./DumpCLBPacking-first-0.tcl -o ./new.tcl -e SLICE_X118Y51/FFF
+```
+
+3. Fanout optimization of Vivado might cause commit failure during command 'place_design': We find that Vivado placer will duplicate some elements during checking our placed elements for the optimization of high fanout signals. Sometime this will cause commit failure as shown below.
+
+<center>
+<img src="commitError.png" alt="Commit Error Example" title="Commit Error Example" width="600" /> 
+</center>
+
+The problems above might stop your loading of the generated Tcl file from AMF-Placer. We provide a script "benchmarks/helperPythonScripts/unplaceFailureCells.py" for user as walk-around solution. Please copy the error message like those highlighed in red in the screenshot into a file. Then call the script to generate a  walk-around Tcl script which will unplace the involed cells and restart the P&R procedure.
+
+```
+python unplaceFailureCells.py -i ./errors -o ./new.tcl
 ```
