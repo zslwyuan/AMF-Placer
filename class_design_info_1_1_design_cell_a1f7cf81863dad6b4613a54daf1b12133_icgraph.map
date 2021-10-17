@@ -1,9 +1,10 @@
 <map id="DesignInfo::DesignCell::isLUTRAM" name="DesignInfo::DesignCell::isLUTRAM">
-<area shape="rect" id="node1" title=" " alt="" coords="1224,517,1376,559"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1224,549,1376,591"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="689,311,864,352"/>
 <area shape="rect" id="node16" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="963,484,1137,525"/>
-<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a98ec57a40f14540ba4ea33fbcd63153d" title="check whether the cell is an endpoint in timing graph" alt="" coords="974,549,1126,591"/>
-<area shape="rect" id="node19" href="$class_placement_info_1_1_placement_unpacked_cell.html#af1321b99c4ffb11a58f00b555f854ce6" title="Construct a new Placement Unpacked Cell object." alt="" coords="924,615,1176,656"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#acc6994050c88aa084d812b3ce84ff824" title="check whether the cell is related to logic computation" alt="" coords="974,549,1126,591"/>
+<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#a98ec57a40f14540ba4ea33fbcd63153d" title="check whether the cell is an endpoint in timing graph" alt="" coords="974,615,1126,656"/>
+<area shape="rect" id="node20" href="$class_placement_info_1_1_placement_unpacked_cell.html#af1321b99c4ffb11a58f00b555f854ce6" title="Construct a new Placement Unpacked Cell object." alt="" coords="924,680,1176,721"/>
 <area shape="rect" id="node3" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="185,71,341,112"/>
 <area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="419,449,621,475"/>
 <area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="416,550,624,577"/>

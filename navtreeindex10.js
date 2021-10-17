@@ -1,5 +1,7 @@
 var NAVTREEINDEX10 =
 {
+"functions_x.html":[9,3,0,24],
+"functions_y.html":[9,3,0,25],
 "functions_~.html":[9,3,0,26],
 "get_pin_offset_8py.html":[10,0,0,3,0,1],
 "get_pin_offset_8py.html#a0ab7a9445fbcb479aafa6d675c26cbb4":[10,0,0,3,0,1,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX10 =
 "remove_failure_part_from_tcl_8py.html#aff51336a1e4b06b59422eb222ec2b182":[10,0,0,1,0,5],
 "remove_failure_part_from_tcl_8py_source.html":[10,0,0,1,0],
 "simple_j_s_o_n_8h.html":[10,0,2,1,1,6],
-"simple_j_s_o_n_8h.html#a47b912b821d387118038fcd83de7692b":[10,0,2,1,1,6,1],
-"simple_j_s_o_n_8h.html#a49e658b63ca781f16ebdb15339b8411b":[10,0,2,1,1,6,0],
-"simple_j_s_o_n_8h_source.html":[10,0,2,1,1,6]
+"simple_j_s_o_n_8h.html#a47b912b821d387118038fcd83de7692b":[10,0,2,1,1,6,1]
 };

@@ -22,6 +22,7 @@ var class_design_info_1_1_design_cell =
     [ "isDSP", "class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a", null ],
     [ "isFF", "class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5", null ],
     [ "isIO", "class_design_info_1_1_design_cell.html#ab0d4229a60e41eea39020d5ff6211fcb", null ],
+    [ "isLogicRelated", "class_design_info_1_1_design_cell.html#acc6994050c88aa084d812b3ce84ff824", null ],
     [ "isLUT", "class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441", null ],
     [ "isLUT6", "class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a", null ],
     [ "isLUTRAM", "class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133", null ],

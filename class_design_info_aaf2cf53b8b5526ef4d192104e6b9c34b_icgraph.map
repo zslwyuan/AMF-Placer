@@ -1,4 +1,5 @@
 <map id="DesignInfo::isShifter" name="DesignInfo::isShifter">
-<area shape="rect" id="node1" title=" " alt="" coords="244,5,383,32"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a79fc874e0e15d0ad16540982235dfbdb" title="check whether the cell type is an endpoint in timing graph" alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="244,31,383,57"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation" alt="" coords="13,5,189,32"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a79fc874e0e15d0ad16540982235dfbdb" title="check whether the cell type is an endpoint in timing graph" alt="" coords="5,56,196,83"/>
 </map>
