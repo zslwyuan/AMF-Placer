@@ -33,5 +33,5 @@ The problems above might stop your loading of the generated Tcl file from AMF-Pl
 Then use the script to generate a new Tcl script which will continue the placement loading and bypassing the command cause the error. An example to use the script is shown below:
 
 ```
-python removeFailurePartFromTcl.py  -i ./DumpCLBPacking-first-0.tcl -o ./new.tcl -e SLICE_X118Y50/FFF
+python removeFailurePartFromTcl.py  -i ./DumpCLBPacking-first-0.tcl -o ./new.tcl -e SLICE_X118Y51/FFF
 ```
