@@ -31,6 +31,7 @@ var NAVTREE =
     [ "Publications", "_4_publication.html", null ],
     [ "Implementation Explanation", "_5_explanation.html", null ],
     [ "Runtime Log Explanation", "_6_runtime_log.html", null ],
+    [ "Existing Problems When Exporting To Vivado", "_7_portability_to_vivado_problem.html", null ],
     [ "AMF-Placer", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
@@ -68,17 +69,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_1_intro.html",
-"class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8",
-"class_design_info_1_1_design_cell.html",
-"class_device_info_1_1_device_element.html#aa62b08e3f8f3fda017672522db8c9373",
-"class_global_placer.html#af145ce3e88666b609057e32c59b7f5ff",
-"class_parallel_c_l_b_packer.html#a0eaa8cf35b2dc598df118be1d4ed0d34",
-"class_placement_info.html#a208307a1154031c179292ed4b0bea1fc",
-"class_placement_info_1_1_placement_bin_info.html#a945ac49f67f09dc25299a462a3de742f",
-"class_placement_info_1_1_placement_unit.html#aa856b9c33cc37728bd2b2c3a7a1cf08e",
+"class_c_l_b_legalizer.html#aa4cb84e902a88b6c07a842de220887b1",
+"class_design_info_1_1_control_set_info.html#af63a9fd51a746ffbb6a631a05815b36a",
+"class_device_info_1_1_device_element.html#a7a9ca60902d9335ebcbf875011975fb7",
+"class_global_placer.html#af0be1f6aabef3d826504a11431d85740",
+"class_parallel_c_l_b_packer.html#a0e67b994118fbc24f1fb74cff778d790",
+"class_placement_info.html#a1c23f07e035eae39311944b1fdc6a544",
+"class_placement_info_1_1_placement_bin_info.html#a94252a624d74b8ebf80fb412a40d7f98",
+"class_placement_info_1_1_placement_unit.html#aa8016d572d4e10c18b3f031428ad3db1",
 "class_vivado_graph_util_1_1_vivado_pattern_cluster.html#aa95f06713387e241ce90137ae3c476e3",
-"get_pin_offset_8py.html#a0ab7a9445fbcb479aafa6d675c26cbb4",
-"struct_general_spreader_1_1_spread_region_1_1expand_op.html#ac9ef7cc9a6500ea7b9fc954280c89084"
+"functions_~.html",
+"str_print_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

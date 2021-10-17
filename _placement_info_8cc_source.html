@@ -160,15 +160,15 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::ifstream infile0(<a class="code hl_variable" href="class_placement_info.html#a65f4b3c3d3e0e2fc3270063e386e64fa">cellType2fixedAmoFileName</a>.c_str());</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    assert(infile0.good() &amp;&amp; <span class="stringliteral">&quot;cellType2fixedAmoFile file does not exist and please check your path settings&quot;</span>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    std::string line;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    std::string <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    std::string cellTypeStr;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">int</span> occupationAmo;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    std::string CompatiblePlacementTableLoading = <span class="stringliteral">&quot;CompatiblePlacementTableLoading&quot;</span>;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">while</span> (std::getline(infile0, line))</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">while</span> (std::getline(infile0, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>))</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        std::istringstream iss(line);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        std::istringstream iss(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        iss &gt;&gt; cellTypeStr &gt;&gt; occupationAmo;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_enumeration" href="class_design_info.html#a35becde3c1203126956e2fbd1b6ab51b">DesignInfo::DesignCellType</a> cellType =</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <a class="code hl_variable" href="class_placement_info_1_1_compatible_placement_table.html#ae8cfff299d2f0cb6d5d86a9a5ee136c2">designInfo</a>-&gt;<a class="code hl_function" href="class_design_info.html#adf0324cc2aabb175c21af7242f26a0e7">fromStringToCellType</a>(CompatiblePlacementTableLoading, cellTypeStr);</div>
@@ -194,9 +194,9 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    std::set&lt;std::string&gt; involvedSharedBELStr;</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    involvedSharedBELStr.clear();</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">while</span> (std::getline(infile1, line))</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">while</span> (std::getline(infile1, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>))</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        std::istringstream iss(line);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        std::istringstream iss(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        iss &gt;&gt; cellTypeStr &gt;&gt; cell2BELType;</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        std::vector&lt;std::string&gt; cellTypeStrVec;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        <a class="code hl_function" href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a>(cellTypeStr, cellTypeStrVec, <span class="stringliteral">&quot;,&quot;</span>);</div>
@@ -237,9 +237,9 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    assert(infile2.good() &amp;&amp; <span class="stringliteral">&quot;sharedCellType2BELtype file does not exist and please check your path settings&quot;</span>);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    std::string compatibleBELTypeStrs, sharedCellTypeStr, siteTypeStr;</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">while</span> (std::getline(infile2, line))</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">while</span> (std::getline(infile2, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>))</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        std::istringstream iss(line);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        std::istringstream iss(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        iss &gt;&gt; sharedCellTypeStr &gt;&gt; siteTypeStr &gt;&gt; compatibleBELTypeStrs;</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        std::vector&lt;std::string&gt; CompatibleBELStrVec;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <a class="code hl_function" href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a>(compatibleBELTypeStrs, CompatibleBELStrVec, <span class="stringliteral">&quot;,&quot;</span>);</div>
@@ -753,7 +753,7 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l00676" name="l00676"></a><span class="lineno"><a class="line" href="class_placement_info_1_1_placement_net.html#a6078d1a0b5b2e1fc99f79f149270e38f">  676</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_placement_info_1_1_placement_net.html#a6078d1a0b5b2e1fc99f79f149270e38f">PlacementInfo::PlacementNet::drawNet</a>(<span class="keywordtype">float</span> generalWeight)</div>
 <div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>{</div>
 <div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>    std::vector&lt;std::pair&lt;float, float&gt;&gt; nodexy;</div>
-<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>    std::vector&lt;std::pair&lt;int, int&gt;&gt; <a class="code hl_variable" href="namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85">lines</a>;</div>
+<div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>    std::vector&lt;std::pair&lt;int, int&gt;&gt; <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#a932b96f170a2555f8a85ed557ba58b2f">lines</a>;</div>
 <div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pinId_net = 0; pinId_net &lt; unitsOfNetPins.size(); pinId_net++)</div>
 <div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>    {</div>
 <div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>        <span class="keyword">auto</span> tmpPU = unitsOfNetPins[pinId_net];</div>
@@ -762,20 +762,20 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>        <span class="keywordtype">float</span> curY = tmpPU-&gt;Y() + tmpPinOffset.y;</div>
 <div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>        nodexy.push_back(std::pair&lt;float, float&gt;(curX, curY));</div>
 <div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>    }</div>
-<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    <a class="code hl_variable" href="namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85">lines</a>.push_back(std::pair&lt;int, int&gt;(leftPinId_net, rightPinId_net));</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>    <a class="code hl_variable" href="namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85">lines</a>.push_back(std::pair&lt;int, int&gt;(bottomPinId_net, bottomPinId_net));</div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#a932b96f170a2555f8a85ed557ba58b2f">lines</a>.push_back(std::pair&lt;int, int&gt;(leftPinId_net, rightPinId_net));</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>    <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#a932b96f170a2555f8a85ed557ba58b2f">lines</a>.push_back(std::pair&lt;int, int&gt;(bottomPinId_net, bottomPinId_net));</div>
 <div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span> </div>
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pinId_net = 0; pinId_net &lt; unitsOfNetPins.size(); pinId_net++)</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>    {</div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>        <span class="keywordflow">if</span> (pinId_net != leftPinId_net &amp;&amp; pinId_net != rightPinId_net)</div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>        {</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>            <a class="code hl_variable" href="namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85">lines</a>.push_back(std::pair&lt;int, int&gt;(leftPinId_net, pinId_net));</div>
-<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>            <a class="code hl_variable" href="namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85">lines</a>.push_back(std::pair&lt;int, int&gt;(rightPinId_net, pinId_net));</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>            <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#a932b96f170a2555f8a85ed557ba58b2f">lines</a>.push_back(std::pair&lt;int, int&gt;(leftPinId_net, pinId_net));</div>
+<div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>            <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#a932b96f170a2555f8a85ed557ba58b2f">lines</a>.push_back(std::pair&lt;int, int&gt;(rightPinId_net, pinId_net));</div>
 <div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        }</div>
 <div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>        <span class="keywordflow">if</span> (pinId_net != topPinId_net &amp;&amp; pinId_net != bottomPinId_net)</div>
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>        {</div>
-<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>            <a class="code hl_variable" href="namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85">lines</a>.push_back(std::pair&lt;int, int&gt;(bottomPinId_net, pinId_net));</div>
-<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>            <a class="code hl_variable" href="namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85">lines</a>.push_back(std::pair&lt;int, int&gt;(topPinId_net, pinId_net));</div>
+<div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>            <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#a932b96f170a2555f8a85ed557ba58b2f">lines</a>.push_back(std::pair&lt;int, int&gt;(bottomPinId_net, pinId_net));</div>
+<div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>            <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#a932b96f170a2555f8a85ed557ba58b2f">lines</a>.push_back(std::pair&lt;int, int&gt;(topPinId_net, pinId_net));</div>
 <div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>        }</div>
 <div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>    }</div>
 <div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>    <span class="comment">// paintB2BNodeLine(nodexy, lines);</span></div>
@@ -1691,7 +1691,7 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01614" name="l01614"></a><span class="lineno"> 1614</span>    std::istream infile(&amp;sbuf);</div>
 <div class="line"><a id="l01615" name="l01615"></a><span class="lineno"> 1615</span>    <span class="comment">// std::ifstream infile(designTextFileName.c_str());</span></div>
 <div class="line"><a id="l01616" name="l01616"></a><span class="lineno"> 1616</span> </div>
-<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>    std::string line, PUName, macroTypeStr, cellName, siteName, BELName;</div>
+<div class="line"><a id="l01617" name="l01617"></a><span class="lineno"> 1617</span>    std::string <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>, PUName, macroTypeStr, cellName, siteName, BELName;</div>
 <div class="line"><a id="l01618" name="l01618"></a><span class="lineno"> 1618</span>    <span class="keywordtype">bool</span> booleanValue;</div>
 <div class="line"><a id="l01619" name="l01619"></a><span class="lineno"> 1619</span>    std::string fill0, fill1, fill2, fill3, fill4, fill5, fill6;</div>
 <div class="line"><a id="l01620" name="l01620"></a><span class="lineno"> 1620</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> PUId, numCells, cellId;</div>
@@ -1714,22 +1714,22 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01637" name="l01637"></a><span class="lineno"> 1637</span>    <a class="code hl_variable" href="class_placement_info.html#a4dcb2ceb899384f33a8799c444ad84c0">LUTFFUtilizationAdjusted</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01638" name="l01638"></a><span class="lineno"> 1638</span> </div>
 <div class="line"><a id="l01639" name="l01639"></a><span class="lineno"> 1639</span>    <span class="comment">// outfile0 &lt;&lt; &quot;GlobalPlacerPseudoNetWeight: &quot; &lt;&lt; getPseudoNetWeight() &lt;&lt; &quot;\n&quot;;</span></div>
-<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>    std::getline(infile, line);</div>
-<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>    std::istringstream iss(line);</div>
+<div class="line"><a id="l01640" name="l01640"></a><span class="lineno"> 1640</span>    std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01641" name="l01641"></a><span class="lineno"> 1641</span>    std::istringstream iss(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01642" name="l01642"></a><span class="lineno"> 1642</span>    iss &gt;&gt; fill0 &gt;&gt; <a class="code hl_variable" href="class_placement_info.html#a4573be18123d679a62335d51dbd9d4e5">oriPseudoNetWeight</a>;</div>
 <div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>    assert(fill0 == <span class="stringliteral">&quot;GlobalPlacerPseudoNetWeight:&quot;</span>);</div>
-<div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span>    std::getline(infile, line);</div>
-<div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span>    iss = std::istringstream(line);</div>
+<div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span>    std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span>    iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>    iss &gt;&gt; fill0 &gt;&gt; <a class="code hl_variable" href="class_placement_info.html#ae0e4d25d53885142767ef16bf4a8a8e1">macroPseudoNetEnhanceCnt</a>;</div>
 <div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span>    assert(fill0 == <span class="stringliteral">&quot;GlobalPlacerMacroPseudoNetEnhanceCnt:&quot;</span>);</div>
-<div class="line"><a id="l01648" name="l01648"></a><span class="lineno"> 1648</span>    std::getline(infile, line);</div>
-<div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>    iss = std::istringstream(line);</div>
+<div class="line"><a id="l01648" name="l01648"></a><span class="lineno"> 1648</span>    std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>    iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span>    iss &gt;&gt; fill0 &gt;&gt; <a class="code hl_variable" href="class_placement_info.html#af605cd39e36504ff4457ae0897b5ae4f">macroLegalizationWeight</a>;</div>
 <div class="line"><a id="l01651" name="l01651"></a><span class="lineno"> 1651</span>    assert(fill0 == <span class="stringliteral">&quot;GlobalPlacerMacroLegalizationWeight:&quot;</span>);</div>
 <div class="line"><a id="l01652" name="l01652"></a><span class="lineno"> 1652</span> </div>
-<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>    <span class="keywordflow">while</span> (std::getline(infile, line))</div>
+<div class="line"><a id="l01653" name="l01653"></a><span class="lineno"> 1653</span>    <span class="keywordflow">while</span> (std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>))</div>
 <div class="line"><a id="l01654" name="l01654"></a><span class="lineno"> 1654</span>    {</div>
-<div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>        std::istringstream iss(line);</div>
+<div class="line"><a id="l01655" name="l01655"></a><span class="lineno"> 1655</span>        std::istringstream iss(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01656" name="l01656"></a><span class="lineno"> 1656</span>        iss &gt;&gt; fill0 &gt;&gt; PUId &gt;&gt; PUName;</div>
 <div class="line"><a id="l01657" name="l01657"></a><span class="lineno"> 1657</span>        <span class="keywordflow">if</span> (fill0.find(<span class="stringliteral">&quot;Macro&quot;</span>) != std::string::npos)</div>
 <div class="line"><a id="l01658" name="l01658"></a><span class="lineno"> 1658</span>        {</div>
@@ -1747,8 +1747,8 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01670" name="l01670"></a><span class="lineno"> 1670</span>            <span class="comment">//     CellId: 645276 siteName: RAMB18_X16Y20 BELName: RAMB180.RAMB18E2_L</span></div>
 <div class="line"><a id="l01671" name="l01671"></a><span class="lineno"> 1671</span>            <span class="comment">//     CellId: 691036 siteName: RAMB18_X16Y21 BELName: RAMB181.RAMB18E2_U</span></div>
 <div class="line"><a id="l01672" name="l01672"></a><span class="lineno"> 1672</span>            assert(<a class="code hl_variable" href="class_placement_info.html#a23d8f941627003a1ef540b7f1569390a">placementUnits</a>.size() == PUId &amp;&amp; <span class="stringliteral">&quot;PlacementUnit should be dumped according to the PU id order.&quot;</span>);</div>
-<div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01673" name="l01673"></a><span class="lineno"> 1673</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01674" name="l01674"></a><span class="lineno"> 1674</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01675" name="l01675"></a><span class="lineno"> 1675</span>            iss &gt;&gt; fill0 &gt;&gt; macroTypeStr;</div>
 <div class="line"><a id="l01676" name="l01676"></a><span class="lineno"> 1676</span>            <a class="code hl_enumeration" href="class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0">PlacementMacro::PlacementMacroType</a> macroType;</div>
 <div class="line"><a id="l01677" name="l01677"></a><span class="lineno"> 1677</span>            <span class="keywordflow">if</span> (macroTypeStr == <span class="stringliteral">&quot;PlacementMacroType_LUTFFPair&quot;</span>)</div>
@@ -1778,19 +1778,19 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01701" name="l01701"></a><span class="lineno"> 1701</span>            <a class="code hl_variable" href="class_placement_info.html#a23d8f941627003a1ef540b7f1569390a">placementUnits</a>.push_back(tmpPU);</div>
 <div class="line"><a id="l01702" name="l01702"></a><span class="lineno"> 1702</span>            <a class="code hl_variable" href="class_placement_info.html#a5fb48a3e409abadc4b6b99223b72eed0">placementMacros</a>.push_back(tmpPU);</div>
 <div class="line"><a id="l01703" name="l01703"></a><span class="lineno"> 1703</span> </div>
-<div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01704" name="l01704"></a><span class="lineno"> 1704</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01705" name="l01705"></a><span class="lineno"> 1705</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01706" name="l01706"></a><span class="lineno"> 1706</span>            iss &gt;&gt; fill0 &gt;&gt; <a class="code hl_variable" href="namespaceget_pin_offset.html#a80680b686a7734bcf89607f868924370">X</a> &gt;&gt; <a class="code hl_variable" href="namespaceget_pin_offset.html#a0f70e519255420f2b04baf568aaaacac">Y</a>;</div>
 <div class="line"><a id="l01707" name="l01707"></a><span class="lineno"> 1707</span>            tmpPU-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f">setAnchorLocationAndForgetTheOriginalOne</a>(<a class="code hl_variable" href="namespaceget_pin_offset.html#a80680b686a7734bcf89607f868924370">X</a>, <a class="code hl_variable" href="namespaceget_pin_offset.html#a0f70e519255420f2b04baf568aaaacac">Y</a>);</div>
 <div class="line"><a id="l01708" name="l01708"></a><span class="lineno"> 1708</span> </div>
-<div class="line"><a id="l01709" name="l01709"></a><span class="lineno"> 1709</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01710" name="l01710"></a><span class="lineno"> 1710</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01709" name="l01709"></a><span class="lineno"> 1709</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01710" name="l01710"></a><span class="lineno"> 1710</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01711" name="l01711"></a><span class="lineno"> 1711</span>            iss &gt;&gt; fill0 &gt;&gt; booleanValue;</div>
 <div class="line"><a id="l01712" name="l01712"></a><span class="lineno"> 1712</span>            <span class="keywordflow">if</span> (booleanValue)</div>
 <div class="line"><a id="l01713" name="l01713"></a><span class="lineno"> 1713</span>                tmpPU-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#a5da6175f473345876ee67558b2f5851c">setPlaced</a>();</div>
 <div class="line"><a id="l01714" name="l01714"></a><span class="lineno"> 1714</span> </div>
-<div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01715" name="l01715"></a><span class="lineno"> 1715</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01716" name="l01716"></a><span class="lineno"> 1716</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01717" name="l01717"></a><span class="lineno"> 1717</span>            iss &gt;&gt; fill0 &gt;&gt; booleanValue;</div>
 <div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>            <span class="keywordflow">if</span> (booleanValue)</div>
 <div class="line"><a id="l01719" name="l01719"></a><span class="lineno"> 1719</span>            {</div>
@@ -1798,22 +1798,22 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>                <a class="code hl_variable" href="class_placement_info.html#a60722fc409e20fd65d2bc687097b68e3">fixedPlacementUnits</a>.push_back(tmpPU);</div>
 <div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>            }</div>
 <div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span> </div>
-<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01725" name="l01725"></a><span class="lineno"> 1725</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01726" name="l01726"></a><span class="lineno"> 1726</span>            iss &gt;&gt; fill0 &gt;&gt; booleanValue;</div>
 <div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>            <span class="keywordflow">if</span> (booleanValue)</div>
 <div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>                tmpPU-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#aa981acea66b64adc88749452146f1280">setLocked</a>();</div>
 <div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span> </div>
-<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>            iss &gt;&gt; fill0 &gt;&gt; numCells;</div>
 <div class="line"><a id="l01734" name="l01734"></a><span class="lineno"> 1734</span> </div>
 <div class="line"><a id="l01735" name="l01735"></a><span class="lineno"> 1735</span>            <span class="keywordtype">int</span> totalWeight = 0;</div>
 <div class="line"><a id="l01736" name="l01736"></a><span class="lineno"> 1736</span>            <span class="keywordflow">while</span> (numCells--)</div>
 <div class="line"><a id="l01737" name="l01737"></a><span class="lineno"> 1737</span>            {</div>
-<div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>                std::getline(infile, line);</div>
-<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>                iss = std::istringstream(line);</div>
+<div class="line"><a id="l01738" name="l01738"></a><span class="lineno"> 1738</span>                std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01739" name="l01739"></a><span class="lineno"> 1739</span>                iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01740" name="l01740"></a><span class="lineno"> 1740</span>                <span class="keywordtype">int</span> virtualCellTypeId;</div>
 <div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>                iss &gt;&gt; fill0 &gt;&gt; cellId &gt;&gt; fill1 &gt;&gt; virtualCellTypeId &gt;&gt; fill2 &gt;&gt; cellName &gt;&gt; <a class="code hl_variable" href="namespaceget_pin_offset.html#a80680b686a7734bcf89607f868924370">X</a> &gt;&gt; <a class="code hl_variable" href="namespaceget_pin_offset.html#a0f70e519255420f2b04baf568aaaacac">Y</a>;</div>
 <div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span>                assert(cellId &lt; <a class="code hl_function" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f">getCells</a>().size());</div>
@@ -1829,14 +1829,14 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01752" name="l01752"></a><span class="lineno"> 1752</span>            }</div>
 <div class="line"><a id="l01753" name="l01753"></a><span class="lineno"> 1753</span>            tmpPU-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a">setWeight</a>(totalWeight);</div>
 <div class="line"><a id="l01754" name="l01754"></a><span class="lineno"> 1754</span> </div>
-<div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01755" name="l01755"></a><span class="lineno"> 1755</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01756" name="l01756"></a><span class="lineno"> 1756</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01757" name="l01757"></a><span class="lineno"> 1757</span>            iss &gt;&gt; fill0 &gt;&gt; numCells;</div>
 <div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span> </div>
 <div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>            <span class="keywordflow">while</span> (numCells--)</div>
 <div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>            {</div>
-<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>                std::getline(infile, line);</div>
-<div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>                iss = std::istringstream(line);</div>
+<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>                std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span>                iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>                <span class="comment">//     CellId: 691036 siteName: RAMB18_X16Y21 BELName: RAMB181.RAMB18E2_U</span></div>
 <div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span>                iss &gt;&gt; fill0 &gt;&gt; cellId &gt;&gt; fill1 &gt;&gt; siteName &gt;&gt; fill2 &gt;&gt; BELName;</div>
 <div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span>                assert(cellId &lt; <a class="code hl_function" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f">getCells</a>().size());</div>
@@ -1854,8 +1854,8 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01777" name="l01777"></a><span class="lineno"> 1777</span>            <span class="comment">//   fixedAt: siteName: IOB_X1Y103 BELName: HPIOB.INBUF</span></div>
 <div class="line"><a id="l01778" name="l01778"></a><span class="lineno"> 1778</span> </div>
 <div class="line"><a id="l01779" name="l01779"></a><span class="lineno"> 1779</span>            assert(<a class="code hl_variable" href="class_placement_info.html#a23d8f941627003a1ef540b7f1569390a">placementUnits</a>.size() == PUId &amp;&amp; <span class="stringliteral">&quot;PlacementUnit should be dumped according to the PU id order.&quot;</span>);</div>
-<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>            iss &gt;&gt; fill0 &gt;&gt; cellId &gt;&gt; fill1 &gt;&gt; cellName;</div>
 <div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>            assert(cellId &lt; <a class="code hl_variable" href="class_placement_info.html#aa03f9d64e0df1bf8fef3d916dbcc644f">cellId2PlacementUnitVec</a>.size());</div>
 <div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>            assert(<a class="code hl_function" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f">getCells</a>()[cellId]-&gt;getName() == cellName);</div>
@@ -1867,19 +1867,19 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01790" name="l01790"></a><span class="lineno"> 1790</span>            <a class="code hl_variable" href="class_placement_info.html#aa03f9d64e0df1bf8fef3d916dbcc644f">cellId2PlacementUnitVec</a>[cellId] = tmpPU;</div>
 <div class="line"><a id="l01791" name="l01791"></a><span class="lineno"> 1791</span>            <a class="code hl_variable" href="class_placement_info.html#af6039d684789eef856837c4730066066">cellId2PlacementUnit</a>[cellId] = tmpPU;</div>
 <div class="line"><a id="l01792" name="l01792"></a><span class="lineno"> 1792</span> </div>
-<div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01793" name="l01793"></a><span class="lineno"> 1793</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span>            iss &gt;&gt; fill0 &gt;&gt; <a class="code hl_variable" href="namespaceget_pin_offset.html#a80680b686a7734bcf89607f868924370">X</a> &gt;&gt; <a class="code hl_variable" href="namespaceget_pin_offset.html#a0f70e519255420f2b04baf568aaaacac">Y</a>;</div>
 <div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>            tmpPU-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f">setAnchorLocationAndForgetTheOriginalOne</a>(<a class="code hl_variable" href="namespaceget_pin_offset.html#a80680b686a7734bcf89607f868924370">X</a>, <a class="code hl_variable" href="namespaceget_pin_offset.html#a0f70e519255420f2b04baf568aaaacac">Y</a>);</div>
 <div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span> </div>
-<div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01800" name="l01800"></a><span class="lineno"> 1800</span>            iss &gt;&gt; fill0 &gt;&gt; booleanValue;</div>
 <div class="line"><a id="l01801" name="l01801"></a><span class="lineno"> 1801</span>            <span class="keywordflow">if</span> (booleanValue)</div>
 <div class="line"><a id="l01802" name="l01802"></a><span class="lineno"> 1802</span>                tmpPU-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#a5da6175f473345876ee67558b2f5851c">setPlaced</a>();</div>
 <div class="line"><a id="l01803" name="l01803"></a><span class="lineno"> 1803</span> </div>
-<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01804" name="l01804"></a><span class="lineno"> 1804</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01805" name="l01805"></a><span class="lineno"> 1805</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01806" name="l01806"></a><span class="lineno"> 1806</span>            iss &gt;&gt; fill0 &gt;&gt; booleanValue;</div>
 <div class="line"><a id="l01807" name="l01807"></a><span class="lineno"> 1807</span>            <span class="keywordflow">if</span> (booleanValue)</div>
 <div class="line"><a id="l01808" name="l01808"></a><span class="lineno"> 1808</span>            {</div>
@@ -1888,8 +1888,8 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01811" name="l01811"></a><span class="lineno"> 1811</span>            }</div>
 <div class="line"><a id="l01812" name="l01812"></a><span class="lineno"> 1812</span> </div>
 <div class="line"><a id="l01813" name="l01813"></a><span class="lineno"> 1813</span>            <span class="keywordtype">bool</span> shouldLock = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l01814" name="l01814"></a><span class="lineno"> 1814</span>            std::getline(infile, line);</div>
-<div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>            iss = std::istringstream(line);</div>
+<div class="line"><a id="l01814" name="l01814"></a><span class="lineno"> 1814</span>            std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01815" name="l01815"></a><span class="lineno"> 1815</span>            iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01816" name="l01816"></a><span class="lineno"> 1816</span>            iss &gt;&gt; fill0 &gt;&gt; booleanValue;</div>
 <div class="line"><a id="l01817" name="l01817"></a><span class="lineno"> 1817</span>            <span class="keywordflow">if</span> (booleanValue)</div>
 <div class="line"><a id="l01818" name="l01818"></a><span class="lineno"> 1818</span>            {</div>
@@ -1898,8 +1898,8 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01821" name="l01821"></a><span class="lineno"> 1821</span> </div>
 <div class="line"><a id="l01822" name="l01822"></a><span class="lineno"> 1822</span>            <span class="keywordflow">if</span> (tmpPU-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unit.html#aa8016d572d4e10c18b3f031428ad3db1">isFixed</a>())</div>
 <div class="line"><a id="l01823" name="l01823"></a><span class="lineno"> 1823</span>            {</div>
-<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>                std::getline(infile, line);</div>
-<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>                iss = std::istringstream(line);</div>
+<div class="line"><a id="l01824" name="l01824"></a><span class="lineno"> 1824</span>                std::getline(infile, <a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
+<div class="line"><a id="l01825" name="l01825"></a><span class="lineno"> 1825</span>                iss = std::istringstream(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>);</div>
 <div class="line"><a id="l01826" name="l01826"></a><span class="lineno"> 1826</span>                iss &gt;&gt; fill0 &gt;&gt; fill1 &gt;&gt; siteName &gt;&gt; fill2 &gt;&gt; BELName;</div>
 <div class="line"><a id="l01827" name="l01827"></a><span class="lineno"> 1827</span>                tmpPU-&gt;<a class="code hl_function" href="class_placement_info_1_1_placement_unpacked_cell.html#ac7d3b8b70966af2d4689019d1585a48d">setLockedAt</a>(siteName, BELName, <a class="code hl_variable" href="class_placement_info.html#a086c85b734ab2ef841adfd1a5e8039d3">deviceInfo</a>);</div>
 <div class="line"><a id="l01828" name="l01828"></a><span class="lineno"> 1828</span>            }</div>
@@ -1925,7 +1925,7 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="line"><a id="l01848" name="l01848"></a><span class="lineno"> 1848</span>        }</div>
 <div class="line"><a id="l01849" name="l01849"></a><span class="lineno"> 1849</span>        <span class="keywordflow">else</span></div>
 <div class="line"><a id="l01850" name="l01850"></a><span class="lineno"> 1850</span>        {</div>
-<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;This line : (&quot;</span> &lt;&lt; std::string(line) &lt;&lt; <span class="stringliteral">&quot;) cannot be parsed.\n&quot;</span>;</div>
+<div class="line"><a id="l01851" name="l01851"></a><span class="lineno"> 1851</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;This line : (&quot;</span> &lt;&lt; std::string(<a class="code hl_variable" href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">line</a>) &lt;&lt; <span class="stringliteral">&quot;) cannot be parsed.\n&quot;</span>;</div>
 <div class="line"><a id="l01852" name="l01852"></a><span class="lineno"> 1852</span>            assert(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l01853" name="l01853"></a><span class="lineno"> 1853</span>        }</div>
 <div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span>    }</div>
@@ -2207,12 +2207,13 @@ $(document).ready(function(){initNavTree('_placement_info_8cc_source.html',''); 
 <div class="ttc" id="aclass_placement_info_html_aff4f4f687bc2fea0e6156e075bc78a18"><div class="ttname"><a href="class_placement_info.html#aff4f4f687bc2fea0e6156e075bc78a18">PlacementInfo::getMinXFromSites</a></div><div class="ttdeci">float getMinXFromSites(std::vector&lt; DeviceInfo::DeviceSite * &gt; &amp;sites)</div><div class="ttdoc">Get the Min X of sites to identify the boundary of the device.</div><div class="ttdef"><b>Definition:</b> <a href="_placement_info_8cc_source.html#l00217">PlacementInfo.cc:217</a></div></div>
 <div class="ttc" id="aclass_placement_timing_info_html"><div class="ttname"><a href="class_placement_timing_info.html">PlacementTimingInfo</a></div><div class="ttdoc">PlacementTimingInfo is the container which record the timing information related to placement.</div><div class="ttdef"><b>Definition:</b> <a href="_placement_timing_info_8h_source.html#l00036">PlacementTimingInfo.h:37</a></div></div>
 <div class="ttc" id="adump_zip_8cc_html_a21c5a770aceed592dcbb296cacea5777"><div class="ttname"><a href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a></div><div class="ttdeci">void writeStrToGZip(std::string fileName, std::stringstream &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="dump_zip_8cc_source.html#l00017">dumpZip.cc:17</a></div></div>
-<div class="ttc" id="anamespaceexport_device_location_html_a36fece20998e5de299cc35065e58ec85"><div class="ttname"><a href="namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85">exportDeviceLocation.lines</a></div><div class="ttdeci">lines</div><div class="ttdef"><b>Definition:</b> <a href="_v_c_u108_2preprocess_python_2export_device_location_8py_source.html#l00211">exportDeviceLocation.py:211</a></div></div>
 <div class="ttc" id="anamespaceexport_device_location_html_a76bdd32cc2463011b1615707c1e3397c"><div class="ttname"><a href="namespaceexport_device_location.html#a76bdd32cc2463011b1615707c1e3397c">exportDeviceLocation.sites</a></div><div class="ttdeci">list sites</div><div class="ttdef"><b>Definition:</b> <a href="_v_c_u108_2preprocess_python_2export_device_location_8py_source.html#l00216">exportDeviceLocation.py:216</a></div></div>
 <div class="ttc" id="anamespaceget_pin_offset_html_a0f70e519255420f2b04baf568aaaacac"><div class="ttname"><a href="namespaceget_pin_offset.html#a0f70e519255420f2b04baf568aaaacac">getPinOffset.Y</a></div><div class="ttdeci">Y</div><div class="ttdef"><b>Definition:</b> <a href="get_pin_offset_8py_source.html#l00057">getPinOffset.py:57</a></div></div>
 <div class="ttc" id="anamespaceget_pin_offset_html_a80680b686a7734bcf89607f868924370"><div class="ttname"><a href="namespaceget_pin_offset.html#a80680b686a7734bcf89607f868924370">getPinOffset.X</a></div><div class="ttdeci">int X</div><div class="ttdef"><b>Definition:</b> <a href="get_pin_offset_8py_source.html#l00056">getPinOffset.py:56</a></div></div>
 <div class="ttc" id="anamespacepaint_placement_html_a797ee56938c5e0199512d8ff7b685971"><div class="ttname"><a href="namespacepaint_placement.html#a797ee56938c5e0199512d8ff7b685971">paintPlacement.y</a></div><div class="ttdeci">list y</div><div class="ttdef"><b>Definition:</b> <a href="paint_placement_8py_source.html#l00122">paintPlacement.py:122</a></div></div>
 <div class="ttc" id="anamespacepaint_placement_html_af0911322a80519c426bdc1ed19bae1ce"><div class="ttname"><a href="namespacepaint_placement.html#af0911322a80519c426bdc1ed19bae1ce">paintPlacement.x</a></div><div class="ttdeci">list x</div><div class="ttdef"><b>Definition:</b> <a href="paint_placement_8py_source.html#l00121">paintPlacement.py:121</a></div></div>
+<div class="ttc" id="anamespaceremove_failure_part_from_tcl_html_a932b96f170a2555f8a85ed557ba58b2f"><div class="ttname"><a href="namespaceremove_failure_part_from_tcl.html#a932b96f170a2555f8a85ed557ba58b2f">removeFailurePartFromTcl.lines</a></div><div class="ttdeci">lines</div><div class="ttdef"><b>Definition:</b> <a href="remove_failure_part_from_tcl_8py_source.html#l00020">removeFailurePartFromTcl.py:20</a></div></div>
+<div class="ttc" id="anamespaceremove_failure_part_from_tcl_html_aff51336a1e4b06b59422eb222ec2b182"><div class="ttname"><a href="namespaceremove_failure_part_from_tcl.html#aff51336a1e4b06b59422eb222ec2b182">removeFailurePartFromTcl.line</a></div><div class="ttdeci">line</div><div class="ttdef"><b>Definition:</b> <a href="remove_failure_part_from_tcl_8py_source.html#l00032">removeFailurePartFromTcl.py:32</a></div></div>
 <div class="ttc" id="aread_zip_8h_html"><div class="ttname"><a href="read_zip_8h.html">readZip.h</a></div></div>
 <div class="ttc" id="astr_print_8cc_html_a03797150cc06a6f048f1e2c0f1665439"><div class="ttname"><a href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439">print_warning</a></div><div class="ttdeci">void print_warning(std::string tmp_string)</div><div class="ttdef"><b>Definition:</b> <a href="str_print_8cc_source.html#l00045">strPrint.cc:45</a></div></div>
 <div class="ttc" id="astr_print_8cc_html_a03b6174b3e71ead6304cc54724c5b7f6"><div class="ttname"><a href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6">print_info</a></div><div class="ttdeci">void print_info(std::string tmp_string)</div><div class="ttdef"><b>Definition:</b> <a href="str_print_8cc_source.html#l00027">strPrint.cc:27</a></div></div>
