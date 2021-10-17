@@ -18,7 +18,7 @@ var searchData=
   ['oritime_15',['oriTime',['../str_print_8h.html#ad8be7b63897d3c0c6cb7885f019f5637',1,'oriTime():&#160;strPrint.cc'],['../str_print_8cc.html#ad8be7b63897d3c0c6cb7885f019f5637',1,'oriTime():&#160;strPrint.cc']]],
   ['osqpsolver_16',['osqpSolver',['../class_q_p_solver_wrapper.html#a4cde9706565b282ce6d3b349685295ad',1,'QPSolverWrapper']]],
   ['outedges_17',['outEdges',['../class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#acec056e16f1a828ecd87c4fd5c53cbad',1,'PlacementTimingInfo::TimingGraph::TimingNode']]],
-  ['outputfile_18',['outputFile',['../namespaceremove_failure_part_from_tcl.html#a8ce6abc03a186986898ce23b8d349d00',1,'removeFailurePartFromTcl.outputFile()'],['../namespaceexport_device_location.html#a6abf1081dc146df15e96597555ab9a7b',1,'exportDeviceLocation.outputFile()']]],
+  ['outputfile_18',['outputFile',['../namespaceunplace_failure_cells.html#ab316774d9da09764f79145b341d76729',1,'unplaceFailureCells.outputFile()'],['../namespaceremove_failure_part_from_tcl.html#a8ce6abc03a186986898ce23b8d349d00',1,'removeFailurePartFromTcl.outputFile()'],['../namespaceexport_device_location.html#a6abf1081dc146df15e96597555ab9a7b',1,'exportDeviceLocation.outputFile()']]],
   ['outputfilename_19',['outputFileName',['../namespacegothrough_benchmarks.html#a85c7514a486f8a90276baff9013a77db',1,'gothroughBenchmarks']]],
   ['outputnetptrs_20',['outputNetPtrs',['../class_design_info_1_1_design_cell.html#a076d9215e1243f9fd184c54ae1e59733',1,'DesignInfo::DesignCell']]],
   ['outputpinptrs_21',['outputPinPtrs',['../class_design_info_1_1_design_cell.html#ae3eb7bbb42835b660984dbc690bf4f7e',1,'DesignInfo::DesignCell']]],

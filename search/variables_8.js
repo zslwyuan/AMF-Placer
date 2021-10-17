@@ -11,7 +11,7 @@ var searchData=
   ['initialpacker_8',['initialPacker',['../class_a_m_f_placer.html#a444b0835607905bb2b4942e393909d12',1,'AMFPlacer']]],
   ['initialpustolegalize_9',['initialPUsToLegalize',['../class_c_l_b_legalizer.html#ae470e95b4b7d36cb89f4c60bdf4f7920',1,'CLBLegalizer']]],
   ['innerdelay_10',['innerDelay',['../class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#aca716f25c834dea45bd183d899163d39',1,'PlacementTimingInfo::TimingGraph::TimingNode']]],
-  ['inputfile_11',['inputFile',['../namespaceremove_failure_part_from_tcl.html#a2f2a6633e20597ab27f0d5b2386d8a56',1,'removeFailurePartFromTcl']]],
+  ['inputfile_11',['inputFile',['../namespaceremove_failure_part_from_tcl.html#a2f2a6633e20597ab27f0d5b2386d8a56',1,'removeFailurePartFromTcl.inputFile()'],['../namespaceunplace_failure_cells.html#ab20419393e3d0037db9ed34bb58abd37',1,'unplaceFailureCells.inputFile()']]],
   ['inputnetptrs_12',['inputNetPtrs',['../class_design_info_1_1_design_cell.html#afa97edd4752a1323ad76b89c413fc3fa',1,'DesignInfo::DesignCell']]],
   ['inputornot_13',['inputOrNot',['../class_design_info_1_1_design_pin.html#abb3854aa8d43fc24070c61d55becac5e',1,'DesignInfo::DesignPin']]],
   ['inputpinptrs_14',['inputPinPtrs',['../class_design_info_1_1_design_cell.html#a771dc656d22b0300d33293ee73aab7fa',1,'DesignInfo::DesignCell']]],
