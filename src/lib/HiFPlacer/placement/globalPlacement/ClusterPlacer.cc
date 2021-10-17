@@ -118,8 +118,6 @@ void ClusterPlacer::hypergraphPartitioning()
         eachClusterBRAMNum = std::stoi(JSONCfg["clockRegionBRAMNum"]);
     }
 
-    // if (placementInfo->getDesignInfo()->getClocksInDesign().size() > 15)
-    // {
     clockBasedPartitioning(minClusterCellNum, eachClusterDSPNum, eachClusterBRAMNum);
     if (isClustersToLarges())
     {
@@ -127,16 +125,6 @@ void ClusterPlacer::hypergraphPartitioning()
         clockBasedPartitioning(minClusterCellNum, eachClusterDSPNum, eachClusterBRAMNum);
         isClustersToLarges();
     }
-    // }
-    // else
-    // if (placementInfo->getDesignInfo()->getPredefinedClusters().size() > 0)
-    // {
-    //     userDefinedClusterBasedPartitioning(minClusterCellNum, eachClusterDSPNum, eachClusterBRAMNum);
-    // }
-    // else
-    // {
-    // basicPartitioning(minClusterCellNum, eachClusterDSPNum, eachClusterBRAMNum);
-    //}
 }
 
 void ClusterPlacer::createLongPathClusterUnits()

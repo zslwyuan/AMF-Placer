@@ -924,6 +924,17 @@ class DesignInfo
         }
 
         /**
+         * @brief check whether the cell is related to logic computation
+         *
+         * @return true
+         * @return false
+         */
+        inline bool isLogicRelated()
+        {
+            return (isLUT() || isFF() || isLUTRAM() || originallyIsLUTRAM() || isBRAM() || isDSP() || isShifter());
+        }
+
+        /**
          * @brief Get the Cell Id in the cell list
          *
          * @return int
@@ -1259,6 +1270,19 @@ class DesignInfo
                 isClockBuffer(cellType) || isShifter(cellType));
     }
 
+    /**
+     * @brief check whether the cell is related to logic computation
+     *
+     * @param cellType a given cell type
+     * @return true
+     * @return false
+     */
+    inline bool isLogicRelated(DesignCellType cellType)
+    {
+        return (isLUT(cellType) || isFF(cellType) || isLUTRAM(cellType) || isBRAM(cellType) || isDSP(cellType) ||
+                isShifter(cellType));
+    }
+
     // clang-format off
     /**
      * @brief Construct a new Design Info object based on user-defined settings and device information
@@ -1446,7 +1470,8 @@ class DesignInfo
     }
 
     /**
-     * @brief for user-defined-cluster-based optimization, load the nets in a user-defined cluster for later processing
+     * @brief for user-defined-cluster-based optimization, load the nets in a user-defined cluster for later
+     * processing
      *
      */
     void loadUserDefinedClusterNets();
