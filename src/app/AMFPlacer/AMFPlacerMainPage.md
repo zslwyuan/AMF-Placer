@@ -37,6 +37,7 @@ For commercial usage of this open-source project, users must contact authors (We
 * [Benchmarks and Experimental Results](@ref _3_benchmarkInfo): practical benchmarks for evaluation and some experimental results at current stages.
 * [Publications](@ref _4_publication): some papers which are the fundamental parts of this project.
 * [Implementation Explanation](@ref _5_explanation): the concrete explaination for the function module and the placement procedure.
+* [Existing Problems When Exporting To Vivado](@ref _7_portabilityToVivadoProblem): the concrete explaination of some of our known problems when interacting with Vivado.
 
 **Motivations**
 
