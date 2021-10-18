@@ -7,7 +7,8 @@ Here, we will go through some basic steps for users to build the placer and run 
 4. Extract Design Information from Vivado
 5. Extract Device Information from Vivado
 6. (Optional) Load the Output Placement in Vivado
-7. (Optional) Customize the Placement Flow
+7. (Optional) Visualize the Placement Convergence Procedure
+8. (Optional) Customize the Placement Flow
 
 **1. Build the Placer**
 First of all, users need to download the project and the command below will download it from GitHub:
@@ -181,3 +182,32 @@ Users can directly "Open Implemented Design" and source the tcl file generated b
 </center>
 
 This placement loading flow might be a bit tricky since we are trying to be compatible with Vivado. Theoratically, since we utilize "catch" in the Tcl script to handle the errors, the flow should not be stopped by those minor exceptions and we have tested this flow with Vivado 2019-2021. If you encounter unexpected problems, please feel free to let us know in [GitHub Issue](https://github.com/zslwyuan/AMF-Placer/issues).
+
+There might be some known problems when you are trying to load the generated placement into Vivado. Please [Existing Problems When Exporting To Vivado](@ref _7_portabilityToVivadoProblem) for reasons and solutions.
+
+**7. Visualize the Placement Convergence Procedure**
+
+If users set the "DumpAllCoordTrace" parameter in the JSON configuration file, a series of "DumpAllCoordTrace-XXX.gz" files which record the location of the design elements will be dumped to the specified directory. Each dumped archive file is for a lower-bound placement iteration or a upper-bound placement iteration in the global placement procedure.
+
+For evaluation and debugging, we provide Python script ("benchmarks/analysisScripts/paintPlacement.py") for users to visualize the placement trace with OpenGL. Please ensure that you have install OpenGL libs, if not you can install them by:
+
+```
+pip install PyOpenGL PyOpenGL_accelerate
+```
+
+Users can visualize the trace files by the following command:
+
+```
+usage example:
+python paintPlacement.py -d xxxx/minimap2_allCellPinNet.zip -t xxxxx/dumpData_minimap_GENE -o xxxx/dumpData_minimap_GENE
+```
+
+1. -d indicate the design information archive, e.g.   benchmarks/VCU108/design/minimap2/minimap2_allCellPinNet.zip
+2. -t indicate the path where the placement trace archives are dumped. (the trace files are required to be named as DumpAllCoordTrace-xxx.gz currently)
+3. -o indicate the path where you want to store the output images (png) generated according to the trace files
+
+Below is a screenshot showing the archive files and the generated images. With this images, you can easily generate a video of the convergence procedure with ffmpeg related commands/tools.
+
+<center>
+<img src="visProc.png" align="center" alt="Visualized Example" title="Visualized Example" width="500" /> 
+</center>

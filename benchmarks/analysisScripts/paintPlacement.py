@@ -1,4 +1,3 @@
-import pygame
 from pygame.locals import *
 from OpenGL.GL import *
 from OpenGL.GLUT import *
@@ -13,17 +12,39 @@ import zipfile
 import gzip
 from PIL import Image
 from PIL import ImageOps
+import argparse
+from os import listdir
+from os.path import isfile, join
+
+
+"""
+usage example:  python paintPlacement.py -d xxxx/minimap2_allCellPinNet.zip -t xxxxx/dumpData_minimap_GENE -o xxxx/dumpData_minimap_GENE
+-d indicate the design information archive, e.g.   benchmarks/VCU108/design/minimap2/minimap2_allCellPinNet.zip
+-t indicate the path where the placement trace archives are dumped. (the trace files are required to be named as DumpAllCoordTrace-xxx.gz currently)
+-o indicate the path where you want to store the output images (png) generated according to the trace files
+"""
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument(
+    "-t", "--TraceDirectory", help="The directory that contains the DumpAllCoordTrace-xxx.gz files", required=True)
+parser.add_argument(
+    "-d", "--DesignInfoFile", help="The Input Archive File Path", required=True)
+parser.add_argument(
+    "-o", "--OutputDirectory", help="The directory specified for the output trace figures and video", required=True)
+args = parser.parse_args()
+
+patternStr = "DumpAllCoordTrace-"
 
 window = 0                                             # glut window number
 width, height = 800,  2000                             # window size
 
+benchmarkName = args.DesignInfoFile.split(
+    "/")[-1].split(".")[0].replace("_allCellPinNet", "")
 
-# benchmarkName = "BLSTM_midDensity"
-benchmarkName = "OpenPiton"
-# benchmarkName = "minimap2"
-# benchmarkName = "MemN2N"
+print("extracting "+(benchmarkName)+"_allCellPinNet from "+args.DesignInfoFile)
 archive = zipfile.ZipFile(
-    "../../benchmarks/VCU108/design/"+(benchmarkName)+"/"+(benchmarkName)+"_allCellPinNet.zip", 'r')
+    args.DesignInfoFile, 'r')
 textFile = archive.read(""+(benchmarkName)+"_allCellPinNet")
 
 VivadoCells = VivadoGraphUtil.loadCellInfoFromFile(textFile)
@@ -91,19 +112,14 @@ def draw():                                            # ondraw is called all th
         else:
             glColor3f(1.0, 1.0, 1.0)
             draw_rect(tX, tY, 2, 2)
-        #draw_rect(tX, tY, 2, 2)
-    # glColor3f(0.0, 1.0, 0.0)
-    # draw_rect(20, 20, 2, 2)
-    # glColor3f(0.0, 0.0, 1.0)
-    # draw_rect(30, 30, 2, 2)
+
     glFlush()
     glPixelStorei(GL_PACK_ALIGNMENT, 1)
     data = glReadPixels(0, 0, width, height, GL_RGBA, GL_UNSIGNED_BYTE)
     image = Image.frombytes("RGBA", (width, height), data)
     # in my case image is flipped top-bottom for some reason
     image = ImageOps.flip(image)
-    image.save(filename.replace('.gz', '.png'), 'PNG')
-    # glutSwapBuffers()
+    image.save(targetImgName, 'PNG')
 
 
 glutInit()                                             # initialize glut
@@ -113,8 +129,23 @@ glutInitWindowSize(width, height)                      # set window size
 glutInitWindowPosition(0, 0)
 # create window with title
 window = glutCreateWindow("placement")
-for fileId in range(0, 90):
-    filename = "DumpAllCoordTrace-"+str(fileId)+".gz"
+
+onlyfiles = [f for f in listdir(args.TraceDirectory) if isfile(
+    join(args.TraceDirectory, f))]
+
+for filename in onlyfiles:
+
+    if (filename.find(patternStr) < 0 or filename.find(".gz") < 0):
+        continue
+    fileId = int(filename.split(patternStr)[1].replace(".gz", ""))
+    filename = args.TraceDirectory + "/"+patternStr+str(fileId)+".gz"
+    targetImgName = args.OutputDirectory + \
+        "/"+patternStr+str(fileId)+".png"
+
+    print("handling archive file: "+filename)
+    print("file id: "+str(fileId))
+    print("The output image file: "+targetImgName)
+
     file = gzip.open(filename, 'rb')
     content = file.read().decode()
 
@@ -130,7 +161,6 @@ for fileId in range(0, 90):
         cnt += 1
 
     # initialization
-
     draw()
     # set draw function callback
     # glutDisplayFunc(draw)
