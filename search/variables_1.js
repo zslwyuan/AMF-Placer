@@ -12,7 +12,7 @@ var searchData=
   ['beltype2bels_9',['BELType2BELs',['../class_device_info.html#a42c9fd529d27e98a2c74252e575715eb',1,'DeviceInfo']]],
   ['beltype2falsebeltype_10',['BELType2FalseBELType',['../class_device_info.html#a5ac1d4aec437045707511c297664d7c8',1,'DeviceInfo']]],
   ['beltypes_11',['BELTypes',['../class_device_info.html#ac5495de041cb166b0747cb67eb73ffad',1,'DeviceInfo']]],
-  ['benchmarkname_12',['benchmarkName',['../namespacepaint_placement.html#adb77d472072b4ee242884b73a474b089',1,'paintPlacement.benchmarkName()'],['../namespacegothrough_benchmarks.html#ae0458c8294593049bdb87ab8c5a650c4',1,'gothroughBenchmarks.benchmarkName()']]],
+  ['benchmarkname_12',['benchmarkName',['../namespacepaint_placement.html#ae0237c75054de03e93ac0039a9a2a6f5',1,'paintPlacement.benchmarkName()'],['../namespacegothrough_benchmarks.html#ae0458c8294593049bdb87ab8c5a650c4',1,'gothroughBenchmarks.benchmarkName()']]],
   ['bingrid_13',['binGrid',['../class_general_spreader_1_1_spread_region_1_1_sub_box.html#a93c4911b267b15154079e7f57537d2be',1,'GeneralSpreader::SpreadRegion::SubBox::binGrid()'],['../class_general_spreader_1_1_spread_region.html#aab16d9af0d2f58e754f3de3c86f7f81a',1,'GeneralSpreader::SpreadRegion::binGrid()'],['../class_general_spreader.html#affad0643bdc6b55c8c1e7226b0b10bbe',1,'GeneralSpreader::binGrid()']]],
   ['binheight_14',['binHeight',['../class_placement_info.html#a8b162eba2b407e8344f12486161f79be',1,'PlacementInfo']]],
   ['binsetinregion_15',['binSetInRegion',['../class_general_spreader_1_1_spread_region.html#aa39d9b66084cba13be45b11cd7dd612a',1,'GeneralSpreader::SpreadRegion']]],

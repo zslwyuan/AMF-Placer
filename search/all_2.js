@@ -14,7 +14,7 @@ var searchData=
   ['beltype2bels_11',['BELType2BELs',['../class_device_info.html#a42c9fd529d27e98a2c74252e575715eb',1,'DeviceInfo']]],
   ['beltype2falsebeltype_12',['BELType2FalseBELType',['../class_device_info.html#a5ac1d4aec437045707511c297664d7c8',1,'DeviceInfo']]],
   ['beltypes_13',['BELTypes',['../class_device_info.html#ac5495de041cb166b0747cb67eb73ffad',1,'DeviceInfo']]],
-  ['benchmarkname_14',['benchmarkName',['../namespacegothrough_benchmarks.html#ae0458c8294593049bdb87ab8c5a650c4',1,'gothroughBenchmarks.benchmarkName()'],['../namespacepaint_placement.html#adb77d472072b4ee242884b73a474b089',1,'paintPlacement.benchmarkName()']]],
+  ['benchmarkname_14',['benchmarkName',['../namespacegothrough_benchmarks.html#ae0458c8294593049bdb87ab8c5a650c4',1,'gothroughBenchmarks.benchmarkName()'],['../namespacepaint_placement.html#ae0237c75054de03e93ac0039a9a2a6f5',1,'paintPlacement.benchmarkName()']]],
   ['benchmarks_20and_20experimental_20results_15',['Benchmarks and Experimental Results',['../_3_benchmark_info.html',1,'']]],
   ['bfscheckedgeattributes_16',['BFSCheckEdgeAttributes',['../namespace_vivado_graph_util.html#a9ee0f53f3e41f2ac9b152da65e07830b',1,'VivadoGraphUtil']]],
   ['bfsexpandviaspecifiedports_17',['BFSExpandViaSpecifiedPorts',['../class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849',1,'InitialPacker::BFSExpandViaSpecifiedPorts(std::string portPattern, DesignInfo::DesignCell *startCell, bool exactMatch=false)'],['../class_initial_packer.html#a56f0933facb5f3e34b8b9f058ee911ac',1,'InitialPacker::BFSExpandViaSpecifiedPorts(std::vector&lt; std::string &gt; portPatterns, DesignInfo::DesignCell *startCell, bool exactMatch=false)']]],

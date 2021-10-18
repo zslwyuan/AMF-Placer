@@ -9,7 +9,7 @@ var searchData=
   ['hasuserdefinedclusterinfo_6',['hasUserDefinedClusterInfo',['../class_global_placer.html#aad3c7d20f363b6c91a801106d9f28daa',1,'GlobalPlacer']]],
   ['hasvalidpqtop_7',['hasValidPQTop',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aee99db97802d1417a59ae695adbaeb23',1,'ParallelCLBPacker::PackingCLBSite']]],
   ['height_8',['height',['../namespaceexport_device_location.html#a3db3509ace0e129ded3495bfe533e3d9',1,'exportDeviceLocation.height()'],['../namespacepaint_placement.html#a965eec88484a73e29a6608c07efe9d26',1,'paintPlacement.height()'],['../namespacefig_process.html#a360351dc40bfbc26eaf5ab8a97c8c05f',1,'figProcess.height()']]],
-  ['help_9',['help',['../namespaceunplace_failure_cells.html#a48a32f0c6534101d0ac8f513646e55dc',1,'unplaceFailureCells.help()'],['../namespaceremove_failure_part_from_tcl.html#a39ff64bc7e5a652862b4dde0cfbb02b2',1,'removeFailurePartFromTcl.help()']]],
+  ['help_9',['help',['../namespaceunplace_failure_cells.html#a48a32f0c6534101d0ac8f513646e55dc',1,'unplaceFailureCells.help()'],['../namespaceremove_failure_part_from_tcl.html#a39ff64bc7e5a652862b4dde0cfbb02b2',1,'removeFailurePartFromTcl.help()'],['../namespacepaint_placement.html#aa82aaedc95a3eeb966ea73d9ca46e770',1,'paintPlacement.help()']]],
   ['hifplacer_5fhashprimes_10',['HiFPlacer_hashprimes',['../const_8h.html#a890056c93bca36c1e4864fcc33f9f54d',1,'const.h']]],
   ['historyaveragedisplacement_11',['historyAverageDisplacement',['../class_global_placer.html#ac0760d86aa9edea6363de0160bc7242f',1,'GlobalPlacer']]],
   ['historyhpwls_12',['historyHPWLs',['../class_global_placer.html#a2e18be150ca186a2337d0f4be37ef54f',1,'GlobalPlacer']]],
