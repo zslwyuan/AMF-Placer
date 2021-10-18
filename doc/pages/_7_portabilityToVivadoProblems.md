@@ -9,6 +9,8 @@ Below are some problems/potential causes that we have found:
 1. We might sometime fail to handle some FF-based macros for clock domain crossing. These are some Xilinx Primitives. In this situation, several FFs will be required to be placed in near sites in specific BEL locations but we fail to figure out the implicit rules behind this situation;
 2. We might fail to handle some small LUTRAMs macros since it seems that Vivado pre-implementation optimization might fix the order of LUTRAMs in one SLICEM CLB which we fail to disable.
 
+The walk-around solution is the same as the next situation.
+
 **2. The exact rules of Vivado FF packing is unclear for us:**
 
 Alias nets are a bit confusing for our placer. In Vivado, nets might have their "Alias" names. It means that a physical net might have different names in different modules. This might cause problems in FF packing in CLB since in one FF control set, the CLK/Reset/Set/Preset signal should be the same. In our implementation, "the same" signal means one physical net, while in Vivado, it seems "the same" signal means that the name is the same. Below is an example, we try to packing the two FFs in benchmark "MiniMap2" into one control set but we fail. Their reset pins are connected to the same physical net but their pins require different alias names. We have submitted a report of this situation to Xilinx.
