@@ -90,6 +90,7 @@ Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placemen
 </center>
 
 **The Runtime Log of ICCAD-2021 Benchmarks**
+
 Since we keep developing AMF-Placer to meet more expectation from reviewers and users (especially for timing optimization, multi-SLR/die optimization and more applications), we provide [the runtime log files](https://github.com/zslwyuan/AMF-Placer/tree/main/benchmarks/testConfig/testConfigSets/outputs) of the old version of placer which generated the result in the ICCAD-2021 paper. We suggest open the log files with VSCode since it seems that VSCode can highlight different parts of the log files for review convenience.
 
 The paper only considered the improvement of wirelength, while now AMF-Placer considers the timing and the clock region impact during global placement and the resultant placements are more practical (e.g., the delays of critical paths are reduced by 20~40%). We are happy to pave the way for people who targets at the practical improvements to gain better results so please feel free to let us know your expectation or demands in the GitHub Issue.
