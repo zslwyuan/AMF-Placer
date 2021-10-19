@@ -304,14 +304,14 @@ void GlobalPlacer::GlobalPlacement_fixedCLB(int iterNum, float pseudoNetWeight)
     for (int i = 0; i < iterNum; i++)
     {
         for (int j = 0; j < lowerBoundIterNum; j++)
-            WLOptimizer->GlobalPlacementQPSolve(pseudoNetWeight, j == 0, !dumpOptTrace);
+            WLOptimizer->GlobalPlacementQPSolve(pseudoNetWeight, j == 0, false);
         if (dumpOptTrace)
         {
             dumpCoord();
         }
 
         print_status("WLOptimizer Iteration#" + std::to_string(i) + " Done");
-
+        print_info("HPWL after QP=" + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
         generalSpreader = nullptr;
 
         pseudoNetWeight *= 1.05;

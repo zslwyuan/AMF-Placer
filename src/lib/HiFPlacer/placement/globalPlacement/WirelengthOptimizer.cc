@@ -88,8 +88,7 @@ void WirelengthOptimizer::GlobalPlacementQPSolve(float pesudoNetWeight, bool fir
     if (verbose)
         print_status("Solver Done.");
 
-    if (forwardSolutionToNextIteration)
-        solverLoadFixedData();
+    // solverLoadFixedData();
 
     solverWriteBackData();
 
@@ -112,12 +111,26 @@ void WirelengthOptimizer::solverLoadFixedData()
     assert(xSolver->solverSettings.solutionForward == ySolver->solverSettings.solutionForward);
     if (xSolver->solverSettings.solutionForward)
     {
-        for (unsigned int tmpFixedPUId = 0; tmpFixedPUId < placementInfo->getFixedPlacementUnits().size();
-             tmpFixedPUId++)
+        for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
         {
-            auto tmpPU = placementInfo->getFixedPlacementUnits()[tmpFixedPUId];
-            xSolver->solverData.oriSolution[tmpPU->getId()] = tmpPU->X();
-            ySolver->solverData.oriSolution[tmpPU->getId()] = tmpPU->Y();
+            auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
+            if (tmpPU->isFixed())
+            {
+                xSolver->solverData.oriSolution[tmpPUId] = tmpPU->X();
+                ySolver->solverData.oriSolution[tmpPUId] = tmpPU->Y();
+            }
+        }
+    }
+    else
+    {
+        for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+        {
+            auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
+            if (tmpPU->isFixed())
+            {
+                xSolver->solverData.solution[tmpPUId] = tmpPU->X();
+                ySolver->solverData.solution[tmpPUId] = tmpPU->Y();
+            }
         }
     }
 }
@@ -130,7 +143,7 @@ void WirelengthOptimizer::solverWriteBackData()
         for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
         {
             auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
-            if (tmpPU->isLocked())
+            if (tmpPU->isFixed())
                 continue;
             float fX = xSolver->solverData.oriSolution[tmpPUId];
             float fY = ySolver->solverData.oriSolution[tmpPUId];
@@ -143,7 +156,7 @@ void WirelengthOptimizer::solverWriteBackData()
         for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
         {
             auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
-            if (tmpPU->isLocked())
+            if (tmpPU->isFixed())
                 continue;
             float fX = xSolver->solverData.solution[tmpPUId];
             float fY = ySolver->solverData.solution[tmpPUId];
