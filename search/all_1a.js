@@ -2,7 +2,7 @@ var searchData=
 [
   ['_7eamfplacer_0',['~AMFPlacer',['../class_a_m_f_placer.html#afff8ae40c342d0cf1f78978b62127564',1,'AMFPlacer']]],
   ['_7eclblegalizer_1',['~CLBLegalizer',['../class_c_l_b_legalizer.html#a39d4137e05f424217b131eec739f76f9',1,'CLBLegalizer']]],
-  ['_7eclockcolumn_2',['~ClockColumn',['../class_device_info_1_1_clock_region_1_1_clock_column.html#a641b6f024a426a0d89ca7f4d85d315d5',1,'DeviceInfo::ClockRegion::ClockColumn']]],
+  ['_7eclockcolumn_2',['~ClockColumn',['../class_device_info_1_1_clock_column.html#a442209b103c8e4415dd22d0dff720675',1,'DeviceInfo::ClockColumn']]],
   ['_7eclockregion_3',['~ClockRegion',['../class_device_info_1_1_clock_region.html#a02c29dee39fdfbfd15d42759d0d37436',1,'DeviceInfo::ClockRegion']]],
   ['_7eclusternet_4',['~ClusterNet',['../class_placement_info_1_1_cluster_net.html#a90d8721535bbee65051436e2820074e0',1,'PlacementInfo::ClusterNet']]],
   ['_7eclusterplacer_5',['~ClusterPlacer',['../class_cluster_placer.html#a0ca64fdff91000c046420b66bec9a89b',1,'ClusterPlacer']]],

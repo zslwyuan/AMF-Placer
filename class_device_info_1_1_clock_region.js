@@ -1,12 +1,11 @@
 var class_device_info_1_1_clock_region =
 [
-    [ "ClockColumn", "class_device_info_1_1_clock_region_1_1_clock_column.html", "class_device_info_1_1_clock_region_1_1_clock_column" ],
     [ "ClockRegion", "class_device_info_1_1_clock_region.html#a742fee4138c51d1d39d2fb8963c3f9e3", null ],
     [ "~ClockRegion", "class_device_info_1_1_clock_region.html#a02c29dee39fdfbfd15d42759d0d37436", null ],
     [ "addClockAndCell", "class_device_info_1_1_clock_region.html#adf8f310364920cc655d0a7e22061e605", null ],
     [ "addSite", "class_device_info_1_1_clock_region.html#a13a7c2a81aeb7d693eaecc6593aa3e43", null ],
     [ "getBottom", "class_device_info_1_1_clock_region.html#aa5bde88fe848873f1abede241a1d5a57", null ],
-    [ "getClockColumns", "class_device_info_1_1_clock_region.html#ac7aef107970e0e82ced921a94eb849e3", null ],
+    [ "getClockColumns", "class_device_info_1_1_clock_region.html#a7d72d7a84403733d3b2aa38ee787eb79", null ],
     [ "getLeft", "class_device_info_1_1_clock_region.html#a9962a5906837db3837dd9871a72112e0", null ],
     [ "getMaxUtilizationOfClockColumns", "class_device_info_1_1_clock_region.html#a03bf0f8ed2eaa2b8117c11f6e474c2cc", null ],
     [ "getRight", "class_device_info_1_1_clock_region.html#a159da42d1d44716c450c900bbdfbd703", null ],
@@ -19,7 +18,7 @@ var class_device_info_1_1_clock_region =
     [ "setTop", "class_device_info_1_1_clock_region.html#a17fedcc190a3f220929fd16fd0bc1e0e", null ],
     [ "bottomSiteY", "class_device_info_1_1_clock_region.html#accb8b3029a3a2e409cf04905e4bbc0b5", null ],
     [ "bottomY", "class_device_info_1_1_clock_region.html#aed0f5051f4097cf14e4b8a89bf491d17", null ],
-    [ "clockColumns", "class_device_info_1_1_clock_region.html#ae70d4c5f2769bfe28b422b3b77140906", null ],
+    [ "clockColumns", "class_device_info_1_1_clock_region.html#a075171470ae59388e9a78d9bfecc5a82", null ],
     [ "colHeight", "class_device_info_1_1_clock_region.html#aaacc5a84dc81dc4cd69755fd2d470c85", null ],
     [ "columnNumY", "class_device_info_1_1_clock_region.html#a839d738a4e69f56c6b9d49c57f143b87", null ],
     [ "colWidth", "class_device_info_1_1_clock_region.html#a438ceb50d9b5b7b97d0aa25ab0b0520f", null ],

@@ -16,7 +16,7 @@ var searchData=
   ['rese_13',['resE',['../class_s_a_placer.html#a8da465dba3220086e8279b244745a642',1,'SAPlacer']]],
   ['restartnum_14',['restartNum',['../class_s_a_placer.html#a52755b2bd94b74f15b9fcc158b5cecd5',1,'SAPlacer']]],
   ['results_15',['results',['../namespacecoord_density_visualization.html#aa0d19ee9b35fb1506dd808f2815cb2dc',1,'coordDensityVisualization']]],
-  ['right_16',['right',['../class_device_info_1_1_clock_region_1_1_clock_column.html#a99e3841e366e53eef652a412b3ad19b5',1,'DeviceInfo::ClockRegion::ClockColumn::right()'],['../class_placement_info_1_1_placement_macro.html#abae4551880e70a6a4571da4a10fc6ceb',1,'PlacementInfo::PlacementMacro::right()']]],
+  ['right_16',['right',['../class_device_info_1_1_clock_column.html#a7331d28ca2378023894c0f1c0c3762d2',1,'DeviceInfo::ClockColumn::right()'],['../class_placement_info_1_1_placement_macro.html#abae4551880e70a6a4571da4a10fc6ceb',1,'PlacementInfo::PlacementMacro::right()']]],
   ['right2left_17',['right2left',['../class_min_cost_bipartite_matcher.html#a9c13cb87cc71bf306b790db39e3a66e2',1,'MinCostBipartiteMatcher']]],
   ['rightbinx_18',['rightBinX',['../class_general_spreader_1_1_spread_region_1_1_sub_box.html#a933f56d3a8422546657f24aea78a353d',1,'GeneralSpreader::SpreadRegion::SubBox::rightBinX()'],['../class_general_spreader_1_1_spread_region.html#ab060d95f73a19d6adaf58da0c8313d31',1,'GeneralSpreader::SpreadRegion::rightBinX()']]],
   ['rightpinid_5fnet_19',['rightPinId_net',['../class_placement_info_1_1_placement_net.html#a717cd90722bcb26e637992cb6bd7ae29',1,'PlacementInfo::PlacementNet']]],

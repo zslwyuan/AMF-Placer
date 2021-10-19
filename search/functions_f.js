@@ -29,7 +29,7 @@ var searchData=
   ['resetallsitemapping_26',['resetAllSiteMapping',['../class_device_info.html#af2a89acda8ffdd35889bf07c0b0e7806',1,'DeviceInfo']]],
   ['resetbinshrinkratio_27',['resetBinShrinkRatio',['../class_placement_info_1_1_placement_bin_info.html#a393cc1c6f7e72cf2cb36a2bdc67a08f9',1,'PlacementInfo::PlacementBinInfo']]],
   ['resetcelloccupationtodefault_28',['resetCellOccupationToDefault',['../class_placement_info_1_1_compatible_placement_table.html#a3b176f3a41c580bc77b3859c94116107',1,'PlacementInfo::CompatiblePlacementTable']]],
-  ['resetclockinfo_29',['resetClockInfo',['../class_device_info_1_1_clock_region_1_1_clock_column.html#a25592faf8ff12e0cb486cfad95eebc53',1,'DeviceInfo::ClockRegion::ClockColumn']]],
+  ['resetclockinfo_29',['resetClockInfo',['../class_device_info_1_1_clock_column.html#a8b616f7cadcdcd47016afdfb2b7df8e0',1,'DeviceInfo::ClockColumn']]],
   ['resetclockutilizationinfo_30',['resetClockUtilizationInfo',['../class_device_info_1_1_clock_region.html#af8157ecbe8d81934f270655a18fb85e3',1,'DeviceInfo::ClockRegion']]],
   ['resetclusterinfo_31',['resetClusterInfo',['../class_cluster_placer.html#a8b0b60255df9780c038e5a9d6cf50e3b',1,'ClusterPlacer']]],
   ['resetelementbingrid_32',['resetElementBinGrid',['../class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d',1,'PlacementInfo']]],

@@ -1,5 +1,10 @@
 var NAVTREEINDEX8 =
 {
+"class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17":[9,0,19,3],
+"class_placement_timing_info.html#a8b8b3678712b093111c9077ab8b9fd6f":[9,0,19,11],
+"class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc":[9,0,19,4],
+"class_placement_timing_info.html#ab971c7a27e2eb33255544d92792195fe":[9,0,19,2],
+"class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073":[9,0,19,6],
 "class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850":[9,0,19,7],
 "class_placement_timing_info.html#af7d6bf0dd6c2b3cd47b124860c86ea26":[9,0,19,10],
 "class_placement_timing_info_1_1_timing_graph.html":[9,0,19,0],
@@ -244,10 +249,5 @@ var NAVTREEINDEX8 =
 "class_wirelength_optimizer.html#a31ef65d51cd3a2cee148c240a4f7ce02":[9,0,24,21],
 "class_wirelength_optimizer.html#a3447060fb5a4de21b98f72ec5963883e":[9,0,24,19],
 "class_wirelength_optimizer.html#a34e4590c4470c35ec96d33a72edb5dbe":[9,0,24,11],
-"class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265":[9,0,24,6],
-"class_wirelength_optimizer.html#a4072816583e5c8923cc35736f84f0393":[9,0,24,28],
-"class_wirelength_optimizer.html#a431184067de089857b584da070404661":[9,0,24,0],
-"class_wirelength_optimizer.html#a49fe83507a34820e18b724b9e16cf65a":[9,0,24,24],
-"class_wirelength_optimizer.html#a4c0e97d41ee7c72b3ada1e179d1edca5":[9,0,24,20],
-"class_wirelength_optimizer.html#a5ab49603c6a11b15236984251dfe0b69":[9,0,24,31]
+"class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265":[9,0,24,6]
 };

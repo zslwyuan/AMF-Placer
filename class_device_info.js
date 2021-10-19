@@ -1,5 +1,6 @@
 var class_device_info =
 [
+    [ "ClockColumn", "class_device_info_1_1_clock_column.html", "class_device_info_1_1_clock_column" ],
     [ "ClockRegion", "class_device_info_1_1_clock_region.html", "class_device_info_1_1_clock_region" ],
     [ "DeviceBEL", "class_device_info_1_1_device_b_e_l.html", "class_device_info_1_1_device_b_e_l" ],
     [ "DeviceElement", "class_device_info_1_1_device_element.html", "class_device_info_1_1_device_element" ],

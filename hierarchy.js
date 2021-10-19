@@ -11,7 +11,7 @@ var hierarchy =
     ] ],
     [ "PlacementInfo::CellBinInfo", "struct_placement_info_1_1_cell_bin_info.html", null ],
     [ "CLBLegalizer", "class_c_l_b_legalizer.html", null ],
-    [ "DeviceInfo::ClockRegion::ClockColumn", "class_device_info_1_1_clock_region_1_1_clock_column.html", null ],
+    [ "DeviceInfo::ClockColumn", "class_device_info_1_1_clock_column.html", null ],
     [ "DeviceInfo::ClockRegion", "class_device_info_1_1_clock_region.html", null ],
     [ "PlacementInfo::ClusterNet", "class_placement_info_1_1_cluster_net.html", null ],
     [ "ClusterPlacer", "class_cluster_placer.html", null ],

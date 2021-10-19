@@ -8,7 +8,7 @@ var dir_90e976a79c54d109e30634fbea6d7ea0 =
       [ "DeviceInfo::DeviceSite", "class_device_info_1_1_device_site.html", "class_device_info_1_1_device_site" ],
       [ "DeviceInfo::DeviceSite::DeviceSitePinInfos", "class_device_info_1_1_device_site_1_1_device_site_pin_infos.html", "class_device_info_1_1_device_site_1_1_device_site_pin_infos" ],
       [ "DeviceInfo::DeviceTile", "class_device_info_1_1_device_tile.html", "class_device_info_1_1_device_tile" ],
-      [ "DeviceInfo::ClockRegion", "class_device_info_1_1_clock_region.html", "class_device_info_1_1_clock_region" ],
-      [ "DeviceInfo::ClockRegion::ClockColumn", "class_device_info_1_1_clock_region_1_1_clock_column.html", "class_device_info_1_1_clock_region_1_1_clock_column" ]
+      [ "DeviceInfo::ClockColumn", "class_device_info_1_1_clock_column.html", "class_device_info_1_1_clock_column" ],
+      [ "DeviceInfo::ClockRegion", "class_device_info_1_1_clock_region.html", "class_device_info_1_1_clock_region" ]
     ] ]
 ];

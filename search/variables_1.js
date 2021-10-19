@@ -20,7 +20,7 @@ var searchData=
   ['binsinregion_17',['binsInRegion',['../class_general_spreader_1_1_spread_region.html#abfb3aabecffc6c65611696b9dfdaf850',1,'GeneralSpreader::SpreadRegion']]],
   ['binwidth_18',['binWidth',['../class_placement_info.html#ac05ca009b02cfd9c348e8473409f3031',1,'PlacementInfo']]],
   ['boms_19',['BOMS',['../namespacecoord_density_visualization.html#a233c53c254397573b8c736852b0d588b',1,'coordDensityVisualization']]],
-  ['bottom_20',['bottom',['../class_device_info_1_1_clock_region_1_1_clock_column.html#a778cf7e602e3c0aed3efd358bdb3bb7d',1,'DeviceInfo::ClockRegion::ClockColumn::bottom()'],['../class_placement_info_1_1_placement_macro.html#a85049c8d9bc02d847d28d76dd8e8b5bf',1,'PlacementInfo::PlacementMacro::bottom()']]],
+  ['bottom_20',['bottom',['../class_device_info_1_1_clock_column.html#a044f1c23365cd90610ac41f817e742af',1,'DeviceInfo::ClockColumn::bottom()'],['../class_placement_info_1_1_placement_macro.html#a85049c8d9bc02d847d28d76dd8e8b5bf',1,'PlacementInfo::PlacementMacro::bottom()']]],
   ['bottombiny_21',['bottomBinY',['../class_general_spreader_1_1_spread_region_1_1_sub_box.html#acb6bdab6b1b4dc35d87cdf95a0f220d7',1,'GeneralSpreader::SpreadRegion::SubBox::bottomBinY()'],['../class_general_spreader_1_1_spread_region.html#a3c489164da88a0babd1ec4ba6ffd620e',1,'GeneralSpreader::SpreadRegion::bottomBinY()']]],
   ['bottompinid_5fnet_22',['bottomPinId_net',['../class_placement_info_1_1_placement_net.html#a41166f41373df1fd4a131a0eeeda4680',1,'PlacementInfo::PlacementNet']]],
   ['bottompiny_23',['bottomPinY',['../class_placement_info_1_1_placement_net.html#a4c86c94f3690489ce7936a6a6a923f85',1,'PlacementInfo::PlacementNet']]],
