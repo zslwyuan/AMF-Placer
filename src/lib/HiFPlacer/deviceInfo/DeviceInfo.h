@@ -91,6 +91,7 @@ class DeviceInfo
     class DeviceSite;
     class DeviceTile;
     class ClockRegion;
+    class ClockColumn;
 
     /**
      * @brief BEL(Basic Element of Logic), the smallest undividable element
@@ -349,10 +350,16 @@ class DeviceInfo
             clockRegion = _clockRegion;
         }
 
+        inline void setClockHalfColumn(ClockColumn *_clockHalfColumn)
+        {
+            clockHalfColumn = _clockHalfColumn;
+        }
+
       private:
         std::string siteType;
         DeviceTile *tile;
         ClockRegion *clockRegion = nullptr;
+        ClockColumn *clockHalfColumn = nullptr;
         std::vector<DeviceBEL *> childrenBELs;
         DeviceSite *parentSite; // mainly to handle overlapped sites
         std::vector<DeviceSite *> childrenSites;
@@ -419,6 +426,110 @@ class DeviceInfo
     };
 
     /**
+     * @brief a column of site in clock region
+     *
+     * clock region contains an array of clock regions
+     *
+     */
+    class ClockColumn
+    {
+      public:
+        ClockColumn()
+        {
+            sites.clear();
+            clockNetId2Cnt.clear();
+            clockNetId2CellIds.clear();
+            clockNetId2Sites.clear();
+        };
+        ~ClockColumn()
+        {
+            sites.clear();
+            clockNetId2Cnt.clear();
+            clockNetId2CellIds.clear();
+            clockNetId2Sites.clear();
+        }
+
+        void addSite(DeviceSite *curSite)
+        {
+            sites.push_back(curSite);
+        }
+
+        /**
+         * @brief reset the clock net information, including cells in it
+         *
+         */
+        void resetClockInfo()
+        {
+            clockNetId2Cnt.clear();
+            clockNetId2CellIds.clear();
+            clockNetId2Sites.clear();
+        }
+
+        /**
+         * @brief add a cell in a specific clock domain
+         *
+         * @param clockNetId
+         * @param cellId
+         */
+        inline void addClockNetId(int clockNetId, int cellId)
+        {
+            if (clockNetId2Cnt.find(clockNetId) == clockNetId2Cnt.end())
+            {
+                clockNetId2Cnt[clockNetId] = 0;
+            }
+            clockNetId2Cnt[clockNetId] += 1;
+            if (clockNetId2CellIds.find(clockNetId) == clockNetId2CellIds.end())
+            {
+                clockNetId2CellIds[clockNetId] = std::vector<int>();
+            }
+            clockNetId2CellIds[clockNetId].push_back(cellId);
+        }
+
+        inline int getClockNum()
+        {
+            return clockNetId2Cnt.size();
+        }
+
+        /**
+         * @brief Set the Boundary of the clock column
+         *
+         * @param _left
+         * @param _right
+         * @param _top
+         * @param _bottom
+         */
+        inline void setBoundary(float _left, float _right, float _top, float _bottom)
+        {
+            left = _left;
+            right = _right;
+            top = _top;
+            bottom = _bottom;
+        }
+
+        inline std::map<int, std::vector<int>> &getClockNetId2CellIds()
+        {
+            return clockNetId2CellIds;
+        }
+
+      private:
+        std::vector<DeviceSite *> sites;
+        float left, right, top, bottom;
+
+        /**
+         * @brief counter for the elements for each clock in the clock column
+         *
+         */
+        std::map<int, int> clockNetId2Cnt;
+
+        /**
+         * @brief the elements for each clock in the clock column
+         *
+         */
+        std::map<int, std::vector<int>> clockNetId2CellIds;
+        std::map<int, DeviceSite *> clockNetId2Sites;
+    };
+
+    /**
      * @brief class for clock regions on FPGA
      *
      * Clock region is a concept in the FPGA clocking to constrain the number of clocks in a specific region
@@ -450,6 +561,15 @@ class DeviceInfo
         ~ClockRegion()
         {
             sites.clear();
+            for (auto &row : clockColumns)
+            {
+                for (auto clockColumn : row)
+                {
+                    if (clockColumn)
+                        delete clockColumn;
+                }
+            }
+            clockColumns.clear();
         }
 
         /**
@@ -539,110 +659,6 @@ class DeviceInfo
         void mapSiteToClockColumns();
 
         /**
-         * @brief a column of site in clock region
-         *
-         * clock region contains an array of clock regions
-         *
-         */
-        class ClockColumn
-        {
-          public:
-            ClockColumn()
-            {
-                sites.clear();
-                clockNetId2Cnt.clear();
-                clockNetId2CellIds.clear();
-                clockNetId2Sites.clear();
-            };
-            ~ClockColumn()
-            {
-                sites.clear();
-                clockNetId2Cnt.clear();
-                clockNetId2CellIds.clear();
-                clockNetId2Sites.clear();
-            }
-
-            void addSite(DeviceSite *curSite)
-            {
-                sites.push_back(curSite);
-            }
-
-            /**
-             * @brief reset the clock net information, including cells in it
-             *
-             */
-            void resetClockInfo()
-            {
-                clockNetId2Cnt.clear();
-                clockNetId2CellIds.clear();
-                clockNetId2Sites.clear();
-            }
-
-            /**
-             * @brief add a cell in a specific clock domain
-             *
-             * @param clockNetId
-             * @param cellId
-             */
-            inline void addClockNetId(int clockNetId, int cellId)
-            {
-                if (clockNetId2Cnt.find(clockNetId) == clockNetId2Cnt.end())
-                {
-                    clockNetId2Cnt[clockNetId] = 0;
-                }
-                clockNetId2Cnt[clockNetId] += 1;
-                if (clockNetId2CellIds.find(clockNetId) == clockNetId2CellIds.end())
-                {
-                    clockNetId2CellIds[clockNetId] = std::vector<int>();
-                }
-                clockNetId2CellIds[clockNetId].push_back(cellId);
-            }
-
-            inline int getClockNum()
-            {
-                return clockNetId2Cnt.size();
-            }
-
-            /**
-             * @brief Set the Boundary of the clock column
-             *
-             * @param _left
-             * @param _right
-             * @param _top
-             * @param _bottom
-             */
-            inline void setBoundary(float _left, float _right, float _top, float _bottom)
-            {
-                left = _left;
-                right = _right;
-                top = _top;
-                bottom = _bottom;
-            }
-
-            inline std::map<int, std::vector<int>> &getClockNetId2CellIds()
-            {
-                return clockNetId2CellIds;
-            }
-
-          private:
-            std::vector<DeviceSite *> sites;
-            float left, right, top, bottom;
-
-            /**
-             * @brief counter for the elements for each clock in the clock column
-             *
-             */
-            std::map<int, int> clockNetId2Cnt;
-
-            /**
-             * @brief the elements for each clock in the clock column
-             *
-             */
-            std::map<int, std::vector<int>> clockNetId2CellIds;
-            std::map<int, DeviceSite *> clockNetId2Sites;
-        };
-
-        /**
          * @brief reset the clock utilization for each column in the clock region
          *
          */
@@ -650,9 +666,9 @@ class DeviceInfo
         {
             for (auto &row : clockColumns)
             {
-                for (auto &clockColumn : row)
+                for (auto clockColumn : row)
                 {
-                    clockColumn.resetClockInfo();
+                    clockColumn->resetClockInfo();
                 }
             }
         }
@@ -692,7 +708,7 @@ class DeviceInfo
             {
                 colY = clockColumns.size() - 1;
             }
-            clockColumns[colY][colX].addClockNetId(clockNetId, cellId);
+            clockColumns[colY][colX]->addClockNetId(clockNetId, cellId);
         }
 
         /**
@@ -705,25 +721,28 @@ class DeviceInfo
             int res = 0;
             for (auto &row : clockColumns)
             {
-                for (auto &clockColumn : row)
+                for (auto clockColumn : row)
                 {
-                    if (clockColumn.getClockNum() > res)
+                    if (clockColumn)
                     {
-                        res = clockColumn.getClockNum();
+                        if (clockColumn->getClockNum() > res)
+                        {
+                            res = clockColumn->getClockNum();
+                        }
                     }
                 }
             }
             return res;
         }
 
-        inline std::vector<std::vector<ClockColumn>> &getClockColumns()
+        inline std::vector<std::vector<ClockColumn *>> &getClockColumns()
         {
             return clockColumns;
         }
 
       private:
         std::vector<DeviceSite *> sites;
-        std::vector<std::vector<ClockColumn>> clockColumns;
+        std::vector<std::vector<ClockColumn *>> clockColumns;
         int columnNumY = 2;
         int gridX, gridY;
         float leftX, rightX, topY, bottomY;

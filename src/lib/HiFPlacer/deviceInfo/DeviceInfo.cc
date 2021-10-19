@@ -258,8 +258,15 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
         }
     }
 
-    clockColumns = std::vector<std::vector<ClockColumn>>(
-        columnNumY, std::vector<ClockColumn>(rightSiteX - leftSiteX + 1, ClockColumn()));
+    clockColumns = std::vector<std::vector<ClockColumn *>>(
+        columnNumY, std::vector<ClockColumn *>(rightSiteX - leftSiteX + 1, nullptr));
+    for (int levelY = 0; levelY < columnNumY; levelY++)
+    {
+        for (unsigned int colOffset = 0; colOffset < clockColumns[levelY].size(); colOffset++)
+        {
+            clockColumns[levelY][colOffset] = new ClockColumn();
+        }
+    }
 
     int eachLevelY = (topSiteY - bottomSiteY + 1) / columnNumY;
     for (auto curSite : sites)
@@ -274,7 +281,8 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
         assert(levelY < (int)clockColumns.size());
         assert(curSite->getSiteX() - leftSiteX >= 0);
         assert(curSite->getSiteX() - leftSiteX < (int)clockColumns[levelY].size());
-        clockColumns[levelY][curSite->getSiteX() - leftSiteX].addSite(curSite);
+        clockColumns[levelY][curSite->getSiteX() - leftSiteX]->addSite(curSite);
+        curSite->setClockHalfColumn(clockColumns[levelY][curSite->getSiteX() - leftSiteX]);
     }
 
     assert(clockColumns.size() > 0);
@@ -287,7 +295,7 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
         float offsetX = leftX;
         for (unsigned int colOffset = 0; colOffset < clockColumns[levelY].size(); colOffset++)
         {
-            clockColumns[levelY][colOffset].setBoundary(offsetX, offsetX + colWidth, offsetY + colHeight, offsetY);
+            clockColumns[levelY][colOffset]->setBoundary(offsetX, offsetX + colWidth, offsetY + colHeight, offsetY);
             offsetX += colWidth;
         }
         offsetY += colHeight;

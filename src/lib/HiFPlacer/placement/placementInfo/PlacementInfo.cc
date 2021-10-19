@@ -1325,11 +1325,11 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
         {
             for (auto &row : clockRegions[i][j]->getClockColumns())
             {
-                for (auto &clockColumn : row)
+                for (auto clockColumn : row)
                 {
-                    if (clockColumn.getClockNum() > 10)
+                    if (clockColumn->getClockNum() > 10)
                     {
-                        for (auto &pair : clockColumn.getClockNetId2CellIds())
+                        for (auto &pair : clockColumn->getClockNetId2CellIds())
                         {
                             for (auto cellId : pair.second)
                             {

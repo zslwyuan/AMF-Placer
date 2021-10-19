@@ -997,6 +997,26 @@ class DesignInfo
             return oriCellType;
         }
 
+        /**
+         * @brief add a clock net which is connected to this cell for later legalization
+         *
+         * @param aClockNet
+         */
+        inline void addClockNet(DesignNet *aClockNet)
+        {
+            clockNetPtrs.insert(aClockNet);
+        }
+
+        /**
+         * @brief Get the clock nets connected to this cell for later legalization
+         *
+         * @return std::vector<DesignNet *>&
+         */
+        inline std::set<DesignNet *> &getClockNets()
+        {
+            return clockNetPtrs;
+        }
+
       private:
         std::vector<DesignPin *> pinPtrs;
         std::vector<DesignPin *> inputPinPtrs;
@@ -1005,6 +1025,7 @@ class DesignInfo
         std::vector<DesignNet *> netPtrs;
         std::vector<DesignNet *> inputNetPtrs;
         std::vector<DesignNet *> outputNetPtrs;
+        std::set<DesignNet *> clockNetPtrs;
         std::vector<std::string> netNames;
         DesignCellType cellType;
         DesignCellType oriCellType;

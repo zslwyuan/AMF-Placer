@@ -325,6 +325,7 @@ void DesignInfo::loadClocks(std::string clockFileName)
                     if (isDesignClock(tmpPin->getNet()))
                     {
                         clock2Cells[tmpPin->getNet()].insert(tmpCell);
+                        tmpCell->addClockNet(tmpPin->getNet());
                     }
                 }
             }
