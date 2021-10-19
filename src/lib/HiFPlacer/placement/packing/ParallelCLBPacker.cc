@@ -1166,14 +1166,16 @@ void ParallelCLBPacker::dumpDSPBRAMPlacementTcl(std::ofstream &outfileTcl)
                     auto targetSite = DSPBRAM_LegalSitePair.second[i];
                     if (!curCell->isVirtualCell())
                     {
-                        if (curCell->getOriCellType() == DesignInfo::CellType_RAMB36E2)
+                        if (curCell->getOriCellType() == DesignInfo::CellType_RAMB36E2 ||
+                            curCell->getOriCellType() == DesignInfo::CellType_FIFO36E2)
                         {
                             assert(targetSite->getSiteY() % 2 == 0);
                             placementStr += "  " + curCell->getName() + " RAMB36_X" +
                                             std::to_string(targetSite->getSiteX()) + "Y" +
                                             std::to_string(targetSite->getSiteY() / 2) + "\n";
                         }
-                        else if (curCell->getOriCellType() == DesignInfo::CellType_RAMB18E2)
+                        else if (curCell->getOriCellType() == DesignInfo::CellType_RAMB18E2 ||
+                                 curCell->getOriCellType() == DesignInfo::CellType_FIFO18E2)
                         {
                             if (targetSite->getSiteY() % 2)
                             {

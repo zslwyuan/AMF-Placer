@@ -863,7 +863,8 @@ class DesignInfo
         }
         inline bool isBRAM()
         {
-            return cellType == CellType_RAMB18E2 || cellType == CellType_RAMB36E2;
+            return cellType == CellType_RAMB18E2 || cellType == CellType_RAMB36E2 || cellType == CellType_FIFO18E2 ||
+                   cellType == CellType_FIFO36E2;
         }
         inline bool isMux()
         {
@@ -1207,7 +1208,8 @@ class DesignInfo
 
     inline static bool isBRAM(DesignCellType cellType)
     {
-        return cellType == CellType_RAMB36E2 || cellType == CellType_RAMB18E2;
+        return cellType == CellType_RAMB36E2 || cellType == CellType_RAMB18E2 || cellType == CellType_FIFO18E2 ||
+               cellType == CellType_FIFO36E2;
     }
 
     inline static bool isMux(DesignCellType cellType)

@@ -601,10 +601,13 @@ void MacroLegalizer::findPossibleLegalLocation(bool fixedColumn)
                     if (matchedSites.find(curSite) != matchedSites.end())
                         continue;
 
-                    if (curCellType == DesignInfo::CellType_RAMB36E2 && curSite->getSiteY() % 2 != 0)
+                    if ((curCellType == DesignInfo::CellType_RAMB36E2 ||
+                         curCellType == DesignInfo::CellType_FIFO36E2) &&
+                        curSite->getSiteY() % 2 != 0)
                         continue;
-                    if (curCellType == DesignInfo::CellType_RAMB18E2 && curCell->isVirtualCell() &&
-                        curSite->getSiteY() % 2 != 1)
+                    if ((curCellType == DesignInfo::CellType_RAMB18E2 ||
+                         curCellType == DesignInfo::CellType_FIFO18E2) &&
+                        curCell->isVirtualCell() && curSite->getSiteY() % 2 != 1)
                         continue;
 
                     macro2Sites[curCell].push_back(curSite);

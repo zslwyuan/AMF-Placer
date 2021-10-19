@@ -143,9 +143,12 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::fo
             print_warning("Reach level#" + std::to_string(curLevel) + " has " + std::to_string(curLevelIds.size()) +
                           " nodes. It might mean that there are loops in timing graph.");
             std::vector<int> nodeInPath;
-            nodeInPath.clear();
-            nodeInPath.push_back(curLevelIds[0]);
-            findALoopFromNode(nodeInPath, curLevelIds[0], curLevelIds[0], 0);
+            for (auto tmpId : curLevelIds)
+            {
+                nodeInPath.clear();
+                nodeInPath.push_back(tmpId);
+                findALoopFromNode(nodeInPath, tmpId, tmpId, 0);
+            }
         }
     }
 

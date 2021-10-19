@@ -59,6 +59,8 @@ GlobalPlacer::GlobalPlacer(PlacementInfo *placementInfo, std::map<std::string, s
     macroTypesToLegalize.clear();
     macroTypesToLegalize.push_back(DesignInfo::CellType_RAMB18E2);
     macroTypesToLegalize.push_back(DesignInfo::CellType_RAMB36E2);
+    macroTypesToLegalize.push_back(DesignInfo::CellType_FIFO18E2);
+    macroTypesToLegalize.push_back(DesignInfo::CellType_FIFO36E2);
     macroTypesToLegalize.push_back(DesignInfo::CellType_DSP48E2);
     BRAMDSPLegalizer = new MacroLegalizer("BRAMDSPLegalizer", placementInfo, placementInfo->getDeviceInfo(),
                                           macroTypesToLegalize, JSONCfg);

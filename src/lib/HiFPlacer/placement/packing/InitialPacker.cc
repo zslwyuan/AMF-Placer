@@ -369,7 +369,8 @@ void InitialPacker::findBRAMMacros()
 
         std::vector<DesignInfo::DesignCell *> curMacroCores = BFSExpandViaSpecifiedPorts("CAS", curCell, false);
 
-        if (curMacroCores.size() <= 1 && curCell->getCellType() != DesignInfo::CellType_RAMB36E2)
+        if (curMacroCores.size() <= 1 && curCell->getCellType() != DesignInfo::CellType_RAMB36E2 &&
+            curCell->getCellType() != DesignInfo::CellType_FIFO36E2)
             continue;
 
         PlacementInfo::PlacementMacro *curMacro = new PlacementInfo::PlacementMacro(
@@ -378,7 +379,8 @@ void InitialPacker::findBRAMMacros()
         float coreOffset = 0;
         for (unsigned int i = 0; i < curMacroCores.size(); i++)
         {
-            if (curMacroCores[i]->getCellType() == DesignInfo::CellType_RAMB36E2)
+            if (curMacroCores[i]->getCellType() == DesignInfo::CellType_RAMB36E2 ||
+                curMacroCores[i]->getCellType() == DesignInfo::CellType_FIFO36E2)
             {
                 curMacro->addOccupiedSite(coreOffset, 1.0);
                 curMacro->addCell(curMacroCores[i], curMacroCores[i]->getCellType(), 0, coreOffset);
@@ -398,7 +400,8 @@ void InitialPacker::findBRAMMacros()
 
             if (i < curMacroCores.size() - 1)
             {
-                if (curMacroCores[i]->getCellType() == DesignInfo::CellType_RAMB36E2)
+                if (curMacroCores[i]->getCellType() == DesignInfo::CellType_RAMB36E2 ||
+                    curMacroCores[i]->getCellType() == DesignInfo::CellType_FIFO36E2)
                     coreOffset += BRAM36Height;
                 else
                     coreOffset += BRAM18Height;
