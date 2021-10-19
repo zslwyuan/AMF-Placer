@@ -1,12 +1,8 @@
 <map id="PlacementInfo::getFixedPlacementUnits" name="PlacementInfo::getFixedPlacementUnits">
-<area shape="rect" id="node1" title=" " alt="" coords="1140,39,1363,80"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1140,5,1363,47"/>
 <area shape="rect" id="node2" href="$class_cluster_placer.html#a8ad4a2d696e76b631a5360cbc36b2a44" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="927,5,1092,47"/>
-<area shape="rect" id="node7" href="$class_wirelength_optimizer.html#a65353609f933334ac11313cd05334dc6" title="load to placement location of fixed PlacementUnits from PlacementInfo to the solver" alt="" coords="934,71,1085,112"/>
 <area shape="rect" id="node3" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="672,5,879,47"/>
 <area shape="rect" id="node4" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,13,624,39"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,13,367,39"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,71,116,98"/>
-<area shape="rect" id="node8" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="430,71,609,112"/>
-<area shape="rect" id="node9" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,64,366,105"/>
-<area shape="rect" id="node10" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="165,129,366,171"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

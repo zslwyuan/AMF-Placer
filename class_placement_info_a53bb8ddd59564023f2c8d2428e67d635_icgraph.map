@@ -1,51 +1,52 @@
 <map id="PlacementInfo::getPlacementUnits" name="PlacementInfo::getPlacementUnits">
-<area shape="rect" id="node1" title=" " alt="" coords="1753,933,1945,974"/>
-<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="1463,102,1687,144"/>
-<area shape="rect" id="node8" href="$class_cluster_placer.html#a8b5ed670af0a3155a4328718baafeab5" title="pure connectivity&#45;based partitioning based on PaToH" alt="" coords="1473,1660,1676,1687"/>
-<area shape="rect" id="node9" href="$class_a_m_f_placer.html#a3bc63638c6fcf4e1d4a2ec2cfa3c2b99" title=" " alt="" coords="164,833,375,874"/>
-<area shape="rect" id="node10" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1195,1144,1370,1185"/>
-<area shape="rect" id="node13" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="423,940,632,967"/>
-<area shape="rect" id="node15" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="1489,1144,1660,1185"/>
-<area shape="rect" id="node16" href="$class_cluster_placer.html#a5f1e40e18f49c128fb0db1964c87f2da" title="wrap single PlacementUnits into ClusterUnit for later uniform processing" alt="" coords="1485,1377,1664,1418"/>
-<area shape="rect" id="node17" href="$class_cluster_placer.html#aaf3bcf89de5c55e2e0706ed2e328239a" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="1175,1493,1390,1534"/>
-<area shape="rect" id="node18" href="$class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d" title="initially cluster cells based on user&#45;defined clusters and conduct connectivity&#45;based partitioning ba..." alt="" coords="941,1518,1115,1560"/>
-<area shape="rect" id="node19" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="1485,437,1664,478"/>
-<area shape="rect" id="node21" href="$class_global_placer.html#a14f5dc4c74f1c09d1236cf50d6c55630" title=" " alt="" coords="1457,1711,1692,1738"/>
-<area shape="rect" id="node22" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="1454,503,1695,530"/>
-<area shape="rect" id="node23" href="$class_cluster_placer.html#a1b673af919362063d2ede4cb7a4ae004" title=" " alt="" coords="690,1159,877,1186"/>
-<area shape="rect" id="node24" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="1463,554,1686,580"/>
-<area shape="rect" id="node25" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="1469,335,1681,362"/>
-<area shape="rect" id="node26" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="1505,1442,1644,1484"/>
-<area shape="rect" id="node28" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="1463,386,1686,412"/>
-<area shape="rect" id="node29" href="$class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80" title=" " alt="" coords="1444,655,1705,682"/>
-<area shape="rect" id="node32" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="1455,604,1694,631"/>
-<area shape="rect" id="node33" href="$class_placement_info.html#afd6eefdcfdfd1fcf889adbdda4f5211a" title="dump the PlacementUnit objects and some placement parameters as a checkpoint" alt="" coords="424,1486,631,1528"/>
-<area shape="rect" id="node34" href="$class_c_l_b_legalizer.html#a8a3d5c97db1487129e2bb59c70a92a52" title="get the PlacementUnits which SHOULD be legalized" alt="" coords="1468,772,1681,799"/>
-<area shape="rect" id="node37" href="$class_cluster_placer.html#a6a55cd1a6f302b4499533ce925d199a0" title="check whether the average size of clusters is greater than the given threshold" alt="" coords="1201,1049,1365,1090"/>
-<area shape="rect" id="node38" href="$class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="1505,1312,1644,1353"/>
-<area shape="rect" id="node39" href="$class_cluster_placer.html#a149784331309e2ae938933d1af6c6010" title="map PlacementUnit to cluster location" alt="" coords="1489,874,1661,916"/>
-<area shape="rect" id="node41" href="$class_global_placer.html#a70e5b49347ef9c73145c87968d06dc99" title=" " alt="" coords="1491,1762,1658,1804"/>
-<area shape="rect" id="node42" href="$class_general_spreader.html#a9414c4dd2802f8201e05a9d7048f1f50" title="record the spreaded location in PlacementInfo for later forget&#45;ratio&#45;based location updating" alt="" coords="1467,706,1683,748"/>
-<area shape="rect" id="node43" href="$class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="955,352,1101,393"/>
-<area shape="rect" id="node44" href="$class_cluster_placer.html#a8b0b60255df9780c038e5a9d6cf50e3b" title="clean all information of the clusters (including PlacementUnit&#45;Cluster mapping and the cluster&#45;level ..." alt="" coords="1475,1210,1674,1236"/>
-<area shape="rect" id="node45" href="$class_cluster_placer.html#a8ad4a2d696e76b631a5360cbc36b2a44" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="945,992,1111,1033"/>
-<area shape="rect" id="node46" href="$class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="1213,268,1352,309"/>
-<area shape="rect" id="node47" href="$class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="1207,402,1358,444"/>
-<area shape="rect" id="node48" href="$class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="1477,168,1672,209"/>
-<area shape="rect" id="node49" href="$class_wirelength_optimizer.html#a431184067de089857b584da070404661" title="Construct a new Wirelength Optimizer object." alt="" coords="1503,1828,1647,1869"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="1206,168,1359,209"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="939,417,1117,458"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="683,592,884,633"/>
-<area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="683,444,884,485"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,866,116,892"/>
-<area shape="rect" id="node11" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="943,1057,1113,1098"/>
-<area shape="rect" id="node12" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="680,992,887,1033"/>
-<area shape="rect" id="node14" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="168,920,371,947"/>
-<area shape="rect" id="node20" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="1199,502,1367,528"/>
-<area shape="rect" id="node27" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="1213,1312,1352,1353"/>
-<area shape="rect" id="node30" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="1169,650,1396,692"/>
-<area shape="rect" id="node31" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="949,654,1107,680"/>
-<area shape="rect" id="node35" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="1208,755,1357,782"/>
-<area shape="rect" id="node36" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="935,738,1121,764"/>
-<area shape="rect" id="node40" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="691,886,876,912"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1753,924,1945,965"/>
+<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="1463,72,1687,113"/>
+<area shape="rect" id="node8" href="$class_cluster_placer.html#a8b5ed670af0a3155a4328718baafeab5" title="pure connectivity&#45;based partitioning based on PaToH" alt="" coords="1473,1630,1676,1657"/>
+<area shape="rect" id="node9" href="$class_a_m_f_placer.html#a3bc63638c6fcf4e1d4a2ec2cfa3c2b99" title=" " alt="" coords="164,800,375,841"/>
+<area shape="rect" id="node10" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1195,1105,1370,1147"/>
+<area shape="rect" id="node13" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="423,902,632,929"/>
+<area shape="rect" id="node15" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="1489,1164,1660,1205"/>
+<area shape="rect" id="node16" href="$class_cluster_placer.html#a5f1e40e18f49c128fb0db1964c87f2da" title="wrap single PlacementUnits into ClusterUnit for later uniform processing" alt="" coords="1485,1229,1664,1271"/>
+<area shape="rect" id="node17" href="$class_cluster_placer.html#aaf3bcf89de5c55e2e0706ed2e328239a" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="1175,1347,1390,1388"/>
+<area shape="rect" id="node18" href="$class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d" title="initially cluster cells based on user&#45;defined clusters and conduct connectivity&#45;based partitioning ba..." alt="" coords="941,1429,1115,1471"/>
+<area shape="rect" id="node19" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="1485,356,1664,397"/>
+<area shape="rect" id="node21" href="$class_global_placer.html#a14f5dc4c74f1c09d1236cf50d6c55630" title=" " alt="" coords="1457,1681,1692,1707"/>
+<area shape="rect" id="node22" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="1454,422,1695,449"/>
+<area shape="rect" id="node23" href="$class_cluster_placer.html#a1b673af919362063d2ede4cb7a4ae004" title=" " alt="" coords="690,847,877,874"/>
+<area shape="rect" id="node24" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="1463,473,1686,499"/>
+<area shape="rect" id="node25" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="1469,254,1681,281"/>
+<area shape="rect" id="node26" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="1505,1463,1644,1504"/>
+<area shape="rect" id="node28" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="1463,305,1686,331"/>
+<area shape="rect" id="node29" href="$class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80" title=" " alt="" coords="1444,691,1705,718"/>
+<area shape="rect" id="node32" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="1455,523,1694,550"/>
+<area shape="rect" id="node33" href="$class_placement_info.html#afd6eefdcfdfd1fcf889adbdda4f5211a" title="dump the PlacementUnit objects and some placement parameters as a checkpoint" alt="" coords="424,1485,631,1527"/>
+<area shape="rect" id="node34" href="$class_c_l_b_legalizer.html#a8a3d5c97db1487129e2bb59c70a92a52" title="get the PlacementUnits which SHOULD be legalized" alt="" coords="1468,742,1681,769"/>
+<area shape="rect" id="node37" href="$class_cluster_placer.html#a6a55cd1a6f302b4499533ce925d199a0" title="check whether the average size of clusters is greater than the given threshold" alt="" coords="1201,1025,1365,1067"/>
+<area shape="rect" id="node38" href="$class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="1505,1397,1644,1439"/>
+<area shape="rect" id="node39" href="$class_cluster_placer.html#a149784331309e2ae938933d1af6c6010" title="map PlacementUnit to cluster location" alt="" coords="1489,895,1661,936"/>
+<area shape="rect" id="node41" href="$class_global_placer.html#a70e5b49347ef9c73145c87968d06dc99" title=" " alt="" coords="1491,1732,1658,1773"/>
+<area shape="rect" id="node42" href="$class_general_spreader.html#a9414c4dd2802f8201e05a9d7048f1f50" title="record the spreaded location in PlacementInfo for later forget&#45;ratio&#45;based location updating" alt="" coords="1467,625,1683,667"/>
+<area shape="rect" id="node43" href="$class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="955,575,1101,616"/>
+<area shape="rect" id="node44" href="$class_cluster_placer.html#a8b0b60255df9780c038e5a9d6cf50e3b" title="clean all information of the clusters (including PlacementUnit&#45;Cluster mapping and the cluster&#45;level ..." alt="" coords="1475,1062,1674,1089"/>
+<area shape="rect" id="node45" href="$class_cluster_placer.html#a8ad4a2d696e76b631a5360cbc36b2a44" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="945,1176,1111,1217"/>
+<area shape="rect" id="node46" href="$class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="1213,200,1352,241"/>
+<area shape="rect" id="node47" href="$class_wirelength_optimizer.html#a65353609f933334ac11313cd05334dc6" title="load to placement location of fixed PlacementUnits from PlacementInfo to the solver" alt="" coords="1499,1797,1650,1839"/>
+<area shape="rect" id="node48" href="$class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="1207,40,1358,81"/>
+<area shape="rect" id="node49" href="$class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="1477,137,1672,179"/>
+<area shape="rect" id="node50" href="$class_wirelength_optimizer.html#a431184067de089857b584da070404661" title="Construct a new Wirelength Optimizer object." alt="" coords="1503,1863,1647,1904"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="1206,135,1359,176"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="939,200,1117,241"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="683,575,884,616"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="683,463,884,504"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,834,116,861"/>
+<area shape="rect" id="node11" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="943,1059,1113,1100"/>
+<area shape="rect" id="node12" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="680,1059,887,1100"/>
+<area shape="rect" id="node14" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="168,885,371,911"/>
+<area shape="rect" id="node20" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="1199,422,1367,449"/>
+<area shape="rect" id="node27" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="1213,1412,1352,1453"/>
+<area shape="rect" id="node30" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="1169,633,1396,675"/>
+<area shape="rect" id="node31" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="949,641,1107,667"/>
+<area shape="rect" id="node35" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="1208,730,1357,757"/>
+<area shape="rect" id="node36" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="935,717,1121,743"/>
+<area shape="rect" id="node40" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="691,902,876,929"/>
 </map>
