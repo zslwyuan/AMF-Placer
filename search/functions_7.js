@@ -57,7 +57,7 @@ var searchData=
   ['getclocknetid2cellids_54',['getClockNetId2CellIds',['../class_device_info_1_1_clock_column.html#a51f439320e6c225a1e73ce64936525ac',1,'DeviceInfo::ClockColumn']]],
   ['getclocknets_55',['getClockNets',['../class_design_info_1_1_design_cell.html#aac2fb10ed37806637102fa6fbba9a32d',1,'DesignInfo::DesignCell::getClockNets()'],['../class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856',1,'PlacementInfo::PlacementUnit::getClockNets()']]],
   ['getclocknum_56',['getClockNum',['../class_device_info_1_1_clock_column.html#ab5fbe628f0bc91e23cc74ae1413f788c',1,'DeviceInfo::ClockColumn']]],
-  ['getclocknumlimit_57',['getClockNumLimit',['../class_device_info_1_1_clock_column.html#afcdd8bf7d9de7e218b98bc8ea8e40848',1,'DeviceInfo::ClockColumn']]],
+  ['getclocknumlimit_57',['getClockNumLimit',['../class_device_info_1_1_clock_column.html#a0da21d973ed24fb0368278a69f13e058',1,'DeviceInfo::ClockColumn']]],
   ['getclockregion_58',['getClockRegion',['../class_device_info_1_1_device_site.html#aab04500e9e8dde284f4b64363f4f8134',1,'DeviceInfo::DeviceSite']]],
   ['getclockregionbylocation_59',['getClockRegionByLocation',['../class_device_info.html#a96f985e9ac787404e646373909b5fb76',1,'DeviceInfo']]],
   ['getclockregionnumx_60',['getClockRegionNumX',['../class_device_info.html#a680e49bd27d6045dbd2a956754b1220d',1,'DeviceInfo']]],
