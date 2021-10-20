@@ -116,6 +116,7 @@ var class_placement_info =
     [ "loadCompatiblePlacementTable", "class_placement_info.html#a48c3f35082a8cad77c13e158da1cf1f5", null ],
     [ "loadPlacementUnitInformation", "class_placement_info.html#a06eafa4c917e1b967487c377224584e0", null ],
     [ "optimizeLongPaths", "class_placement_info.html#aa6c7978a01c8f599d13ebe537fc67285", null ],
+    [ "printOutClockColumnLegalization", "class_placement_info.html#a9d7f1f0ff468679572cc2fe95d7b2bc8", null ],
     [ "printStat", "class_placement_info.html#ae7c0dcd8d6ccdb681f0f29c8d65c911b", null ],
     [ "reloadNets", "class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e", null ],
     [ "resetElementBinGrid", "class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d", null ],

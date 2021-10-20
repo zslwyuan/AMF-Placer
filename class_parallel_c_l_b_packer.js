@@ -24,6 +24,7 @@ var class_parallel_c_l_b_packer =
     [ "updatePackedMacro", "class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f", null ],
     [ "cellId2PlacementUnit", "class_parallel_c_l_b_packer.html#a03c1425ea7c15421198861f3e9c25a9a", null ],
     [ "cellInMacros", "class_parallel_c_l_b_packer.html#a4a40a9ba6e112266dd28c66e7f1868db", null ],
+    [ "clockColumns2PackingSites", "class_parallel_c_l_b_packer.html#a74ba67733146fffdfd4843fe63120fca", null ],
     [ "curD", "class_parallel_c_l_b_packer.html#a49659753d46021a9e710306911d5bfeb", null ],
     [ "deltaD", "class_parallel_c_l_b_packer.html#a22b827dfc0fa18037dcdc102d841d777", null ],
     [ "designInfo", "class_parallel_c_l_b_packer.html#afc1f04e059507dbc4adcc8bffd56f53f", null ],

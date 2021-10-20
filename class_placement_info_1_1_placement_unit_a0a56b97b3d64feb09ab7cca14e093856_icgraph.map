@@ -1,5 +1,11 @@
 <map id="PlacementInfo::PlacementUnit::getClockNets" name="PlacementInfo::PlacementUnit::getClockNets">
-<area shape="rect" id="node1" title=" " alt="" coords="233,39,408,80"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="8,5,183,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="5,71,185,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="876,85,1051,126"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="645,19,820,61"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="643,85,823,126"/>
+<area shape="rect" id="node9" href="$class_placement_info.html#a9d7f1f0ff468679572cc2fe95d7b2bc8" title=" " alt="" coords="637,150,828,191"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="401,85,539,126"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f" title="update the information of consistent PUs at the top of priority queue" alt="" coords="357,5,583,61"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,85,303,126"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,92,116,119"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aace5d2b6fb6373d1f90b8b25fece2302" title="check whether all the PlacementUnit in this cluster are valid (not bound to other sites) for this sit..." alt="" coords="351,149,589,205"/>
 </map>

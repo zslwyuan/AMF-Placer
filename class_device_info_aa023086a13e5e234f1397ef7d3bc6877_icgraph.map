@@ -1,0 +1,6 @@
+<map id="DeviceInfo::getClockColumns" name="DeviceInfo::getClockColumns">
+<area shape="rect" id="node1" title=" " alt="" coords="441,46,633,73"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a290fb69f0c75809deaadc8186640e689" title="map recognized clock regions into an array for later clock utilization evaluation" alt="" coords="205,5,393,47"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a0eaa8cf35b2dc598df118be1d4ed0d34" title="Construct a new Parallel CLB Packer object." alt="" coords="230,71,369,112"/>
+<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,13,157,39"/>
+</map>

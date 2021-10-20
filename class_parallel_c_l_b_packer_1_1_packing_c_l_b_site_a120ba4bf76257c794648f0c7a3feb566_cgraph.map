@@ -1,4 +1,4 @@
-<map id="ParallelCLBPacker::PackingCLBSite::removeInvalidClustersFromNeighborPUs" name="ParallelCLBPacker::PackingCLBSite::removeInvalidClustersFromNeighborPUs">
+<map id="ParallelCLBPacker::PackingCLBSite::removeInvalidPUsFromNeighborPUs" name="ParallelCLBPacker::PackingCLBSite::removeInvalidPUsFromNeighborPUs">
 <area shape="rect" id="node1" title="remove invalid clusters from neighbor PlacementUnits" alt="" coords="5,5,211,61"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a853324f96e6e9f90b8886e5c3359237d" title="try to add a given PlacementUnit into this cluster" alt="" coords="259,5,497,61"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480" title=" " alt="" coords="545,13,720,54"/>

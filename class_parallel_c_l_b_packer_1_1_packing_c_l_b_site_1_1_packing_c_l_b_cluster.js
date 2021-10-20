@@ -64,6 +64,7 @@ var class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster
     [ "numMuxes", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a67fc814584509f33539233b897d07524", null ],
     [ "pairedLUTs", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a3204c65650b3adf0e147abdd1711f08b", null ],
     [ "parentPackingCLB", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af5b494a721d04cb3628c4dead6af7283", null ],
+    [ "placementInfo", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af3c2f65646ea07909424b21051cc368e", null ],
     [ "PUs", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a9714d9ffd0c7499d53e84a75d40e88ea", null ],
     [ "scoreInSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a883826e41a0e22d9d6390e1feb5b5dce", null ],
     [ "singleLUTs", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aca8d14e75fb71a665374c10e45ff7266", null ],
