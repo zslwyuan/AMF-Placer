@@ -1,7 +1,8 @@
 /**
  * @file ParallelCLBPacker_PackingCLBSite.cc
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief  This implementation file contains APIs' implementation related to the CLBSite-level processes in the
+ * ParallelCLBPacker which finally packs LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.
  * @version 0.1
  * @date 2021-10-02
  *

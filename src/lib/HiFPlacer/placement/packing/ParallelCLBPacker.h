@@ -1,7 +1,8 @@
 /**
  * @file ParallelCLBPacker.h
  * @author Tingyuan LIANG (tliang@connect.ust.hk)
- * @brief
+ * @brief This header file contains the definitions of ParallelCLBPacker class and its internal modules and APIs which
+ * finally packs LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.
  * @version 0.1
  * @date 2021-10-02
  *
