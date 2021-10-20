@@ -521,7 +521,7 @@ class DeviceInfo
             return clockNetId2CellIds;
         }
 
-        inline int getClockNumLimit()
+        inline unsigned int getClockNumLimit()
         {
             return clockLimit;
         }
@@ -542,7 +542,7 @@ class DeviceInfo
          */
         std::map<int, std::vector<int>> clockNetId2CellIds;
         std::map<int, DeviceSite *> clockNetId2Sites;
-        int clockLimit = 12;
+        unsigned int clockLimit = 12;
     };
 
     /**
