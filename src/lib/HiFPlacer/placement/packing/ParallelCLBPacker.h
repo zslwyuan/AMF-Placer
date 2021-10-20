@@ -399,6 +399,7 @@ class ParallelCLBPacker
             }
             PackingCLBCluster(PackingCLBSite *parentPackingCLB) : parentPackingCLB(parentPackingCLB)
             {
+                placementInfo = parentPackingCLB->getPlacementInfo();
                 id = random();
                 PUs.clear();
                 FFControlSets.clear();
@@ -418,6 +419,7 @@ class ParallelCLBPacker
                 PUs = anotherPackingCLBCluster->getPUs();
                 scoreInSite = anotherPackingCLBCluster->getScoreInSite();
                 parentPackingCLB = anotherPackingCLBCluster->getParentPackingCLB();
+                placementInfo = parentPackingCLB->getPlacementInfo();
                 // net2ConnectivityScore = anotherPackingCLBCluster->getNet2ConnectivityScore();
                 HPWLChange = anotherPackingCLBCluster->getHPWLChange();
                 totalConnectivityScore = anotherPackingCLBCluster->getTotalConnectivityScore();
@@ -904,6 +906,10 @@ class ParallelCLBPacker
                         {
                             return false;
                         }
+                        if (!placementInfo->checkClockColumnLegalization(tmpPU, parentPackingCLB->getCLBSite()))
+                        {
+                            return false;
+                        }
                     }
                 }
                 return true;
@@ -1245,6 +1251,12 @@ class ParallelCLBPacker
             PackingCLBSite *parentPackingCLB = nullptr;
 
             /**
+             * @brief the paraent CLB site for this cluster
+             *
+             */
+            PlacementInfo *placementInfo = nullptr;
+
+            /**
              * @brief the evaluation score of packing for this cluster
              *
              */
@@ -1404,7 +1416,7 @@ class ParallelCLBPacker
          * removed from the neighbor PU set. Moreover, some of the candidate PUs are not compatible with the determined
          * set of PUs, so we need to remove them too.
          */
-        void removeInvalidClustersFromNeighborPUs();
+        void removeInvalidPUsFromNeighborPUs();
 
         /**
          * @brief remove clusters incompatible with determined cluster from PQ

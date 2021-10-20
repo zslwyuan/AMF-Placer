@@ -91,7 +91,7 @@ void ParallelCLBPacker::PackingCLBSite::removeClustersIncompatibleWithDetCluster
     }
 }
 
-void ParallelCLBPacker::PackingCLBSite::removeInvalidClustersFromNeighborPUs()
+void ParallelCLBPacker::PackingCLBSite::removeInvalidPUsFromNeighborPUs()
 {
     std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> newNbr;
     newNbr.clear();
@@ -219,9 +219,14 @@ void ParallelCLBPacker::PackingCLBSite::updateConsistentPUsInTop()
 
             for (auto countedPair : PU2TopCnt)
             {
-                if (countedPair.second < unchangedIterationThr)
+                if (countedPair.second < unchangedIterationThr ||
+                    !placementInfo->checkClockColumnLegalization(countedPair.first, CLBSite))
                 {
                     determinedClusterInSite->removePUToConstructDetCluster(countedPair.first);
+                }
+                else
+                {
+                    placementInfo->addPUIntoClockColumn(countedPair.first, CLBSite);
                 }
             }
 
@@ -404,7 +409,7 @@ void ParallelCLBPacker::PackingCLBSite::updateStep(bool initial, bool debug)
         setDebug();
     removeInvalidClustersFromPQ();
     removeClustersIncompatibleWithDetClusterFromPQ();
-    removeInvalidClustersFromNeighborPUs();
+    removeInvalidPUsFromNeighborPUs();
     updateConsistentPUsInTop(); //  the PQ top might be kept updated but some of its PUs might be consistent
 
     seedClusters = priorityQueue;

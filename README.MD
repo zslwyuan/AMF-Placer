@@ -16,7 +16,7 @@ baseline. Furthermore, utilizing the parallelism of the proposed algorithms, wit
 can be accelerated by 2.41x on average.  **Detailed Docygen-based documentation (e.g, introduction, usage, implementation and experimental results) can be accessed [here](https://zslwyuan.github.io/AMF-Placer/)**.
 
 <p align="center">
-<img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />  <img src="https://zslwyuan.github.io/AMF-Placer/MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" /> <img src="https://zslwyuan.github.io/AMF-Placer/optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" /> 
+<img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />  <img src="https://zslwyuan.github.io/AMF-Placer/MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" /> <img src="https://zslwyuan.github.io/AMF-Placer/optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" />   <img src="https://zslwyuan.github.io/AMF-Placer/MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)" width="100" /> 
 </p>
 
 ## License

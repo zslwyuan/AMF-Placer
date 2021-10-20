@@ -20,7 +20,7 @@ baseline. Furthermore, utilizing the parallelism of the proposed algorithms, wit
 can be accelerated by 2.41x on average. 
 
 <center>
-<img src="OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />    <img src="MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" />   <img src="optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" /> 
+<img src="OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />    <img src="MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" />   <img src="optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" />    <img src="MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)" width="100" /> 
 </center>
 
 **License**

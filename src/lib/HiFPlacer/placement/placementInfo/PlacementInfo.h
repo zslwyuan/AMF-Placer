@@ -4162,7 +4162,7 @@ class PlacementInfo
         auto &curPUClocks = curPU->getClockNets();
         for (auto clockNet : curPUClocks)
             curSetOfClocks.insert(clockNet);
-        // assert(curSetOfClocks.size() <= clockColumn->getClockNumLimit());
+        assert(curSetOfClocks.size() <= clockColumn->getClockNumLimit());
     }
 
     /**
