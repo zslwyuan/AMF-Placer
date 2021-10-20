@@ -131,7 +131,7 @@ void ClusterPlacer::createLongPathClusterUnits()
 {
     // handle the long paths
     auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo_PathLenSorted();
-    auto simpleTimingGraph = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph();
+    // auto simpleTimingGraph = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph();
     int pathLengthThr = placementInfo->getLongPathThresholdLevel();
     std::set<int> extractedCellIds;
     extractedCellIds.clear();

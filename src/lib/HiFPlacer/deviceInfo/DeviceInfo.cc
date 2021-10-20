@@ -229,6 +229,22 @@ void DeviceInfo::mapClockRegionToArray()
             clockRegions[i][j]->mapSiteToClockColumns();
         }
     }
+
+    clockColumns.clear();
+    for (int i = 0; i < clockRegionNumY; i++)
+    {
+        for (int j = 0; j < clockRegionNumX; j++)
+        {
+            for (auto colRow : clockRegions[i][j]->getClockColumns())
+            {
+                for (auto curClockCol : colRow)
+                {
+                    curClockCol->setId(clockColumns.size());
+                    clockColumns.push_back(curClockCol);
+                }
+            }
+        }
+    }
 }
 
 void DeviceInfo::ClockRegion::mapSiteToClockColumns()

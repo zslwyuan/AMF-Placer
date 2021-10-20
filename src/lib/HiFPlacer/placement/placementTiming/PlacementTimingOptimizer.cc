@@ -283,7 +283,6 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                     {
                         auto optClockRegion = YX2ClockRegion[0][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;
-                        float cY = (optClockRegion->getTop() + optClockRegion->getBottom()) / 2;
                         for (auto curPU : PUsInLongPaths)
                         {
                             if (!curPU->isFixed())

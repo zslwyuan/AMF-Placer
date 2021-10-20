@@ -4132,6 +4132,21 @@ class PlacementInfo
             return false;
     }
 
+    void printOutClockColumnLegalization(PlacementInfo::PlacementUnit *curPU, DeviceInfo::DeviceSite *curSite)
+    {
+        auto clockColumn = curSite->getClockHalfColumn();
+        auto curSetOfClocks = clockCol2ClockNets[clockColumn];
+        auto curPUClocks = curPU->getClockNets();
+        for (auto clockNet : curPUClocks)
+            curSetOfClocks.insert(clockNet);
+        int i = 0;
+        for (auto clockNet : curSetOfClocks)
+        {
+            std::cout << "clock#" << i << " name: [" << clockNet->getName() << "]\n";
+            i++;
+        }
+    }
+
     /**
      * @brief map the given PlacementUnit to the site for later checking of the half-column clock
      * legalization rules
@@ -4147,7 +4162,7 @@ class PlacementInfo
         auto &curPUClocks = curPU->getClockNets();
         for (auto clockNet : curPUClocks)
             curSetOfClocks.insert(clockNet);
-        assert(curSetOfClocks.size() <= clockColumn->getClockNumLimit());
+        // assert(curSetOfClocks.size() <= clockColumn->getClockNumLimit());
     }
 
     /**

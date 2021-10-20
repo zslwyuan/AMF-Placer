@@ -526,7 +526,18 @@ class DeviceInfo
             return clockLimit;
         }
 
+        inline void setId(unsigned int _id)
+        {
+            id = _id;
+        }
+
+        inline unsigned int getId()
+        {
+            return id;
+        }
+
       private:
+        int id;
         std::vector<DeviceSite *> sites;
         float left, right, top, bottom;
 
@@ -1133,6 +1144,11 @@ class DeviceInfo
         return clockRegions;
     }
 
+    inline std::vector<ClockColumn *> &getClockColumns()
+    {
+        return clockColumns;
+    }
+
   private:
     std::string deviceName;
     std::set<std::string> BELTypes;
@@ -1155,6 +1171,7 @@ class DeviceInfo
 
     std::map<std::pair<int, int>, ClockRegion *> coord2ClockRegion;
     std::vector<std::vector<ClockRegion *>> clockRegions;
+    std::vector<ClockColumn *> clockColumns;
     std::vector<float> clockRegionXBounds;
     std::vector<float> clockRegionYBounds;
 

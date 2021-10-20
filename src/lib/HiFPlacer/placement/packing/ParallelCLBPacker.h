@@ -2087,6 +2087,7 @@ class ParallelCLBPacker
 
     std::vector<PackingCLBSite *> PUId2PackingCLBSite;
     std::vector<PackingCLBSite *> packingSites;
+    std::vector<std::vector<PackingCLBSite *>> clockColumns2PackingSites;
     std::vector<PackingCLBSite *> PUId2PackingCLBSiteCandidate;
     std::vector<PlacementInfo::PlacementUnit *> &placementUnits;
     std::vector<PlacementInfo::PlacementUnpackedCell *> &placementUnpackedCells;

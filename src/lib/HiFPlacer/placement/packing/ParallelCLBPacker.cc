@@ -60,6 +60,10 @@ ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceI
     //                        int numNeighbor, float deltaD, float curD, float maxD, int PQSize, float y2xRatio,
     //                        std::vector<PackingCLBSite *> &PUId2PackingCLBSite
 
+    int numClockCols = placementInfo->getDeviceInfo()->getClockColumns().size();
+    clockColumns2PackingSites =
+        std::vector<std::vector<PackingCLBSite *>>(numClockCols, std::vector<PackingCLBSite *>());
+
     std::string targetSiteType = "SLICEL";
     deviceSite2PackingSite.clear();
     for (auto curSite : deviceInfo->getSitesInType(targetSiteType))
@@ -71,6 +75,7 @@ ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceI
                                y2xRatio, HPWLWeight, PUId2PackingCLBSite);
         deviceSite2PackingSite[curSite] = tmpPackingSite;
         packingSites.push_back(tmpPackingSite);
+        clockColumns2PackingSites[curSite->getClockHalfColumn()->getId()].push_back(tmpPackingSite);
     }
     targetSiteType = "SLICEM";
     for (auto curSite : deviceInfo->getSitesInType(targetSiteType))
@@ -82,6 +87,7 @@ ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceI
                                y2xRatio, HPWLWeight, PUId2PackingCLBSite);
         deviceSite2PackingSite[curSite] = tmpPackingSite;
         packingSites.push_back(tmpPackingSite);
+        clockColumns2PackingSites[curSite->getClockHalfColumn()->getId()].push_back(tmpPackingSite);
     }
 
     for (auto tmpMacro : placementMacros)
@@ -105,13 +111,24 @@ ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceI
 
 void ParallelCLBPacker::packCLBsIteration(bool initial, bool debug)
 {
-    int numPackingSites = packingSites.size();
+    int numClockCols = clockColumns2PackingSites.size();
 #pragma omp parallel for schedule(dynamic, 16)
-    for (int i = 0; i < numPackingSites; i++)
+    for (int i = 0; i < numClockCols; i++)
     {
-        auto tmpPackingSite = packingSites[i];
-        tmpPackingSite->updateStep(initial, debug);
+        for (unsigned int j = 0; j < clockColumns2PackingSites[i].size(); j++)
+        {
+            auto tmpPackingSite = clockColumns2PackingSites[i][j];
+            tmpPackingSite->updateStep(initial, debug);
+        }
     }
+
+    //     int numPackingSites = packingSites.size();
+    // #pragma omp parallel for schedule(dynamic, 16)
+    //     for (int i = 0; i < numPackingSites; i++)
+    //     {
+    //         auto tmpPackingSite = packingSites[i];
+    //         tmpPackingSite->updateStep(initial, debug);
+    //     }
 
     // update PU's selection of packing site
     PUId2PackingCLBSite.clear();
@@ -126,7 +143,13 @@ void ParallelCLBPacker::packCLBsIteration(bool initial, bool debug)
                 for (auto tmpPU : packingSite->getDeterminedClusterInSite()->getPUs())
                 {
                     assert(!PUId2PackingCLBSite[tmpPU->getId()]);
+                    // if (!placementInfo->checkClockColumnLegalization(tmpPU, packingSite->getCLBSite()))
+                    // {
+                    //     placementInfo->printOutClockColumnLegalization(tmpPU, packingSite->getCLBSite());
+                    // }
+                    // assert(placementInfo->checkClockColumnLegalization(tmpPU, packingSite->getCLBSite()));
                     PUId2PackingCLBSite[tmpPU->getId()] = packingSite;
+                    placementInfo->addPUIntoClockColumn(tmpPU, packingSite->getCLBSite());
                 }
             }
         }
@@ -143,6 +166,10 @@ void ParallelCLBPacker::packCLBsIteration(bool initial, bool debug)
             {
                 if (!PUId2PackingCLBSite[tmpPU->getId()])
                 {
+
+                    if (!placementInfo->checkClockColumnLegalization(tmpPU, tmpPackingSite->getCLBSite()))
+                        continue;
+
                     if (!PUId2PackingCLBSiteCandidate[tmpPU->getId()])
                     {
                         PUId2PackingCLBSiteCandidate[tmpPU->getId()] = tmpPackingSite;

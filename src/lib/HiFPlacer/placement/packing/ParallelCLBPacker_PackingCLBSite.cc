@@ -124,7 +124,7 @@ void ParallelCLBPacker::PackingCLBSite::removeInvalidClustersFromNeighborPUs()
     neighborPUs = newNbr;
 }
 
-void ParallelCLBPacker::PackingCLBSite::updateConsistenPUsInTop()
+void ParallelCLBPacker::PackingCLBSite::updateConsistentPUsInTop()
 {
     if (priorityQueue.size()) // if there are possible condidates
     {
@@ -268,17 +268,17 @@ void ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs()
             }
             else
             {
-                if (tmpSeedCluster->getPUs().size() == 0 && !isCarrySite && !isLUTRAMSite &&
-                    (tmpSeedCluster->isPUTypeCompatibleWithSiteType(tmpPU)))
-                {
-                    PackingCLBCluster *tmpCluster = new PackingCLBCluster(tmpSeedCluster);
-                    tmpCluster->addPUFailReason(tmpPU);
-                    delete tmpCluster;
-                    std::cout.flush();
-                    assert(false);
-                }
-                assert(tmpCluster->getPUs().size() || isCarrySite || isLUTRAMSite ||
-                       !(tmpSeedCluster->isPUTypeCompatibleWithSiteType(tmpPU)));
+                // if (tmpSeedCluster->getPUs().size() == 0 && !isCarrySite && !isLUTRAMSite &&
+                //     (tmpSeedCluster->isPUTypeCompatibleWithSiteType(tmpPU)))
+                // {
+                //     PackingCLBCluster *tmpCluster = new PackingCLBCluster(tmpSeedCluster);
+                //     tmpCluster->addPUFailReason(tmpPU);
+                //     delete tmpCluster;
+                //     std::cout.flush();
+                //     assert(false);
+                // }
+                // assert(tmpCluster->getPUs().size() || isCarrySite || isLUTRAMSite ||
+                //        !(tmpSeedCluster->isPUTypeCompatibleWithSiteType(tmpPU)));
                 delete tmpCluster;
                 tmpCluster = nullptr;
             }
@@ -405,7 +405,7 @@ void ParallelCLBPacker::PackingCLBSite::updateStep(bool initial, bool debug)
     removeInvalidClustersFromPQ();
     removeClustersIncompatibleWithDetClusterFromPQ();
     removeInvalidClustersFromNeighborPUs();
-    updateConsistenPUsInTop(); //  the PQ top might be kept updated but some of its PUs might be consistent
+    updateConsistentPUsInTop(); //  the PQ top might be kept updated but some of its PUs might be consistent
 
     seedClusters = priorityQueue;
     if (seedClusters.size() == 0)

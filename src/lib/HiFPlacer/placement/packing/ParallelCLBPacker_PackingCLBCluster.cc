@@ -437,6 +437,16 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPUFailReason(Place
             assert(curCell->isMux());
         }
     }
+
+    if (!parentPackingCLB->getPlacementInfo()->checkClockColumnLegalization(tmpPU, parentPackingCLB->getCLBSite()))
+    {
+        std::cout << parentPackingCLB->getCLBSite()->getName() << "\n";
+        std::cout << "Clock Utilization Overflow: #clockNum: "
+                  << parentPackingCLB->getPlacementInfo()
+                         ->getClockCol2ClockNets()[parentPackingCLB->getCLBSite()->getClockHalfColumn()]
+                         .size()
+                  << "\n";
+    }
 }
 
 int ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum(PlacementInfo::PlacementNet *curNet)
@@ -679,6 +689,10 @@ bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPU(PlacementInfo::
     {
         numMuxes++;
     }
+
+    if (!parentPackingCLB->getPlacementInfo()->checkClockColumnLegalization(tmpPU, parentPackingCLB->getCLBSite()))
+        return false;
+
     return true;
 }
 
