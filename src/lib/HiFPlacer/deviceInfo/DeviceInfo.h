@@ -350,9 +350,19 @@ class DeviceInfo
             clockRegion = _clockRegion;
         }
 
+        inline ClockRegion *getClockRegion()
+        {
+            return clockRegion;
+        }
+
         inline void setClockHalfColumn(ClockColumn *_clockHalfColumn)
         {
             clockHalfColumn = _clockHalfColumn;
+        }
+
+        inline ClockColumn *getClockHalfColumn()
+        {
+            return clockHalfColumn;
         }
 
       private:
@@ -511,6 +521,11 @@ class DeviceInfo
             return clockNetId2CellIds;
         }
 
+        inline int getClockNumLimit()
+        {
+            return clockLimit;
+        }
+
       private:
         std::vector<DeviceSite *> sites;
         float left, right, top, bottom;
@@ -527,6 +542,7 @@ class DeviceInfo
          */
         std::map<int, std::vector<int>> clockNetId2CellIds;
         std::map<int, DeviceSite *> clockNetId2Sites;
+        int clockLimit = 12;
     };
 
     /**

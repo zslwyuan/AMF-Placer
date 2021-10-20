@@ -1297,6 +1297,18 @@ class PlacementInfo
             return packed;
         }
 
+        inline std::set<DesignInfo::DesignNet *> &getClockNets()
+        {
+            return clockNets;
+        }
+
+      protected:
+        /**
+         * @brief record the clock nets connected to this PlacementUnit
+         *
+         */
+        std::set<DesignInfo::DesignNet *> clockNets;
+
       private:
         std::string name;
         int id;
@@ -1374,6 +1386,7 @@ class PlacementInfo
                 addCARRY();
             if (cell->isMux())
                 addMUX();
+            clockNets = cell->getClockNets();
         }
         ~PlacementUnpackedCell()
         {
@@ -1492,6 +1505,10 @@ class PlacementInfo
                 curCell->setVirtualType(cellType);
                 cell2IdInMacro[curCell] = offsetX.size();
                 cellSet.insert(curCell);
+                for (auto tmpNet : curCell->getClockNets())
+                {
+                    clockNets.insert(tmpNet);
+                }
             }
             else
             {
@@ -1557,6 +1574,10 @@ class PlacementInfo
                 addCARRY();
             if (vCell->isMux())
                 addMUX();
+            for (auto tmpNet : vCell->getClockNets())
+            {
+                clockNets.insert(tmpNet);
+            }
             return vCell;
         }
 
@@ -1602,6 +1623,10 @@ class PlacementInfo
                 addCARRY();
             if (vCell->isMux())
                 addMUX();
+            for (auto tmpNet : vCell->getClockNets())
+            {
+                clockNets.insert(tmpNet);
+            }
         }
 
         inline std::vector<DesignInfo::DesignCell *> &getCells()
@@ -4083,6 +4108,49 @@ class PlacementInfo
     void checkClockUtilization(bool dump);
 
     /**
+     * @brief check whether the given PlacementUnit can be mapped to the site considering the half-column clock
+     * legalization rules
+     *
+     * @param curPU a given PU
+     * @param curSite the target site
+     * @return true if the the given PlacementUnit can be mapped to the site considering the half-column clock
+     * legalization rules
+     * @return false  if the the given PlacementUnit CANNOT be mapped to the site considering the half-column clock
+     * legalization rules
+     */
+    bool checkClockColumnLegalization(PlacementInfo::PlacementUnit *curPU, DeviceInfo::DeviceSite *curSite)
+    {
+        auto clockColumn = curSite->getClockHalfColumn();
+        auto curSetOfClocks = clockCol2ClockNets[clockColumn];
+        auto curPUClocks = curPU->getClockNets();
+        for (auto clockNet : curPUClocks)
+            curSetOfClocks.insert(clockNet);
+
+        if (curSetOfClocks.size() <= clockColumn->getClockNumLimit())
+            return true;
+        else
+            return false;
+    }
+
+    /**
+     * @brief map the given PlacementUnit to the site for later checking of the half-column clock
+     * legalization rules
+     *
+     * @param curPU a given PU
+     * @param curSite the target site
+     *
+     */
+    void addPUIntoClockColumn(PlacementInfo::PlacementUnit *curPU, DeviceInfo::DeviceSite *curSite)
+    {
+        auto clockColumn = curSite->getClockHalfColumn();
+        auto &curSetOfClocks = clockCol2ClockNets[clockColumn];
+        auto &curPUClocks = curPU->getClockNets();
+        for (auto clockNet : curPUClocks)
+            curSetOfClocks.insert(clockNet);
+        assert(curSetOfClocks.size() <= clockColumn->getClockNumLimit());
+    }
+
+    /**
      * @brief Get the Long Paths in the net list for later optimization
      *
      * @return std::vector<std::vector<PlacementUnit *>>&
@@ -4127,6 +4195,11 @@ class PlacementInfo
     inline int getMediumPathThresholdLevel()
     {
         return mediumPathThresholdLevel;
+    }
+
+    inline std::map<DeviceInfo::ClockColumn *, std::set<DesignInfo::DesignNet *>> &getClockCol2ClockNets()
+    {
+        return clockCol2ClockNets;
     }
 
   private:
@@ -4233,6 +4306,7 @@ class PlacementInfo
     std::vector<std::vector<PlacementUnit *>> longPaths;
 
     std::map<PlacementUnit *, std::pair<float, float>> PU2ClockRegionCenters;
+    std::map<DeviceInfo::ClockColumn *, std::set<DesignInfo::DesignNet *>> clockCol2ClockNets;
 
     /**
      * @brief the retangular clock region coverage of a clock net

@@ -48,6 +48,21 @@ PlacementInfo::PlacementInfo(DesignInfo *designInfo, DeviceInfo *deviceInfo,
     cellInMacros.clear();
     placementNets.clear();
     placementUnpackedCells.clear();
+    clockCol2ClockNets.clear();
+
+    for (auto curClockRegionRow : deviceInfo->getClockRegions())
+    {
+        for (auto curClockRegion : curClockRegionRow)
+        {
+            for (auto curColRows : curClockRegion->getClockColumns())
+            {
+                for (auto curCol : curColRows)
+                {
+                    clockCol2ClockNets[curCol] = std::set<DesignInfo::DesignNet *>();
+                }
+            }
+        }
+    }
 
     simplePlacementTimingInfo = new PlacementTimingInfo(designInfo, deviceInfo, JSONCfg);
 

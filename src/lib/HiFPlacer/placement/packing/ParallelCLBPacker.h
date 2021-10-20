@@ -1355,6 +1355,22 @@ class ParallelCLBPacker
             return true;
         }
 
+        /**
+         * @brief find neighbor PlacementUnit around targetX/Y from the bin grid
+         *
+         * @param curCellType the given cell types
+         * @param targetX target location X
+         * @param targetY target location Y
+         * @param displacementLowerbound the lower bound threshold of neighbors' displacement from the center (the
+         *  neighbors with low displacement might be tried by previous procedure)
+         * @param displacementUpperbound  the upper bound threshold of neighbors' displacement from the center
+         * @param PUNumThreshold The threshold number of PlacementUnits found to stop the search procedure
+         * @param PUId2PackingCLBSite The reference mapping indicating mapped PlacementUnits
+         * @param y2xRatio a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning
+         * in X-coordinate
+         * @param res a input set to store resultant PUs (for inremental search if it is not nullptr)
+         * @return std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare>*
+         */
         std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> *
         findNeiborPUsFromBinGrid(DesignInfo::DesignCellType curCellType, float targetX, float targetY,
                                  float displacementLowerbound, float displacementUpperbound, int PUNumThreshold,
@@ -1366,17 +1382,59 @@ class ParallelCLBPacker
             return neighborPUs;
         }
 
+        /**
+         * @brief sort the elements in the priority queue
+         *
+         */
         void refreshPrioryQueue();
 
+        /**
+         * @brief remove invalid clusters from the priority queue
+         *
+         * since some of the PlacementUnits have been determined to be mapped to some other sites, they should be
+         * removed from the PQ
+         *
+         */
         void removeInvalidClustersFromPQ();
 
+        /**
+         * @brief remove invalid clusters from neighbor PlacementUnits
+         *
+         * since some of the PlacementUnits have been determined to be mapped to some other sites, they should be
+         * removed from the neighbor PU set. Moreover, some of the candidate PUs are not compatible with the determined
+         * set of PUs, so we need to remove them too.
+         */
         void removeInvalidClustersFromNeighborPUs();
 
+        /**
+         * @brief remove clusters incompatible with determined cluster from PQ
+         *
+         * some of the clusters in the PQ are not compatible with the determined set of PUs, so we need to remove them
+         * too.
+         */
         void removeClustersIncompatibleWithDetClusterFromPQ();
 
+        /**
+         * @brief extend the clusters in the priority queue with the neighbor PlacementUnits
+         *
+         */
         void findNewClustersWithNeighborPUs();
 
+        /**
+         * @brief a iteration to pack PlacementUnit into a CLB site
+         *
+         * @param initial indicate whether it is the first packing iteration
+         * @param debug dump debug information or not
+         */
         void updateStep(bool initial, bool debug = false);
+
+        /**
+         * @brief update the information of consistent PUs at the top of priority queue
+         *
+         * the PQ top might be kept updated but some of its PUs might be consistent, which we can make them as
+         * determined PUs.
+         */
+        void updateConsistentPUsInTop();
 
         inline bool hasValidPQTop()
         {
@@ -1413,8 +1471,6 @@ class ParallelCLBPacker
         {
             determinedClusterInSite = tmpCluster;
         }
-
-        void updateConsistenPUsInTop();
 
         inline float getHPWLChangeForPU(PlacementInfo::PlacementUnit *tmpPU)
         {
@@ -1462,6 +1518,10 @@ class ParallelCLBPacker
             return placementInfo;
         }
 
+        /**
+         * @brief add CARRY-related PlacementUnit into this CLB site
+         *
+         */
         inline void addCarry()
         {
             assert(determinedClusterInSite == nullptr);
@@ -1516,6 +1576,10 @@ class ParallelCLBPacker
             determinedClusterInSite->updateScoreInSite();
         }
 
+        /**
+         * @brief add LUTRAM-related PlacementUnit into this CLB site
+         *
+         */
         inline void addLUTRAMMacro()
         {
             assert(determinedClusterInSite == nullptr);
@@ -1975,7 +2039,6 @@ class ParallelCLBPacker
     DeviceInfo *deviceInfo;
     PlacementInfo *placementInfo;
     std::map<std::string, std::string> &JSONCfg;
-
     /**
      * @brief specify how many iterations a PlacementUnit should stay at the top priority of a
      * site before we finally map it to the site
