@@ -1,7 +1,7 @@
 <map id="PlacementInfo::getBinGrid" name="PlacementInfo::getBinGrid">
 <area shape="rect" id="node1" title="Get the Bin Grid object." alt="" coords="1312,85,1485,111"/>
 <area shape="rect" id="node2" href="$class_general_spreader.html#a6490458435738449c4a37257a8b2f365" title=" " alt="" coords="1083,5,1263,47"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title=" " alt="" coords="1081,70,1264,126"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title="find neighbor PlacementUnit around targetX/Y from the bin grid" alt="" coords="1081,70,1264,126"/>
 <area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="1081,149,1264,191"/>
 <area shape="rect" id="node3" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="807,7,1033,48"/>
 <area shape="rect" id="node4" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="600,23,759,50"/>

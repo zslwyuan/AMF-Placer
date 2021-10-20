@@ -45,7 +45,7 @@ var class_parallel_c_l_b_packer_1_1_packing_c_l_b_site =
     [ "removeInvalidClustersFromPQ", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a78fb0ee412bb44ad8b1d5f2271bb2208", null ],
     [ "setDebug", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a85f75568585fd3b7e6317f0ff718a1d0", null ],
     [ "setDeterminedClusterInSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5ab99d8ecade11393b60d634eb44ffee", null ],
-    [ "updateConsistenPUsInTop", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7b15e8778b4bf3c57bab17edc4928720", null ],
+    [ "updateConsistentPUsInTop", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f", null ],
     [ "updateStep", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8", null ],
     [ "CARRYChain", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a3528cec1d00452e92012f653adc689ed", null ],
     [ "CARRYChainSiteOffset", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0938ac71e4b27db634c874e621119552", null ],

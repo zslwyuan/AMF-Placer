@@ -1,7 +1,7 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPU" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPU">
 <area shape="rect" id="node1" title="try to add a given PlacementUnit into this cluster" alt="" coords="1203,119,1441,175"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="926,5,1145,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af5d2130285d47decadf51abe644e18ea" title=" " alt="" coords="933,85,1138,141"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title="extend the clusters in the priority queue with the neighbor PlacementUnits" alt="" coords="926,5,1145,61"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af5d2130285d47decadf51abe644e18ea" title="remove invalid clusters from neighbor PlacementUnits" alt="" coords="933,85,1138,141"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,191,868,233"/>
 <area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="916,216,1155,272"/>
 <area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,191,681,233"/>

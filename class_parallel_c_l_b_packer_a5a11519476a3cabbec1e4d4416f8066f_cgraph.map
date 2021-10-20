@@ -1,23 +1,23 @@
 <map id="ParallelCLBPacker::updatePackedMacro" name="ParallelCLBPacker::updatePackedMacro">
-<area shape="rect" id="node1" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="5,1193,147,1235"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="218,560,393,601"/>
-<area shape="rect" id="node20" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="218,737,393,779"/>
-<area shape="rect" id="node21" href="$class_placement_info.html#aa3d473459650af9a742d1f5c4a8c7b42" title="remove the legalization information of a PlacementUnit object" alt="" coords="197,803,413,844"/>
-<area shape="rect" id="node22" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="198,869,413,895"/>
-<area shape="rect" id="node23" href="$class_placement_info_1_1_placement_macro.html#a10685875692186ba2a95623ec871637c" title=" " alt="" coords="218,920,393,961"/>
-<area shape="rect" id="node24" href="$class_placement_info.html#a7d3c19092744c966a273aa65b75a9ffb" title=" " alt="" coords="208,985,403,1027"/>
-<area shape="rect" id="node25" href="$class_placement_info_1_1_placement_unit.html#a7cb53b16de6067cceeb2631593a73691" title=" " alt="" coords="218,1051,393,1092"/>
-<area shape="rect" id="node26" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="506,1117,597,1143"/>
-<area shape="rect" id="node27" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="218,1167,393,1194"/>
-<area shape="rect" id="node32" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title=" " alt="" coords="195,1218,416,1274"/>
-<area shape="rect" id="node33" href="$class_placement_info.html#aedbd9b660bbadedd6c31faa7892e381f" title="Set the Determined Occupation of a specific cell." alt="" coords="207,1297,403,1339"/>
-<area shape="rect" id="node35" href="$class_placement_info_1_1_placement_unit.html#a531ed51b8a516bf258c3d0237a9aad42" title=" " alt="" coords="218,1363,393,1404"/>
-<area shape="rect" id="node36" href="$class_placement_info_1_1_placement_unit.html#affd80a7a7b87bb8a669e145f0dc72e54" title=" " alt="" coords="218,1428,393,1469"/>
-<area shape="rect" id="node37" href="$class_placement_info.html#a1143cc175975822b80a901c81337ea02" title="set the sites occupied by the PlacementUnit objects" alt="" coords="203,1494,407,1521"/>
-<area shape="rect" id="node38" href="$class_placement_info.html#adb467655582635a1c7f5743803397e11" title="set the legalization of some PlacementUnit objects" alt="" coords="206,1545,405,1571"/>
-<area shape="rect" id="node39" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="218,1596,393,1637"/>
-<area shape="rect" id="node40" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="206,1661,405,1703"/>
-<area shape="rect" id="node41" href="$class_placement_info.html#a132b4740f20122ca80ef9a1c2f3bfdd8" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="212,1727,399,1768"/>
+<area shape="rect" id="node1" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="5,1259,147,1300"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="218,593,393,635"/>
+<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="218,803,393,844"/>
+<area shape="rect" id="node22" href="$class_placement_info.html#aa3d473459650af9a742d1f5c4a8c7b42" title="remove the legalization information of a PlacementUnit object" alt="" coords="197,868,413,909"/>
+<area shape="rect" id="node23" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="198,934,413,961"/>
+<area shape="rect" id="node24" href="$class_placement_info_1_1_placement_macro.html#a10685875692186ba2a95623ec871637c" title=" " alt="" coords="218,985,393,1027"/>
+<area shape="rect" id="node25" href="$class_placement_info.html#a7d3c19092744c966a273aa65b75a9ffb" title=" " alt="" coords="208,1051,403,1092"/>
+<area shape="rect" id="node26" href="$class_placement_info_1_1_placement_unit.html#a7cb53b16de6067cceeb2631593a73691" title=" " alt="" coords="218,1116,393,1157"/>
+<area shape="rect" id="node27" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="506,1182,597,1209"/>
+<area shape="rect" id="node28" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="218,1233,393,1259"/>
+<area shape="rect" id="node33" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title=" " alt="" coords="195,1283,416,1339"/>
+<area shape="rect" id="node34" href="$class_placement_info.html#aedbd9b660bbadedd6c31faa7892e381f" title="Set the Determined Occupation of a specific cell." alt="" coords="207,1363,403,1404"/>
+<area shape="rect" id="node36" href="$class_placement_info_1_1_placement_unit.html#a531ed51b8a516bf258c3d0237a9aad42" title=" " alt="" coords="218,1428,393,1469"/>
+<area shape="rect" id="node37" href="$class_placement_info_1_1_placement_unit.html#affd80a7a7b87bb8a669e145f0dc72e54" title=" " alt="" coords="218,1493,393,1535"/>
+<area shape="rect" id="node38" href="$class_placement_info.html#a1143cc175975822b80a901c81337ea02" title="set the sites occupied by the PlacementUnit objects" alt="" coords="203,1559,407,1586"/>
+<area shape="rect" id="node39" href="$class_placement_info.html#adb467655582635a1c7f5743803397e11" title="set the legalization of some PlacementUnit objects" alt="" coords="206,1610,405,1637"/>
+<area shape="rect" id="node40" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="218,1661,393,1703"/>
+<area shape="rect" id="node41" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="206,1727,405,1768"/>
+<area shape="rect" id="node42" href="$class_placement_info.html#a132b4740f20122ca80ef9a1c2f3bfdd8" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="212,1792,399,1833"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="464,5,639,47"/>
 <area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="464,71,639,112"/>
 <area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="464,136,639,177"/>
@@ -25,20 +25,21 @@
 <area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#a34b224d1c2aa243ad1f9003fe2b88797" title=" " alt="" coords="464,267,639,308"/>
 <area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title=" " alt="" coords="464,332,639,373"/>
 <area shape="rect" id="node9" href="$class_placement_info_1_1_placement_unit.html#a06cbf23f1032d78a25997e727374f415" title=" " alt="" coords="464,397,639,439"/>
-<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="475,463,627,504"/>
-<area shape="rect" id="node11" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="475,528,627,569"/>
-<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="475,593,627,635"/>
-<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="475,659,627,700"/>
-<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="475,724,627,765"/>
-<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="475,789,627,831"/>
-<area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="475,855,627,896"/>
-<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="475,920,627,961"/>
-<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="475,985,627,1027"/>
-<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="475,1051,627,1092"/>
-<area shape="rect" id="node28" href="$class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="483,1167,619,1194"/>
-<area shape="rect" id="node29" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="464,1219,639,1260"/>
-<area shape="rect" id="node30" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title=" " alt="" coords="464,1284,639,1325"/>
-<area shape="rect" id="node31" href="$class_design_info_1_1_design_net.html#a85e89195055f943d8a24b9367b6718d1" title="check the attribute isGlobalClock" alt="" coords="687,1284,837,1325"/>
-<area shape="rect" id="node34" href="$class_design_info.html#a2470693b784f2a31632533a5df562bce" title="Set the Determined Occupation of a specific cell." alt="" coords="464,1349,639,1391"/>
-<area shape="rect" id="node42" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="469,1734,634,1761"/>
+<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html#aac2fb10ed37806637102fa6fbba9a32d" title="Get the clock nets connected to this cell for later legalization." alt="" coords="475,463,627,504"/>
+<area shape="rect" id="node11" href="$class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="475,528,627,569"/>
+<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="475,593,627,635"/>
+<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="475,659,627,700"/>
+<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="475,724,627,765"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="475,789,627,831"/>
+<area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="475,855,627,896"/>
+<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="475,920,627,961"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="475,985,627,1027"/>
+<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="475,1051,627,1092"/>
+<area shape="rect" id="node20" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="475,1116,627,1157"/>
+<area shape="rect" id="node29" href="$class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="483,1233,619,1259"/>
+<area shape="rect" id="node30" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="464,1284,639,1325"/>
+<area shape="rect" id="node31" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title=" " alt="" coords="464,1349,639,1391"/>
+<area shape="rect" id="node32" href="$class_design_info_1_1_design_net.html#a85e89195055f943d8a24b9367b6718d1" title="check the attribute isGlobalClock" alt="" coords="687,1349,837,1391"/>
+<area shape="rect" id="node35" href="$class_design_info.html#a2470693b784f2a31632533a5df562bce" title="Set the Determined Occupation of a specific cell." alt="" coords="464,1415,639,1456"/>
+<area shape="rect" id="node43" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="469,1799,634,1826"/>
 </map>

@@ -1,7 +1,7 @@
 <map id="PlacementInfo::PlacementBinInfo::getCells" name="PlacementInfo::PlacementBinInfo::getCells">
 <area shape="rect" id="node1" title="Get the reference of the set of cells in the bin." alt="" coords="1464,77,1639,119"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="1227,5,1398,47"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title=" " alt="" coords="1221,70,1404,126"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title="find neighbor PlacementUnit around targetX/Y from the bin grid" alt="" coords="1221,70,1404,126"/>
 <area shape="rect" id="node9" href="$class_general_spreader_1_1_spread_region.html#a2220ea0f7d31b324ef998fe3c2a367b1" title="Construct a new Spread Region object." alt="" coords="1209,149,1416,191"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="915,5,1161,47"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="620,13,867,39"/>

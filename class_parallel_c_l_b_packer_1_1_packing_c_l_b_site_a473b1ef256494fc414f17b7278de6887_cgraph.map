@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs" name="ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs">
-<area shape="rect" id="node1" title=" " alt="" coords="5,216,224,272"/>
+<area shape="rect" id="node1" title="extend the clusters in the priority queue with the neighbor PlacementUnits" alt="" coords="5,216,224,272"/>
 <area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a853324f96e6e9f90b8886e5c3359237d" title="try to add a given PlacementUnit into this cluster" alt="" coords="272,5,511,61"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a14aa1b72e5ea89cf4bcf2cb5e05de45e" title="find/print the reason why the PlacementUnit fails to be added into this cluster" alt="" coords="272,85,511,141"/>
 <area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title="we use a hash function to encode the cluster to easily check duplicated clusters in the candidates" alt="" coords="559,184,797,240"/>

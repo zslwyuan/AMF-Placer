@@ -1,7 +1,7 @@
 <map id="PlacementInfo::PlacementBinInfo::getManhattanDistanceTo" name="PlacementInfo::PlacementBinInfo::getManhattanDistanceTo">
 <area shape="rect" id="node1" title="Get the shortest Manhattan distance from the bin to a specific location." alt="" coords="1721,137,1936,179"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="1497,21,1667,63"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title=" " alt="" coords="1491,94,1673,150"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title="find neighbor PlacementUnit around targetX/Y from the bin grid" alt="" coords="1491,94,1673,150"/>
 <area shape="rect" id="node9" href="$class_placement_info.html#a95277820b83b80d5d0533073039cb2c3" title="find neibor device sites of a given cell from bin grid" alt="" coords="1497,173,1667,215"/>
 <area shape="rect" id="node21" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="1491,297,1673,339"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="1196,5,1443,47"/>

@@ -1,8 +1,9 @@
 <map id="DeviceInfo::getClockRegions" name="DeviceInfo::getClockRegions">
-<area shape="rect" id="node1" title=" " alt="" coords="1261,139,1449,166"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1261,165,1449,191"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization" alt="" coords="967,52,1213,93"/>
 <area shape="rect" id="node7" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="705,132,885,173"/>
-<area shape="rect" id="node10" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="975,212,1205,253"/>
+<area shape="rect" id="node10" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="680,215,911,256"/>
+<area shape="rect" id="node11" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="992,241,1188,267"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="672,38,919,65"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,139,116,166"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="440,38,599,65"/>

@@ -9,8 +9,8 @@
 <area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,43,116,70"/>
 <area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac68ac5008469db43c6c065b245614e8e" title="get the HPWL change if a given PlacementUnit is moved to this site" alt="" coords="1200,73,1439,129"/>
 <area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="1200,153,1439,209"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="925,327,1143,383"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title="extend the clusters in the priority queue with the neighbor PlacementUnits" alt="" coords="925,327,1143,383"/>
 <area shape="rect" id="node10" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,160,868,201"/>
-<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="947,95,1121,136"/>
-<area shape="rect" id="node13" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="916,160,1152,201"/>
+<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title="add CARRY&#45;related PlacementUnit into this CLB site" alt="" coords="947,95,1121,136"/>
+<area shape="rect" id="node13" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title="add LUTRAM&#45;related PlacementUnit into this CLB site" alt="" coords="916,160,1152,201"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="PlacementInfo::PlacementUnit::getClockNets" name="PlacementInfo::PlacementUnit::getClockNets">
+<area shape="rect" id="node1" title=" " alt="" coords="233,39,408,80"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="8,5,183,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="5,71,185,112"/>
+</map>

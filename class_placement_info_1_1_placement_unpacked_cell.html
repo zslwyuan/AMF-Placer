@@ -246,6 +246,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7939f4fe9625e17800463cba139a9ec0 inherit pub_methods_class_placement_info_1_1_placement_unit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab66a6076595cd602427c0b3ed80b544a inherit pub_methods_class_placement_info_1_1_placement_unit"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_unit.html#ab66a6076595cd602427c0b3ed80b544a">isPacked</a> ()</td></tr>
 <tr class="separator:ab66a6076595cd602427c0b3ed80b544a inherit pub_methods_class_placement_info_1_1_placement_unit"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a56b97b3d64feb09ab7cca14e093856 inherit pub_methods_class_placement_info_1_1_placement_unit"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_design_info_1_1_design_net.html">DesignInfo::DesignNet</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856">getClockNets</a> ()</td></tr>
+<tr class="separator:a0a56b97b3d64feb09ab7cca14e093856 inherit pub_methods_class_placement_info_1_1_placement_unit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -255,11 +257,18 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a84290124e7f200adc9960223f1c673d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b3731810037f7b37d09581f61c29fbb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_unpacked_cell.html#a9b3731810037f7b37d09581f61c29fbb">BELName</a></td></tr>
 <tr class="separator:a9b3731810037f7b37d09581f61c29fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_placement_info_1_1_placement_unit"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_placement_info_1_1_placement_unit')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_placement_info_1_1_placement_unit.html">PlacementInfo::PlacementUnit</a></td></tr>
+<tr class="memitem:aac3592813df2d7d87b15cb1267a6b908 inherit pro_attribs_class_placement_info_1_1_placement_unit"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_design_info_1_1_design_net.html">DesignInfo::DesignNet</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_unit.html#aac3592813df2d7d87b15cb1267a6b908">clockNets</a></td></tr>
+<tr class="memdesc:aac3592813df2d7d87b15cb1267a6b908 inherit pro_attribs_class_placement_info_1_1_placement_unit"><td class="mdescLeft">&#160;</td><td class="mdescRight">record the clock nets connected to this <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a>  <a href="class_placement_info_1_1_placement_unit.html#aac3592813df2d7d87b15cb1267a6b908">More...</a><br /></td></tr>
+<tr class="separator:aac3592813df2d7d87b15cb1267a6b908 inherit pro_attribs_class_placement_info_1_1_placement_unit"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >the smallest, indivisible, representable component. It will include only one standard cell </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01350">1350</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01362">1362</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="af1321b99c4ffb11a58f00b555f854ce6" name="af1321b99c4ffb11a58f00b555f854ce6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1321b99c4ffb11a58f00b555f854ce6">&#9670;&nbsp;</a></span>PlacementUnpackedCell()</h2>
@@ -311,13 +320,13 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01360">1360</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01372">1372</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_info_1_1_placement_unpacked_cell_af1321b99c4ffb11a58f00b555f854ce6_cgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_unpacked_cell_af1321b99c4ffb11a58f00b555f854ce6_cgraph" alt=""/></div>
 <map name="aclass_placement_info_1_1_placement_unpacked_cell_af1321b99c4ffb11a58f00b555f854ce6_cgraph" id="aclass_placement_info_1_1_placement_unpacked_cell_af1321b99c4ffb11a58f00b555f854ce6_cgraph">
-<area shape="rect" title="Construct a new Placement Unpacked Cell object." alt="" coords="5,463,257,504"/>
+<area shape="rect" title="Construct a new Placement Unpacked Cell object." alt="" coords="5,496,257,537"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="305,5,480,47"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="305,71,480,112"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="305,136,480,177"/>
@@ -325,14 +334,15 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#a34b224d1c2aa243ad1f9003fe2b88797" title=" " alt="" coords="305,267,480,308"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title=" " alt="" coords="305,332,480,373"/>
 <area shape="rect" href="class_placement_info_1_1_placement_unit.html#a06cbf23f1032d78a25997e727374f415" title=" " alt="" coords="305,397,480,439"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="317,463,469,504"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="317,528,469,569"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="317,593,469,635"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="317,659,469,700"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="317,724,469,765"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="317,789,469,831"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="317,855,469,896"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="317,920,469,961"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#aac2fb10ed37806637102fa6fbba9a32d" title="Get the clock nets connected to this cell for later legalization." alt="" coords="317,463,469,504"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="317,528,469,569"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="317,593,469,635"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="317,659,469,700"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="317,724,469,765"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="317,789,469,831"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="317,855,469,896"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="317,920,469,961"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="317,985,469,1027"/>
 </map>
 </div>
 
@@ -361,7 +371,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01378">1378</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01391">1391</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 </div>
 </div>
@@ -389,9 +399,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01394">1394</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01407">1407</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00023">IncrementalBELPacker::isLUTsPackable()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00784">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00023">IncrementalBELPacker::isLUTsPackable()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00799">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -428,9 +438,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01399">1399</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01412">1412</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00784">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00799">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -466,9 +476,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01404">1404</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01417">1417</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00784">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00799">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -527,9 +537,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01382">1382</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01395">1395</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01596">PlacementInfo::loadPlacementUnitInformation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01611">PlacementInfo::loadPlacementUnitInformation()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -580,9 +590,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01413">1413</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01426">1426</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01399">getFixedBELName()</a>, and <a class="el" href="_placement_info_8h_source.html#l01382">setLockedAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01412">getFixedBELName()</a>, and <a class="el" href="_placement_info_8h_source.html#l01395">setLockedAt()</a>.</p>
 
 </div>
 </div>
@@ -606,9 +616,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01410">1410</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01423">1423</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01394">getCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01407">getCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementUnpackedCell()</a>.</p>
 
 </div>
 </div>
@@ -632,9 +642,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01412">1412</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01425">1425</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01404">getFixedSiteName()</a>, and <a class="el" href="_placement_info_8h_source.html#l01382">setLockedAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01417">getFixedSiteName()</a>, and <a class="el" href="_placement_info_8h_source.html#l01395">setLockedAt()</a>.</p>
 
 </div>
 </div>

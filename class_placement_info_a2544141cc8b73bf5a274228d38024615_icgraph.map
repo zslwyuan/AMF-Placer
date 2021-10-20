@@ -3,7 +3,7 @@
 <area shape="rect" id="node2" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="1245,9,1492,50"/>
 <area shape="rect" id="node7" href="$class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6" title="adjust the resource demand of LUTs/FFs according to routing congestion refer to RippleFPGA&#39;s implemen..." alt="" coords="1544,133,1791,174"/>
 <area shape="rect" id="node8" href="$class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="1582,67,1753,109"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title=" " alt="" coords="1576,607,1759,663"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af10d9a00f87776066e145275b4407202" title="find neighbor PlacementUnit around targetX/Y from the bin grid" alt="" coords="1576,607,1759,663"/>
 <area shape="rect" id="node10" href="$class_placement_info.html#a95277820b83b80d5d0533073039cb2c3" title="find neibor device sites of a given cell from bin grid" alt="" coords="1582,286,1753,327"/>
 <area shape="rect" id="node22" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="1576,431,1759,473"/>
 <area shape="rect" id="node26" href="$class_placement_info.html#ae9bdbfe7d5992cc0525f4461ebfbb7f4" title="update the bin information of a design cell when it is moved to a new location" alt="" coords="1578,198,1757,239"/>

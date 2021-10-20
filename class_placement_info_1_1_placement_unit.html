@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('class_placement_info_1_1_placement_uni
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_placement_info_1_1_placement_unit-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">PlacementInfo::PlacementUnit Class Reference</div></div>
@@ -220,6 +221,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7939f4fe9625e17800463cba139a9ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab66a6076595cd602427c0b3ed80b544a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_unit.html#ab66a6076595cd602427c0b3ed80b544a">isPacked</a> ()</td></tr>
 <tr class="separator:ab66a6076595cd602427c0b3ed80b544a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a56b97b3d64feb09ab7cca14e093856"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_design_info_1_1_design_net.html">DesignInfo::DesignNet</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856">getClockNets</a> ()</td></tr>
+<tr class="separator:a0a56b97b3d64feb09ab7cca14e093856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:aac3592813df2d7d87b15cb1267a6b908"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_design_info_1_1_design_net.html">DesignInfo::DesignNet</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_info_1_1_placement_unit.html#aac3592813df2d7d87b15cb1267a6b908">clockNets</a></td></tr>
+<tr class="memdesc:aac3592813df2d7d87b15cb1267a6b908"><td class="mdescLeft">&#160;</td><td class="mdescRight">record the clock nets connected to this <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a>  <a href="class_placement_info_1_1_placement_unit.html#aac3592813df2d7d87b15cb1267a6b908">More...</a><br /></td></tr>
+<tr class="separator:aac3592813df2d7d87b15cb1267a6b908"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -374,7 +383,7 @@ Private Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01194">1194</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01471">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01525">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01484">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01542">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -428,7 +437,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01210">1210</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01471">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01525">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01484">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01542">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -482,7 +491,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01190">1190</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01471">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01525">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01484">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01542">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -536,7 +545,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01206">1206</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01471">PlacementInfo::PlacementMacro::addCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01484">PlacementInfo::PlacementMacro::addCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -588,7 +597,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01202">1202</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01471">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01525">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01484">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01542">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -642,7 +651,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01198">1198</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01471">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01525">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01375">InitialPacker::loadOtherCLBMacros()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01484">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01542">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01375">InitialPacker::loadOtherCLBMacros()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -696,7 +705,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01214">1214</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01471">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01525">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01360">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01484">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01542">PlacementInfo::PlacementMacro::addVirtualCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1053,7 +1062,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01267">1267</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02395">PlacementInfo::ClusterUnit::addPlacementUnit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02420">PlacementInfo::ClusterUnit::addPlacementUnit()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1104,6 +1113,45 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a0a56b97b3d64feb09ab7cca14e093856" name="a0a56b97b3d64feb09ab7cca14e093856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a56b97b3d64feb09ab7cca14e093856">&#9670;&nbsp;</a></span>getClockNets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt; <a class="el" href="class_design_info_1_1_design_net.html">DesignInfo::DesignNet</a> * &gt; &amp; PlacementInfo::PlacementUnit::getClockNets </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01300">1300</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04143">PlacementInfo::addPUIntoClockColumn()</a>, and <a class="el" href="_placement_info_8h_source.html#l04121">PlacementInfo::checkClockColumnLegalization()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_placement_info_1_1_placement_unit_a0a56b97b3d64feb09ab7cca14e093856_icgraph.png" border="0" usemap="#aclass_placement_info_1_1_placement_unit_a0a56b97b3d64feb09ab7cca14e093856_icgraph" alt=""/></div>
+<map name="aclass_placement_info_1_1_placement_unit_a0a56b97b3d64feb09ab7cca14e093856_icgraph" id="aclass_placement_info_1_1_placement_unit_a0a56b97b3d64feb09ab7cca14e093856_icgraph">
+<area shape="rect" title=" " alt="" coords="233,39,408,80"/>
+<area shape="rect" href="class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="8,5,183,47"/>
+<area shape="rect" href="class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="5,71,185,112"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="af351a06e4c2bdbe98b05f2d5dfd13241" name="af351a06e4c2bdbe98b05f2d5dfd13241"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af351a06e4c2bdbe98b05f2d5dfd13241">&#9670;&nbsp;</a></span>getDSPNum()</h2>
 
@@ -1129,7 +1177,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01263">1263</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02395">PlacementInfo::ClusterUnit::addPlacementUnit()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02420">PlacementInfo::ClusterUnit::addPlacementUnit()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1178,7 +1226,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01160">1160</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03105">PlacementInfo::addPseudoNetsInPlacementInfo()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::clusterHash()</a>, <a class="el" href="_c_l_b_legalizer_8h_source.html#l00663">CLBLegalizer::getHPWLChange()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00751">MacroLegalizer::getHPWLChange()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00052">Packing_PUcompare::operator()()</a>, <a class="el" href="_placement_info_8cc_source.html#l00719">operator&lt;&lt;()</a>, and <a class="el" href="_cluster_placer_8cc_source.html#l00441">ClusterPlacer::refineClustersWithPredefinedClusters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03130">PlacementInfo::addPseudoNetsInPlacementInfo()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00950">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::clusterHash()</a>, <a class="el" href="_c_l_b_legalizer_8h_source.html#l00663">CLBLegalizer::getHPWLChange()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00751">MacroLegalizer::getHPWLChange()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00052">Packing_PUcompare::operator()()</a>, <a class="el" href="_placement_info_8cc_source.html#l00734">operator&lt;&lt;()</a>, and <a class="el" href="_cluster_placer_8cc_source.html#l00441">ClusterPlacer::refineClustersWithPredefinedClusters()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1201,9 +1249,9 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,277,365,319"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,212,365,253"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,285,116,311"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="1904,581,2079,623"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="1873,647,2109,688"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="1595,445,1814,501"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title="add CARRY&#45;related PlacementUnit into this CLB site" alt="" coords="1904,581,2079,623"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title="add LUTRAM&#45;related PlacementUnit into this CLB site" alt="" coords="1873,647,2109,688"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title="extend the clusters in the priority queue with the neighbor PlacementUnits" alt="" coords="1595,445,1814,501"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="1872,502,2111,558"/>
 <area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="1635,604,1774,645"/>
 <area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="1377,588,1521,629"/>
@@ -1334,7 +1382,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01140">1140</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00548">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPU()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l01467">ParallelCLBPacker::dumpFinalPacking()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00701">MacroLegalizer::dumpMatching()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00719">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00548">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPU()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l01467">ParallelCLBPacker::dumpFinalPacking()</a>, <a class="el" href="_macro_legalizer_8cc_source.html#l00701">MacroLegalizer::dumpMatching()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00734">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1345,8 +1393,8 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="351,289,489,330"/>
 <area shape="rect" href="class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="1327,347,1528,373"/>
 <area shape="rect" href="_placement_info_8cc.html#a0f0f5e6d103770fbc53ac592f3798708" title=" " alt="" coords="1385,397,1470,424"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="1031,5,1250,61"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af5d2130285d47decadf51abe644e18ea" title=" " alt="" coords="1038,85,1243,141"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title="extend the clusters in the priority queue with the neighbor PlacementUnits" alt="" coords="1031,5,1250,61"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#af5d2130285d47decadf51abe644e18ea" title="remove invalid clusters from neighbor PlacementUnits" alt="" coords="1038,85,1243,141"/>
 <area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="811,223,949,265"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster" alt="" coords="1021,216,1260,272"/>
 <area shape="rect" href="class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="566,223,710,265"/>
@@ -1389,7 +1437,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01185">1185</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01419">ParallelCLBPacker::PackingCLBSite::getHPWLChangeForPU()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00504">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00551">PlacementInfo::updateLongPaths()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01475">ParallelCLBPacker::PackingCLBSite::getHPWLChangeForPU()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00504">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00566">PlacementInfo::updateLongPaths()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1405,10 +1453,10 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,43,116,70"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac68ac5008469db43c6c065b245614e8e" title="get the HPWL change if a given PlacementUnit is moved to this site" alt="" coords="1200,73,1439,129"/>
 <area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="1200,153,1439,209"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title=" " alt="" coords="925,327,1143,383"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title="extend the clusters in the priority queue with the neighbor PlacementUnits" alt="" coords="925,327,1143,383"/>
 <area shape="rect" href="class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,160,868,201"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title=" " alt="" coords="947,95,1121,136"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title=" " alt="" coords="916,160,1152,201"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title="add CARRY&#45;related PlacementUnit into this CLB site" alt="" coords="947,95,1121,136"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001" title="add LUTRAM&#45;related PlacementUnit into this CLB site" alt="" coords="916,160,1152,201"/>
 </map>
 </div>
 
@@ -1439,7 +1487,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01145">1145</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03275">PlacementInfo::enforceLegalizeXYInArea()</a>, <a class="el" href="_placement_info_8h_source.html#l03379">PlacementInfo::isLegalLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03237">PlacementInfo::legalizeXYInArea()</a>, and <a class="el" href="_placement_info_8h_source.html#l01769">PlacementInfo::PlacementNet::PlacementNet()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03300">PlacementInfo::enforceLegalizeXYInArea()</a>, <a class="el" href="_placement_info_8h_source.html#l03404">PlacementInfo::isLegalLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l03262">PlacementInfo::legalizeXYInArea()</a>, and <a class="el" href="_placement_info_8h_source.html#l01794">PlacementInfo::PlacementNet::PlacementNet()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1499,7 +1547,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01155">1155</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02395">PlacementInfo::ClusterUnit::addPlacementUnit()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l02420">PlacementInfo::ClusterUnit::addPlacementUnit()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1549,7 +1597,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01250">1250</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00551">PlacementInfo::updateLongPaths()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00566">PlacementInfo::updateLongPaths()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1601,7 +1649,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01246">1246</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00551">PlacementInfo::updateLongPaths()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00566">PlacementInfo::updateLongPaths()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1651,7 +1699,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01131">1131</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03105">PlacementInfo::addPseudoNetsInPlacementInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l01596">PlacementInfo::loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00719">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03130">PlacementInfo::addPseudoNetsInPlacementInfo()</a>, <a class="el" href="_placement_info_8cc_source.html#l01611">PlacementInfo::loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8cc_source.html#l00734">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1727,7 +1775,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01120">1120</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00719">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00734">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -1819,7 +1867,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01135">1135</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00719">operator&lt;&lt;()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l00734">operator&lt;&lt;()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2014,7 +2062,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01040">1040</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01382">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01395">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2065,7 +2113,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01082">1082</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03275">PlacementInfo::enforceLegalizeXYInArea()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">IncrementalBELPacker::FFPairing()</a>, <a class="el" href="_placement_info_8cc_source.html#l01596">PlacementInfo::loadPlacementUnitInformation()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">IncrementalBELPacker::LUTFFPairing()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03300">PlacementInfo::enforceLegalizeXYInArea()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">IncrementalBELPacker::FFPairing()</a>, <a class="el" href="_placement_info_8cc_source.html#l01611">PlacementInfo::loadPlacementUnitInformation()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">IncrementalBELPacker::LUTFFPairing()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2114,7 +2162,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01098">1098</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01596">PlacementInfo::loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8h_source.html#l01382">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01611">PlacementInfo::loadPlacementUnitInformation()</a>, <a class="el" href="_placement_info_8h_source.html#l01395">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2155,7 +2203,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01110">1110</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01596">PlacementInfo::loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l01382">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01611">PlacementInfo::loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l01395">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2271,7 +2319,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01125">1125</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01596">PlacementInfo::loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l01382">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8cc_source.html#l01611">PlacementInfo::loadPlacementUnitInformation()</a>, and <a class="el" href="_placement_info_8h_source.html#l01395">PlacementInfo::PlacementUnpackedCell::setLockedAt()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2420,7 +2468,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01150">1150</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">IncrementalBELPacker::FFPairing()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00335">InitialPacker::findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00742">InitialPacker::findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00209">InitialPacker::findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00289">InitialPacker::findLUTRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01129">InitialPacker::findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01567">InitialPacker::findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01375">InitialPacker::loadOtherCLBMacros()</a>, <a class="el" href="_placement_info_8cc_source.html#l01596">PlacementInfo::loadPlacementUnitInformation()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01491">InitialPacker::LUTFFPairing()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">IncrementalBELPacker::LUTFFPairing()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00241">IncrementalBELPacker::FFPairing()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00335">InitialPacker::findBRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00742">InitialPacker::findCARRYMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00209">InitialPacker::findDSPMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l00289">InitialPacker::findLUTRAMMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01129">InitialPacker::findMuxMacros()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01567">InitialPacker::findUnpackedUnits()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01375">InitialPacker::loadOtherCLBMacros()</a>, <a class="el" href="_placement_info_8cc_source.html#l01611">PlacementInfo::loadPlacementUnitInformation()</a>, <a class="el" href="_initial_packer_8cc_source.html#l01491">InitialPacker::LUTFFPairing()</a>, <a class="el" href="_incremental_b_e_l_packer_8cc_source.html#l00032">IncrementalBELPacker::LUTFFPairing()</a>, and <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00972">ParallelCLBPacker::updatePackedMacro()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2471,7 +2519,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01012">1012</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03275">PlacementInfo::enforceLegalizeXYInArea()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00109">IncrementalBELPacker::FFLocation::FFLocation()</a>, <a class="el" href="_c_l_b_legalizer_8h_source.html#l00651">CLBLegalizer::getDisplacement()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00699">MacroLegalizer::getDisplacement()</a>, <a class="el" href="_placement_info_8cc_source.html#l00719">operator&lt;&lt;()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01837">ParallelCLBPacker::PULocation::PULocation()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00627">WirelengthOptimizer::updatePseudoNetForUserDefinedClusters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03300">PlacementInfo::enforceLegalizeXYInArea()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00109">IncrementalBELPacker::FFLocation::FFLocation()</a>, <a class="el" href="_c_l_b_legalizer_8h_source.html#l00651">CLBLegalizer::getDisplacement()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00699">MacroLegalizer::getDisplacement()</a>, <a class="el" href="_placement_info_8cc_source.html#l00734">operator&lt;&lt;()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01901">ParallelCLBPacker::PULocation::PULocation()</a>, and <a class="el" href="_wirelength_optimizer_8cc_source.html#l00627">WirelengthOptimizer::updatePseudoNetForUserDefinedClusters()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2528,7 +2576,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01017">1017</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03275">PlacementInfo::enforceLegalizeXYInArea()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00109">IncrementalBELPacker::FFLocation::FFLocation()</a>, <a class="el" href="_c_l_b_legalizer_8h_source.html#l00651">CLBLegalizer::getDisplacement()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00699">MacroLegalizer::getDisplacement()</a>, <a class="el" href="_placement_info_8cc_source.html#l00719">operator&lt;&lt;()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01837">ParallelCLBPacker::PULocation::PULocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l03300">PlacementInfo::enforceLegalizeXYInArea()</a>, <a class="el" href="_parallel_c_l_b_packer_8cc_source.html#l00497">ParallelCLBPacker::exceptionPULegalize()</a>, <a class="el" href="_incremental_b_e_l_packer_8h_source.html#l00109">IncrementalBELPacker::FFLocation::FFLocation()</a>, <a class="el" href="_c_l_b_legalizer_8h_source.html#l00651">CLBLegalizer::getDisplacement()</a>, <a class="el" href="_macro_legalizer_8h_source.html#l00699">MacroLegalizer::getDisplacement()</a>, <a class="el" href="_placement_info_8cc_source.html#l00734">operator&lt;&lt;()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01901">ParallelCLBPacker::PULocation::PULocation()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -2577,7 +2625,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01303">1303</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01315">1315</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01006">getAnchorLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l01092">recordSpreadLocatin()</a>, <a class="el" href="_placement_info_8h_source.html#l01040">setAnchorLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l01082">setAnchorLocationAndForgetTheOriginalOne()</a>, <a class="el" href="_placement_info_8h_source.html#l01064">setSpreadLocation()</a>, and <a class="el" href="_placement_info_8h_source.html#l01012">X()</a>.</p>
 
@@ -2603,7 +2651,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01303">1303</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01315">1315</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01006">getAnchorLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l01092">recordSpreadLocatin()</a>, <a class="el" href="_placement_info_8h_source.html#l01040">setAnchorLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l01082">setAnchorLocationAndForgetTheOriginalOne()</a>, <a class="el" href="_placement_info_8h_source.html#l01064">setSpreadLocation()</a>, and <a class="el" href="_placement_info_8h_source.html#l01017">Y()</a>.</p>
 
@@ -2629,7 +2677,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01336">1336</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01348">1348</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01194">addBRAM()</a>, <a class="el" href="_placement_info_8h_source.html#l01222">checkHasBRAM()</a>, and <a class="el" href="_placement_info_8h_source.html#l01267">getBRAMNum()</a>.</p>
 
@@ -2655,9 +2703,37 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01340">1340</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01352">1352</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01210">addCARRY()</a>, <a class="el" href="_placement_info_8h_source.html#l01238">checkHasCARRY()</a>, <a class="el" href="_placement_info_8h_source.html#l01279">getCARRYNum()</a>, and <a class="el" href="_placement_info_8h_source.html#l01259">isLCLB()</a>.</p>
+
+</div>
+</div>
+<a id="aac3592813df2d7d87b15cb1267a6b908" name="aac3592813df2d7d87b15cb1267a6b908"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac3592813df2d7d87b15cb1267a6b908">&#9670;&nbsp;</a></span>clockNets</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="class_design_info_1_1_design_net.html">DesignInfo::DesignNet</a> *&gt; PlacementInfo::PlacementUnit::clockNets</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>record the clock nets connected to this <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01310">1310</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01484">PlacementInfo::PlacementMacro::addCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01542">PlacementInfo::PlacementMacro::addVirtualCell()</a>, <a class="el" href="_placement_info_8h_source.html#l01300">getClockNets()</a>, and <a class="el" href="_placement_info_8h_source.html#l01372">PlacementInfo::PlacementUnpackedCell::PlacementUnpackedCell()</a>.</p>
 
 </div>
 </div>
@@ -2681,7 +2757,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01335">1335</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01347">1347</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01190">addDSP()</a>, <a class="el" href="_placement_info_8h_source.html#l01218">checkHasDSP()</a>, and <a class="el" href="_placement_info_8h_source.html#l01263">getDSPNum()</a>.</p>
 
@@ -2707,7 +2783,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01339">1339</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01351">1351</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01206">addFF()</a>, and <a class="el" href="_placement_info_8h_source.html#l01234">checkHasFF()</a>.</p>
 
@@ -2735,7 +2811,7 @@ Here is the caller graph for this function:</div>
 
 <p>fixed simply means the <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a> cannot be moved. </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01318">1318</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01330">1330</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01131">isFixed()</a>, <a class="el" href="_placement_info_8h_source.html#l01098">setFixed()</a>, and <a class="el" href="_placement_info_8h_source.html#l01104">setUnfixed()</a>.</p>
 
@@ -2761,9 +2837,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01302">1302</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01314">1314</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01679">PlacementInfo::PlacementMacro::getCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01160">getId()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01704">PlacementInfo::PlacementMacro::getCell()</a>, and <a class="el" href="_placement_info_8h_source.html#l01160">getId()</a>.</p>
 
 </div>
 </div>
@@ -2787,7 +2863,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01304">1304</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01316">1316</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01022">lastX()</a>, <a class="el" href="_placement_info_8h_source.html#l01040">setAnchorLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l01082">setAnchorLocationAndForgetTheOriginalOne()</a>, and <a class="el" href="_placement_info_8h_source.html#l01064">setSpreadLocation()</a>.</p>
 
@@ -2813,7 +2889,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01304">1304</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01316">1316</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01027">lastY()</a>, <a class="el" href="_placement_info_8h_source.html#l01040">setAnchorLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l01082">setAnchorLocationAndForgetTheOriginalOne()</a>, and <a class="el" href="_placement_info_8h_source.html#l01064">setSpreadLocation()</a>.</p>
 
@@ -2839,7 +2915,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01305">1305</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01317">1317</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01092">recordSpreadLocatin()</a>, and <a class="el" href="_placement_info_8h_source.html#l01064">setSpreadLocation()</a>.</p>
 
@@ -2865,7 +2941,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01305">1305</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01317">1317</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01092">recordSpreadLocatin()</a>, and <a class="el" href="_placement_info_8h_source.html#l01064">setSpreadLocation()</a>.</p>
 
@@ -2893,7 +2969,7 @@ Here is the caller graph for this function:</div>
 
 <p>if locked, the attributes of the <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a> cannot be changed (more than fixed.) </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01332">1332</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01344">1344</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01120">isLocked()</a>, <a class="el" href="_placement_info_8h_source.html#l01040">setAnchorLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l01082">setAnchorLocationAndForgetTheOriginalOne()</a>, <a class="el" href="_placement_info_8h_source.html#l01098">setFixed()</a>, <a class="el" href="_placement_info_8h_source.html#l01110">setLocked()</a>, <a class="el" href="_placement_info_8h_source.html#l01125">setPlaced()</a>, <a class="el" href="_placement_info_8h_source.html#l01064">setSpreadLocation()</a>, <a class="el" href="_placement_info_8h_source.html#l01104">setUnfixed()</a>, and <a class="el" href="_placement_info_8h_source.html#l01115">setUnlocked()</a>.</p>
 
@@ -2919,7 +2995,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01338">1338</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01350">1350</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01202">addLUT()</a>, <a class="el" href="_placement_info_8h_source.html#l01230">checkHasLUT()</a>, <a class="el" href="_placement_info_8h_source.html#l01275">getLUTNum()</a>, and <a class="el" href="_placement_info_8h_source.html#l01259">isLCLB()</a>.</p>
 
@@ -2945,7 +3021,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01337">1337</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01349">1349</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01198">addLUTRAM()</a>, <a class="el" href="_placement_info_8h_source.html#l01226">checkHasLUTRAM()</a>, <a class="el" href="_placement_info_8h_source.html#l01271">getLUTRAMNum()</a>, and <a class="el" href="_placement_info_8h_source.html#l01255">isMCLB()</a>.</p>
 
@@ -2971,7 +3047,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01341">1341</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01353">1353</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01214">addMUX()</a>, <a class="el" href="_placement_info_8h_source.html#l01242">checkHasMUX()</a>, and <a class="el" href="_placement_info_8h_source.html#l01283">getMUXNum()</a>.</p>
 
@@ -2997,7 +3073,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01301">1301</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01313">1313</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01140">getName()</a>.</p>
 
@@ -3025,7 +3101,7 @@ Here is the caller graph for this function:</div>
 
 <p>record the nets connected to this <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01312">1312</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01324">1324</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01185">getNetsSetPtr()</a>, and <a class="el" href="_placement_info_8h_source.html#l01175">setNetsSetPtr()</a>.</p>
 
@@ -3051,7 +3127,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01343">1343</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01355">1355</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01295">isPacked()</a>, <a class="el" href="_placement_info_8h_source.html#l01291">resetPacked()</a>, and <a class="el" href="_placement_info_8h_source.html#l01287">setPacked()</a>.</p>
 
@@ -3080,7 +3156,7 @@ Here is the caller graph for this function:</div>
 <p>the <a class="el" href="class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand">PlacementUnit</a> is placed to BEL slot. </p>
 <p >Currently, this attribute is not used. </p>
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01326">1326</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01338">1338</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01135">isPlaced()</a>, and <a class="el" href="_placement_info_8h_source.html#l01125">setPlaced()</a>.</p>
 
@@ -3106,7 +3182,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01306">1306</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01318">1318</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01145">getType()</a>.</p>
 
@@ -3132,7 +3208,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01333">1333</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_info_8h_source.html#l01345">1345</a> of file <a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l01155">getWeight()</a>, and <a class="el" href="_placement_info_8h_source.html#l01150">setWeight()</a>.</p>
 

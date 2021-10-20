@@ -7,6 +7,8 @@ var class_device_info_1_1_device_site =
     [ "addChildSite", "class_device_info_1_1_device_site.html#a5d18801ebe5553ea1853d30947ce8004", null ],
     [ "getChildrenBELs", "class_device_info_1_1_device_site.html#a405fc046821a3d21dc515655856173ad", null ],
     [ "getChildrenSites", "class_device_info_1_1_device_site.html#a3266b40b92742cd53950925aa34fc254", null ],
+    [ "getClockHalfColumn", "class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38", null ],
+    [ "getClockRegion", "class_device_info_1_1_device_site.html#aab04500e9e8dde284f4b64363f4f8134", null ],
     [ "getClockRegionX", "class_device_info_1_1_device_site.html#a1db113d4da2ff21bb1a71948c7a5ddf8", null ],
     [ "getClockRegionY", "class_device_info_1_1_device_site.html#a03674f7e97a9152447bab8f56cb5935d", null ],
     [ "getParentSite", "class_device_info_1_1_device_site.html#a0578616db007fbc5b2e13c532e2474de", null ],
