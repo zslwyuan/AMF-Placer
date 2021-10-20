@@ -10,7 +10,7 @@
 <area shape="rect" id="node15" href="$_macro_legalizer_8h.html" title="This header file contains the definitions of MacroLegalizer class and its internal modules and APIs w..." alt="" coords="1768,399,1960,441"/>
 <area shape="rect" id="node17" href="$_incremental_b_e_l_packer_8h.html" title="This header file contains the definitions of IncrementalBELPacker class and its internal modules and ..." alt="" coords="1161,295,1380,337"/>
 <area shape="rect" id="node19" href="$_initial_packer_8h.html" title="This header file contains the definitions of InitialPacker class and its internal modules and APIs wh..." alt="" coords="94,295,277,337"/>
-<area shape="rect" id="node21" href="$_parallel_c_l_b_packer_8h.html" title=" " alt="" coords="727,295,921,337"/>
+<area shape="rect" id="node21" href="$_parallel_c_l_b_packer_8h.html" title="This header file contains the definitions of ParallelCLBPacker class and its internal modules and API..." alt="" coords="727,295,921,337"/>
 <area shape="rect" id="node25" href="$_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="1873,199,2079,240"/>
 <area shape="rect" id="node28" href="$_placement_timing_optimizer_8h.html" title=" " alt="" coords="3059,288,3290,344"/>
 <area shape="rect" id="node34" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="2627,95,2858,151"/>
@@ -23,9 +23,9 @@
 <area shape="rect" id="node16" href="$_macro_legalizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the MacroLegalizer which maps DSP/BRAM/CARR..." alt="" coords="1994,496,2193,537"/>
 <area shape="rect" id="node18" href="$_incremental_b_e_l_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the IncrementalBELPacker which incrementall..." alt="" coords="1051,399,1277,441"/>
 <area shape="rect" id="node20" href="$_initial_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the InitialPacker which identifies macros f..." alt="" coords="94,399,277,441"/>
-<area shape="rect" id="node22" href="$_parallel_c_l_b_packer_8cc.html" title=" " alt="" coords="613,399,816,441"/>
-<area shape="rect" id="node23" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html" title=" " alt="" coords="841,392,1026,448"/>
-<area shape="rect" id="node24" href="$_parallel_c_l_b_packer___packing_c_l_b_site_8cc.html" title=" " alt="" coords="403,392,589,448"/>
+<area shape="rect" id="node22" href="$_parallel_c_l_b_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the ParallelCLBPacker which finally packs L..." alt="" coords="613,399,816,441"/>
+<area shape="rect" id="node23" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html" title="This implementation file contains APIs&#39; implementation related to the packing&#45;cluster&#45;level processes..." alt="" coords="841,392,1026,448"/>
+<area shape="rect" id="node24" href="$_parallel_c_l_b_packer___packing_c_l_b_site_8cc.html" title="This implementation file contains APIs&#39; implementation related to the CLBSite&#45;level processes in the ..." alt="" coords="403,392,589,448"/>
 <area shape="rect" id="node26" href="$_placement_info_8cc.html" title="This implementation file contains APIs to initialize and process the information related to FPGA plac..." alt="" coords="2112,295,2325,337"/>
 <area shape="rect" id="node27" href="$_placement_timing_info_8cc.html" title="This implementation file contains APIs&#39; implementation for the timing information related to placemen..." alt="" coords="2753,288,2983,344"/>
 <area shape="rect" id="node30" href="$_graph_partitioner_8h.html" title=" " alt="" coords="2502,295,2677,337"/>

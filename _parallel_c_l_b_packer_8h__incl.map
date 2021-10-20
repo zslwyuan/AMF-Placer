@@ -1,5 +1,5 @@
 <map id="src/lib/HiFPlacer/placement/packing/ParallelCLBPacker.h" name="src/lib/HiFPlacer/placement/packing/ParallelCLBPacker.h">
-<area shape="rect" id="node1" title=" " alt="" coords="1963,5,2158,47"/>
+<area shape="rect" id="node1" title="This header file contains the definitions of ParallelCLBPacker class and its internal modules and API..." alt="" coords="1963,5,2158,47"/>
 <area shape="rect" id="node2" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="1568,259,1663,285"/>
 <area shape="rect" id="node3" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="1144,333,1239,360"/>
 <area shape="rect" id="node4" href="$str_print_8h.html" title=" " alt="" coords="179,408,254,435"/>
