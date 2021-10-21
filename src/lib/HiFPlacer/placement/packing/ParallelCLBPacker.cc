@@ -1479,7 +1479,8 @@ void ParallelCLBPacker::dumpPlacementTcl(std::string dumpTclFile)
     assert(outfileTcl.is_open() && outfileTcl.good() &&
            "The path for placement Tcl dumping does not exist and please check your path settings");
     outfileTcl << "set script_path [ file dirname [ file normalize [ info script ] ] ]\n";
-    outfileTcl << "set fo [open \"${script_path}/placementError\" \"w\"]\nplace_design -unplace\nset errorNum 0\n";
+    outfileTcl
+        << "set fo [open \"${script_path}/initialPlacementError\" \"w\"]\nplace_design -unplace\nset errorNum 0\n";
     dumpDSPBRAMPlacementTcl(outfileTcl);
     dumpCLBPlacementTcl(outfileTcl, true);
     // Except LUT6_2 cells, remove the packing information in Vivado and use our packing
@@ -1488,7 +1489,27 @@ void ParallelCLBPacker::dumpPlacementTcl(std::string dumpTclFile)
     dumpCLBPlacementTcl(outfileTcl, false);
     // outfileTcl << "place_design\n";
     outfileTcl << "$errorNum\n";
-
+    outfileTcl << "close $fo \n"
+                  "set a [open \"${script_path}/initialPlacementError\"]\n"
+                  "set lines [split [read $a] \"\\n\"]\n"
+                  "close $a;\n"
+                  "exec rm \"${script_path}/initialPlacementError\"\n"
+                  "set b [open \"${script_path}/placementError\" \"w\"]\n"
+                  "set lineCnt 0\n"
+                  "set placeBatch {}\n"
+                  "foreach line $lines {\n"
+                  "   incr lineCnt\n"
+                  "   set placeBatch [concat $placeBatch $line]\n"
+                  "   if {$lineCnt == 5 } {\n"
+                  "       set result [catch {place_cell  $placeBatch }]\n"
+                  "       if {$result} {\n"
+                  "           puts $b $placeBatch\n"
+                  "       }\n"
+                  "       set lineCnt 0\n"
+                  "       set placeBatch \"\"\n"
+                  "    }\n"
+                  "}\n"
+                  "close $b\n";
     outfileTcl << "place_design\nroute_design\n";
     outfileTcl.close();
 }
