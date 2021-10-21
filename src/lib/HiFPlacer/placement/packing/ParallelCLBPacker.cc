@@ -1478,7 +1478,8 @@ void ParallelCLBPacker::dumpPlacementTcl(std::string dumpTclFile)
     std::ofstream outfileTcl(dumpTclFile);
     assert(outfileTcl.is_open() && outfileTcl.good() &&
            "The path for placement Tcl dumping does not exist and please check your path settings");
-    outfileTcl << "set fo [open \"./placementError\" \"w\"]\nplace_design -unplace\nset errorNum 0\n";
+    outfileTcl << "set script_path [ file dirname [ file normalize [ info script ] ] ]\n";
+    outfileTcl << "set fo [open \"${script_path}/placementError\" \"w\"]\nplace_design -unplace\nset errorNum 0\n";
     dumpDSPBRAMPlacementTcl(outfileTcl);
     dumpCLBPlacementTcl(outfileTcl, true);
     // Except LUT6_2 cells, remove the packing information in Vivado and use our packing

@@ -164,7 +164,7 @@ Below is a screenshot when the AMFPlacer's placement is loading on Vivado. The o
 <img src="loadPlacement.png" align="center" alt="AMFPlacer's placement is loading on Vivado" title="AMFPlacer's placement is loading on Vivado" width="400" /> 
 </center>
 
-For users' testing and exploration, we provide the Vivado projects of the benchmarks with post-implementation designs on Google Drive (size of each >100MB): [OpenPiton](https://drive.google.com/file/d/1b0sWwoWq6XyiqWWxUxLlI9rAszVmR5WI/view?usp=sharing), [MiniMap2](https://drive.google.com/file/d/1Dp1nL9KYuBgBjU2-1eL3IzYpl4OFD7As/view?usp=sharing), and uploading...
+For users' testing and exploration, we provide the Vivado projects of the benchmarks with post-implementation designs on Google Drive (size of each 100-1000MB): [OpenPiton](https://drive.google.com/file/d/1b0sWwoWq6XyiqWWxUxLlI9rAszVmR5WI/view?usp=sharing), [MiniMap2](https://drive.google.com/file/d/1Dp1nL9KYuBgBjU2-1eL3IzYpl4OFD7As/view?usp=sharing), [MemN2N](https://drive.google.com/file/d/1hGsxzdfVD9OaRRtxnqqOXju8A8X4AKOv/view?usp=sharing), [OptimSoC](https://drive.google.com/file/d/1Sx-ng7H-prkP6KbSuIT_DM_Hn0qa5fQv/view?usp=sharing). We are also trying to upload the projects to Tencent Weiyun Disk...
 
 Users can directly open the .xpr file with Vivado. There might be some warnings because your Vivado version is not matched with the IP cores in the design or some IP core instances cannot be found in your system. Please ignore them and do not update the ip core or re-synthesis because these operations will change the netlist. 
 
