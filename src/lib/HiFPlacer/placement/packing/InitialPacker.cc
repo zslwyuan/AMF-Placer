@@ -354,7 +354,7 @@ void InitialPacker::findBRAMMacros()
 
         for (DesignInfo::DesignPin *pinBeDriven : curCell->getInputPins())
         {
-            if (pinBeDriven->getRefPinName().find("CAS") == 0)
+            if (pinBeDriven->getRefPinName().find("CASDI") == 0)
             {
                 if (pinBeDriven->getDriverPin())
                 {
@@ -366,8 +366,7 @@ void InitialPacker::findBRAMMacros()
 
         if (!noCASInput)
             continue;
-
-        std::vector<DesignInfo::DesignCell *> curMacroCores = BFSExpandViaSpecifiedPorts("CAS", curCell, false);
+        std::vector<DesignInfo::DesignCell *> curMacroCores = BFSExpandViaSpecifiedPorts("CASDI", curCell, false);
 
         if (curMacroCores.size() <= 1 && curCell->getCellType() != DesignInfo::CellType_RAMB36E2 &&
             curCell->getCellType() != DesignInfo::CellType_FIFO36E2)
@@ -388,7 +387,8 @@ void InitialPacker::findBRAMMacros()
                 curMacro->addVirtualCell(curMacroCores[i]->getName(), designInfo, DesignInfo::CellType_RAMB18E2, 0,
                                          coreOffset + BRAM18Height);
             }
-            else if (curMacroCores[i]->getCellType() == DesignInfo::CellType_RAMB18E2)
+            else if (curMacroCores[i]->getCellType() == DesignInfo::CellType_RAMB18E2 ||
+                     curMacroCores[i]->getCellType() == DesignInfo::CellType_FIFO18E2)
             {
                 curMacro->addOccupiedSite(coreOffset, 1.0);
                 curMacro->addCell(curMacroCores[i], curMacroCores[i]->getCellType(), 0, coreOffset);
