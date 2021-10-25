@@ -10,6 +10,12 @@ var NAVTREEINDEX0 =
 "_2_7__visualizethe_placement_convergence_procedure.html":[1,6],
 "_2_8__customizethe_placement_flow.html":[1,7],
 "_2_get_started.html":[1],
+"_3_1__benchmarks_details.html":[2,2,0],
+"_3_1__benchmarks_details.html":[2,0],
+"_3_1__benchmarks_details.html":[1,5,0,0],
+"_3_2__experimental_results.html":[2,1],
+"_3_3__download_post_implementation_vivado_projects.html":[1,5,0],
+"_3_3__download_post_implementation_vivado_projects.html":[2,2],
 "_3_benchmark_info.html":[2],
 "_4_publication.html":[3],
 "_5_explanation.html":[4],
@@ -243,11 +249,5 @@ var NAVTREEINDEX0 =
 "class_c_l_b_legalizer.html#ae94f95634e5422c0fb13515ef6e86355":[8,0,3,34],
 "class_c_l_b_legalizer.html#aea1a9311560468871b7fb25ed313e566":[8,0,3,94],
 "class_c_l_b_legalizer.html#aea6fb27942cfbbb797595bfc5af93ff3":[8,0,3,95],
-"class_c_l_b_legalizer.html#aefe0b99b3ff263dcc5648922668d8938":[8,0,3,93],
-"class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984":[8,0,3,5],
-"class_c_l_b_legalizer.html#af1d45b33657eacba5b05e3e591f41184":[8,0,3,40],
-"class_c_l_b_legalizer.html#af318267e6981ba089e7135658a306128":[8,0,3,75],
-"class_c_l_b_legalizer.html#af42c6a8a257773250b5779d9ad63a933":[8,0,3,86],
-"class_c_l_b_legalizer.html#af467972d76f429758ef21c06301a04f2":[8,0,3,56],
-"class_c_l_b_legalizer.html#af68cfd1ec72257309beff1017f2dcdc6":[8,0,3,52]
+"class_c_l_b_legalizer.html#aefe0b99b3ff263dcc5648922668d8938":[8,0,3,93]
 };

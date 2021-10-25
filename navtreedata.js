@@ -27,7 +27,7 @@ var NAVTREE =
   [ "AMF-Placer", "index.html", [
     [ "Introduction", "_1_intro.html", null ],
     [ "Get Started", "_2_get_started.html", "_2_get_started" ],
-    [ "Benchmarks and Experimental Results", "_3_benchmark_info.html", null ],
+    [ "Benchmarks and Experimental Results", "_3_benchmark_info.html", "_3_benchmark_info" ],
     [ "Publications", "_4_publication.html", null ],
     [ "Implementation Explanation", "_5_explanation.html", "_5_explanation" ],
     [ "Existing Problems When Exporting To Vivado", "_7_portability_to_vivado_problem.html", null ],
@@ -68,17 +68,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_1_intro.html",
-"class_c_l_b_legalizer.html#af7996078a08261d3374fb782e0c45c48",
-"class_design_info_1_1_design_cell.html#abe176187d26459b8cd8df7b3be0703fd",
-"class_device_info_1_1_device_site.html#a4486d043f8dc3ca85742aae7fcf4055a",
-"class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5",
-"class_parallel_c_l_b_packer.html#a74ba67733146fffdfd4843fe63120fca",
-"class_placement_info.html#a3d05e3d71f96fe6455ae7ea2ab0b7e33",
-"class_placement_info_1_1_placement_bin_info.html#adc82c5284eed5ba6f62a053a2f44ba16",
-"class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619",
-"class_vivado_graph_util_1_1_vivado_pattern_cluster_seq.html#a18197b48d70800d1e03bc6a1a6027afe",
-"functions_vars_c.html",
-"paint_placement_8py.html#a8a94d9deb55feabf0f6b1fbae9a6bd4a"
+"class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984",
+"class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1",
+"class_device_info_1_1_device_site.html#a3266b40b92742cd53950925aa34fc254",
+"class_graph_partitioner.html#a76913be5dc96ae087c31bbbfb38a7f7e",
+"class_parallel_c_l_b_packer.html#a58e4ec091cb28812d1233d78e2e45cc1",
+"class_placement_info.html#a350a9094893fc894706a87a240773377",
+"class_placement_info_1_1_placement_bin_info.html#ab871dd214ff047138313e2e47e070656",
+"class_placement_info_1_1_placement_unit.html#ac0385dc42448473882e639bc6fc44825",
+"class_vivado_graph_util_1_1_vivado_pattern_cluster.html#add8e1402dbafb4dc6547c20b0dad6626",
+"functions_type.html",
+"paint_placement_8py.html#a5f8a3ad8dc9491fc7a32964718bfb240"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

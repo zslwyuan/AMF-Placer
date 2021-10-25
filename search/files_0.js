@@ -10,9 +10,12 @@ var searchData=
   ['_5f2_5f7_5fvisualizetheplacementconvergenceprocedure_2emd_7',['_2_7_VisualizethePlacementConvergenceProcedure.md',['../__2__7___visualizethe_placement_convergence_procedure_8md.html',1,'']]],
   ['_5f2_5f8_5fcustomizetheplacementflow_2emd_8',['_2_8_CustomizethePlacementFlow.md',['../__2__8___customizethe_placement_flow_8md.html',1,'']]],
   ['_5f2_5fgetstarted_2emd_9',['_2_getStarted.md',['../__2__get_started_8md.html',1,'']]],
-  ['_5f3_5fbenchmarkinfo_2emd_10',['_3_benchmarkInfo.md',['../__3__benchmark_info_8md.html',1,'']]],
-  ['_5f4_5fpublication_2emd_11',['_4_publication.md',['../__4__publication_8md.html',1,'']]],
-  ['_5f5_5fexplanation_2emd_12',['_5_explanation.md',['../__5__explanation_8md.html',1,'']]],
-  ['_5f6_5fruntimelog_2emd_13',['_6_runtimeLog.md',['../__6__runtime_log_8md.html',1,'']]],
-  ['_5f7_5fportabilitytovivadoproblem_2emd_14',['_7_portabilityToVivadoProblem.md',['../__7__portability_to_vivado_problem_8md.html',1,'']]]
+  ['_5f3_5f1_5fbenchmarksdetails_2emd_10',['_3_1_BenchmarksDetails.md',['../__3__1___benchmarks_details_8md.html',1,'']]],
+  ['_5f3_5f2_5fexperimentalresults_2emd_11',['_3_2_ExperimentalResults.md',['../__3__2___experimental_results_8md.html',1,'']]],
+  ['_5f3_5f3_5fpostimplementationprojects_2emd_12',['_3_3_PostImplementationProjects.md',['../__3__3___post_implementation_projects_8md.html',1,'']]],
+  ['_5f3_5fbenchmarkinfo_2emd_13',['_3_benchmarkInfo.md',['../__3__benchmark_info_8md.html',1,'']]],
+  ['_5f4_5fpublication_2emd_14',['_4_publication.md',['../__4__publication_8md.html',1,'']]],
+  ['_5f5_5fexplanation_2emd_15',['_5_explanation.md',['../__5__explanation_8md.html',1,'']]],
+  ['_5f6_5fruntimelog_2emd_16',['_6_runtimeLog.md',['../__6__runtime_log_8md.html',1,'']]],
+  ['_5f7_5fportabilitytovivadoproblem_2emd_17',['_7_portabilityToVivadoProblem.md',['../__7__portability_to_vivado_problem_8md.html',1,'']]]
 ];
