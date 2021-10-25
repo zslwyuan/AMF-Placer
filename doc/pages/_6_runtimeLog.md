@@ -1,4 +1,4 @@
-@subpage _6_runtimeLog Runtime Log Explanation
+@page _6_runtimeLog Runtime Log Explanation
 # Runtime Log Explanation
 
 In this section, we will explain the information that the placer prints in the terminal, to help users to understand what is going on with AMFPlacer. Please note that AMFPlacer can also dump more information to files as long as users set configurations.
