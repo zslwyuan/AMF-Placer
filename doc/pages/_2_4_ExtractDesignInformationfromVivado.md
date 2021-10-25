@@ -32,6 +32,7 @@ The pin information will keep loading until another line beginning with "curCell
 For each pin, the name, reference name on cell, IO direction relative the cell, the name of connected net and the name of the driver pin of the connected net will be provided in one line.
 
 \verbatim
+```perl
 curCell=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9 type=> LUT6
    pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/O refpin=> O dir=> OUT net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9_n_0 drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/O
    pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/I0 refpin=> I0 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data[223] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data_reg[223]/Q
@@ -51,4 +52,5 @@ curCell=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc
    pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/I0 refpin=> I0 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_6_n_0 drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_6/O
    pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/I1 refpin=> I1 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_7_n_0 drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_7/O
    pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/S refpin=> S dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[2] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[2]/Q
+```
 \endverbatim
