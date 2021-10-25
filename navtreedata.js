@@ -30,7 +30,7 @@ var NAVTREE =
     [ "Benchmarks and Experimental Results", "_3_benchmark_info.html", null ],
     [ "Publications", "_4_publication.html", null ],
     [ "Implementation Explanation", "_5_explanation.html", null ],
-    [ "Runtime Log Explanation", "_6_runtime_log.html", null ],
+    [ "_6_runtimeLog", "md_doc_pages__6_runtime_log.html", null ],
     [ "Existing Problems When Exporting To Vivado", "_7_portability_to_vivado_problem.html", null ],
     [ "AMF-Placer", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -69,16 +69,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_1_intro.html",
-"class_cluster_placer.html#a0ca64fdff91000c046420b66bec9a89b",
-"class_design_info_1_1_design_cell.html#ae3eb7bbb42835b660984dbc690bf4f7e",
-"class_device_info_1_1_device_site.html#a5f3a70569c16f9f6e82a76fbb026903a",
-"class_incremental_b_e_l_packer.html#a1c97183c9c815add1dd29f256d327ce3",
-"class_parallel_c_l_b_packer.html#ab1186dbc5b144732ab56a0459001e39d",
-"class_placement_info.html#a48c3f35082a8cad77c13e158da1cf1f5",
-"class_placement_info_1_1_placement_hybrid_bin_info.html#a0baa5535ca9f5d5c4b9cbeda1324b718",
-"class_placement_info_1_1_placement_unit.html#affd80a7a7b87bb8a669e145f0dc72e54",
-"class_vivado_graph_util_1_1_vivado_pin.html#a2255bf2f2db715d97c54f9ca5c2ed77a",
-"functions_vars_l.html",
+"class_cluster_placer.html#a149784331309e2ae938933d1af6c6010",
+"class_design_info_1_1_design_cell.html#ae76eb33f8bda7480cafe79a4ce0df883",
+"class_device_info_1_1_device_site.html#a61b7cf8ead9b7ec51ac8adef8d6bd647",
+"class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6",
+"class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1",
+"class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6",
+"class_placement_info_1_1_placement_hybrid_bin_info.html#a0f41e10cec4a082adee062800ff0ddda",
+"class_placement_info_1_1_placement_unpacked_cell.html",
+"class_vivado_graph_util_1_1_vivado_pin.html#a3e41d119cad4e1f8729bc303a20d9802",
+"functions_vars_m.html",
 "paint_placement_8py.html#af0911322a80519c426bdc1ed19bae1ce"
 ];
 

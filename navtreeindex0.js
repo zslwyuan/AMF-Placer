@@ -5,7 +5,6 @@ var NAVTREEINDEX0 =
 "_3_benchmark_info.html":[2],
 "_4_publication.html":[3],
 "_5_explanation.html":[4],
-"_6_runtime_log.html":[5],
 "_7_portability_to_vivado_problem.html":[6],
 "_a_m_f_placer_8h.html":[10,0,2,0,0,0],
 "_a_m_f_placer_8h_source.html":[10,0,2,0,0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "class_c_l_b_legalizer.html#aff846bcfd2560b9909f67fa18a3ac875":[9,0,3,32],
 "class_c_l_b_legalizer.html#aff855cc071102c193f1ab48d0254b687":[9,0,3,14],
 "class_cluster_placer.html":[9,0,4],
-"class_cluster_placer.html#a03879444f8300ffffcfd036736f2b14a":[9,0,4,17]
+"class_cluster_placer.html#a03879444f8300ffffcfd036736f2b14a":[9,0,4,17],
+"class_cluster_placer.html#a0ca64fdff91000c046420b66bec9a89b":[9,0,4,1]
 };
