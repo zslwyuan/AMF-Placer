@@ -1,8 +1,8 @@
 # Get Started {#_2_getStarted}
 
 Here, we will go through some basic steps for users to build the placer and run a placement flow for a new design/device with a new placement configuration:
-1. Build the Placer
-2. Run An Example
+1. (@subpage _2_1_BuildThePlacer)
+2. (@subpage _2_2_RunAnExample) 
 3. Set the Placement Configuration in JSON file
 4. Extract Design Information from Vivado
 5. Extract Device Information from Vivado
@@ -10,28 +10,6 @@ Here, we will go through some basic steps for users to build the placer and run 
 7. (Optional) Visualize the Placement Convergence Procedure
 8. (Optional) Customize the Placement Flow
 
-**1. Build the Placer**
-First of all, users need to download the project and the command below will download it from GitHub:
-```
-git clone https://github.com/zslwyuan/AMF-Placer.git
-```
-We provide a script to build the placer and users can run the following command in the project root directory:
-
-```bash
-./build.sh
-```
-
-The built executable can be found in the directory "build".
-
-**2. Run An Example**
-
-Below is a command that users can try to run in the "build" directory. It will run the placement flow according to a given JSON configuration, where design/device/paramters are specified.
-
-```bash
-./AMFPlacer ../benchmarks/testConfig/OpenPiton.json
-```
-
-Users may find that AMFPlacer prints somethings in the terminal and if you are interested in the details of those information, you can find the concrete explanation [here](@subpage _6_runtimeLog).
 
 **3. Set the Placement Configuration in JSON file**
 
