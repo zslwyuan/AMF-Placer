@@ -31,4 +31,4 @@ This placement loading flow might be a bit tricky since we are trying to be comp
 
 There might be some known problems when you are trying to load the generated placement into Vivado. Please check [the existing problems when exporting to Vivado](@ref _7_portabilityToVivadoProblem) for reasons and solutions.
 
-For users' testing and exploration, we provide some Vivado projects of the benchmarks with post-implementation designs from here: (@subpage _3_3_DownloadPostImplementationVivadoProjects).
+For users' testing and exploration, we provide some Vivado projects of the benchmarks with post-implementation designs from [here](@ref _3_3_DownloadPostImplementationVivadoProjects).

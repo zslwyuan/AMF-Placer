@@ -1,5 +1,5 @@
-@page _3_1_BenchmarksDetails Benchmarks
-# Benchmarks
+@page _3_1_BenchmarksDetails Benchmarks Details
+# Benchmark Details
 
 As mentioned in the introduction, we collect the latest practical open-source benchmarks from various domains.
 
