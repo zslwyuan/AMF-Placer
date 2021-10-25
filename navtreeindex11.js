@@ -1,7 +1,5 @@
 var NAVTREEINDEX11 =
 {
-"paint_placement_8py.html#a5f8a3ad8dc9491fc7a32964718bfb240":[9,0,0,0,3,25],
-"paint_placement_8py.html#a6a65b8cec97aa836817e1c4e8c48790c":[9,0,0,0,3,9],
 "paint_placement_8py.html#a6bd9f0e661d08ec1b93d44cbe83ffae8":[9,0,0,0,3,4],
 "paint_placement_8py.html#a743812739e99ff9ce201e7b066884a99":[9,0,0,0,3,7],
 "paint_placement_8py.html#a797ee56938c5e0199512d8ff7b685971":[9,0,0,0,3,27],

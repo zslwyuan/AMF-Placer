@@ -1,7 +1,5 @@
 var NAVTREEINDEX9 =
 {
-"class_vivado_graph_util_1_1_vivado_pattern_cluster.html#add8e1402dbafb4dc6547c20b0dad6626":[7,0,9,3,4],
-"class_vivado_graph_util_1_1_vivado_pattern_cluster.html#add8e1402dbafb4dc6547c20b0dad6626":[8,0,1,3,4],
 "class_vivado_graph_util_1_1_vivado_pattern_cluster.html#af82ad4a23eff7676b20dde6510087665":[7,0,9,3,3],
 "class_vivado_graph_util_1_1_vivado_pattern_cluster.html#af82ad4a23eff7676b20dde6510087665":[8,0,1,3,3],
 "class_vivado_graph_util_1_1_vivado_pattern_cluster_seq.html":[7,0,9,4],
@@ -249,5 +247,7 @@ var NAVTREEINDEX9 =
 "functions_q.html":[8,3,0,17],
 "functions_r.html":[8,3,0,18],
 "functions_s.html":[8,3,0,19],
-"functions_t.html":[8,3,0,20]
+"functions_t.html":[8,3,0,20],
+"functions_type.html":[8,3,3],
+"functions_u.html":[8,3,0,21]
 };
