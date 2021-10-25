@@ -103,7 +103,8 @@ $(document).ready(function(){initNavTree('_2_4__extract_design_informationfrom_v
 <center> <img src="designFiles.png" alt="Design Files" align="center" title="Design Files" width="300" class="inline"/> </center><p >Below is an example showing what text file is in the extracted archive file. The information of each cell will cost multiple lines.</p>
 <p >The first line for a cell in the design netlist will be the one begin with "curCell=&gt; " and provide the name and type of the cell.</p>
 <p >Then the following lines after this cell declaration are the lines for the pins on this cell. Each of these lines begins with "pin=&gt;". The pin information will keep loading until another line beginning with "curCell=&gt; " is found. For each pin, the name, reference name on cell, IO direction relative the cell, the name of connected net and the name of the driver pin of the connected net will be provided in one line.</p>
-<pre class="fragment">```perl
+<pre>
+```perl
 curCell=&gt; design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9 type=&gt; LUT6
    pin=&gt; design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/O refpin=&gt; O dir=&gt; OUT net=&gt; design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9_n_0 drivepin=&gt; design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/O
    pin=&gt; design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/I0 refpin=&gt; I0 dir=&gt; IN net=&gt; design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data[223] drivepin=&gt; design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data_reg[223]/Q
