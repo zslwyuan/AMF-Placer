@@ -1,11 +1,13 @@
 var NAVTREEINDEX0 =
 {
 "_1_intro.html":[0],
+"_2_1__build_the_placer.html":[1,0],
+"_2_2__run_an_example.html":[1,1],
 "_2_get_started.html":[1],
 "_3_benchmark_info.html":[2],
 "_4_publication.html":[3],
 "_5_explanation.html":[4],
-"_6_runtime_log.html":[1,0],
+"_6_runtime_log.html":[1,1,0],
 "_6_runtime_log.html":[4,0],
 "_7_portability_to_vivado_problem.html":[5],
 "_a_m_f_placer_8h.html":[9,0,2,0,0,0],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "class_c_l_b_legalizer.html#af8ca2236c8cfe450d9dce321178ce15d":[8,0,3,47],
 "class_c_l_b_legalizer.html#afac5fb6dbd3820485ab59edce6778de5":[8,0,3,62],
 "class_c_l_b_legalizer.html#afd4be10703266197b88ff6e09326d49f":[8,0,3,70],
-"class_c_l_b_legalizer.html#aff846bcfd2560b9909f67fa18a3ac875":[8,0,3,32],
-"class_c_l_b_legalizer.html#aff855cc071102c193f1ab48d0254b687":[8,0,3,14],
-"class_cluster_placer.html":[8,0,4]
+"class_c_l_b_legalizer.html#aff846bcfd2560b9909f67fa18a3ac875":[8,0,3,32]
 };

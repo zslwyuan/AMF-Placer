@@ -84,5 +84,6 @@ var searchData=
   ['roughlylegalize_81',['roughlyLegalize',['../class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc',1,'MacroLegalizer::roughlyLegalize()'],['../class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6',1,'CLBLegalizer::roughlyLegalize()']]],
   ['row_82',['row',['../class_placement_info_1_1_placement_bin_info.html#ad1fd61475fd0c201604579144b978427',1,'PlacementInfo::PlacementBinInfo::row()'],['../class_placement_info_1_1_placement_hybrid_bin_info.html#ade58c1c853cd67784c0c6c63fbf48e2d',1,'PlacementInfo::PlacementHybridBinInfo::row()'],['../class_placement_info_1_1_placement_site_bin_info.html#a339adcbf981c3a00f3081c8633bd6bd4',1,'PlacementInfo::PlacementSiteBinInfo::row()']]],
   ['run_83',['run',['../class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981',1,'AMFPlacer']]],
-  ['runtime_20log_20explanation_84',['Runtime Log Explanation',['../_6_runtime_log.html',1,'_5_explanation']]]
+  ['run_20an_20example_84',['Run An Example',['../_2_2__run_an_example.html',1,'_2_getStarted']]],
+  ['runtime_20log_20explanation_85',['Runtime Log Explanation',['../_6_runtime_log.html',1,'_5_explanation']]]
 ];

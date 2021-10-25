@@ -87,8 +87,8 @@ $(document).ready(function(){initNavTree('_2_get_started.html',''); initResizabl
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p ><a class="anchor" id="md_doc_pages__2_getStarted"></a> Here, we will go through some basic steps for users to build the placer and run a placement flow for a new design/device with a new placement configuration:</p><ol type="1">
-<li>Build the Placer</li>
-<li>Run An Example</li>
+<li>(<a class="el" href="_2_1__build_the_placer.html">Build the Placer</a>)</li>
+<li>(<a class="el" href="_2_2__run_an_example.html">Run An Example</a>)</li>
 <li>Set the Placement Configuration in JSON file</li>
 <li>Extract Design Information from Vivado</li>
 <li>Extract Device Information from Vivado</li>
@@ -96,14 +96,6 @@ $(document).ready(function(){initNavTree('_2_get_started.html',''); initResizabl
 <li>(Optional) Visualize the Placement Convergence Procedure</li>
 <li>(Optional) Customize the Placement Flow</li>
 </ol>
-<p ><b>1. Build the Placer</b> First of all, users need to download the project and the command below will download it from GitHub: </p><div class="fragment"><div class="line">git clone https://github.com/zslwyuan/AMF-Placer.git</div>
-</div><!-- fragment --><p> We provide a script to build the placer and users can run the following command in the project root directory:</p>
-<div class="fragment"><div class="line">./build.sh</div>
-</div><!-- fragment --><p >The built executable can be found in the directory "build".</p>
-<p ><b>2. Run An Example</b></p>
-<p >Below is a command that users can try to run in the "build" directory. It will run the placement flow according to a given JSON configuration, where design/device/paramters are specified.</p>
-<div class="fragment"><div class="line">./AMFPlacer ../benchmarks/testConfig/OpenPiton.json</div>
-</div><!-- fragment --><p >Users may find that <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> prints somethings in the terminal and if you are interested in the details of those information, you can find the concrete explanation [here](<a class="el" href="_6_runtime_log.html">Runtime Log Explanation</a>).</p>
 <p ><b>3. Set the Placement Configuration in JSON file</b></p>
 <p >By checking the content of the JSON file in the command argument above, you may notice the major settings of our placer. Generally, we need to let the placer know where are the data of the design and devices, whether the placer should dump some log text/archieve files for further checking or evaluation, and some parameters related to the algorithms in the placer.</p>
 <p >Below, we explain some of the settings. If users target at Xilinx VCU108, users may only need to change the parameters related to the design benchmark, which we mark with [DESIGN]. We also mark others parameters with [DEVICE], [DEBUG] and [PLACER]. Some optional parameters can be disable by commenting out by "//". Please be aware that no matter the value types are string or not, the value should be wrapper by " " as syntax requirement. </p><div class="fragment"><div class="line">{</div>

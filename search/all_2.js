@@ -50,5 +50,6 @@ var searchData=
   ['brampus_47',['BRAMPUs',['../class_macro_legalizer.html#ac75c31e92389b122b6bc738e66dd8504',1,'MacroLegalizer']]],
   ['bramrownum_48',['BRAMRowNum',['../class_macro_legalizer.html#a1c1632f9190ac90ef8038a72ae6cfac2',1,'MacroLegalizer']]],
   ['buffer_5f_49',['buffer_',['../struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e',1,'FILEbuf']]],
-  ['buildsimpletiminggraph_50',['buildSimpleTimingGraph',['../class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c',1,'PlacementInfo::buildSimpleTimingGraph()'],['../class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17',1,'PlacementTimingInfo::buildSimpleTimingGraph()']]]
+  ['build_20the_20placer_50',['Build the Placer',['../_2_1__build_the_placer.html',1,'_2_getStarted']]],
+  ['buildsimpletiminggraph_51',['buildSimpleTimingGraph',['../class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c',1,'PlacementInfo::buildSimpleTimingGraph()'],['../class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17',1,'PlacementTimingInfo::buildSimpleTimingGraph()']]]
 ];
