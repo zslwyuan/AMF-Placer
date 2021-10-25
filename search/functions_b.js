@@ -16,5 +16,6 @@ var searchData=
   ['mapsitetoclockcolumns_13',['mapSiteToClockColumns',['../class_device_info_1_1_clock_region.html#a83c8ee86be388d609d42fa5a8fcea97a',1,'DeviceInfo::ClockRegion']]],
   ['maxcardinalitymatching_14',['maxCardinalityMatching',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5c2b50544d1e2288a0fceb1e93a10004',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['mincostbipartitematcher_15',['MinCostBipartiteMatcher',['../class_min_cost_bipartite_matcher.html#aeef9f17dcd9470695546f2868b14acf2',1,'MinCostBipartiteMatcher']]],
-  ['mincutbipartition_16',['minCutBipartition',['../class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102',1,'GraphPartitioner']]]
+  ['mincutbipartition_16',['minCutBipartition',['../class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102',1,'GraphPartitioner']]],
+  ['movedriverintobetterclockregion_17',['moveDriverIntoBetterClockRegion',['../class_placement_timing_optimizer.html#ac9cc5481cb0d15ec670deddffa1cb593',1,'PlacementTimingOptimizer']]]
 ];

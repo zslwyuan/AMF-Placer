@@ -7,6 +7,7 @@ var class_placement_timing_optimizer =
     [ "getDis", "class_placement_timing_optimizer.html#ae63503b3241a38821742547b2e96b0e2", null ],
     [ "getPois", "class_placement_timing_optimizer.html#a41d0851087015f4b169455b8ff005b21", null ],
     [ "initPois", "class_placement_timing_optimizer.html#a07f1239ff5bb2a0c43ea3185a49acc2e", null ],
+    [ "moveDriverIntoBetterClockRegion", "class_placement_timing_optimizer.html#ac9cc5481cb0d15ec670deddffa1cb593", null ],
     [ "propogateArrivalTime", "class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f", null ],
     [ "setEdgesDelay", "class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58", null ],
     [ "setPinsLocation", "class_placement_timing_optimizer.html#a8e6810c2be22ebbe719229c7e6237adb", null ],

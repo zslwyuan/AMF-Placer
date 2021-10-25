@@ -430,7 +430,7 @@ $(document).ready(function(){initNavTree('_general_spreader_8h_source.html','');
 <div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>            <span class="comment">// try to expand in horizontal direction when horizontal utilization ratio is lower than vertical</span></div>
 <div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>            <span class="comment">// utilization ratio</span></div>
 <div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>            <span class="keywordflow">if</span> ((<a class="code hl_function" href="class_general_spreader_1_1_spread_region.html#aed77d41dc86181471f596e338193002c">expandable</a>(0) || <a class="code hl_function" href="class_general_spreader_1_1_spread_region.html#aed77d41dc86181471f596e338193002c">expandable</a>(1)) &amp;&amp;</div>
-<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>                (hUtilization / hCapacity &lt; vUtilization / vCapacity ||</div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>                ((hUtilization / hCapacity &lt; 0.9 * vUtilization / vCapacity) ||</div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>                 (std::fabs(hUtilization + vUtilization) &lt; 1e-4 &amp;&amp; hCapacity &gt; vCapacity)))</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>            {</div>
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>                <span class="keywordflow">if</span> (random() % 2)</div>
