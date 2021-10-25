@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['run_20an_20example_0',['Run An Example',['../_2_2__run_an_example.html',1,'_2_getStarted']]],
-  ['runtime_20log_20explanation_1',['Runtime Log Explanation',['../_6_runtime_log.html',1,'_5_explanation']]]
+  ['load_20the_20output_20placement_20in_20vivado_0',['Load the Output Placement in Vivado',['../_2_6__loadthe_output_placementin_vivado.html',1,'_2_getStarted']]]
 ];

@@ -1,5 +1,11 @@
 var NAVTREEINDEX11 =
 {
+"paint_placement_8py.html#a8a94d9deb55feabf0f6b1fbae9a6bd4a":[9,0,0,0,3,21],
+"paint_placement_8py.html#a8e29e82fe9e7cb7ce04e6afc8ce97187":[9,0,0,0,3,2],
+"paint_placement_8py.html#a965eec88484a73e29a6608c07efe9d26":[9,0,0,0,3,12],
+"paint_placement_8py.html#aa6ea21837ec483004a9361df0c12cd8c":[9,0,0,0,3,8],
+"paint_placement_8py.html#aa82aaedc95a3eeb966ea73d9ca46e770":[9,0,0,0,3,13],
+"paint_placement_8py.html#aaefa194f54af639b4bec7997c4e7b8ce":[9,0,0,0,3,23],
 "paint_placement_8py.html#ae0237c75054de03e93ac0039a9a2a6f5":[9,0,0,0,3,5],
 "paint_placement_8py.html#ae12a8fd093f1782980ae7f898709bf8d":[9,0,0,0,3,6],
 "paint_placement_8py.html#ae964954f828c42ad38a643d47b2a9f7f":[9,0,0,0,3,22],

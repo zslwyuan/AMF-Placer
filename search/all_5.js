@@ -45,10 +45,12 @@ var searchData=
   ['extendednodes_42',['extendedNodes',['../class_vivado_graph_util_1_1_vivado_pattern_cluster.html#af82ad4a23eff7676b20dde6510087665',1,'VivadoGraphUtil::VivadoPatternCluster']]],
   ['externalprocessfunc_43',['ExternalProcessFunc',['../class_external_process_func.html#a801b559914740ba20cc4b8bc8d8e98b9',1,'ExternalProcessFunc::ExternalProcessFunc()'],['../class_external_process_func.html',1,'ExternalProcessFunc']]],
   ['externalprocessfunc_2eh_44',['ExternalProcessFunc.h',['../_external_process_func_8h.html',1,'']]],
-  ['extractdesigninfo_2etcl_45',['extractDesignInfo.tcl',['../extract_design_info_8tcl.html',1,'']]],
-  ['extractdeviceinfo_2etcl_46',['extractDeviceInfo.tcl',['../extract_device_info_8tcl.html',1,'']]],
-  ['extractfixedunits_2etcl_47',['extractFixedUnits.tcl',['../extract_fixed_units_8tcl.html',1,'']]],
-  ['extractlutrams_2etcl_48',['extractLUTRAMs.tcl',['../extract_l_u_t_r_a_ms_8tcl.html',1,'']]],
-  ['extractnetlist_2etcl_49',['extractNetlist.tcl',['../extract_netlist_8tcl.html',1,'']]],
-  ['extracttilesite_2etcl_50',['extractTileSite.tcl',['../extract_tile_site_8tcl.html',1,'']]]
+  ['extract_20design_20information_20from_20vivado_45',['Extract Design Information from Vivado',['../_2_4__extract_design_informationfrom_vivado.html',1,'_2_getStarted']]],
+  ['extract_20device_20information_20from_20vivado_46',['Extract Device Information from Vivado',['../_2_5__extract_device_informationfrom_vivado.html',1,'_2_getStarted']]],
+  ['extractdesigninfo_2etcl_47',['extractDesignInfo.tcl',['../extract_design_info_8tcl.html',1,'']]],
+  ['extractdeviceinfo_2etcl_48',['extractDeviceInfo.tcl',['../extract_device_info_8tcl.html',1,'']]],
+  ['extractfixedunits_2etcl_49',['extractFixedUnits.tcl',['../extract_fixed_units_8tcl.html',1,'']]],
+  ['extractlutrams_2etcl_50',['extractLUTRAMs.tcl',['../extract_l_u_t_r_a_ms_8tcl.html',1,'']]],
+  ['extractnetlist_2etcl_51',['extractNetlist.tcl',['../extract_netlist_8tcl.html',1,'']]],
+  ['extracttilesite_2etcl_52',['extractTileSite.tcl',['../extract_tile_site_8tcl.html',1,'']]]
 ];

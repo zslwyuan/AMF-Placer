@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AMF-Placer: Get Started</title>
+<title>AMF-Placer: Extract Device Information from Vivado</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(document).ready(function(){initNavTree('_2_get_started.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('_2_5__extract_device_informationfrom_vivado.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -83,26 +83,31 @@ $(document).ready(function(){initNavTree('_2_get_started.html',''); initResizabl
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Get Started </div></div>
+  <div class="headertitle"><div class="title">Extract Device Information from Vivado </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="md_doc_pages__2_getStarted"></a> Here, we will go through some basic steps for users to build the placer and run a placement flow for a new design/device with a new placement configuration:</p>
-<ol type="1">
-<li><a class="el" href="_2_1__build_the_placer.html">Build the Placer</a></li>
-<li><a class="el" href="_2_2__run_an_example.html">Run An Example</a></li>
-<li><a class="el" href="_2_3__setthe_placement_configurationin_j_s_o_nfile.html">Set the Placement Configuration in JSON file</a></li>
-<li><a class="el" href="_2_4__extract_design_informationfrom_vivado.html">Extract Design Information from Vivado</a></li>
-<li><a class="el" href="_2_5__extract_device_informationfrom_vivado.html">Extract Device Information from Vivado</a></li>
-<li>(Optional) <a class="el" href="_2_6__loadthe_output_placementin_vivado.html">Load the Output Placement in Vivado</a></li>
-<li>(Optional) <a class="el" href="_2_7__visualizethe_placement_convergence_procedure.html">Visualize the Placement Convergence Procedure</a></li>
-<li>(Optional) <a class="el" href="_2_8__customizethe_placement_flow.html">Customize the Placement Flow</a> </li>
-</ol>
+<div class="textblock"><h1>Extract Device Information from Vivado</h1>
+<p >Users can go through the following steps to extract the information of specific device in Vivado. Please note that we have provided device information for VCU108 which can be found in "benchmarks/VCU108/device". Please note that for a device, you can go through this extraction flow just ONE TIME. You DON'T need to do this every time your run <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a>.</p>
+<ul>
+<li>a. Please ensure that your Vivado has the license for the specific device, so you can open the Device window by clicking on the top bar "Window-&gt;Device"</li>
+<li>b. Open the Tcl script "benchmarks/vivadoScripts/extractDeviceInfo.tcl" in the project directory where you can find the below content at the beginning and modify them according to the comments suggesting. <div class="fragment"><div class="line"># replace this with the name for your device</div>
+<div class="line">set deviceName &quot;VCU108&quot; </div>
+<div class="line"># replace this path with your one to specify where to store the files of extracted data</div>
+<div class="line">set targetFolderPath &quot;/home/tingyuan/tmpFiles/&quot; </div>
+</div><!-- fragment --></li>
+<li>c. Open your design of your target device or just create empty project of the target device. Open the Device window by clicking on the top bar "Window-&gt;Device" and execut the command below in the Tcl console of Vivado. It might take tens of minutes or 6 hours to finish the extraction due to the slow Tcl execution (get_site_pins is SOOOO slow...) related to strings and IOs in Vivado. (You can run the script at night and go to bed ealier..) <div class="fragment"><div class="line"># replace XXXXX to indicate where your AMFPlacer is located.</div>
+<div class="line">source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDeviceInfo.tcl</div>
+</div><!-- fragment --></li>
+<li>d. Finally, you should be able to find the extracted files in target folder path set by you. Below is an example showing the generated files for VCU108:</li>
+</ul>
+<center> <img src="deviceFiles.png" alt="Device Files" align="center" title="Device Files" width="300" class="inline"/> </center><p >Please note that since the exact location of the extracted site/BEL/pins are not provided, the Tcl script uses a Python script to map the sites/BEL/pin to specifc location based on their names and hierarchy. If users change their target devices from VCU108 or Xilinx Ultrascale Series products, they might need to change the Python script to adapt to some other FPGA architectures. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="_2_get_started.html">Get Started</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.2 </li>
   </ul>
 </div>

@@ -68,17 +68,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_1_intro.html",
-"class_c_l_b_legalizer.html#aff855cc071102c193f1ab48d0254b687",
-"class_design_info_1_1_design_cell.html#ace592fb8f31d9795085d19579795dfd0",
-"class_device_info_1_1_device_site.html#a58e1f024797d4289f3e8e44a750597e5",
-"class_incremental_b_e_l_packer.html#a0aabd06fa05c5426e3b2f8070b8dccf3",
-"class_parallel_c_l_b_packer.html#aa1b22c32acdb41fbd3d9cc890ee88b27",
-"class_placement_info.html#a4573be18123d679a62335d51dbd9d4e5",
-"class_placement_info_1_1_placement_bin_info.html#afba8c0022f0a2e839ecb6c6b9b7408c5",
-"class_placement_info_1_1_placement_unit.html#af351a06e4c2bdbe98b05f2d5dfd13241",
-"class_vivado_graph_util_1_1_vivado_pin.html",
-"functions_vars_i.html",
-"paint_placement_8py.html#ae0237c75054de03e93ac0039a9a2a6f5"
+"class_c_l_b_legalizer.html#af7996078a08261d3374fb782e0c45c48",
+"class_design_info_1_1_design_cell.html#abe176187d26459b8cd8df7b3be0703fd",
+"class_device_info_1_1_device_site.html#a4486d043f8dc3ca85742aae7fcf4055a",
+"class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5",
+"class_parallel_c_l_b_packer.html#a74ba67733146fffdfd4843fe63120fca",
+"class_placement_info.html#a3d05e3d71f96fe6455ae7ea2ab0b7e33",
+"class_placement_info_1_1_placement_bin_info.html#adc82c5284eed5ba6f62a053a2f44ba16",
+"class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619",
+"class_vivado_graph_util_1_1_vivado_pattern_cluster_seq.html#a18197b48d70800d1e03bc6a1a6027afe",
+"functions_vars_c.html",
+"paint_placement_8py.html#a8a94d9deb55feabf0f6b1fbae9a6bd4a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
