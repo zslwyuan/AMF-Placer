@@ -17,7 +17,7 @@ Here, we will explain the placement flow by going through the functionality of t
 8. PlacementTimingOptimizer: based on the timing information and the placement information, adjusts some terms in the quadratic models which can improve the timing.
 9. ParallelCLBPacker: finally packs LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.
 
-Below is the overall flow of AMFPlacer and a visualized procedure is shown in the figure below. If you are interested in the details of AMFPlacer runtime behaviors, you can find the concrete explanation [here](@ref _6_runtimeLog).
+Below is the overall flow of AMFPlacer and a visualized procedure is shown in the figure below. If you are interested in the details of AMFPlacer runtime behaviors, you can find the concrete explanation [here](@subpage _6_runtimeLog).
 
 1. AMFPlacer will be constructed based on the DesignInfo and DeviceInfo. 
 2. At the beginning, AMFPlacer will construct the PlacementInfo based on the DesignInfo and DeviceInfn. 
