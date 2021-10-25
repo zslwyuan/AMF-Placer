@@ -21,3 +21,34 @@ source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl
 <center>
 <img src="designFiles.png" align="center"  alt="Design Files" title="Design Files" width="300" /> 
 </center>
+
+
+Below is an example showing what text file is in the extracted archive file. The information of each cell will cost multiple lines. 
+
+The first line for a cell in the design netlist will be the one begin with "curCell=> " and provide the name and type of the cell.
+
+Then the following lines after this cell declaration are the lines for the pins on this cell. Each of these lines begins with "pin=>". 
+The pin information will keep loading until another line beginning with "curCell=> " is found.
+For each pin, the name, reference name on cell, direction relative the cell, the name of connected net and the name of the driver pin of the connected net will be provided in one line.
+
+```perl
+curCell=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9 type=> LUT6
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/O refpin=> O dir=> OUT net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9_n_0 drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/O
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/I0 refpin=> I0 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data[223] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data_reg[223]/Q
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/I1 refpin=> I1 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data[95] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data_reg[95]/Q
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/I2 refpin=> I2 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[3] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[3]/Q
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/I3 refpin=> I3 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data[159] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data_reg[159]/Q
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/I4 refpin=> I4 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[4] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[4]/Q
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_9/I5 refpin=> I5 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data[31] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_data_reg[31]/Q
+curCell=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0] type=> FDRE
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]/Q refpin=> Q dir=> OUT net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]/Q
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]/C refpin=> C dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/aclk drivepin=> design_1_i/xilinx_dma_pcie_ep_0/inst/xdma_0_i/inst/pcie3_ip_i/inst/xdma_0_pcie3_ip_gt_top_i/phy_clk_i/bufg_gt_userclk/O
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]/CE refpin=> CE dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_0 drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[7]_i_1/O
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]/D refpin=> D dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/p_0_in[0] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_1/O
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]/R refpin=> R dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/<const0> drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/GND/G
+curCell=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2 type=> MUXF7
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/O refpin=> O dir=> OUT net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2_n_0 drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/O
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/I0 refpin=> I0 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_6_n_0 drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_6/O
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/I1 refpin=> I1 dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_7_n_0 drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data[0]_i_7/O
+   pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/S refpin=> S dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[2] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[2]/Q
+```
