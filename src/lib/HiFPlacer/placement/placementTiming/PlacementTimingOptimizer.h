@@ -43,6 +43,7 @@ class PlacementTimingOptimizer
     void setEdgesDelay();
     void setPinsLocation();
     void clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio);
+    void moveDriverIntoBetterClockRegion(int pathLenThr, float clusterThrRatio);
 
     void initPois()
     {

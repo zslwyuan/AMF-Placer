@@ -204,6 +204,8 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
         auto timingNode = timingNodes[nodeId];
         if (timingNode->getLongestPathLength() > pathLenThr)
         {
+            if (extractedCellIds.find(nodeId) != extractedCellIds.end())
+                continue;
             auto candidateCellIds =
                 simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLenThr, 20000, extractedCellIds);
 
@@ -310,6 +312,169 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                                 }
                             }
                         }
+                        std::cout << "maxClockRegionWeight: " << maxClockRegionWeight
+                                  << " totalClockRegionWeight:" << totalClockRegionWeight
+                                  << " #extractedCellIds=" << extractedCellIds.size()
+                                  << " #extractedPUs=" << extractedPUs.size()
+                                  << " pathLength=" << timingNode->getLongestPathLength() << "\n";
+                    }
+
+                    else if (totalClockRegionWeight >= 20000)
+                    {
+                        for (auto tmpCellId : candidateCellIds)
+                        {
+                            extractedCellIds.insert(tmpCellId);
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            break;
+        }
+    }
+    print_info("ClusterPlacer: largest long-path cluster size=" + std::to_string(maxSize));
+}
+
+void PlacementTimingOptimizer::moveDriverIntoBetterClockRegion(int pathLenThr, float clusterThrRatio)
+{
+    print_warning("PlacementTimingOptimizer: clustering long path in one clock region");
+
+    auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo_PathLenSorted();
+    auto simpleTimingGraph = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph();
+    auto &cellLoc = placementInfo->getCellId2location();
+    auto deviceInfo = placementInfo->getDeviceInfo();
+    auto YX2ClockRegion = deviceInfo->getClockRegions();
+    auto &PU2ClockRegionCenter = placementInfo->getPU2ClockRegionCenters();
+    PU2ClockRegionCenter.clear();
+
+    std::set<int> extractedCellIds;
+    std::set<PlacementInfo::PlacementUnit *> extractedPUs;
+    extractedCellIds.clear();
+    extractedPUs.clear();
+
+    unsigned int maxSize = 0;
+    for (unsigned int nodeId = 0; nodeId < timingNodes.size() * 0.1; nodeId++)
+    {
+        auto timingNode = timingNodes[nodeId];
+        if (timingNode->getLongestPathLength() > pathLenThr)
+        {
+            if (extractedCellIds.find(nodeId) != extractedCellIds.end())
+                continue;
+            std::set<int> candidateCellIds;
+            candidateCellIds.clear();
+            auto driverPU = placementInfo->getPlacementUnitByCellId(nodeId);
+
+            for (auto outEdge : timingNode->getOutEdges())
+            {
+                candidateCellIds.insert(outEdge->getSink()->getId());
+            }
+
+            if (candidateCellIds.size() >= pathLenThr * 0.5)
+            {
+                std::set<PlacementInfo::PlacementUnit *> PUsInLongPaths;
+                PUsInLongPaths.clear();
+                for (auto &candidateCellId : candidateCellIds)
+                {
+                    auto PUInPath = placementInfo->getPlacementUnitByCellId(candidateCellId);
+                    PUsInLongPaths.insert(PUInPath);
+                }
+
+                if (PUsInLongPaths.size() >= 8)
+                {
+                    std::map<std::pair<int, int>, float> clockRegionYX2Cnt;
+                    clockRegionYX2Cnt.clear();
+
+                    float maxClockRegionWeight = 0;
+                    float totalClockRegionWeight = 0;
+                    std::pair<int, int> optClockLocYX;
+
+                    auto driverLoc = cellLoc[nodeId];
+                    int driverClockRegionX, driverClockRegionY;
+                    deviceInfo->getClockRegionByLocation(driverLoc.X, driverLoc.Y, driverClockRegionX,
+                                                         driverClockRegionY);
+                    std::pair<int, int> driverClockLocYX(-1, driverClockRegionX);
+
+                    for (auto tmpPU : PUsInLongPaths)
+                    {
+                        if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(tmpPU))
+                        {
+                            int cellId = unpackedCell->getCell()->getCellId();
+                            int clockRegionX, clockRegionY;
+                            auto tmpLoc = cellLoc[cellId];
+                            deviceInfo->getClockRegionByLocation(tmpLoc.X, tmpLoc.Y, clockRegionX, clockRegionY);
+                            std::pair<int, int> tmpClockLocYX(-1, clockRegionX);
+                            if (clockRegionYX2Cnt.find(tmpClockLocYX) == clockRegionYX2Cnt.end())
+                            {
+                                clockRegionYX2Cnt[tmpClockLocYX] = 0;
+                            }
+                            clockRegionYX2Cnt[tmpClockLocYX] += 1;
+                            totalClockRegionWeight += 1;
+
+                            if (clockRegionYX2Cnt[tmpClockLocYX] > maxClockRegionWeight)
+                            {
+                                maxClockRegionWeight = clockRegionYX2Cnt[tmpClockLocYX];
+                                optClockLocYX = tmpClockLocYX;
+                            }
+                        }
+                        else if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
+                        {
+                            for (auto tmpCell : curMacro->getCells())
+                            {
+                                int cellId = tmpCell->getCellId();
+                                int clockRegionX, clockRegionY;
+                                auto tmpLoc = cellLoc[cellId];
+                                deviceInfo->getClockRegionByLocation(tmpLoc.X, tmpLoc.Y, clockRegionX, clockRegionY);
+
+                                std::pair<int, int> tmpClockLocYX(-1, clockRegionX);
+                                if (clockRegionYX2Cnt.find(tmpClockLocYX) == clockRegionYX2Cnt.end())
+                                {
+                                    clockRegionYX2Cnt[tmpClockLocYX] = 0;
+                                }
+                                clockRegionYX2Cnt[tmpClockLocYX] += 1;
+                                totalClockRegionWeight += 1;
+
+                                if (clockRegionYX2Cnt[tmpClockLocYX] > maxClockRegionWeight)
+                                {
+                                    maxClockRegionWeight = clockRegionYX2Cnt[tmpClockLocYX];
+                                    optClockLocYX = tmpClockLocYX;
+                                }
+                            }
+                        }
+                    }
+
+                    if (driverClockLocYX != optClockLocYX &&
+                        (maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) && maxClockRegionWeight >= 4)
+                    {
+                        auto optClockRegion = YX2ClockRegion[0][optClockLocYX.second];
+                        float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;
+
+                        if (!driverPU->isFixed())
+                        {
+                            float fX = cX;
+                            float fY = driverPU->Y();
+                            placementInfo->legalizeXYInArea(driverPU, fX, fY);
+                            // curPU->setAnchorLocationAndForgetTheOriginalOne(fX, fY);
+                            extractedPUs.insert(driverPU);
+
+                            PU2ClockRegionCenter[driverPU] = std::pair<float, float>(fX, fY);
+
+                            if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(driverPU))
+                            {
+                                int cellId = unpackedCell->getCell()->getCellId();
+                                extractedCellIds.insert(cellId);
+                            }
+                            else if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(driverPU))
+                            {
+                                for (auto tmpCell : curMacro->getCells())
+                                {
+                                    int cellId = tmpCell->getCellId();
+                                    extractedCellIds.insert(cellId);
+                                }
+                            }
+                        }
+
                         std::cout << "maxClockRegionWeight: " << maxClockRegionWeight
                                   << " totalClockRegionWeight:" << totalClockRegionWeight
                                   << " #extractedCellIds=" << extractedCellIds.size()

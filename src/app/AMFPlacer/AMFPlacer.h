@@ -171,15 +171,17 @@ class AMFPlacer
 
         timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
 
-        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9 - 2, true, 5,
-                                                  true, true, timingOptimizer);
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
+                                                  true, timingOptimizer);
         placementInfo->getPU2ClockRegionCenters().clear();
         placementInfo->getDesignInfo()->resetNetEnhanceRatio();
         timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
+
+        timingOptimizer->moveDriverIntoBetterClockRegion(longPathThr, 0.7);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
-
+        placementInfo->getPU2ClockRegionCenters().clear();
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5, true, false,
                                                   timingOptimizer);
 

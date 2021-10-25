@@ -484,7 +484,7 @@ class GeneralSpreader
             // try to expand in horizontal direction when horizontal utilization ratio is lower than vertical
             // utilization ratio
             if ((expandable(0) || expandable(1)) &&
-                (hUtilization / hCapacity < vUtilization / vCapacity ||
+                ((hUtilization / hCapacity < 0.9 * vUtilization / vCapacity) ||
                  (std::fabs(hUtilization + vUtilization) < 1e-4 && hCapacity > vCapacity)))
             {
                 if (random() % 2)
