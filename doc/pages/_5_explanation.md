@@ -14,7 +14,7 @@ We use a set of containers to store and analyze the information/data of design, 
 
 **Placement Prossors:**
 
-We implement a set of placment processor, which will modify the data/information in the containers to improvement the placement quality according to given metrics.
+We implement a set of placment processors, which will modify the data/information in the containers to improve the placement quality according to given metrics.
 
 1. GlobalPlacer: accounts for the general iterations in global placement including wirelength optimization, cell spreading, legalization, area adjustion... 
     * a. ClusterPlacer: cluster nodes in the given netlist and place the clusters on the device based on simulated-annealing as initial placement. 

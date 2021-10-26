@@ -23,7 +23,8 @@ source XXXXX/AMF-Placer/benchmarks/vivadoScripts/extractDesignInfo.tcl
 </center>
 
 
-Below is an example showing what text file is in the extracted archive file. The information of each cell will cost multiple lines. 
+Below is an example showing what text file is in the extracted archive file, e.g. OpenPiton_allCellPinNet.zip in the screenshot. 
+We organize the content in the file mainly for user readibility and easier debugging/checking in Vivado. The information of each cell will cost multiple lines. 
 
 The first line for a cell in the design netlist will be the one begin with "curCell=> " and provide the name and type of the cell.
 
@@ -54,3 +55,11 @@ curCell=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc
    pin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r1_data_reg[0]_i_2/S refpin=> S dir=> IN net=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[2] drivepin=> design_1_i/axis_dwidth_converter_0/inst/gen_downsizer_conversion.axisc_downsizer_0/r0_out_sel_next_r_reg[2]/Q
 ```
 \endverbatim
+
+Besides, we also extract the clock information/fixed elements/vendor primitive macros of the design from Vivado. 
+
+In the clock information file, e.g., OpenPiton_clocks, each line will be the name of clock driver pin. This information will be used for clock legalization.
+
+In the fixed element file, e.g., OpenPiton_fixedUnits, each line will describe a fixed element with its name, location site and location BEL in the site.
+
+In the unpredictable macro file, e.g., OpenPiton_unpredictableMacros, each line will describe a macro that AMF-Placer cannot precisely/properly extract currently (usually they are the clock-domain-crossing FFs or small low-bitwidth LUTRAMs), with their name, their location site in the post-implementation design and the location BEL. Usually, the site of these element can be changed but their locations relative to those elements in the same site/neighbor site cannot be changed. Mose of the macros we can infer their build rules but for some other macros we cannot infer. Therefore, for these "unpredictable" macros, we need to extract the information from Vivado instead of building them via InitialPacker.
