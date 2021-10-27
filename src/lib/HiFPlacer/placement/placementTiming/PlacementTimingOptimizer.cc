@@ -77,10 +77,10 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                 float overflowRatio = std::pow((float)0.8 * targetPathLen / levelThr, 1);
                 // if (overflowRatio > 10)
                 //     overflowRatio = 10;
-                if (pinNum < 600)
-                    enhanceRatio = 1.5 * (overflowRatio + 0.0025 * pinNum);
+                if (pinNum < 200)
+                    enhanceRatio = 1.5 * (overflowRatio + 0.005 * pinNum);
                 else
-                    enhanceRatio = 1.5 * (overflowRatio + 1.5);
+                    enhanceRatio = 1.5 * (overflowRatio + 1);
 
                 enhanceRatio = std::sqrt(enhanceRatio);
                 if (enhanceRatio > maxEnhanceRatio)
