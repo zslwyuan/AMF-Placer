@@ -66,7 +66,7 @@ For commercial usage of this open-source project, users must contact authors (We
 
 **Acknowledgement**
 
-We sincerely appreciate the kindly suggestions from reviewers, detailed explanations of UTPlaceF from [Dr. Wuxi Li](http://wuxili.net/#about), useful advice on Vivado metric usages from Dr. Stephen Yang and fruitful discussion on some previous works with [Ms. Yun Zhou](https://github.com/YunxZhou).
+We sincerely appreciate the kindly suggestions from reviewers, detailed explanations of UTPlaceF from [Dr. Wuxi Li](http://wuxili.net/#about), useful advice on Vivado metric usages from Dr. Stephen Yang, fruitful discussion on some previous works with [Ms. Yun Zhou](https://github.com/YunxZhou) and practical suggestions of the convenient usages of AMF-Placer from [Mr. Jing Mai](https://github.com/magic3007).
 
 
 **Issue Report**

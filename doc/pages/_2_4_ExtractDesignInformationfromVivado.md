@@ -30,7 +30,7 @@ The first line for a cell in the design netlist will be the one begin with "curC
 
 Then the following lines after this cell declaration are the lines for the pins on this cell. Each of these lines begins with "pin=>". 
 The pin information will keep loading until another line beginning with "curCell=> " is found.
-For each pin, the name, reference name on cell, IO direction relative the cell, the name of connected net and the name of the driver pin of the connected net will be provided in one line.
+For each pin, the name, reference name on cell, IO direction relative to the cell, the name of connected net and the name of the driver pin of the connected net will be provided in one line.
 
 \verbatim
 ```perl
