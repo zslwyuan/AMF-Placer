@@ -154,10 +154,10 @@ $(document).ready(function(){initNavTree('_placement_timing_optimizer_8cc_source
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="keywordtype">float</span> overflowRatio = std::pow((<span class="keywordtype">float</span>)0.8 * targetPathLen / levelThr, 1);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="comment">// if (overflowRatio &gt; 10)</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="comment">//     overflowRatio = 10;</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">if</span> (pinNum &lt; 600)</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    enhanceRatio = 1.5 * (overflowRatio + 0.0025 * pinNum);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                <span class="keywordflow">if</span> (pinNum &lt; 200)</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                    enhanceRatio = 1.5 * (overflowRatio + 0.005 * pinNum);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    enhanceRatio = 1.5 * (overflowRatio + 1.5);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                    enhanceRatio = 1.5 * (overflowRatio + 1);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                enhanceRatio = std::sqrt(enhanceRatio);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                <span class="keywordflow">if</span> (enhanceRatio &gt; maxEnhanceRatio)</div>
