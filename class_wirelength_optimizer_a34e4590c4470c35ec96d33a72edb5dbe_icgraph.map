@@ -1,4 +1,5 @@
 <map id="WirelengthOptimizer::setMacroLegalizationParameters" name="WirelengthOptimizer::setMacroLegalizationParameters">
-<area shape="rect" id="node1" title="Set the macro legalization parameters." alt="" coords="279,5,497,47"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#a769b91db354db2b152a69a311ec55320" title="Set the macro legalization parameters (including legalization counter and pseudo net weight)" alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node1" title="Set the macro legalization parameters." alt="" coords="437,5,656,47"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#a769b91db354db2b152a69a311ec55320" title="Set the macro legalization parameters (including legalization counter and pseudo net weight)" alt="" coords="164,5,389,47"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

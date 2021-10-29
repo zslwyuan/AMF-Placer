@@ -1,6 +1,6 @@
 <map id="WirelengthOptimizer::getMacroPseudoNetEnhanceCnt" name="WirelengthOptimizer::getMacroPseudoNetEnhanceCnt">
 <area shape="rect" id="node1" title="Get the number of the conducted macro iterations." alt="" coords="413,39,631,80"/>
 <area shape="rect" id="node2" href="$class_global_placer.html#a418e40981906a19d68b14c773ab201f4" title="Get the number of macro pseudo net enhancements." alt="" coords="165,5,365,47"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,71,365,112"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,71,365,112"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
