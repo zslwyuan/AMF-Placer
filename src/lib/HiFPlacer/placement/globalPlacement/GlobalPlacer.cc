@@ -158,9 +158,8 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         {
             WLOptimizer->GlobalPlacementQPSolve(pseudoNetWeight, j == 0, true, enableMacroPseudoNet2Site,
                                                 pseudoNetWeightConsiderNetNum,
-                                                (i > 1 || continuePreviousIteration) && hasUserDefinedClusterInfo &&
-                                                        progressRatio<0.6, progressRatio> 0.5 ||
-                                                    timingOptEnabled);
+                                                (i > 1 || continuePreviousIteration) && hasUserDefinedClusterInfo,
+                                                progressRatio > 0.5 || timingOptEnabled);
             if (progressRatio > 0.5)
                 timingOptEnabled = true;
         }

@@ -1932,7 +1932,7 @@ void PlacementInfo::checkClockUtilization(bool dump)
         std::cout << "\n";
     }
 
-    print_info("Clock column untilization:");
+    print_info("Clock column rough max untilization in each clock region:");
     for (int i = deviceInfo->getClockRegionNumY() - 1; i >= 0; i--)
     {
         for (int j = 0; j < deviceInfo->getClockRegionNumX(); j++)

@@ -90,14 +90,16 @@ Below is a hiearchy tree of this project. As for the details, please refer to th
 ```
 
 ## Dependencies
-1. opengl, freeglut, glew
-2. eigen 3.3.8 (source code included)
-3. MKL (optional)
-4. PaToH (library included)
-5. osqp (source code included)
+  
+1. eigen 3.3.8 (source code included)
+2. PaToH (library included)
+3. osqp (source code included)
+4. MKL (optional)
+5. opengl, freeglut, glew (optional)
 
 
 ## Todo List
+
 1. stable clock legalization
 2. basic static timing analysis (doing)
 3. timing term in analytical model (doing)

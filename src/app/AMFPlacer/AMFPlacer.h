@@ -147,14 +147,17 @@ class AMFPlacer
         globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5, true,
                                                   true);
-
+        timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
+        globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
+        globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.8,
+                                                     globalPlacer->getMacroLegalizationWeight() * 0.8);
         placementInfo->createGridBins(2.0, 2.0);
         placementInfo->adjustLUTFFUtilization(-10, true);
         timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         // globalPlacer->spreading(-1);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true);
-
+        placementInfo->getPU2ClockRegionCenters().clear();
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
         // pack simple LUT-FF pairs and go through several global placement iterations
@@ -166,22 +169,22 @@ class AMFPlacer
 
         timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
+        globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.8,
+                                                     globalPlacer->getMacroLegalizationWeight() * 0.8);
         globalPlacer->setNeighborDisplacementUpperbound(3.0);
         globalPlacer->GlobalPlacement_CLBElements(2, true, 5, true, true, timingOptimizer);
 
-        timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
-
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
-        placementInfo->getPU2ClockRegionCenters().clear();
-        placementInfo->getDesignInfo()->resetNetEnhanceRatio();
-        timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
+
+        // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
+        // timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
 
-        timingOptimizer->moveDriverIntoBetterClockRegion(longPathThr, 0.7);
+        // timingOptimizer->moveDriverIntoBetterClockRegion(longPathThr, 0.75);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, timingOptimizer);
-        placementInfo->getPU2ClockRegionCenters().clear();
+        // placementInfo->getPU2ClockRegionCenters().clear();
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5, true, false,
                                                   timingOptimizer);
 
