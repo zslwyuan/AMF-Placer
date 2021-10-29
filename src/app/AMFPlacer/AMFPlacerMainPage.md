@@ -38,7 +38,7 @@ For commercial usage of this open-source project, users must contact authors (We
 * [Publications](@ref _4_publication): some papers which are the fundamental parts of this project.
 * [Implementation Explanation](@ref _5_explanation): the concrete explaination for the function module and the placement procedure.
 * [Existing Problems When Exporting To Vivado](@ref _7_portabilityToVivadoProblem): the concrete explaination of some of our known problems when interacting with Vivado.
-* [Some Failure Lessons](@ref _8_someFailureLesson): we were trapped by some problems and wasted lots of time so we think some of our failure lessons might be helpful for people who also want to development their physical synthesis flow.
+* [Some Failure Lessons](@ref _8_someFailureLesson): we were trapped by some problems and wasted lots of time so we think some of our failure lessons might be helpful for people who also want to develop their own physical synthesis flow.
 
 
 **Motivations**
