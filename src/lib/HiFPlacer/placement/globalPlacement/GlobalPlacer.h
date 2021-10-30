@@ -88,10 +88,12 @@ class GlobalPlacer
      * @param lowerBoundIterNum the iteration number for the lower-bound wirelength optimization
      * @param enableMacroPseudoNet2Site enable pseudo nets for macro legalization
      * @param stopStrictly stop strictly even the placement wirelength metrics are not converged.
+     * @param spreadRegionBinNumLimit the maximum number of bins in a spreadRegion
      * @param timingOptimizer the pointer of the timing optimizer (if nullptr, timing optimization will be disabled)
      */
     void GlobalPlacement_CLBElements(int iterNum, bool continuePreviousIteration = false, int lowerBoundIterNum = 6,
                                      bool enableMacroPseudoNet2Site = false, bool stopStrictly = false,
+                                     unsigned int spreadRegionBinNumLimit = 10000000,
                                      PlacementTimingOptimizer *timingOptimizer = nullptr);
 
     /**
@@ -184,9 +186,10 @@ class GlobalPlacer
      *
      * we make it public since sometime we allow external functions to call cell spreading for flexible improvement
      *
-     * @param currentIteration
+     * @param currentIteration the current global placement iteration in this round
+     * @param spreadRegionSizeLimit the maximum number of bins in a spreadRegion
      */
-    void spreading(int currentIteration);
+    void spreading(int currentIteration, int spreadRegionSizeLimit = 100000000);
 
   private:
     PlacementInfo *placementInfo;

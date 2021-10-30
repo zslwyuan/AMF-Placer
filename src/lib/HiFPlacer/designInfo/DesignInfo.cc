@@ -387,12 +387,12 @@ void DesignInfo::enhanceFFControlSetNets()
             if (CS->getCE())
             {
                 if (CS->getCE()->getPins().size() < 5000 && CS->getCE()->getPins().size() > 25)
-                    CS->getCE()->enhanceOverallNetEnhancement(1.2);
+                    CS->getCE()->enhanceOverallClusterNetEnhancement(1.2);
             }
             if (CS->getSR())
             {
                 if (CS->getSR()->getPins().size() < 5000 && CS->getSR()->getPins().size() > 25)
-                    CS->getSR()->enhanceOverallNetEnhancement(1.2);
+                    CS->getSR()->enhanceOverallClusterNetEnhancement(1.2);
             }
         }
     }

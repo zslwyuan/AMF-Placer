@@ -1070,8 +1070,8 @@ class PlacementInfo
                 assert(forgetRatio <= 1);
                 x = x * forgetRatio + lastSpreadX * (1 - forgetRatio);
                 y = y * forgetRatio + lastSpreadY * (1 - forgetRatio);
-                lastSpreadX = x;
-                lastSpreadY = y;
+                // lastSpreadX = x;
+                // lastSpreadY = y;
             }
             lastAnchorX = x;
             lastAnchorY = y;

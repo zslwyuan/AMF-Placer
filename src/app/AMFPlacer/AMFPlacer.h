@@ -145,18 +145,18 @@ class AMFPlacer
 
         globalPlacer->clusterPlacement();
         globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
-        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5, true,
-                                                  true);
+
+        globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5, true, true,
+                                                  200, timingOptimizer);
         timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
         globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.8,
                                                      globalPlacer->getMacroLegalizationWeight() * 0.8);
         placementInfo->createGridBins(2.0, 2.0);
         placementInfo->adjustLUTFFUtilization(-10, true);
-        timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         // globalPlacer->spreading(-1);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
-                                                  true);
+                                                  true, 200, timingOptimizer);
         placementInfo->getPU2ClockRegionCenters().clear();
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
@@ -167,15 +167,16 @@ class AMFPlacer
         placementInfo->printStat();
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
-        timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
+        // timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
+
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
         globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.8,
                                                      globalPlacer->getMacroLegalizationWeight() * 0.8);
         globalPlacer->setNeighborDisplacementUpperbound(3.0);
-        globalPlacer->GlobalPlacement_CLBElements(2, true, 5, true, true, timingOptimizer);
 
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
-                                                  true, timingOptimizer);
+                                                  true, 16, timingOptimizer);
+        // placementInfo->getPU2ClockRegionCenters().clear();
 
         // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
         // timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
@@ -183,10 +184,10 @@ class AMFPlacer
 
         // timingOptimizer->moveDriverIntoBetterClockRegion(longPathThr, 0.75);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
-                                                  true, timingOptimizer);
+                                                  true, 16, timingOptimizer);
         // placementInfo->getPU2ClockRegionCenters().clear();
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5, true, false,
-                                                  timingOptimizer);
+                                                  16, timingOptimizer);
 
         // currently, some fixed/packed flag cannot be stored in the check-point (TODO)
         clearSomeAttributesCannotRecord();
@@ -198,7 +199,7 @@ class AMFPlacer
 
         // finally pack the elements into sites on the FPGA device
         parallelCLBPacker =
-            new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.5, 0.5, 6, 10, 0.1, "first");
+            new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.25, 0.5, 6, 10, 0.1, "first");
         parallelCLBPacker->packCLBs(30, true);
         parallelCLBPacker->setPULocationToPackedSite();
         timingOptimizer->setEdgesDelay();

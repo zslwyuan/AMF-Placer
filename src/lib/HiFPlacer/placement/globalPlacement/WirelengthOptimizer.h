@@ -21,6 +21,7 @@
 #include "MacroLegalizer.h"
 #include "PlacementInfo.h"
 #include "QPSolverWrapper.h"
+#include "PlacementTimingOptimizer.h"
 #include <assert.h>
 #include <fstream>
 #include <iostream>
@@ -74,7 +75,7 @@ class WirelengthOptimizer
     void GlobalPlacementQPSolve(float pesudoNetWeight, bool firstIteration = true,
                                 bool forwardSolutionToNextIteration = false, bool enableMacroPseudoNet2Site = false,
                                 bool considerNetNum = true, bool enableUserDefinedClusterOpt = false,
-                                bool timingOpt = false);
+                                PlacementTimingOptimizer *timingOptimizer = nullptr);
 
     /**
      * @brief update the net weights in the quadratic model according to B2B net HPWL model.
@@ -91,7 +92,8 @@ class WirelengthOptimizer
      * @param timingOpt whether turn on the timing-oriented optimizations
      */
     void updateB2BNetWeight(float pesudoNetWeight, bool enableMacroPseudoNet2Site = false, bool considerNetNum = true,
-                            bool enableUserDefinedClusterOpt = false, bool timingOpt = false);
+                            bool enableUserDefinedClusterOpt = false,
+                            PlacementTimingOptimizer *timingOptimizer = nullptr);
 
     /**
      * @brief a worker funtion for multi-threading net weight updating

@@ -58,8 +58,9 @@ class GeneralSpreader
      *
      * @param forgetRatio forget the original according to a given extent ratio. Lower forget ratio will make cell
      * spreading less sensitive (mreo stable).
+     * @param spreadRegionBinSizeLimit the maximum size of the spread region for a overflow bin
      */
-    void spreadPlacementUnits(float forgetRatio);
+    void spreadPlacementUnits(float forgetRatio, unsigned int spreadRegionBinSizeLimit = 1000000);
     void dumpLUTFFCoordinate();
 
     /**
@@ -1262,9 +1263,11 @@ class GeneralSpreader
      *
      * @param curBin the initial bin for the SpreadRegion construction
      * @param capacityShrinkRatio shrink the area supply to a specific ratio
+     * @param numBinThr the maximum number of bin in one
      * @return GeneralSpreader::SpreadRegion*
      */
-    GeneralSpreader::SpreadRegion *expandFromABin(PlacementInfo::PlacementBinInfo *curBin, float capacityShrinkRatio);
+    GeneralSpreader::SpreadRegion *expandFromABin(PlacementInfo::PlacementBinInfo *curBin, float capacityShrinkRatio,
+                                                  int numBinThr = 1000000);
 
     /**
      * @brief the obtained SpreadRegion s which can be processed in parallel.

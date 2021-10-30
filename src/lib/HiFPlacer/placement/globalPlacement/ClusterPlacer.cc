@@ -108,6 +108,8 @@ void ClusterPlacer::hypergraphPartitioning()
 
     int eachClusterDSPNum = 96;
     int eachClusterBRAMNum = 24;
+    int gridH = std::stoi(JSONCfg["clockRegionYNum"]);
+    int gridW = std::stoi(JSONCfg["clockRegionXNum"]);
 
     if (JSONCfg.find("clockRegionDSPNum") != JSONCfg.end())
     {
@@ -119,7 +121,7 @@ void ClusterPlacer::hypergraphPartitioning()
     }
 
     clockBasedPartitioning(minClusterCellNum, eachClusterDSPNum, eachClusterBRAMNum);
-    if (isClustersToLarges())
+    if (isClustersToLarges() && clusters.size() < 0.6 * gridW * gridH)
     {
         maxMinCutRate = 0.1;
         clockBasedPartitioning(minClusterCellNum, eachClusterDSPNum, eachClusterBRAMNum);

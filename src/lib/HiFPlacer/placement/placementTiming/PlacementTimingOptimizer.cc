@@ -52,6 +52,16 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
 
     float maxEnhanceRatio = 0;
     auto timingNodes = timingInfo->getSimplePlacementTimingInfo();
+    for (auto tmpNet : designInfo->getNets())
+        tmpNet->setOverallTimingNetEnhancement(1.0);
+
+    enhanceNetWeight_LevelBased_Cnt++;
+    effectFactor = (enhanceNetWeight_LevelBased_Cnt / 30.0);
+    if (effectFactor < 1)
+        effectFactor = std::pow(effectFactor, 1);
+    else
+        effectFactor = 1;
+
     for (auto cellA : designInfo->getCells())
     {
         if (cellA->isVirtualCell())
@@ -82,10 +92,10 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                 else
                     enhanceRatio = 1.5 * (overflowRatio + 1);
 
-                enhanceRatio = std::sqrt(enhanceRatio);
+                enhanceRatio = std::pow(enhanceRatio, effectFactor);
                 if (enhanceRatio > maxEnhanceRatio)
                     maxEnhanceRatio = enhanceRatio;
-                curPinA->getNet()->enhanceOverallNetEnhancement(enhanceRatio);
+                curPinA->getNet()->enhanceOverallTimingNetEnhancement(enhanceRatio);
 
                 if (printOut)
                 {

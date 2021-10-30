@@ -37,7 +37,7 @@ GeneralSpreader::GeneralSpreader(PlacementInfo *placementInfo, std::map<std::str
     }
 }
 
-void GeneralSpreader::spreadPlacementUnits(float forgetRatio)
+void GeneralSpreader::spreadPlacementUnits(float forgetRatio, unsigned int spreadRegionBinSizeLimit)
 {
     if (verbose) // usually commented for debug
         print_status("GeneralSpreader: starts to spreadPlacementUnits for type: [" + sharedCellType + "]");
@@ -64,6 +64,8 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio)
             }
         }
         loopCnt++;
+        if (loopCnt > 10)
+            break;
         if (JSONCfg.find("DumpLUTFFCoordTrace-GeneralSpreader") != JSONCfg.end())
         {
             std::string dumpFile = JSONCfg["DumpLUTFFCoordTrace-GeneralSpreader"];
@@ -565,7 +567,7 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
 }
 
 GeneralSpreader::SpreadRegion *GeneralSpreader::expandFromABin(PlacementInfo::PlacementBinInfo *curBin,
-                                                               float capacityShrinkRatio)
+                                                               float capacityShrinkRatio, int numBinThr)
 { // Our Region Expanding (1.4x faster)
     GeneralSpreader::SpreadRegion *resRegion =
         new GeneralSpreader::SpreadRegion(curBin, placementInfo, binGrid, capacityShrinkRatio);
@@ -573,7 +575,7 @@ GeneralSpreader::SpreadRegion *GeneralSpreader::expandFromABin(PlacementInfo::Pl
     if (!useSimpleExpland)
     {
         while (resRegion->getOverflowRatio() > capacityShrinkRatio &&
-               resRegion->smartFindExpandDirection(coveredBinSet))
+               resRegion->smartFindExpandDirection(coveredBinSet) && resRegion->getBinsInRegion().size() < numBinThr)
         {
             resRegion->smartExpand(coveredBinSet);
         }
@@ -581,7 +583,7 @@ GeneralSpreader::SpreadRegion *GeneralSpreader::expandFromABin(PlacementInfo::Pl
     else
     {
         while (resRegion->getOverflowRatio() > capacityShrinkRatio &&
-               resRegion->simpleFindExpandDirection(coveredBinSet))
+               resRegion->simpleFindExpandDirection(coveredBinSet) && resRegion->getBinsInRegion().size() < numBinThr)
         {
             resRegion->simpleExpand(coveredBinSet);
         }
@@ -798,6 +800,10 @@ void GeneralSpreader::SpreadRegion::SubBox::spreadCellsH(SubBox **boxA, SubBox *
     *boxB = new SubBox(this, topBinY, bottomBinY, boxBLeft, boxBRight, cutLineIdX + 1, cellIds.size() - 1);
     std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
 
+    float overallOverflowRatio = totalUtilization / totalCapacity;
+    if (overallOverflowRatio < 1)
+        overallOverflowRatio = 1;
+
     std::vector<int> &boxACellIds = (*boxA)->cellIds;
     if (boxACellIds.size() > 0)
     {
@@ -816,7 +822,8 @@ void GeneralSpreader::SpreadRegion::SubBox::spreadCellsH(SubBox **boxA, SubBox *
             float oldLoX = cellLoc[boxACellIds[cellInBinTail]].X;
             float oldHiX = oldLoX;
             for (cellInBinHead = cellInBinTail;
-                 cellInBinHead >= 0 && (binX == boxALeft || (cArea <= colCapacity[binX - leftBinX] + eps));
+                 cellInBinHead >= 0 &&
+                 (binX == boxALeft || (cArea / overallOverflowRatio <= colCapacity[binX - leftBinX] + eps));
                  --cellInBinHead)
             {
                 cArea += placementInfo->getActualOccupationByCellId(boxACellIds[cellInBinHead]);
@@ -879,8 +886,9 @@ void GeneralSpreader::SpreadRegion::SubBox::spreadCellsH(SubBox **boxA, SubBox *
             float oldLoX = cellLoc[boxBCellIds[cellInBinHead]].X;
             float oldHiX = oldLoX;
 
-            for (cellInBinTail = cellInBinHead; (unsigned int)cellInBinTail < boxBCellIds.size() &&
-                                                (binX == boxBRight || (cArea <= colCapacity[binX - leftBinX] + eps));
+            for (cellInBinTail = cellInBinHead;
+                 (unsigned int)cellInBinTail < boxBCellIds.size() &&
+                 (binX == boxBRight || (cArea / overallOverflowRatio <= colCapacity[binX - leftBinX] + eps));
                  cellInBinTail++)
             {
                 cArea += placementInfo->getActualOccupationByCellId(boxBCellIds[cellInBinTail]);
@@ -1052,6 +1060,9 @@ void GeneralSpreader::SpreadRegion::SubBox::spreadCellsV(SubBox **boxA, SubBox *
     *boxB = new SubBox(this, boxBTop, boxBBottom, leftBinX, rightBinX, cutLineIdX + 1, cellIds.size() - 1);
     std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
 
+    float overallOverflowRatio = totalUtilization / totalCapacity;
+    if (overallOverflowRatio < 1)
+        overallOverflowRatio = 1;
     std::vector<int> &boxACellIds = (*boxA)->cellIds;
 
     if (boxACellIds.size() > 0)
@@ -1069,7 +1080,8 @@ void GeneralSpreader::SpreadRegion::SubBox::spreadCellsV(SubBox **boxA, SubBox *
             float oriBottomY = cellLoc[boxACellIds[cellInBinTail]].Y;
             float oriTopY = oriBottomY;
             for (cellInBinHead = cellInBinTail;
-                 cellInBinHead >= 0 && (binY == boxABottom || (cArea <= colCapacity[binY - bottomBinY] + eps));
+                 cellInBinHead >= 0 &&
+                 (binY == boxABottom || (cArea / overallOverflowRatio <= colCapacity[binY - bottomBinY] + eps));
                  --cellInBinHead)
             {
                 cArea += placementInfo->getActualOccupationByCellId(boxACellIds[cellInBinHead]);
@@ -1133,8 +1145,9 @@ void GeneralSpreader::SpreadRegion::SubBox::spreadCellsV(SubBox **boxA, SubBox *
             float oriBottomY = cellLoc[boxBCellIds[cellInBinHead]].Y;
             float oriTopY = oriBottomY;
 
-            for (cellInBinTail = cellInBinHead; (unsigned int)cellInBinTail < boxBCellIds.size() &&
-                                                (binY == boxBTop || (cArea <= colCapacity[binY - bottomBinY] + eps));
+            for (cellInBinTail = cellInBinHead;
+                 (unsigned int)cellInBinTail < boxBCellIds.size() &&
+                 (binY == boxBTop || (cArea / overallOverflowRatio <= colCapacity[binY - bottomBinY] + eps));
                  cellInBinTail++)
             {
                 cArea += placementInfo->getActualOccupationByCellId(boxBCellIds[cellInBinTail]);

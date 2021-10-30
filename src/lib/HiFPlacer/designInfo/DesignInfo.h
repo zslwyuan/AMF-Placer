@@ -505,7 +505,8 @@ class DesignInfo
             {
                 isPowerNet = true;
             }
-            overallEnhanceRatio = 1.0;
+            overallClusterEnhanceRatio = 1.0;
+            overallTimingEnhanceRatio = 1.0;
         }
 
         ~DesignNet()
@@ -609,9 +610,29 @@ class DesignInfo
          *
          * @return float
          */
+        inline float getOverallClusterEnhanceRatio()
+        {
+            return overallClusterEnhanceRatio;
+        }
+
+        /**
+         * @brief Get the Overall Enhance Ratio (the entire net can be enhanced to a pre-defined extent.)
+         *
+         * @return float
+         */
+        inline float getOverallTimingEnhanceRatio()
+        {
+            return overallTimingEnhanceRatio;
+        }
+
+        /**
+         * @brief Get the Overall Enhance Ratio (the entire net can be enhanced to a pre-defined extent.)
+         *
+         * @return float
+         */
         inline float getOverallEnhanceRatio()
         {
-            return overallEnhanceRatio;
+            return overallClusterEnhanceRatio * overallTimingEnhanceRatio;
         }
 
         /**
@@ -619,9 +640,19 @@ class DesignInfo
          *
          * @param r
          */
-        inline void setOverallNetEnhancement(float r)
+        inline void setOverallClusterNetEnhancement(float r)
         {
-            overallEnhanceRatio = r;
+            overallClusterEnhanceRatio = r;
+        }
+
+        /**
+         * @brief Set the Overall Net Enhancement (the entire net can be enhanced to a pre-defined extent.)
+         *
+         * @param r
+         */
+        inline void setOverallTimingNetEnhancement(float r)
+        {
+            overallTimingEnhanceRatio = r;
         }
 
         /**
@@ -629,15 +660,26 @@ class DesignInfo
          *
          * @param r
          */
-        inline void enhanceOverallNetEnhancement(float r)
+        inline void enhanceOverallClusterNetEnhancement(float r)
         {
-            overallEnhanceRatio *= r;
+            overallClusterEnhanceRatio *= r;
+        }
+
+        /**
+         * @brief increase the Overall Net Enhancement (the entire net can be enhanced to a pre-defined extent.)
+         *
+         * @param r
+         */
+        inline void enhanceOverallTimingNetEnhancement(float r)
+        {
+            overallTimingEnhanceRatio *= r;
         }
 
         inline void resetEnhanceRatio()
         {
             pinIdPinIdInNet2EnhanceRatio.clear();
-            overallEnhanceRatio = 1;
+            overallClusterEnhanceRatio = 1;
+            overallTimingEnhanceRatio = 1;
         }
 
         /**
@@ -679,7 +721,8 @@ class DesignInfo
         std::vector<DesignPin *> driverPinPtrs;
         std::vector<DesignPin *> BeDrivenPinPtrs;
         std::map<std::pair<int, int>, float> pinIdPinIdInNet2EnhanceRatio;
-        float overallEnhanceRatio = 1.0;
+        float overallClusterEnhanceRatio = 1.0;
+        float overallTimingEnhanceRatio = 1.0;
         bool virtualNet;
         bool isGlobalClock = false;
         bool isPowerNet = false;

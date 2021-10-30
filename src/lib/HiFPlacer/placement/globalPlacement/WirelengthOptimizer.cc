@@ -66,13 +66,14 @@ void WirelengthOptimizer::reloadPlacementInfo()
 
 void WirelengthOptimizer::GlobalPlacementQPSolve(float pesudoNetWeight, bool firstIteration,
                                                  bool forwardSolutionToNextIteration, bool enableMacroPseudoNet2Site,
-                                                 bool considerNetNum, bool enableUserDefinedClusterOpt, bool timingOpt)
+                                                 bool considerNetNum, bool enableUserDefinedClusterOpt,
+                                                 PlacementTimingOptimizer *timingOptimizer)
 {
     if (verbose)
         print_status("A QP Iteration Started.");
 
     updateB2BNetWeight(pesudoNetWeight, enableMacroPseudoNet2Site, considerNetNum, enableUserDefinedClusterOpt,
-                       timingOpt);
+                       timingOptimizer);
     if (firstIteration)
         solverLoadData();
 
@@ -167,7 +168,8 @@ void WirelengthOptimizer::solverWriteBackData()
 }
 
 void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableMacroPseudoNet2Site, bool considerNetNum,
-                                             bool enableUserDefinedClusterOpt, bool timingOpt)
+                                             bool enableUserDefinedClusterOpt,
+                                             PlacementTimingOptimizer *timingOptimizer)
 {
     if (verbose)
         print_status("update B2B Net Weight Start.");
@@ -193,10 +195,10 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
         print_warning("addPseudoNetForMacros is disabled according to placer configuration.");
     }
 
-    if (timingOpt)
+    if (timingOptimizer)
     {
         addPseudoNet_LevelBased(placementInfo->getLongPathThresholdLevel(),
-                                (0.1 + 0.1 * placementInfo->getProgress()) * generalNetWeight, 25);
+                                (0.2 * timingOptimizer->getEffectFactor()) * generalNetWeight, 25);
     }
 
     if (enableUserDefinedClusterOpt)
@@ -205,7 +207,7 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
     }
 
     addPseudoNet2LoctionForAllPUs(pesudoNetWeight, considerNetNum);
-    updatePseudoNetForClockRegion((1.25 - placementInfo->getProgress()) * pesudoNetWeight);
+    updatePseudoNetForClockRegion(0.2 * pesudoNetWeight);
 
     if (verbose)
         print_status("update B2B Net Weight Done.");

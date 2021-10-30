@@ -112,6 +112,7 @@ void GlobalPlacer::clusterPlacement()
 
 void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviousIteration, int lowerBoundIterNum,
                                                bool enableMacroPseudoNet2Site, bool stopStrictly,
+                                               unsigned int spreadRegionBinNumLimit,
                                                PlacementTimingOptimizer *timingOptimizer)
 {
     print_status("GlobalPlacer GlobalPlacement_CLBElements started");
@@ -156,10 +157,9 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
 
         for (int j = 0; j < lowerBoundIterNum; j++)
         {
-            WLOptimizer->GlobalPlacementQPSolve(pseudoNetWeight, j == 0, true, enableMacroPseudoNet2Site,
-                                                pseudoNetWeightConsiderNetNum,
-                                                (i > 1 || continuePreviousIteration) && hasUserDefinedClusterInfo,
-                                                progressRatio > 0.5 || timingOptEnabled);
+            WLOptimizer->GlobalPlacementQPSolve(
+                pseudoNetWeight, j == 0, true, enableMacroPseudoNet2Site, pseudoNetWeightConsiderNetNum,
+                (i > 1 || continuePreviousIteration) && hasUserDefinedClusterInfo, timingOptimizer);
             if (progressRatio > 0.5)
                 timingOptEnabled = true;
         }
@@ -175,7 +175,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         }
 
         // upperBound: Placement Unit Spreading
-        spreading(i);
+        spreading(i, spreadRegionBinNumLimit);
 
         upperBoundHPWL = placementInfo->updateB2BAndGetTotalHPWL();
         print_status("Spreader Iteration#" + to_string_align3(i) + " Done HPWL=" + std::to_string(upperBoundHPWL));
@@ -233,6 +233,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
 
         // heuristic update pseudoNetWeight
         updatePseudoNetWeight(pseudoNetWeight, i);
+        timingOptimizer->enhanceNetWeight_LevelBased(placementInfo->getMediumPathThresholdLevel());
 
         print_info("upperBoundHPWL / lowerBoundHPWL=" + std::to_string(upperBoundHPWL / lowerBoundHPWL));
         print_info("averageMacroLegalDisplacementL=" + std::to_string(averageMacroLegalDisplacement));
@@ -558,7 +559,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
     }
 }
 
-void GlobalPlacer::spreading(int currentIteration)
+void GlobalPlacer::spreading(int currentIteration, int spreadRegionSizeLimit)
 {
     placementInfo->updateElementBinGrid();
     float supplyRatio = (placementInfo->getBinGridW() < 2.5) ? 0.95 : (0.80 + 0.1 * progressRatio);
@@ -611,9 +612,9 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
     progressRatio = lowerBoundHPWL / upperBoundHPWL;
     if (progressRatio > 1)
         progressRatio = 0.999;
-    if (progressRatio > 0.5)
-        spreadingForgetRatio = 1 - 0.8 * progressRatio;
-    else // the spreading control is not worthy when the placement is far from convergence.
+    if (std::pow(progressRatio, 0.6) > 0.4 && spreadingForgetRatio < 1)
+        spreadingForgetRatio = 0.5; // 1 - 0.4 * progressRatio;
+    else                            // the spreading control is not worthy when the placement is far from convergence.
         spreadingForgetRatio = 1;
     if (disableSpreadingForgetRatio)
         spreadingForgetRatio = 1;

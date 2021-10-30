@@ -70,6 +70,11 @@ class PlacementTimingOptimizer
         }
     }
 
+    inline float getEffectFactor()
+    {
+        return effectFactor;
+    }
+
   private:
     PlacementInfo *placementInfo = nullptr;
     PlacementTimingInfo *timingInfo = nullptr;
@@ -92,6 +97,8 @@ class PlacementTimingOptimizer
 
     int poisN = 1000;
     float lambdaPois = 100;
+    int enhanceNetWeight_LevelBased_Cnt = 0;
+    float effectFactor = 0;
     std::vector<float> pois;
 };
 
