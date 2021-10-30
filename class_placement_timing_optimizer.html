@@ -129,6 +129,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a07f1239ff5bb2a0c43ea3185a49acc2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41d0851087015f4b169455b8ff005b21"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#a41d0851087015f4b169455b8ff005b21">getPois</a> (int v)</td></tr>
 <tr class="separator:a41d0851087015f4b169455b8ff005b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f35a55648c6687d465fd009683a3eb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#a62f35a55648c6687d465fd009683a3eb">getEffectFactor</a> ()</td></tr>
+<tr class="separator:a62f35a55648c6687d465fd009683a3eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -159,6 +161,10 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a12a37ae78765b72708a107e6914940df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4f68289d6b78f328c8327c3e390cfef"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#ab4f68289d6b78f328c8327c3e390cfef">lambdaPois</a> = 100</td></tr>
 <tr class="separator:ab4f68289d6b78f328c8327c3e390cfef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc9b370cf3136fb71cc5d65c10b9639"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#a4cc9b370cf3136fb71cc5d65c10b9639">enhanceNetWeight_LevelBased_Cnt</a> = 0</td></tr>
+<tr class="separator:a4cc9b370cf3136fb71cc5d65c10b9639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a0ec05e168ad7a122681baffae001a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#ac7a0ec05e168ad7a122681baffae001a">effectFactor</a> = 0</td></tr>
+<tr class="separator:ac7a0ec05e168ad7a122681baffae001a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82df67ff3784729e6d0b2d499f0bc35e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#a82df67ff3784729e6d0b2d499f0bc35e">pois</a></td></tr>
 <tr class="separator:a82df67ff3784729e6d0b2d499f0bc35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -261,7 +267,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00184">184</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00194">194</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -315,16 +321,17 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">32</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacer::GlobalPlacement_CLBElements()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_timing_optimizer_a9a4dab3fa9bfc2f1e9f9083e3a4d34c8_cgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_a9a4dab3fa9bfc2f1e9f9083e3a4d34c8_cgraph" alt=""/></div>
 <map name="aclass_placement_timing_optimizer_a9a4dab3fa9bfc2f1e9f9083e3a4d34c8_cgraph" id="aclass_placement_timing_optimizer_a9a4dab3fa9bfc2f1e9f9083e3a4d34c8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,57,220,98"/>
+<area shape="rect" title=" " alt="" coords="5,78,220,119"/>
 <area shape="rect" href="class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="304,5,441,32"/>
-<area shape="rect" href="class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="268,57,477,98"/>
-<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="327,123,418,149"/>
+<area shape="rect" href="class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="305,56,441,83"/>
+<area shape="rect" href="class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="268,107,477,149"/>
+<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="327,173,418,200"/>
 </map>
 </div>
 <div class="dynheader">
@@ -332,7 +339,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_timing_optimizer_a9a4dab3fa9bfc2f1e9f9083e3a4d34c8_icgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_a9a4dab3fa9bfc2f1e9f9083e3a4d34c8_icgraph" alt=""/></div>
 <map name="aclass_placement_timing_optimizer_a9a4dab3fa9bfc2f1e9f9083e3a4d34c8_icgraph" id="aclass_placement_timing_optimizer_a9a4dab3fa9bfc2f1e9f9083e3a4d34c8_icgraph">
-<area shape="rect" title=" " alt="" coords="164,5,379,47"/>
+<area shape="rect" title=" " alt="" coords="413,5,628,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -385,7 +393,49 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00085">85</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00090">90</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+
+</div>
+</div>
+<a id="a62f35a55648c6687d465fd009683a3eb" name="a62f35a55648c6687d465fd009683a3eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62f35a55648c6687d465fd009683a3eb">&#9670;&nbsp;</a></span>getEffectFactor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlacementTimingOptimizer::getEffectFactor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00073">73</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00170">WirelengthOptimizer::updateB2BNetWeight()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_placement_timing_optimizer_a62f35a55648c6687d465fd009683a3eb_icgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_a62f35a55648c6687d465fd009683a3eb_icgraph" alt=""/></div>
+<map name="aclass_placement_timing_optimizer_a62f35a55648c6687d465fd009683a3eb_icgraph" id="aclass_placement_timing_optimizer_a62f35a55648c6687d465fd009683a3eb_icgraph">
+<area shape="rect" title=" " alt="" coords="841,39,1020,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,39,793,80"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,39,592,80"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
+<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -481,7 +531,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00340">340</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00350">350</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -521,7 +571,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00503">503</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00513">513</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
 </div>
 </div>
@@ -540,7 +590,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00135">135</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">145</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -587,9 +637,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00115">115</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00125">125</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00135">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -637,9 +687,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00076">76</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00081">81</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00115">setPinsLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00125">setPinsLocation()</a>.</p>
 
 </div>
 </div>
@@ -663,9 +713,61 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00077">77</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00082">82</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00184">clusterLongPathInOneClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00340">moveDriverIntoBetterClockRegion()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00194">clusterLongPathInOneClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00350">moveDriverIntoBetterClockRegion()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>.</p>
+
+</div>
+</div>
+<a id="ac7a0ec05e168ad7a122681baffae001a" name="ac7a0ec05e168ad7a122681baffae001a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7a0ec05e168ad7a122681baffae001a">&#9670;&nbsp;</a></span>effectFactor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float PlacementTimingOptimizer::effectFactor = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00101">101</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, and <a class="el" href="_placement_timing_optimizer_8h_source.html#l00073">getEffectFactor()</a>.</p>
+
+</div>
+</div>
+<a id="a4cc9b370cf3136fb71cc5d65c10b9639" name="a4cc9b370cf3136fb71cc5d65c10b9639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc9b370cf3136fb71cc5d65c10b9639">&#9670;&nbsp;</a></span>enhanceNetWeight_LevelBased_Cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PlacementTimingOptimizer::enhanceNetWeight_LevelBased_Cnt = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00100">100</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>.</p>
 
 </div>
 </div>
@@ -689,9 +791,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00080">80</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00085">85</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00135">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
 
 </div>
 </div>
@@ -715,7 +817,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00094">94</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00099">99</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8h_source.html#l00048">initPois()</a>.</p>
 
@@ -741,9 +843,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00074">74</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00079">79</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00184">clusterLongPathInOneClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00340">moveDriverIntoBetterClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00135">setEdgesDelay()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00115">setPinsLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00194">clusterLongPathInOneClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00350">moveDriverIntoBetterClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00125">setPinsLocation()</a>.</p>
 
 </div>
 </div>
@@ -767,7 +869,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00095">95</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00102">102</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8h_source.html#l00061">getPois()</a>, and <a class="el" href="_placement_timing_optimizer_8h_source.html#l00048">initPois()</a>.</p>
 
@@ -793,7 +895,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00093">93</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00098">98</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8h_source.html#l00048">initPois()</a>.</p>
 
@@ -819,9 +921,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00075">75</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00080">80</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00503">propogateArrivalTime()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00135">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00513">propogateArrivalTime()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
 
 </div>
 </div>
@@ -845,7 +947,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00082">82</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00087">87</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>.</p>
 
@@ -871,9 +973,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00090">90</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00095">95</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00135">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
 
 </div>
 </div>
@@ -897,9 +999,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00083">83</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00088">88</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8h_source.html#l00085">getDis()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8h_source.html#l00090">getDis()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>.</p>
 
 </div>
 </div>
@@ -923,9 +1025,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00091">91</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00096">96</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00135">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
 
 </div>
 </div>

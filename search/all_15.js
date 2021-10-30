@@ -15,7 +15,7 @@ var searchData=
   ['unplacefailurecells_12',['unplaceFailureCells',['../namespaceunplace_failure_cells.html',1,'']]],
   ['unplacefailurecells_2epy_13',['unplaceFailureCells.py',['../unplace_failure_cells_8py.html',1,'']]],
   ['updateb2bandgettotalhpwl_14',['updateB2BAndGetTotalHPWL',['../class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa',1,'PlacementInfo']]],
-  ['updateb2bnetweight_15',['updateB2BNetWeight',['../class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794',1,'WirelengthOptimizer']]],
+  ['updateb2bnetweight_15',['updateB2BNetWeight',['../class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810',1,'WirelengthOptimizer']]],
   ['updateb2bnetweightworker_16',['updateB2BNetWeightWorker',['../class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8',1,'WirelengthOptimizer']]],
   ['updatebound2boundnetweight_17',['updateBound2BoundNetWeight',['../class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6',1,'PlacementInfo::PlacementNet']]],
   ['updatecells2placementunits_18',['updateCells2PlacementUnits',['../class_placement_info.html#a132b4740f20122ca80ef9a1c2f3bfdd8',1,'PlacementInfo']]],

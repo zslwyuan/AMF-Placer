@@ -23,7 +23,7 @@
 <area shape="rect" id="node22" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="904,575,1109,602"/>
 <area shape="rect" id="node19" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="673,517,831,543"/>
 <area shape="rect" id="node20" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="413,445,600,471"/>
-<area shape="rect" id="node21" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,424,365,465"/>
+<area shape="rect" id="node21" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,424,365,465"/>
 <area shape="rect" id="node24" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="919,392,1095,433"/>
 <area shape="rect" id="node26" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization." alt="" coords="909,458,1104,485"/>
 <area shape="rect" id="node25" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="677,445,827,471"/>

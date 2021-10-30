@@ -14,8 +14,8 @@
 <area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5c2b50544d1e2288a0fceb1e93a10004" title="conduct maximun cardinality matching algorithm to pair LUTs" alt="" coords="1209,85,1448,141"/>
 <area shape="rect" id="node12" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="915,158,1161,199"/>
 <area shape="rect" id="node13" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="620,165,867,192"/>
-<area shape="rect" id="node14" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="413,211,572,237"/>
-<area shape="rect" id="node15" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,207,365,249"/>
+<area shape="rect" id="node14" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="413,211,572,237"/>
+<area shape="rect" id="node15" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,207,365,249"/>
 <area shape="rect" id="node18" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="1225,279,1433,305"/>
 <area shape="rect" id="node19" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="679,275,807,301"/>
 </map>

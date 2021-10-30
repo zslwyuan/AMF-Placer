@@ -1,6 +1,6 @@
 <map id="MacroLegalizer::resetSitesMapped" name="MacroLegalizer::resetSitesMapped">
 <area shape="rect" id="node1" title="reset the mapped flag of the involved sites." alt="" coords="648,5,823,47"/>
 <area shape="rect" id="node2" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="413,13,600,39"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

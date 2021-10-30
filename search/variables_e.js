@@ -23,9 +23,10 @@ var searchData=
   ['outputnetptrs_20',['outputNetPtrs',['../class_design_info_1_1_design_cell.html#a076d9215e1243f9fd184c54ae1e59733',1,'DesignInfo::DesignCell']]],
   ['outputpinptrs_21',['outputPinPtrs',['../class_design_info_1_1_design_cell.html#ae3eb7bbb42835b660984dbc690bf4f7e',1,'DesignInfo::DesignCell']]],
   ['outputpins_22',['outputpins',['../class_vivado_graph_util_1_1_vivado_net.html#af554b1d2a89fa4a5c09aac8d5bbdcdda',1,'VivadoGraphUtil::VivadoNet']]],
-  ['overallenhanceratio_23',['overallEnhanceRatio',['../class_design_info_1_1_design_net.html#acde2ed2de0964f649edf0822dc4be4e3',1,'DesignInfo::DesignNet']]],
-  ['overflowbins_24',['overflowBins',['../class_general_spreader.html#a251883998240aef9ac4cca27d2946e8e',1,'GeneralSpreader']]],
-  ['overflowbinset_25',['overflowBinSet',['../class_general_spreader.html#ac43bd9ec3fae0adeb5a74dec0995ed5a',1,'GeneralSpreader']]],
-  ['overflowcnt_26',['overflowCnt',['../class_placement_info_1_1_placement_bin_info.html#ad2d806502d2999f5676fc586876f763f',1,'PlacementInfo::PlacementBinInfo']]],
-  ['overflowratio_27',['overflowRatio',['../class_general_spreader_1_1_spread_region.html#a6908e6f5bc28159a0e9f3b5d7633c223',1,'GeneralSpreader::SpreadRegion']]]
+  ['overallclusterenhanceratio_23',['overallClusterEnhanceRatio',['../class_design_info_1_1_design_net.html#a50352aeb4fcd7c9a7da093f4ed937b0c',1,'DesignInfo::DesignNet']]],
+  ['overalltimingenhanceratio_24',['overallTimingEnhanceRatio',['../class_design_info_1_1_design_net.html#a8203848931412635576e5160f8cd3f9b',1,'DesignInfo::DesignNet']]],
+  ['overflowbins_25',['overflowBins',['../class_general_spreader.html#a251883998240aef9ac4cca27d2946e8e',1,'GeneralSpreader']]],
+  ['overflowbinset_26',['overflowBinSet',['../class_general_spreader.html#ac43bd9ec3fae0adeb5a74dec0995ed5a',1,'GeneralSpreader']]],
+  ['overflowcnt_27',['overflowCnt',['../class_placement_info_1_1_placement_bin_info.html#ad2d806502d2999f5676fc586876f763f',1,'PlacementInfo::PlacementBinInfo']]],
+  ['overflowratio_28',['overflowRatio',['../class_general_spreader_1_1_spread_region.html#a6908e6f5bc28159a0e9f3b5d7633c223',1,'GeneralSpreader::SpreadRegion']]]
 ];

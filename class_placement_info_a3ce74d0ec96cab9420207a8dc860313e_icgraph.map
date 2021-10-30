@@ -9,8 +9,8 @@
 <area shape="rect" id="node27" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="991,224,1189,265"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="967,517,1213,543"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,254,116,281"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="716,517,875,543"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,619,366,660"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="716,517,875,543"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,619,366,660"/>
 <area shape="rect" id="node8" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="427,669,612,711"/>
 <area shape="rect" id="node10" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="716,802,875,829"/>
 <area shape="rect" id="node11" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="426,735,613,762"/>

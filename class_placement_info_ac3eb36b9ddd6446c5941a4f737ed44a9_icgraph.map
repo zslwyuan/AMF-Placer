@@ -13,14 +13,14 @@
 <area shape="rect" id="node20" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="458,751,599,793"/>
 <area shape="rect" id="node21" href="$class_general_spreader.html#a1414f843412957281cf5cd4ec92475ad" title="update the information of the involved PlacementUnit(s)" alt="" coords="967,271,1193,313"/>
 <area shape="rect" id="node24" href="$class_general_spreader.html#a39da1cce84c49100bdac69835f2b7271" title="multi&#45;threading workers for updating the information of the involved PlacementUnit(s)" alt="" coords="1241,213,1496,254"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="729,178,882,219"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="439,233,618,274"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,298,365,339"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="729,178,882,219"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="439,233,618,274"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,298,365,339"/>
 <area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,233,365,274"/>
 <area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,396,116,423"/>
 <area shape="rect" id="node14" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a9158f76411208d46022fb6c07837b397" title="the partition/sort function for quick sorting by cell location (X or Y)" alt="" coords="977,459,1183,501"/>
 <area shape="rect" id="node15" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a30bbd6c5b25a11cdcc2403d7f653d7af" title="recursive implementation of quick sort for cell ids by X/Y location" alt="" coords="702,471,909,513"/>
 <area shape="rect" id="node17" href="$class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58" title=" " alt="" coords="175,574,354,615"/>
-<area shape="rect" id="node22" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="692,283,919,325"/>
-<area shape="rect" id="node23" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="449,303,608,329"/>
+<area shape="rect" id="node22" href="$class_general_spreader.html#ae7899f6c2516ccfadde73169919e7dbc" title="spread cells with a given forgetting ratio" alt="" coords="692,283,919,325"/>
+<area shape="rect" id="node23" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="449,303,608,329"/>
 </map>

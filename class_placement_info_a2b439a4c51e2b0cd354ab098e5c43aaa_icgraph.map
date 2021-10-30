@@ -5,8 +5,8 @@
 <area shape="rect" id="node9" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="991,322,1189,363"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="672,44,919,70"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,329,116,356"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="440,44,599,70"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,112,366,154"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="440,44,599,70"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,112,366,154"/>
 <area shape="rect" id="node8" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="427,146,612,187"/>
 <area shape="rect" id="node10" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="187,548,343,590"/>
 <area shape="rect" id="node11" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="165,204,366,246"/>

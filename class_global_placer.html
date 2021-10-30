@@ -130,9 +130,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3a96135a3d9dfc5af2c69f2fbe64bcee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee">clusterPlacement</a> ()</td></tr>
 <tr class="memdesc:a3a96135a3d9dfc5af2c69f2fbe64bcee"><td class="mdescLeft">&#160;</td><td class="mdescRight">cluster elements and conduct initial placement at coarse-grained level  <a href="class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee">More...</a><br /></td></tr>
 <tr class="separator:a3a96135a3d9dfc5af2c69f2fbe64bcee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb52cdfa1f9f993371b4f78bdf36109a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a">GlobalPlacement_CLBElements</a> (int iterNum, bool continuePreviousIteration=false, int lowerBoundIterNum=6, bool enableMacroPseudoNet2Site=false, bool stopStrictly=false, <a class="el" href="class_placement_timing_optimizer.html">PlacementTimingOptimizer</a> *timingOptimizer=nullptr)</td></tr>
-<tr class="memdesc:adb52cdfa1f9f993371b4f78bdf36109a"><td class="mdescLeft">&#160;</td><td class="mdescRight">wirelength optimization + cell spreading + legalization + area adjustion  <a href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a">More...</a><br /></td></tr>
-<tr class="separator:adb52cdfa1f9f993371b4f78bdf36109a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0a2c26154bfa7971eedf87f4fc9ad79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79">GlobalPlacement_CLBElements</a> (int iterNum, bool continuePreviousIteration=false, int lowerBoundIterNum=6, bool enableMacroPseudoNet2Site=false, bool stopStrictly=false, unsigned int spreadRegionBinNumLimit=10000000, <a class="el" href="class_placement_timing_optimizer.html">PlacementTimingOptimizer</a> *timingOptimizer=nullptr)</td></tr>
+<tr class="memdesc:aa0a2c26154bfa7971eedf87f4fc9ad79"><td class="mdescLeft">&#160;</td><td class="mdescRight">wirelength optimization + cell spreading + legalization + area adjustion  <a href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79">More...</a><br /></td></tr>
+<tr class="separator:aa0a2c26154bfa7971eedf87f4fc9ad79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49624faa647a3fbdc3fd38e2905c8e65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65">GlobalPlacement_fixedCLB</a> (int iterNum, float <a class="el" href="class_global_placer.html#a2b048fbb895e22f2073d02778d7e5d71">pseudoNetWeight</a>)</td></tr>
 <tr class="memdesc:a49624faa647a3fbdc3fd38e2905c8e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">fix the locations of CLB and let macros move without low pseudo net at initial stages, e.g., just after initial placement  <a href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65">More...</a><br /></td></tr>
 <tr class="separator:a49624faa647a3fbdc3fd38e2905c8e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,9 +157,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae8ea5bbfb70ae65f5b54f1ceb2bbdd25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25">setNeighborDisplacementUpperbound</a> (float _threshold)</td></tr>
 <tr class="memdesc:ae8ea5bbfb70ae65f5b54f1ceb2bbdd25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the distance upperbound of neighbor LUT/FF-like elements for area adjustion.  <a href="class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25">More...</a><br /></td></tr>
 <tr class="separator:ae8ea5bbfb70ae65f5b54f1ceb2bbdd25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56882dc5c57ad35905a7a58532d90aac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac">spreading</a> (int currentIteration)</td></tr>
-<tr class="memdesc:a56882dc5c57ad35905a7a58532d90aac"><td class="mdescLeft">&#160;</td><td class="mdescRight">cell spreading for all types of elements  <a href="class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac">More...</a><br /></td></tr>
-<tr class="separator:a56882dc5c57ad35905a7a58532d90aac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad380a1c77cb4c9f1ff2a625fa50c9009"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009">spreading</a> (int currentIteration, int spreadRegionSizeLimit=100000000)</td></tr>
+<tr class="memdesc:ad380a1c77cb4c9f1ff2a625fa50c9009"><td class="mdescLeft">&#160;</td><td class="mdescRight">cell spreading for all types of elements  <a href="class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009">More...</a><br /></td></tr>
+<tr class="separator:ad380a1c77cb4c9f1ff2a625fa50c9009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -517,9 +517,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00788">788</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00789">789</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00338">dumpCoord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00339">dumpCoord()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -539,7 +539,7 @@ Here is the caller graph for this function:</div>
 <map name="aclass_global_placer_a8d0e2cbde7042f59772f84032acca2ac_icgraph" id="aclass_global_placer_a8d0e2cbde7042f59772f84032acca2ac_icgraph">
 <area shape="rect" title=" " alt="" coords="629,39,808,80"/>
 <area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="413,46,581,73"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
@@ -571,7 +571,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l01024">1024</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l01025">1025</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -612,9 +612,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00692">692</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00693">693</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00338">dumpCoord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00339">dumpCoord()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -636,7 +636,7 @@ Here is the caller graph for this function:</div>
 <map name="aclass_global_placer_afd74d9e13d498f713cc19b444529fef4_icgraph" id="aclass_global_placer_afd74d9e13d498f713cc19b444529fef4_icgraph">
 <area shape="rect" title=" " alt="" coords="629,46,871,73"/>
 <area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="413,46,581,73"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
@@ -667,9 +667,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00338">338</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00339">339</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00284">GlobalPlacement_fixedCLB()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00285">GlobalPlacement_fixedCLB()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -702,7 +702,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_global_placer_a3e7069774930c89ce676479dd332dc36_icgraph.png" border="0" usemap="#aclass_global_placer_a3e7069774930c89ce676479dd332dc36_icgraph" alt=""/></div>
 <map name="aclass_global_placer_a3e7069774930c89ce676479dd332dc36_icgraph" id="aclass_global_placer_a3e7069774930c89ce676479dd332dc36_icgraph">
 <area shape="rect" title=" " alt="" coords="413,46,581,73"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
@@ -734,9 +734,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00928">928</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00929">929</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00338">dumpCoord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00339">dumpCoord()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -758,7 +758,7 @@ Here is the caller graph for this function:</div>
 <map name="aclass_global_placer_addcee9b008ef4f76f6a8a15fddb29297_icgraph" id="aclass_global_placer_addcee9b008ef4f76f6a8a15fddb29297_icgraph">
 <area shape="rect" title=" " alt="" coords="629,46,852,73"/>
 <area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="413,46,581,73"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
@@ -789,9 +789,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00740">740</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00741">741</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00338">dumpCoord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00339">dumpCoord()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -813,7 +813,7 @@ Here is the caller graph for this function:</div>
 <map name="aclass_global_placer_a3e9e0321e467f8c54211065ca6b2e182_icgraph" id="aclass_global_placer_a3e9e0321e467f8c54211065ca6b2e182_icgraph">
 <area shape="rect" title=" " alt="" coords="629,46,841,73"/>
 <area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="413,46,581,73"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
@@ -844,9 +844,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00360">360</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00361">361</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00338">dumpCoord()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00339">dumpCoord()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -868,7 +868,7 @@ Here is the caller graph for this function:</div>
 <map name="aclass_global_placer_a8928fc05ebd34f1966c5ecf744270f34_icgraph" id="aclass_global_placer_a8928fc05ebd34f1966c5ecf744270f34_icgraph">
 <area shape="rect" title=" " alt="" coords="629,46,852,73"/>
 <area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="413,46,581,73"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
@@ -900,9 +900,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00830">830</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00831">831</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00338">dumpCoord()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00339">dumpCoord()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -926,7 +926,7 @@ Here is the caller graph for this function:</div>
 <map name="aclass_global_placer_ad6b379801f0d28eead8092e02b3e12c3_icgraph" id="aclass_global_placer_ad6b379801f0d28eead8092e02b3e12c3_icgraph">
 <area shape="rect" title=" " alt="" coords="629,38,868,65"/>
 <area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="413,63,581,90"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>
@@ -960,7 +960,7 @@ Here is the caller graph for this function:</div>
 <p>Get the current macro legalization weight object. </p>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00147">147</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00149">149</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -1011,7 +1011,7 @@ Here is the caller graph for this function:</div>
 <p >the macro legalization pseudo net will be enhanced as the number of previous enhancements is increased.</p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00137">137</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00139">139</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -1062,7 +1062,7 @@ Here is the caller graph for this function:</div>
 <p >usually we can record the current pseudo net weight for later placement-related procedure</p>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00125">125</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00127">127</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -1077,8 +1077,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="adb52cdfa1f9f993371b4f78bdf36109a" name="adb52cdfa1f9f993371b4f78bdf36109a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb52cdfa1f9f993371b4f78bdf36109a">&#9670;&nbsp;</a></span>GlobalPlacement_CLBElements()</h2>
+<a id="aa0a2c26154bfa7971eedf87f4fc9ad79" name="aa0a2c26154bfa7971eedf87f4fc9ad79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0a2c26154bfa7971eedf87f4fc9ad79">&#9670;&nbsp;</a></span>GlobalPlacement_CLBElements()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1116,6 +1116,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>spreadRegionBinNumLimit</em> = <code>10000000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="class_placement_timing_optimizer.html">PlacementTimingOptimizer</a> *&#160;</td>
           <td class="paramname"><em>timingOptimizer</em> = <code>nullptr</code>&#160;</td>
         </tr>
@@ -1135,6 +1141,7 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">lowerBoundIterNum</td><td>the iteration number for the lower-bound wirelength optimization </td></tr>
     <tr><td class="paramname">enableMacroPseudoNet2Site</td><td>enable pseudo nets for macro legalization </td></tr>
     <tr><td class="paramname">stopStrictly</td><td>stop strictly even the placement wirelength metrics are not converged. </td></tr>
+    <tr><td class="paramname">spreadRegionBinNumLimit</td><td>the maximum number of bins in a spreadRegion </td></tr>
     <tr><td class="paramname">timingOptimizer</td><td>the pointer of the timing optimizer (if nullptr, timing optimization will be disabled) </td></tr>
   </table>
   </dd>
@@ -1146,65 +1153,65 @@ Here is the caller graph for this function:</div>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_global_placer_adb52cdfa1f9f993371b4f78bdf36109a_cgraph.png" border="0" usemap="#aclass_global_placer_adb52cdfa1f9f993371b4f78bdf36109a_cgraph" alt=""/></div>
-<map name="aclass_global_placer_adb52cdfa1f9f993371b4f78bdf36109a_cgraph" id="aclass_global_placer_adb52cdfa1f9f993371b4f78bdf36109a_cgraph">
-<area shape="rect" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="5,937,207,979"/>
-<area shape="rect" href="class_placement_info.html#aaeeece0e2a9362d1bb26c2e17fd90aad" title="reset the inflate ratio of all the cells to be 1, for re&#45;evaluation" alt="" coords="537,1227,784,1268"/>
-<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="912,762,1003,789"/>
-<area shape="rect" href="class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="282,207,462,248"/>
-<area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="623,711,698,738"/>
-<area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="288,518,456,545"/>
-<area shape="rect" href="class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="541,341,780,367"/>
-<area shape="rect" href="class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="565,1015,756,1042"/>
-<area shape="rect" href="class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="560,1066,761,1093"/>
-<area shape="rect" href="class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5" title="Get the net weight for macro legalization." alt="" coords="277,788,467,829"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265" title="Get the number of the conducted macro iterations." alt="" coords="263,853,481,895"/>
-<area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="281,919,463,946"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="283,620,461,661"/>
-<area shape="rect" href="class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="279,686,465,713"/>
-<area shape="rect" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="611,914,710,941"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="299,431,445,472"/>
-<area shape="rect" href="class_placement_info.html#a958489df28152a1f6d57ed1d300d0cea" title="Set the Macro Legalization Parameters." alt="" coords="255,1189,489,1231"/>
-<area shape="rect" href="class_placement_info.html#acf04c3cb841c54072879fb499d4c8617" title="record the minimum HPWL during placement procedure" alt="" coords="277,1255,467,1282"/>
-<area shape="rect" href="class_placement_info.html#ae4d7fbda04595b6a0563a0cb55b24c77" title="Set the Pseudo Net Weight according to a given value." alt="" coords="285,1307,459,1348"/>
-<area shape="rect" href="class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="293,1373,451,1399"/>
-<area shape="rect" href="str_print_8cc.html#ab175fbcc2469d1996f59d2e3ea070974" title=" " alt="" coords="315,1423,429,1450"/>
-<area shape="rect" href="class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="273,1475,471,1516"/>
-<area shape="rect" href="class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="279,1021,465,1063"/>
-<area shape="rect" href="class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="871,1234,1044,1261"/>
-<area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#a773fd0743326e715c99e7ee8b64a0d76" title="get the reference of cellId2InfationRatio for convenience" alt="" coords="832,1285,1083,1327"/>
-<area shape="rect" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="878,1351,1037,1378"/>
-<area shape="rect" href="class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="867,1168,1048,1209"/>
-<area shape="rect" href="class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="570,123,751,164"/>
-<area shape="rect" href="class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="551,189,770,215"/>
-<area shape="rect" href="class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="551,239,770,266"/>
-<area shape="rect" href="class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="567,290,755,317"/>
-<area shape="rect" href="class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region." alt="" coords="555,5,766,47"/>
-<area shape="rect" href="class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region" alt="" coords="548,71,773,98"/>
-<area shape="rect" href="class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="571,544,750,585"/>
-<area shape="rect" href="class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="540,610,781,637"/>
-<area shape="rect" href="class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="549,661,772,687"/>
-<area shape="rect" href="class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="555,442,767,469"/>
-<area shape="rect" href="class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="549,493,772,519"/>
-<area shape="rect" href="class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="869,551,1046,592"/>
-<area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="861,485,1053,527"/>
-<area shape="rect" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="902,617,1013,643"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="881,251,1033,292"/>
-<area shape="rect" href="class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="899,317,1015,343"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="881,368,1033,409"/>
-<area shape="rect" href="class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="894,434,1021,461"/>
-<area shape="rect" href="class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title=" " alt="" coords="856,965,1059,991"/>
-<area shape="rect" href="class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="854,1015,1061,1042"/>
-<area shape="rect" href="class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="860,914,1055,941"/>
-<area shape="rect" href="class_macro_legalizer.html#a8c322f41c19d3f9d06c0e856feac21db" title=" " alt="" coords="851,1066,1064,1093"/>
-<area shape="rect" href="class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="849,1117,1066,1143"/>
+<div class="center"><img src="class_global_placer_aa0a2c26154bfa7971eedf87f4fc9ad79_cgraph.png" border="0" usemap="#aclass_global_placer_aa0a2c26154bfa7971eedf87f4fc9ad79_cgraph" alt=""/></div>
+<map name="aclass_global_placer_aa0a2c26154bfa7971eedf87f4fc9ad79_cgraph" id="aclass_global_placer_aa0a2c26154bfa7971eedf87f4fc9ad79_cgraph">
+<area shape="rect" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="5,1080,207,1121"/>
+<area shape="rect" href="class_placement_info.html#aaeeece0e2a9362d1bb26c2e17fd90aad" title="reset the inflate ratio of all the cells to be 1, for re&#45;evaluation" alt="" coords="537,1285,784,1326"/>
+<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="912,810,1003,836"/>
+<area shape="rect" href="class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="282,234,462,276"/>
+<area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="623,860,698,887"/>
+<area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="288,548,456,575"/>
+<area shape="rect" href="class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="541,658,780,684"/>
+<area shape="rect" href="class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="565,1118,756,1144"/>
+<area shape="rect" href="class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="560,708,761,735"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a9a4dab3fa9bfc2f1e9f9083e3a4d34c8" title=" " alt="" coords="265,1168,479,1209"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ade01efd3233d5a808dfde107f1c122f5" title="Get the net weight for macro legalization." alt="" coords="277,920,467,961"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a3914251cd679404226ae5b58e32a8265" title="Get the number of the conducted macro iterations." alt="" coords="263,985,481,1026"/>
+<area shape="rect" href="class_placement_info.html#a80bec37ddde34d28be1b2c43a99aa614" title=" " alt="" coords="284,1050,460,1092"/>
+<area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="281,1116,463,1143"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="283,752,461,793"/>
+<area shape="rect" href="class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="279,868,465,895"/>
+<area shape="rect" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="611,1016,710,1043"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="299,66,445,108"/>
+<area shape="rect" href="class_placement_info.html#a958489df28152a1f6d57ed1d300d0cea" title="Set the Macro Legalization Parameters." alt="" coords="255,1402,489,1444"/>
+<area shape="rect" href="class_placement_info.html#acf04c3cb841c54072879fb499d4c8617" title="record the minimum HPWL during placement procedure" alt="" coords="277,1468,467,1495"/>
+<area shape="rect" href="class_placement_info.html#ae4d7fbda04595b6a0563a0cb55b24c77" title="Set the Pseudo Net Weight according to a given value." alt="" coords="285,1520,459,1561"/>
+<area shape="rect" href="class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="293,1586,451,1612"/>
+<area shape="rect" href="str_print_8cc.html#ab175fbcc2469d1996f59d2e3ea070974" title=" " alt="" coords="315,1636,429,1663"/>
+<area shape="rect" href="class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="273,1688,471,1729"/>
+<area shape="rect" href="class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="279,1285,465,1326"/>
+<area shape="rect" href="class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="871,1224,1044,1251"/>
+<area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#a773fd0743326e715c99e7ee8b64a0d76" title="get the reference of cellId2InfationRatio for convenience" alt="" coords="832,1276,1083,1317"/>
+<area shape="rect" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="878,1342,1037,1368"/>
+<area shape="rect" href="class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="867,1393,1048,1434"/>
+<area shape="rect" href="class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="570,322,751,364"/>
+<area shape="rect" href="class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="551,52,770,79"/>
+<area shape="rect" href="class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="551,103,770,130"/>
+<area shape="rect" href="class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="567,154,755,180"/>
+<area shape="rect" href="class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region." alt="" coords="555,205,766,246"/>
+<area shape="rect" href="class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region" alt="" coords="548,271,773,298"/>
+<area shape="rect" href="class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="571,440,750,481"/>
+<area shape="rect" href="class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="540,506,781,532"/>
+<area shape="rect" href="class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="549,388,772,415"/>
+<area shape="rect" href="class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="555,556,767,583"/>
+<area shape="rect" href="class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="549,607,772,634"/>
+<area shape="rect" href="class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="869,458,1046,500"/>
+<area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="861,393,1053,434"/>
+<area shape="rect" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="902,524,1013,551"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="881,576,1033,617"/>
+<area shape="rect" href="class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="899,642,1015,668"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="881,693,1033,734"/>
+<area shape="rect" href="class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="894,759,1021,786"/>
+<area shape="rect" href="class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title=" " alt="" coords="856,1067,1059,1094"/>
+<area shape="rect" href="class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="854,1118,1061,1144"/>
+<area shape="rect" href="class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="860,1168,1055,1195"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_global_placer_adb52cdfa1f9f993371b4f78bdf36109a_icgraph.png" border="0" usemap="#aclass_global_placer_adb52cdfa1f9f993371b4f78bdf36109a_icgraph" alt=""/></div>
-<map name="aclass_global_placer_adb52cdfa1f9f993371b4f78bdf36109a_icgraph" id="aclass_global_placer_adb52cdfa1f9f993371b4f78bdf36109a_icgraph">
+<div class="center"><img src="class_global_placer_aa0a2c26154bfa7971eedf87f4fc9ad79_icgraph.png" border="0" usemap="#aclass_global_placer_aa0a2c26154bfa7971eedf87f4fc9ad79_icgraph" alt=""/></div>
+<map name="aclass_global_placer_aa0a2c26154bfa7971eedf87f4fc9ad79_icgraph" id="aclass_global_placer_aa0a2c26154bfa7971eedf87f4fc9ad79_icgraph">
 <area shape="rect" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
@@ -1247,7 +1254,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00284">284</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00285">285</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -1255,56 +1262,56 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_global_placer_a49624faa647a3fbdc3fd38e2905c8e65_cgraph.png" border="0" usemap="#aclass_global_placer_a49624faa647a3fbdc3fd38e2905c8e65_cgraph" alt=""/></div>
 <map name="aclass_global_placer_a49624faa647a3fbdc3fd38e2905c8e65_cgraph" id="aclass_global_placer_a49624faa647a3fbdc3fd38e2905c8e65_cgraph">
-<area shape="rect" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="5,802,207,843"/>
-<area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="517,305,685,332"/>
-<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="1103,591,1194,617"/>
-<area shape="rect" href="class_placement_info.html#a5a2299070df74f28c6e6d5ca6b406deb" title=" " alt="" coords="269,685,439,726"/>
-<area shape="rect" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="275,553,433,580"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="265,802,443,843"/>
-<area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="1111,1188,1186,1215"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="281,1038,427,1079"/>
-<area shape="rect" href="class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="255,1274,453,1315"/>
-<area shape="rect" href="class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="255,1449,453,1490"/>
-<area shape="rect" href="class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="781,298,959,339"/>
-<area shape="rect" href="class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="749,532,991,559"/>
-<area shape="rect" href="class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="759,364,981,391"/>
-<area shape="rect" href="class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="764,247,976,273"/>
-<area shape="rect" href="class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="759,196,981,223"/>
-<area shape="rect" href="class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="751,145,989,172"/>
-<area shape="rect" href="class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="1060,291,1237,333"/>
-<area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="1053,474,1245,515"/>
-<area shape="rect" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="1093,240,1204,267"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="1073,642,1225,683"/>
-<area shape="rect" href="class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="1083,540,1214,567"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="1073,357,1225,398"/>
-<area shape="rect" href="class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="1085,423,1212,449"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="1073,174,1225,215"/>
-<area shape="rect" href="class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="1091,123,1207,149"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="1073,57,1225,98"/>
-<area shape="rect" href="class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="1085,5,1212,32"/>
-<area shape="rect" href="class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="533,513,670,540"/>
-<area shape="rect" href="class_q_p_solver_wrapper.html#a4d661af587ec252bc62b14d420cd6bce" title=" " alt="" coords="778,801,962,828"/>
-<area shape="rect" href="class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="801,415,939,457"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="526,615,677,657"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="525,954,678,995"/>
-<area shape="rect" href="class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="765,583,975,609"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="758,685,982,726"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="775,1021,965,1062"/>
-<area shape="rect" href="class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="1039,1057,1259,1084"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="782,1147,958,1189"/>
-<area shape="rect" href="class_placement_info.html#ac18f726c75937363f52be34154f4468c" title=" " alt="" coords="777,903,963,945"/>
-<area shape="rect" href="class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="501,1020,701,1047"/>
-<area shape="rect" href="class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="501,1071,701,1097"/>
-<area shape="rect" href="class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="503,1121,700,1148"/>
-<area shape="rect" href="class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="503,1172,700,1199"/>
-<area shape="rect" href="class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="518,1507,685,1549"/>
-<area shape="rect" href="class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="515,1573,688,1600"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="525,1625,677,1666"/>
-<area shape="rect" href="class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="515,1691,687,1717"/>
-<area shape="rect" href="class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="519,1273,684,1300"/>
-<area shape="rect" href="class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="511,1325,692,1366"/>
-<area shape="rect" href="class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="507,1390,695,1431"/>
-<area shape="rect" href="class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="505,1456,698,1483"/>
+<area shape="rect" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="5,1107,207,1149"/>
+<area shape="rect" href="class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="517,313,685,340"/>
+<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="1089,605,1180,632"/>
+<area shape="rect" href="class_placement_info.html#a5a2299070df74f28c6e6d5ca6b406deb" title=" " alt="" coords="269,941,439,982"/>
+<area shape="rect" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="275,681,433,708"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="265,1006,443,1047"/>
+<area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="1097,1245,1172,1272"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="281,1187,427,1229"/>
+<area shape="rect" href="class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="255,1419,453,1461"/>
+<area shape="rect" href="class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="255,1587,453,1629"/>
+<area shape="rect" href="class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="781,365,959,406"/>
+<area shape="rect" href="class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="749,313,991,340"/>
+<area shape="rect" href="class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="759,431,981,457"/>
+<area shape="rect" href="class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="764,263,976,289"/>
+<area shape="rect" href="class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="759,212,981,239"/>
+<area shape="rect" href="class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="751,161,989,188"/>
+<area shape="rect" href="class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="1046,291,1223,333"/>
+<area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="1039,474,1231,515"/>
+<area shape="rect" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="1079,240,1190,267"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="1059,409,1211,450"/>
+<area shape="rect" href="class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="1069,357,1200,384"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="1059,539,1211,581"/>
+<area shape="rect" href="class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="1071,656,1198,683"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="1059,174,1211,215"/>
+<area shape="rect" href="class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="1077,123,1193,149"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="1059,57,1211,98"/>
+<area shape="rect" href="class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="1071,5,1198,32"/>
+<area shape="rect" href="class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="533,475,670,501"/>
+<area shape="rect" href="class_q_p_solver_wrapper.html#a4d661af587ec252bc62b14d420cd6bce" title=" " alt="" coords="778,1064,962,1091"/>
+<area shape="rect" href="class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="801,583,939,625"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="526,526,677,567"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="525,897,678,938"/>
+<area shape="rect" href="class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="765,532,975,559"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="758,701,982,742"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="775,897,965,938"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="782,1115,958,1157"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a62f35a55648c6687d465fd009683a3eb" title=" " alt="" coords="781,766,959,807"/>
+<area shape="rect" href="class_placement_info.html#ac18f726c75937363f52be34154f4468c" title=" " alt="" coords="777,831,963,873"/>
+<area shape="rect" href="class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="501,1267,701,1293"/>
+<area shape="rect" href="class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="501,1317,701,1344"/>
+<area shape="rect" href="class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="503,1165,700,1192"/>
+<area shape="rect" href="class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="503,1216,700,1243"/>
+<area shape="rect" href="class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="518,1770,685,1811"/>
+<area shape="rect" href="class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="515,1836,688,1863"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="525,1419,677,1461"/>
+<area shape="rect" href="class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="515,1485,687,1512"/>
+<area shape="rect" href="class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="519,1536,684,1563"/>
+<area shape="rect" href="class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="511,1587,692,1629"/>
+<area shape="rect" href="class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="507,1653,695,1694"/>
+<area shape="rect" href="class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="505,1719,698,1745"/>
 </map>
 </div>
 <div class="dynheader">
@@ -1351,7 +1358,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00408">408</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00409">409</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>.</p>
 <div class="dynheader">
@@ -1417,7 +1424,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_global_placer_ac94e8a273dba9609c1d113d370e1f6e7_icgraph.png" border="0" usemap="#aclass_global_placer_ac94e8a273dba9609c1d113d370e1f6e7_icgraph" alt=""/></div>
 <map name="aclass_global_placer_ac94e8a273dba9609c1d113d370e1f6e7_icgraph" id="aclass_global_placer_ac94e8a273dba9609c1d113d370e1f6e7_icgraph">
 <area shape="rect" title="legalize specific types of macro to the target regions" alt="" coords="413,13,600,39"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -1448,7 +1455,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00348">348</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00349">349</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1496,7 +1503,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00284">284</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00287">287</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 </div>
 </div>
@@ -1525,7 +1532,7 @@ Here is the call graph for this function:</div>
 
 <p>fix the macro legalization result </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00167">167</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00169">169</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 </div>
 </div>
@@ -1572,7 +1579,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00158">158</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00160">160</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -1628,7 +1635,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00177">177</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00179">179</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -1676,7 +1683,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00113">113</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00115">115</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -1691,8 +1698,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="a56882dc5c57ad35905a7a58532d90aac" name="a56882dc5c57ad35905a7a58532d90aac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56882dc5c57ad35905a7a58532d90aac">&#9670;&nbsp;</a></span>spreading()</h2>
+<a id="ad380a1c77cb4c9f1ff2a625fa50c9009" name="ad380a1c77cb4c9f1ff2a625fa50c9009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad380a1c77cb4c9f1ff2a625fa50c9009">&#9670;&nbsp;</a></span>spreading()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1701,8 +1708,18 @@ Here is the caller graph for this function:</div>
           <td class="memname">void GlobalPlacer::spreading </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currentIteration</em></td><td>)</td>
+          <td class="paramname"><em>currentIteration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>spreadRegionSizeLimit</em> = <code>100000000</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1711,78 +1728,79 @@ Here is the caller graph for this function:</div>
 <p >we make it public since sometime we allow external functions to call cell spreading for flexible improvement</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">currentIteration</td><td></td></tr>
+    <tr><td class="paramname">currentIteration</td><td>the current global placement iteration in this round </td></tr>
+    <tr><td class="paramname">spreadRegionSizeLimit</td><td>the maximum number of bins in a spreadRegion </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00561">561</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00562">562</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_global_placer_a56882dc5c57ad35905a7a58532d90aac_cgraph.png" border="0" usemap="#aclass_global_placer_a56882dc5c57ad35905a7a58532d90aac_cgraph" alt=""/></div>
-<map name="aclass_global_placer_a56882dc5c57ad35905a7a58532d90aac_cgraph" id="aclass_global_placer_a56882dc5c57ad35905a7a58532d90aac_cgraph">
-<area shape="rect" title="cell spreading for all types of elements" alt="" coords="5,1287,164,1313"/>
-<area shape="rect" href="class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="212,613,459,640"/>
-<area shape="rect" href="class_placement_info.html#a03d5679cd783cd7c08e7f82fa8860936" title="Get the width of a bin in grid." alt="" coords="243,1257,428,1284"/>
-<area shape="rect" href="class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="222,1309,449,1350"/>
-<area shape="rect" href="class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="538,1841,737,1882"/>
-<area shape="rect" href="class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization" alt="" coords="514,289,761,330"/>
-<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="896,893,987,920"/>
-<area shape="rect" href="class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="514,489,761,530"/>
-<area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="850,675,1033,701"/>
-<area shape="rect" href="class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6" title="adjust the resource demand of LUTs/FFs according to routing congestion refer to RippleFPGA&#39;s implemen..." alt="" coords="514,606,761,647"/>
-<area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#a3b176f3a41c580bc77b3859c94116107" title="forget the occupation adjustment by packing feasibility and routing congestion" alt="" coords="518,671,757,727"/>
-<area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#a773fd0743326e715c99e7ee8b64a0d76" title="get the reference of cellId2InfationRatio for convenience" alt="" coords="816,289,1067,330"/>
-<area shape="rect" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="862,405,1021,432"/>
+<div class="center"><img src="class_global_placer_ad380a1c77cb4c9f1ff2a625fa50c9009_cgraph.png" border="0" usemap="#aclass_global_placer_ad380a1c77cb4c9f1ff2a625fa50c9009_cgraph" alt=""/></div>
+<map name="aclass_global_placer_ad380a1c77cb4c9f1ff2a625fa50c9009_cgraph" id="aclass_global_placer_ad380a1c77cb4c9f1ff2a625fa50c9009_cgraph">
+<area shape="rect" title="cell spreading for all types of elements" alt="" coords="5,1245,164,1272"/>
+<area shape="rect" href="class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="212,573,459,600"/>
+<area shape="rect" href="class_placement_info.html#a03d5679cd783cd7c08e7f82fa8860936" title="Get the width of a bin in grid." alt="" coords="243,1216,428,1243"/>
+<area shape="rect" href="class_general_spreader.html#ae7899f6c2516ccfadde73169919e7dbc" title="spread cells with a given forgetting ratio" alt="" coords="222,1267,449,1309"/>
+<area shape="rect" href="class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="538,1785,737,1826"/>
+<area shape="rect" href="class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization" alt="" coords="514,209,761,250"/>
+<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="896,895,987,921"/>
+<area shape="rect" href="class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="514,449,761,490"/>
+<area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="850,676,1033,703"/>
+<area shape="rect" href="class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6" title="adjust the resource demand of LUTs/FFs according to routing congestion refer to RippleFPGA&#39;s implemen..." alt="" coords="514,566,761,607"/>
+<area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#a3b176f3a41c580bc77b3859c94116107" title="forget the occupation adjustment by packing feasibility and routing congestion" alt="" coords="518,631,757,687"/>
+<area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#a773fd0743326e715c99e7ee8b64a0d76" title="get the reference of cellId2InfationRatio for convenience" alt="" coords="816,209,1067,250"/>
+<area shape="rect" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="862,392,1021,419"/>
 <area shape="rect" href="class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="832,5,1051,32"/>
 <area shape="rect" href="class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="832,56,1051,83"/>
 <area shape="rect" href="class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="847,107,1035,133"/>
-<area shape="rect" href="class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="856,558,1027,599"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1125,1309,1277,1350"/>
-<area shape="rect" href="class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="1115,788,1287,815"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="1125,613,1277,654"/>
-<area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#aead0affeaeaf5fa2bbfe747ed425d3b0" title="get the reference of cellId2Occupation for convenience" alt="" coords="819,158,1063,199"/>
-<area shape="rect" href="class_placement_info.html#a5093b0b1c68570bdeebdb0326117ce01" title=" " alt="" coords="843,223,1039,265"/>
-<area shape="rect" href="class_placement_info.html#a467603faa84a06c4ccf231c05598e0dc" title="Get the Pair Pin Num of two LUTs." alt="" coords="841,355,1041,381"/>
-<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="865,726,1017,767"/>
-<area shape="rect" href="class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="855,1075,1028,1101"/>
-<area shape="rect" href="class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="851,1470,1032,1511"/>
-<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a76a8313ac5e28f52ae29b066d83ec909" title="get the bottom bin coordinate Y of the SpreadRegion in bin grid" alt="" coords="534,1126,741,1167"/>
-<area shape="rect" href="class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80" title=" " alt="" coords="507,1192,768,1219"/>
-<area shape="rect" href="class_general_spreader.html#a6490458435738449c4a37257a8b2f365" title=" " alt="" coords="547,802,727,843"/>
-<area shape="rect" href="class_general_spreader.html#af7490de679695e56211d1cc11fb3c6ce" title="obtain a SpreadRegion by expanding a cell spreading window from an overflow bin" alt="" coords="525,1375,749,1401"/>
-<area shape="rect" href="class_general_spreader.html#a91793e0d24904eb3a6bb7006c1871019" title="find the overflow bins in the placement accoridng to a given threshold" alt="" coords="526,1425,749,1452"/>
-<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a446651a444487ed99a65e51d3f42d8e3" title="Get the bins in the SpreadRegion." alt="" coords="534,1477,741,1518"/>
-<area shape="rect" href="class_general_spreader_1_1_spread_region.html#af6422a9e739bc8c8c84551db16d55b8e" title="Get the cells in the SpreadRegion." alt="" coords="534,1542,741,1583"/>
-<area shape="rect" href="class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="541,1775,733,1817"/>
-<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a37f541916ccd3f1edc6be75fa9835a74" title="get the left bin coordinate X of the SpreadRegion in bin grid" alt="" coords="534,1607,741,1649"/>
-<area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="600,1673,675,1700"/>
-<area shape="rect" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="588,1724,687,1751"/>
-<area shape="rect" href="class_general_spreader.html#a9414c4dd2802f8201e05a9d7048f1f50" title="record the spreaded location in PlacementInfo for later forget&#45;ratio&#45;based location updating" alt="" coords="529,1243,745,1285"/>
-<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a20edd0f95b684109bfce7c3f7b1e8d0c" title="get the right bin coordinate X of the SpreadRegion in bin grid" alt="" coords="534,919,741,961"/>
-<area shape="rect" href="class_general_spreader_1_1_spread_region_1_1_sub_box.html#a862f7fccd26177814190034b010c0cdd" title="spread cells and partition the SubBox into smaller SubBoxes" alt="" coords="534,1009,741,1050"/>
-<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a1e6aa8a310ba2134263ce63767c846ab" title="get the top bin coordinate Y of the SpreadRegion in bin grid" alt="" coords="522,1075,753,1101"/>
-<area shape="rect" href="class_general_spreader.html#a1414f843412957281cf5cd4ec92475ad" title="update the information of the involved PlacementUnit(s)" alt="" coords="524,1309,751,1350"/>
-<area shape="rect" href="class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="853,1126,1030,1167"/>
-<area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="845,1243,1037,1285"/>
-<area shape="rect" href="class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="883,1192,999,1219"/>
-<area shape="rect" href="class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="878,1024,1005,1051"/>
-<area shape="rect" href="class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="858,1870,1025,1911"/>
-<area shape="rect" href="class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="859,1701,1024,1728"/>
-<area shape="rect" href="class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="847,1753,1035,1794"/>
-<area shape="rect" href="class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="845,1819,1038,1845"/>
+<area shape="rect" href="class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="856,509,1027,550"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1125,1274,1277,1315"/>
+<area shape="rect" href="class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="1115,777,1287,804"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="1125,577,1277,618"/>
+<area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#aead0affeaeaf5fa2bbfe747ed425d3b0" title="get the reference of cellId2Occupation for convenience" alt="" coords="819,326,1063,367"/>
+<area shape="rect" href="class_placement_info.html#a5093b0b1c68570bdeebdb0326117ce01" title=" " alt="" coords="843,443,1039,485"/>
+<area shape="rect" href="class_placement_info.html#a467603faa84a06c4ccf231c05598e0dc" title="Get the Pair Pin Num of two LUTs." alt="" coords="841,275,1041,301"/>
+<area shape="rect" href="class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="865,727,1017,769"/>
+<area shape="rect" href="class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="855,945,1028,972"/>
+<area shape="rect" href="class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="851,1466,1032,1507"/>
+<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a76a8313ac5e28f52ae29b066d83ec909" title="get the bottom bin coordinate Y of the SpreadRegion in bin grid" alt="" coords="534,1085,741,1126"/>
+<area shape="rect" href="class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80" title=" " alt="" coords="507,1151,768,1177"/>
+<area shape="rect" href="class_general_spreader.html#a6490458435738449c4a37257a8b2f365" title=" " alt="" coords="547,762,727,803"/>
+<area shape="rect" href="class_general_spreader.html#a9c4a9bcb758cf720aa4fa492635f3181" title="obtain a SpreadRegion by expanding a cell spreading window from an overflow bin" alt="" coords="525,1567,749,1593"/>
+<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a446651a444487ed99a65e51d3f42d8e3" title="Get the bins in the SpreadRegion." alt="" coords="838,1335,1045,1377"/>
+<area shape="rect" href="class_general_spreader.html#a91793e0d24904eb3a6bb7006c1871019" title="find the overflow bins in the placement accoridng to a given threshold" alt="" coords="526,1384,749,1411"/>
+<area shape="rect" href="class_general_spreader_1_1_spread_region.html#af6422a9e739bc8c8c84551db16d55b8e" title="Get the cells in the SpreadRegion." alt="" coords="534,1435,741,1477"/>
+<area shape="rect" href="class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="541,1267,733,1309"/>
+<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a37f541916ccd3f1edc6be75fa9835a74" title="get the left bin coordinate X of the SpreadRegion in bin grid" alt="" coords="534,1501,741,1542"/>
+<area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="600,1617,675,1644"/>
+<area shape="rect" href="str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="588,1668,687,1695"/>
+<area shape="rect" href="class_general_spreader.html#a9414c4dd2802f8201e05a9d7048f1f50" title="record the spreaded location in PlacementInfo for later forget&#45;ratio&#45;based location updating" alt="" coords="529,1202,745,1243"/>
+<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a20edd0f95b684109bfce7c3f7b1e8d0c" title="get the right bin coordinate X of the SpreadRegion in bin grid" alt="" coords="534,827,741,869"/>
+<area shape="rect" href="class_general_spreader_1_1_spread_region_1_1_sub_box.html#a862f7fccd26177814190034b010c0cdd" title="spread cells and partition the SubBox into smaller SubBoxes" alt="" coords="534,917,741,958"/>
+<area shape="rect" href="class_general_spreader_1_1_spread_region.html#a1e6aa8a310ba2134263ce63767c846ab" title="get the top bin coordinate Y of the SpreadRegion in bin grid" alt="" coords="522,983,753,1009"/>
+<area shape="rect" href="class_general_spreader.html#a1414f843412957281cf5cd4ec92475ad" title="update the information of the involved PlacementUnit(s)" alt="" coords="524,1719,751,1761"/>
+<area shape="rect" href="class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="853,1047,1030,1089"/>
+<area shape="rect" href="class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="845,1215,1037,1257"/>
+<area shape="rect" href="class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="883,1113,999,1140"/>
+<area shape="rect" href="class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="878,1164,1005,1191"/>
+<area shape="rect" href="class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="858,1814,1025,1855"/>
+<area shape="rect" href="class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="859,1880,1024,1907"/>
+<area shape="rect" href="class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="847,1697,1035,1738"/>
+<area shape="rect" href="class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="845,1763,1038,1789"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_global_placer_a56882dc5c57ad35905a7a58532d90aac_icgraph.png" border="0" usemap="#aclass_global_placer_a56882dc5c57ad35905a7a58532d90aac_icgraph" alt=""/></div>
-<map name="aclass_global_placer_a56882dc5c57ad35905a7a58532d90aac_icgraph" id="aclass_global_placer_a56882dc5c57ad35905a7a58532d90aac_icgraph">
+<div class="center"><img src="class_global_placer_ad380a1c77cb4c9f1ff2a625fa50c9009_icgraph.png" border="0" usemap="#aclass_global_placer_ad380a1c77cb4c9f1ff2a625fa50c9009_icgraph" alt=""/></div>
+<map name="aclass_global_placer_ad380a1c77cb4c9f1ff2a625fa50c9009_icgraph" id="aclass_global_placer_ad380a1c77cb4c9f1ff2a625fa50c9009_icgraph">
 <area shape="rect" title="cell spreading for all types of elements" alt="" coords="413,13,572,39"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -1832,7 +1850,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00609">609</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8cc_source.html#l00610">610</a> of file <a class="el" href="_global_placer_8cc_source.html">GlobalPlacer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>.</p>
 <div class="dynheader">
@@ -1863,7 +1881,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_global_placer_a3ab05c4e6656eb025042e22016229b68_icgraph.png" border="0" usemap="#aclass_global_placer_a3ab05c4e6656eb025042e22016229b68_icgraph" alt=""/></div>
 <map name="aclass_global_placer_a3ab05c4e6656eb025042e22016229b68_icgraph" id="aclass_global_placer_a3ab05c4e6656eb025042e22016229b68_icgraph">
 <area shape="rect" title="update pseudo net weight according to placement progress" alt="" coords="413,5,599,47"/>
-<area shape="rect" href="class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -1891,9 +1909,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00300">300</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00303">303</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00788">dumpAllCellsCoordinate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00789">dumpAllCellsCoordinate()</a>.</p>
 
 </div>
 </div>
@@ -1919,9 +1937,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the legalization displacement of CARRY </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00325">325</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00328">328</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>.</p>
 
 </div>
 </div>
@@ -1947,9 +1965,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the legalization displacement of DSP/BRAM </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00319">319</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00322">322</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -1975,9 +1993,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the legalization displacement of SLICEM-Macro </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00331">331</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00334">334</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>.</p>
 
 </div>
 </div>
@@ -2001,9 +2019,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00296">296</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00299">299</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l01024">dumpBRAMCoordinate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l01025">dumpBRAMCoordinate()</a>.</p>
 
 </div>
 </div>
@@ -2029,9 +2047,9 @@ Here is the caller graph for this function:</div>
 
 <p>legalize multi-site BRAM/DSP elements </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00240">240</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00243">243</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>, <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>, <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
 
 </div>
 </div>
@@ -2055,9 +2073,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00299">299</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00302">302</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00692">dumpCARRYCoordinate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00693">dumpCARRYCoordinate()</a>.</p>
 
 </div>
 </div>
@@ -2083,9 +2101,9 @@ Here is the caller graph for this function:</div>
 
 <p>legalize multi-site CARRY elements </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00246">246</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00249">249</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
 
 </div>
 </div>
@@ -2111,7 +2129,7 @@ Here is the caller graph for this function:</div>
 
 <p>cluster placer is used for initial placement </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00221">221</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00224">224</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00107">clusterPlacement()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
 
@@ -2139,9 +2157,9 @@ Here is the caller graph for this function:</div>
 
 <p>directly legalize macros without the phase of rough legalization (each standard cell in a macro will be legalized separately) </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00394">394</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00397">397</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>.</p>
 
 </div>
 </div>
@@ -2168,9 +2186,9 @@ Here is the caller graph for this function:</div>
 <p>diable cell spreading forget ratio </p>
 <p >we use the forget ratio to control the sensitivity of cell spreading during the location updateing (newFinalLoc = expectedLoc * forgetRatio + originalLoc * (1-forgetRatio) ) </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00215">215</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00218">218</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2194,9 +2212,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00295">295</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00298">298</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00928">dumpDSPCoordinate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00929">dumpDSPCoordinate()</a>.</p>
 
 </div>
 </div>
@@ -2220,7 +2238,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00396">396</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00399">399</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>.</p>
 
@@ -2246,9 +2264,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00197">197</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00200">200</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00284">GlobalPlacement_fixedCLB()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00285">GlobalPlacement_fixedCLB()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>.</p>
 
 </div>
 </div>
@@ -2272,9 +2290,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00297">297</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00300">300</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00740">dumpFFCoordinate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00741">dumpFFCoordinate()</a>.</p>
 
 </div>
 </div>
@@ -2300,9 +2318,9 @@ Here is the caller graph for this function:</div>
 
 <p>a general spreading will spread cells to meet cell density requirements </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00234">234</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00237">237</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00284">GlobalPlacement_fixedCLB()</a>, <a class="el" href="_global_placer_8cc_source.html#l00561">spreading()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00285">GlobalPlacement_fixedCLB()</a>, <a class="el" href="_global_placer_8cc_source.html#l00562">spreading()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
 
 </div>
 </div>
@@ -2326,7 +2344,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00420">420</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00423">423</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>.</p>
 
@@ -2352,9 +2370,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00399">399</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00402">402</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>.</p>
 
 </div>
 </div>
@@ -2380,9 +2398,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the change history of HPWL </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00337">337</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00340">340</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2408,9 +2426,9 @@ Here is the caller graph for this function:</div>
 
 <p>the small change of minHPWL might imply that the optimization converges. </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00363">363</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00366">366</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2434,9 +2452,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00195">195</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00198">198</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00788">dumpAllCellsCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l01024">dumpBRAMCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00692">dumpCARRYCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00928">dumpDSPCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00740">dumpFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00360">dumpLUTCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00830">dumpLUTFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00561">spreading()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00789">dumpAllCellsCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l01025">dumpBRAMCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00693">dumpCARRYCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00929">dumpDSPCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00741">dumpFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00361">dumpLUTCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00831">dumpLUTFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00562">spreading()</a>.</p>
 
 </div>
 </div>
@@ -2462,7 +2480,7 @@ Here is the caller graph for this function:</div>
 
 <p>legalize single-site SLICEL-CLB elements </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00258">258</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00261">261</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
 
@@ -2490,9 +2508,9 @@ Here is the caller graph for this function:</div>
 
 <p>lowerbound HPWL is obtained just after wirelength optimization </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00350">350</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00353">353</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2516,9 +2534,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00294">294</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00297">297</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00360">dumpLUTCoordinate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00361">dumpLUTCoordinate()</a>.</p>
 
 </div>
 </div>
@@ -2542,9 +2560,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00298">298</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00301">301</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00830">dumpLUTFFCoordinate()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00831">dumpLUTFFCoordinate()</a>.</p>
 
 </div>
 </div>
@@ -2570,9 +2588,9 @@ Here is the caller graph for this function:</div>
 
 <p>macros are located closely to their legalized locations </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00375">375</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00378">378</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>.</p>
 
 </div>
 </div>
@@ -2598,9 +2616,9 @@ Here is the caller graph for this function:</div>
 
 <p>fix the macros to the exact legal location </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00387">387</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00390">390</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>, <a class="el" href="_global_placer_8h_source.html#l00167">setMacroLegalizationFixed()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00561">spreading()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>, <a class="el" href="_global_placer_8h_source.html#l00169">setMacroLegalizationFixed()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00562">spreading()</a>.</p>
 
 </div>
 </div>
@@ -2626,9 +2644,9 @@ Here is the caller graph for this function:</div>
 
 <p>lock the macro binding and bypass serveral legalizaiton iterations for wirelength stable convergence </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00381">381</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00384">384</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>.</p>
 
 </div>
 </div>
@@ -2652,9 +2670,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00398">398</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00401">401</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>.</p>
 
 </div>
 </div>
@@ -2680,9 +2698,9 @@ Here is the caller graph for this function:</div>
 
 <p>macros are binded to sites and such binding will lead to pseudo nets between anchors and elements </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00369">369</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00372">372</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>.</p>
 
 </div>
 </div>
@@ -2708,9 +2726,9 @@ Here is the caller graph for this function:</div>
 
 <p>legalize single-site SLICEM-CLB elements </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00252">252</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00255">255</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
 
 </div>
 </div>
@@ -2734,9 +2752,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00338">338</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00341">341</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2762,9 +2780,9 @@ Here is the caller graph for this function:</div>
 
 <p>the distance threshold for the neighbor detection during area adjustion </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00418">418</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00421">421</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00177">setNeighborDisplacementUpperbound()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00561">spreading()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00179">setNeighborDisplacementUpperbound()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00562">spreading()</a>.</p>
 
 </div>
 </div>
@@ -2790,9 +2808,9 @@ Here is the caller graph for this function:</div>
 
 <p>record the pseudo net weight at the end of placement functions for later iterations. This information can be recorded in <a class="el" href="class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,...">PlacementInfo</a> for checkpoint dumping </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00406">406</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00409">409</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00125">getPseudoNetWeight()</a>, <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8h_source.html#l00113">setPseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00127">getPseudoNetWeight()</a>, <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8h_source.html#l00115">setPseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2816,9 +2834,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00192">192</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00195">195</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00107">clusterPlacement()</a>, <a class="el" href="_global_placer_8cc_source.html#l00788">dumpAllCellsCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l01024">dumpBRAMCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00692">dumpCARRYCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00928">dumpDSPCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00740">dumpFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00360">dumpLUTCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00830">dumpLUTFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00284">GlobalPlacement_fixedCLB()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>, <a class="el" href="_global_placer_8cc_source.html#l00348">printPlacedUnits()</a>, <a class="el" href="_global_placer_8cc_source.html#l00561">spreading()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00107">clusterPlacement()</a>, <a class="el" href="_global_placer_8cc_source.html#l00789">dumpAllCellsCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l01025">dumpBRAMCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00693">dumpCARRYCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00929">dumpDSPCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00741">dumpFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00361">dumpLUTCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00831">dumpLUTFFCoordinate()</a>, <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00285">GlobalPlacement_fixedCLB()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>, <a class="el" href="_global_placer_8cc_source.html#l00349">printPlacedUnits()</a>, <a class="el" href="_global_placer_8cc_source.html#l00562">spreading()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2842,7 +2860,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00422">422</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00425">425</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>.</p>
 
@@ -2870,9 +2888,9 @@ Here is the caller graph for this function:</div>
 
 <p>the similarity between upperbound wirelength and lowerbound wirelength </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00313">313</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00316">316</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00408">macroLegalize()</a>, <a class="el" href="_global_placer_8cc_source.html#l00561">spreading()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00409">macroLegalize()</a>, <a class="el" href="_global_placer_8cc_source.html#l00562">spreading()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2898,9 +2916,9 @@ Here is the caller graph for this function:</div>
 
 <p>the pseudo net weight in the iterations of placement functions </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00412">412</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00415">415</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00284">GlobalPlacement_fixedCLB()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00285">GlobalPlacement_fixedCLB()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2927,7 +2945,7 @@ Here is the caller graph for this function:</div>
 <p>set adaptive pseudo net weight according to net density </p>
 <p >we assign higher weight for the pseudo nets between anchors and elements which connects to more nets </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00206">206</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00209">209</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>.</p>
 
@@ -2955,9 +2973,9 @@ Here is the caller graph for this function:</div>
 
 <p>we use the forget ratio to control the sensitivity of cell spreading during the location updateing (newFinalLoc = expectedLoc * forgetRatio + originalLoc * (1-forgetRatio) ) </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00307">307</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00310">310</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00561">spreading()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00562">spreading()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -2981,7 +2999,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00421">421</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00424">424</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>.</p>
 
@@ -3009,9 +3027,9 @@ Here is the caller graph for this function:</div>
 
 <p>when legalization is started, the HPWL might have a significant change due to the legalization displacement/pseudo nets </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00357">357</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00360">360</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -3037,9 +3055,9 @@ Here is the caller graph for this function:</div>
 
 <p>upperbound HPWL is obtained just after cell spreading and legalization </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00344">344</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00347">347</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00609">updatePseudoNetWeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00610">updatePseudoNetWeight()</a>.</p>
 
 </div>
 </div>
@@ -3063,9 +3081,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00196">196</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00199">199</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00561">spreading()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, and <a class="el" href="_global_placer_8cc_source.html#l00562">spreading()</a>.</p>
 
 </div>
 </div>
@@ -3091,9 +3109,9 @@ Here is the caller graph for this function:</div>
 
 <p>wirelength optimizer is based on numerial model and used to reduce the overall wirelength with various terms, e.g., terms for wirelength, legalization and timing... </p>
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00228">228</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00231">231</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00147">getMacroLegalizationWeight()</a>, <a class="el" href="_global_placer_8h_source.html#l00137">getMacroPseudoNetEnhanceCnt()</a>, <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00284">GlobalPlacement_fixedCLB()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8h_source.html#l00158">setMacroLegalizationParameters()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_global_placer_8h_source.html#l00149">getMacroLegalizationWeight()</a>, <a class="el" href="_global_placer_8h_source.html#l00139">getMacroPseudoNetEnhanceCnt()</a>, <a class="el" href="_global_placer_8cc_source.html#l00113">GlobalPlacement_CLBElements()</a>, <a class="el" href="_global_placer_8cc_source.html#l00285">GlobalPlacement_fixedCLB()</a>, <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>, <a class="el" href="_global_placer_8h_source.html#l00160">setMacroLegalizationParameters()</a>, and <a class="el" href="_global_placer_8h_source.html#l00059">~GlobalPlacer()</a>.</p>
 
 </div>
 </div>
@@ -3117,7 +3135,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00198">198</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_global_placer_8h_source.html#l00201">201</a> of file <a class="el" href="_global_placer_8h_source.html">GlobalPlacer.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_global_placer_8cc_source.html#l00019">GlobalPlacer()</a>.</p>
 

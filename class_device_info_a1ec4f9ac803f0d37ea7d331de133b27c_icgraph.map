@@ -10,7 +10,7 @@
 <area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,103,116,130"/>
 <area shape="rect" id="node7" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="660,191,819,218"/>
 <area shape="rect" id="node8" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="419,191,606,218"/>
-<area shape="rect" id="node9" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,125,365,166"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,125,365,166"/>
 <area shape="rect" id="node11" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="665,248,814,275"/>
 <area shape="rect" id="node13" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="663,315,815,342"/>
 </map>

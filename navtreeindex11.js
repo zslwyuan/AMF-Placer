@@ -1,5 +1,13 @@
 var NAVTREEINDEX11 =
 {
+"paint_placement_8py.html#a234aa36e9c5701b4804dc7fb086c77d2":[10,0,0,0,3,10],
+"paint_placement_8py.html#a34c2e48f340d0740a8c6f8420c82c5f4":[10,0,0,0,3,15],
+"paint_placement_8py.html#a35d1187e4d0404fa23bbb93dea7a0e92":[10,0,0,0,3,1],
+"paint_placement_8py.html#a35e557683dbaf6de1596477ee1f4e7d7":[10,0,0,0,3,3],
+"paint_placement_8py.html#a3ae501222e44801db734a947c2896af6":[10,0,0,0,3,17],
+"paint_placement_8py.html#a5275637ac39008fc506bd51793f50991":[10,0,0,0,3,24],
+"paint_placement_8py.html#a531ac58f7a8e8c199ce44d940d5ff1f3":[10,0,0,0,3,19],
+"paint_placement_8py.html#a5f8a3ad8dc9491fc7a32964718bfb240":[10,0,0,0,3,25],
 "paint_placement_8py.html#a6a65b8cec97aa836817e1c4e8c48790c":[10,0,0,0,3,9],
 "paint_placement_8py.html#a6bd9f0e661d08ec1b93d44cbe83ffae8":[10,0,0,0,3,4],
 "paint_placement_8py.html#a743812739e99ff9ce201e7b066884a99":[10,0,0,0,3,7],

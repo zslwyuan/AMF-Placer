@@ -5,7 +5,7 @@
 <area shape="rect" id="node8" href="$class_placement_info.html#aaeeece0e2a9362d1bb26c2e17fd90aad" title="reset the inflate ratio of all the cells to be 1, for re&#45;evaluation" alt="" coords="647,129,893,171"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="647,53,893,79"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,69,116,95"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="427,69,585,95"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,91,365,132"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="427,69,585,95"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,91,365,132"/>
 <area shape="rect" id="node9" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="413,171,599,212"/>
 </map>

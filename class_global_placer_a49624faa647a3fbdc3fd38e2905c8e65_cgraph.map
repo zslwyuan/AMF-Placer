@@ -1,52 +1,52 @@
 <map id="GlobalPlacer::GlobalPlacement_fixedCLB" name="GlobalPlacer::GlobalPlacement_fixedCLB">
-<area shape="rect" id="node1" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="5,802,207,843"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="517,305,685,332"/>
-<area shape="rect" id="node6" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="1103,591,1194,617"/>
-<area shape="rect" id="node21" href="$class_placement_info.html#a5a2299070df74f28c6e6d5ca6b406deb" title=" " alt="" coords="269,685,439,726"/>
-<area shape="rect" id="node22" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="275,553,433,580"/>
-<area shape="rect" id="node24" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="265,802,443,843"/>
-<area shape="rect" id="node34" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="1111,1188,1186,1215"/>
-<area shape="rect" id="node36" href="$class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="281,1038,427,1079"/>
-<area shape="rect" id="node41" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="255,1274,453,1315"/>
-<area shape="rect" id="node42" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="255,1449,453,1490"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="781,298,959,339"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="749,532,991,559"/>
-<area shape="rect" id="node11" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="759,364,981,391"/>
-<area shape="rect" id="node14" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="764,247,976,273"/>
-<area shape="rect" id="node17" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="759,196,981,223"/>
-<area shape="rect" id="node20" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="751,145,989,172"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="1060,291,1237,333"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="1053,474,1245,515"/>
-<area shape="rect" id="node7" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="1093,240,1204,267"/>
-<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="1073,642,1225,683"/>
-<area shape="rect" id="node10" href="$class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="1083,540,1214,567"/>
-<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="1073,357,1225,398"/>
-<area shape="rect" id="node13" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="1085,423,1212,449"/>
-<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="1073,174,1225,215"/>
-<area shape="rect" id="node16" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="1091,123,1207,149"/>
-<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="1073,57,1225,98"/>
-<area shape="rect" id="node19" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="1085,5,1212,32"/>
-<area shape="rect" id="node23" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="533,513,670,540"/>
-<area shape="rect" id="node25" href="$class_q_p_solver_wrapper.html#a4d661af587ec252bc62b14d420cd6bce" title=" " alt="" coords="778,801,962,828"/>
-<area shape="rect" id="node26" href="$class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="801,415,939,457"/>
-<area shape="rect" id="node27" href="$class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="526,615,677,657"/>
-<area shape="rect" id="node29" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="525,954,678,995"/>
-<area shape="rect" id="node28" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="765,583,975,609"/>
-<area shape="rect" id="node30" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="758,685,982,726"/>
-<area shape="rect" id="node31" href="$class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="775,1021,965,1062"/>
-<area shape="rect" id="node32" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="1039,1057,1259,1084"/>
-<area shape="rect" id="node33" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="782,1147,958,1189"/>
-<area shape="rect" id="node35" href="$class_placement_info.html#ac18f726c75937363f52be34154f4468c" title=" " alt="" coords="777,903,963,945"/>
-<area shape="rect" id="node37" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="501,1020,701,1047"/>
-<area shape="rect" id="node38" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="501,1071,701,1097"/>
-<area shape="rect" id="node39" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="503,1121,700,1148"/>
-<area shape="rect" id="node40" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="503,1172,700,1199"/>
-<area shape="rect" id="node43" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="518,1507,685,1549"/>
-<area shape="rect" id="node44" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="515,1573,688,1600"/>
-<area shape="rect" id="node45" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="525,1625,677,1666"/>
-<area shape="rect" id="node46" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="515,1691,687,1717"/>
-<area shape="rect" id="node47" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="519,1273,684,1300"/>
-<area shape="rect" id="node48" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="511,1325,692,1366"/>
-<area shape="rect" id="node49" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="507,1390,695,1431"/>
-<area shape="rect" id="node50" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="505,1456,698,1483"/>
+<area shape="rect" id="node1" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="5,1107,207,1149"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="517,313,685,340"/>
+<area shape="rect" id="node6" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="1089,605,1180,632"/>
+<area shape="rect" id="node21" href="$class_placement_info.html#a5a2299070df74f28c6e6d5ca6b406deb" title=" " alt="" coords="269,941,439,982"/>
+<area shape="rect" id="node22" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="275,681,433,708"/>
+<area shape="rect" id="node24" href="$class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="265,1006,443,1047"/>
+<area shape="rect" id="node33" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="1097,1245,1172,1272"/>
+<area shape="rect" id="node36" href="$class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="281,1187,427,1229"/>
+<area shape="rect" id="node41" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="255,1419,453,1461"/>
+<area shape="rect" id="node42" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="255,1587,453,1629"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="781,365,959,406"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="749,313,991,340"/>
+<area shape="rect" id="node11" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="759,431,981,457"/>
+<area shape="rect" id="node14" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="764,263,976,289"/>
+<area shape="rect" id="node17" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="759,212,981,239"/>
+<area shape="rect" id="node20" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="751,161,989,188"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="1046,291,1223,333"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="1039,474,1231,515"/>
+<area shape="rect" id="node7" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="1079,240,1190,267"/>
+<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="1059,409,1211,450"/>
+<area shape="rect" id="node10" href="$class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="1069,357,1200,384"/>
+<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="1059,539,1211,581"/>
+<area shape="rect" id="node13" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="1071,656,1198,683"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="1059,174,1211,215"/>
+<area shape="rect" id="node16" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="1077,123,1193,149"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="1059,57,1211,98"/>
+<area shape="rect" id="node19" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="1071,5,1198,32"/>
+<area shape="rect" id="node23" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="533,475,670,501"/>
+<area shape="rect" id="node25" href="$class_q_p_solver_wrapper.html#a4d661af587ec252bc62b14d420cd6bce" title=" " alt="" coords="778,1064,962,1091"/>
+<area shape="rect" id="node26" href="$class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="801,583,939,625"/>
+<area shape="rect" id="node27" href="$class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="526,526,677,567"/>
+<area shape="rect" id="node29" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="525,897,678,938"/>
+<area shape="rect" id="node28" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="765,532,975,559"/>
+<area shape="rect" id="node30" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="758,701,982,742"/>
+<area shape="rect" id="node31" href="$class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="775,897,965,938"/>
+<area shape="rect" id="node32" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="782,1115,958,1157"/>
+<area shape="rect" id="node34" href="$class_placement_timing_optimizer.html#a62f35a55648c6687d465fd009683a3eb" title=" " alt="" coords="781,766,959,807"/>
+<area shape="rect" id="node35" href="$class_placement_info.html#ac18f726c75937363f52be34154f4468c" title=" " alt="" coords="777,831,963,873"/>
+<area shape="rect" id="node37" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="501,1267,701,1293"/>
+<area shape="rect" id="node38" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="501,1317,701,1344"/>
+<area shape="rect" id="node39" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="503,1165,700,1192"/>
+<area shape="rect" id="node40" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="503,1216,700,1243"/>
+<area shape="rect" id="node43" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="518,1770,685,1811"/>
+<area shape="rect" id="node44" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="515,1836,688,1863"/>
+<area shape="rect" id="node45" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="525,1419,677,1461"/>
+<area shape="rect" id="node46" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="515,1485,687,1512"/>
+<area shape="rect" id="node47" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="519,1536,684,1563"/>
+<area shape="rect" id="node48" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="511,1587,692,1629"/>
+<area shape="rect" id="node49" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="507,1653,695,1694"/>
+<area shape="rect" id="node50" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="505,1719,698,1745"/>
 </map>

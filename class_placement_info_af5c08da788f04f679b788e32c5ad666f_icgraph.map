@@ -12,8 +12,8 @@
 <area shape="rect" id="node20" href="$class_placement_timing_optimizer.html#a8e6810c2be22ebbe719229c7e6237adb" title=" " alt="" coords="977,539,1155,580"/>
 <area shape="rect" id="node3" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="648,86,895,113"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,390,116,417"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="427,137,586,163"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,239,365,280"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="427,137,586,163"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,239,365,280"/>
 <area shape="rect" id="node10" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="414,239,599,280"/>
 <area shape="rect" id="node12" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="702,369,841,411"/>
 <area shape="rect" id="node13" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="437,356,576,397"/>

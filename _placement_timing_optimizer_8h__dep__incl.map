@@ -1,8 +1,10 @@
 <map id="src/lib/HiFPlacer/placement/placementTiming/PlacementTimingOptimizer.h" name="src/lib/HiFPlacer/placement/placementTiming/PlacementTimingOptimizer.h">
-<area shape="rect" id="node1" title=" " alt="" coords="139,5,370,61"/>
-<area shape="rect" id="node2" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5,221,219,247"/>
-<area shape="rect" id="node4" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="149,117,360,158"/>
-<area shape="rect" id="node6" href="$_placement_timing_optimizer_8cc.html" title=" " alt="" coords="385,109,615,165"/>
-<area shape="rect" id="node3" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="21,303,203,329"/>
-<area shape="rect" id="node5" href="$_global_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the GlobalPlacer which organizes/configures..." alt="" coords="243,213,461,255"/>
+<area shape="rect" id="node1" title=" " alt="" coords="174,5,405,61"/>
+<area shape="rect" id="node2" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5,310,219,337"/>
+<area shape="rect" id="node4" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="149,213,360,255"/>
+<area shape="rect" id="node6" href="$_wirelength_optimizer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="246,117,498,158"/>
+<area shape="rect" id="node8" href="$_placement_timing_optimizer_8cc.html" title=" " alt="" coords="522,109,753,165"/>
+<area shape="rect" id="node3" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="21,392,203,419"/>
+<area shape="rect" id="node5" href="$_global_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the GlobalPlacer which organizes/configures..." alt="" coords="243,303,461,344"/>
+<area shape="rect" id="node7" href="$_wirelength_optimizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the WirelengthOptimizer which builds numeri..." alt="" coords="384,213,643,255"/>
 </map>

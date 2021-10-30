@@ -8,7 +8,7 @@
 <area shape="rect" id="node8" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="855,136,1060,163"/>
 <area shape="rect" id="node4" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,195,807,221"/>
 <area shape="rect" id="node5" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="413,196,600,223"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,218,365,259"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,218,365,259"/>
 <area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,225,116,252"/>
 <area shape="rect" id="node10" href="$class_macro_legalizer.html#a77e9e1f1fbbf77fb805b34d57d3198f4" title="finally dynamic programming to legalize the macros which have been mapped to the columns." alt="" coords="1555,18,1741,59"/>
 <area shape="rect" id="node13" href="$class_macro_legalizer.html#a677a015f4f8dc9ed96c516d668ebedb6" title=" " alt="" coords="1551,137,1745,178"/>

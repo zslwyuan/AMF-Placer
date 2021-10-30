@@ -28,10 +28,10 @@
 <area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="433,305,561,332"/>
 <area shape="rect" id="node17" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="948,179,1147,220"/>
 <area shape="rect" id="node19" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="629,666,876,693"/>
-<area shape="rect" id="node20" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="418,717,577,744"/>
-<area shape="rect" id="node21" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,724,365,766"/>
+<area shape="rect" id="node20" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="418,717,577,744"/>
+<area shape="rect" id="node21" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,724,365,766"/>
 <area shape="rect" id="node25" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="971,873,1123,900"/>
 <area shape="rect" id="node27" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="413,818,581,845"/>
 <area shape="rect" id="node28" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,803,365,844"/>
-<area shape="rect" id="node30" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="934,702,1161,743"/>
+<area shape="rect" id="node30" href="$class_general_spreader.html#ae7899f6c2516ccfadde73169919e7dbc" title="spread cells with a given forgetting ratio" alt="" coords="934,702,1161,743"/>
 </map>

@@ -9,9 +9,9 @@
 <area shape="rect" id="node13" href="$class_parallel_c_l_b_packer.html#a0eaa8cf35b2dc598df118be1d4ed0d34" title="Construct a new Parallel CLB Packer object." alt="" coords="973,363,1111,404"/>
 <area shape="rect" id="node14" href="$class_placement_timing_optimizer.html#a1a0dadc3dffc30406d0e8728d907071a" title=" " alt="" coords="950,428,1134,470"/>
 <area shape="rect" id="node15" href="$class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="927,494,1157,535"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="687,71,840,112"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="417,71,596,112"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,134,365,175"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="687,71,840,112"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="417,71,596,112"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,134,365,175"/>
 <area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,68,365,110"/>
 <area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,76,116,102"/>
 </map>

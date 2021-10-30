@@ -4,7 +4,7 @@
 <area shape="rect" id="node4" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="756,173,936,215"/>
 <area shape="rect" id="node6" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="178,181,381,207"/>
 <area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,434,116,461"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="449,283,651,324"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="449,283,651,324"/>
 <area shape="rect" id="node9" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="463,1167,637,1208"/>
 <area shape="rect" id="node10" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,393,395,435"/>
 <area shape="rect" id="node11" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object." alt="" coords="705,1367,987,1408"/>
@@ -43,10 +43,10 @@
 <area shape="rect" id="node44" href="$class_placement_info.html#ae7c0dcd8d6ccdb681f0f29c8d65c911b" title=" " alt="" coords="199,1005,360,1031"/>
 <area shape="rect" id="node45" href="$class_cluster_placer.html#abeaa9dab584d4fbf266c7a9e26fd57e3" title="refine the elements in obtained clusters to ensure the cells in user&#45;defined clusters in the same clu..." alt="" coords="753,2408,939,2449"/>
 <area shape="rect" id="node46" href="$class_s_a_placer.html#a030b4efe05c4dd6791d8d1249518a27e" title=" " alt="" coords="789,2474,903,2501"/>
-<area shape="rect" id="node47" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="733,2525,959,2567"/>
+<area shape="rect" id="node47" href="$class_general_spreader.html#ae7899f6c2516ccfadde73169919e7dbc" title="spread cells with a given forgetting ratio" alt="" coords="733,2525,959,2567"/>
 <area shape="rect" id="node48" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="753,341,939,383"/>
 <area shape="rect" id="node49" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="737,2591,955,2632"/>
 <area shape="rect" id="node50" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="733,2656,959,2697"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="473,5,627,47"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="473,5,627,47"/>
 <area shape="rect" id="node5" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="445,181,655,207"/>
 </map>

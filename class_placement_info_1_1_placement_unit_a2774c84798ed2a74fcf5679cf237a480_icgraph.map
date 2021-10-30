@@ -12,7 +12,7 @@
 <area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,223,489,265"/>
 <area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,289,303,330"/>
 <area shape="rect" id="node9" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,325,116,352"/>
-<area shape="rect" id="node13" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="537,347,739,389"/>
+<area shape="rect" id="node13" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="537,347,739,389"/>
 <area shape="rect" id="node14" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="1061,397,1220,424"/>
 <area shape="rect" id="node15" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="787,397,973,424"/>
 </map>

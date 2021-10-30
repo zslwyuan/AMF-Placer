@@ -1,14 +1,14 @@
 <map id="PlacementInfo::getPlacementNets" name="PlacementInfo::getPlacementNets">
 <area shape="rect" id="node1" title=" " alt="" coords="1667,187,1887,214"/>
 <area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="1420,71,1611,112"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="1180,72,1333,113"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="1180,72,1333,113"/>
 <area shape="rect" id="node8" href="$class_cluster_placer.html#a8b5ed670af0a3155a4328718baafeab5" title="pure connectivity&#45;based partitioning based on PaToH" alt="" coords="1414,137,1617,163"/>
 <area shape="rect" id="node9" href="$class_cluster_placer.html#ab2f74c136ed361b6782d56d5dcf92dc6" title="construct the netlist of the generated clusters based on the PlacementNet in PlacementInfo" alt="" coords="1412,289,1619,315"/>
 <area shape="rect" id="node17" href="$class_initial_packer.html#ac594d558a4e72721ffafb5b52d2ec0cf" title="enhance the nets connected to the IO ports" alt="" coords="1420,238,1611,265"/>
 <area shape="rect" id="node18" href="$class_cluster_placer.html#a8ad4a2d696e76b631a5360cbc36b2a44" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="931,341,1097,383"/>
 <area shape="rect" id="node19" href="$class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="1418,5,1613,47"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="430,72,609,113"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,137,366,179"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="430,72,609,113"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,137,366,179"/>
 <area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="165,72,366,113"/>
 <area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,145,116,171"/>
 <area shape="rect" id="node10" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1169,211,1344,252"/>

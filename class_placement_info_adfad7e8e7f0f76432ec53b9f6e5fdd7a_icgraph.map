@@ -2,6 +2,6 @@
 <area shape="rect" id="node1" title="check the utlization of the clock regions on the device" alt="" coords="672,49,852,90"/>
 <area shape="rect" id="node2" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,5,624,32"/>
 <area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,56,116,83"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,107,366,149"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,107,366,149"/>
 <area shape="rect" id="node3" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,5,367,32"/>
 </map>

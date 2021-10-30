@@ -29,6 +29,6 @@
 <area shape="rect" id="node28" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="450,982,589,1023"/>
 <area shape="rect" id="node29" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="683,661,869,688"/>
 <area shape="rect" id="node30" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="681,931,871,973"/>
-<area shape="rect" id="node31" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="697,880,855,907"/>
-<area shape="rect" id="node32" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,865,366,906"/>
+<area shape="rect" id="node31" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="697,880,855,907"/>
+<area shape="rect" id="node32" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,865,366,906"/>
 </map>

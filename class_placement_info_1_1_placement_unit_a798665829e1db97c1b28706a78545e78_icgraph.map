@@ -7,9 +7,9 @@
 <area shape="rect" id="node3" href="$class_placement_info.html#aa6c7978a01c8f599d13ebe537fc67285" title="make the PlacementUnits in the long path closer to each other" alt="" coords="1275,5,1465,47"/>
 <area shape="rect" id="node4" href="$class_general_spreader.html#a1414f843412957281cf5cd4ec92475ad" title="update the information of the involved PlacementUnit(s)" alt="" coords="968,145,1195,187"/>
 <area shape="rect" id="node9" href="$class_general_spreader.html#a39da1cce84c49100bdac69835f2b7271" title="multi&#45;threading workers for updating the information of the involved PlacementUnit(s)" alt="" coords="1243,123,1497,164"/>
-<area shape="rect" id="node5" href="$class_general_spreader.html#a7ec2a65fe75b0fbffff1e55c3f8f8a68" title="spread cells with a given forgetting ratio" alt="" coords="693,187,920,228"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#a56882dc5c57ad35905a7a58532d90aac" title="cell spreading for all types of elements" alt="" coords="465,219,623,246"/>
-<area shape="rect" id="node7" href="$class_global_placer.html#adb52cdfa1f9f993371b4f78bdf36109a" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="179,291,380,332"/>
+<area shape="rect" id="node5" href="$class_general_spreader.html#ae7899f6c2516ccfadde73169919e7dbc" title="spread cells with a given forgetting ratio" alt="" coords="693,187,920,228"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="465,219,623,246"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="179,291,380,332"/>
 <area shape="rect" id="node8" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,442,116,469"/>
 <area shape="rect" id="node12" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,464,395,505"/>
 <area shape="rect" id="node13" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="702,415,911,442"/>
@@ -21,7 +21,7 @@
 <area shape="rect" id="node23" href="$class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title="add pseudo net for user&#45;defined clusters" alt="" coords="1259,290,1481,346"/>
 <area shape="rect" id="node14" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="443,415,645,442"/>
 <area shape="rect" id="node19" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="989,381,1174,407"/>
-<area shape="rect" id="node21" href="$class_wirelength_optimizer.html#a81b9e1d98fcb88480813f3c97c7b8c97" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="717,295,896,336"/>
+<area shape="rect" id="node21" href="$class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="717,295,896,336"/>
 <area shape="rect" id="node22" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="443,349,645,391"/>
-<area shape="rect" id="node24" href="$class_wirelength_optimizer.html#a5c9381a4bd4242d48ce47b5c9cd93794" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="1005,297,1158,339"/>
+<area shape="rect" id="node24" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="1005,297,1158,339"/>
 </map>
