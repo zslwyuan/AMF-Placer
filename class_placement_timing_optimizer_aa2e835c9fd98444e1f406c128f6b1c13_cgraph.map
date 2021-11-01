@@ -1,16 +1,19 @@
 <map id="PlacementTimingOptimizer::clusterLongPathInOneClockRegion" name="PlacementTimingOptimizer::clusterLongPathInOneClockRegion">
-<area shape="rect" id="node1" title=" " alt="" coords="5,326,236,367"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="284,5,499,32"/>
-<area shape="rect" id="node3" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="301,57,482,98"/>
-<area shape="rect" id="node4" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="297,123,485,149"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="295,173,487,200"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a48af391351a611d17fd8437944f8cd0b" title=" " alt="" coords="295,225,487,266"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#aeff88485fec1f8a6e75670f737e42466" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="297,290,486,331"/>
-<area shape="rect" id="node8" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="298,355,485,411"/>
-<area shape="rect" id="node9" href="$class_placement_timing_info.html#a79a30729d7c48abb94eacd0a6f7fe17d" title=" " alt="" coords="298,435,485,491"/>
-<area shape="rect" id="node10" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="296,515,487,541"/>
-<area shape="rect" id="node11" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="286,565,497,592"/>
-<area shape="rect" id="node13" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="354,616,429,643"/>
-<area shape="rect" id="node14" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="342,667,441,693"/>
-<area shape="rect" id="node12" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="547,558,721,599"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,385,236,427"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#a9a16aed7f1744c9d40fdb8d1c1dd7b05" title=" " alt="" coords="301,35,482,76"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="284,101,499,127"/>
+<area shape="rect" id="node6" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="301,152,482,193"/>
+<area shape="rect" id="node7" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="297,218,485,245"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="295,269,487,295"/>
+<area shape="rect" id="node9" href="$class_placement_info.html#a48af391351a611d17fd8437944f8cd0b" title=" " alt="" coords="295,320,487,361"/>
+<area shape="rect" id="node10" href="$class_placement_info.html#aeff88485fec1f8a6e75670f737e42466" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="297,385,486,427"/>
+<area shape="rect" id="node11" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="298,450,485,506"/>
+<area shape="rect" id="node12" href="$class_placement_timing_info.html#a79a30729d7c48abb94eacd0a6f7fe17d" title=" " alt="" coords="298,530,485,586"/>
+<area shape="rect" id="node13" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="296,610,487,637"/>
+<area shape="rect" id="node14" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="286,661,497,687"/>
+<area shape="rect" id="node16" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="354,711,429,738"/>
+<area shape="rect" id="node17" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="342,762,441,789"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="547,5,739,47"/>
+<area shape="rect" id="node4" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="597,71,688,98"/>
+<area shape="rect" id="node15" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="555,653,730,695"/>
 </map>
