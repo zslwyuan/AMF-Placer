@@ -99,7 +99,9 @@ $(document).ready(function(){initNavTree('_2_7__visualizethe_placement_convergen
 <li>-o indicate the path where you want to store the output images (png) generated according to the trace files</li>
 </ol>
 <p >Below is a screenshot showing the archive files and the generated images. With this images, you can easily generate a video of the convergence procedure with ffmpeg related commands/tools.</p>
-<center> <img src="visProc.png" alt="Visualized Example" align="center" title="Visualized Example" width="500" class="inline"/> </center> </div></div><!-- contents -->
+<center> <img src="visProc.png" alt="Visualized Example" align="center" title="Visualized Example" width="500" class="inline"/> </center><p >It is easy to convert this series of images into video or GIF with ffmpeg to visualize the dynamic procedure, like:</p>
+<div class="fragment"><div class="line">ffmpeg -framerate 5 -i DumpAllCoordTrace-%d.png  Output.gif</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
