@@ -25,3 +25,9 @@ Below is a screenshot showing the archive files and the generated images. With t
 <center>
 <img src="visProc.png" align="center" alt="Visualized Example" title="Visualized Example" width="500" /> 
 </center>
+
+It is easy to convert this series of images into video or GIF with ffmpeg to visualize the dynamic procedure, like:
+
+```
+ffmpeg -framerate 5 -i DumpAllCoordTrace-%d.png  Output.gif
+```
