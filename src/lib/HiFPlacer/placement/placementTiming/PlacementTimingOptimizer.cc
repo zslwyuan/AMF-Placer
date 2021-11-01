@@ -207,6 +207,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     std::set<PlacementInfo::PlacementUnit *> extractedPUs;
     extractedCellIds.clear();
     extractedPUs.clear();
+    clockRegionclusters.clear();
 
     unsigned int maxSize = 0;
     for (unsigned int nodeId = 0; nodeId < timingNodes.size() * 0.1; nodeId++)
@@ -217,7 +218,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             if (extractedCellIds.find(nodeId) != extractedCellIds.end())
                 continue;
             auto candidateCellIds =
-                simpleTimingGraph->BFSFromNode(timingNode->getId(), pathLenThr, 20000, extractedCellIds);
+                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, 2000, extractedCellIds);
 
             if (candidateCellIds.size() >= pathLenThr * 0.8)
             {
@@ -290,11 +291,12 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                         }
                     }
 
-                    if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) &&
-                        (maxClockRegionWeight < totalClockRegionWeight * 0.95) && maxClockRegionWeight >= 4)
+                    if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) && maxClockRegionWeight >= 4)
                     {
                         auto optClockRegion = YX2ClockRegion[0][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;
+                        std::vector<int> PUIdsInLongPaths;
+                        PUIdsInLongPaths.clear();
                         for (auto curPU : PUsInLongPaths)
                         {
                             if (!curPU->isFixed())
@@ -320,8 +322,11 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                                         extractedCellIds.insert(cellId);
                                     }
                                 }
+                                PUIdsInLongPaths.push_back(curPU->getId());
                             }
                         }
+
+                        clockRegionclusters.push_back(PUIdsInLongPaths);
                         std::cout << "maxClockRegionWeight: " << maxClockRegionWeight
                                   << " totalClockRegionWeight:" << totalClockRegionWeight
                                   << " #extractedCellIds=" << extractedCellIds.size()
@@ -344,7 +349,46 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             break;
         }
     }
+    dumpClockRegionClusters();
     print_info("ClusterPlacer: largest long-path cluster size=" + std::to_string(maxSize));
+}
+
+void PlacementTimingOptimizer::dumpClockRegionClusters()
+{
+    std::string dumpClockRegionClustersFile = JSONCfg["Dump Cluster file"] + "-clockRegion";
+    if (dumpClockRegionClustersFile != "")
+    {
+        print_status("dumping cluster information to " + dumpClockRegionClustersFile);
+        std::ofstream outfile0((dumpClockRegionClustersFile + ".tcl").c_str());
+        assert(outfile0.is_open() && outfile0.good() &&
+               "The path for cluster result dumping does not exist and please check your path settings");
+        for (unsigned int cluster_id = 0; cluster_id < clockRegionclusters.size(); cluster_id++)
+        {
+            outfile0 << "highlight -color_index " << (cluster_id) % 20 + 1 << "  [get_cells {";
+            for (int id : clockRegionclusters[cluster_id])
+            {
+                if (auto tmpMacro =
+                        dynamic_cast<PlacementInfo::PlacementMacro *>(placementInfo->getPlacementUnits()[id]))
+                {
+                    for (auto cell : tmpMacro->getCells())
+                    {
+                        outfile0 << cell->getName() << " ";
+                    }
+                }
+                else if (auto tmpUnpacked = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(
+                             placementInfo->getPlacementUnits()[id]))
+                {
+                    outfile0 << tmpUnpacked->getName() << " ";
+                }
+                else
+                {
+                    assert(false);
+                }
+            }
+            outfile0 << "}]\n";
+        }
+        outfile0.close();
+    }
 }
 
 void PlacementTimingOptimizer::moveDriverIntoBetterClockRegion(int pathLenThr, float clusterThrRatio)

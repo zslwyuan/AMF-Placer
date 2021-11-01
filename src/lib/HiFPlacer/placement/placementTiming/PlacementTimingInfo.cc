@@ -366,55 +366,40 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
     }
 
     bool forwarding = true;
+    resSucessors.push_back(startNodeId);
     while (nodeStack.size() && nodeSet.size() < sizeThr)
     {
         int curNode = nodeStack.top();
-        resSucessors.push_back(curNode);
         nodeStack.pop();
 
-        if (forwarding)
+        for (auto outEdge : nodes[curNode]->getOutEdges())
         {
-            bool findNext = false;
-            for (auto outEdge : nodes[curNode]->getOutEdges())
-            {
-                int nextId = outEdge->getSink()->getId();
+            int nextId = outEdge->getSink()->getId();
 
-                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
-                {
-                    if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
-                    {
-                        nodeSet.insert(nextId);
-                        nodeStack.push(nextId);
-                        findNext = true;
-                    }
-                }
-            }
-            if (!findNext)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
             {
-                forwarding = false;
-                return resSucessors;
+                if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                {
+                    resSucessors.push_back(nextId);
+                    nodeSet.insert(nextId);
+                    nodeStack.push(nextId);
+                }
             }
         }
 
-        if (!forwarding)
+        for (auto inEdge : nodes[curNode]->getInEdges())
         {
-            bool findNext = false;
-            for (auto inEdge : nodes[curNode]->getInEdges())
-            {
-                int nextId = inEdge->getSource()->getId();
+            int nextId = inEdge->getSource()->getId();
 
-                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            {
+                if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
                 {
-                    if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
-                    {
-                        nodeSet.insert(nextId);
-                        nodeStack.push(nextId);
-                        findNext = true;
-                    }
+                    resSucessors.push_back(nextId);
+                    nodeSet.insert(nextId);
+                    nodeStack.push(nextId);
                 }
             }
-            if (!findNext)
-                forwarding = true;
         }
     }
     return resSucessors;
@@ -435,54 +420,46 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
     nodeQ.push(startNodeId);
     // int targetPathLen = nodes[startNodeId]->getLongestPathLength();
 
-    bool forwarding = true;
+    int targetPathLen = nodes[startNodeId]->getLongestPathLength();
+
+    if (nodes[startNodeId]->getForwardLevel() > targetPathLen * 0.2)
+    {
+        return resSucessors;
+    }
+
     while (nodeQ.size() && nodeSet.size() < sizeThr)
     {
         int curNode = nodeQ.front();
         nodeQ.pop();
 
-        if (forwarding)
+        for (auto outEdge : nodes[curNode]->getOutEdges())
         {
-            bool findNext = false;
-            for (auto outEdge : nodes[curNode]->getOutEdges())
-            {
-                int nextId = outEdge->getSink()->getId();
+            int nextId = outEdge->getSink()->getId();
 
-                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            {
+                if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
                 {
-                    if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
-                    {
-                        resSucessors.push_back(nextId);
-                        nodeSet.insert(nextId);
-                        nodeQ.push(nextId);
-                        findNext = true;
-                    }
+                    resSucessors.push_back(nextId);
+                    nodeSet.insert(nextId);
+                    nodeQ.push(nextId);
                 }
             }
-            if (!findNext)
-                forwarding = false;
         }
 
-        if (!forwarding)
+        for (auto inEdge : nodes[curNode]->getInEdges())
         {
-            bool findNext = false;
-            for (auto inEdge : nodes[curNode]->getInEdges())
-            {
-                int nextId = inEdge->getSource()->getId();
+            int nextId = inEdge->getSource()->getId();
 
-                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            {
+                if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
                 {
-                    if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
-                    {
-                        resSucessors.push_back(nextId);
-                        nodeSet.insert(nextId);
-                        nodeQ.push(nextId);
-                        findNext = true;
-                    }
+                    resSucessors.push_back(nextId);
+                    nodeSet.insert(nextId);
+                    nodeQ.push(nextId);
                 }
             }
-            if (!findNext)
-                forwarding = true;
         }
     }
     return resSucessors;

@@ -167,7 +167,7 @@ class AMFPlacer
         placementInfo->printStat();
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
-        // timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
+        timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
 
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
         globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.8,

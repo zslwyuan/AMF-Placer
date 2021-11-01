@@ -51,7 +51,7 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio, unsigned int sprea
     std::vector<int> historyTotalCellNum(0);
     while (true)
     {
-        if (loopCnt % 20 == 0)
+        if (loopCnt % 5 == 0)
         {
             for (auto &row : binGrid)
             {
@@ -79,43 +79,7 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio, unsigned int sprea
         int totalCellNum = 0;
         for (auto curBin : overflowBins)
             totalCellNum += curBin->getCells().size();
-        if (loopCnt > 400)
-        {
-            useSimpleExpland = true;
-        }
-        if (loopCnt > 1000)
-        {
-            print_warning("still found " + std::to_string(overflowBins.size()) + " overflowed bins");
-            print_warning("still found " + std::to_string(totalCellNum) + " cells in them");
-            print_warning("failed to solve the overflow bins with better result.");
-            print_warning("has been spread for " + std::to_string(loopCnt) + " iterations");
-            break;
-        }
-        historyTotalCellNum.push_back(totalCellNum);
-        if (historyTotalCellNum.size() > 20)
-        {
-            float improved = std::fabs((historyTotalCellNum[historyTotalCellNum.size() - 1] +
-                                        historyTotalCellNum[historyTotalCellNum.size() - 2] +
-                                        historyTotalCellNum[historyTotalCellNum.size() - 3]) /
-                                           3 -
-                                       (historyTotalCellNum[historyTotalCellNum.size() - 20] +
-                                        historyTotalCellNum[historyTotalCellNum.size() - 19] +
-                                        historyTotalCellNum[historyTotalCellNum.size() - 18]) /
-                                           3);
-            if ((improved < 30 && historyTotalCellNum[historyTotalCellNum.size() - 1] < 1000 && loopCnt > 300) ||
-                loopCnt > 500)
-            {
-                break;
-            }
-            improved /= (float)historyTotalCellNum[historyTotalCellNum.size() - 1];
-            if (improved < 0.01)
-            {
-                // print_info("found " + std::to_string(overflowBins.size()) + " overflowed bins");
-                // print_info("found " + std::to_string(totalCellNum) + " cells in them");
-                // print_info("spread for " + std::to_string(loopCnt) + " iterations");
-                break;
-            }
-        }
+
         if (verbose) // usually commented for debug
         {
             print_info("found " + std::to_string(overflowBins.size()) + " overflowed bins");
@@ -136,23 +100,6 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio, unsigned int sprea
                 continue;
             GeneralSpreader::SpreadRegion *newRegion = expandFromABin(curBin, capacityShrinkRatio);
             coveredBinSet.insert(curBin);
-            // if (loopCnt % 20 == 0)
-            // {
-            //     std::cout.flush();
-            //     for (auto curbin0 : newRegion->getBinsInRegion())
-            //     {
-            //         std::cout << "-----------------\n";
-            //         std::cout << curbin0 << " sharedBELStr:" << curbin0->getSharedCellType() << " X: " <<
-            //         curbin0->X()
-            //                   << " Y: " << curbin0->Y() << " left:" << curbin0->left() << " right:" <<
-            //                   curbin0->right()
-            //                   << " top:" << curbin0->top() << " bottom:" << curbin0->bottom() << "\n";
-            //         std::cout << "shrinkRatio:" << curbin0->getBinShrinkRatio() << "\n";
-            //         std::cout << "capacity:" << curbin0->getCapacity() << "\n";
-            //         std::cout << "util:" << curbin0->getUtilization() << "\n";
-            //     }
-            //     std::cout << "\n\n";
-            // }
             bool overlappedWithPreviousRegion = false;
             for (auto curRegion : expandedRegions)
             {

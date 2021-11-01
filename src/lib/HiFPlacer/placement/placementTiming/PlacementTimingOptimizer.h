@@ -44,6 +44,7 @@ class PlacementTimingOptimizer
     void setPinsLocation();
     void clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio);
     void moveDriverIntoBetterClockRegion(int pathLenThr, float clusterThrRatio);
+    void dumpClockRegionClusters();
 
     void initPois()
     {
@@ -100,6 +101,7 @@ class PlacementTimingOptimizer
     int enhanceNetWeight_LevelBased_Cnt = 0;
     float effectFactor = 0;
     std::vector<float> pois;
+    std::vector<std::vector<int>> clockRegionclusters;
 };
 
 #endif
