@@ -43,10 +43,10 @@ For commercial usage of this open-source project, users must contact authors (We
 
 **Motivations**
 
-1. Just reinvent the wheel for fun, try to build a complete flow and implement some state-of-art techniques in the latest paper.
-2. Resolve some existing constraints in some previous works and consider more practical situations, like FPGA mixed-size placement with a series of optimization from the perspectives of timing-aware, clock-aware, routability-aware and parallelism.
+1. Just reinvent the wheel for fun, try to build a complete flow and reproduce/improve some state-of-art techniques in the latest papers.
+2. Resolve some existing constraints in some previous works and consider more practical situations, like FPGA mixed-size placement with a series of optimization from the perspectives of timing, clocking, routability-aware and parallelism.
 3. A beginner-friendly placement framework with clear hierarchy and detailed Doxygen-based documentation. We hope that it can lower the overhead for people who are also interested in this research area.
-4. Currently, this framework is under development and it is still far from our goals and the practical demands, but we are happy to share our progress in this GitHub repository. If you have any questions/problems/suggestions, please contact feel free to contact us (tliang AT connect DOT ust DOT hk)
+4. Currently, this framework is under development and it is still far from our goals and the practical demands, but we are happy to share our progress in this GitHub repository. If you have any questions/problems/suggestions, please contact feel free to contact us (Tingyuan LIANG, tliang@connect.ust.hk)
 
 
 **Features**

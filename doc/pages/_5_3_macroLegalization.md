@@ -21,10 +21,10 @@ In this phase, each cells in the macro will find a set of candidate sites within
 
 Cells in the macros keep "voting" during rough legalization After a few iterations of wirelength optimization, cell spreading and rough legalization, as pseudo weights iteratively increase, macros get closer to the legal locations. If the average displacement from cells to sites in rough legalization is lower than a threshold, exact (strict) legalization will follow the rough legalization to ensure that the standard cells in a macro must be placed in adjacent sites in the same column. 
 
-The macros will be mapped to FPGA columns with greedy algorithm according to their cells's mapping to the columns.  For macros in the column, they will be sorted according to their y-coordinates. Then, for each column, the legalization problem can be transformed into knapsack problem, optimal solution of which can be found by dynamic programming.
+The macros will be mapped to FPGA columns with greedy algorithm according to their cells's mapping to the columns.  For macros in the column, they will be sorted according to their y-coordinates. Then, for each column, the legalization problem can be transformed into knapsack problem, optimal solution of which can be found by dynamic programming. An concrete example of this flow is shown in the figure below.
 
-Since the macros are close to their potential legal positions and the placement tends to be stable at this stage, we assume that the locations of the other instances will remain unchanged during the intra-column legalization of macros. Therefore, the intra-column legalization procedures for different columns can be parallelized
+Since the macros are close to their potential legal positions and the placement tends to be stable at this stage, we assume that the locations of the other instances will remain unchanged during the intra-column legalization of macros. Therefore, the intra-column legalization procedures for different columns can be parallelized.
 
 <center>
-<img src="exactLegalization.png" alt="Exact Legalization Phase" title="Exact Legalization Phase" width="400" /> 
+<img src="exactLegalization.png" alt="Exact Legalization Phase" title="Exact Legalization Phase" width="600" /> 
 </center>
