@@ -111,6 +111,12 @@ $(document).ready(function(){initNavTree('_5_explanation.html',''); initResizabl
 <li><a class="el" href="class_placement_timing_optimizer.html">PlacementTimingOptimizer</a>: based on the timing information and the placement information, adjusts some terms in the quadratic models which can improve the timing.</li>
 <li><a class="el" href="class_parallel_c_l_b_packer.html" title="ParallelCLBPacker will finally pack LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel appr...">ParallelCLBPacker</a>: finally packs LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.</li>
 </ol>
+<p ><b>Novel Solutions:</b></p>
+<p >Compared to previous work, we proposed a series of novel solutions for FPGA mixed-size placements and meanwhile we provide a set of optimized extension of some latest works from the perspectives of cell spreading, congestion mitigation, clock legalization, packing and timing optimization. Here we prepare some explanation for users who are interested in the details, (where are the devil LOL).</p>
+<ul>
+<li>_5_1_WLOpt: the simulated-annealing-based initial placement and some important factors/terms in the quadratic placement target function.</li>
+<li>_5_2_CellSpreading: the parallel solution to cell spreading for large designs with many macros and the sensitivity of partitioning-based algorithm.</li>
+</ul>
 <p ><b>The AMF-Placer Workflow</b></p>
 <p >Below is the overall flow of <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> and a visualized procedure is shown in the figure below. If you are interested in the details of <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> runtime behaviors, you can find the concrete explanation here: (<a class="el" href="_6_runtime_log.html">Runtime Log Explanation</a>).</p>
 <ol type="1">

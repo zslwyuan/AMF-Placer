@@ -15,8 +15,10 @@ var searchData=
   ['_5f3_5f3_5fpostimplementationprojects_2emd_12',['_3_3_PostImplementationProjects.md',['../__3__3___post_implementation_projects_8md.html',1,'']]],
   ['_5f3_5fbenchmarkinfo_2emd_13',['_3_benchmarkInfo.md',['../__3__benchmark_info_8md.html',1,'']]],
   ['_5f4_5fpublication_2emd_14',['_4_publication.md',['../__4__publication_8md.html',1,'']]],
-  ['_5f5_5fexplanation_2emd_15',['_5_explanation.md',['../__5__explanation_8md.html',1,'']]],
-  ['_5f6_5fruntimelog_2emd_16',['_6_runtimeLog.md',['../__6__runtime_log_8md.html',1,'']]],
-  ['_5f7_5fportabilitytovivadoproblem_2emd_17',['_7_portabilityToVivadoProblem.md',['../__7__portability_to_vivado_problem_8md.html',1,'']]],
-  ['_5f8_5fsomefailurelesson_2emd_18',['_8_someFailureLesson.md',['../__8__some_failure_lesson_8md.html',1,'']]]
+  ['_5f5_5f1_5fwlopt_2emd_15',['_5_1_WLOpt.md',['../__5__1___w_l_opt_8md.html',1,'']]],
+  ['_5f5_5f2_5fcellspreading_2emd_16',['_5_2_CellSpreading.md',['../__5__2___cell_spreading_8md.html',1,'']]],
+  ['_5f5_5fexplanation_2emd_17',['_5_explanation.md',['../__5__explanation_8md.html',1,'']]],
+  ['_5f6_5fruntimelog_2emd_18',['_6_runtimeLog.md',['../__6__runtime_log_8md.html',1,'']]],
+  ['_5f7_5fportabilitytovivadoproblem_2emd_19',['_7_portabilityToVivadoProblem.md',['../__7__portability_to_vivado_problem_8md.html',1,'']]],
+  ['_5f8_5fsomefailurelesson_2emd_20',['_8_someFailureLesson.md',['../__8__some_failure_lesson_8md.html',1,'']]]
 ];
