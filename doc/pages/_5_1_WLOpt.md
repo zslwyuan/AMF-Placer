@@ -1,5 +1,5 @@
-@page _5_1_WLOpt Parallel Wirelength Optimzation in Quadratic Placement Flow
-#  Parallel Wirelength Optimzation in Quadratic Placement Flow {#_5_1_WLOpt}
+@page _5_1_WLOpt Wirelength Optimzation in Quadratic Placement Flow
+# Wirelength Optimzation in Quadratic Placement Flow
 
 Here, we explain the necessity and mechanisms of our SA-based initial placement and the consideration of the factors and terms in our quadratic placement problems.
 

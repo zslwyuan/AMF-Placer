@@ -1,5 +1,5 @@
 @page _5_2_CellSpreading Parallel Cell Spreading
-#  Parallel Cell Spreading {#_5_2_CellSpreading}
+# Parallel Cell Spreading
 
 For a specific region on FPGA, the available resources of various types are limited. Therefore, the instances should be spread from the regions where demand for resources is outrunning supply, to other regions, as rough legalization. 
 
