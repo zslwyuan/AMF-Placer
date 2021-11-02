@@ -19,9 +19,10 @@ var NAVTREEINDEX0 =
 "_5_1__w_l_opt.html":[4,0],
 "_5_2__cell_spreading.html":[4,1],
 "_5_3_macro_legalization.html":[4,2],
+"_5_4_packing.html":[4,3],
 "_5_explanation.html":[4],
 "_6_runtime_log.html":[1,1,0],
-"_6_runtime_log.html":[4,3],
+"_6_runtime_log.html":[4,4],
 "_7_portability_to_vivado_problem.html":[5],
 "_8_some_failure_lesson.html":[6],
 "_a_m_f_placer_8h.html":[10,0,2,0,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "class_c_l_b_legalizer.html#ae47d73bef50871b254d50a160340d2cf":[9,0,3,60],
 "class_c_l_b_legalizer.html#ae503b6c636a8c2b1931e6edd8ef4b9af":[9,0,3,54],
 "class_c_l_b_legalizer.html#ae5503d79d993ceaa173f8aebe424d83b":[9,0,3,45],
-"class_c_l_b_legalizer.html#ae94f95634e5422c0fb13515ef6e86355":[9,0,3,34],
-"class_c_l_b_legalizer.html#aea1a9311560468871b7fb25ed313e566":[9,0,3,94]
+"class_c_l_b_legalizer.html#ae94f95634e5422c0fb13515ef6e86355":[9,0,3,34]
 };
