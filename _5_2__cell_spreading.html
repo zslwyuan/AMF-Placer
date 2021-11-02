@@ -86,8 +86,7 @@ $(document).ready(function(){initNavTree('_5_2__cell_spreading.html',''); initRe
   <div class="headertitle"><div class="title">Parallel Cell Spreading </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="_5_2_CellSpreading"></a>
-Parallel Cell Spreading</h1>
+<div class="textblock"><h1>Parallel Cell Spreading</h1>
 <p >For a specific region on FPGA, the available resources of various types are limited. Therefore, the instances should be spread from the regions where demand for resources is outrunning supply, to other regions, as rough legalization.</p>
 <p >The fundamental cell spreading algorithm of AMF-Placer is based on widely adopted bi-partitioning rough legalization. The placer will find an overflowed bin, expand it into a corresponding larger window containing it, recursively partition the window, and spread the instances into bins in the window.</p>
 <p >The important difference between AMF-Placer's cell spreading algorithms and the other ones in previous works are that: (1) AMF-Placer conducts efficient utilization-guided search of spreading windows; (2) AMF-Placer realizes the parallel partitioning-based cell spreading; (3) AMF-Placer needs to handle the spreading of macros; (4) AMF-Placer's forgetting-rate cell spreading depress the aggressive cell spreading when encountering the uneven cell distribution of general real-world applications.</p>
