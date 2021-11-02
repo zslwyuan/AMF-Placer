@@ -32,8 +32,8 @@ We implement a set of placment processors, which will modify the data/informatio
 
 Compared to previous work, we proposed a series of novel solutions for FPGA mixed-size placements and meanwhile we provide a set of optimized extension of some latest works from the perspectives of cell spreading, congestion mitigation, clock legalization, packing and timing optimization. Here we prepare some explanation for users who are interested in the details, (where are the devil LOL).
 
-* @subpage _5_1_WLOpt: the simulated-annealing-based initial placement and some important factors/terms in the quadratic placement target function.
-* @subpage _5_2_CellSpreading: the parallel solution to cell spreading for large designs with many macros and the sensitivity of partitioning-based algorithm.
+* @subpage _5_1_WLOpt : the simulated-annealing-based initial placement and some important factors/terms in the quadratic placement target function.
+* @subpage _5_2_CellSpreading : the parallel solution to cell spreading for large designs with many macros and the sensitivity of partitioning-based algorithm.
 
 **The AMF-Placer Workflow**
 
