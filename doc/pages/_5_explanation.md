@@ -28,6 +28,13 @@ We implement a set of placment processors, which will modify the data/informatio
 5.  ParallelCLBPacker: finally packs LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.
 
 
+**Novel Solutions:**
+
+Compared to previous work, we proposed a series of novel solutions for FPGA mixed-size placements and meanwhile we provide a set of optimized extension of some latest works from the perspectives of cell spreading, congestion mitigation, clock legalization, packing and timing optimization. Here we prepare some explanation for users who are interested in the details, (where are the devil LOL).
+
+* @subpage _5_1_WLOpt: the simulated-annealing-based initial placement and some important factors/terms in the quadratic placement target function.
+* @subpage _5_2_CellSpreading: the parallel solution to cell spreading for large designs with many macros and the sensitivity of partitioning-based algorithm.
+
 **The AMF-Placer Workflow**
 
 Below is the overall flow of AMFPlacer and a visualized procedure is shown in the figure below. If you are interested in the details of AMFPlacer runtime behaviors, you can find the concrete explanation here: (@subpage _6_runtimeLog).
