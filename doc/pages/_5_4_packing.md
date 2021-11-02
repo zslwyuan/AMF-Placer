@@ -8,7 +8,7 @@ We adapt this high-performance algorithm to our mixed-size placement scenarios w
 1. Some instances might be pre-packed into CLB sites by the macro legalization, but these pre-packed CLBs can be filled with other instances as long as it is legal. It should be noticed that a cell (e.g., FF, CARRY, MUX) might lead to the route-thru cost of FF/LUT BEL slots. This is considered by AMF-Placer.
 2. AMF-Placer encodes each candidate packing cluster for a specific site with hash function to avoid many redundant/duplicated packing attempts to improve performance and quality of packing since we found that there are some candidates are exactly the same although they are generated via different packing orders.
 3. AMF-Placer takes clock legalization into consideration during packing and conduct clock half-column-level parallel packing to ensure the packing in one half-column will not lead to clocking violation. (e.g., VCU108 requires that the cells in one clock half-column are driven by at most 12 clocks.)
-4. By iteratively increasing the ripping-up window size and processing independent exception instances concurrently, we also parallelize the exception handling algorithm and achieve further acceleration;
+4. By iteratively increasing the ripping-up window size and processing independent exception instances concurrently, we also parallelize the exception handling algorithm and achieve further acceleration. For each iteration, the independent exception instances are identified via the data structure of KD-tree.
 
 
 For source code details, please check the classes: ParallelCLBPacker . 
