@@ -34,6 +34,7 @@ Compared to previous work, we proposed a series of novel solutions for FPGA mixe
 
 1. @subpage _5_1_WLOpt : the simulated-annealing-based initial placement and some important factors/terms in the quadratic placement target function.
 2. @subpage _5_2_CellSpreading : the parallel solution to cell spreading for large designs with many macros and the sensitivity of partitioning-based algorithm.
+3. @subpage _5_3_macroLegalization : high-quality high-performance progressive macro legalization of mixed-size elements in FPGA
 
 **The AMF-Placer Workflow**
 
