@@ -12,3 +12,7 @@ We adapt this high-performance algorithm to our mixed-size placement scenarios w
 
 
 For source code details, please check the classes: ParallelCLBPacker . 
+
+References:
+
+\[1\] W. Li and D. Z. Pan, "A New Paradigm for FPGA Placement Without Explicit Packing," in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 38, no. 11, pp. 2113-2126, Nov. 2019, doi: 10.1109/TCAD.2018.2877017.

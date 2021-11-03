@@ -51,3 +51,12 @@ As shown in the figure below, macros might cause deadlocks in the common partiti
 <center>
 <img src="Deadlock.png" alt="Macro Spreading Deadlock Solution" title="Macro Spreading Deadlock Solution" width="400" /> 
 </center>
+
+References:
+
+\[1\] Chak-Wa Pui et al., "RippleFPGA: A routability-driven placement for large-scale heterogeneous FPGAs," 2016 IEEE/ACM International Conference on Computer-Aided Design (ICCAD), 2016, pp. 1-8, doi: 10.1145/2966986.2980084.
+
+\[2\] Myung-Chul Kim et al. "ComPLx: A Competitive Primal-dual Lagrange Optimization for Global Placement," 2012 the 49th Annual Design Automation Conference (DAC '12), 2012, New York, NY, USA, 747–752.
+
+  
+

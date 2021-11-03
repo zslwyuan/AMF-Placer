@@ -19,7 +19,7 @@ In this phase, each cells in the macro will find a set of candidate sites within
 
 **Exact Legalization Phase**
 
-Cells in the macros keep "voting" during rough legalization After a few iterations of wirelength optimization, cell spreading and rough legalization, as pseudo weights iteratively increase, macros get closer to the legal locations. If the average displacement from cells to sites in rough legalization is lower than a threshold, exact (strict) legalization will follow the rough legalization to ensure that the standard cells in a macro must be placed in adjacent sites in the same column. 
+Cells in the macros keep "voting" during rough legalization. After a few iterations of wirelength optimization, cell spreading and rough legalization, as pseudo weights iteratively increase, macros get closer to the legal locations. If the average displacement from cells to sites in rough legalization is lower than a threshold, exact (strict) legalization will follow the rough legalization to ensure that the standard cells in a macro must be placed in adjacent sites in the same column. 
 
 The macros will be mapped to FPGA columns with greedy algorithm according to their cells's mapping to the columns.  For macros in the column, they will be sorted according to their y-coordinates. Then, for each column, the legalization problem can be transformed into knapsack problem, optimal solution of which can be found by dynamic programming. An concrete example of this flow is shown in the figure below.
 

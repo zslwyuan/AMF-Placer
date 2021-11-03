@@ -53,3 +53,8 @@ An example of pseudo nets and anchors, where the dash lines indicate pseudo nets
 </center>
 
 The wirelength problem is resolved by Eigen3 in a parallel way.
+
+
+References:
+
+\[1\] Chak-Wa Pui et al., "RippleFPGA: A routability-driven placement for large-scale heterogeneous FPGAs," 2016 IEEE/ACM International Conference on Computer-Aided Design (ICCAD), 2016, pp. 1-8, doi: 10.1145/2966986.2980084.
