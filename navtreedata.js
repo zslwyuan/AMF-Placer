@@ -29,6 +29,7 @@ var NAVTREE =
     [ "Get Started", "_2_get_started.html", "_2_get_started" ],
     [ "Benchmarks and Experimental Results", "_3_benchmark_info.html", "_3_benchmark_info" ],
     [ "Publications", "_4_publication.html", null ],
+    [ "Optimization for Timing, Clocking and Congestion", "_5_5_timing_clock_congestion.html", null ],
     [ "Implementation Explanation", "_5_explanation.html", "_5_explanation" ],
     [ "Existing Problems When Exporting To Vivado", "_7_portability_to_vivado_problem.html", null ],
     [ "Some Failure Lessons", "_8_some_failure_lesson.html", null ],
@@ -69,17 +70,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_1_intro.html",
-"class_c_l_b_legalizer.html#aea1a9311560468871b7fb25ed313e566",
-"class_design_info_1_1_design_cell.html#a98ec57a40f14540ba4ea33fbcd63153d",
-"class_device_info_1_1_device_site.html#a065609123fa4f5a650b954ef026b0e84",
-"class_graph_partitioner.html#a007e2fa0a06958b9f57b9a23207f0626",
-"class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f",
-"class_placement_info.html#a293642a90f1b3266cca289dfc5d2e57f",
-"class_placement_info_1_1_placement_bin_info.html#a945ac49f67f09dc25299a462a3de742f",
-"class_placement_info_1_1_placement_unit.html#aa8016d572d4e10c18b3f031428ad3db1",
+"class_c_l_b_legalizer.html#ae94f95634e5422c0fb13515ef6e86355",
+"class_design_info_1_1_design_cell.html#a96c9bca15a03ea9bb257cf2fd961ae23",
+"class_device_info_1_1_device_site.html#a0578616db007fbc5b2e13c532e2474de",
+"class_graph_partitioner.html",
+"class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2",
+"class_placement_info.html#a2544141cc8b73bf5a274228d38024615",
+"class_placement_info_1_1_placement_bin_info.html#a94252a624d74b8ebf80fb412a40d7f98",
+"class_placement_info_1_1_placement_unit.html#aa2a695da67d64ae9ae66b694a0d07383",
 "class_vivado_graph_util_1_1_vivado_net.html#ad7f2a0667677d82e257ed6aa37116725",
-"functions_h.html",
-"pages.html"
+"functions_g.html",
+"namespaceunplace_failure_cells.html#af5f7f7e2da6113a0574fccac3054c9fd"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
