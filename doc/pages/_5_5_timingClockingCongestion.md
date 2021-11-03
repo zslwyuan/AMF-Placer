@@ -1,4 +1,4 @@
-@page _5_5_timingClockCongestion Optimization for Timing, Clocking and Congestion
+@page _5_5_timingClockingCongestion Optimization for Timing, Clocking and Congestion
 # Optimization for Timing, Clocking and Congestion
 
 Simply optimizing wirelength will not make a placement feasible on FPGA device for practical applications so AMF-Placer has taken timing, clocking and congestion into consideration. For these perspectives, AMF-Placer includes the following optimization techniques:
