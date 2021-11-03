@@ -29,7 +29,6 @@ var NAVTREE =
     [ "Get Started", "_2_get_started.html", "_2_get_started" ],
     [ "Benchmarks and Experimental Results", "_3_benchmark_info.html", "_3_benchmark_info" ],
     [ "Publications", "_4_publication.html", null ],
-    [ "Optimization for Timing, Clocking and Congestion", "_5_5_timing_clock_congestion.html", null ],
     [ "Implementation Explanation", "_5_explanation.html", "_5_explanation" ],
     [ "Existing Problems When Exporting To Vivado", "_7_portability_to_vivado_problem.html", null ],
     [ "Some Failure Lessons", "_8_some_failure_lesson.html", null ],
