@@ -96,7 +96,9 @@ $(document).ready(function(){initNavTree('_5_4_packing.html',''); initResizable(
 <li>AMF-Placer takes clock legalization into consideration during packing and conduct clock half-column-level parallel packing to ensure the packing in one half-column will not lead to clocking violation. (e.g., VCU108 requires that the cells in one clock half-column are driven by at most 12 clocks.)</li>
 <li>By iteratively increasing the ripping-up window size and processing independent exception instances concurrently, we also parallelize the exception handling algorithm and achieve further acceleration. For each iteration, the independent exception instances are identified via the data structure of KD-tree.</li>
 </ol>
-<p >For source code details, please check the classes: <a class="el" href="class_parallel_c_l_b_packer.html" title="ParallelCLBPacker will finally pack LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel appr...">ParallelCLBPacker</a> . </p>
+<p >For source code details, please check the classes: <a class="el" href="class_parallel_c_l_b_packer.html" title="ParallelCLBPacker will finally pack LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel appr...">ParallelCLBPacker</a> .</p>
+<p >References:</p>
+<p >[1] W. Li and D. Z. Pan, "A New Paradigm for FPGA Placement Without Explicit Packing," in IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, vol. 38, no. 11, pp. 2113-2126, Nov. 2019, doi: 10.1109/TCAD.2018.2877017. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

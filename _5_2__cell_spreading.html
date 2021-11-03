@@ -106,7 +106,10 @@ $(document).ready(function(){initNavTree('_5_2__cell_spreading.html',''); initRe
 <p >Furthermore, to avoid significant disturbance to the placement when it is close to final convergence, AMF-Placer will limit the size of the cell spreading windows in the late placement procedure to constrain the movement of elements in one cell spreading iteration.</p>
 <center> <img src="forgetRate.png" alt="Forgetting-rate Based Cell Spreading" title="Forgetting-rate Based Cell Spreading" width="600" class="inline"/> </center><p ><b>Macro Spreading Deadlock Solution</b></p>
 <p >As shown in the figure below, macros might cause deadlocks in the common partitioning-based cell spreading algorithm because moving a macro spanning multiple bins from an overflowed region might cause new overflows in other regions. AMF-Placer's solution is to inject resource fluctuation to those bins trapped in deadlocks, i.e., periodically reduce and recover the resource supply of those bins, and squeeze out some instances from them. The extent of supply fluctuation for a bin is proportional to the number of times the bin gets overflowed. The fluctuation will stop immediately when there is no overflow.</p>
-<center> <img src="Deadlock.png" alt="Macro Spreading Deadlock Solution" title="Macro Spreading Deadlock Solution" width="400" class="inline"/> </center> </div></div><!-- contents -->
+<center> <img src="Deadlock.png" alt="Macro Spreading Deadlock Solution" title="Macro Spreading Deadlock Solution" width="400" class="inline"/> </center><p >References:</p>
+<p >[1] Chak-Wa Pui et al., "RippleFPGA: A routability-driven placement for large-scale heterogeneous FPGAs," 2016 IEEE/ACM International Conference on Computer-Aided Design (ICCAD), 2016, pp. 1-8, doi: 10.1145/2966986.2980084.</p>
+<p >[2] Myung-Chul Kim et al. "ComPLx: A Competitive Primal-dual Lagrange Optimization for Global Placement," 2012 the 49th Annual Design Automation Conference (DAC '12), 2012, New York, NY, USA, 747–752. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
