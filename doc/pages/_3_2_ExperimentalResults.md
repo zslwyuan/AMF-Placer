@@ -61,6 +61,13 @@ Below is the comparison of AMF-Placer Placement (upper ones) and Vivado Placemen
 <img src="placement.png" alt="Placement" title="Placement" width="800" /> 
 </center>
 
+The placement congestion level of AMF-Placer and Vivado and below is a figure for the most congested benchmarks (MiniMap2 with PCIE banks and OpenPiton with DDR Interface):
+
+<center>
+<img src="congestionExample.png" alt="Congestion Example" title="Congestion Example" width="800" /> 
+</center>
+
+
 
 **The Runtime Log of ICCAD-2021 Benchmarks**
 
