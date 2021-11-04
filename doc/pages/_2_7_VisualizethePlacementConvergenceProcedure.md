@@ -20,7 +20,15 @@ python paintPlacement.py -d xxxx/minimap2_allCellPinNet.zip -t xxxxx/dumpData_mi
 2. -t indicate the path where the placement trace archives are dumped. (the trace files are required to be named as DumpAllCoordTrace-xxx.gz currently)
 3. -o indicate the path where you want to store the output images (png) generated according to the trace files
 
-Below is a screenshot showing the archive files and the generated images. With this images, you can easily generate a video of the convergence procedure with ffmpeg related commands/tools.
+Below is a screenshot showing the archive files and the generated images. With this images, you can easily generate a video of the convergence procedure with ffmpeg related commands/tools. The colors for the major types of elements are: 
+<span style="background:#000000;color:#ff0000">LUT </span>, 
+<span style="background:#000000;color:#00ff00">Flip-Flop </span>, 
+<span style="background:#000000;color:#0000ff">CARRY </span>, 
+<span style="background:#000000;color:#ff00ff">MUX </span>, 
+<span style="background:#000000;color:#00ffff">DSP </span>, 
+<span style="background:#000000;color:#ffff00">BRAM </span>, 
+<span style="background:#000000;color:#ff7f7f">LUTRAM </span>, 
+and <span style="background:#000000;color:#ffffff">Others(IO/Buffers...) </span>.
 
 <center>
 <img src="visProc.png" align="center" alt="Visualized Example" title="Visualized Example" width="500" /> 
