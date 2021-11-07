@@ -467,12 +467,43 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
 
 template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::propogateArrivalTime()
 {
-    // for (unsigned int i = 1; i < forwardlevel2NodeIds.size(); i++)
-    // {
-    //     for (auto curNode : forwardlevel2NodeIds[i])
-    //     {
-    //     }
-    // }
+    for (unsigned int i = 1; i < forwardlevel2NodeIds.size(); i++)
+    {
+        int numNodeInLayer = forwardlevel2NodeIds[i].size();
+
+        for (int j = 0; j < numNodeInLayer; j++)
+        {
+            auto curNodeId = forwardlevel2NodeIds[i][j];
+            auto curNode = nodes[curNodeId];
+            for (auto inEdge : curNode->getInEdges())
+            {
+                int predId = inEdge->getSource()->getId();
+                float predDelay = inEdge->getSource()->getLatestArrival();
+                float edgeDelay = inEdge->getDelay();
+                float newDelay = predDelay + edgeDelay;
+                if (newDelay > curNode->getLatestArrival())
+                {
+                    curNode->setLatestArrival(newDelay);
+                    curNode->setSlowestPredecessorId(predId);
+                }
+            }
+        }
+    }
+}
+
+template <typename nodeType>
+std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLongestPathFromNode(int curNodeId)
+{
+    int slowestPredecessorId = curNodeId;
+    std::vector<int> resPath;
+    resPath.clear();
+
+    while (slowestPredecessorId != -1)
+    {
+        resPath.push_back(slowestPredecessorId);
+        slowestPredecessorId = nodes[slowestPredecessorId]->getSlowestPredecessorId();
+    }
+    return resPath;
 }
 
 template class PlacementTimingInfo::TimingGraph<DesignInfo::DesignCell>;

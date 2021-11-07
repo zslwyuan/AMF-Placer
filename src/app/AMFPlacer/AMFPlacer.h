@@ -136,7 +136,7 @@ class AMFPlacer
         placementInfo->buildSimpleTimingGraph();
         PlacementTimingOptimizer *timingOptimizer = new PlacementTimingOptimizer(placementInfo, JSON);
         int longPathThr = placementInfo->getLongPathThresholdLevel();
-        int mediumPathThr = placementInfo->getMediumPathThresholdLevel();
+        // int mediumPathThr = placementInfo->getMediumPathThresholdLevel();
 
         // go through several glable placement iterations to get initial placement
         globalPlacer = new GlobalPlacer(placementInfo, JSON);

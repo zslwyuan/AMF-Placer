@@ -250,6 +250,46 @@ class PlacementTimingInfo
                 });
             }
 
+            /**
+             * @brief Get the latest arrival time to the output of this timing node
+             *
+             * @return float
+             */
+            inline float getLatestArrival()
+            {
+                return latestArrival;
+            }
+
+            /**
+             * @brief Set the latest arrival time to the output of this timing node
+             *
+             * @param _latestArrival
+             */
+            inline void setLatestArrival(float _latestArrival)
+            {
+                latestArrival = _latestArrival;
+            }
+
+            /**
+             * @brief Get the slowest predecessor node Id
+             *
+             * @return int
+             */
+            inline int getSlowestPredecessorId()
+            {
+                return slowestPredecessorId;
+            }
+
+            /**
+             * @brief Set the slowest predecessor node Id
+             *
+             * @param _slowestPredecessorId
+             */
+            inline void setSlowestPredecessorId(int _slowestPredecessorId)
+            {
+                slowestPredecessorId = _slowestPredecessorId;
+            }
+
           private:
             /**
              * @brief the pointer linked to the design element (pin or cell)
@@ -259,12 +299,13 @@ class PlacementTimingInfo
             int id;
             float latestArrival = 0.0;      // ns
             float arrivalConstaint = 100.0; // ns
+            int slowestPredecessorId = -1;
 
             /**
              * @brief the node can have internal delay (e.g., cell delay)
              *
              */
-            float innerDelay = 0.0;
+            float innerDelay = 0.1;
             bool isRegister = false;
             std::vector<TimingEdge *> inEdges;
             std::vector<TimingEdge *> outEdges;
@@ -458,6 +499,14 @@ class PlacementTimingInfo
          *
          */
         void propogateArrivalTime();
+
+        /**
+         * @brief backtrace the longest delay path from the node
+         *
+         * @param curNodeId
+         * @return std::vector<int>
+         */
+        std::vector<int> backTraceDelayLongestPathFromNode(int curNodeId);
 
         /**
          * @brief Set the Longest Path Length for each TimingNode in the TimingGraph and get a sorted vector of
