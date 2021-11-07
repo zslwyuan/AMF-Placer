@@ -248,6 +248,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a63bff5bb19f278b0b2c282f813f18812"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping.html">SiteBELMapping</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a63bff5bb19f278b0b2c282f813f18812">getSlotMapping</a> () const</td></tr>
 <tr class="memdesc:a63bff5bb19f278b0b2c282f813f18812"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the slot(BEL) mapping of the cells.  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a63bff5bb19f278b0b2c282f813f18812">More...</a><br /></td></tr>
 <tr class="separator:a63bff5bb19f278b0b2c282f813f18812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04c7fda03f66e476594ebdaebf25257a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a04c7fda03f66e476594ebdaebf25257a">checkDirectLUTFFConnect</a> (std::map&lt; <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *, <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> * &gt; &amp;FF2LUT, <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *tmpLUT, <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *tmpFF)</td></tr>
+<tr class="memdesc:a04c7fda03f66e476594ebdaebf25257a"><td class="mdescLeft">&#160;</td><td class="mdescRight">check whether the FF/LUT are directly connected  <a href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a04c7fda03f66e476594ebdaebf25257a">More...</a><br /></td></tr>
+<tr class="separator:a04c7fda03f66e476594ebdaebf25257a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -605,6 +608,61 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a04c7fda03f66e476594ebdaebf25257a" name="a04c7fda03f66e476594ebdaebf25257a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04c7fda03f66e476594ebdaebf25257a">&#9670;&nbsp;</a></span>checkDirectLUTFFConnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParallelCLBPacker::PackingCLBSite::checkDirectLUTFFConnect </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *, <a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>FF2LUT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *&#160;</td>
+          <td class="paramname"><em>tmpLUT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_design_info_1_1_design_cell.html">DesignInfo::DesignCell</a> *&#160;</td>
+          <td class="paramname"><em>tmpFF</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check whether the FF/LUT are directly connected </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FF2LUT</td><td></td></tr>
+    <tr><td class="paramname">tmpLUT</td><td></td></tr>
+    <tr><td class="paramname">tmpFF</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01814">1814</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+
+</div>
+</div>
 <a id="a59f26ce47aec73ec5f0205c11aba2671" name="a59f26ce47aec73ec5f0205c11aba2671"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59f26ce47aec73ec5f0205c11aba2671">&#9670;&nbsp;</a></span>checkIsCarrySite()</h2>
 
@@ -924,7 +982,7 @@ Here is the caller graph for this function:</div>
 
 <p>finally map LUTs/FFs to the exact slots in the sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01432">1432</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01473">1473</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01735">finalMapToSlots()</a>.</p>
 <div class="dynheader">
@@ -964,7 +1022,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01175">1175</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01216">1216</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1744,7 +1802,7 @@ Here is the call graph for this function:</div>
 
 <p>find the slots in the site for Muxes </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01195">1195</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01236">1236</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01735">finalMapToSlots()</a>.</p>
 <div class="dynheader">
@@ -1844,7 +1902,7 @@ false if some of the PlacementUnits in the top cluster in the priority queue hav
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01447">1447</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01488">1488</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1877,7 +1935,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01441">1441</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01482">1482</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 
 </div>
 </div>
@@ -1916,7 +1974,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01053">1053</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l01094">1094</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1965,7 +2023,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00914">914</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00955">955</a> of file <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html">ParallelCLBPacker_PackingCLBSite.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -2242,7 +2300,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01872">1872</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01890">1890</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01629">getCarryMacro()</a>.</p>
 
@@ -2268,7 +2326,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01874">1874</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01892">1892</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01639">getCarrySiteOffset()</a>.</p>
 
@@ -2294,7 +2352,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01808">1808</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01826">1826</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01463">getCLBSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01488">getHPWLChangeForPU()</a>.</p>
 
@@ -2320,7 +2378,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01883">1883</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01901">1901</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01791">conflictLUTsContain()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01777">getConflictLUTs()</a>.</p>
 
@@ -2348,7 +2406,7 @@ Here is the call graph for this function:</div>
 
 <p>current neighbor search diameter </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01833">1833</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01851">1851</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2372,7 +2430,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01876">1876</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01894">1894</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01524">setDebug()</a>.</p>
 
@@ -2400,7 +2458,7 @@ Here is the call graph for this function:</div>
 
 <p>the increase step of the neighbor search diameter </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01827">1827</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01845">1845</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2424,7 +2482,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01867">1867</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01885">1885</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">addCarry()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01596">addLUTRAMMacro()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01615">checkIsMuxSite()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01735">finalMapToSlots()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01478">getDeterminedClusterInSite()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01483">setDeterminedClusterInSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00372">~PackingCLBSite()</a>.</p>
 
@@ -2450,7 +2508,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01868">1868</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01886">1886</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01473">getDetScore()</a>.</p>
 
@@ -2476,7 +2534,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01882">1882</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01900">1900</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">addCarry()</a>.</p>
 
@@ -2502,7 +2560,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01881">1881</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01899">1899</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01767">getFixedPairedLUTs()</a>.</p>
 
@@ -2530,7 +2588,7 @@ Here is the call graph for this function:</div>
 
 <p>the factor of HPWL overhead in packing evaluation for a cell </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01858">1858</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01876">1876</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00515">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite()</a>, and <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc_source.html#l00470">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::updateScoreInSite()</a>.</p>
 
@@ -2556,7 +2614,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01870">1870</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01888">1888</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01610">checkIsCarrySite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01605">checkIsPrePackedSite()</a>.</p>
 
@@ -2582,7 +2640,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01871">1871</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01889">1889</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01624">checkIsLUTRAMSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01605">checkIsPrePackedSite()</a>.</p>
 
@@ -2608,7 +2666,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01873">1873</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01891">1891</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01596">addLUTRAMMacro()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01634">getLUTRAMMacro()</a>.</p>
 
@@ -2634,7 +2692,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01878">1878</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01896">1896</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2658,7 +2716,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01880">1880</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01898">1898</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2682,7 +2740,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01879">1879</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01897">1897</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2708,7 +2766,7 @@ Here is the call graph for this function:</div>
 
 <p>the maximum constraint of the neighbor search diameter </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01839">1839</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01857">1857</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2732,7 +2790,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01861">1861</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01879">1879</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01393">getNeighborPUs()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00357">PackingCLBSite()</a>.</p>
 
@@ -2760,7 +2818,7 @@ Here is the call graph for this function:</div>
 
 <p>the threshold number of cells for site </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01821">1821</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01839">1839</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2784,7 +2842,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01807">1807</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01825">1825</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01529">getPlacementInfo()</a>.</p>
 
@@ -2812,7 +2870,7 @@ Here is the call graph for this function:</div>
 
 <p>the size of priority queue (the low-priority candidates will be removed) </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01845">1845</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01863">1863</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2836,7 +2894,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01864">1864</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01882">1882</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01457">getPriorityQueueTop()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01452">hasValidPQTop()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01358">isPQTopCompletelyAccptedByCells()</a>, <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00357">PackingCLBSite()</a>, <a class="el" href="_parallel_c_l_b_packer___packing_c_l_b_site_8cc_source.html#l00016">refreshPrioryQueue()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00372">~PackingCLBSite()</a>.</p>
 
@@ -2862,7 +2920,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01865">1865</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01883">1883</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00357">PackingCLBSite()</a>.</p>
 
@@ -2888,7 +2946,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01866">1866</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01884">1884</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00899">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::areAllPUsValidForThisSite()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01358">isPQTopCompletelyAccptedByCells()</a>.</p>
 
@@ -2914,7 +2972,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01863">1863</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01881">1881</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l00357">PackingCLBSite()</a>.</p>
 
@@ -2940,7 +2998,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01884">1884</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01902">1902</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01538">addCarry()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01801">getSlotMapping()</a>.</p>
 
@@ -2968,7 +3026,7 @@ Here is the call graph for this function:</div>
 
 <p>specify how many iterations a PlacementUnit should stay at the top priority of a site before we finally map it to the site </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01815">1815</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01833">1833</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -2992,7 +3050,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01860">1860</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01878">1878</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 </div>
 </div>
@@ -3018,7 +3076,7 @@ Here is the call graph for this function:</div>
 
 <p>a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning in X-coordinate </p>
 
-<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01852">1852</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01870">1870</a> of file <a class="el" href="_parallel_c_l_b_packer_8h_source.html">ParallelCLBPacker.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01488">getHPWLChangeForPU()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01468">getY2xRatio()</a>.</p>
 

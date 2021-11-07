@@ -6,6 +6,7 @@ var class_parallel_c_l_b_packer_1_1_packing_c_l_b_site =
     [ "~PackingCLBSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a69d41f0f84fcf8d235d5035156035c1c", null ],
     [ "addCarry", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6", null ],
     [ "addLUTRAMMacro", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a30f0fba796286e9b609853529ec90001", null ],
+    [ "checkDirectLUTFFConnect", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a04c7fda03f66e476594ebdaebf25257a", null ],
     [ "checkIsCarrySite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a59f26ce47aec73ec5f0205c11aba2671", null ],
     [ "checkIsLUTRAMSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcb7fcca09b57c7b7abf4b211cbaaac4", null ],
     [ "checkIsMuxSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5286ef6fe44a2827163314175d1ecf83", null ],
