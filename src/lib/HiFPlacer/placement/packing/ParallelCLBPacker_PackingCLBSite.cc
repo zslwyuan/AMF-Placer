@@ -690,6 +690,8 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite()
 void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
 {
     std::map<DesignInfo::DesignCell *, DesignInfo::DesignCell *> FF2LUT;
+    auto &singleLUTs = determinedClusterInSite->getSingleLUTs();
+    auto &pairedLUTs = determinedClusterInSite->getPairedLUTs();
     for (auto &FFSet : determinedClusterInSite->getFFControlSets())
     {
         for (auto curFF : FFSet.getFFs())
@@ -709,7 +711,7 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
         }
     }
 
-    assert(determinedClusterInSite->getSingleLUTs().size() + determinedClusterInSite->getPairedLUTs().size() <= 8);
+    assert(singleLUTs.size() + pairedLUTs.size() <= 8);
     // map LUT connected to carry and their paired LUT
     for (int i = 0; i < 2; i++)
     {
@@ -721,7 +723,7 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
                 {
                     if (slotMapping.LUTs[i][1 - j][k])
                     {
-                        for (auto pair : determinedClusterInSite->getPairedLUTs())
+                        for (auto pair : pairedLUTs)
                         {
                             if (pair.first == slotMapping.LUTs[i][1 - j][k])
                             {
@@ -757,7 +759,7 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
         {
             if (!slotMapping.LUTs[i][0][k] && !slotMapping.LUTs[i][1][k])
             {
-                for (auto pair : determinedClusterInSite->getPairedLUTs())
+                for (auto pair : pairedLUTs)
                 {
                     if (mappedLUTs.find(pair.first) == mappedLUTs.end())
                     {
@@ -801,7 +803,7 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
         {
             if (!slotMapping.LUTs[i][0][k] && !slotMapping.LUTs[i][1][k])
             {
-                for (auto tmpLUT : determinedClusterInSite->getSingleLUTs())
+                for (auto tmpLUT : singleLUTs)
                 {
                     if (mappedLUTs.find(tmpLUT) == mappedLUTs.end())
                     {
@@ -879,8 +881,7 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
         }
     }
 
-    assert(determinedClusterInSite->getSingleLUTs().size() + determinedClusterInSite->getPairedLUTs().size() <= 8);
-
+    assert(singleLUTs.size() + pairedLUTs.size() <= 8);
     if (determinedClusterInSite)
     {
 
@@ -907,6 +908,46 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
                 }
             }
             assert(FFCnt == mappedFFs.size());
+        }
+    }
+
+    for (int i0 = 0; i0 < 2; i0++)
+    {
+        for (int k0 = 0; k0 < 4; k0++)
+        {
+            for (int i1 = 0; i1 < 2; i1++)
+            {
+                for (int k1 = 0; k1 < 4; k1++)
+                {
+                    if (i0 == i1 && k0 == k1)
+                    {
+                        continue;
+                    }
+                    int oriDirectInternalRouteNum =
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][0][k0], slotMapping.FFs[i0][0][k0]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][1][k0], slotMapping.FFs[i0][1][k0]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][0][k1], slotMapping.FFs[i1][0][k1]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][1][k1], slotMapping.FFs[i1][1][k1]);
+
+                    // switch locations
+                    int newDirectInternalRouteNum =
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][0][k0], slotMapping.FFs[i1][0][k1]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][1][k0], slotMapping.FFs[i1][1][k1]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][0][k1], slotMapping.FFs[i0][0][k0]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][1][k1], slotMapping.FFs[i0][1][k0]);
+
+                    if (oriDirectInternalRouteNum < newDirectInternalRouteNum)
+                    {
+                        DesignInfo::DesignCell *tmpLUT;
+                        tmpLUT = slotMapping.LUTs[i0][0][k0];
+                        slotMapping.LUTs[i0][0][k0] = slotMapping.LUTs[i1][0][k1];
+                        slotMapping.LUTs[i1][0][k1] = tmpLUT;
+                        tmpLUT = slotMapping.LUTs[i0][1][k0];
+                        slotMapping.LUTs[i0][1][k0] = slotMapping.LUTs[i1][1][k1];
+                        slotMapping.LUTs[i1][1][k1] = tmpLUT;
+                    }
+                }
+            }
         }
     }
 }

@@ -1803,6 +1803,24 @@ class ParallelCLBPacker
             return slotMapping;
         }
 
+        /**
+         * @brief check whether the FF/LUT are directly connected
+         *
+         * @param FF2LUT
+         * @param tmpLUT
+         * @param tmpFF
+         * @return int
+         */
+        inline int checkDirectLUTFFConnect(std::map<DesignInfo::DesignCell *, DesignInfo::DesignCell *> &FF2LUT,
+                                           DesignInfo::DesignCell *tmpLUT, DesignInfo::DesignCell *tmpFF)
+        {
+            if (!tmpFF || !tmpLUT)
+                return 0;
+            if (FF2LUT.find(tmpFF) == FF2LUT.end())
+                return 0;
+            return FF2LUT[tmpFF] == tmpLUT;
+        }
+
       private:
         PlacementInfo *placementInfo;
         DeviceInfo::DeviceSite *CLBSite;
