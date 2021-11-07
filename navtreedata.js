@@ -77,9 +77,9 @@ var NAVTREEINDEX =
 "class_placement_info.html#a23d8f941627003a1ef540b7f1569390a",
 "class_placement_info_1_1_placement_bin_info.html#a8edc8b04e4adbdb713051d935603fdb5",
 "class_placement_info_1_1_placement_unit.html#a9a30b1b549735ecd3d9bdf55fdb2f900",
-"class_vivado_graph_util_1_1_vivado_net.html#a980a9b654d6ef4ee9542fbb74582550f",
-"functions_func_~.html",
-"namespaceunplace_failure_cells.html#acd3978440176c2b5419b3ccb78297457"
+"class_vivado_graph_util_1_1_vivado_core_cluster.html#aed11ac29678529554353667ea78e1d2e",
+"functions_func_t.html",
+"namespaceunplace_failure_cells.html#a4fb53e81f9cc8cd06cec1dceb9a68626"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

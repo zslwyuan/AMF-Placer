@@ -12,12 +12,16 @@ var class_placement_timing_info_1_1_timing_graph_1_1_timing_node =
     [ "getForwardLevel", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a116fde40ff8c27f93310563b71d50f46", null ],
     [ "getId", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a1afce769df9061e7bdcd35de381c223b", null ],
     [ "getInEdges", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a7c81b078d256438efd5e6258af85c48b", null ],
+    [ "getLatestArrival", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a689f99b75951f7b983eddc158fc6877d", null ],
     [ "getLongestPathLength", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a57314d8bae6f514f3a30a84edc2619e8", null ],
     [ "getOutEdges", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a9b4ffe0d80a778a2645d717f5d6aa055", null ],
+    [ "getSlowestPredecessorId", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a593c08271b96950c82fe033ff5e2466b", null ],
     [ "setBackwardLevel", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a075bbf26dd1ccb35b110af17bbd656f3", null ],
     [ "setDestLevel", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a143d83cf580390355cbb6d42b195e0dc", null ],
     [ "setForwardLevel", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a6e34eaaa418501cfee540ea8a8eaf9c7", null ],
     [ "setIsRegister", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a6dc0df09327c0188b2f9c30001858baa", null ],
+    [ "setLatestArrival", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a867d21e61c8ef4418804fafc63fb1df7", null ],
+    [ "setSlowestPredecessorId", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a81935aba7ee308902e51d84befc58455", null ],
     [ "sortInEdgesByForwardLevel", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#aea3540c86eaeb4341db43ea033eb534f", null ],
     [ "sortOutEdgesByBackwardLevel", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a164d3124d74d006ccd8217af07afe52c", null ],
     [ "arrivalConstaint", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a5c3bbea13393ace3aea0ed1185fac9f3", null ],
@@ -31,5 +35,6 @@ var class_placement_timing_info_1_1_timing_graph_1_1_timing_node =
     [ "isRegister", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a02bcd75108fa851bd788b9b96adb2ec1", null ],
     [ "latestArrival", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a03a8055fd249aa9abe150ca02cffc869", null ],
     [ "longestPathLength", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a64c8ba9c7d42c21cb7002c41c4b97ee2", null ],
-    [ "outEdges", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#acec056e16f1a828ecd87c4fd5c53cbad", null ]
+    [ "outEdges", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#acec056e16f1a828ecd87c4fd5c53cbad", null ],
+    [ "slowestPredecessorId", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a02f61fceb3584c08c74a01e37a3cb132", null ]
 ];

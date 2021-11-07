@@ -5,6 +5,7 @@ var class_placement_timing_info_1_1_timing_graph =
     [ "TimingGraph", "class_placement_timing_info_1_1_timing_graph.html#aa95ed00466d35a403bf0e908e5f5bc28", null ],
     [ "~TimingGraph", "class_placement_timing_info_1_1_timing_graph.html#a2065e5889148fae7abf010a5d851d405", null ],
     [ "addEdgeBetween", "class_placement_timing_info_1_1_timing_graph.html#a39b64e4008879914fa3ecf162478b131", null ],
+    [ "backTraceDelayLongestPathFromNode", "class_placement_timing_info_1_1_timing_graph.html#aca632459df523e81f9ea3e84d4fa7da5", null ],
     [ "backwardLevelization", "class_placement_timing_info_1_1_timing_graph.html#a8200fa84bf5c84b277a0ecb2aa548a8b", null ],
     [ "BFSFromNode", "class_placement_timing_info_1_1_timing_graph.html#a4793b2378cc7cfc71f18e7a6329a78d5", null ],
     [ "DFSFromNode", "class_placement_timing_info_1_1_timing_graph.html#a448d7594f0abb9b0074bdb1282b44c8c", null ],
