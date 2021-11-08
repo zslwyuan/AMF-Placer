@@ -62,7 +62,7 @@ class PlacementTimingInfo
          * @brief Construct a new empty Timing Graph object
          *
          */
-        TimingGraph()
+        TimingGraph(PlacementTimingInfo *timingInfo) : timingInfo(timingInfo)
         {
             nodes.clear();
             edges.clear();
@@ -288,6 +288,26 @@ class PlacementTimingInfo
             inline void setSlowestPredecessorId(int _slowestPredecessorId)
             {
                 slowestPredecessorId = _slowestPredecessorId;
+            }
+
+            /**
+             * @brief Set the inner delay
+             *
+             * @param _innerDelay
+             */
+            inline void setInnerDelay(float _innerDelay)
+            {
+                innerDelay = _innerDelay;
+            }
+
+            /**
+             * @brief Get the inner delay
+             *
+             * @return float
+             */
+            inline float getInnerDelay()
+            {
+                return innerDelay;
             }
 
           private:
@@ -593,6 +613,7 @@ class PlacementTimingInfo
         }
 
       private:
+        PlacementTimingInfo *timingInfo = nullptr;
         std::vector<TimingNode *> nodes;
         std::vector<TimingNode *> pathLenSortedNodes;
         std::vector<TimingEdge *> edges;
@@ -654,6 +675,11 @@ class PlacementTimingInfo
     inline int getMediumPathThresholdLevel()
     {
         return simpleTimingGraph->getMediumPathThresholdLevel();
+    }
+
+    inline DeviceInfo *getDeviceInfo()
+    {
+        return deviceInfo;
     }
 
   private:

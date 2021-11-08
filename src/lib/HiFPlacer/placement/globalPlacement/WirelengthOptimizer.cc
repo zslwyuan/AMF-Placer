@@ -726,7 +726,6 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
     {
         auto curPU = PUXY.first;
         float cX = PUXY.second.first;
-        float cY = curPU->Y();
         if (std::fabs(curPU->X() - cX) > 6)
             placementInfo->addPseudoNetsInPlacementInfo(
                 xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,

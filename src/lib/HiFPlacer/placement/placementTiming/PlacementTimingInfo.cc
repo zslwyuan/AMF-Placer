@@ -31,7 +31,7 @@ PlacementTimingInfo::PlacementTimingInfo(DesignInfo *designInfo, DeviceInfo *dev
 void PlacementTimingInfo::buildSimpleTimingGraph()
 {
     print_status("PlacementTimingInfo: building simple timing graph (TimingNode is DesignCell)");
-    simpleTimingGraph = new TimingGraph<DesignInfo::DesignCell>();
+    simpleTimingGraph = new TimingGraph<DesignInfo::DesignCell>(this);
     for (auto curCell : designInfo->getCells())
     {
         auto newNode =
@@ -480,7 +480,7 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::pr
                 int predId = inEdge->getSource()->getId();
                 float predDelay = inEdge->getSource()->getLatestArrival();
                 float edgeDelay = inEdge->getDelay();
-                float newDelay = predDelay + edgeDelay;
+                float newDelay = predDelay + edgeDelay + curNode->getInnerDelay();
                 if (newDelay > curNode->getLatestArrival())
                 {
                     curNode->setLatestArrival(newDelay);
