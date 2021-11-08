@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['hashed_0',['hashed',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a74526fa718d6febf60afd5cd54e9b906',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['hashid_1',['hashId',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a40d1fcc64cf200aad28c8f06933338a4',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['hasuserdefinedclusterinfo_2',['hasUserDefinedClusterInfo',['../class_global_placer.html#aad3c7d20f363b6c91a801106d9f28daa',1,'GlobalPlacer']]],
-  ['height_3',['height',['../namespaceexport_device_location.html#a3db3509ace0e129ded3495bfe533e3d9',1,'exportDeviceLocation.height()'],['../namespacepaint_placement.html#a965eec88484a73e29a6608c07efe9d26',1,'paintPlacement.height()'],['../namespacefig_process.html#a360351dc40bfbc26eaf5ab8a97c8c05f',1,'figProcess.height()']]],
-  ['help_4',['help',['../namespaceunplace_failure_cells.html#a48a32f0c6534101d0ac8f513646e55dc',1,'unplaceFailureCells.help()'],['../namespaceremove_failure_part_from_tcl.html#a39ff64bc7e5a652862b4dde0cfbb02b2',1,'removeFailurePartFromTcl.help()'],['../namespacepaint_placement.html#aa82aaedc95a3eeb966ea73d9ca46e770',1,'paintPlacement.help()']]],
-  ['hifplacer_5fhashprimes_5',['HiFPlacer_hashprimes',['../const_8h.html#a890056c93bca36c1e4864fcc33f9f54d',1,'const.h']]],
-  ['historyaveragedisplacement_6',['historyAverageDisplacement',['../class_global_placer.html#ac0760d86aa9edea6363de0160bc7242f',1,'GlobalPlacer']]],
-  ['historyhpwls_7',['historyHPWLs',['../class_global_placer.html#a2e18be150ca186a2337d0f4be37ef54f',1,'GlobalPlacer']]],
-  ['hpwlchange_8',['HPWLChange',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#adc9d1edb02b495633e30be5ab22926e3',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['hpwlchangelittle_9',['HPWLChangeLittle',['../class_global_placer.html#a639eb753ac031abc61beb91567b572d6',1,'GlobalPlacer']]],
-  ['hpwlweight_10',['HPWLWeight',['../class_parallel_c_l_b_packer.html#ada0b5e0abfeb7db1c3069a543afe3c2e',1,'ParallelCLBPacker::HPWLWeight()'],['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad59b8408020cbff5f2faf17bac58351b',1,'ParallelCLBPacker::PackingCLBSite::HPWLWeight()'],['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1b661421cb1c3c2d0d8137962eb00d63',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::HPWLWeight()']]]
+  ['generalnetweight_0',['generalNetWeight',['../class_wirelength_optimizer.html#a4c0e97d41ee7c72b3ada1e179d1edca5',1,'WirelengthOptimizer']]],
+  ['generalspreader_1',['generalSpreader',['../class_global_placer.html#a8fb70ed192a690363fcc090f172520bb',1,'GlobalPlacer']]],
+  ['globalbingrid_2',['globalBinGrid',['../class_placement_info.html#a76e4d38f78732c0377a81f453642974e',1,'PlacementInfo']]],
+  ['globalmaxx_3',['globalMaxX',['../class_placement_info.html#a905ac0c87afbc7b091b021a05ef4a0c6',1,'PlacementInfo']]],
+  ['globalmaxy_4',['globalMaxY',['../class_placement_info.html#acd42b431d709f0db91f8360a32e88294',1,'PlacementInfo']]],
+  ['globalminx_5',['globalMinX',['../class_placement_info.html#a30c7eef84ff175ecb85e3f294a22b443',1,'PlacementInfo']]],
+  ['globalminy_6',['globalMinY',['../class_placement_info.html#ae34e9cdb398003f821b672252abc2d39',1,'PlacementInfo']]],
+  ['globalplacer_7',['globalPlacer',['../class_a_m_f_placer.html#a5b01fb2cf9d8f7f15a59892ed9a951ae',1,'AMFPlacer']]],
+  ['gridh_8',['gridH',['../class_s_a_placer.html#a89b1fa30cf88a6d883257ddc54e25e2c',1,'SAPlacer']]],
+  ['gridw_9',['gridW',['../class_s_a_placer.html#aae677401ba2a9f6b1e1d0926219ed63f',1,'SAPlacer']]],
+  ['gridx_10',['gridX',['../class_device_info_1_1_clock_region.html#a3090e63e749a5aa9253f4c8f3ecd456d',1,'DeviceInfo::ClockRegion']]],
+  ['gridy_11',['gridY',['../class_device_info_1_1_clock_region.html#a078571146059793ccc87a611fc681e5a',1,'DeviceInfo::ClockRegion']]],
+  ['gw_12',['gw',['../namespaceexport_device_location.html#a7f65b699e9332c5c3e7bb41bb450bb28',1,'exportDeviceLocation.gw()'],['../namespaceget_pin_offset.html#a8b0b21a442621b5b29a5bc2d9f7b7ee9',1,'getPinOffset.gw()']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['densityvisualization_0',['densityVisualization',['../namespacedensity_visualization.html',1,'']]]
+  ['delayvisualization_0',['delayVisualization',['../namespacedelay_visualization.html',1,'']]],
+  ['densityvisualization_1',['densityVisualization',['../namespacedensity_visualization.html',1,'']]]
 ];

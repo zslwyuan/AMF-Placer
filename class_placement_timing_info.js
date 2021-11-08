@@ -4,6 +4,7 @@ var class_placement_timing_info =
     [ "PlacementTimingInfo", "class_placement_timing_info.html#a563843a7fc5ac32d06fa1d8ce590c1a5", null ],
     [ "~PlacementTimingInfo", "class_placement_timing_info.html#ab971c7a27e2eb33255544d92792195fe", null ],
     [ "buildSimpleTimingGraph", "class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17", null ],
+    [ "getDeviceInfo", "class_placement_timing_info.html#ade3d99821d8812d1107890f031208e29", null ],
     [ "getLongPathThresholdLevel", "class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc", null ],
     [ "getMediumPathThresholdLevel", "class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20", null ],
     [ "getSimplePlacementTimingGraph", "class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073", null ],

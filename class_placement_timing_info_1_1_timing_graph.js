@@ -2,7 +2,7 @@ var class_placement_timing_info_1_1_timing_graph =
 [
     [ "TimingEdge", "class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html", "class_placement_timing_info_1_1_timing_graph_1_1_timing_edge" ],
     [ "TimingNode", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node" ],
-    [ "TimingGraph", "class_placement_timing_info_1_1_timing_graph.html#aa95ed00466d35a403bf0e908e5f5bc28", null ],
+    [ "TimingGraph", "class_placement_timing_info_1_1_timing_graph.html#a22dde25d0206647b8984cb60d05cedf8", null ],
     [ "~TimingGraph", "class_placement_timing_info_1_1_timing_graph.html#a2065e5889148fae7abf010a5d851d405", null ],
     [ "addEdgeBetween", "class_placement_timing_info_1_1_timing_graph.html#a39b64e4008879914fa3ecf162478b131", null ],
     [ "backTraceDelayLongestPathFromNode", "class_placement_timing_info_1_1_timing_graph.html#aca632459df523e81f9ea3e84d4fa7da5", null ],
@@ -30,5 +30,6 @@ var class_placement_timing_info_1_1_timing_graph =
     [ "mediumPathThresholdLevel", "class_placement_timing_info_1_1_timing_graph.html#afe1a17fee57d1c13cc9f1fbbe86f8e72", null ],
     [ "mediumPathThrRatio", "class_placement_timing_info_1_1_timing_graph.html#a5098caf8604dba63fbba831f50c3b950", null ],
     [ "nodes", "class_placement_timing_info_1_1_timing_graph.html#ac9148947663ded1bf22d7a41375917ee", null ],
-    [ "pathLenSortedNodes", "class_placement_timing_info_1_1_timing_graph.html#a8eb31abcf160f82d65deca1b11d56e2a", null ]
+    [ "pathLenSortedNodes", "class_placement_timing_info_1_1_timing_graph.html#a8eb31abcf160f82d65deca1b11d56e2a", null ],
+    [ "timingInfo", "class_placement_timing_info_1_1_timing_graph.html#ab2631f81ba0963e5c0c0b2be5b649b58", null ]
 ];

@@ -13,8 +13,8 @@ var searchData=
   ['tiletype2tiles_10',['tileType2Tiles',['../class_device_info.html#a0c4f71dfd2b837fe0a2effbc9370c03c',1,'DeviceInfo']]],
   ['tiletypes_11',['tileTypes',['../class_device_info.html#a296a0c051b18058a211aa0dc1329e648',1,'DeviceInfo']]],
   ['timingedge_12',['TimingEdge',['../class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html',1,'PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingEdge'],['../class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html#a0e765ee98568ee52ccc5277a7418bff6',1,'PlacementTimingInfo::TimingGraph::TimingEdge::TimingEdge()']]],
-  ['timinggraph_13',['TimingGraph',['../class_placement_timing_info_1_1_timing_graph.html',1,'PlacementTimingInfo::TimingGraph&lt; nodeType &gt;'],['../class_placement_timing_info_1_1_timing_graph.html#aa95ed00466d35a403bf0e908e5f5bc28',1,'PlacementTimingInfo::TimingGraph::TimingGraph()']]],
-  ['timinginfo_14',['timingInfo',['../class_placement_timing_optimizer.html#a49d680de3726f5057d3db11c1e9fb486',1,'PlacementTimingOptimizer']]],
+  ['timinggraph_13',['TimingGraph',['../class_placement_timing_info_1_1_timing_graph.html',1,'PlacementTimingInfo::TimingGraph&lt; nodeType &gt;'],['../class_placement_timing_info_1_1_timing_graph.html#a22dde25d0206647b8984cb60d05cedf8',1,'PlacementTimingInfo::TimingGraph::TimingGraph(PlacementTimingInfo *timingInfo)']]],
+  ['timinginfo_14',['timingInfo',['../class_placement_timing_info_1_1_timing_graph.html#ab2631f81ba0963e5c0c0b2be5b649b58',1,'PlacementTimingInfo::TimingGraph::timingInfo()'],['../class_placement_timing_optimizer.html#a49d680de3726f5057d3db11c1e9fb486',1,'PlacementTimingOptimizer::timingInfo()']]],
   ['timingnode_15',['TimingNode',['../class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html',1,'PlacementTimingInfo::TimingGraph&lt; nodeType &gt;::TimingNode'],['../class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a1e446c40c2f02540d0e9d8b4349e6e32',1,'PlacementTimingInfo::TimingGraph::TimingNode::TimingNode()']]],
   ['timingoptenabled_16',['timingOptEnabled',['../class_global_placer.html#ac2e8e63134e659242a4d28c45e9d658c',1,'GlobalPlacer']]],
   ['tmploc_17',['tmploc',['../namespaceget_pin_offset.html#ad3aa47a9dbe7f11711254de13698f8c7',1,'getPinOffset']]],
@@ -47,6 +47,7 @@ var searchData=
   ['tryremovelutpairfrompairs_44',['tryRemoveLUTPairFromPairs',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ad6fb34950187dacbb99c6cefc4888a84',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['tryremovesinglelut_45',['tryRemoveSingleLUT',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a88b06096ffbc50885c014e8512008ea8',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['tryremovesinglelutfrompairs_46',['tryRemoveSingleLUTFromPairs',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4a8f9e6a66d3408478015beea9ffba51',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
-  ['type_47',['type',['../class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083',1,'DeviceInfo::DeviceElement::type()'],['../class_design_info_1_1_design_element.html#a0ab5c559fcb022b3033a141e67e46cdd',1,'DesignInfo::DesignElement::type()']]],
-  ['type2cells_48',['type2Cells',['../class_design_info.html#a2e94f4948c646ff032960efb452b89cd',1,'DesignInfo']]]
+  ['tuplexy_47',['tupleXY',['../namespacedelay_visualization.html#a04e15315dfc971bae0b2448b5a4fde7f',1,'delayVisualization']]],
+  ['type_48',['type',['../class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083',1,'DeviceInfo::DeviceElement::type()'],['../class_design_info_1_1_design_element.html#a0ab5c559fcb022b3033a141e67e46cdd',1,'DesignInfo::DesignElement::type()']]],
+  ['type2cells_49',['type2Cells',['../class_design_info.html#a2e94f4948c646ff032960efb452b89cd',1,'DesignInfo']]]
 ];
