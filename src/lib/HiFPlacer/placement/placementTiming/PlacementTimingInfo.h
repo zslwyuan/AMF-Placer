@@ -310,6 +310,26 @@ class PlacementTimingInfo
                 return innerDelay;
             }
 
+            /**
+             * @brief Get the expected arrival time
+             *
+             * @return float
+             */
+            inline float getExpectedArrivalTime()
+            {
+                return expectedArrival;
+            }
+
+            /**
+             * @brief Set the expected arrival time
+             *
+             * @param _expectedArrival
+             */
+            inline void setExpectedArrivalTime(float _expectedArrival)
+            {
+                expectedArrival = _expectedArrival;
+            }
+
           private:
             /**
              * @brief the pointer linked to the design element (pin or cell)
@@ -317,8 +337,8 @@ class PlacementTimingInfo
              */
             nodeType *designNode;
             int id;
-            float latestArrival = 0.0;      // ns
-            float arrivalConstaint = 100.0; // ns
+            float latestArrival = 0.0;    // ns
+            float expectedArrival = 10.0; // ns
             int slowestPredecessorId = -1;
 
             /**

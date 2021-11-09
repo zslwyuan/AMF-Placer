@@ -470,7 +470,7 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::pr
     for (unsigned int i = 1; i < forwardlevel2NodeIds.size(); i++)
     {
         int numNodeInLayer = forwardlevel2NodeIds[i].size();
-
+#pragma omp parallel for
         for (int j = 0; j < numNodeInLayer; j++)
         {
             auto curNodeId = forwardlevel2NodeIds[i][j];

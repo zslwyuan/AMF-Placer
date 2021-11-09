@@ -164,6 +164,7 @@ void PlacementTimingOptimizer::setEdgesDelay()
     setPinsLocation();
 
     auto &pinLoc = placementInfo->getPinId2location();
+
     for (auto edge : timingGraph->getEdges())
     {
         auto &pin1Loc = pinLoc[edge->getSourcePin()->getElementIdInType()];
@@ -172,7 +173,39 @@ void PlacementTimingOptimizer::setEdgesDelay()
             continue;
         if (pin2Loc.X < -5 && pin2Loc.Y < -5)
             continue;
-        edge->setDelay(std::fabs(pin1Loc.X - pin2Loc.X) * xDelayUnit + std::fabs(pin1Loc.Y - pin2Loc.Y) * yDelayUnit);
+
+        int clockRegionX0, clockRegionY0;
+        deviceInfo->getClockRegionByLocation(pin1Loc.X, pin1Loc.Y, clockRegionX0, clockRegionY0);
+        int clockRegionX1, clockRegionY1;
+        deviceInfo->getClockRegionByLocation(pin2Loc.X, pin2Loc.Y, clockRegionX1, clockRegionY1);
+        edge->setDelay(getDelayByModel(std::fabs(pin1Loc.X - pin2Loc.X), std::fabs(pin1Loc.Y - pin2Loc.Y)) +
+                       std::abs(clockRegionX1 - clockRegionX0) * 0.5);
+    }
+
+    // get_property FAST_MAX [lindex [get_net_delays -interconnect_only -of_objects [get_nets
+    // {chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/dcsr_q_reg[step]}] -to [get_pins
+    // {chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/priv_lvl_q[1]_i_28__0/I2}] ] 0 ]
+    // 290
+
+    timingGraph->propogateArrivalTime();
+    float maxDelay = 0;
+    int maxDelayId = -1;
+    for (unsigned int i = 0; i < timingGraph->getNodes().size(); i++)
+    {
+        if (timingGraph->getNodes()[i]->getLatestArrival() > maxDelay)
+        {
+            maxDelay = timingGraph->getNodes()[i]->getLatestArrival();
+            maxDelayId = i;
+        }
+    }
+
+    auto resPath = timingGraph->backTraceDelayLongestPathFromNode(maxDelayId);
+
+    std::cout << "An example of long delay path for the current placement:\n";
+    for (auto id : resPath)
+    {
+        std::cout << designInfo->getCells()[id]->getName()
+                  << "   [delay]: " << timingGraph->getNodes()[id]->getLatestArrival() << "\n";
     }
 
     if (printOut)
@@ -396,7 +429,7 @@ void PlacementTimingOptimizer::moveDriverIntoBetterClockRegion(int pathLenThr, f
     print_warning("PlacementTimingOptimizer: clustering long path in one clock region");
 
     auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo_PathLenSorted();
-    auto simpleTimingGraph = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph();
+    // auto simpleTimingGraph = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph();
     auto &cellLoc = placementInfo->getCellId2location();
     auto deviceInfo = placementInfo->getDeviceInfo();
     auto YX2ClockRegion = deviceInfo->getClockRegions();

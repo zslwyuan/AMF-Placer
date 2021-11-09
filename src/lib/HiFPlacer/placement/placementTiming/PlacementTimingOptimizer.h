@@ -76,6 +76,16 @@ class PlacementTimingOptimizer
         return effectFactor;
     }
 
+    const float timingC[10] = {150.38575401, -620.94694989, -274.2735654, 494.72583191, 234.67951055};
+
+    inline float getDelayByModel(float X, float Y)
+    {
+        X *= 2;
+        return (timingC[0] + std::pow(X, 0.3) * timingC[1] + std::pow(Y, 0.3) * timingC[2] +
+                std::pow(X, 0.5) * timingC[3] + std::pow(Y, 0.5) * timingC[4]) /
+               1000.0;
+    }
+
   private:
     PlacementInfo *placementInfo = nullptr;
     PlacementTimingInfo *timingInfo = nullptr;

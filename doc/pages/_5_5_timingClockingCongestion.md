@@ -5,9 +5,21 @@ Simply optimizing wirelength will not make a placement feasible on FPGA device f
 
 We adapt this high-performance algorithm to our mixed-size placement scenarios with several major modifications:  
 
-1. The current version of AMF-Placer includes a graph-based timing analysis module which can identify elements in the long datapath. Based on this kind of information, the nets between elements will be enhanced accordingly to improve the timing result. A comprehensive static timing analysis will be available in a few months.
+1. The current version of AMF-Placer includes a graph-based timing analysis module which can identify elements in the long datapath. The timing model is based on simple polynomial regression. Based on this kind of information, the nets between elements will be enhanced accordingly to improve the timing result. A comprehensive static timing analysis will be available in a few months. Below is an example comparing the timing analysis results of AMF-Placer and Vivado: the left one is the critical path identified by AMF-Placer in OpenPiton and the right one is the critical path identified by Vivado in OpenPiton.
+
+<center>
+<img src="AMFTimingCriticalPath.png" alt="AMF-Placer Timing Critical Path" title="AMF-Placer Timing Critical Path" width="200" />    <img src="VivadoTimingCriticalPath.png" alt="Vivado Timing Critical Path" title="Vivado Timing Critical Path" width="200" />  
+</center>
+
+
 2. To lower the legalization overhead and the disturbance to the final convergence, we introduce quadratic pseudo nets to pull elements into their major clock regions (or fence regions). For each global placement iteration, the anchors of the pseudo nets and the "strength" of the pseudo nets are updated according to the relative location of the elements and the target regions. Meanwhile, for the half-column legalization of clocking (e.g.m >12 clocks in a half-column), AMF-Placer will inflaten elements in the clocking congestion region to lower the clocking legalization difficulty.
-3. To consider the global congestion and local congestion, AMF-Placer solves the problem by controlling the area supply and demand. After congestion estimation, the local congestion can be more effectively resolved by reducing the area supply in the congested bins while the global congestion can be more effectively resolved by increasing the area demands of the elements.
+
+
+3. To consider the global congestion and local congestion, AMF-Placer solves the problem by controlling the area supply and demand. After congestion estimation, the local congestion can be more effectively resolved by reducing the area supply in the congested bins while the global congestion can be more effectively resolved by increasing the area demands of the elements. The placement congestion level of AMF-Placer is similar to Vivado and below is a figure for the most congested benchmarks (MiniMap2 with PCIE banks and OpenPiton with DDR Interface):
+
+<center>
+<img src="congestionExample.png" alt="Congestion Example" title="Congestion Example" width="800" /> 
+</center>
 
 
 For source code details, please check the classes: PlacementInfo and PlacementTimingInfo. 
