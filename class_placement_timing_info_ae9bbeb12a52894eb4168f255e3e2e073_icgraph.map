@@ -1,7 +1,6 @@
 <map id="PlacementTimingInfo::getSimplePlacementTimingGraph" name="PlacementTimingInfo::getSimplePlacementTimingGraph">
-<area shape="rect" id="node1" title="Get the Simple Placement Timing Graph object." alt="" coords="443,63,629,119"/>
+<area shape="rect" id="node1" title="Get the Simple Placement Timing Graph object." alt="" coords="443,31,629,87"/>
 <area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,5,395,47"/>
-<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#ac9cc5481cb0d15ec670deddffa1cb593" title=" " alt="" coords="167,71,391,112"/>
-<area shape="rect" id="node5" href="$class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58" title=" " alt="" coords="190,136,369,177"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
+<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58" title=" " alt="" coords="190,71,369,112"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>

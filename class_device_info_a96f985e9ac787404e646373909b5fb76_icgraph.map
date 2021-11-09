@@ -1,12 +1,13 @@
 <map id="DeviceInfo::getClockRegionByLocation" name="DeviceInfo::getClockRegionByLocation">
-<area shape="rect" id="node1" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="979,225,1160,266"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="725,78,905,119"/>
-<area shape="rect" id="node7" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,162,395,203"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_net.html#a7aed503da97a1dfd0e230aaba5fc3da1" title="Get the New HPWL By Trying to move a PlacementUnit object." alt="" coords="724,225,907,266"/>
-<area shape="rect" id="node9" href="$class_placement_timing_optimizer.html#ac9cc5481cb0d15ec670deddffa1cb593" title=" " alt="" coords="703,290,927,331"/>
-<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="700,355,931,397"/>
-<area shape="rect" id="node3" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="443,5,652,32"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,81,116,108"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="447,107,648,149"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="178,5,381,32"/>
+<area shape="rect" id="node1" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="972,199,1153,241"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="719,49,899,90"/>
+<area shape="rect" id="node7" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="415,165,645,206"/>
+<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_net.html#a7aed503da97a1dfd0e230aaba5fc3da1" title="Get the New HPWL By Trying to move a PlacementUnit object." alt="" coords="717,166,900,207"/>
+<area shape="rect" id="node9" href="$class_placement_timing_optimizer.html#ac9cc5481cb0d15ec670deddffa1cb593" title=" " alt="" coords="697,231,921,273"/>
+<area shape="rect" id="node10" href="$class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58" title=" " alt="" coords="176,257,355,298"/>
+<area shape="rect" id="node11" href="$class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="693,349,924,390"/>
+<area shape="rect" id="node3" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="425,5,635,32"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,115,116,141"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,107,366,149"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,5,367,32"/>
 </map>

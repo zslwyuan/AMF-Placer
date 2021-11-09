@@ -1,5 +1,9 @@
 var NAVTREEINDEX12 =
 {
+"struct_q_p_solver_wrapper_1_1solver_settings_type.html#a6d6d7f2774e6986fef955585dc4f8504":[9,0,22,1,3],
+"struct_q_p_solver_wrapper_1_1solver_settings_type.html#ac4f9a060326b4c30e608725d9648d097":[9,0,22,1,0],
+"struct_q_p_solver_wrapper_1_1solver_settings_type.html#ac87087e39dc268a6eda586f527acf895":[9,0,22,1,5],
+"struct_q_p_solver_wrapper_1_1solver_settings_type.html#ac9658bb92ac52126933c91205b0d06a7":[9,0,22,1,2],
 "sys_info_8cc.html":[10,0,2,1,1,11],
 "sys_info_8cc.html#a47001a6a70cbe0ca4ac1b6743e729ff1":[10,0,2,1,1,11,0],
 "sys_info_8cc_source.html":[10,0,2,1,1,11],
