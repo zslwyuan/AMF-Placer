@@ -144,7 +144,7 @@ void PlacementTimingOptimizer::setPinsLocation()
 
 void PlacementTimingOptimizer::conductStaticTimingAnalysis()
 {
-
+    print_status("PlacementTimingOptimizer: conducting Static Timing Analysis");
     bool printOut = false;
     std::string dumpFileName = "optNetDelayInfo.txt";
     std::ofstream outfile0;
@@ -165,8 +165,13 @@ void PlacementTimingOptimizer::conductStaticTimingAnalysis()
 
     auto &pinLoc = placementInfo->getPinId2location();
 
-    for (auto edge : timingGraph->getEdges())
+    auto &edges = timingGraph->getEdges();
+    int numEdges = edges.size();
+
+#pragma omp parallel for
+    for (int i = 0; i < numEdges; i++)
     {
+        auto edge = edges[i];
         auto &pin1Loc = pinLoc[edge->getSourcePin()->getElementIdInType()];
         auto &pin2Loc = pinLoc[edge->getSinkPin()->getElementIdInType()];
         if (pin1Loc.X < -5 && pin1Loc.Y < -5)
@@ -174,12 +179,7 @@ void PlacementTimingOptimizer::conductStaticTimingAnalysis()
         if (pin2Loc.X < -5 && pin2Loc.Y < -5)
             continue;
 
-        int clockRegionX0, clockRegionY0;
-        deviceInfo->getClockRegionByLocation(pin1Loc.X, pin1Loc.Y, clockRegionX0, clockRegionY0);
-        int clockRegionX1, clockRegionY1;
-        deviceInfo->getClockRegionByLocation(pin2Loc.X, pin2Loc.Y, clockRegionX1, clockRegionY1);
-        edge->setDelay(getDelayByModel(std::fabs(pin1Loc.X - pin2Loc.X), std::fabs(pin1Loc.Y - pin2Loc.Y)) +
-                       std::abs(clockRegionX1 - clockRegionX0) * 0.5);
+        edge->setDelay(getDelayByModel(pin1Loc.X, pin1Loc.Y, pin2Loc.X, pin2Loc.Y));
     }
 
     timingGraph->propogateArrivalTime();

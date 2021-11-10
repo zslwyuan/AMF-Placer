@@ -659,6 +659,16 @@ class PlacementTimingInfo
             longPathThrRatio = _r;
         }
 
+        inline float getClockPeriod()
+        {
+            return clockPeriod;
+        }
+
+        inline void setClockPeriod(float _clockPeriod)
+        {
+            clockPeriod = _clockPeriod;
+        }
+
       private:
         PlacementTimingInfo *timingInfo = nullptr;
         std::vector<TimingNode *> nodes;

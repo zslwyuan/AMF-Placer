@@ -197,8 +197,10 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
 
     if (timingOptimizer)
     {
-        addPseudoNet_LevelBased(placementInfo->getLongPathThresholdLevel(),
-                                (0.2 * timingOptimizer->getEffectFactor()) * generalNetWeight, 25);
+        // addPseudoNet_LevelBased(placementInfo->getLongPathThresholdLevel(),
+        //                         (0.2 * timingOptimizer->getEffectFactor()) * generalNetWeight, 25);
+        timingOptimizer->conductStaticTimingAnalysis();
+        addPseudoNet_SlackBased((0.2 * timingOptimizer->getEffectFactor()), 1.1, timingOptimizer);
     }
 
     if (enableUserDefinedClusterOpt)
@@ -527,6 +529,99 @@ void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeig
 
     print_status("WirelengthOptimizer: enhanceNetWeight_LevelBased done (maxEnhancedRatio=" +
                  std::to_string(maxEnhanceRatio) + ")");
+    // outfile0.close();
+}
+
+void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double slackPowFactor,
+                                                  PlacementTimingOptimizer *timingOptimizer)
+{
+    assert(placementInfo->getTimingInfo());
+    if (slackPowFactor < 0 || timingWeight < 0)
+        return;
+
+    float maxEnhanceRatio = 0;
+    auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
+    float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+    auto &cellLoc = placementInfo->getCellId2location();
+    assert(cellLoc.size() == timingNodes.size());
+
+    // std::ofstream outfile0("timingOptProc.log");
+
+    auto deviceInfo = placementInfo->getDeviceInfo();
+
+    int enhanceNetCnt = 0;
+    for (auto curNet : placementInfo->getPlacementNets())
+    {
+        auto designNet = curNet->getDesignNet();
+        if (designNet->checkIsPowerNet())
+            continue;
+
+        if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 || curNet->getUnits().size() >= 500)
+            continue;
+        auto &PUs = curNet->getUnits();
+        auto &pins = designNet->getPins();
+        int pinNum = pins.size();
+
+        assert(curNet->getUnits().size() == (unsigned int)pinNum);
+
+        int driverPinInNet = -1;
+
+        for (int i = 0; i < pinNum; i++)
+        {
+            if (pins[i]->isOutputPort())
+            {
+                driverPinInNet = i;
+                break;
+            }
+        }
+
+        assert(driverPinInNet >= 0);
+
+        // get the srcPin information
+        auto srcCell = pins[driverPinInNet]->getCell();
+        unsigned int srcCellId = srcCell->getCellId();
+        auto srcNode = timingNodes[srcCellId];
+        auto srcLoc = cellLoc[srcCellId];
+
+        int srcClockRegionXId, srcClockRegionYId;
+        deviceInfo->getClockRegionByLocation(srcLoc.X, srcLoc.Y, srcClockRegionXId, srcClockRegionYId);
+
+        float w = 2 * timingWeight / std::pow((float)(pinNum - 1), 0.5);
+
+        // iterate the sinkPin for evaluation and enhancement
+        for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
+        {
+            if (pinBeDriven == driverPinInNet)
+                continue;
+
+            // get the sinkPin information
+            auto sinkCell = pins[pinBeDriven]->getCell();
+            unsigned int sinkCellId = sinkCell->getCellId();
+            auto sinkNode = timingNodes[sinkCellId];
+            auto sinkLoc = cellLoc[sinkCellId];
+            float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() -
+                          timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+
+            if (slack > 0)
+                continue;
+            enhanceNetCnt++;
+            // enhance the net based on the slack
+            float enhanceRatio = std::pow(1 - slack / clockPeriod, slackPowFactor);
+
+            curNet->addPseudoNet_enhancePin2Pin(
+                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,
+                PUs[driverPinInNet]->getId(), PUs[pinBeDriven]->getId(), driverPinInNet, pinBeDriven);
+
+            curNet->addPseudoNet_enhancePin2Pin(
+                ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
+                ySolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, false, true,
+                PUs[driverPinInNet]->getId(), PUs[pinBeDriven]->getId(), driverPinInNet, pinBeDriven);
+        }
+    }
+
+    print_status("WirelengthOptimizer: addPseudoNet_SlackBased done (" + std::to_string(enhanceNetCnt) +
+                 " pin2pin nets have been enhanced.");
     // outfile0.close();
 }
 

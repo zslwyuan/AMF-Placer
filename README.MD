@@ -44,13 +44,14 @@ For commercial usage of this open-source project, users must contact authors (We
 ## Features
 
 1. supports placeemnt with a large number of mixed-size macros with shape constraints in practical FPGA applications.
-2. a set of optional optimization techniques to improve mixed-size FPGA placement QoR
-3. parallelizes the implementation of each stage of placement based on multi-threading
-4. modularized function implementation for easier further development
-5. flexible and extensible JSON-based placement configuration
-6. supports placement check-point importing/exporting
-7. a set of pre-implementation benchmarks from latest practical FPGA applications
-8. provides a set of Tcl scripts which extracts design netlist from Vivado and exports post-placement information to Vivado
+2. wirelength-driven, routability-aware, packing-aware, clock-aware. (initially timing-driven with basic embedded static timing analysis)
+3. a set of optional optimization techniques to improve mixed-size FPGA placement QoR
+4. parallelizes the implementation of each stage of placement based on multi-threading
+5. modularized function implementation for easier further development
+6. flexible and extensible JSON-based placement configuration
+7. supports placement check-point importing/exporting
+8. a set of pre-implementation benchmarks from latest practical FPGA applications
+9. provides a set of Tcl scripts which extracts design netlist from Vivado and exports post-placement information to Vivado
 
 ## Implementation Overview
 

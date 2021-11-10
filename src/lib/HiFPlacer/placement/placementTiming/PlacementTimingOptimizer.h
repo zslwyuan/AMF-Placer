@@ -78,12 +78,20 @@ class PlacementTimingOptimizer
 
     const float timingC[10] = {150.38575401, -620.94694989, -274.2735654, 494.72583191, 234.67951055};
 
-    inline float getDelayByModel(float X, float Y)
+    inline float getDelayByModel(float X1, float Y1, float X2, float Y2)
     {
-        X *= 2;
+        int clockRegionX0, clockRegionY0;
+        deviceInfo->getClockRegionByLocation(X1, Y1, clockRegionX0, clockRegionY0);
+        int clockRegionX1, clockRegionY1;
+        deviceInfo->getClockRegionByLocation(X2, Y2, clockRegionX1, clockRegionY1);
+
+        float X = std::fabs(X1 - X2) * 2;
+        float Y = std::fabs(Y1 - Y2);
+
         return (timingC[0] + std::pow(X, 0.3) * timingC[1] + std::pow(Y, 0.3) * timingC[2] +
                 std::pow(X, 0.5) * timingC[3] + std::pow(Y, 0.5) * timingC[4]) /
-               1000.0;
+                   1000.0 +
+               std::abs(clockRegionX1 - clockRegionX0) * 0.5;
     }
 
   private:

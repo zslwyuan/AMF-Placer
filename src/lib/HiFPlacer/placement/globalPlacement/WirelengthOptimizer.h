@@ -222,10 +222,19 @@ class WirelengthOptimizer
      * @brief add pseudo net for timing optimization based on the length of timing path and the span of the nets
      *
      * @param levelThr the threshold of the level of the timing path to trigger to timing optimzation
-     * @param pesudoNetWeight the common weight factor for pseudo nets
+     * @param timingWeight the common weight factor for pseudo nets for timing
      * @param disExpected the expected total length of timing paths
      */
-    void addPseudoNet_LevelBased(int levelThr, float pesudoNetWeight, double disExpected);
+    void addPseudoNet_LevelBased(int levelThr, float timingWeight, double disExpected);
+
+    /**
+     * @brief add pseudo net for timing optimization based on the timing slack of each elements in the design netlist
+     *
+     * @param timingWeight the common weight factor for pseudo nets for timing
+     * @param slackPowFactor a factor for the sensitivity of negative timing slack
+     * @param timingOptimizer the handler of timing-related analysis
+     */
+    void addPseudoNet_SlackBased(float timingWeight, double slackPowFactor, PlacementTimingOptimizer *timingOptimizer);
 
     /**
      * @brief add pseudo nets for clock region
