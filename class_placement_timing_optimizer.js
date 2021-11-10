@@ -6,7 +6,7 @@ var class_placement_timing_optimizer =
     [ "conductStaticTimingAnalysis", "class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332", null ],
     [ "dumpClockRegionClusters", "class_placement_timing_optimizer.html#a9a16aed7f1744c9d40fdb8d1c1dd7b05", null ],
     [ "enhanceNetWeight_LevelBased", "class_placement_timing_optimizer.html#a9a4dab3fa9bfc2f1e9f9083e3a4d34c8", null ],
-    [ "getDelayByModel", "class_placement_timing_optimizer.html#a17b2bb6437b695a17aec62ea45f39474", null ],
+    [ "getDelayByModel", "class_placement_timing_optimizer.html#a63fc90e77527039f9d6d56f4bdd7125e", null ],
     [ "getDis", "class_placement_timing_optimizer.html#ae63503b3241a38821742547b2e96b0e2", null ],
     [ "getEffectFactor", "class_placement_timing_optimizer.html#a62f35a55648c6687d465fd009683a3eb", null ],
     [ "getPois", "class_placement_timing_optimizer.html#a41d0851087015f4b169455b8ff005b21", null ],

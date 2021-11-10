@@ -1,40 +1,47 @@
 <map id="WirelengthOptimizer::GlobalPlacementQPSolve" name="WirelengthOptimizer::GlobalPlacementQPSolve">
-<area shape="rect" id="node1" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="5,474,184,515"/>
+<area shape="rect" id="node1" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="5,602,184,643"/>
 <area shape="rect" id="node2" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="801,5,891,32"/>
-<area shape="rect" id="node3" href="$class_q_p_solver_wrapper.html#a4d661af587ec252bc62b14d420cd6bce" title=" " alt="" coords="232,213,416,240"/>
-<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="255,474,393,515"/>
-<area shape="rect" id="node6" href="$class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="501,735,651,777"/>
-<area shape="rect" id="node9" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="247,539,401,581"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="750,545,942,586"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="741,676,951,703"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="1006,694,1181,735"/>
-<area shape="rect" id="node10" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="464,539,688,581"/>
-<area shape="rect" id="node16" href="$class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="481,233,671,274"/>
-<area shape="rect" id="node19" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="736,341,956,368"/>
-<area shape="rect" id="node23" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="488,422,664,463"/>
-<area shape="rect" id="node26" href="$class_placement_timing_optimizer.html#a62f35a55648c6687d465fd009683a3eb" title=" " alt="" coords="487,605,665,646"/>
-<area shape="rect" id="node27" href="$class_placement_info.html#ac18f726c75937363f52be34154f4468c" title=" " alt="" coords="483,670,669,711"/>
-<area shape="rect" id="node28" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="797,975,895,1001"/>
-<area shape="rect" id="node29" href="$class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="479,357,673,398"/>
-<area shape="rect" id="node30" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region" alt="" coords="464,954,688,995"/>
-<area shape="rect" id="node32" href="$class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title="add pseudo net for user&#45;defined clusters" alt="" coords="465,800,687,856"/>
-<area shape="rect" id="node11" href="$class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="757,610,935,651"/>
-<area shape="rect" id="node15" href="$class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="755,443,937,469"/>
-<area shape="rect" id="node12" href="$class_placement_info.html#a31002e9f9505db4830e71b8b1eeb4837" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="1004,563,1183,605"/>
-<area shape="rect" id="node13" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="1006,629,1181,670"/>
-<area shape="rect" id="node14" href="$class_placement_info_1_1_placement_unit.html#aa8016d572d4e10c18b3f031428ad3db1" title=" " alt="" coords="1006,498,1181,539"/>
-<area shape="rect" id="node17" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="739,240,953,267"/>
-<area shape="rect" id="node18" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="750,291,942,317"/>
-<area shape="rect" id="node20" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="741,57,951,98"/>
-<area shape="rect" id="node21" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="751,123,941,149"/>
-<area shape="rect" id="node22" href="$class_wirelength_optimizer.html#a8e573e9f6494faa555f2b9ec171f5234" title="evaluate the Mahattan distance between two locations" alt="" coords="777,174,915,215"/>
-<area shape="rect" id="node24" href="$class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="747,493,945,520"/>
-<area shape="rect" id="node25" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="809,392,883,419"/>
-<area shape="rect" id="node31" href="$class_placement_info.html#aeff88485fec1f8a6e75670f737e42466" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="751,1026,941,1067"/>
-<area shape="rect" id="node33" href="$class_placement_info.html#add47297a7892d37d376e66c550fc1dd7" title=" " alt="" coords="750,727,942,753"/>
-<area shape="rect" id="node34" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="750,778,942,819"/>
-<area shape="rect" id="node37" href="$class_design_info.html#ad8e885107886e24ed0a3d1e976fab10b" title="Get the predefined clusters which are defined in design configuration files." alt="" coords="761,843,931,885"/>
-<area shape="rect" id="node38" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="759,909,933,950"/>
-<area shape="rect" id="node35" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1017,778,1169,819"/>
-<area shape="rect" id="node36" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1231,778,1408,819"/>
+<area shape="rect" id="node3" href="$class_q_p_solver_wrapper.html#a4d661af587ec252bc62b14d420cd6bce" title=" " alt="" coords="232,284,416,311"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#aa7862a173e4b6db619ea1f849a38bdf7" title="load to placement location from PlacementInfo to the solver" alt="" coords="255,602,393,643"/>
+<area shape="rect" id="node6" href="$class_wirelength_optimizer.html#a27d21c6da62056ba4d4496d7db667a8b" title="write placement location from the solver to the PlacementInfo" alt="" coords="501,981,651,1022"/>
+<area shape="rect" id="node9" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="247,667,401,709"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="750,638,942,679"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="741,1039,951,1065"/>
+<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="1024,1027,1199,1069"/>
+<area shape="rect" id="node10" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="464,733,688,774"/>
+<area shape="rect" id="node16" href="$class_wirelength_optimizer.html#ae3037a1a41564b20df209cb1411c7b2a" title="add pseudo net for timing optimization based on the timing slack of each elements in the design netli..." alt="" coords="481,209,671,250"/>
+<area shape="rect" id="node21" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="736,587,956,613"/>
+<area shape="rect" id="node25" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites" alt="" coords="488,798,664,839"/>
+<area shape="rect" id="node28" href="$class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="478,379,674,421"/>
+<area shape="rect" id="node34" href="$class_placement_timing_optimizer.html#a62f35a55648c6687d465fd009683a3eb" title=" " alt="" coords="487,667,665,709"/>
+<area shape="rect" id="node35" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="797,988,895,1015"/>
+<area shape="rect" id="node36" href="$class_wirelength_optimizer.html#a8cc10e0f8ef795b10fc924e14df90db8" title="a worker funtion for multi&#45;threading net weight updating" alt="" coords="479,550,673,591"/>
+<area shape="rect" id="node37" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region" alt="" coords="464,863,688,905"/>
+<area shape="rect" id="node39" href="$class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title="add pseudo net for user&#45;defined clusters" alt="" coords="465,1064,687,1120"/>
+<area shape="rect" id="node11" href="$class_placement_info.html#a4b02baf73596c67fad9ac1e3fcc35f3a" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="757,857,935,898"/>
+<area shape="rect" id="node15" href="$class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="755,704,937,731"/>
+<area shape="rect" id="node12" href="$class_placement_info.html#a31002e9f9505db4830e71b8b1eeb4837" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="1022,922,1201,963"/>
+<area shape="rect" id="node13" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="1024,791,1199,833"/>
+<area shape="rect" id="node14" href="$class_placement_info_1_1_placement_unit.html#aa8016d572d4e10c18b3f031428ad3db1" title=" " alt="" coords="1024,857,1199,898"/>
+<area shape="rect" id="node17" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="1004,157,1219,184"/>
+<area shape="rect" id="node18" href="$class_placement_timing_optimizer.html#a63fc90e77527039f9d6d56f4bdd7125e" title=" " alt="" coords="757,209,935,250"/>
+<area shape="rect" id="node20" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="750,56,942,83"/>
+<area shape="rect" id="node22" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="753,339,939,395"/>
+<area shape="rect" id="node23" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="741,274,951,315"/>
+<area shape="rect" id="node24" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="751,107,941,133"/>
+<area shape="rect" id="node19" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="1021,209,1202,250"/>
+<area shape="rect" id="node26" href="$class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="747,805,945,832"/>
+<area shape="rect" id="node27" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="809,755,883,781"/>
+<area shape="rect" id="node29" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="1287,485,1424,512"/>
+<area shape="rect" id="node30" href="$class_placement_info.html#aa78f1085615a69f263146b17f903a35f" title=" " alt="" coords="1005,384,1217,411"/>
+<area shape="rect" id="node31" href="$class_placement_timing_optimizer.html#a8e6810c2be22ebbe719229c7e6237adb" title=" " alt="" coords="757,470,935,511"/>
+<area shape="rect" id="node32" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="1032,435,1191,461"/>
+<area shape="rect" id="node33" href="$class_design_info.html#a1a2a05acb9f692e774aa6b05da1c3ee7" title=" " alt="" coords="1044,485,1179,512"/>
+<area shape="rect" id="node38" href="$class_placement_info.html#aeff88485fec1f8a6e75670f737e42466" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="751,922,941,963"/>
+<area shape="rect" id="node40" href="$class_placement_info.html#add47297a7892d37d376e66c550fc1dd7" title=" " alt="" coords="750,1287,942,1313"/>
+<area shape="rect" id="node41" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="750,1090,942,1131"/>
+<area shape="rect" id="node44" href="$class_design_info.html#ad8e885107886e24ed0a3d1e976fab10b" title="Get the predefined clusters which are defined in design configuration files." alt="" coords="761,1155,931,1197"/>
+<area shape="rect" id="node45" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="759,1221,933,1262"/>
+<area shape="rect" id="node42" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1035,1093,1187,1134"/>
+<area shape="rect" id="node43" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1267,1093,1444,1134"/>
 </map>

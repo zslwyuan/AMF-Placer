@@ -296,7 +296,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00729">729</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00739">739</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 </div>
 </div>
@@ -323,7 +323,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00719">719</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00729">729</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04188">PlacementInfo::buildSimpleTimingGraph()</a>.</p>
 <div class="dynheader">
@@ -362,7 +362,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00724">724</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00734">734</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_info_8h_source.html#l04188">PlacementInfo::buildSimpleTimingGraph()</a>.</p>
 <div class="dynheader">
@@ -404,18 +404,23 @@ Here is the caller graph for this function:</div>
 <p>Get the Simple Placement Timing Graph object. </p>
 <dl class="section return"><dt>Returns</dt><dd>TimingGraph&lt;DesignInfo::DesignCell&gt;* </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00714">714</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00724">724</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00224">PlacementTimingOptimizer::clusterLongPathInOneClockRegion()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">PlacementTimingOptimizer::conductStaticTimingAnalysis()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00535">WirelengthOptimizer::addPseudoNet_SlackBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00224">PlacementTimingOptimizer::clusterLongPathInOneClockRegion()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">PlacementTimingOptimizer::conductStaticTimingAnalysis()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_timing_info_ae9bbeb12a52894eb4168f255e3e2e073_icgraph.png" border="0" usemap="#aclass_placement_timing_info_ae9bbeb12a52894eb4168f255e3e2e073_icgraph" alt=""/></div>
 <map name="aclass_placement_timing_info_ae9bbeb12a52894eb4168f255e3e2e073_icgraph" id="aclass_placement_timing_info_ae9bbeb12a52894eb4168f255e3e2e073_icgraph">
-<area shape="rect" title="Get the Simple Placement Timing Graph object." alt="" coords="443,31,629,87"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,5,395,47"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="181,71,377,112"/>
-<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
+<area shape="rect" title="Get the Simple Placement Timing Graph object." alt="" coords="1163,82,1349,138"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ae3037a1a41564b20df209cb1411c7b2a" title="add pseudo net for timing optimization based on the timing slack of each elements in the design netli..." alt="" coords="921,89,1112,131"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="640,12,871,53"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="919,155,1115,196"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="679,107,832,148"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,107,592,148"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,121,365,163"/>
+<area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,56,365,97"/>
+<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,97,116,123"/>
 </map>
 </div>
 
@@ -447,24 +452,25 @@ Here is the caller graph for this function:</div>
 <p>Get the Simple Timing Info object which regard design cells as timing nodes. </p>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;TimingGraph&lt;DesignInfo::DesignCell&gt;::TimingNode *&gt;&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00699">699</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00709">709</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00332">WirelengthOptimizer::addPseudoNet_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">PlacementTimingOptimizer::conductStaticTimingAnalysis()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">PlacementTimingOptimizer::enhanceNetWeight_LevelBased()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01215">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPlacementUnitMaxPathLen()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_wirelength_optimizer_8cc_source.html#l00334">WirelengthOptimizer::addPseudoNet_LevelBased()</a>, <a class="el" href="_wirelength_optimizer_8cc_source.html#l00535">WirelengthOptimizer::addPseudoNet_SlackBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">PlacementTimingOptimizer::conductStaticTimingAnalysis()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">PlacementTimingOptimizer::enhanceNetWeight_LevelBased()</a>, and <a class="el" href="_parallel_c_l_b_packer_8h_source.html#l01215">ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPlacementUnitMaxPathLen()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_timing_info_af2499cb840d145578c41cf00f10a3850_icgraph.png" border="0" usemap="#aclass_placement_timing_info_af2499cb840d145578c41cf00f10a3850_icgraph" alt=""/></div>
 <map name="aclass_placement_timing_info_af2499cb840d145578c41cf00f10a3850_icgraph" id="aclass_placement_timing_info_af2499cb840d145578c41cf00f10a3850_icgraph">
-<area shape="rect" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="1207,100,1416,141"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a78ce7c8180fb4f865eb2eb70e5d068e0" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="944,71,1135,112"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="676,5,872,47"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#a9a4dab3fa9bfc2f1e9f9083e3a4d34c8" title=" " alt="" coords="413,129,628,171"/>
-<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="920,187,1159,243"/>
-<area shape="rect" href="class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="697,71,851,112"/>
-<area shape="rect" href="class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="431,64,610,105"/>
-<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,129,365,171"/>
-<area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,64,365,105"/>
-<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,71,116,98"/>
+<area shape="rect" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="1189,136,1399,177"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a356a39a094802a6278647320d62e89f4" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="927,5,1117,47"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ae3037a1a41564b20df209cb1411c7b2a" title="add pseudo net for timing optimization based on the timing slack of each elements in the design netli..." alt="" coords="927,136,1117,177"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="924,71,1120,112"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a9a4dab3fa9bfc2f1e9f9083e3a4d34c8" title=" " alt="" coords="640,195,855,236"/>
+<area shape="rect" href="class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="903,253,1141,309"/>
+<area shape="rect" href="class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="671,129,824,171"/>
+<area shape="rect" href="class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,129,592,171"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,195,365,236"/>
+<area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,129,365,171"/>
+<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,137,116,163"/>
 </map>
 </div>
 
@@ -493,7 +499,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00704">704</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00714">714</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00224">PlacementTimingOptimizer::clusterLongPathInOneClockRegion()</a>, <a class="el" href="_cluster_placer_8cc_source.html#l00132">ClusterPlacer::createLongPathClusterUnits()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00424">PlacementTimingOptimizer::moveDriverIntoBetterClockRegion()</a>.</p>
 <div class="dynheader">
@@ -537,7 +543,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00735">735</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00745">745</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00031">buildSimpleTimingGraph()</a>.</p>
 
@@ -563,9 +569,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00736">736</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00746">746</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00729">getDeviceInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8h_source.html#l00739">getDeviceInfo()</a>.</p>
 
 </div>
 </div>
@@ -589,7 +595,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00739">739</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00749">749</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00023">PlacementTimingInfo()</a>.</p>
 
@@ -615,9 +621,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00741">741</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00751">751</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00031">buildSimpleTimingGraph()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00719">getLongPathThresholdLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00724">getMediumPathThresholdLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00714">getSimplePlacementTimingGraph()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00699">getSimplePlacementTimingInfo()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00704">getSimplePlacementTimingInfo_PathLenSorted()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00047">~PlacementTimingInfo()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00031">buildSimpleTimingGraph()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00729">getLongPathThresholdLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00734">getMediumPathThresholdLevel()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00724">getSimplePlacementTimingGraph()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00709">getSimplePlacementTimingInfo()</a>, <a class="el" href="_placement_timing_info_8h_source.html#l00714">getSimplePlacementTimingInfo_PathLenSorted()</a>, and <a class="el" href="_placement_timing_info_8h_source.html#l00047">~PlacementTimingInfo()</a>.</p>
 
 </div>
 </div>
@@ -641,7 +647,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00742">742</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_info_8h_source.html#l00752">752</a> of file <a class="el" href="_placement_timing_info_8h_source.html">PlacementTimingInfo.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_placement_timing_info_8cc_source.html#l00023">PlacementTimingInfo()</a>.</p>
 

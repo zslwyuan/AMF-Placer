@@ -1,5 +1,9 @@
 <map id="PlacementTimingOptimizer::setPinsLocation" name="PlacementTimingOptimizer::setPinsLocation">
-<area shape="rect" id="node1" title=" " alt="" coords="408,5,587,47"/>
-<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="164,5,360,47"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1085,7,1264,48"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="841,7,1037,48"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,44,116,70"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,36,793,78"/>
+<area shape="rect" id="node5" href="$class_wirelength_optimizer.html#a85498aa6715fc4d00dd91cec4ab75585" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,36,592,78"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,36,365,78"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,102,365,143"/>
 </map>
