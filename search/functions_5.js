@@ -13,7 +13,7 @@ var searchData=
   ['execute_10',['execute',['../class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b',1,'ExternalProcessFunc']]],
   ['exists_5ftest_11',['exists_test',['../simple_j_s_o_n_8h.html#a49e658b63ca781f16ebdb15339b8411b',1,'simpleJSON.h']]],
   ['expandable_12',['expandable',['../class_general_spreader_1_1_spread_region.html#aed77d41dc86181471f596e338193002c',1,'GeneralSpreader::SpreadRegion']]],
-  ['expandfromabin_13',['expandFromABin',['../class_general_spreader.html#a9c4a9bcb758cf720aa4fa492635f3181',1,'GeneralSpreader']]],
+  ['expandfromabin_13',['expandFromABin',['../class_general_spreader.html#a3a08f3485d48c661ac35a960313ef6bc',1,'GeneralSpreader']]],
   ['expandop_14',['expandOp',['../struct_general_spreader_1_1_spread_region_1_1expand_op.html#a5a07bf1328b3de731ec71eed1aebbd45',1,'GeneralSpreader::SpreadRegion::expandOp::expandOp()'],['../struct_general_spreader_1_1_spread_region_1_1expand_op.html#a1dcf5c4e088edbcd095f0ad8717219e6',1,'GeneralSpreader::SpreadRegion::expandOp::expandOp(int topYOp, int bottomYOp, int leftXOp, int rightXOp)']]],
   ['externalprocessfunc_15',['ExternalProcessFunc',['../class_external_process_func.html#a801b559914740ba20cc4b8bc8d8e98b9',1,'ExternalProcessFunc']]]
 ];

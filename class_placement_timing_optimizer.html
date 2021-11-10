@@ -118,8 +118,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9a4dab3fa9bfc2f1e9f9083e3a4d34c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a43802b7e6de1c49e5da1a0c94bda2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#a2a43802b7e6de1c49e5da1a0c94bda2f">propogateArrivalTime</a> ()</td></tr>
 <tr class="separator:a2a43802b7e6de1c49e5da1a0c94bda2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac18f5ac75fb57c1898e1c6aadc37df58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58">setEdgesDelay</a> ()</td></tr>
-<tr class="separator:ac18f5ac75fb57c1898e1c6aadc37df58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206489ce55e5aac4f3cfac7e228bf332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332">conductStaticTimingAnalysis</a> ()</td></tr>
+<tr class="separator:a206489ce55e5aac4f3cfac7e228bf332"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e6810c2be22ebbe719229c7e6237adb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#a8e6810c2be22ebbe719229c7e6237adb">setPinsLocation</a> ()</td></tr>
 <tr class="separator:a8e6810c2be22ebbe719229c7e6237adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2e835c9fd98444e1f406c128f6b1c13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13">clusterLongPathInOneClockRegion</a> (int pathLenThr, float clusterThrRatio)</td></tr>
@@ -279,7 +279,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00227">227</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00224">224</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
 <div class="dynheader">
@@ -318,6 +318,55 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="a206489ce55e5aac4f3cfac7e228bf332" name="a206489ce55e5aac4f3cfac7e228bf332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206489ce55e5aac4f3cfac7e228bf332">&#9670;&nbsp;</a></span>conductStaticTimingAnalysis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlacementTimingOptimizer::conductStaticTimingAnalysis </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">145</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_placement_timing_optimizer_a206489ce55e5aac4f3cfac7e228bf332_cgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_a206489ce55e5aac4f3cfac7e228bf332_cgraph" alt=""/></div>
+<map name="aclass_placement_timing_optimizer_a206489ce55e5aac4f3cfac7e228bf332_cgraph" id="aclass_placement_timing_optimizer_a206489ce55e5aac4f3cfac7e228bf332_cgraph">
+<area shape="rect" title=" " alt="" coords="5,204,201,246"/>
+<area shape="rect" href="class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="769,202,907,229"/>
+<area shape="rect" href="class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="263,47,445,88"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a17b2bb6437b695a17aec62ea45f39474" title=" " alt="" coords="265,112,443,154"/>
+<area shape="rect" href="class_placement_info.html#aa78f1085615a69f263146b17f903a35f" title=" " alt="" coords="508,242,720,269"/>
+<area shape="rect" href="class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="261,229,447,285"/>
+<area shape="rect" href="class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="249,308,459,350"/>
+<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="309,374,399,401"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a8e6810c2be22ebbe719229c7e6237adb" title=" " alt="" coords="265,426,443,467"/>
+<area shape="rect" href="class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="507,357,721,384"/>
+<area shape="rect" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="535,408,693,434"/>
+<area shape="rect" href="class_design_info.html#a1a2a05acb9f692e774aa6b05da1c3ee7" title=" " alt="" coords="547,458,681,485"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_placement_timing_optimizer_a206489ce55e5aac4f3cfac7e228bf332_icgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_a206489ce55e5aac4f3cfac7e228bf332_icgraph" alt=""/></div>
+<map name="aclass_placement_timing_optimizer_a206489ce55e5aac4f3cfac7e228bf332_icgraph" id="aclass_placement_timing_optimizer_a206489ce55e5aac4f3cfac7e228bf332_icgraph">
+<area shape="rect" title=" " alt="" coords="164,5,360,47"/>
+<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a9a16aed7f1744c9d40fdb8d1c1dd7b05" name="a9a16aed7f1744c9d40fdb8d1c1dd7b05"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a16aed7f1744c9d40fdb8d1c1dd7b05">&#9670;&nbsp;</a></span>dumpClockRegionClusters()</h2>
 
@@ -333,9 +382,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00389">389</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00386">386</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00227">clusterLongPathInOneClockRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00224">clusterLongPathInOneClockRegion()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -439,14 +488,14 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00081">81</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">conductStaticTimingAnalysis()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_timing_optimizer_a17b2bb6437b695a17aec62ea45f39474_icgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_a17b2bb6437b695a17aec62ea45f39474_icgraph" alt=""/></div>
 <map name="aclass_placement_timing_optimizer_a17b2bb6437b695a17aec62ea45f39474_icgraph" id="aclass_placement_timing_optimizer_a17b2bb6437b695a17aec62ea45f39474_icgraph">
-<area shape="rect" title=" " alt="" coords="391,5,569,47"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58" title=" " alt="" coords="164,5,343,47"/>
+<area shape="rect" title=" " alt="" coords="408,5,587,47"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="164,5,360,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -637,7 +686,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00427">427</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00424">424</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -676,56 +725,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00590">590</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
-
-</div>
-</div>
-<a id="ac18f5ac75fb57c1898e1c6aadc37df58" name="ac18f5ac75fb57c1898e1c6aadc37df58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac18f5ac75fb57c1898e1c6aadc37df58">&#9670;&nbsp;</a></span>setEdgesDelay()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void PlacementTimingOptimizer::setEdgesDelay </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">145</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
-
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">AMFPlacer::run()</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_placement_timing_optimizer_ac18f5ac75fb57c1898e1c6aadc37df58_cgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_ac18f5ac75fb57c1898e1c6aadc37df58_cgraph" alt=""/></div>
-<map name="aclass_placement_timing_optimizer_ac18f5ac75fb57c1898e1c6aadc37df58_cgraph" id="aclass_placement_timing_optimizer_ac18f5ac75fb57c1898e1c6aadc37df58_cgraph">
-<area shape="rect" title=" " alt="" coords="5,206,184,247"/>
-<area shape="rect" href="class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="752,204,889,230"/>
-<area shape="rect" href="class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="246,48,427,90"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#a17b2bb6437b695a17aec62ea45f39474" title=" " alt="" coords="247,114,426,155"/>
-<area shape="rect" href="class_placement_info.html#aa78f1085615a69f263146b17f903a35f" title=" " alt="" coords="491,244,703,270"/>
-<area shape="rect" href="class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="243,230,430,286"/>
-<area shape="rect" href="class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="232,310,441,351"/>
-<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="291,376,382,402"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#a8e6810c2be22ebbe719229c7e6237adb" title=" " alt="" coords="247,427,426,468"/>
-<area shape="rect" href="class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="489,358,704,385"/>
-<area shape="rect" href="class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="517,409,676,436"/>
-<area shape="rect" href="class_design_info.html#a1a2a05acb9f692e774aa6b05da1c3ee7" title=" " alt="" coords="529,460,664,486"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_placement_timing_optimizer_ac18f5ac75fb57c1898e1c6aadc37df58_icgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_ac18f5ac75fb57c1898e1c6aadc37df58_icgraph" alt=""/></div>
-<map name="aclass_placement_timing_optimizer_ac18f5ac75fb57c1898e1c6aadc37df58_icgraph" id="aclass_placement_timing_optimizer_ac18f5ac75fb57c1898e1c6aadc37df58_icgraph">
-<area shape="rect" title=" " alt="" coords="164,5,343,47"/>
-<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00587">587</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
 </div>
 </div>
@@ -746,7 +746,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00125">125</a> of file <a class="el" href="_placement_timing_optimizer_8cc_source.html">PlacementTimingOptimizer.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">conductStaticTimingAnalysis()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -765,8 +765,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_placement_timing_optimizer_a8e6810c2be22ebbe719229c7e6237adb_icgraph.png" border="0" usemap="#aclass_placement_timing_optimizer_a8e6810c2be22ebbe719229c7e6237adb_icgraph" alt=""/></div>
 <map name="aclass_placement_timing_optimizer_a8e6810c2be22ebbe719229c7e6237adb_icgraph" id="aclass_placement_timing_optimizer_a8e6810c2be22ebbe719229c7e6237adb_icgraph">
-<area shape="rect" title=" " alt="" coords="391,5,569,47"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#ac18f5ac75fb57c1898e1c6aadc37df58" title=" " alt="" coords="164,5,343,47"/>
+<area shape="rect" title=" " alt="" coords="408,5,587,47"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a206489ce55e5aac4f3cfac7e228bf332" title=" " alt="" coords="164,5,360,47"/>
 <area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
 </div>
@@ -796,7 +796,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00114">114</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00227">clusterLongPathInOneClockRegion()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00389">dumpClockRegionClusters()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00224">clusterLongPathInOneClockRegion()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00386">dumpClockRegionClusters()</a>.</p>
 
 </div>
 </div>
@@ -822,7 +822,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00092">92</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00125">setPinsLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">conductStaticTimingAnalysis()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00125">setPinsLocation()</a>.</p>
 
 </div>
 </div>
@@ -848,7 +848,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00093">93</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00227">clusterLongPathInOneClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00427">moveDriverIntoBetterClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00224">clusterLongPathInOneClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">conductStaticTimingAnalysis()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00424">moveDriverIntoBetterClockRegion()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>.</p>
 
 </div>
 </div>
@@ -926,7 +926,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00096">96</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00389">dumpClockRegionClusters()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">conductStaticTimingAnalysis()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00386">dumpClockRegionClusters()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>.</p>
 
 </div>
 </div>
@@ -978,7 +978,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00090">90</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00227">clusterLongPathInOneClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00389">dumpClockRegionClusters()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00427">moveDriverIntoBetterClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00125">setPinsLocation()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00224">clusterLongPathInOneClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">conductStaticTimingAnalysis()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00386">dumpClockRegionClusters()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00424">moveDriverIntoBetterClockRegion()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00018">PlacementTimingOptimizer()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00125">setPinsLocation()</a>.</p>
 
 </div>
 </div>
@@ -1074,7 +1074,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_placement_timing_optimizer_8h_source.html#l00091">91</a> of file <a class="el" href="_placement_timing_optimizer_8h_source.html">PlacementTimingOptimizer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00590">propogateArrivalTime()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">setEdgesDelay()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00145">conductStaticTimingAnalysis()</a>, <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00032">enhanceNetWeight_LevelBased()</a>, and <a class="el" href="_placement_timing_optimizer_8cc_source.html#l00587">propogateArrivalTime()</a>.</p>
 
 </div>
 </div>

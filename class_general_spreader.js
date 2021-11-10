@@ -7,7 +7,7 @@ var class_general_spreader =
     [ "dumpLUTFFCoordinate", "class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80", null ],
     [ "DumpPUCoordinate", "class_general_spreader.html#a098b914ecc5d81cb869231f622f2c2f6", null ],
     [ "dumpSiteGridDensity", "class_general_spreader.html#a6490458435738449c4a37257a8b2f365", null ],
-    [ "expandFromABin", "class_general_spreader.html#a9c4a9bcb758cf720aa4fa492635f3181", null ],
+    [ "expandFromABin", "class_general_spreader.html#a3a08f3485d48c661ac35a960313ef6bc", null ],
     [ "findOverflowBins", "class_general_spreader.html#a91793e0d24904eb3a6bb7006c1871019", null ],
     [ "makeCellInLegalArea", "class_general_spreader.html#a85b48682c01808abbd1116648fe8fb5b", null ],
     [ "recordSpreadedCellLocations", "class_general_spreader.html#a9414c4dd2802f8201e05a9d7048f1f50", null ],
