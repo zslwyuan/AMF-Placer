@@ -98,7 +98,8 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio, unsigned int sprea
         {
             if (coveredBinSet.find(curBin) != coveredBinSet.end())
                 continue;
-            GeneralSpreader::SpreadRegion *newRegion = expandFromABin(curBin, capacityShrinkRatio);
+            GeneralSpreader::SpreadRegion *newRegion =
+                expandFromABin(curBin, capacityShrinkRatio, spreadRegionBinSizeLimit);
             coveredBinSet.insert(curBin);
             bool overlappedWithPreviousRegion = false;
             for (auto curRegion : expandedRegions)
@@ -514,7 +515,7 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
 }
 
 GeneralSpreader::SpreadRegion *GeneralSpreader::expandFromABin(PlacementInfo::PlacementBinInfo *curBin,
-                                                               float capacityShrinkRatio, int numBinThr)
+                                                               float capacityShrinkRatio, unsigned int numBinThr)
 { // Our Region Expanding (1.4x faster)
     GeneralSpreader::SpreadRegion *resRegion =
         new GeneralSpreader::SpreadRegion(curBin, placementInfo, binGrid, capacityShrinkRatio);

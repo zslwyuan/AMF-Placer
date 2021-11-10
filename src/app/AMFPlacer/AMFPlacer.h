@@ -175,7 +175,7 @@ class AMFPlacer
         globalPlacer->setNeighborDisplacementUpperbound(3.0);
 
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
-                                                  true, 16, timingOptimizer);
+                                                  true, 25, timingOptimizer);
         // placementInfo->getPU2ClockRegionCenters().clear();
 
         // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
@@ -184,10 +184,10 @@ class AMFPlacer
 
         // timingOptimizer->moveDriverIntoBetterClockRegion(longPathThr, 0.75);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
-                                                  true, 16, timingOptimizer);
+                                                  true, 25, timingOptimizer);
         // placementInfo->getPU2ClockRegionCenters().clear();
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 2, true, 5, true, false,
-                                                  16, timingOptimizer);
+                                                  25, timingOptimizer);
 
         // currently, some fixed/packed flag cannot be stored in the check-point (TODO)
         clearSomeAttributesCannotRecord();
@@ -202,7 +202,7 @@ class AMFPlacer
             new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.25, 0.5, 6, 10, 0.1, "first");
         parallelCLBPacker->packCLBs(30, true);
         parallelCLBPacker->setPULocationToPackedSite();
-        timingOptimizer->setEdgesDelay();
+        timingOptimizer->conductStaticTimingAnalysis();
         placementInfo->checkClockUtilization(true);
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
         placementInfo->resetLUTFFDeterminedOccupation();

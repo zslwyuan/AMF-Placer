@@ -1267,7 +1267,7 @@ class GeneralSpreader
      * @return GeneralSpreader::SpreadRegion*
      */
     GeneralSpreader::SpreadRegion *expandFromABin(PlacementInfo::PlacementBinInfo *curBin, float capacityShrinkRatio,
-                                                  int numBinThr = 1000000);
+                                                  unsigned int numBinThr = 1000000);
 
     /**
      * @brief the obtained SpreadRegion s which can be processed in parallel.

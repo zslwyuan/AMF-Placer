@@ -365,7 +365,6 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
         return resSucessors;
     }
 
-    bool forwarding = true;
     resSucessors.push_back(startNodeId);
     while (nodeStack.size() && nodeSet.size() < sizeThr)
     {
@@ -467,6 +466,14 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::BFSFromNode(int sta
 
 template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::propogateArrivalTime()
 {
+    int nodeNum = nodes.size();
+#pragma omp parallel for
+    for (int j = 0; j < nodeNum; j++)
+    {
+        auto curNode = nodes[j];
+        curNode->setLatestArrival(0.0);
+        curNode->setSlowestPredecessorId(-1);
+    }
     for (unsigned int i = 1; i < forwardlevel2NodeIds.size(); i++)
     {
         int numNodeInLayer = forwardlevel2NodeIds[i].size();
@@ -485,6 +492,40 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::pr
                 {
                     curNode->setLatestArrival(newDelay);
                     curNode->setSlowestPredecessorId(predId);
+                }
+            }
+        }
+    }
+}
+
+template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::backPropogateRequiredArrivalTime()
+{
+    int nodeNum = nodes.size();
+#pragma omp parallel for
+    for (int j = 0; j < nodeNum; j++)
+    {
+        auto curNode = nodes[j];
+        curNode->setRequiredArrivalTime(clockPeriod);
+        curNode->setEarlestSuccessorId(-1);
+    }
+    for (unsigned int i = 1; i < backwardlevel2NodeIds.size(); i++)
+    {
+        int numNodeInLayer = backwardlevel2NodeIds[i].size();
+#pragma omp parallel for
+        for (int j = 0; j < numNodeInLayer; j++)
+        {
+            auto curNodeId = backwardlevel2NodeIds[i][j];
+            auto curNode = nodes[curNodeId];
+            for (auto outEdge : curNode->getOutEdges())
+            {
+                int succId = outEdge->getSink()->getId();
+                float succRequiredArrival = outEdge->getSink()->getRequiredArrivalTime();
+                float edgeDelay = outEdge->getDelay();
+                float newRequiredArrival = succRequiredArrival - edgeDelay - curNode->getInnerDelay();
+                if (newRequiredArrival < curNode->getRequiredArrivalTime())
+                {
+                    curNode->setRequiredArrivalTime(newRequiredArrival);
+                    curNode->setEarlestSuccessorId(succId);
                 }
             }
         }

@@ -142,7 +142,7 @@ void PlacementTimingOptimizer::setPinsLocation()
     }
 }
 
-void PlacementTimingOptimizer::setEdgesDelay()
+void PlacementTimingOptimizer::conductStaticTimingAnalysis()
 {
 
     bool printOut = false;
@@ -152,7 +152,7 @@ void PlacementTimingOptimizer::setEdgesDelay()
     {
         printOut = true;
         std::string dumpFileName = JSONCfg["PlacementTimingOptimizer_EdgesDelayLog"];
-        print_status("PlacementTimingOptimizer: dumping enhanceNetWeight_LevelBased to: " + dumpFileName);
+        print_status("PlacementTimingOptimizer: dumping PlacementTimingOptimizer_EdgesDelayLog to: " + dumpFileName);
         outfile0.open(dumpFileName.c_str());
         assert(outfile0.is_open() && outfile0.good() &&
                "The path for PlacementTimingOptimizer_EdgesDelayLog does not exist and please check "
@@ -182,12 +182,8 @@ void PlacementTimingOptimizer::setEdgesDelay()
                        std::abs(clockRegionX1 - clockRegionX0) * 0.5);
     }
 
-    // get_property FAST_MAX [lindex [get_net_delays -interconnect_only -of_objects [get_nets
-    // {chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/dcsr_q_reg[step]}] -to [get_pins
-    // {chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/priv_lvl_q[1]_i_28__0/I2}] ] 0 ]
-    // 290
-
     timingGraph->propogateArrivalTime();
+    timingGraph->backPropogateRequiredArrivalTime();
     float maxDelay = 0;
     int maxDelayId = -1;
     for (unsigned int i = 0; i < timingGraph->getNodes().size(); i++)
@@ -205,7 +201,8 @@ void PlacementTimingOptimizer::setEdgesDelay()
     for (auto id : resPath)
     {
         std::cout << designInfo->getCells()[id]->getName()
-                  << "   [delay]: " << timingGraph->getNodes()[id]->getLatestArrival() << "\n";
+                  << "   [delay]: " << timingGraph->getNodes()[id]->getLatestArrival()
+                  << "   [required]: " << timingGraph->getNodes()[id]->getRequiredArrivalTime() << "\n";
     }
 
     if (printOut)

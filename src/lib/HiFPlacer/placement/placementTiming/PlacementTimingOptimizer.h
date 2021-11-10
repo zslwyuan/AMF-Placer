@@ -40,7 +40,7 @@ class PlacementTimingOptimizer
 
     void enhanceNetWeight_LevelBased(int levelThr);
     void propogateArrivalTime();
-    void setEdgesDelay();
+    void conductStaticTimingAnalysis();
     void setPinsLocation();
     void clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio);
     void moveDriverIntoBetterClockRegion(int pathLenThr, float clusterThrRatio);

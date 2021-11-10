@@ -311,23 +311,43 @@ class PlacementTimingInfo
             }
 
             /**
-             * @brief Get the expected arrival time
+             * @brief Get the required arrival time
              *
              * @return float
              */
-            inline float getExpectedArrivalTime()
+            inline float getRequiredArrivalTime()
             {
-                return expectedArrival;
+                return requiredArrival;
             }
 
             /**
-             * @brief Set the expected arrival time
+             * @brief Set the required arrival time
              *
-             * @param _expectedArrival
+             * @param _requiredArrival
              */
-            inline void setExpectedArrivalTime(float _expectedArrival)
+            inline void setRequiredArrivalTime(float _requiredArrival)
             {
-                expectedArrival = _expectedArrival;
+                requiredArrival = _requiredArrival;
+            }
+
+            /**
+             * @brief Get the earliest successor node Id
+             *
+             * @return int
+             */
+            inline int getEarlestSuccessorId()
+            {
+                return slowestPredecessorId;
+            }
+
+            /**
+             * @brief Set the earliest successor node Id
+             *
+             * @param _earliestSuccessorId
+             */
+            inline void setEarlestSuccessorId(int _earliestSuccessorId)
+            {
+                earliestSuccessorId = _earliestSuccessorId;
             }
 
           private:
@@ -338,8 +358,9 @@ class PlacementTimingInfo
             nodeType *designNode;
             int id;
             float latestArrival = 0.0;    // ns
-            float expectedArrival = 10.0; // ns
+            float requiredArrival = 10.0; // ns
             int slowestPredecessorId = -1;
+            int earliestSuccessorId = -1;
 
             /**
              * @brief the node can have internal delay (e.g., cell delay)
@@ -541,6 +562,12 @@ class PlacementTimingInfo
         void propogateArrivalTime();
 
         /**
+         * @brief back propogate the required arrival time
+         *
+         */
+        void backPropogateRequiredArrivalTime();
+
+        /**
          * @brief backtrace the longest delay path from the node
          *
          * @param curNodeId
@@ -654,6 +681,8 @@ class PlacementTimingInfo
         float mediumPathThrRatio = 0.8;
         int longPathThresholdLevel = 1;
         int mediumPathThresholdLevel = 1;
+
+        float clockPeriod = 10.0; // ns
     };
 
     /**
