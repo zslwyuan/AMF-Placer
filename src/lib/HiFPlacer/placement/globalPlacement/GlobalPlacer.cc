@@ -152,6 +152,9 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
     for (int i = 0; i < iterNum || (!stopStrictly); i++)
     {
 
+        if (timingOptimizer)
+            timingOptimizer->conductStaticTimingAnalysis();
+
         // lowerBound: Quadratic Programming based Wirelength Optimization
         lowerBoundIterNum = (placementInfo->getProgress() < 0.965 && !macroCloseToSite) ? 2 : 2;
 
