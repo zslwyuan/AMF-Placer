@@ -46,13 +46,14 @@ var searchData=
   ['specialpinoffsetfilename_43',['specialPinOffsetFileName',['../class_device_info.html#a971703ddcfe0e273ea486e4e8ad2aba9',1,'DeviceInfo']]],
   ['splitlist_44',['splitList',['../namespacegothrough_benchmarks.html#a0eb563a4838650594d1a432a761ab8b9',1,'gothroughBenchmarks']]],
   ['spreadingforgetratio_45',['spreadingForgetRatio',['../class_global_placer.html#a15164d7772c9bd1592d429b01438f75b',1,'GlobalPlacer']]],
-  ['sr_46',['SR',['../class_design_info_1_1_control_set_info.html#ab8befb02ea37087a68c8d16ec9607744',1,'DesignInfo::ControlSetInfo::SR()'],['../class_parallel_c_l_b_packer_1_1_packed_control_set.html#a2eefb780504fab39a82469410eb27a5e',1,'ParallelCLBPacker::PackedControlSet::SR()'],['../class_initial_packer_1_1_packed_control_set.html#afdc6617b35242691422d3e4b571ab7db',1,'InitialPacker::PackedControlSet::SR()']]],
+  ['sr_46',['SR',['../class_initial_packer_1_1_packed_control_set.html#afdc6617b35242691422d3e4b571ab7db',1,'InitialPacker::PackedControlSet::SR()'],['../class_parallel_c_l_b_packer_1_1_packed_control_set.html#a2eefb780504fab39a82469410eb27a5e',1,'ParallelCLBPacker::PackedControlSet::SR()'],['../class_design_info_1_1_control_set_info.html#ab8befb02ea37087a68c8d16ec9607744',1,'DesignInfo::ControlSetInfo::SR()']]],
   ['srcnode_47',['srcNode',['../class_min_cost_bipartite_matcher.html#a51f6744c959eb7d84be06ca7f8c6e2f3',1,'MinCostBipartiteMatcher::srcNode()'],['../class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html#a1c345be8a1b21d617d4720b6f4171cfb',1,'PlacementTimingInfo::TimingGraph::TimingEdge::srcNode()']]],
   ['srcpin_48',['srcPin',['../class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html#a21840a8889a62371c3c27974ec2cdd1b',1,'PlacementTimingInfo::TimingGraph::TimingEdge']]],
-  ['startprintout_49',['startPrintOut',['../namespaceremove_failure_part_from_tcl.html#aca2cb6d42cd6915c16020e273fdf999c',1,'removeFailurePartFromTcl']]],
-  ['startx_50',['startX',['../class_placement_info.html#a839c86fb01801b49ec91fef07f44bc4f',1,'PlacementInfo']]],
-  ['starty_51',['startY',['../class_placement_info.html#a079c3a89eb2ae18ddeb110c261129f49',1,'PlacementInfo']]],
-  ['switchdemandfornets_52',['switchDemandForNets',['../class_placement_info_1_1_placement_bin_info.html#a462a0d802762eedd82b010a845fd4a33',1,'PlacementInfo::PlacementBinInfo']]],
-  ['switchsupplyfornets_53',['switchSupplyForNets',['../class_placement_info_1_1_placement_bin_info.html#afba8c0022f0a2e839ecb6c6b9b7408c5',1,'PlacementInfo::PlacementBinInfo']]],
-  ['swname_54',['SWName',['../namespaceget_pin_offset.html#ae2aeae9a68f17b89bd49ef87851a519d',1,'getPinOffset']]]
+  ['sta_5fcnt_49',['STA_Cnt',['../class_placement_timing_optimizer.html#a57e3d2286d79ed7989760e27f229b080',1,'PlacementTimingOptimizer']]],
+  ['startprintout_50',['startPrintOut',['../namespaceremove_failure_part_from_tcl.html#aca2cb6d42cd6915c16020e273fdf999c',1,'removeFailurePartFromTcl']]],
+  ['startx_51',['startX',['../class_placement_info.html#a839c86fb01801b49ec91fef07f44bc4f',1,'PlacementInfo']]],
+  ['starty_52',['startY',['../class_placement_info.html#a079c3a89eb2ae18ddeb110c261129f49',1,'PlacementInfo']]],
+  ['switchdemandfornets_53',['switchDemandForNets',['../class_placement_info_1_1_placement_bin_info.html#a462a0d802762eedd82b010a845fd4a33',1,'PlacementInfo::PlacementBinInfo']]],
+  ['switchsupplyfornets_54',['switchSupplyForNets',['../class_placement_info_1_1_placement_bin_info.html#afba8c0022f0a2e839ecb6c6b9b7408c5',1,'PlacementInfo::PlacementBinInfo']]],
+  ['swname_55',['SWName',['../namespaceget_pin_offset.html#ae2aeae9a68f17b89bd49ef87851a519d',1,'getPinOffset']]]
 ];
