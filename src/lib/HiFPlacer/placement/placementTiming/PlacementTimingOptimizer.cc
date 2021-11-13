@@ -55,13 +55,6 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
     for (auto tmpNet : designInfo->getNets())
         tmpNet->setOverallTimingNetEnhancement(1.0);
 
-    enhanceNetWeight_LevelBased_Cnt++;
-    effectFactor = (enhanceNetWeight_LevelBased_Cnt / 30.0);
-    if (effectFactor < 1)
-        effectFactor = std::pow(effectFactor, 1);
-    else
-        effectFactor = 1;
-
     for (auto cellA : designInfo->getCells())
     {
         if (cellA->isVirtualCell())
@@ -145,6 +138,14 @@ void PlacementTimingOptimizer::setPinsLocation()
 void PlacementTimingOptimizer::conductStaticTimingAnalysis()
 {
     print_status("PlacementTimingOptimizer: conducting Static Timing Analysis");
+
+    STA_Cnt++;
+    effectFactor = (STA_Cnt / 30.0);
+    if (effectFactor < 1)
+        effectFactor = std::pow(effectFactor, 1);
+    else
+        effectFactor = 1;
+
     bool printOut = false;
     std::string dumpFileName = "optNetDelayInfo.txt";
     std::ofstream outfile0;

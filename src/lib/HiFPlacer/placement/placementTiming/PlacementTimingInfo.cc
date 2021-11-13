@@ -26,12 +26,17 @@ PlacementTimingInfo::PlacementTimingInfo(DesignInfo *designInfo, DeviceInfo *dev
 {
     if (JSONCfg.find("PlacementTimingInfoVerbose") != JSONCfg.end())
         verbose = JSONCfg["PlacementTimingInfoVerbose"] == "true";
+
+    if (JSONCfg.find("ClockPeriod") != JSONCfg.end())
+        clockPeriod = std::stof(JSONCfg["ClockPeriod"]);
 }
 
 void PlacementTimingInfo::buildSimpleTimingGraph()
 {
     print_status("PlacementTimingInfo: building simple timing graph (TimingNode is DesignCell)");
     simpleTimingGraph = new TimingGraph<DesignInfo::DesignCell>(this);
+    simpleTimingGraph->setClockPeriod(clockPeriod);
+
     for (auto curCell : designInfo->getCells())
     {
         auto newNode =
@@ -521,7 +526,7 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::ba
                 int succId = outEdge->getSink()->getId();
                 float succRequiredArrival = outEdge->getSink()->getRequiredArrivalTime();
                 float edgeDelay = outEdge->getDelay();
-                float newRequiredArrival = succRequiredArrival - edgeDelay - curNode->getInnerDelay();
+                float newRequiredArrival = succRequiredArrival - edgeDelay - outEdge->getSink()->getInnerDelay();
                 if (newRequiredArrival < curNode->getRequiredArrivalTime())
                 {
                     curNode->setRequiredArrivalTime(newRequiredArrival);

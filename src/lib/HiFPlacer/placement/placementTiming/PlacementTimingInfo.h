@@ -659,11 +659,25 @@ class PlacementTimingInfo
             longPathThrRatio = _r;
         }
 
+        /**
+         * @brief Get the clock period
+         *
+         * TODO: enable multiple clock
+         *
+         * @return float
+         */
         inline float getClockPeriod()
         {
             return clockPeriod;
         }
 
+        /**
+         * @brief Set the clock period
+         *
+         * TODO: enable multiple clock
+         *
+         * @param _clockPeriod
+         */
         inline void setClockPeriod(float _clockPeriod)
         {
             clockPeriod = _clockPeriod;
@@ -750,6 +764,8 @@ class PlacementTimingInfo
 
     TimingGraph<DesignInfo::DesignCell> *simpleTimingGraph = nullptr;
     bool verbose = false;
+
+    float clockPeriod = 10.0; // ns
 };
 
 #endif

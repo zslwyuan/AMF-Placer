@@ -116,7 +116,7 @@ class PlacementTimingOptimizer
 
     int poisN = 1000;
     float lambdaPois = 100;
-    int enhanceNetWeight_LevelBased_Cnt = 0;
+    int STA_Cnt = 0;
     float effectFactor = 0;
     std::vector<float> pois;
     std::vector<std::vector<int>> clockRegionclusters;
