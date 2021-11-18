@@ -1,52 +1,52 @@
 <map id="ParallelCLBPacker::packCLBs" name="ParallelCLBPacker::packCLBs">
 <area shape="rect" id="node1" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="5,1010,144,1051"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="218,341,357,382"/>
-<area shape="rect" id="node22" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="503,457,593,484"/>
-<area shape="rect" id="node24" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="218,645,357,686"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="218,275,357,317"/>
+<area shape="rect" id="node22" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="503,408,593,435"/>
+<area shape="rect" id="node24" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="218,599,357,641"/>
 <area shape="rect" id="node39" href="$class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="218,1010,357,1051"/>
-<area shape="rect" id="node44" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="192,1222,383,1263"/>
-<area shape="rect" id="node45" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="449,1222,647,1263"/>
-<area shape="rect" id="node46" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="449,1309,647,1350"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="479,223,617,265"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="1025,515,1217,557"/>
-<area shape="rect" id="node8" href="$class_placement_info.html#a95277820b83b80d5d0533073039cb2c3" title="find neibor device sites of a given cell from bin grid" alt="" coords="1036,450,1207,491"/>
-<area shape="rect" id="node15" href="$class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d" title="Get the Actual Occupation By Cell Id." alt="" coords="1038,187,1205,229"/>
+<area shape="rect" id="node42" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="192,1170,383,1211"/>
+<area shape="rect" id="node43" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="449,1170,647,1211"/>
+<area shape="rect" id="node44" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="449,1242,647,1283"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="479,158,617,199"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="1025,390,1217,431"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#a95277820b83b80d5d0533073039cb2c3" title="find neibor device sites of a given cell from bin grid" alt="" coords="1036,325,1207,366"/>
+<area shape="rect" id="node15" href="$class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d" title="Get the Actual Occupation By Cell Id." alt="" coords="1038,125,1205,166"/>
 <area shape="rect" id="node17" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="753,391,912,417"/>
-<area shape="rect" id="node19" href="$class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480" title=" " alt="" coords="461,341,635,382"/>
-<area shape="rect" id="node20" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="452,625,644,666"/>
-<area shape="rect" id="node21" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="511,508,585,535"/>
+<area shape="rect" id="node19" href="$class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480" title=" " alt="" coords="461,275,635,317"/>
+<area shape="rect" id="node20" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="452,607,644,649"/>
+<area shape="rect" id="node21" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="511,459,585,485"/>
 <area shape="rect" id="node23" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="493,5,603,32"/>
 <area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46" title=" " alt="" coords="753,223,913,265"/>
 <area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#acdccd594e78ef05cf0b0769cc11bc244" title=" " alt="" coords="733,158,932,199"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1336,718,1488,759"/>
-<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="1336,479,1488,521"/>
-<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_bin_info.html#afbbb0cec92073cb3212f9dfd048ab2a2" title="Get the reference of the set of sites in the bin." alt="" coords="1312,551,1512,593"/>
-<area shape="rect" id="node11" href="$class_placement_info.html#a3aacda485c1d9e82a53f2bfc68fe2da3" title="Get the Displacement from a given location to a device site (y2xRatio is considered...." alt="" coords="1307,428,1517,455"/>
-<area shape="rect" id="node12" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="1326,849,1498,876"/>
-<area shape="rect" id="node13" href="$class_placement_info_1_1_placement_bin_info.html#a33cbef70955f92b34e9fcf4b1cd435e9" title="Get the shortest Manhattan distance from the bin to a specific location." alt="" coords="1305,629,1519,670"/>
-<area shape="rect" id="node14" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="1321,901,1503,942"/>
-<area shape="rect" id="node16" href="$class_placement_info_1_1_compatible_placement_table.html#a5cfe1024c3908d336040aa5df6a9daf3" title="Get the Actual Occupation By Cell Id." alt="" coords="1291,180,1533,236"/>
-<area shape="rect" id="node18" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="1053,581,1190,608"/>
-<area shape="rect" id="node25" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title="check the packing status for all the PlacementUnits" alt="" coords="431,559,665,601"/>
-<area shape="rect" id="node26" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="476,690,620,731"/>
-<area shape="rect" id="node37" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="749,1170,916,1211"/>
-<area shape="rect" id="node27" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="1030,871,1213,913"/>
-<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a86c5c11ca29c3eb66fcc36f6b1f1d502" title=" " alt="" coords="1017,792,1225,848"/>
-<area shape="rect" id="node29" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="745,623,920,665"/>
-<area shape="rect" id="node30" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aac2af3cf4994099914200ba3ef16ba01" title="Get the score if this cluster is mapped the site." alt="" coords="1002,632,1241,688"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1336,835,1488,877"/>
+<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="1336,325,1488,366"/>
+<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_bin_info.html#afbbb0cec92073cb3212f9dfd048ab2a2" title="Get the reference of the set of sites in the bin." alt="" coords="1312,455,1512,497"/>
+<area shape="rect" id="node11" href="$class_placement_info.html#a3aacda485c1d9e82a53f2bfc68fe2da3" title="Get the Displacement from a given location to a device site (y2xRatio is considered...." alt="" coords="1307,273,1517,300"/>
+<area shape="rect" id="node12" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="1326,521,1498,548"/>
+<area shape="rect" id="node13" href="$class_placement_info_1_1_placement_bin_info.html#a33cbef70955f92b34e9fcf4b1cd435e9" title="Get the shortest Manhattan distance from the bin to a specific location." alt="" coords="1305,390,1519,431"/>
+<area shape="rect" id="node14" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="1321,573,1503,614"/>
+<area shape="rect" id="node16" href="$class_placement_info_1_1_compatible_placement_table.html#a5cfe1024c3908d336040aa5df6a9daf3" title="Get the Actual Occupation By Cell Id." alt="" coords="1291,117,1533,173"/>
+<area shape="rect" id="node18" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="1053,456,1190,483"/>
+<area shape="rect" id="node25" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title="check the packing status for all the PlacementUnits" alt="" coords="431,510,665,551"/>
+<area shape="rect" id="node26" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="476,681,620,722"/>
+<area shape="rect" id="node37" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="749,1039,916,1081"/>
+<area shape="rect" id="node27" href="$class_parallel_c_l_b_packer.html#af0ce71c5ca7e0979764ffaf3c05eaa72" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="1030,514,1213,555"/>
+<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a86c5c11ca29c3eb66fcc36f6b1f1d502" title=" " alt="" coords="1017,769,1225,825"/>
+<area shape="rect" id="node29" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="745,689,920,730"/>
+<area shape="rect" id="node30" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aac2af3cf4994099914200ba3ef16ba01" title="Get the score if this cluster is mapped the site." alt="" coords="1002,583,1241,639"/>
 <area shape="rect" id="node31" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="713,441,952,497"/>
-<area shape="rect" id="node32" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="763,871,902,913"/>
-<area shape="rect" id="node34" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="1002,712,1241,768"/>
-<area shape="rect" id="node35" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="745,689,920,730"/>
-<area shape="rect" id="node36" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="745,806,920,847"/>
-<area shape="rect" id="node33" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a6e3b592eb8884c221226e78f353a90fa" title=" " alt="" coords="1002,955,1241,1011"/>
-<area shape="rect" id="node38" href="$class_placement_info_1_1_compatible_placement_table.html#acb6784c1b88ff54941384d25fb481c23" title="Get the actual occupation of a specific cell." alt="" coords="1000,1093,1243,1134"/>
+<area shape="rect" id="node32" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="763,623,902,665"/>
+<area shape="rect" id="node34" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="1002,672,1241,728"/>
+<area shape="rect" id="node35" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="745,806,920,847"/>
+<area shape="rect" id="node36" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="745,871,920,913"/>
+<area shape="rect" id="node33" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a6e3b592eb8884c221226e78f353a90fa" title=" " alt="" coords="1002,884,1241,940"/>
+<area shape="rect" id="node38" href="$class_placement_info_1_1_compatible_placement_table.html#acb6784c1b88ff54941384d25fb481c23" title="Get the actual occupation of a specific cell." alt="" coords="1000,1034,1243,1075"/>
 <area shape="rect" id="node40" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="461,1039,635,1081"/>
-<area shape="rect" id="node43" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="458,1105,638,1146"/>
-<area shape="rect" id="node41" href="$class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38" title=" " alt="" coords="756,1105,909,1146"/>
-<area shape="rect" id="node42" href="$class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856" title=" " alt="" coords="745,1039,920,1081"/>
-<area shape="rect" id="node47" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="746,1287,919,1313"/>
-<area shape="rect" id="node48" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="750,1337,915,1364"/>
-<area shape="rect" id="node49" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="739,1389,927,1430"/>
-<area shape="rect" id="node50" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="736,1455,929,1481"/>
+<area shape="rect" id="node41" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="458,1105,638,1146"/>
+<area shape="rect" id="node45" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="746,1257,919,1284"/>
+<area shape="rect" id="node46" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="750,1308,915,1335"/>
+<area shape="rect" id="node47" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="757,1359,909,1401"/>
+<area shape="rect" id="node48" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="757,1425,909,1466"/>
+<area shape="rect" id="node49" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="739,1490,927,1531"/>
+<area shape="rect" id="node50" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="736,1556,929,1583"/>
 </map>

@@ -28,6 +28,7 @@ var class_placement_info_1_1_placement_unit =
     [ "getName", "class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480", null ],
     [ "getNetsSetPtr", "class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee", null ],
     [ "getType", "class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78", null ],
+    [ "getUnitsBeDrivenByThisPU", "class_placement_info_1_1_placement_unit.html#a4cc69ea528e8ab7997deed0ea3d77e44", null ],
     [ "getWeight", "class_placement_info_1_1_placement_unit.html#a7cb53b16de6067cceeb2631593a73691", null ],
     [ "hasLogic", "class_placement_info_1_1_placement_unit.html#a8899ba82a0c6992f9eb03120e1a2e996", null ],
     [ "hasRegister", "class_placement_info_1_1_placement_unit.html#a94c446ad78ed1dac84d41b614441a8e6", null ],

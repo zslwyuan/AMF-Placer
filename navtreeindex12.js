@@ -1,5 +1,11 @@
 var NAVTREEINDEX12 =
 {
+"struct_placement_info_1_1_placement_net_1_1__pin_offset.html#af0961a05683631c3db2630e24279c00e":[9,0,18,9,0,1],
+"struct_placement_info_1_1_placement_site_type_info_1_1location.html":[9,0,18,11,0],
+"struct_placement_info_1_1_placement_site_type_info_1_1location.html#aad6963e15572a4c1bd08013e8821ef43":[9,0,18,11,0,1],
+"struct_placement_info_1_1_placement_site_type_info_1_1location.html#acf2986955232817aa25cfc69bfa893a8":[9,0,18,11,0,0],
+"struct_q_p_solver_wrapper_1_1solver_data_type.html":[9,0,22,0],
+"struct_q_p_solver_wrapper_1_1solver_data_type.html#a1b8db2526ed6bc30dca6b906e704d669":[9,0,22,0,2],
 "struct_q_p_solver_wrapper_1_1solver_data_type.html#a283fedf75f5f63c2e4ba3b97b9fa0f1f":[9,0,22,0,3],
 "struct_q_p_solver_wrapper_1_1solver_data_type.html#a7d969444553ea6f5fbe3048e0c42b31d":[9,0,22,0,0],
 "struct_q_p_solver_wrapper_1_1solver_data_type.html#aa2280935df9773f6850842d6d2fb0c5f":[9,0,22,0,4],

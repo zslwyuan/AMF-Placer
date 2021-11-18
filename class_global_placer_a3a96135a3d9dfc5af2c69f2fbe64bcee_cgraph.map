@@ -1,52 +1,52 @@
 <map id="GlobalPlacer::clusterPlacement" name="GlobalPlacer::clusterPlacement">
-<area shape="rect" id="node1" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="5,1689,208,1716"/>
-<area shape="rect" id="node2" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="256,1312,465,1338"/>
-<area shape="rect" id="node9" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="1639,1308,1714,1334"/>
-<area shape="rect" id="node50" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="517,1682,716,1723"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="527,1166,707,1207"/>
-<area shape="rect" id="node11" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="513,1464,720,1506"/>
-<area shape="rect" id="node17" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="1319,1472,1511,1514"/>
-<area shape="rect" id="node21" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="835,1464,926,1490"/>
-<area shape="rect" id="node25" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="1053,910,1253,937"/>
-<area shape="rect" id="node26" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="1054,1153,1251,1180"/>
-<area shape="rect" id="node27" href="$class_cluster_placer.html#abfbe96e2abf0baa2d62dc634d2b55460" title=" " alt="" coords="525,1362,708,1389"/>
-<area shape="rect" id="node28" href="$class_cluster_placer.html#a1b673af919362063d2ede4cb7a4ae004" title=" " alt="" coords="523,1530,710,1557"/>
-<area shape="rect" id="node29" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="1053,765,1253,792"/>
-<area shape="rect" id="node30" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="1054,714,1251,741"/>
-<area shape="rect" id="node31" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="1047,1089,1258,1116"/>
-<area shape="rect" id="node33" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="524,736,709,762"/>
-<area shape="rect" id="node49" href="$class_cluster_placer.html#a03879444f8300ffffcfd036736f2b14a" title=" " alt="" coords="542,555,691,596"/>
-<area shape="rect" id="node4" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="790,1195,971,1236"/>
-<area shape="rect" id="node5" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="771,1261,990,1288"/>
-<area shape="rect" id="node6" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="771,1312,990,1338"/>
-<area shape="rect" id="node7" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="787,1026,975,1053"/>
-<area shape="rect" id="node8" href="$class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region." alt="" coords="775,1078,986,1119"/>
-<area shape="rect" id="node10" href="$class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region" alt="" coords="768,1144,993,1170"/>
-<area shape="rect" id="node12" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="796,1515,965,1556"/>
-<area shape="rect" id="node22" href="$class_cluster_placer.html#a8ad4a2d696e76b631a5360cbc36b2a44" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="798,1580,963,1622"/>
-<area shape="rect" id="node13" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1065,1296,1240,1338"/>
-<area shape="rect" id="node18" href="$class_placement_info.html#a77be708aff703d87c2cc78f225fdddfc" title=" " alt="" coords="1059,1230,1246,1257"/>
-<area shape="rect" id="node20" href="$class_cluster_placer.html#a6a55cd1a6f302b4499533ce925d199a0" title="check whether the average size of clusters is greater than the given threshold" alt="" coords="1071,1362,1235,1403"/>
-<area shape="rect" id="node14" href="$class_cluster_placer.html#ab2f74c136ed361b6782d56d5dcf92dc6" title="construct the netlist of the generated clusters based on the PlacementNet in PlacementInfo" alt="" coords="1312,1417,1519,1444"/>
-<area shape="rect" id="node16" href="$class_cluster_placer.html#a195e11693047920316c329564598052d" title="initially cluster cells based on clock domains" alt="" coords="1328,1300,1503,1342"/>
-<area shape="rect" id="node15" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="1567,1508,1787,1534"/>
-<area shape="rect" id="node19" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="1333,761,1498,788"/>
-<area shape="rect" id="node23" href="$_cluster_placer_8cc.html#a5735b045bfe96dc29dca1cfb7f34116d" title=" " alt="" coords="1099,1428,1206,1454"/>
-<area shape="rect" id="node24" href="$class_placement_info.html#a00864f7c104c5bbac820accd054b12e1" title=" " alt="" coords="1041,1479,1264,1520"/>
-<area shape="rect" id="node32" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="1328,1082,1503,1123"/>
-<area shape="rect" id="node34" href="$class_s_a_placer.html#a24ec75a4238c9b4459151046b7a2a9a3" title=" " alt="" coords="797,706,964,733"/>
-<area shape="rect" id="node35" href="$class_cluster_placer.html#a149784331309e2ae938933d1af6c6010" title="map PlacementUnit to cluster location" alt="" coords="795,758,967,799"/>
-<area shape="rect" id="node36" href="$class_s_a_placer.html#a030b4efe05c4dd6791d8d1249518a27e" title=" " alt="" coords="823,120,938,146"/>
-<area shape="rect" id="node41" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="781,438,980,479"/>
-<area shape="rect" id="node37" href="$class_s_a_placer.html#a3361137d57f95bcaf8b3f860c1776774" title=" " alt="" coords="1329,116,1502,158"/>
-<area shape="rect" id="node38" href="$class_s_a_placer.html#aaf023c8cf207e46d9f24cc1aa58d7a23" title=" " alt="" coords="1069,94,1237,121"/>
-<area shape="rect" id="node39" href="$str_print_8cc.html#a9d3b483a858efb84ce776bed255b6dd6" title=" " alt="" coords="1103,145,1202,172"/>
-<area shape="rect" id="node40" href="$class_s_a_placer.html#afcbdf47a02d7b05b80a8936b7a09b827" title=" " alt="" coords="1091,196,1214,222"/>
-<area shape="rect" id="node42" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="1069,648,1236,690"/>
-<area shape="rect" id="node43" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="1066,246,1239,273"/>
-<area shape="rect" id="node44" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1077,298,1229,339"/>
-<area shape="rect" id="node45" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="1067,364,1239,390"/>
-<area shape="rect" id="node46" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="1062,415,1243,456"/>
-<area shape="rect" id="node47" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="1059,480,1247,522"/>
-<area shape="rect" id="node48" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="1056,546,1249,573"/>
+<area shape="rect" id="node1" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="5,1490,208,1516"/>
+<area shape="rect" id="node2" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="256,1490,465,1516"/>
+<area shape="rect" id="node9" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="1371,1499,1445,1526"/>
+<area shape="rect" id="node50" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="517,2105,716,2146"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#adfad7e8e7f0f76432ec53b9f6e5fdd7a" title="check the utlization of the clock regions on the device" alt="" coords="527,1373,707,1414"/>
+<area shape="rect" id="node11" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="513,1718,720,1760"/>
+<area shape="rect" id="node14" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="1312,1733,1504,1774"/>
+<area shape="rect" id="node18" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="835,1616,926,1643"/>
+<area shape="rect" id="node22" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="1053,1135,1253,1162"/>
+<area shape="rect" id="node23" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="1054,1550,1251,1576"/>
+<area shape="rect" id="node25" href="$class_cluster_placer.html#abfbe96e2abf0baa2d62dc634d2b55460" title=" " alt="" coords="525,1515,708,1542"/>
+<area shape="rect" id="node26" href="$class_cluster_placer.html#a1b673af919362063d2ede4cb7a4ae004" title=" " alt="" coords="523,1616,710,1643"/>
+<area shape="rect" id="node27" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="1053,983,1253,1010"/>
+<area shape="rect" id="node28" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="1054,932,1251,959"/>
+<area shape="rect" id="node29" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="1047,1034,1258,1060"/>
+<area shape="rect" id="node31" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="524,939,709,966"/>
+<area shape="rect" id="node49" href="$class_cluster_placer.html#a03879444f8300ffffcfd036736f2b14a" title=" " alt="" coords="542,750,691,792"/>
+<area shape="rect" id="node4" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="790,1348,971,1389"/>
+<area shape="rect" id="node5" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="771,1414,990,1440"/>
+<area shape="rect" id="node6" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="771,1464,990,1491"/>
+<area shape="rect" id="node7" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="787,1179,975,1206"/>
+<area shape="rect" id="node8" href="$class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region." alt="" coords="775,1230,986,1272"/>
+<area shape="rect" id="node10" href="$class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region" alt="" coords="768,1296,993,1323"/>
+<area shape="rect" id="node12" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="796,1718,965,1760"/>
+<area shape="rect" id="node19" href="$class_cluster_placer.html#a8ad4a2d696e76b631a5360cbc36b2a44" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="798,1836,963,1877"/>
+<area shape="rect" id="node13" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1065,1718,1240,1760"/>
+<area shape="rect" id="node15" href="$class_placement_info.html#a77be708aff703d87c2cc78f225fdddfc" title=" " alt="" coords="1059,1667,1246,1694"/>
+<area shape="rect" id="node17" href="$class_cluster_placer.html#a6a55cd1a6f302b4499533ce925d199a0" title="check whether the average size of clusters is greater than the given threshold" alt="" coords="1071,1601,1235,1642"/>
+<area shape="rect" id="node16" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="1325,1652,1491,1679"/>
+<area shape="rect" id="node20" href="$_cluster_placer_8cc.html#a5735b045bfe96dc29dca1cfb7f34116d" title=" " alt="" coords="1099,1835,1206,1862"/>
+<area shape="rect" id="node21" href="$class_placement_info.html#a00864f7c104c5bbac820accd054b12e1" title=" " alt="" coords="1041,1886,1264,1928"/>
+<area shape="rect" id="node24" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="1043,1952,1263,1979"/>
+<area shape="rect" id="node30" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="1321,1026,1495,1068"/>
+<area shape="rect" id="node32" href="$class_s_a_placer.html#a24ec75a4238c9b4459151046b7a2a9a3" title=" " alt="" coords="797,910,964,936"/>
+<area shape="rect" id="node33" href="$class_cluster_placer.html#a149784331309e2ae938933d1af6c6010" title="map PlacementUnit to cluster location" alt="" coords="795,961,967,1002"/>
+<area shape="rect" id="node34" href="$class_s_a_placer.html#a030b4efe05c4dd6791d8d1249518a27e" title=" " alt="" coords="823,206,938,232"/>
+<area shape="rect" id="node39" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="781,618,980,660"/>
+<area shape="rect" id="node35" href="$class_s_a_placer.html#a3361137d57f95bcaf8b3f860c1776774" title=" " alt="" coords="1321,148,1495,189"/>
+<area shape="rect" id="node36" href="$class_s_a_placer.html#aaf023c8cf207e46d9f24cc1aa58d7a23" title=" " alt="" coords="1069,231,1237,258"/>
+<area shape="rect" id="node37" href="$str_print_8cc.html#a9d3b483a858efb84ce776bed255b6dd6" title=" " alt="" coords="1103,79,1202,106"/>
+<area shape="rect" id="node38" href="$class_s_a_placer.html#afcbdf47a02d7b05b80a8936b7a09b827" title=" " alt="" coords="1091,130,1214,156"/>
+<area shape="rect" id="node40" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="1069,501,1236,542"/>
+<area shape="rect" id="node41" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="1066,567,1239,594"/>
+<area shape="rect" id="node42" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1077,618,1229,660"/>
+<area shape="rect" id="node43" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="1067,684,1239,711"/>
+<area shape="rect" id="node44" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="1062,736,1243,777"/>
+<area shape="rect" id="node45" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="1077,801,1229,842"/>
+<area shape="rect" id="node46" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="1077,866,1229,908"/>
+<area shape="rect" id="node47" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="1059,384,1247,425"/>
+<area shape="rect" id="node48" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="1056,450,1249,476"/>
 </map>

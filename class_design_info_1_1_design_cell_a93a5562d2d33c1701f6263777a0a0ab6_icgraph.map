@@ -28,8 +28,8 @@
 <area shape="rect" id="node15" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="20,545,196,586"/>
 <area shape="rect" id="node16" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization." alt="" coords="11,613,205,640"/>
 <area shape="rect" id="node18" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="876,253,1043,294"/>
-<area shape="rect" id="node20" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="281,282,483,323"/>
-<area shape="rect" id="node21" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="283,217,481,258"/>
+<area shape="rect" id="node20" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="267,282,497,323"/>
+<area shape="rect" id="node21" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="281,217,483,258"/>
 <area shape="rect" id="node25" href="$class_placement_info.html#a2bf332ca08ad7cc8f73f21c4ed83724b" title="Get the inflate ratio of a cell." alt="" coords="877,1205,1042,1246"/>
 <area shape="rect" id="node27" href="$class_parallel_c_l_b_packer.html#a125fcb78f4a8a7cdafa72e4a5a43fcae" title="check the packing status for all the PlacementUnits" alt="" coords="553,1370,788,1411"/>
 <area shape="rect" id="node28" href="$class_cluster_placer.html#a195e11693047920316c329564598052d" title="initially cluster cells based on clock domains" alt="" coords="583,1435,758,1477"/>

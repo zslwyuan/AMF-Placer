@@ -1,26 +1,26 @@
 <map id="IncrementalBELPacker::LUTFFPairing" name="IncrementalBELPacker::LUTFFPairing">
-<area shape="rect" id="node1" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="5,1604,161,1645"/>
+<area shape="rect" id="node1" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="5,1772,161,1813"/>
 <area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="233,593,407,635"/>
 <area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="497,1051,649,1092"/>
 <area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="497,1116,649,1157"/>
-<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="233,1188,407,1229"/>
-<area shape="rect" id="node22" href="$class_incremental_b_e_l_packer.html#a77e769556e6cf6e62d1413835a6679a8" title=" " alt="" coords="242,1356,398,1397"/>
-<area shape="rect" id="node23" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="527,1363,618,1390"/>
-<area shape="rect" id="node25" href="$class_incremental_b_e_l_packer.html#a49fd1d1cf23b95a927a7b126b5aa075e" title=" " alt="" coords="242,1421,398,1463"/>
-<area shape="rect" id="node26" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="497,1480,649,1521"/>
-<area shape="rect" id="node28" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="213,1670,427,1697"/>
-<area shape="rect" id="node29" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="244,1721,396,1763"/>
-<area shape="rect" id="node30" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="231,1787,409,1828"/>
-<area shape="rect" id="node31" href="$class_design_info_1_1_design_cell.html#a96c9bca15a03ea9bb257cf2fd961ae23" title=" " alt="" coords="244,1852,396,1893"/>
-<area shape="rect" id="node32" href="$class_design_info_1_1_design_cell.html#ab652adf65add326a363b8e2f0d426e53" title=" " alt="" coords="244,1917,396,1959"/>
-<area shape="rect" id="node33" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="215,1983,425,2010"/>
-<area shape="rect" id="node35" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="283,2034,357,2061"/>
-<area shape="rect" id="node36" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="233,1254,407,1281"/>
-<area shape="rect" id="node40" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title=" " alt="" coords="209,2085,431,2141"/>
-<area shape="rect" id="node41" href="$class_placement_info_1_1_placement_unit.html#affd80a7a7b87bb8a669e145f0dc72e54" title=" " alt="" coords="233,2164,407,2205"/>
-<area shape="rect" id="node42" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="233,2229,407,2271"/>
-<area shape="rect" id="node43" href="$class_placement_info.html#a132b4740f20122ca80ef9a1c2f3bfdd8" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="227,1539,413,1580"/>
-<area shape="rect" id="node45" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="221,1604,419,1645"/>
+<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="233,1539,407,1580"/>
+<area shape="rect" id="node22" href="$class_incremental_b_e_l_packer.html#a77e769556e6cf6e62d1413835a6679a8" title=" " alt="" coords="242,1707,398,1748"/>
+<area shape="rect" id="node23" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="527,1779,618,1806"/>
+<area shape="rect" id="node25" href="$class_incremental_b_e_l_packer.html#a49fd1d1cf23b95a927a7b126b5aa075e" title=" " alt="" coords="242,1772,398,1813"/>
+<area shape="rect" id="node26" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="497,1181,649,1223"/>
+<area shape="rect" id="node28" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="213,1838,427,1865"/>
+<area shape="rect" id="node29" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="244,1889,396,1931"/>
+<area shape="rect" id="node30" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="231,1955,409,1996"/>
+<area shape="rect" id="node31" href="$class_design_info_1_1_design_cell.html#a96c9bca15a03ea9bb257cf2fd961ae23" title=" " alt="" coords="244,2020,396,2061"/>
+<area shape="rect" id="node32" href="$class_design_info_1_1_design_cell.html#ab652adf65add326a363b8e2f0d426e53" title=" " alt="" coords="244,2085,396,2127"/>
+<area shape="rect" id="node33" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="215,2151,425,2178"/>
+<area shape="rect" id="node35" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="283,2202,357,2229"/>
+<area shape="rect" id="node36" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="233,1605,407,1631"/>
+<area shape="rect" id="node40" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title=" " alt="" coords="209,2253,431,2309"/>
+<area shape="rect" id="node41" href="$class_placement_info_1_1_placement_unit.html#affd80a7a7b87bb8a669e145f0dc72e54" title=" " alt="" coords="233,2332,407,2373"/>
+<area shape="rect" id="node42" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="233,2397,407,2439"/>
+<area shape="rect" id="node43" href="$class_placement_info.html#a132b4740f20122ca80ef9a1c2f3bfdd8" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="227,1256,413,1297"/>
+<area shape="rect" id="node45" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="221,1343,419,1384"/>
 <area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="485,855,660,896"/>
 <area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="485,920,660,961"/>
 <area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="485,985,660,1027"/>
@@ -37,16 +37,16 @@
 <area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="497,659,649,700"/>
 <area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="497,724,649,765"/>
 <area shape="rect" id="node20" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="497,789,649,831"/>
-<area shape="rect" id="node24" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="517,1414,628,1441"/>
-<area shape="rect" id="node27" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="715,1480,892,1521"/>
-<area shape="rect" id="node34" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="485,1976,660,2017"/>
-<area shape="rect" id="node37" href="$class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="505,1313,641,1339"/>
-<area shape="rect" id="node38" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="485,1181,660,1223"/>
-<area shape="rect" id="node39" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title=" " alt="" coords="485,1247,660,1288"/>
-<area shape="rect" id="node44" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="490,1546,655,1573"/>
-<area shape="rect" id="node46" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="489,1779,656,1820"/>
-<area shape="rect" id="node47" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="486,1845,659,1871"/>
-<area shape="rect" id="node48" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="487,1597,659,1623"/>
-<area shape="rect" id="node49" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="482,1648,663,1689"/>
-<area shape="rect" id="node50" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="479,1713,667,1755"/>
+<area shape="rect" id="node24" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="517,1830,628,1857"/>
+<area shape="rect" id="node27" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="715,1181,892,1223"/>
+<area shape="rect" id="node34" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="485,2144,660,2185"/>
+<area shape="rect" id="node37" href="$class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="505,1729,641,1755"/>
+<area shape="rect" id="node38" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="485,1597,660,1639"/>
+<area shape="rect" id="node39" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title=" " alt="" coords="485,1663,660,1704"/>
+<area shape="rect" id="node44" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="490,1247,655,1274"/>
+<area shape="rect" id="node46" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="489,1480,656,1521"/>
+<area shape="rect" id="node47" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="486,1546,659,1573"/>
+<area shape="rect" id="node48" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="487,1298,659,1325"/>
+<area shape="rect" id="node49" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="482,1349,663,1391"/>
+<area shape="rect" id="node50" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="479,1415,667,1456"/>
 </map>
