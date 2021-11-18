@@ -52,10 +52,10 @@ For commercial usage of this open-source project, users must contact project sup
 **Features**
 
 1. supports placement with a large number of mixed-size macros with shape constraints in practical FPGA applications.
-2. wirelength-driven, routability-aware, packing-aware, clock-aware, region-aware. (initially timing-driven with basic embedded static timing analysis)
+2. wirelength-driven, routability-aware, packing-aware, clock-aware, region-aware. (initially timing-driven with basic embedded static timing analysis engine)
 3. a set of optional optimization techniques to improve mixed-size FPGA placement QoR
 4. parallelizes the implementation of each stage of placement based on multi-threading
-5. modularized function implementation for easier further development
+5. modularized function implementation and clear Doxygen documentation for easier further development
 6. flexible and extensible JSON-based placement configuration
 7. supports placement check-point importing/exporting
 8. a set of pre-implementation benchmarks from latest practical FPGA applications
