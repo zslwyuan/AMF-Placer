@@ -32,7 +32,6 @@ var NAVTREE =
     [ "Implementation Explanation", "_5_explanation.html", "_5_explanation" ],
     [ "Existing Problems When Exporting To Vivado", "_7_portability_to_vivado_problem.html", null ],
     [ "Some Failure Lessons", "_8_some_failure_lesson.html", null ],
-    [ "AMF-Placer", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -79,8 +78,8 @@ var NAVTREEINDEX =
 "class_placement_info_1_1_placement_unit.html#a8899ba82a0c6992f9eb03120e1a2e996",
 "class_vivado_graph_util_1_1_vivado_cell.html#ab622b6af0d81dade30b3cfecb98b9f91",
 "export_device_location_8py.html#a762c774c717cc9dbdad19e1cfc005f41",
-"namespaceexport_device_location.html#a339ba6e3118c848c002c064783e58b16",
-"struct_placement_info_1_1_placement_net_1_1__pin_offset.html#af0961a05683631c3db2630e24279c00e"
+"namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85",
+"struct_placement_info_1_1_placement_site_type_info_1_1location.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
