@@ -1187,6 +1187,22 @@ class PlacementInfo
             return nets;
         }
 
+        inline int getUnitsBeDrivenByThisPU()
+        {
+            int res = 0;
+            for (auto tmpNet : *nets)
+            {
+                if (tmpNet->getDriverUnits().size() == 1)
+                {
+                    if (tmpNet->getDriverUnits()[0] == this)
+                    {
+                        res += tmpNet->getUnitsBeDriven().size();
+                    }
+                }
+            }
+            return res;
+        }
+
         inline void addDSP()
         {
             DSPcnt++;
@@ -4202,6 +4218,16 @@ class PlacementInfo
         return PU2ClockRegionCenters;
     }
 
+    /**
+     * @brief get the PlacementUnit Mapping to clock region column for timing optimzation
+     *
+     * @return std::map<PlacementUnit *, int>&
+     */
+    std::map<PlacementUnit *, int> &getPU2ClockRegionColumn()
+    {
+        return PU2ClockRegionColumn;
+    }
+
     inline int getLongPathThresholdLevel()
     {
         return longPathThresholdLevel;
@@ -4215,6 +4241,11 @@ class PlacementInfo
     inline std::map<DeviceInfo::ClockColumn *, std::set<DesignInfo::DesignNet *>> &getClockCol2ClockNets()
     {
         return clockCol2ClockNets;
+    }
+
+    inline std::vector<std::vector<PlacementBinInfo *>> &getGlobalBinGrid()
+    {
+        return globalBinGrid;
     }
 
   private:
@@ -4321,6 +4352,7 @@ class PlacementInfo
     std::vector<std::vector<PlacementUnit *>> longPaths;
 
     std::map<PlacementUnit *, std::pair<float, float>> PU2ClockRegionCenters;
+    std::map<PlacementUnit *, int> PU2ClockRegionColumn;
     std::map<DeviceInfo::ClockColumn *, std::set<DesignInfo::DesignNet *>> clockCol2ClockNets;
 
     /**

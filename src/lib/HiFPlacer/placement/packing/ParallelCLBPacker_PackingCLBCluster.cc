@@ -509,7 +509,7 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::updateScoreInSite()
         }
     }
 
-    scoreInSite = totalCellNum * 0.45 + 0.01 * totalLen + totalConnectivityScore - HPWLWeight * HPWLChange;
+    scoreInSite = totalCellNum * 0.45 + 0.05 * totalLen + totalConnectivityScore - HPWLWeight * HPWLChange;
 }
 
 void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite(
@@ -553,7 +553,7 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScor
         }
     }
 
-    scoreInSite = totalCellNum * 0.45 + 0.01 * totalLen + totalConnectivityScore - HPWLWeight * HPWLChange;
+    scoreInSite = totalCellNum * 0.45 + 0.05 * totalLen + totalConnectivityScore - HPWLWeight * HPWLChange;
 }
 
 bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPU(PlacementInfo::PlacementUnit *tmpPU, bool allowOverlap)

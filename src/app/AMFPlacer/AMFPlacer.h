@@ -144,6 +144,7 @@ class AMFPlacer
         // enable the timing optimization, start initial placement and global placement.
 
         globalPlacer->clusterPlacement();
+        timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
         globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
 
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5, true, true,
@@ -197,6 +198,7 @@ class AMFPlacer
         placementInfo->loadPlacementUnitInformation(JSON["dumpDirectory"] + "/PUInfoBeforeFinalPacking.gz");
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
 
+        timingOptimizer->conductStaticTimingAnalysis();
         // finally pack the elements into sites on the FPGA device
         parallelCLBPacker =
             new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.25, 0.5, 6, 10, 0.1, "first");

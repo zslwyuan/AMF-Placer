@@ -254,7 +254,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
                          ((macroCloseToSite && averageMacroLegalDisplacement < 1) || macroLegalizationFixed);
         bool criteria2 = upperBoundHPWL < minHPWL * 2 && macroLegalizationFixed && i > 30;
         bool criteria3 = progressRatio > 0.925 && upperBoundHPWL / minHPWL < 1.02 && macroLegalizationFixed;
-        bool criteria4 = iterCntAfterMacrosFixed >= 1 && macroLegalizationFixed;
+        bool criteria4 = iterCntAfterMacrosFixed >= 2 && macroLegalizationFixed;
 
         if (macroLegalizationFixed)
             iterCntAfterMacrosFixed++;
@@ -604,6 +604,7 @@ void GlobalPlacer::spreading(int currentIteration, int spreadRegionSizeLimit)
 
     generalSpreader = nullptr;
 
+    placementInfo->updateElementBinGrid();
     if (progressRatio > 0.4)
     {
         placementInfo->adjustLUTFFUtilization(neighborDisplacementUpperbound);

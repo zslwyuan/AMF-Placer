@@ -893,6 +893,9 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
 
     auto sharedTypeIds = placementInfo->getPotentialBELTypeIDs(curCellType);
 
+    int clockRegionX, clockRegionY;
+    placementInfo->getDeviceInfo()->getClockRegionByLocation(targetX, targetY, clockRegionX, clockRegionY);
+
     for (auto sharedTypeId : sharedTypeIds)
     {
         std::vector<std::vector<PlacementInfo::PlacementBinInfo *>> &curBinGrid =
@@ -921,7 +924,13 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
             {
                 float tmpPUDis = fabs(targetX - tmpSite->X()) + y2xRatio * fabs(targetY - tmpSite->Y());
                 if (tmpPUDis > displacementLowerbound && tmpPUDis <= displacementUpperbound)
-                    res->push_back(tmpSite);
+                {
+                    int SiteClockRegionX, SiteClockRegionY;
+                    placementInfo->getDeviceInfo()->getClockRegionByLocation(tmpSite->X(), targetY, SiteClockRegionX,
+                                                                             SiteClockRegionY);
+                    if (SiteClockRegionX == clockRegionX)
+                        res->push_back(tmpSite);
+                }
             }
 
             for (int nextY = curbinIdY - 1; nextY <= curbinIdY + 1; nextY++)

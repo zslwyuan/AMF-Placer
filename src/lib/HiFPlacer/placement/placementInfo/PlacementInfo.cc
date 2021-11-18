@@ -927,6 +927,62 @@ void PlacementInfo::updateElementBinGrid()
             }
         }
     }
+
+    for (auto &tmpRow : globalBinGrid)
+    {
+        for (auto &curBin : tmpRow)
+        {
+            assert(curBin);
+            curBin->reset();
+        }
+    }
+
+    for (auto curPU : placementUnits)
+    {
+        if (auto curUnpackedCell = dynamic_cast<PlacementUnpackedCell *>(curPU))
+        {
+            int binIdX, binIdY;
+            float cellX = curUnpackedCell->X();
+            float cellY = curUnpackedCell->Y();
+            DesignInfo::DesignCell *curCell = curUnpackedCell->getCell();
+
+            if (curCell->isLUT() || curCell->isFF()) // currently we only resize LUT/FF
+            {
+                getGridXY(cellX, cellY, binIdX, binIdY);
+                assert(globalBinGrid[binIdY][binIdX]->inRange(cellX, cellY));
+                assert(binIdY >= 0);
+                assert(binIdX >= 0);
+                assert((unsigned int)binIdY < globalBinGrid.size());
+                assert((unsigned int)binIdX < globalBinGrid[binIdY].size());
+                globalBinGrid[binIdY][binIdX]->addCell(curCell, 0);
+            }
+        }
+        else if (auto curMacro = dynamic_cast<PlacementMacro *>(curPU))
+        {
+            for (int vId = 0; vId < curMacro->getNumOfCells(); vId++)
+            {
+                float offsetX_InMacro, offsetY_InMacro;
+                DesignInfo::DesignCellType cellType;
+                curMacro->getVirtualCellInfo(vId, offsetX_InMacro, offsetY_InMacro, cellType);
+                DesignInfo::DesignCell *curCell = curMacro->getCell(vId);
+                if (curCell->isLUT() || curCell->isFF()) // currently we only resize LUT/FF
+                {
+                    int binIdX, binIdY;
+                    float cellX = curMacro->X() + offsetX_InMacro;
+                    float cellY = curMacro->Y() + offsetY_InMacro;
+
+                    getGridXY(cellX, cellY, binIdX, binIdY);
+                    assert(globalBinGrid[binIdY][binIdX]->inRange(cellX, cellY));
+
+                    assert(binIdY >= 0);
+                    assert(binIdX >= 0);
+                    assert((unsigned int)binIdY < globalBinGrid.size());
+                    assert((unsigned int)binIdX < globalBinGrid[binIdY].size());
+                    globalBinGrid[binIdY][binIdX]->addCell(curCell, 0);
+                }
+            }
+        }
+    }
 }
 
 void PlacementInfo::adjustLUTFFUtilization_Packablity(float neighborDisplacementUpperbound, bool enfore)
@@ -1057,11 +1113,11 @@ void PlacementInfo::adjustLUTFFUtilization_Packablity(float neighborDisplacement
                     //     2;
 
                     float areaDemand = (float)(1 * tmpRatio + 2 * (1 - tmpRatio));
-                    compatiblePlacementTable_cellId2Occupation[cellRealId] = areaDemand * 1.1;
+                    compatiblePlacementTable_cellId2Occupation[cellRealId] = areaDemand * 1.15;
                 }
                 else
                 {
-                    compatiblePlacementTable_cellId2Occupation[cellRealId] = 2;
+                    compatiblePlacementTable_cellId2Occupation[cellRealId] = 2.2;
                 }
             }
             assert(compatiblePlacementTable_cellId2Occupation[cellRealId] >= 0);
@@ -1108,7 +1164,7 @@ void PlacementInfo::adjustLUTFFUtilization_Packablity(float neighborDisplacement
                 totalDemand += (1 + ((CSIdCntpair.second - 1) / 4)); // sum(ceil(ni/4))
             }
             int factor = (1 + ((totalDemand - 1) / 2)); // ceil(sum/2)
-            const float alpha = 1.2;
+            const float alpha = 1.3;
             assert(totalDemand > 0);
             assert(targetFFNum > 0);
 
@@ -1132,61 +1188,6 @@ void PlacementInfo::adjustLUTFFUtilization_Packablity(float neighborDisplacement
 void PlacementInfo::adjustLUTFFUtilization_Routability(bool enfore)
 {
     print_status("PlacementInfo: adjusting LUT/FF utilization based on Routability");
-    for (auto &tmpRow : globalBinGrid)
-    {
-        for (auto &curBin : tmpRow)
-        {
-            assert(curBin);
-            curBin->reset();
-        }
-    }
-
-    for (auto curPU : placementUnits)
-    {
-        if (auto curUnpackedCell = dynamic_cast<PlacementUnpackedCell *>(curPU))
-        {
-            int binIdX, binIdY;
-            float cellX = curUnpackedCell->X();
-            float cellY = curUnpackedCell->Y();
-            DesignInfo::DesignCell *curCell = curUnpackedCell->getCell();
-
-            if (curCell->isLUT() || curCell->isFF()) // currently we only resize LUT/FF
-            {
-                getGridXY(cellX, cellY, binIdX, binIdY);
-                assert(globalBinGrid[binIdY][binIdX]->inRange(cellX, cellY));
-                assert(binIdY >= 0);
-                assert(binIdX >= 0);
-                assert((unsigned int)binIdY < globalBinGrid.size());
-                assert((unsigned int)binIdX < globalBinGrid[binIdY].size());
-                globalBinGrid[binIdY][binIdX]->addCell(curCell, 0);
-            }
-        }
-        else if (auto curMacro = dynamic_cast<PlacementMacro *>(curPU))
-        {
-            for (int vId = 0; vId < curMacro->getNumOfCells(); vId++)
-            {
-                float offsetX_InMacro, offsetY_InMacro;
-                DesignInfo::DesignCellType cellType;
-                curMacro->getVirtualCellInfo(vId, offsetX_InMacro, offsetY_InMacro, cellType);
-                DesignInfo::DesignCell *curCell = curMacro->getCell(vId);
-                if (curCell->isLUT() || curCell->isFF()) // currently we only resize LUT/FF
-                {
-                    int binIdX, binIdY;
-                    float cellX = curMacro->X() + offsetX_InMacro;
-                    float cellY = curMacro->Y() + offsetY_InMacro;
-
-                    getGridXY(cellX, cellY, binIdX, binIdY);
-                    assert(globalBinGrid[binIdY][binIdX]->inRange(cellX, cellY));
-
-                    assert(binIdY >= 0);
-                    assert(binIdX >= 0);
-                    assert((unsigned int)binIdY < globalBinGrid.size());
-                    assert((unsigned int)binIdX < globalBinGrid[binIdY].size());
-                    globalBinGrid[binIdY][binIdX]->addCell(curCell, 0);
-                }
-            }
-        }
-    }
 
     // calculate the congestion ratio for the bin grid
     for (auto tmpNet : placementNets)

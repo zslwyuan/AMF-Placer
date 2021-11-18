@@ -307,8 +307,9 @@ ParallelCLBPacker::PackingCLBSite::findNeiborPUsFromBinGrid(
         res->clear();
     }
 
-    int binIdX, binIdY;
+    int binIdX, binIdY, clockRegionX, clockRegionY;
     placementInfo->getGridXY(targetX, targetY, binIdX, binIdY);
+    placementInfo->getDeviceInfo()->getClockRegionByLocation(targetX, targetY, clockRegionX, clockRegionY);
 
     auto sharedTypeIds = placementInfo->getPotentialBELTypeIDs(curCellType);
 
@@ -356,7 +357,13 @@ ParallelCLBPacker::PackingCLBSite::findNeiborPUsFromBinGrid(
                     {
                         float tmpPUDis = fabs(targetX - tmpPU->X()) + y2xRatio * fabs(targetY - tmpPU->Y());
                         if (tmpPUDis > displacementLowerbound && tmpPUDis <= displacementUpperbound)
-                            res->insert(tmpPU);
+                        {
+                            int PUClockRegionX, PUClockRegionY;
+                            placementInfo->getDeviceInfo()->getClockRegionByLocation(tmpPU->X(), targetY,
+                                                                                     PUClockRegionX, PUClockRegionY);
+                            if (PUClockRegionX == clockRegionX)
+                                res->insert(tmpPU);
+                        }
                     }
                     else
                     {
@@ -364,7 +371,13 @@ ParallelCLBPacker::PackingCLBSite::findNeiborPUsFromBinGrid(
                         {
                             float tmpPUDis = fabs(targetX - tmpPU->X()) + y2xRatio * fabs(targetY - tmpPU->Y());
                             if (tmpPUDis > displacementLowerbound && tmpPUDis <= displacementUpperbound)
-                                res->insert(tmpPU);
+                            {
+                                int PUClockRegionX, PUClockRegionY;
+                                placementInfo->getDeviceInfo()->getClockRegionByLocation(
+                                    tmpPU->X(), targetY, PUClockRegionX, PUClockRegionY);
+                                if (PUClockRegionX == clockRegionX)
+                                    res->insert(tmpPU);
+                            }
                         }
                     }
                 }

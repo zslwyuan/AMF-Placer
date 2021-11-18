@@ -162,6 +162,11 @@ class WirelengthOptimizer
         return oriMacroLegalizationWeight;
     }
 
+    inline void clearNetPinEnhanceRate()
+    {
+        netPinEnhanceRate.clear();
+    }
+
   private:
     /**
      * @brief call the cooresponding solver to solve the QP problem defined in the given QPSolverWrapper
@@ -325,6 +330,8 @@ class WirelengthOptimizer
      *
      */
     int macroPseudoNetCnt = 0;
+
+    std::map<DesignInfo::DesignNet *, std::vector<float>> netPinEnhanceRate;
 };
 
 #endif
