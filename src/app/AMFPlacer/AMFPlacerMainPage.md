@@ -25,7 +25,7 @@ can be accelerated by 2.41x on average.
 
 **License**
 
-This project is developed by [Reconfiguration Computing Systems Lab](https://eeweiz.home.ece.ust.hk/), Hong Kong University of Science and Technology (HKUST).
+This project is developed by [Reconfiguration Computing Systems Lab](https://eeweiz.home.ece.ust.hk/), Hong Kong University of Science and Technology (HKUST). Tingyuan Liang, Gengjie Chen, Jieru Zhao, Sharad Sinha and Wei Zhang contribute to this project.
 
 For non-commercial usage of this open-source project, users should comply the Apache License attached in the root directory.
 For commercial usage of this open-source project, users must contact authors (Wei ZHANG, eeweiz@ust.hk; Tingyuan LIANG, tliang@connect.ust.hk) for authorization.
