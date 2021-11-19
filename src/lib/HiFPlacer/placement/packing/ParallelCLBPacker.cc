@@ -925,10 +925,10 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
                 float tmpPUDis = fabs(targetX - tmpSite->X()) + y2xRatio * fabs(targetY - tmpSite->Y());
                 if (tmpPUDis > displacementLowerbound && tmpPUDis <= displacementUpperbound)
                 {
-                    int SiteClockRegionX, SiteClockRegionY;
-                    placementInfo->getDeviceInfo()->getClockRegionByLocation(tmpSite->X(), targetY, SiteClockRegionX,
-                                                                             SiteClockRegionY);
-                    if (SiteClockRegionX == clockRegionX)
+                    int siteClockRegionX, siteClockRegionY;
+                    placementInfo->getDeviceInfo()->getClockRegionByLocation(tmpSite->X(), targetY, siteClockRegionX,
+                                                                             siteClockRegionY);
+                    if (siteClockRegionX == clockRegionX)
                         res->push_back(tmpSite);
                 }
             }
