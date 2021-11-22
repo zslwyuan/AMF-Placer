@@ -12,6 +12,14 @@ For users' testing and exploration, we provide the Vivado projects of the benchm
 
 Users can directly open the .xpr file with Vivado. There might be some warnings because your Vivado version is not matched with the IP cores in the design or some IP core instances cannot be found in your system. Please ignore them and do not update the ip core or re-synthesis because these operations will change the netlist. Besides, if users use the benchmarks in their works, please cite the papers of the related designs and comply with their open-source licence conditions according to (@subpage _3_1_BenchmarksDetails).
 
+For the timing-driven results, we have prepared our post-AMF-placement checkpoint of Vivado and the detailed implementation of our timing-driven solution will be available soon.
+
+|   Online Storage    |         Link          |  Link  |                                              Link                                              |                                              Link                                              |                                              Link                                               |                                             Link                                             | Link  |        Link        |
+| :-----------------: | :-------------------: | :----: | :--------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :---: | :----------------: |
+|    Google Drive     | Rosetta FaceDetection | SpooNN | [OptimSoC](https://drive.google.com/file/d/1P-91LgLzDrptQi31PdxWbOBqm8IhNjpy/view?usp=sharing) | [MiniMap2](https://drive.google.com/file/d/19Tfilc5XFWK80R2GbcJXlEZYmCFE7KpD/view?usp=sharing) | [OpenPiton](https://drive.google.com/file/d/1uNf9EvaVSaV6-82esd7if-Ife0tSaPuz/view?usp=sharing) | [MemN2N](https://drive.google.com/file/d/1pWUD6aTO3FZsS6WpV819haWlD1EvYgmZ/view?usp=sharing) | BLSTM | Rosetta DigitRecog |
+| Tencent Weiyun Disk | Rosetta FaceDetection | SpooNN |                         [OptimSoC](https://share.weiyun.com/ehWiXtKg)                          |                         [MiniMap2](https://share.weiyun.com/6qeF4ser)                          |                         [OpenPiton](https://share.weiyun.com/EShQD9IV)                          |                         [MemN2N](https://share.weiyun.com/mtBnqgI0)                          | BLSTM | Rosetta DigitRecog |
+
+
 
 <center>
 <img src="errors.png" align="center" alt="openImpled errors" title="openImpled errors" width="300" /> 
