@@ -159,6 +159,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
     clock2Cells.clear();
     clocks.clear();
     clockSet.clear();
+    aliasNet2AliasNetId.clear();
 
     print_status("Design Information Loading.");
 
@@ -169,7 +170,8 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
 
     std::string line;
     std::getline(infile, line);
-    std::string cellType, cellName, targetName, dir, refpinname, netName, drivepinName, fill0, fill1, fill2, fill3;
+    std::string cellType, cellName, targetName, dir, refpinname, netName, drivepinName, fill0, fill1, fill2, fill3,
+        aliasNetName;
     std::istringstream iss(line);
     iss >> fill0 >> cellName >> fill1 >> cellType;
 
@@ -188,7 +190,13 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
                                               dir == std::string("IN"), curCell, pins.size());
             pins.push_back(curPin);
             curCell->addPin(curPin);
+            aliasNetName = netName;
 
+            if (aliasNet2AliasNetId.find(aliasNetName) == aliasNet2AliasNetId.end())
+            {
+                int numAliasNet = aliasNet2AliasNetId.size();
+                aliasNet2AliasNetId[aliasNetName] = numAliasNet;
+            }
             if (netName == "drivepin=>")
             {
                 curPin->updateParentCellNetInfo();
@@ -214,6 +222,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
             addPinToNet(curPin);                             // update net in netlist
             curPin->connectToNetVariable(name2Net[netName]); // bind to a net pointer
             curPin->updateParentCellNetInfo();
+            curPin->setAliasNetId(aliasNet2AliasNetId[aliasNetName]);
         }
         else if (strContains(fill0, "curCell=>"))
         {

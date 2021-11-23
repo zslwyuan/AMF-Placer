@@ -3705,18 +3705,25 @@ class PlacementInfo
      * @param targetY target location Y
      * @param displacementThreshold the displacement threshold from the sites to the target location
      * @param siteNumThreshold if the number of sites exceed this threshold, stop the searching
+     * @param checkClockRegion enable to check whether the clock region column of the sites are the same as the one of
+     * the cell
      * @return std::vector<DeviceInfo::DeviceSite *>*
      */
-    inline std::vector<DeviceInfo::DeviceSite *> *findNeiborSiteFromBinGrid(DesignInfo::DesignCell *curCell,
-                                                                            float targetX, float targetY,
-                                                                            float displacementThreshold,
-                                                                            int siteNumThreshold)
+    inline std::vector<DeviceInfo::DeviceSite *> *
+    findNeiborSiteFromBinGrid(DesignInfo::DesignCell *curCell, float targetX, float targetY,
+                              float displacementThreshold, int siteNumThreshold, bool checkClockRegion = false)
     {
         // please note that the input DesignCell is only used to find the corresponding binGrid for site search.
         std::vector<DeviceInfo::DeviceSite *> *res = new std::vector<DeviceInfo::DeviceSite *>(0);
 
         int binIdX, binIdY;
         getGridXY(targetX, targetY, binIdX, binIdY);
+        auto curPU = getPlacementUnitByCellId(curCell->getCellId());
+        int targetClockRegionX = -1;
+        if (PU2ClockRegionColumn.find(curPU) != PU2ClockRegionColumn.end() && checkClockRegion)
+        {
+            targetClockRegionX = PU2ClockRegionColumn[curPU];
+        }
 
         while (res->size() == 0)
         {
@@ -3755,6 +3762,8 @@ class PlacementInfo
                             if (getDisplacement(targetX, targetY, curSite) < displacementThreshold)
                             {
                                 findSiteCnt++;
+                                if (targetClockRegionX >= 0 && targetClockRegionX != curSite->getClockRegionX())
+                                    continue;
                                 res->push_back(curSite);
                             }
                         }

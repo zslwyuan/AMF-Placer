@@ -326,6 +326,16 @@ class DesignInfo
             netName = _netName;
         }
 
+        inline int getAliasNetId()
+        {
+            return aliasNetId;
+        }
+
+        inline void setAliasNetId(int _aliasNetId)
+        {
+            aliasNetId = _aliasNetId;
+        }
+
         /**
          * @brief bind the pin to the net's pointer for later processing
          *
@@ -480,6 +490,7 @@ class DesignInfo
         DesignPin *driverPin = nullptr;
         float offsetXInCell = 0.0;
         float offsetYInCell = 0.0;
+        int aliasNetId = -1;
     };
 
     /**
@@ -1672,6 +1683,7 @@ class DesignInfo
     std::vector<DesignCell *> cells;
     std::vector<DesignPin *> pins;
     std::map<std::string, DesignNet *> name2Net;
+    std::map<std::string, int> aliasNet2AliasNetId;
     std::map<std::string, DesignCell *> name2Cell;
 
     /**
