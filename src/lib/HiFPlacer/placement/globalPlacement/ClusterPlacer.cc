@@ -246,7 +246,7 @@ void ClusterPlacer::createClockBasedClusterUnits()
             placementUnitId2ClusterUnitId[tmpPU->getId()] = curClusterUnit->getId();
             curClusterUnit->addPlacementUnit(tmpPU);
         }
-        print_info("build a cluset (size=" + std::to_string(curClusterUnit->getUnits().size()) + ") for clock [" +
+        print_info("build a cluster (size=" + std::to_string(curClusterUnit->getUnits().size()) + ") for clock [" +
                    curClock->getName() + "].");
         clusterUnits.push_back(curClusterUnit);
     }

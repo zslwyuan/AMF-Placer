@@ -554,10 +554,10 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
     for (auto curNet : placementInfo->getPlacementNets())
     {
         auto designNet = curNet->getDesignNet();
-        if (designNet->checkIsPowerNet())
+        if (designNet->checkIsPowerNet() || designNet->checkIsGlobalClock())
             continue;
 
-        if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 || curNet->getUnits().size() >= 4000)
+        if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 || curNet->getUnits().size() >= 1000)
             continue;
         auto &PUs = curNet->getUnits();
         auto &pins = designNet->getPins();

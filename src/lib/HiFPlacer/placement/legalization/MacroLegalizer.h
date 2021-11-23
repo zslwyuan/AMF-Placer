@@ -133,6 +133,11 @@ class MacroLegalizer
      */
     void resetSitesMapped();
 
+    void setClockRegionAware()
+    {
+        clockRegionAware = true;
+    }
+
   private:
     std::string legalizerName;
     PlacementInfo *placementInfo;
@@ -623,7 +628,7 @@ class MacroLegalizer
      * @brief find candidate sites for the cells left to be matched
      *
      */
-    void findMacroCell2SitesInDistance()
+    void findMacroCell2SitesInDistance(bool checkClockRegion)
     {
         macro2SitesInDisplacementThreshold.clear();
 
@@ -640,7 +645,7 @@ class MacroLegalizer
             DesignInfo::DesignCell *curCell = macroCellsToLegalize[i];
             macro2SitesInDisplacementThreshold[curCell] = placementInfo->findNeiborSiteFromBinGrid(
                 curCell, cellLoc[curCell->getCellId()].X, cellLoc[curCell->getCellId()].Y, displacementThreshold,
-                candidateFactor * maxNumCandidate);
+                candidateFactor * maxNumCandidate, checkClockRegion);
         }
     }
 

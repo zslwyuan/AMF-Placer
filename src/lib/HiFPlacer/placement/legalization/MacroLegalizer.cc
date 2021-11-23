@@ -45,10 +45,7 @@ MacroLegalizer::MacroLegalizer(std::string legalizerName, PlacementInfo *placeme
         nJobs = std::stoi(JSONCfg["jobs"]);
     }
 
-    if (legalizerName.find("CARRY") != std::string::npos)
-    {
-        clockRegionAware = true;
-    }
+    clockRegionAware = false;
 }
 
 void MacroLegalizer::legalize(bool exactLegalization, bool directLegalization)
@@ -88,7 +85,7 @@ void MacroLegalizer::roughlyLegalize()
 {
     while (macroCellsToLegalize.size())
     {
-        findMacroCell2SitesInDistance();
+        findMacroCell2SitesInDistance(clockRegionAware);
         findPossibleLegalLocation(false);
         resetMacroCell2SitesInDistance();
 
@@ -118,7 +115,7 @@ void MacroLegalizer::fixedColumnLegalize(bool directLegalization)
 
     while (macroCellsToLegalize.size())
     {
-        findMacroCell2SitesInDistance();
+        findMacroCell2SitesInDistance(clockRegionAware);
         findPossibleLegalLocation(true);
         resetMacroCell2SitesInDistance();
         createBipartiteGraph();

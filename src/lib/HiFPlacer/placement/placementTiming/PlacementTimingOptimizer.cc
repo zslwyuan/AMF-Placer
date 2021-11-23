@@ -59,41 +59,100 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
     {
         if (cellA->isVirtualCell())
             continue;
-        int targetPathLen = timingNodes[cellA->getCellId()]->getLongestPathLength();
-        if (targetPathLen < levelThr)
-            continue;
 
-        // int pinAIdInNet = 0;
-        for (DesignInfo::DesignPin *curPinA : cellA->getPins())
+        if (timingNodes[cellA->getCellId()]->checkIsRegister())
         {
-            if (curPinA->getNet())
+            // int pinAIdInNet = 0;
+            for (DesignInfo::DesignPin *curPinA : cellA->getPins())
             {
-                if (curPinA->isInputPort())
-                    continue;
-                // int pinBIdInNet = 0;
-                auto pins = curPinA->getNet()->getPins();
-                int pinNum = pins.size();
-                if (pinNum <= 1 || pinNum >= 1000)
-                    continue;
-
-                float enhanceRatio;
-                float overflowRatio = std::pow((float)0.8 * targetPathLen / levelThr, 1);
-                // if (overflowRatio > 10)
-                //     overflowRatio = 10;
-                if (pinNum < 200)
-                    enhanceRatio = 1.5 * (overflowRatio + 0.005 * pinNum);
-                else
-                    enhanceRatio = 1.5 * (overflowRatio + 1);
-
-                enhanceRatio = std::pow(enhanceRatio, effectFactor);
-                if (enhanceRatio > maxEnhanceRatio)
-                    maxEnhanceRatio = enhanceRatio;
-                curPinA->getNet()->enhanceOverallTimingNetEnhancement(enhanceRatio);
-
-                if (printOut)
+                if (curPinA->getNet())
                 {
-                    outfile0 << "enhanced net: [ " << curPinA->getName()
-                             << "] fanOut:" << curPinA->getNet()->getPins().size() << " by " << enhanceRatio << "\n";
+                    if (curPinA->isInputPort())
+                        continue;
+                    // int pinBIdInNet = 0;
+                    auto pins = curPinA->getNet()->getPins();
+                    int pinNum = pins.size();
+                    if (pinNum <= 1 || pinNum >= 1000)
+                        continue;
+
+                    int targetPathLen = -1;
+                    for (auto pinBeDriven : pins)
+                    {
+                        if (pinBeDriven->isInputPort())
+                        {
+                            auto curCell = pinBeDriven->getCell();
+                            if (curCell)
+                            {
+                                if (targetPathLen < timingNodes[curCell->getCellId()]->getLongestPathLength())
+                                    targetPathLen = timingNodes[curCell->getCellId()]->getLongestPathLength();
+                            }
+                        }
+                    }
+
+                    if (targetPathLen < levelThr)
+                        continue;
+                    float enhanceRatio;
+                    float overflowRatio = std::pow((float)0.8 * targetPathLen / levelThr, 1);
+                    // if (overflowRatio > 10)
+                    //     overflowRatio = 10;
+                    if (pinNum < 200)
+                        enhanceRatio = 1.5 * (overflowRatio + 0.005 * pinNum);
+                    else
+                        enhanceRatio = 1.5 * (overflowRatio + 1);
+
+                    enhanceRatio = std::pow(enhanceRatio, effectFactor);
+                    if (enhanceRatio > maxEnhanceRatio)
+                        maxEnhanceRatio = enhanceRatio;
+                    curPinA->getNet()->enhanceOverallTimingNetEnhancement(enhanceRatio);
+
+                    if (printOut)
+                    {
+                        outfile0 << "enhanced net: [ " << curPinA->getName()
+                                 << "] fanOut:" << curPinA->getNet()->getPins().size() << " by " << enhanceRatio
+                                 << "\n";
+                    }
+                }
+            }
+        }
+        else
+        {
+            int targetPathLen = timingNodes[cellA->getCellId()]->getLongestPathLength();
+            if (targetPathLen < levelThr)
+                continue;
+
+            // int pinAIdInNet = 0;
+            for (DesignInfo::DesignPin *curPinA : cellA->getPins())
+            {
+                if (curPinA->getNet())
+                {
+                    if (curPinA->isInputPort())
+                        continue;
+                    // int pinBIdInNet = 0;
+                    auto pins = curPinA->getNet()->getPins();
+                    int pinNum = pins.size();
+                    if (pinNum <= 1 || pinNum >= 1000)
+                        continue;
+
+                    float enhanceRatio;
+                    float overflowRatio = std::pow((float)0.8 * targetPathLen / levelThr, 1);
+                    // if (overflowRatio > 10)
+                    //     overflowRatio = 10;
+                    if (pinNum < 200)
+                        enhanceRatio = 1.5 * (overflowRatio + 0.005 * pinNum);
+                    else
+                        enhanceRatio = 1.5 * (overflowRatio + 1);
+
+                    enhanceRatio = std::pow(enhanceRatio, effectFactor);
+                    if (enhanceRatio > maxEnhanceRatio)
+                        maxEnhanceRatio = enhanceRatio;
+                    curPinA->getNet()->enhanceOverallTimingNetEnhancement(enhanceRatio);
+
+                    if (printOut)
+                    {
+                        outfile0 << "enhanced net: [ " << curPinA->getName()
+                                 << "] fanOut:" << curPinA->getNet()->getPins().size() << " by " << enhanceRatio
+                                 << "\n";
+                    }
                 }
             }
         }
@@ -224,6 +283,7 @@ void PlacementTimingOptimizer::conductStaticTimingAnalysis()
 
 void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio)
 {
+    conductStaticTimingAnalysis();
     print_warning("PlacementTimingOptimizer: clustering long path in one clock region");
     placementInfo->updateElementBinGrid();
     auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo_PathLenSorted();
@@ -251,7 +311,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             if (extractedCellIds.find(nodeId) != extractedCellIds.end())
                 continue;
             auto candidateCellIds =
-                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, 2000, extractedCellIds);
+                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, 200000, extractedCellIds);
 
             if (candidateCellIds.size() >= pathLenThr * 0.8)
             {

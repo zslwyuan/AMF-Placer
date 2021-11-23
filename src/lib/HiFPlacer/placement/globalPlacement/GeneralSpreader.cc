@@ -37,7 +37,8 @@ GeneralSpreader::GeneralSpreader(PlacementInfo *placementInfo, std::map<std::str
     }
 }
 
-void GeneralSpreader::spreadPlacementUnits(float forgetRatio, unsigned int spreadRegionBinSizeLimit)
+void GeneralSpreader::spreadPlacementUnits(float forgetRatio, bool enableClockRegionAware,
+                                           unsigned int spreadRegionBinSizeLimit)
 {
     if (verbose) // usually commented for debug
         print_status("GeneralSpreader: starts to spreadPlacementUnits for type: [" + sharedCellType + "]");
@@ -225,7 +226,8 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio, unsigned int sprea
 
         if (verbose)
             print_status("GeneralSpreader: updating Placement Units With Spreaded Cell Locations");
-        updatePlacementUnitsWithSpreadedCellLocations(involvedPUs, involvedCells, involvedPUVec, forgetRatio);
+        updatePlacementUnitsWithSpreadedCellLocations(involvedPUs, involvedCells, involvedPUVec, forgetRatio,
+                                                      enableClockRegionAware);
         if (verbose)
             print_status("GeneralSpreader: updated Placement Units With Spreaded Cell Locations");
         dumpLUTFFCoordinate();
@@ -388,8 +390,28 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker(
 
 void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
     std::set<PlacementInfo::PlacementUnit *> &involvedPUs, std::set<DesignInfo::DesignCell *> &involvedCells,
-    std::vector<PlacementInfo::PlacementUnit *> &involvedPUVec, float forgetRatio)
+    std::vector<PlacementInfo::PlacementUnit *> &involvedPUVec, float forgetRatio, bool enableClockRegionAware)
 {
+    std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
+    if (enableClockRegionAware)
+    {
+        auto &PU2ClockRegionColumn = placementInfo->getPU2ClockRegionColumn();
+        auto &clockRegions = placementInfo->getDeviceInfo()->getClockRegions();
+        for (auto curCell : involvedCells)
+        {
+            auto PU = placementInfo->getPlacementUnitByCellId(curCell->getCellId());
+            if (PU2ClockRegionColumn.find(PU) != PU2ClockRegionColumn.end())
+            {
+                int clockRegionX = PU2ClockRegionColumn[PU];
+                float rLeft = clockRegions[0][clockRegionX]->getLeft();
+                float rRight = clockRegions[0][clockRegionX]->getRight();
+                if (cellLoc[curCell->getCellId()].X < rLeft)
+                    cellLoc[curCell->getCellId()].X = rLeft + 0.1;
+                if (cellLoc[curCell->getCellId()].X > rRight)
+                    cellLoc[curCell->getCellId()].X = rRight - 0.1;
+            }
+        }
+    }
     if (involvedPUs.size() > 100)
     {
         std::vector<std::thread *> threadsVec;
@@ -423,7 +445,6 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
     }
     else
     {
-        std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
         for (auto curPU : involvedPUVec)
         {
             if (auto curUnpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))

@@ -382,7 +382,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
 
             if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
             {
-                if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                if (nodeSet.find(nextId) == nodeSet.end())
                 {
                     resSucessors.push_back(nextId);
                     nodeSet.insert(nextId);
@@ -397,7 +397,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
 
             if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
             {
-                if (nodeSet.find(nextId) == nodeSet.end() && exceptionCells.find(nextId) == exceptionCells.end())
+                if (nodeSet.find(nextId) == nodeSet.end())
                 {
                     resSucessors.push_back(nextId);
                     nodeSet.insert(nextId);

@@ -421,6 +421,7 @@ class GlobalPlacer
     float neighborDisplacementUpperbound = -1.0;
 
     bool hasUserDefinedClusterInfo = false;
+    bool enableClockRegionAware = false;
     bool timingOptEnabled = false;
     bool printHPWL = false;
 };

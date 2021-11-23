@@ -424,6 +424,9 @@ void GlobalPlacer::macroLegalize(int curIteration)
             return;
     }
 
+    if (enableClockRegionAware)
+        CARRYMacroLegalizer->setClockRegionAware();
+
     if ((BRAMDSPLegalizer->getAverageDisplacementOfRoughLegalization() > 3 && progressRatio < 0.9 &&
          curIteration < 10) &&
         !macroLocked && !macrosBindedToSites && !directMacroLegalize)
@@ -571,20 +574,20 @@ void GlobalPlacer::spreading(int currentIteration, int spreadRegionSizeLimit)
         std::string sharedCellType_SLICEL_CARRY8 = "SLICEL_CARRY8";
         generalSpreader = new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_CARRY8, currentIteration,
                                               supplyRatio, verbose);
-        generalSpreader->spreadPlacementUnits(spreadingForgetRatio);
+        generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
         delete generalSpreader;
     }
 
     std::string sharedCellType_SLICEL_MUXF8 = "SLICEL_MUXF8";
     generalSpreader =
         new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_MUXF8, currentIteration, 0.75, verbose);
-    generalSpreader->spreadPlacementUnits(spreadingForgetRatio);
+    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
     delete generalSpreader;
 
     std::string sharedCellType_SLICEL_MUXF7 = "SLICEL_MUXF7";
     generalSpreader =
         new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_MUXF7, currentIteration, 0.75, verbose);
-    generalSpreader->spreadPlacementUnits(spreadingForgetRatio);
+    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
     delete generalSpreader;
 
     // we gradually increase the shrinkRatio since the area adjustion of LUT/FF will be more accurate.
@@ -593,13 +596,13 @@ void GlobalPlacer::spreading(int currentIteration, int spreadRegionSizeLimit)
     std::string sharedCellType_SLICEL_LUT = "SLICEL_LUT";
     generalSpreader =
         new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_LUT, currentIteration, supplyRatio, verbose);
-    generalSpreader->spreadPlacementUnits(spreadingForgetRatio);
+    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
     delete generalSpreader;
 
     std::string sharedCellType_SLICEL_FF = "SLICEL_FF";
     generalSpreader =
         new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_FF, currentIteration, supplyRatio, verbose);
-    generalSpreader->spreadPlacementUnits(spreadingForgetRatio);
+    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
     delete generalSpreader;
 
     generalSpreader = nullptr;
@@ -632,6 +635,9 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
         pseudoNetWeight *= 1.5 * (1 - progressRatio) + 1.01 * (progressRatio);
 
     historyHPWLs.push_back(upperBoundHPWL);
+
+    if (progressRatio > 0.6)
+        enableClockRegionAware = true;
 
     int numRecorded = historyHPWLs.size();
     if (numRecorded > 5)

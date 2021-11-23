@@ -58,9 +58,11 @@ class GeneralSpreader
      *
      * @param forgetRatio forget the original according to a given extent ratio. Lower forget ratio will make cell
      * spreading less sensitive (mreo stable).
+     * @param enableClockRegionAware spread but limit in specific clock region
      * @param spreadRegionBinSizeLimit the maximum size of the spread region for a overflow bin
      */
-    void spreadPlacementUnits(float forgetRatio, unsigned int spreadRegionBinSizeLimit = 1000000);
+    void spreadPlacementUnits(float forgetRatio, bool enableClockRegionAware = false,
+                              unsigned int spreadRegionBinSizeLimit = 1000000);
     void dumpLUTFFCoordinate();
 
     /**
@@ -1143,11 +1145,12 @@ class GeneralSpreader
      * @param involvedPUVec a vector of PlacementUnit which are involved in the cell spreading procedure(ensure the
      * iteration order)
      * @param forgetRatio the forget ratio for the original location in last iteration
+     * @param enableClockRegionAware spread but limit in specific clock region
      */
     void updatePlacementUnitsWithSpreadedCellLocations(std::set<PlacementInfo::PlacementUnit *> &involvedPUs,
                                                        std::set<DesignInfo::DesignCell *> &involvedCells,
                                                        std::vector<PlacementInfo::PlacementUnit *> &involvedPUVec,
-                                                       float forgetRatio);
+                                                       float forgetRatio, bool enableClockRegionAware);
 
     /**
      * @brief multi-threading workers for updating the information of the involved PlacementUnit(s)
