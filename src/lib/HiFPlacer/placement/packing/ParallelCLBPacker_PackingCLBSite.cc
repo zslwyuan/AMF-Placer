@@ -296,7 +296,7 @@ std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> *
 ParallelCLBPacker::PackingCLBSite::findNeiborPUsFromBinGrid(
     DesignInfo::DesignCellType curCellType, float targetX, float targetY, float displacementLowerbound,
     float displacementUpperbound, int PUNumThreshold, const std::vector<PackingCLBSite *> &PUId2PackingCLBSite,
-    float y2xRatio, std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> *res)
+    float y2xRatio, std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> *res, bool clockRegionAware)
 {
     assert(displacementLowerbound < displacementUpperbound);
     // please note that the input DesignCell is only used to find the corresponding binGrid for site search.

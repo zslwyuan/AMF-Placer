@@ -1613,6 +1613,14 @@ void InitialPacker::loadFixedPlacementUnits(std::string fixedPlacementUnitsFromV
         if (strContains(fill0, "name=>"))
         {
             auto curCell = designInfo->getCell(cellName);
+            for (auto tmpPin : curCell->getPins())
+            {
+                tmpPin->setFixed();
+                if (tmpPin->getNet())
+                {
+                    tmpPin->getNet()->setContainFixedPins();
+                }
+            }
             if (PlacementInfo::PlacementUnpackedCell *unpackedPU = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(
                     cellId2PlacementUnit[curCell->getElementIdInType()]))
             {

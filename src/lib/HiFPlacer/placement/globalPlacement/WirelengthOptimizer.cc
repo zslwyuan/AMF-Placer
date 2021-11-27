@@ -247,6 +247,10 @@ void WirelengthOptimizer::updateB2BNetWeightWorker(PlacementInfo *placementInfo,
     {
         if (net->getDesignNet()->checkIsPowerNet()) // Power nets are on the entrie device. Ignore them.
             continue;
+
+        float enhanceFixedPinRatio = 1.0;
+        if (net->getDesignNet()->checkContainFixedPins())
+            enhanceFixedPinRatio = 5.0;
         if (net->updateNetBounds(updateX, updateY))
         {
             net->updateBound2BoundNetWeight(objectiveMatrixTripletList, objectiveMatrixDiag, objectiveVector,

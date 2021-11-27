@@ -90,7 +90,7 @@ void ClusterPlacer::clusterPlacementUnits()
     print_status("Clustering Start.");
 
     hypergraphPartitioning();
-
+    placementInfo->setClusterNum(clusters.size());
     // refineClustersWithPredefinedClusters();
 
     setClusterNetsAdjMat();

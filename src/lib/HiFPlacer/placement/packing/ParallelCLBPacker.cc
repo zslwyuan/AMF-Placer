@@ -458,6 +458,10 @@ void ParallelCLBPacker::exceptionHandling(bool verbose)
         }
         PUPoints.resize(unprocessedCnt);
         Dc += 0.3 * maxD;
+
+        if (placementInfo->isDensePlacement())
+            clockRegionAware = false;
+
         if (Dc > 300)
         {
             Dc = maxD * 0.5 - 1;
@@ -529,11 +533,11 @@ bool ParallelCLBPacker::exceptionPULegalize(PlacementInfo::PlacementUnit *curPU,
     std::vector<DeviceInfo::DeviceSite *> *candidateSitesToPlaceThePU = nullptr;
     if (displacementThreshold < 4)
         candidateSitesToPlaceThePU = findNeiborSitesFromBinGrid(DesignInfo::CellType_LUT4, curPU->X(), curPU->Y(), 0,
-                                                                displacementThreshold, y2xRatio);
+                                                                displacementThreshold, y2xRatio, clockRegionAware);
     else
         candidateSitesToPlaceThePU =
             findNeiborSitesFromBinGrid(DesignInfo::CellType_LUT4, curPU->X(), curPU->Y(), displacementThreshold - 2,
-                                       displacementThreshold, y2xRatio);
+                                       displacementThreshold, y2xRatio, clockRegionAware);
     std::vector<siteWithScore> sitesToRipUp;
     sitesToRipUp.clear();
     for (auto tmpSite : *candidateSitesToPlaceThePU)
@@ -745,12 +749,12 @@ bool ParallelCLBPacker::ripUpAndLegalizae(
                 if (displacementThreshold < 4)
                     candidateSitesToPlaceThePU = findNeiborSitesFromBinGrid(
                         DesignInfo::CellType_LUT4, curTargetPackingSite->getCLBSite()->X(),
-                        curTargetPackingSite->getCLBSite()->Y(), 0, displacementThreshold, y2xRatio);
+                        curTargetPackingSite->getCLBSite()->Y(), 0, displacementThreshold, y2xRatio, clockRegionAware);
                 else
                     candidateSitesToPlaceThePU =
                         findNeiborSitesFromBinGrid(DesignInfo::CellType_LUT4, curTargetPackingSite->getCLBSite()->X(),
                                                    curTargetPackingSite->getCLBSite()->Y(), displacementThreshold - 2,
-                                                   displacementThreshold, y2xRatio);
+                                                   displacementThreshold, y2xRatio, clockRegionAware);
 
                 float highestScoreIncrease = -1e5;
                 PackingCLBSite::PackingCLBCluster *bestClusterToPack = nullptr;
@@ -881,7 +885,7 @@ bool ParallelCLBPacker::ripUpAndLegalizae(
 std::vector<DeviceInfo::DeviceSite *> *
 ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCellType, float targetX, float targetY,
                                               float displacementLowerbound, float displacementUpperbound,
-                                              float y2xRatio)
+                                              float y2xRatio, bool clockRegionAware)
 {
     assert(displacementLowerbound < displacementUpperbound);
     // please note that the input DesignCell is only used to find the corresponding binGrid for site search.
@@ -928,8 +932,10 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
                     int siteClockRegionX, siteClockRegionY;
                     placementInfo->getDeviceInfo()->getClockRegionByLocation(tmpSite->X(), targetY, siteClockRegionX,
                                                                              siteClockRegionY);
-                    if (siteClockRegionX == clockRegionX)
-                        res->push_back(tmpSite);
+                    if (siteClockRegionX != clockRegionX && clockRegionAware)
+                        continue;
+
+                    res->push_back(tmpSite);
                 }
             }
 
@@ -1286,8 +1292,21 @@ void ParallelCLBPacker::dumpDSPBRAMPlacementTcl(std::ofstream &outfileTcl)
         }
         if (placementStr != "")
         {
-            outfileTcl << "if { [catch {place_cell {" << placementStr << "}}]} {\n incr errorNum \nputs $fo \""
-                       << placementStr << "\"\n}\n";
+            std::string oriBrace = "[";
+            std::string newBrace = "\\[";
+            outfileTcl << "set result "
+                       << "[catch {place_cell {" << placementStr << "}}]\n"
+                       << "if {$result} {\n incr errorNum \n";
+            std::vector<std::string> splitItems;
+            splitItems.clear();
+            strSplit(placementStr, splitItems, "\n");
+            for (auto item : splitItems)
+            {
+                replaceAll(item, oriBrace, newBrace);
+                outfileTcl << "puts $fo \"" << item << " \"\n";
+            }
+            outfileTcl << "\n}\n";
+            placementStr = "";
         }
     }
 }
@@ -1466,9 +1485,20 @@ void ParallelCLBPacker::dumpCLBPlacementTcl(std::ofstream &outfileTcl, bool pack
         {
             if (placementStr != "")
             {
+                std::string oriBrace = "[";
+                std::string newBrace = "\\[";
                 outfileTcl << "set result "
                            << "[catch {place_cell {" << placementStr << "}}]\n"
-                           << "if {$result} {\n incr errorNum \nputs $fo \"" << placementStr << "\"\n}\n";
+                           << "if {$result} {\n incr errorNum \n";
+                std::vector<std::string> splitItems;
+                splitItems.clear();
+                strSplit(placementStr, splitItems, "\n");
+                for (auto item : splitItems)
+                {
+                    replaceAll(item, oriBrace, newBrace);
+                    outfileTcl << "puts $fo \"" << item << " \"\n";
+                }
+                outfileTcl << "\n}\n";
                 placementStr = "";
             }
             cnt = 0;

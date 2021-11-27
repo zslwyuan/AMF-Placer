@@ -1382,13 +1382,15 @@ class ParallelCLBPacker
          * @param y2xRatio a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning
          * in X-coordinate
          * @param res a input set to store resultant PUs (for inremental search if it is not nullptr)
+         * @param clockRegionAware whether make clock region become constraints
          * @return std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare>*
          */
         std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> *
         findNeiborPUsFromBinGrid(DesignInfo::DesignCellType curCellType, float targetX, float targetY,
                                  float displacementLowerbound, float displacementUpperbound, int PUNumThreshold,
                                  const std::vector<PackingCLBSite *> &PUId2PackingCLBSite, float y2xRatio,
-                                 std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> *res = nullptr);
+                                 std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> *res = nullptr,
+                                 bool clockRegionAware = true);
 
         inline std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> &getNeighborPUs()
         {
@@ -1821,6 +1823,11 @@ class ParallelCLBPacker
             return FF2LUT[tmpFF] == tmpLUT;
         }
 
+        inline void setClockRegionAwareTo(bool _clockRegionAware)
+        {
+            clockRegionAware = _clockRegionAware;
+        }
+
       private:
         PlacementInfo *placementInfo;
         DeviceInfo::DeviceSite *CLBSite;
@@ -1874,6 +1881,12 @@ class ParallelCLBPacker
          *
          */
         float HPWLWeight = 0.01;
+
+        /**
+         * @brief whether make clock region become constraints
+         *
+         */
+        bool clockRegionAware = true;
 
         int unchangeIterationCnt = 0;
         std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> neighborPUs;
@@ -1996,12 +2009,14 @@ class ParallelCLBPacker
      * @param displacementUpperbound  the upper bound threshold of neighbors' displacement from the center
      * @param y2xRatio a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning
      * in X-coordinate
+     * @param clockRegionAware whether make clock region become constraints
      * @return std::vector<DeviceInfo::DeviceSite *>*
      */
     std::vector<DeviceInfo::DeviceSite *> *findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCellType,
                                                                       float targetX, float targetY,
                                                                       float displacementLowerbound,
-                                                                      float displacementUpperbound, float y2xRatio);
+                                                                      float displacementUpperbound, float y2xRatio,
+                                                                      bool clockRegionAware);
 
     /**
      * @brief try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into CLB
@@ -2134,6 +2149,12 @@ class ParallelCLBPacker
     std::vector<PULocation> PUPoints;
 
     float y2xRatio = 1.0;
+
+    /**
+     * @brief whether make clock region become constraints
+     *
+     */
+    bool clockRegionAware = true;
 };
 std::ostream &operator<<(std::ostream &os, const ParallelCLBPacker::PackingCLBSite::PackingCLBCluster *tmpCluster);
 // inline bool operator<(const ParallelCLBPacker::PackingCLBSite::PackingCLBCluster &A,

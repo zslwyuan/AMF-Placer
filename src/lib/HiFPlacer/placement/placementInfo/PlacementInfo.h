@@ -4143,7 +4143,7 @@ class PlacementInfo
      * @return false  if the the given PlacementUnit CANNOT be mapped to the site considering the half-column clock
      * legalization rules
      */
-    bool checkClockColumnLegalization(PlacementInfo::PlacementUnit *curPU, DeviceInfo::DeviceSite *curSite)
+    inline bool checkClockColumnLegalization(PlacementInfo::PlacementUnit *curPU, DeviceInfo::DeviceSite *curSite)
     {
         auto clockColumn = curSite->getClockHalfColumn();
         auto curSetOfClocks = clockCol2ClockNets[clockColumn];
@@ -4155,6 +4155,28 @@ class PlacementInfo
             return true;
         else
             return false;
+    }
+
+    /**
+     * @brief check the clock resource increase extent if the given PlacementUnit can be mapped to the site considering
+     * the half-column clock legalization rules
+     *
+     * @param curPU a given PU
+     * @param curSite the target site
+     * @return true if the the given PlacementUnit can be mapped to the site considering the half-column clock
+     * legalization rules
+     * @return int
+     */
+    inline int getClockColumnUtilizationIncrease(PlacementInfo::PlacementUnit *curPU, DeviceInfo::DeviceSite *curSite)
+    {
+        auto clockColumn = curSite->getClockHalfColumn();
+        auto curSetOfClocks = clockCol2ClockNets[clockColumn];
+        int oriClockNum = curSetOfClocks.size();
+        auto curPUClocks = curPU->getClockNets();
+        for (auto clockNet : curPUClocks)
+            curSetOfClocks.insert(clockNet);
+
+        return curSetOfClocks.size() - oriClockNum;
     }
 
     void printOutClockColumnLegalization(PlacementInfo::PlacementUnit *curPU, DeviceInfo::DeviceSite *curSite)
@@ -4255,6 +4277,27 @@ class PlacementInfo
     inline std::vector<std::vector<PlacementBinInfo *>> &getGlobalBinGrid()
     {
         return globalBinGrid;
+    }
+
+    inline void setClusterNum(int _clusterNum)
+    {
+        clusterNum = _clusterNum;
+    }
+
+    inline int getClusterNum()
+    {
+        return clusterNum;
+    }
+
+    inline bool isDensePlacement()
+    {
+        return ((float)getClusterNum() / (float)getDeviceInfo()->getClockRegionNumX() /
+                (float)getDeviceInfo()->getClockRegionNumY()) > 0.6;
+    }
+
+    inline bool isClockLegalizationRisky()
+    {
+        return clockLegalizationRisky;
     }
 
   private:
@@ -4429,6 +4472,9 @@ class PlacementInfo
     int mediumPathThresholdLevel = 5;
 
     int dumpPlacementUnitLocationCnt = 0;
+
+    int clusterNum = 1;
+    bool clockLegalizationRisky = false;
 
     float oriPseudoNetWeight = -1;
     int macroPseudoNetEnhanceCnt = -1;

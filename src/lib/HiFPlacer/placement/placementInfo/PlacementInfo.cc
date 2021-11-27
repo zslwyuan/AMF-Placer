@@ -1335,6 +1335,14 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
     addedCells.clear();
     auto &cells = getCells();
 
+    auto FFTypeBELIds = getPotentialBELTypeIDs(DesignInfo::CellType_FDCE);
+    std::vector<std::vector<PlacementInfo::PlacementBinInfo *>> &FFBinGrid = getBinGrid(FFTypeBELIds[0]);
+    auto LUTTypeBELIds = getPotentialBELTypeIDs(DesignInfo::CellType_LUT6);
+    std::vector<std::vector<PlacementInfo::PlacementBinInfo *>> &LUTBinGrid = getBinGrid(LUTTypeBELIds[0]);
+
+    std::set<std::pair<int, int>> clockRegion2Inflat;
+    clockRegion2Inflat.clear();
+
     for (int i = deviceInfo->getClockRegionNumY() - 1; i >= 0; i--)
     {
         for (int j = 0; j < deviceInfo->getClockRegionNumX(); j++)
@@ -1343,8 +1351,9 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
             {
                 for (auto clockColumn : row)
                 {
-                    if (clockColumn->getClockNum() > 10)
+                    if ((clockRegionUtilization[i][j] > 12 && clockColumn->getClockNum() > 10))
                     {
+                        clockLegalizationRisky = true;
                         for (auto &pair : clockColumn->getClockNetId2CellIds())
                         {
                             for (auto cellId : pair.second)
@@ -1357,6 +1366,8 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
                                         if (compatiblePlacementTable_cellId2InfationRatio[cellId] < 4)
                                             compatiblePlacementTable_cellId2InfationRatio[cellId] *= infateRatio;
                                         addedCells.insert(cellId);
+                                        std::pair<int, int> rloc(i, j);
+                                        clockRegion2Inflat.insert(rloc);
                                     }
                                 }
                             }
@@ -1367,7 +1378,49 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
         }
     }
 
-    print_status("PlacementInfo: adjusted LUT/FF utilization based on Clock Utilization");
+    if (!isDensePlacement())
+    {
+        int cnt = 0;
+        for (auto &tmpRow : FFBinGrid)
+        {
+            for (auto curBin : tmpRow)
+            {
+                int clockRegionX, clockRegionY;
+                deviceInfo->getClockRegionByLocation((curBin->left() + curBin->right()) / 2,
+                                                     (curBin->top() + curBin->bottom()) / 2, clockRegionX,
+                                                     clockRegionY);
+                std::pair<int, int> rloc(clockRegionY, clockRegionX);
+                if (clockRegion2Inflat.find(rloc) != clockRegion2Inflat.end())
+                {
+                    cnt++;
+                    if (curBin->getRequiredBinShrinkRatio() > 0.6)
+                    {
+                        curBin->setRequiredBinShrinkRatio(curBin->getRequiredBinShrinkRatio() * 0.75);
+                    }
+                }
+            }
+        }
+        for (auto &tmpRow : LUTBinGrid)
+        {
+            for (auto curBin : tmpRow)
+            {
+                int clockRegionX, clockRegionY;
+                deviceInfo->getClockRegionByLocation((curBin->left() + curBin->right()) / 2,
+                                                     (curBin->top() + curBin->bottom()) / 2, clockRegionX,
+                                                     clockRegionY);
+                std::pair<int, int> rloc(clockRegionY, clockRegionX);
+                if (clockRegion2Inflat.find(rloc) != clockRegion2Inflat.end())
+                {
+                    if (curBin->getRequiredBinShrinkRatio() > 0.6)
+                    {
+                        curBin->setRequiredBinShrinkRatio(curBin->getRequiredBinShrinkRatio() * 0.85);
+                    }
+                }
+            }
+        }
+        print_status("PlacementInfo: adjusted FF utilization based on Clock Utilization. " + std::to_string(cnt) +
+                     " bins have been shrinked.");
+    }
 }
 
 void PlacementInfo::adjustLUTFFUtilization_Routability_Reset()

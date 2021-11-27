@@ -303,6 +303,9 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     clockRegionclusters.clear();
 
     unsigned int maxSize = 0;
+    int sizeThr = 200000;
+    if (placementInfo->isDensePlacement() || clockRegionClusterTooLarge)
+        sizeThr = 2000;
     for (unsigned int nodeId = 0; nodeId < timingNodes.size() * 0.1; nodeId++)
     {
         auto timingNode = timingNodes[nodeId];
@@ -311,7 +314,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             if (extractedCellIds.find(nodeId) != extractedCellIds.end())
                 continue;
             auto candidateCellIds =
-                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, 200000, extractedCellIds);
+                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, sizeThr, extractedCellIds);
 
             if (candidateCellIds.size() >= pathLenThr * 0.8)
             {
@@ -438,15 +441,32 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                 }
             }
         }
-        else
+
+        if (extractedCellIds.size() > timingNodes.size() * 0.2 && sizeThr > 20000)
         {
-            break;
+            PU2ClockRegionCenter.clear();
+            PU2ClockRegionColumn.clear();
+
+            extractedCellIds.clear();
+            extractedPUs.clear();
+            clockRegionclusters.clear();
+
+            sizeThr = 2000;
+            clockRegionClusterTooLarge = true;
         }
     }
     dumpClockRegionClusters();
+    // if (!placementInfo->isDensePlacement())
+    stretchClockRegionColumns();
 
+    print_info("PlacementTimingOptimizer: largest long-path cluster size=" + std::to_string(maxSize));
+}
+
+void PlacementTimingOptimizer::stretchClockRegionColumns()
+{
     auto &binGrid = placementInfo->getGlobalBinGrid();
-
+    auto &PU2ClockRegionColumn = placementInfo->getPU2ClockRegionColumn();
+    auto YX2ClockRegion = deviceInfo->getClockRegions();
     int clockRegionXNum = YX2ClockRegion[0].size();
     std::vector<int> curClockRegionX2cellNum(clockRegionXNum, 0);
     std::vector<std::vector<PlacementInfo::PlacementUnit *>> clockRegionX2PUs(
@@ -490,11 +510,14 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     for (int colX = 0; colX < curClockRegionX2cellNum.size(); colX++)
     {
         float stretchRatio = (float)newClockRegionX2cellNum[colX] / (float)curClockRegionX2cellNum[colX];
+
+        float oriTopY = curClockRegionX2MaxY[colX];
+        float oriBottomY = curClockRegionX2MinY[colX];
+        if (std::abs(oriTopY - oriBottomY) < 0.1)
+            continue;
         if (stretchRatio > 1)
         {
             stretchRatio *= 1.05;
-            float oriTopY = curClockRegionX2MaxY[colX];
-            float oriBottomY = curClockRegionX2MinY[colX];
             float oriH = oriTopY - oriBottomY;
             float newH = stretchRatio * oriH;
             float deltaH = newH - oriH;
@@ -534,8 +557,6 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     }
 
     placementInfo->updateElementBinGrid();
-
-    print_info("PlacementTimingOptimizer: largest long-path cluster size=" + std::to_string(maxSize));
 }
 
 void PlacementTimingOptimizer::dumpClockRegionClusters()

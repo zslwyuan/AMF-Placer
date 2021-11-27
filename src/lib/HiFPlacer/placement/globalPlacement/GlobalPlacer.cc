@@ -253,7 +253,8 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         bool criteria1 = (progressRatio > 0.98 || (progressRatio > 0.95 && HPWLChangeLittle)) &&
                          ((macroCloseToSite && averageMacroLegalDisplacement < 1) || macroLegalizationFixed);
         bool criteria2 = upperBoundHPWL < minHPWL * 2 && macroLegalizationFixed && i > 30;
-        bool criteria3 = progressRatio > 0.925 && upperBoundHPWL / minHPWL < 1.02 && macroLegalizationFixed;
+        bool criteria3 = iterCntAfterMacrosFixed >= 2 && progressRatio > 0.925 && upperBoundHPWL / minHPWL < 1.02 &&
+                         macroLegalizationFixed;
         bool criteria4 = iterCntAfterMacrosFixed >= 2 && macroLegalizationFixed;
 
         if (macroLegalizationFixed)
@@ -424,8 +425,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
             return;
     }
 
-    if (enableClockRegionAware)
-        CARRYMacroLegalizer->setClockRegionAware();
+    CARRYMacroLegalizer->setClockRegionAware(enableClockRegionAware);
 
     if ((BRAMDSPLegalizer->getAverageDisplacementOfRoughLegalization() > 3 && progressRatio < 0.9 &&
          curIteration < 10) &&
@@ -636,8 +636,10 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
 
     historyHPWLs.push_back(upperBoundHPWL);
 
-    if (progressRatio > 0.6)
+    if (progressRatio > 0.6 && !placementInfo->isDensePlacement())
         enableClockRegionAware = true;
+    if (placementInfo->isClockLegalizationRisky())
+        enableClockRegionAware = false;
 
     int numRecorded = historyHPWLs.size();
     if (numRecorded > 5)

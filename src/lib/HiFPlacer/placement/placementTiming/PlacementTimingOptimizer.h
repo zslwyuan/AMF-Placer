@@ -45,6 +45,7 @@ class PlacementTimingOptimizer
     void clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio);
     void moveDriverIntoBetterClockRegion(int pathLenThr, float clusterThrRatio);
     void dumpClockRegionClusters();
+    void stretchClockRegionColumns();
 
     void initPois()
     {
@@ -118,6 +119,7 @@ class PlacementTimingOptimizer
     float lambdaPois = 100;
     int STA_Cnt = 0;
     float effectFactor = 0;
+    bool clockRegionClusterTooLarge = false;
     std::vector<float> pois;
     std::vector<std::vector<int>> clockRegionclusters;
 };

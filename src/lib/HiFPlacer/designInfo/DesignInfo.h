@@ -473,6 +473,16 @@ class DesignInfo
             return offsetYInCell;
         }
 
+        inline bool isFixed()
+        {
+            return fixed;
+        }
+
+        inline void setFixed()
+        {
+            fixed = true;
+        }
+
       private:
         /**
          * @brief pin type could be:
@@ -486,6 +496,7 @@ class DesignInfo
         DesignNet *netPtr = nullptr;
         bool inputOrNot;
         bool unconnected = false;
+        bool fixed = false;
         std::string driverPinName;
         DesignPin *driverPin = nullptr;
         float offsetXInCell = 0.0;
@@ -726,11 +737,22 @@ class DesignInfo
             return isPowerNet;
         }
 
+        inline bool checkContainFixedPins()
+        {
+            return containFixedPins;
+        }
+
+        inline void setContainFixedPins()
+        {
+            containFixedPins = true;
+        }
+
       private:
         std::vector<std::string> pinNames;
         std::vector<DesignPin *> pinPtrs;
         std::vector<DesignPin *> driverPinPtrs;
         std::vector<DesignPin *> BeDrivenPinPtrs;
+        bool containFixedPins = false;
         std::map<std::pair<int, int>, float> pinIdPinIdInNet2EnhanceRatio;
         float overallClusterEnhanceRatio = 1.0;
         float overallTimingEnhanceRatio = 1.0;

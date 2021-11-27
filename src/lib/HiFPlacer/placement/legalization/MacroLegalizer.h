@@ -133,9 +133,9 @@ class MacroLegalizer
      */
     void resetSitesMapped();
 
-    void setClockRegionAware()
+    void setClockRegionAware(bool _clockRegionAware)
     {
-        clockRegionAware = true;
+        clockRegionAware = _clockRegionAware;
     }
 
   private:
