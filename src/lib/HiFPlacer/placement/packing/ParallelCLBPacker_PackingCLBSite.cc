@@ -1002,6 +1002,8 @@ void ParallelCLBPacker::PackingCLBSite::mapMuxF8Macro(int muxF8Offset, Placement
     // map MuxF7
     for (DesignInfo::DesignPin *pinBeDriven : curMUXF8->getInputPins())
     {
+        if (!pinBeDriven->getDriverPin())
+            continue;
         if (pinBeDriven->getRefPinName() == "I0")
         {
             auto I0MuxF7 = pinBeDriven->getDriverPin()->getCell();
@@ -1041,6 +1043,8 @@ void ParallelCLBPacker::PackingCLBSite::mapMuxF8Macro(int muxF8Offset, Placement
         auto curMuxF7 = slotMapping.MuxF7[muxF8Offset][i];
         for (DesignInfo::DesignPin *pinBeDriven : curMuxF7->getInputPins())
         {
+            if (!pinBeDriven->getDriverPin())
+                continue;
             if (pinBeDriven->getRefPinName() == "I0")
             {
                 auto I0LUT = pinBeDriven->getDriverPin()->getCell();
