@@ -15,7 +15,7 @@ foreach curCell $allCells {
 }
 close $fo
 
-set fo [open "${pahtPrefix}_clocks" "w"]
+set fo [open "/home/tingyuan/Dropbox/AMF-Placer/benchmarks/VCU108/design/faceDetect/faceDetect_clocks" "w"]
 set clocks [get_nets -hierarchical -top_net_of_hierarchical_group -filter { TYPE == "GLOBAL_CLOCK" } ]
 foreach curClock $clocks {
     set tmp_net_driver_pin [get_pins  -leaf -of_objects  $curClock -filter {DIRECTION == OUT}]
