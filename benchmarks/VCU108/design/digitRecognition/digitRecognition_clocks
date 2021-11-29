@@ -1,0 +1,6 @@
+design_1_i/xilinx_dma_pcie_ep_0/inst/xdma_0_i/inst/pcie3_ip_i/inst/xdma_0_pcie3_ip_gt_top_i/phy_clk_i/bufg_gt_pclk/O
+design_1_i/xilinx_dma_pcie_ep_0/inst/xdma_0_i/inst/pcie3_ip_i/inst/xdma_0_pcie3_ip_gt_top_i/bufg_mcap_clk/O
+design_1_i/xilinx_dma_pcie_ep_0/inst/xdma_0_i/inst/pcie3_ip_i/inst/xdma_0_pcie3_ip_gt_top_i/phy_clk_i/bufg_gt_userclk/O
+design_1_i/DigitRec_0/inst/xor_ln1357_23_reg_71287[255]_i_1_bufg_place/O
+design_1_i/xilinx_dma_pcie_ep_0/inst/xdma_0_i/inst/pcie3_ip_i/inst/xdma_0_pcie3_ip_gt_top_i/phy_clk_i/bufg_gt_coreclk/O
+design_1_i/xilinx_dma_pcie_ep_0/inst/xdma_0_i/inst/pcie3_ip_i/inst/bufg_gt_sysclk/O

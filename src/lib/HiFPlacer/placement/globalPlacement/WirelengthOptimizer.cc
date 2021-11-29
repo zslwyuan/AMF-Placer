@@ -758,7 +758,7 @@ void WirelengthOptimizer::addPseudoNet2LoctionForAllPUs(float pesudoNetWeight, b
 
 void WirelengthOptimizer::updatePseudoNetForUserDefinedClusters(float pesudoNetWeight)
 {
-
+    auto &cellLoc = placementInfo->getCellId2location();
     userDefinedClusterFadeOutFactor *= 0.9;
     std::vector<std::vector<DesignInfo::DesignCell *>> &predefinedCellClusters =
         placementInfo->getDesignInfo()->getPredefinedClusters();
