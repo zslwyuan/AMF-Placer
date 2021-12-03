@@ -436,7 +436,7 @@ class PlacementInfo
          */
         inline bool inRange(float x, float y)
         {
-            return (x < rightX && x >= leftX && y < topY && y >= bottomY);
+            return (x < rightX && x >= (leftX - 1e-3) && y < topY && y >= (bottomY - 1e-3));
         }
 
         inline bool inRangeY(float y)
@@ -4300,6 +4300,11 @@ class PlacementInfo
         return clockLegalizationRisky;
     }
 
+    inline int getHighFanOutThr()
+    {
+        return highFanOutThr;
+    }
+
   private:
     CompatiblePlacementTable *compatiblePlacementTable = nullptr;
     std::vector<PlacementUnit *> placementUnits;
@@ -4484,6 +4489,8 @@ class PlacementInfo
     float PUWithManyNetsRatio = -1;
     float minHPWL = 1e8;
     bool LUTFFUtilizationAdjusted = false;
+
+    int highFanOutThr = 10000000;
 };
 
 std::ostream &operator<<(std::ostream &os, PlacementInfo::PlacementMacro *curMacro);

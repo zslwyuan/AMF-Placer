@@ -593,6 +593,8 @@ void ClusterPlacer::setClusterNetsAdjMat()
     std::map<PlacementInfo::PlacementUnit *, int> fixedPlacementUnit2LocId;
     fixedPlacementUnit2LocId.clear();
 
+    float pathThr = placementInfo->getMediumPathThresholdLevel();
+
     for (auto net : placementInfo->getPlacementNets())
     {
         for (auto driveU : net->getDriverUnits())
@@ -620,6 +622,11 @@ void ClusterPlacer::setClusterNetsAdjMat()
             {
                 int A = driveU->getId();
                 int B = UBeDriven->getId();
+                int maxLength = getPlacementUnitMaxPathLen(UBeDriven);
+
+                if (maxLength > 0 && maxLength < 3 && net->getUnitsBeDriven().size() < 8)
+                    continue;
+
                 int clusterA = placementUnit2ClusterId[A];
                 int clusterB = placementUnit2ClusterId[B];
                 assert(clusterA >= 0 && clusterB >= 0);

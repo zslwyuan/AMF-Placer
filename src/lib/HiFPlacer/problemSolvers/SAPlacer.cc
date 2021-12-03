@@ -159,10 +159,11 @@ void shuffleVectors(std::vector<std::vector<int>> &a, boost::mt19937 &rng)
     }
 }
 
-void SAPlacer::randomSwap(const std::vector<std::vector<std::vector<int>>> &grid2clusters,
-                          std::vector<std::vector<std::vector<int>>> &new_grid2clusters,
-                          const std::vector<std::pair<int, int>> &cluster2XY,
-                          std::vector<std::pair<int, int>> &new_cluster2XY, float temperature, boost::mt19937 &rng)
+void SAPlacer::randomSwapInWideRange(const std::vector<std::vector<std::vector<int>>> &grid2clusters,
+                                     std::vector<std::vector<std::vector<int>>> &new_grid2clusters,
+                                     const std::vector<std::pair<int, int>> &cluster2XY,
+                                     std::vector<std::pair<int, int>> &new_cluster2XY, float temperature,
+                                     boost::mt19937 &rng)
 {
     int gridY0 = rng() % (gridH * gridW) / gridW;
     int gridX0 = rng() % (gridH * gridW) % gridW;
@@ -295,6 +296,95 @@ void SAPlacer::randomSwap(const std::vector<std::vector<std::vector<int>>> &grid
     return;
 }
 
+void SAPlacer::randomSwapInWideRangeWithNeighbors(const std::vector<std::vector<std::vector<int>>> &grid2clusters,
+                                                  std::vector<std::vector<std::vector<int>>> &new_grid2clusters,
+                                                  const std::vector<std::pair<int, int>> &cluster2XY,
+                                                  std::vector<std::pair<int, int>> &new_cluster2XY, float temperature,
+                                                  boost::mt19937 &rng)
+{
+    int gridY0 = rng() % (gridH * gridW) / gridW;
+    int gridX0 = rng() % (gridH * gridW) % gridW;
+
+    int gridY1 = -1;
+    int gridX1 = -1;
+
+    while (grid2clusters[gridY0][gridX0].size() == 0)
+    {
+        gridY0 = rng() % (gridH * gridW) / gridW;
+        gridX0 = rng() % (gridH * gridW) % gridW;
+    }
+
+    while ((gridX1 == gridX0 && gridY1 == gridY0) || gridY1 < 0 || gridY1 >= gridH || gridX1 < 0 || gridX1 >= gridW)
+    {
+        gridY1 = (1 - (rng() % 3)) + gridY0;
+        gridX1 = (1 - (rng() % 3)) + gridX0;
+    }
+
+    new_grid2clusters = grid2clusters;
+    new_cluster2XY = cluster2XY;
+
+    std::vector<int> clustersMixed;
+    clustersMixed.clear();
+    for (auto id : grid2clusters[gridY0][gridX0])
+        clustersMixed.push_back(id);
+    for (auto id : grid2clusters[gridY1][gridX1])
+        clustersMixed.push_back(id);
+
+    // std::random_shuffle(clustersMixed.begin(), clustersMixed.end(), myrandom);
+    for (unsigned int i = 0; i < clustersMixed.size(); i++)
+    {
+        for (unsigned int j = i + 1; j < clustersMixed.size(); j++)
+        {
+            if (rng() % 2)
+            {
+                int tmp = clustersMixed[i];
+                clustersMixed[i] = clustersMixed[j];
+                clustersMixed[j] = tmp;
+            }
+        }
+    }
+
+    while (true)
+    {
+        new_grid2clusters[gridY0][gridX0].clear();
+        new_grid2clusters[gridY1][gridX1].clear();
+        for (auto id : clustersMixed)
+        {
+            if (rng() % 2)
+            {
+                new_grid2clusters[gridY1][gridX1].push_back(id);
+                new_cluster2XY[id] = std::pair<int, int>(gridX1, gridY1);
+            }
+            else
+            {
+                new_grid2clusters[gridY0][gridX0].push_back(id);
+                new_cluster2XY[id] = std::pair<int, int>(gridX0, gridY0);
+            }
+        }
+        std::sort(new_grid2clusters[gridY0][gridX0].begin(), new_grid2clusters[gridY0][gridX0].end());
+        std::sort(new_grid2clusters[gridY1][gridX1].begin(), new_grid2clusters[gridY1][gridX1].end());
+        if (new_grid2clusters[gridY0][gridX0].size() != grid2clusters[gridY0][gridX0].size())
+        {
+            break;
+        }
+        else
+        {
+            bool changed = false;
+            for (unsigned int i = 0; i < grid2clusters[gridY0][gridX0].size(); i++)
+            {
+                if (grid2clusters[gridY0][gridX0][i] != new_grid2clusters[gridY0][gridX0][i])
+                {
+                    changed = true;
+                    break;
+                }
+            }
+            if (changed)
+                break;
+        }
+    }
+    return;
+}
+
 void SAPlacer::randomShuffleRowColumn(const std::vector<std::vector<std::vector<int>>> &grid2clusters,
                                       std::vector<std::vector<std::vector<int>>> &new_grid2clusters,
                                       const std::vector<std::pair<int, int>> &cluster2XY,
@@ -363,8 +453,8 @@ void SAPlacer::worker(SAPlacer *saPlacer, std::vector<std::vector<std::vector<in
         if (k > SAIterNum)
             saPlacer->randomShuffleRowColumn(cur_grid2clusters, new_grid2clusters, cur_cluster2XY, new_cluster2XY, rng);
         else
-            saPlacer->randomSwap(cur_grid2clusters, new_grid2clusters, cur_cluster2XY, new_cluster2XY, temperature,
-                                 rng);
+            saPlacer->randomSwapInWideRange(cur_grid2clusters, new_grid2clusters, cur_cluster2XY, new_cluster2XY,
+                                            temperature, rng);
         double newE = saPlacer->evaluateClusterPlacement(new_grid2clusters, new_cluster2XY);
 
         float thr = (float)rng() / (float)rng.max();

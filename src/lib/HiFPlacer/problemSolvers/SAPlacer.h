@@ -88,10 +88,17 @@ class SAPlacer
 
     double SACalibrationOffset;
 
-    void randomSwap(const std::vector<std::vector<std::vector<int>>> &grid2clusters,
-                    std::vector<std::vector<std::vector<int>>> &new_Grid2clusters,
-                    const std::vector<std::pair<int, int>> &cluster2XY,
-                    std::vector<std::pair<int, int>> &new_cluster2XY, float temperature, boost::mt19937 &rng);
+    void randomSwapInWideRange(const std::vector<std::vector<std::vector<int>>> &grid2clusters,
+                               std::vector<std::vector<std::vector<int>>> &new_Grid2clusters,
+                               const std::vector<std::pair<int, int>> &cluster2XY,
+                               std::vector<std::pair<int, int>> &new_cluster2XY, float temperature,
+                               boost::mt19937 &rng);
+
+    void randomSwapInWideRangeWithNeighbors(const std::vector<std::vector<std::vector<int>>> &grid2clusters,
+                                            std::vector<std::vector<std::vector<int>>> &new_Grid2clusters,
+                                            const std::vector<std::pair<int, int>> &cluster2XY,
+                                            std::vector<std::pair<int, int>> &new_cluster2XY, float temperature,
+                                            boost::mt19937 &rng);
 
     void randomShuffleRowColumn(const std::vector<std::vector<std::vector<int>>> &grid2clusters,
                                 std::vector<std::vector<std::vector<int>>> &new_grid2clusters,

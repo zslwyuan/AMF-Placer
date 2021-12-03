@@ -637,9 +637,18 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
     historyHPWLs.push_back(upperBoundHPWL);
 
     if (progressRatio > 0.6 && !placementInfo->isDensePlacement())
+    {
+        print_warning("GlobalPlacer: clock region aware optimization is enabled.");
         enableClockRegionAware = true;
+    }
+    if (progressRatio > 0.6)
+    {
+        BRAMDSPLegalizer->setClockRegionCasLegalization(true);
+    }
     if (placementInfo->isClockLegalizationRisky())
+    {
         enableClockRegionAware = false;
+    }
 
     int numRecorded = historyHPWLs.size();
     if (numRecorded > 5)
@@ -661,13 +670,14 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
         }
         else if (progressRatio > 0.8 && upperBoundHPWL / minHPWL > 1.333 && updateMinHPWLAfterLegalization)
         {
-            print_warning("The upperbound HPWL increases too much, pseudoNetWeight is reduced by 50% to recover.");
+            print_warning(
+                "GlobalPlacer: The upperbound HPWL increases too much, pseudoNetWeight is reduced by 50% to recover.");
             placementInfo->adjustLUTFFUtilization_Routability_Reset();
             pseudoNetWeight *= 0.5;
             historyHPWLs.clear();
         }
         err = std::sqrt(err / 5);
-        print_info("err=" + std::to_string(err) + " minHPWL=" + std::to_string(minHPWL) +
+        print_info("GlobalPlacer: err=" + std::to_string(err) + " minHPWL=" + std::to_string(minHPWL) +
                    " err/minHPWL=" + std::to_string(err / minHPWL) + " progressRatio=" + std::to_string(progressRatio));
 
         if (averageMacroLegalDisplacement > 3 && progressRatio > 0.98)
@@ -686,7 +696,8 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
     {
         if (progressRatio > 0.6 && upperBoundHPWL / minHPWL > 1.333 && curIter > 10)
         {
-            print_warning("The upperbound HPWL increases too much, pseudoNetWeight is reduced by 50% to recover.");
+            print_warning(
+                "GlobalPlacer: The upperbound HPWL increases too much, pseudoNetWeight is reduced by 50% to recover.");
             placementInfo->adjustLUTFFUtilization_Routability_Reset();
             pseudoNetWeight *= 0.5;
             historyHPWLs.clear();
@@ -694,7 +705,8 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
     }
     else
     {
-        print_info("minHPWL=" + std::to_string(minHPWL) + " progressRatio=" + std::to_string(progressRatio));
+        print_info("GlobalPlacer: minHPWL=" + std::to_string(minHPWL) +
+                   " progressRatio=" + std::to_string(progressRatio));
     }
     // if (pseudoNetWeight > 1)
     // {

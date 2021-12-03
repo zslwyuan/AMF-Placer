@@ -314,7 +314,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             if (extractedCellIds.find(nodeId) != extractedCellIds.end())
                 continue;
             auto candidateCellIds =
-                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, sizeThr, extractedCellIds);
+                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, sizeThr, extractedCellIds, 16);
 
             if (candidateCellIds.size() >= pathLenThr * 0.8)
             {

@@ -559,6 +559,42 @@ void PlacementInfo::reloadNets()
             }
         }
     }
+
+    int netPinNumDistribution[8] = {8, 16, 24, 32, 64, 256, 512, 1000000};
+    int netDistribution[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+
+    for (auto curNet : placementNets)
+    {
+        bool overflow = true;
+        int i = 0;
+        for (i = 0; i < 7; i++)
+        {
+            if (curNet->getPinOffsetsInUnit().size() <= netPinNumDistribution[i] + 1)
+            {
+                overflow = false;
+                netDistribution[i]++;
+                break;
+            }
+        }
+        if (overflow)
+        {
+            netDistribution[i]++;
+        }
+    }
+
+    std::string outputStr = "net interconnection density: ";
+    for (int i = 0; i <= 7; i++)
+    {
+        outputStr +=
+            "netPin<" + std::to_string(netPinNumDistribution[i]) + ": " + std::to_string(netDistribution[i]) + ", ";
+        if (netDistribution[i] < 10000 && netPinNumDistribution[i] < highFanOutThr)
+        {
+            highFanOutThr = netPinNumDistribution[i];
+            print_warning("PlacementInfo: High Fanout Thr=" + std::to_string(highFanOutThr));
+        }
+    }
+    print_info("PlacementInfo: " + outputStr);
+
     // updateLongPaths();
     print_status("reload placementNets and #register-related PU=" + std::to_string(PUsContainingFF.size()));
 }
@@ -861,6 +897,16 @@ void PlacementInfo::updateElementBinGrid()
                 assert(binIdX >= 0);
                 assert((unsigned int)binIdY < getBinGrid(SharedBELID).size());
                 assert((unsigned int)binIdX < getBinGrid(SharedBELID)[binIdY].size());
+                if (!getBinGrid(SharedBELID)[binIdY][binIdX]->inRange(cellX, cellY))
+                {
+                    std::cout << "cellX=" << cellX << "\n";
+                    std::cout << "cellY=" << cellY << "\n";
+                    std::cout << "left=" << getBinGrid(SharedBELID)[binIdY][binIdX]->left() << "\n";
+                    std::cout << "right=" << getBinGrid(SharedBELID)[binIdY][binIdX]->right() << "\n";
+                    std::cout << "top=" << getBinGrid(SharedBELID)[binIdY][binIdX]->top() << "\n";
+                    std::cout << "bottom=" << getBinGrid(SharedBELID)[binIdY][binIdX]->bottom() << "\n";
+                    std::cout.flush();
+                }
                 assert(getBinGrid(SharedBELID)[binIdY][binIdX]->inRange(cellX, cellY));
                 if (getBinGrid(SharedBELID)[binIdY][binIdX]->canAddMore(num_cellOccupationBELs))
                 {

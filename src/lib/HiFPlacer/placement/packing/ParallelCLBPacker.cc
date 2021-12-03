@@ -42,10 +42,11 @@ void ParallelCLBPacker::prePackLegalizedMacros(PlacementInfo::PlacementMacro *tm
 ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceInfo, PlacementInfo *placementInfo,
                                      std::map<std::string, std::string> &JSONCfg, int unchangedIterationThr,
                                      int numNeighbor, float deltaD, float curD, float maxD, int PQSize,
-                                     float HPWLWeight, std::string packerName)
+                                     float HPWLWeight, std::string packerName,
+                                     PlacementTimingOptimizer *timingOptimizer)
     : designInfo(designInfo), deviceInfo(deviceInfo), placementInfo(placementInfo), JSONCfg(JSONCfg),
       unchangedIterationThr(unchangedIterationThr), numNeighbor(numNeighbor), deltaD(deltaD), curD(curD), maxD(maxD),
-      PQSize(PQSize), HPWLWeight(HPWLWeight), packerName(packerName),
+      PQSize(PQSize), HPWLWeight(HPWLWeight), packerName(packerName), timingOptimizer(timingOptimizer),
       PUId2PackingCLBSite(placementInfo->getPlacementUnits().size(), nullptr),
       PUId2PackingCLBSiteCandidate(placementInfo->getPlacementUnits().size(), nullptr),
       placementUnits(placementInfo->getPlacementUnits()),
@@ -990,6 +991,7 @@ void ParallelCLBPacker::setPULocationToPackedSite()
     }
     placementInfo->updateElementBinGrid();
     placementInfo->updateB2BAndGetTotalHPWL();
+    // timingOptimizer->conductStaticTimingAnalysis();
 }
 
 void ParallelCLBPacker::setPUsToBePacked()

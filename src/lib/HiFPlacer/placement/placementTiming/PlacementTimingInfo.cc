@@ -353,7 +353,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::traceForwardFromNod
 template <typename nodeType>
 std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int startNodeId, int pathLenThr,
                                                                          unsigned int sizeThr,
-                                                                         std::set<int> &exceptionCells)
+                                                                         std::set<int> &exceptionCells, int fanoutThr)
 {
     std::vector<int> resSucessors;
     std::stack<int> nodeStack;
@@ -376,17 +376,20 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
         int curNode = nodeStack.top();
         nodeStack.pop();
 
-        for (auto outEdge : nodes[curNode]->getOutEdges())
+        if (nodes[curNode]->getOutEdges().size() < fanoutThr)
         {
-            int nextId = outEdge->getSink()->getId();
-
-            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            for (auto outEdge : nodes[curNode]->getOutEdges())
             {
-                if (nodeSet.find(nextId) == nodeSet.end())
+                int nextId = outEdge->getSink()->getId();
+
+                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
                 {
-                    resSucessors.push_back(nextId);
-                    nodeSet.insert(nextId);
-                    nodeStack.push(nextId);
+                    if (nodeSet.find(nextId) == nodeSet.end())
+                    {
+                        resSucessors.push_back(nextId);
+                        nodeSet.insert(nextId);
+                        nodeStack.push(nextId);
+                    }
                 }
             }
         }

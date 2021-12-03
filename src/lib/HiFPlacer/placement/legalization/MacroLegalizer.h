@@ -138,6 +138,11 @@ class MacroLegalizer
         clockRegionAware = _clockRegionAware;
     }
 
+    void setClockRegionCasLegalization(bool _clockRegionCasLegalization)
+    {
+        clockRegionCasLegalization = _clockRegionCasLegalization;
+    }
+
   private:
     std::string legalizerName;
     PlacementInfo *placementInfo;
@@ -445,6 +450,8 @@ class MacroLegalizer
     bool verbose = false;
     float y2xRatio = 1.0;
     bool clockRegionAware = false;
+    bool clockRegionCasLegalization = false;
+    int clockRegionHeightOfDSE_BRAM = 24;
 
     /**
      * @brief the average displacement of exact legalization for the involved PlacementUnit

@@ -320,6 +320,32 @@ class ClusterPlacer
      */
     bool isClustersToLarges();
 
+    inline int getPlacementUnitMaxPathLen(PlacementInfo::PlacementUnit *curPU)
+    {
+
+        auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
+        if (auto unpacked = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
+        {
+            if (unpacked->getCell()->isVirtualCell())
+                return 0;
+            return timingNodes[unpacked->getCell()->getCellId()]->getLongestPathLength();
+        }
+        else if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
+        {
+            int maxLen = 0;
+            for (auto tmpCell : tmpMacro->getCells())
+            {
+                if (tmpCell->isVirtualCell())
+                    continue;
+                int len = timingNodes[tmpCell->getCellId()]->getLongestPathLength();
+                if (len > maxLen)
+                    maxLen = len;
+            }
+            return maxLen;
+        }
+        return 0;
+    }
+
     inline float random_float(float min, float max)
     {
         return ((float)random() / RAND_MAX) * (max - min) + min;

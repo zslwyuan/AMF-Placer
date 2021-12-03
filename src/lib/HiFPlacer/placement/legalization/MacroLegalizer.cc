@@ -213,7 +213,8 @@ float MacroLegalizer::DPForMinHPWL(int colNum, std::vector<std::vector<DeviceInf
         for (unsigned int j = totalMacroCellNum - 1; j < curColSites.size(); j++)
         {
             float curHPWLChange = getHPWLChange(curColPU[0], curColSites[j - heightPURow + 1]);
-            if (curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1)
+            if ((curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1) ||
+                curColSites[j]->getClockRegionY() != curColSites[j - heightPURow + 1]->getClockRegionY())
             {
                 // we need to ensure that there is no occpupied sites in this range
                 curHPWLChange = 1100000000.0;
@@ -251,7 +252,8 @@ float MacroLegalizer::DPForMinHPWL(int colNum, std::vector<std::vector<DeviceInf
                  j++) // j start from heightPURow because PU0 must occupy 1+ site(s)
             {
                 float curHPWLChange = getHPWLChange(curColPU[i], curColSites[j - heightPURow + 1]);
-                if (curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1)
+                if ((curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1) ||
+                    curColSites[j]->getClockRegionY() != curColSites[j - heightPURow + 1]->getClockRegionY())
                 {
                     // we need to ensure that there is no occpupied sites in this range
                     curHPWLChange = 1100000000.0;
@@ -527,6 +529,30 @@ void MacroLegalizer::findPossibleLegalLocation(bool fixedColumn)
     {
         auto curCell = macroCellsToLegalize[i];
         auto curCellType = curCell->getCellType();
+        int macroLength = -1;
+        int cellOffset = -1;
+
+        if (DesignInfo::isDSP(curCellType) || DesignInfo::isBRAM(curCellType))
+        {
+            auto tmpPU = placementInfo->getPlacementUnitByCellId(curCell->getCellId());
+            if (auto unpacked = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(tmpPU))
+            {
+                macroLength = cellOffset = 1;
+            }
+            else if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
+            {
+
+                for (cellOffset = 0; cellOffset < tmpMacro->getCells().size(); cellOffset++)
+                {
+                    if (tmpMacro->getCell(cellOffset) == curCell)
+                    {
+                        macroLength = tmpMacro->getCells().size();
+                        break;
+                    }
+                }
+            }
+        }
+
         assert(macroType2Sites.find(curCellType) != macroType2Sites.end());
 
         std::vector<DeviceInfo::DeviceSite *> *candidateSite = nullptr;
@@ -606,6 +632,16 @@ void MacroLegalizer::findPossibleLegalLocation(bool fixedColumn)
                          curCellType == DesignInfo::CellType_FIFO18E2) &&
                         curCell->isVirtualCell() && curSite->getSiteY() % 2 != 1)
                         continue;
+
+                    if (macroLength > 1 && cellOffset >= 0 && clockRegionCasLegalization && fixedColumn)
+                    {
+                        int headLocation = curSite->getSiteY() - cellOffset;
+                        int tailLocation = headLocation + macroLength - 1;
+                        if (headLocation / clockRegionHeightOfDSE_BRAM != tailLocation / clockRegionHeightOfDSE_BRAM)
+                        {
+                            continue;
+                        }
+                    }
 
                     macro2Sites[curCell].push_back(curSite);
                 }

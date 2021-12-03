@@ -19,6 +19,7 @@
 #include "KDTree/KDTree.h"
 #include "MaximalCardinalityMatching/MaximalCardinalityMatching.h"
 #include "PlacementInfo.h"
+#include "PlacementTimingOptimizer.h"
 #include "const.h"
 #include "dumpZip.h"
 #include "readZip.h"
@@ -87,10 +88,12 @@ class ParallelCLBPacker
      * @param PQSize the size of priority queue (the low-priority candidates will be removed)
      * @param HPWLWeight the factor of HPWL overhead in packing evaluation for a cell
      * @param packerName the name of this packer
+     * @param timingOptimizer timingOptimizer
      */
     ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceInfo, PlacementInfo *placementInfo,
                       std::map<std::string, std::string> &JSONCfg, int unchangedIterationThr, int numNeighbor,
-                      float deltaD, float curD, float maxD, int PQSize, float HPWLWeight, std::string packerName);
+                      float deltaD, float curD, float maxD, int PQSize, float HPWLWeight, std::string packerName,
+                      PlacementTimingOptimizer *timingOptimizer);
 
     ~ParallelCLBPacker()
     {
@@ -1239,6 +1242,48 @@ class ParallelCLBPacker
                 return 0;
             }
 
+            /**
+             * @brief Get the max length of paths involving a given PlacementUnit
+             *
+             * (unused currently) during packing, we should consider timing factors and the critical path should be
+             * assigned top priority.
+             *
+             * @param curPU a given PlacementUnit
+             * @return float
+             */
+            inline float getPlacementUnitMaxPathNegativeSlack(PlacementInfo::PlacementUnit *curPU)
+            {
+
+                auto &timingNodes =
+                    parentPackingCLB->getPlacementInfo()->getTimingInfo()->getSimplePlacementTimingInfo();
+                if (auto unpacked = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
+                {
+                    if (unpacked->getCell()->isVirtualCell() ||
+                        timingNodes[unpacked->getCell()->getCellId()]->checkIsRegister())
+                        return 0;
+                    return (timingNodes[unpacked->getCell()->getCellId()]->getLatestArrival() -
+                            timingNodes[unpacked->getCell()->getCellId()]->getRequiredArrivalTime());
+                }
+                else if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
+                {
+                    float maxNegativeSlack = 0;
+                    for (auto tmpCell : tmpMacro->getCells())
+                    {
+                        if (tmpCell->isVirtualCell())
+                            continue;
+
+                        if (timingNodes[tmpCell->getCellId()]->checkIsRegister())
+                            continue;
+                        float negativeSlack = (timingNodes[tmpCell->getCellId()]->getLatestArrival() -
+                                               timingNodes[tmpCell->getCellId()]->getRequiredArrivalTime());
+                        if (negativeSlack > maxNegativeSlack)
+                            maxNegativeSlack = negativeSlack;
+                    }
+                    return maxNegativeSlack;
+                }
+                return 0;
+            }
+
           private:
             const unsigned int MaxNum_ControlSet = 4;
             const unsigned int MaxNum_FFinControlSet = 4;
@@ -2128,6 +2173,8 @@ class ParallelCLBPacker
      */
     float HPWLWeight;
     std::string packerName;
+
+    PlacementTimingOptimizer *timingOptimizer = nullptr;
 
     int DumpCLBPackingCnt = 0;
 

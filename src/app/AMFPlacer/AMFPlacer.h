@@ -153,7 +153,7 @@ class AMFPlacer
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
         globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.8,
                                                      globalPlacer->getMacroLegalizationWeight() * 0.8);
-        placementInfo->createGridBins(2.0, 2.0);
+        placementInfo->createGridBins(2.5, 2.5);
         placementInfo->adjustLUTFFUtilization(-10, true);
         // globalPlacer->spreading(-1);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
@@ -179,6 +179,11 @@ class AMFPlacer
                                                   true, 25, timingOptimizer);
         // placementInfo->getPU2ClockRegionCenters().clear();
 
+        globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.9);
+        globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.9,
+                                                     globalPlacer->getMacroLegalizationWeight() * 0.9);
+        placementInfo->createGridBins(1.5, 1.5);
+        placementInfo->adjustLUTFFUtilization(-10, true);
         // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
         // timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
@@ -200,8 +205,8 @@ class AMFPlacer
 
         timingOptimizer->conductStaticTimingAnalysis();
         // finally pack the elements into sites on the FPGA device
-        parallelCLBPacker =
-            new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.25, 0.5, 6, 10, 0.1, "first");
+        parallelCLBPacker = new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.25, 0.5, 6, 10,
+                                                  0.1, "first", timingOptimizer);
         parallelCLBPacker->packCLBs(30, true);
         parallelCLBPacker->setPULocationToPackedSite();
         timingOptimizer->conductStaticTimingAnalysis();

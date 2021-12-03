@@ -625,9 +625,11 @@ class PlacementTimingInfo
          *
          * @param startNodeId start node Id
          * @param sizeThr the number limitation to avoid huge cluster
+         * @param fanoutThr limit the node fanout during DFS
          * @return std::vector<int>
          */
-        std::vector<int> DFSFromNode(int startNodeId, int pathLenThr, unsigned sizeThr, std::set<int> &exceptionCells);
+        std::vector<int> DFSFromNode(int startNodeId, int pathLenThr, unsigned sizeThr, std::set<int> &exceptionCells,
+                                     int fanoutThr = 10000000);
 
         inline std::vector<TimingNode *> &getPathLenSortedNodes()
         {
