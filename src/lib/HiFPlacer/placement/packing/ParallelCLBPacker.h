@@ -20,6 +20,7 @@
 #include "MaximalCardinalityMatching/MaximalCardinalityMatching.h"
 #include "PlacementInfo.h"
 #include "PlacementTimingOptimizer.h"
+#include "WirelengthOptimizer.h"
 #include "const.h"
 #include "dumpZip.h"
 #include "readZip.h"
@@ -89,11 +90,12 @@ class ParallelCLBPacker
      * @param HPWLWeight the factor of HPWL overhead in packing evaluation for a cell
      * @param packerName the name of this packer
      * @param timingOptimizer timingOptimizer
+     * @param WLOptimizer WLOptimizer
      */
     ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceInfo, PlacementInfo *placementInfo,
                       std::map<std::string, std::string> &JSONCfg, int unchangedIterationThr, int numNeighbor,
                       float deltaD, float curD, float maxD, int PQSize, float HPWLWeight, std::string packerName,
-                      PlacementTimingOptimizer *timingOptimizer);
+                      PlacementTimingOptimizer *timingOptimizer, WirelengthOptimizer *WLOptimizer = nullptr);
 
     ~ParallelCLBPacker()
     {
@@ -2124,6 +2126,7 @@ class ParallelCLBPacker
     void dumpDSPBRAMPlacementTcl(std::ofstream &outfileTcl);
     void dumpCLBPlacementTcl(std::ofstream &outfileTcl, bool packingRelatedToLUT6_2);
     void dumpPlacementTcl(std::string dumpTclFile);
+    void dumpAllCellsCoordinate();
 
   private:
     DesignInfo *designInfo;
@@ -2175,8 +2178,10 @@ class ParallelCLBPacker
     std::string packerName;
 
     PlacementTimingOptimizer *timingOptimizer = nullptr;
+    WirelengthOptimizer *WLOptimizer = nullptr;
 
     int DumpCLBPackingCnt = 0;
+    int allCoordinateDumpCnt = 0;
 
     std::vector<PackingCLBSite *> PUId2PackingCLBSite;
     std::vector<PackingCLBSite *> packingSites;

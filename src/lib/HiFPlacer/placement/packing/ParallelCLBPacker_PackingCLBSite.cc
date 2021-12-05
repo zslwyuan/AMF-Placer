@@ -700,6 +700,14 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite()
     }
 }
 
+bool isLUT6(DesignInfo::DesignCell *cell)
+{
+    if (!cell)
+        return false;
+    return (cell->getOriCellType() == DesignInfo::CellType_LUT6) ||
+           (cell->getOriCellType() == DesignInfo::CellType_LUT6_2);
+}
+
 void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
 {
     std::map<DesignInfo::DesignCell *, DesignInfo::DesignCell *> FF2LUT;
@@ -845,40 +853,7 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
                 {
                     int halfCLBId = i * 2 + j;
                     auto &CSFF = determinedClusterInSite->getFFControlSets()[halfCLBId];
-                    // if (slotMapping.LUTs[i][j][k])
-                    // {
-                    //     if (slotMapping.LUTs[i][j][k]->isLUT6())
-                    //     {
-                    //         if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(
-                    //                 placementInfo->getPlacementUnitByCell(slotMapping.LUTs[i][0][k])))
-                    //         {
-                    //             if (tmpMacro->getMacroType() ==
-                    //                 PlacementInfo::PlacementMacro::PlacementMacroType_BEL)
-                    //             {
-                    //                 for (auto tmpCell : tmpMacro->getCells())
-                    //                 {
-                    //                     if (tmpCell->isFF())
-                    //                     {
-                    //                         if (mappedFFs.find(tmpCell) == mappedFFs.end())
-                    //                         {
-                    //                             for (auto tmpFF : CSFF.getFFs())
-                    //                             {
-                    //                                 if (mappedFFs.find(tmpFF) == mappedFFs.end() &&
-                    //                                     tmpFF == tmpCell)
-                    //                                 {
-                    //                                     mappedFFs.insert(tmpFF);
-                    //                                     mappedCells.insert(tmpFF);
-                    //                                     slotMapping.FFs[i][j][k] = tmpFF;
-                    //                                 }
-                    //                             }
-                    //                         }
-                    //                     }
-                    //                 }
-                    //             }
-                    //         }
-                    //         continue;
-                    //     }
-                    // }
+
                     for (auto tmpFF : CSFF.getFFs())
                     {
                         if (mappedFFs.find(tmpFF) == mappedFFs.end())
@@ -928,6 +903,35 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
     {
         for (int k0 = 0; k0 < 4; k0++)
         {
+            if (!isLUT6(slotMapping.LUTs[i0][0][k0]) && !isLUT6(slotMapping.LUTs[i0][1][k0]))
+            {
+                int oriDirectInternalRouteNum =
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][0][k0], slotMapping.FFs[i0][0][k0]) +
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][1][k0], slotMapping.FFs[i0][1][k0]);
+
+                // switch locations
+                int newDirectInternalRouteNum =
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][0][k0], slotMapping.FFs[i0][1][k0]) +
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][1][k0], slotMapping.FFs[i0][0][k0]);
+
+                if (oriDirectInternalRouteNum < newDirectInternalRouteNum)
+                {
+                    DesignInfo::DesignCell *tmpLUT;
+                    tmpLUT = slotMapping.LUTs[i0][0][k0];
+                    slotMapping.LUTs[i0][0][k0] = slotMapping.LUTs[i0][1][k0];
+                    slotMapping.LUTs[i0][1][k0] = tmpLUT;
+                    assert(!isLUT6(tmpLUT));
+                }
+            }
+        }
+    }
+
+    int LUTSwapOptions[4][4] = {{0, 1, 0, 1}, {1, 0, 0, 1}, {1, 0, 1, 0}, {0, 1, 1, 0}};
+
+    for (int i0 = 0; i0 < 2; i0++)
+    {
+        for (int k0 = 0; k0 < 4; k0++)
+        {
             for (int i1 = 0; i1 < 2; i1++)
             {
                 for (int k1 = 0; k1 < 4; k1++)
@@ -942,24 +946,94 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite()
                         checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][0][k1], slotMapping.FFs[i1][0][k1]) +
                         checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][1][k1], slotMapping.FFs[i1][1][k1]);
 
-                    // switch locations
-                    int newDirectInternalRouteNum =
-                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][0][k0], slotMapping.FFs[i1][0][k1]) +
-                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][1][k0], slotMapping.FFs[i1][1][k1]) +
-                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][0][k1], slotMapping.FFs[i0][0][k0]) +
-                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][1][k1], slotMapping.FFs[i0][1][k0]);
-
-                    if (oriDirectInternalRouteNum < newDirectInternalRouteNum)
+                    int optDirectInternalRouteNum = -1;
+                    int optimalOption = -1;
+                    for (int optionId = 0; optionId < 4; optionId++)
                     {
-                        DesignInfo::DesignCell *tmpLUT;
-                        tmpLUT = slotMapping.LUTs[i0][0][k0];
-                        slotMapping.LUTs[i0][0][k0] = slotMapping.LUTs[i1][0][k1];
-                        slotMapping.LUTs[i1][0][k1] = tmpLUT;
-                        tmpLUT = slotMapping.LUTs[i0][1][k0];
-                        slotMapping.LUTs[i0][1][k0] = slotMapping.LUTs[i1][1][k1];
-                        slotMapping.LUTs[i1][1][k1] = tmpLUT;
+                        // switch locations
+                        int newDirectInternalRouteNum =
+                            checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][LUTSwapOptions[optionId][0]][k1],
+                                                    slotMapping.FFs[i0][0][k0]) +
+                            checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][LUTSwapOptions[optionId][1]][k1],
+                                                    slotMapping.FFs[i0][1][k0]) +
+                            checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][LUTSwapOptions[optionId][2]][k0],
+                                                    slotMapping.FFs[i1][0][k1]) +
+                            checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][LUTSwapOptions[optionId][3]][k0],
+                                                    slotMapping.FFs[i1][1][k1]);
+                        if (isLUT6(slotMapping.LUTs[i1][LUTSwapOptions[optionId][1]][k1]) ||
+                            isLUT6(slotMapping
+                                       .LUTs[i0][LUTSwapOptions[optionId][3]][k0])) // illegal to put LUT6 at LUT5 slot
+                            continue;
+                        if (newDirectInternalRouteNum > optDirectInternalRouteNum)
+                        {
+                            optimalOption = optionId;
+                            optDirectInternalRouteNum = newDirectInternalRouteNum;
+                        }
+                    }
+
+                    if (oriDirectInternalRouteNum < optDirectInternalRouteNum)
+                    {
+                        DesignInfo::DesignCell *tmpLUT0 = slotMapping.LUTs[i1][LUTSwapOptions[optimalOption][0]][k1];
+                        DesignInfo::DesignCell *tmpLUT1 = slotMapping.LUTs[i1][LUTSwapOptions[optimalOption][1]][k1];
+                        DesignInfo::DesignCell *tmpLUT2 = slotMapping.LUTs[i0][LUTSwapOptions[optimalOption][2]][k0];
+                        DesignInfo::DesignCell *tmpLUT3 = slotMapping.LUTs[i0][LUTSwapOptions[optimalOption][3]][k0];
+                        slotMapping.LUTs[i0][0][k0] = tmpLUT0;
+                        assert(!isLUT6(tmpLUT1));
+                        slotMapping.LUTs[i0][1][k0] = tmpLUT1;
+                        slotMapping.LUTs[i1][0][k1] = tmpLUT2;
+                        assert(!isLUT6(tmpLUT3));
+                        slotMapping.LUTs[i1][1][k1] = tmpLUT3;
+                        continue;
                     }
                 }
+            }
+        }
+    }
+
+    int FFSwapOption[24][4] = {{0, 1, 2, 3}, {0, 1, 3, 2}, {0, 2, 1, 3}, {0, 2, 3, 1}, {0, 3, 1, 2}, {0, 3, 2, 1},
+                               {1, 0, 2, 3}, {1, 0, 3, 2}, {1, 2, 0, 3}, {1, 2, 3, 0}, {1, 3, 0, 2}, {1, 3, 2, 0},
+                               {2, 0, 1, 3}, {2, 0, 3, 1}, {2, 1, 0, 3}, {2, 1, 3, 0}, {2, 3, 0, 1}, {2, 3, 1, 0},
+                               {3, 0, 1, 2}, {3, 0, 2, 1}, {3, 1, 0, 2}, {3, 1, 2, 0}, {3, 2, 0, 1}, {3, 2, 1, 0}};
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            int oriDirectInternalRouteNum =
+                checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][0], slotMapping.FFs[i][j][0]) +
+                checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][1], slotMapping.FFs[i][j][1]) +
+                checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][2], slotMapping.FFs[i][j][2]) +
+                checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][3], slotMapping.FFs[i][j][3]);
+            int optDirectInternalRouteNum = -1;
+            int optimalOption = -1;
+            for (int optionId = 0; optionId < 24; optionId++)
+            {
+                int newDirectInternalRouteNum =
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][0],
+                                            slotMapping.FFs[i][j][FFSwapOption[optionId][0]]) +
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][1],
+                                            slotMapping.FFs[i][j][FFSwapOption[optionId][1]]) +
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][2],
+                                            slotMapping.FFs[i][j][FFSwapOption[optionId][2]]) +
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][3],
+                                            slotMapping.FFs[i][j][FFSwapOption[optionId][3]]);
+                if (newDirectInternalRouteNum > optDirectInternalRouteNum)
+                {
+                    optimalOption = optionId;
+                    optDirectInternalRouteNum = newDirectInternalRouteNum;
+                }
+            }
+            if (oriDirectInternalRouteNum < optDirectInternalRouteNum)
+            {
+                DesignInfo::DesignCell *tmpFF0 = slotMapping.FFs[i][j][FFSwapOption[optimalOption][0]];
+                DesignInfo::DesignCell *tmpFF1 = slotMapping.FFs[i][j][FFSwapOption[optimalOption][1]];
+                DesignInfo::DesignCell *tmpFF2 = slotMapping.FFs[i][j][FFSwapOption[optimalOption][2]];
+                DesignInfo::DesignCell *tmpFF3 = slotMapping.FFs[i][j][FFSwapOption[optimalOption][3]];
+                slotMapping.FFs[i][j][0] = tmpFF0;
+                slotMapping.FFs[i][j][1] = tmpFF1;
+                slotMapping.FFs[i][j][2] = tmpFF2;
+                slotMapping.FFs[i][j][3] = tmpFF3;
+                continue;
             }
         }
     }

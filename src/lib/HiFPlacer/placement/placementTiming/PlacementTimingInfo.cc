@@ -376,20 +376,17 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::DFSFromNode(int sta
         int curNode = nodeStack.top();
         nodeStack.pop();
 
-        if (nodes[curNode]->getOutEdges().size() < fanoutThr)
+        for (auto outEdge : nodes[curNode]->getOutEdges())
         {
-            for (auto outEdge : nodes[curNode]->getOutEdges())
-            {
-                int nextId = outEdge->getSink()->getId();
+            int nextId = outEdge->getSink()->getId();
 
-                if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            if (!nodes[nextId]->checkIsRegister() && nodes[nextId]->getLongestPathLength() > pathLenThr)
+            {
+                if (nodeSet.find(nextId) == nodeSet.end())
                 {
-                    if (nodeSet.find(nextId) == nodeSet.end())
-                    {
-                        resSucessors.push_back(nextId);
-                        nodeSet.insert(nextId);
-                        nodeStack.push(nextId);
-                    }
+                    resSucessors.push_back(nextId);
+                    nodeSet.insert(nextId);
+                    nodeStack.push(nextId);
                 }
             }
         }

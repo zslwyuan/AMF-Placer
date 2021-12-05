@@ -18,7 +18,6 @@
 #include "DeviceInfo.h"
 #include "Eigen/Eigen"
 #include "Eigen/SparseCore"
-#include "MacroLegalizer.h"
 #include "PlacementInfo.h"
 #include "QPSolverWrapper.h"
 #include "PlacementTimingOptimizer.h"

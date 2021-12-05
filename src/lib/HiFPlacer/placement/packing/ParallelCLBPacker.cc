@@ -43,11 +43,11 @@ ParallelCLBPacker::ParallelCLBPacker(DesignInfo *designInfo, DeviceInfo *deviceI
                                      std::map<std::string, std::string> &JSONCfg, int unchangedIterationThr,
                                      int numNeighbor, float deltaD, float curD, float maxD, int PQSize,
                                      float HPWLWeight, std::string packerName,
-                                     PlacementTimingOptimizer *timingOptimizer)
+                                     PlacementTimingOptimizer *timingOptimizer, WirelengthOptimizer *WLOptimizer)
     : designInfo(designInfo), deviceInfo(deviceInfo), placementInfo(placementInfo), JSONCfg(JSONCfg),
       unchangedIterationThr(unchangedIterationThr), numNeighbor(numNeighbor), deltaD(deltaD), curD(curD), maxD(maxD),
       PQSize(PQSize), HPWLWeight(HPWLWeight), packerName(packerName), timingOptimizer(timingOptimizer),
-      PUId2PackingCLBSite(placementInfo->getPlacementUnits().size(), nullptr),
+      WLOptimizer(WLOptimizer), PUId2PackingCLBSite(placementInfo->getPlacementUnits().size(), nullptr),
       PUId2PackingCLBSiteCandidate(placementInfo->getPlacementUnits().size(), nullptr),
       placementUnits(placementInfo->getPlacementUnits()),
       placementUnpackedCells(placementInfo->getPlacementUnpackedCells()),
@@ -276,9 +276,25 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
             }
         }
         setPULocationToPackedSite();
+        int numFixed = 0;
+        for (auto PU : placementInfo->getPlacementUnits())
+            if (PU->isFixed())
+                numFixed++;
+
+        float fixedRatio = (float)numFixed / (float)placementInfo->getPlacementUnits().size();
+        if (fixedRatio > 0.25 && WLOptimizer)
+        {
+            timingOptimizer->conductStaticTimingAnalysis();
+            print_status("ParallelCLBPacker: Move unfixed elements with WLOptimizer");
+            WLOptimizer->GlobalPlacementQPSolve(placementInfo->getPseudoNetWeight() * 2 * (1 + fixedRatio), true, true,
+                                                true, true, false, timingOptimizer);
+            dumpAllCellsCoordinate();
+        }
+
         print_status("ParallelCLBPacker: current HPWL=" + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
         print_status("ParallelCLBPacker: iter#" + std::to_string(iterCnt) +
                      " #determined Slice=" + std::to_string(deteminedCnt));
+
         std::string distibution = "";
         for (auto tmpPair : sliceSize2SliceCnt)
         {
@@ -984,6 +1000,7 @@ void ParallelCLBPacker::setPULocationToPackedSite()
                     {
                         tmpPU->setAnchorLocationAndForgetTheOriginalOne(packingSite->getCLBSite()->X(),
                                                                         packingSite->getCLBSite()->Y());
+                        tmpPU->setFixed();
                     }
                 }
             }
@@ -991,7 +1008,6 @@ void ParallelCLBPacker::setPULocationToPackedSite()
     }
     placementInfo->updateElementBinGrid();
     placementInfo->updateB2BAndGetTotalHPWL();
-    // timingOptimizer->conductStaticTimingAnalysis();
 }
 
 void ParallelCLBPacker::setPUsToBePacked()
@@ -1747,5 +1763,48 @@ void ParallelCLBPacker::dumpFinalPacking()
         dumpPlacementTcl(dumpTclFile);
         print_status("ParallelCLBPacker: dumped placementTcl archieve to: " + dumpTclFile);
         DumpCLBPackingCnt++;
+    }
+}
+
+void ParallelCLBPacker::dumpAllCellsCoordinate()
+{
+    if (JSONCfg.find("DumpAllCoordTrace") != JSONCfg.end())
+    {
+        std::string dumpFile =
+            JSONCfg["DumpAllCoordTrace"] + "-Packing-" + std::to_string(allCoordinateDumpCnt) + ".gz";
+        print_status("GlobalPlacer: dumping coordinate archieve to: " + dumpFile);
+        allCoordinateDumpCnt++;
+        if (dumpFile != "")
+        {
+            std::stringstream outfile0;
+            for (auto curPU : placementInfo->getPlacementUnits())
+            {
+                if (auto curUnpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
+                {
+                    float cellX = curUnpackedCell->X();
+                    float cellY = curUnpackedCell->Y();
+                    DesignInfo::DesignCell *curCell = curUnpackedCell->getCell();
+                    outfile0 << cellX << " " << cellY << " " << curCell->getName() << "\n";
+                }
+                else if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
+                {
+                    for (int vId = 0; vId < curMacro->getNumOfCells(); vId++)
+                    {
+                        float offsetX_InMacro, offsetY_InMacro;
+                        DesignInfo::DesignCellType cellType;
+                        curMacro->getVirtualCellInfo(vId, offsetX_InMacro, offsetY_InMacro, cellType);
+                        float cellX = curMacro->X() + offsetX_InMacro;
+                        float cellY = curMacro->Y() + offsetY_InMacro;
+
+                        if (curMacro->getCell(vId))
+                            outfile0 << cellX << " " << cellY << " " << curMacro->getCell(vId)->getName() << "\n";
+                        else
+                            outfile0 << cellX << " " << cellY << "\n";
+                    }
+                }
+            }
+            writeStrToGZip(dumpFile, outfile0);
+            print_status("GlobalPlacer: dumped coordinate archieve to: " + dumpFile);
+        }
     }
 }

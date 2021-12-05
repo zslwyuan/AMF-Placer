@@ -191,6 +191,12 @@ class GlobalPlacer
      */
     void spreading(int currentIteration, int spreadRegionSizeLimit = 100000000);
 
+    inline WirelengthOptimizer *getWirelengthOptimizer()
+    {
+        assert(WLOptimizer);
+        return WLOptimizer;
+    }
+
   private:
     PlacementInfo *placementInfo;
 

@@ -302,6 +302,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     extractedPUs.clear();
     clockRegionclusters.clear();
 
+    int fanoutThr = placementInfo->getHighFanOutThr();
     unsigned int maxSize = 0;
     int sizeThr = 200000;
     if (placementInfo->isDensePlacement() || clockRegionClusterTooLarge)
@@ -314,7 +315,7 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             if (extractedCellIds.find(nodeId) != extractedCellIds.end())
                 continue;
             auto candidateCellIds =
-                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, sizeThr, extractedCellIds, 16);
+                simpleTimingGraph->DFSFromNode(timingNode->getId(), pathLenThr, sizeThr, extractedCellIds, 1000000);
 
             if (candidateCellIds.size() >= pathLenThr * 0.8)
             {
@@ -409,14 +410,16 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                                 if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
                                 {
                                     int cellId = unpackedCell->getCell()->getCellId();
-                                    extractedCellIds.insert(cellId);
+                                    if (timingNodes[cellId]->getOutEdges().size() < fanoutThr)
+                                        extractedCellIds.insert(cellId);
                                 }
                                 else if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
                                 {
                                     for (auto tmpCell : curMacro->getCells())
                                     {
                                         int cellId = tmpCell->getCellId();
-                                        extractedCellIds.insert(cellId);
+                                        if (timingNodes[cellId]->getOutEdges().size() < fanoutThr)
+                                            extractedCellIds.insert(cellId);
                                     }
                                 }
                                 PUIdsInLongPaths.push_back(curPU->getId());
@@ -435,7 +438,8 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                     {
                         for (auto tmpCellId : candidateCellIds)
                         {
-                            extractedCellIds.insert(tmpCellId);
+                            if (timingNodes[tmpCellId]->getOutEdges().size() < fanoutThr)
+                                extractedCellIds.insert(tmpCellId);
                         }
                     }
                 }
