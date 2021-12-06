@@ -541,7 +541,8 @@ GeneralSpreader::SpreadRegion *GeneralSpreader::expandFromABin(PlacementInfo::Pl
     GeneralSpreader::SpreadRegion *resRegion =
         new GeneralSpreader::SpreadRegion(curBin, placementInfo, binGrid, capacityShrinkRatio);
 
-    if (!useSimpleExpland)
+    float binUnitSize = std::min(curBin->right() - curBin->left(), curBin->top() - curBin->bottom());
+    if (!useSimpleExpland && binUnitSize > 1.25)
     {
         while (resRegion->getOverflowRatio() > capacityShrinkRatio &&
                resRegion->smartFindExpandDirection(coveredBinSet) && resRegion->getBinsInRegion().size() < numBinThr)

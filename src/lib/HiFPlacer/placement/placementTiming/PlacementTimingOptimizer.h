@@ -41,6 +41,8 @@ class PlacementTimingOptimizer
     void enhanceNetWeight_LevelBased(int levelThr);
     void propogateArrivalTime();
     void conductStaticTimingAnalysis();
+    void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,
+                                                           float targetY);
     void setPinsLocation();
     void clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio);
     void moveDriverIntoBetterClockRegion(int pathLenThr, float clusterThrRatio);
@@ -89,10 +91,15 @@ class PlacementTimingOptimizer
         float X = std::fabs(X1 - X2) * 2;
         float Y = std::fabs(Y1 - Y2);
 
-        return (timingC[0] + std::pow(X, 0.3) * timingC[1] + std::pow(Y, 0.3) * timingC[2] +
-                std::pow(X, 0.5) * timingC[3] + std::pow(Y, 0.5) * timingC[4]) /
-                   1000.0 +
-               std::abs(clockRegionX1 - clockRegionX0) * 0.5;
+        float delay = (timingC[0] + std::pow(X, 0.3) * timingC[1] + std::pow(Y, 0.3) * timingC[2] +
+                       std::pow(X, 0.5) * timingC[3] + std::pow(Y, 0.5) * timingC[4]) /
+                          1000.0 +
+                      std::abs(clockRegionX1 - clockRegionX0) * 0.5;
+
+        if (delay < 0.05)
+            delay = 0.05;
+
+        return delay;
     }
 
   private:

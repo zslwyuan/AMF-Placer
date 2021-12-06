@@ -281,6 +281,58 @@ void PlacementTimingOptimizer::conductStaticTimingAnalysis()
     }
 }
 
+void PlacementTimingOptimizer::incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU,
+                                                                                 float targetX, float targetY)
+{
+    print_status("PlacementTimingOptimizer: conducting incremental Static Timing Analysis");
+
+    assert(timingInfo);
+    auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
+    setPinsLocation();
+
+    auto &pinLoc = placementInfo->getPinId2location();
+
+    auto &edges = timingGraph->getEdges();
+    int numEdges = edges.size();
+
+#pragma omp parallel for
+    for (int i = 0; i < numEdges; i++)
+    {
+        auto edge = edges[i];
+        auto &pin1Loc = pinLoc[edge->getSourcePin()->getElementIdInType()];
+        auto &pin2Loc = pinLoc[edge->getSinkPin()->getElementIdInType()];
+        if (pin1Loc.X < -5 && pin1Loc.Y < -5)
+            continue;
+        if (pin2Loc.X < -5 && pin2Loc.Y < -5)
+            continue;
+
+        edge->setDelay(getDelayByModel(pin1Loc.X, pin1Loc.Y, pin2Loc.X, pin2Loc.Y));
+    }
+
+    timingGraph->propogateArrivalTime();
+    timingGraph->backPropogateRequiredArrivalTime();
+    float maxDelay = 0;
+    int maxDelayId = -1;
+    for (unsigned int i = 0; i < timingGraph->getNodes().size(); i++)
+    {
+        if (timingGraph->getNodes()[i]->getLatestArrival() > maxDelay)
+        {
+            maxDelay = timingGraph->getNodes()[i]->getLatestArrival();
+            maxDelayId = i;
+        }
+    }
+
+    auto resPath = timingGraph->backTraceDelayLongestPathFromNode(maxDelayId);
+
+    std::cout << "An example of long delay path for the current placement:\n";
+    for (auto id : resPath)
+    {
+        std::cout << designInfo->getCells()[id]->getName()
+                  << "   [delay]: " << timingGraph->getNodes()[id]->getLatestArrival()
+                  << "   [required]: " << timingGraph->getNodes()[id]->getRequiredArrivalTime() << "\n";
+    }
+}
+
 void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio)
 {
     conductStaticTimingAnalysis();
