@@ -201,7 +201,8 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
         //     placementInfo->getLongPathThresholdLevel(), (0.05 * timingOptimizer->getEffectFactor()) *
         //     generalNetWeight, placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod()
         //     * 2.5);
-        addPseudoNet_SlackBased((0.2 * timingOptimizer->getEffectFactor()) * generalNetWeight, 1.1, timingOptimizer);
+        addPseudoNet_SlackBased((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight, slackPowerFactor,
+                                timingOptimizer);
     }
 
     if (enableUserDefinedClusterOpt)

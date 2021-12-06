@@ -166,6 +166,16 @@ class WirelengthOptimizer
         netPinEnhanceRate.clear();
     }
 
+    inline void setGeneralTimingNetWeight(float _generalTimingNetWeight)
+    {
+        generalTimingNetWeight = _generalTimingNetWeight;
+    }
+
+    inline void setSlackPowerFactor(double _slackPowerFactor)
+    {
+        slackPowerFactor = _slackPowerFactor;
+    }
+
   private:
     /**
      * @brief call the cooresponding solver to solve the QP problem defined in the given QPSolverWrapper
@@ -277,6 +287,8 @@ class WirelengthOptimizer
      *
      */
     float generalNetWeight = 1.0;
+    float generalTimingNetWeight = 1.0;
+    double slackPowerFactor = 1.1;
 
     /**
      * @brief a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning
