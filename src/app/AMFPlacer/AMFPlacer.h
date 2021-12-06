@@ -182,7 +182,7 @@ class AMFPlacer
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.9);
         globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.9,
                                                      globalPlacer->getMacroLegalizationWeight() * 0.9);
-        placementInfo->createGridBins(1, 1.5);
+        placementInfo->createGridBins(1, 1);
         placementInfo->adjustLUTFFUtilization(-10, true);
         // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
         // timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
