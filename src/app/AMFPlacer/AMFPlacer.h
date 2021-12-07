@@ -173,6 +173,7 @@ class AMFPlacer
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.85);
         globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.8,
                                                      globalPlacer->getMacroLegalizationWeight() * 0.8);
+        placementInfo->createGridBins(1, 1);
         globalPlacer->setNeighborDisplacementUpperbound(3.0);
 
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
@@ -182,7 +183,7 @@ class AMFPlacer
         globalPlacer->setPseudoNetWeight(globalPlacer->getPseudoNetWeight() * 0.9);
         globalPlacer->setMacroLegalizationParameters(globalPlacer->getMacroPseudoNetEnhanceCnt() * 0.9,
                                                      globalPlacer->getMacroLegalizationWeight() * 0.9);
-        placementInfo->createGridBins(1, 1);
+
         placementInfo->adjustLUTFFUtilization(-10, true);
         // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
         // timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
