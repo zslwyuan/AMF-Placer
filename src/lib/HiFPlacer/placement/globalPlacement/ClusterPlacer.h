@@ -189,6 +189,12 @@ class ClusterPlacer
     GraphPartitioner<std::vector<PlacementInfo::ClusterUnit *>, std::vector<PlacementInfo::ClusterNet *>>
         *clockBasedGraphPartitioner = nullptr;
 
+    inline bool isDensePlacement()
+    {
+        return ((float)clusters.size() / (float)placementInfo->getDeviceInfo()->getClockRegionNumX() /
+                (float)placementInfo->getDeviceInfo()->getClockRegionNumY()) > 0.6;
+    }
+
     /**
      * @brief clean all information of the clusters (including PlacementUnit-Cluster mapping and the cluster-level
      * netlist)

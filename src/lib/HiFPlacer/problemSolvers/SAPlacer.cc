@@ -621,33 +621,8 @@ void SAPlacer::solve()
     for (int restartI = restartNum; restartI > 0; restartI -= nJobs)
     {
 
-        // generate initial cluster placement
-        init_cluster2XY.clear();
-        init_grid2clusters =
-            std::vector<std::vector<std::vector<int>>>(gridH, std::vector<std::vector<int>>(gridW, std::vector<int>()));
-
-        initOffset++;
-        greedyInitialize(init_cluster2XY, init_grid2clusters, initOffset);
-        // for (unsigned int clusterId = 0; clusterId < clusterAdjMat.size(); clusterId++)
-        // {
-        //     int gridY = (clusterId + initOffset + (random() % 2)) % (gridH * gridW) / gridW;
-        //     int gridX = (clusterId + initOffset + (random() % 2)) % (gridH * gridW) % gridW;
-        //     init_grid2clusters[gridY][gridX].push_back(clusterId);
-        //     init_cluster2XY.push_back(std::pair<int, int>(gridX, gridY));
-        // }
-        for (unsigned int clusterA = 0; clusterA < clusterAdjMat.size(); clusterA++)
-        {
-            assert(init_cluster2XY[clusterA].first >= 0 && init_cluster2XY[clusterA].second >= 0);
-        }
-        for (int gridY = 0; gridY < gridH; gridY++)
-            for (int gridX = 0; gridX < gridW; gridX++)
-            {
-                std::sort(init_grid2clusters[gridY][gridX].begin(), init_grid2clusters[gridY][gridX].end());
-            }
-
-        SACalibrationOffset = evaluateClusterPlacement(init_grid2clusters, init_cluster2XY);
-
         printProgress(1 - ((double)restartI / restartNum));
+
         threads.clear();
         workers_cluster2XY.clear();
         workers_grid2clusters.clear();
@@ -656,6 +631,28 @@ void SAPlacer::solve()
 
         for (int threadId = restartI; threadId >= 0 && threadId > restartI - nJobs; threadId--)
         {
+
+            // generate initial cluster placement
+            init_cluster2XY.clear();
+            init_grid2clusters = std::vector<std::vector<std::vector<int>>>(
+                gridH, std::vector<std::vector<int>>(gridW, std::vector<int>()));
+
+            initOffset++;
+            greedyInitialize(init_cluster2XY, init_grid2clusters, initOffset / 8);
+
+            for (unsigned int clusterA = 0; clusterA < clusterAdjMat.size(); clusterA++)
+            {
+                assert(init_cluster2XY[clusterA].first >= 0 && init_cluster2XY[clusterA].second >= 0);
+            }
+            for (int gridY = 0; gridY < gridH; gridY++)
+            {
+                for (int gridX = 0; gridX < gridW; gridX++)
+                {
+                    std::sort(init_grid2clusters[gridY][gridX].begin(), init_grid2clusters[gridY][gridX].end());
+                }
+            }
+            SACalibrationOffset = evaluateClusterPlacement(init_grid2clusters, init_cluster2XY);
+
             workers_cluster2XY.push_back(init_cluster2XY);
             workers_grid2clusters.push_back(init_grid2clusters);
             works_E.push_back(0);

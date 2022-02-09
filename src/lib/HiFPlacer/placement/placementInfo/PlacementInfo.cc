@@ -495,6 +495,7 @@ void PlacementInfo::reloadNets()
     }
     placementNets.clear();
     clockNets.clear();
+    designNetId2PlacementNet.resize(designInfo->getNets().size(), nullptr);
     for (DesignInfo::DesignNet *net : designInfo->getNets())
     {
         PlacementNet *newPNet = new PlacementNet(net, placementNets.size(), cellId2PlacementUnitVec, this);
@@ -517,6 +518,7 @@ void PlacementInfo::reloadNets()
             delete newPNet;
             continue;
         }
+        designNetId2PlacementNet[net->getElementIdInType()] = newPNet;
         placementNets.push_back(newPNet);
         if (newPNet->isGlobalClock())
             clockNets.push_back(newPNet);
@@ -560,8 +562,8 @@ void PlacementInfo::reloadNets()
         }
     }
 
-    int netPinNumDistribution[8] = {8, 16, 24, 32, 64, 256, 512, 1000000};
-    int netDistribution[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+    for (int i = 0; i <= 7; i++)
+        netDistribution[i] = 0;
 
     for (auto curNet : placementNets)
     {
@@ -802,6 +804,8 @@ std::ostream &operator<<(std::ostream &os, PlacementInfo::PlacementMacro *curMac
         os << "  macroType: PlacementMacroType_MUX7\n";
     else if (curMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX8)
         os << "  macroType: PlacementMacroType_MUX8\n";
+    else if (curMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_LUTLUTSeires)
+        os << "  macroType: PlacementMacroType_LUTLUTSeires\n";
     else
         assert(false && "undefined macro type.");
 
@@ -1809,6 +1813,8 @@ void PlacementInfo::loadPlacementUnitInformation(std::string locFile)
                 macroType = PlacementMacro::PlacementMacroType_MUX7;
             else if (macroTypeStr == "PlacementMacroType_MUX8")
                 macroType = PlacementMacro::PlacementMacroType_MUX8;
+            if (macroTypeStr == "PlacementMacroType_LUTLUTSeires")
+                macroType = PlacementMacro::PlacementMacroType_LUTLUTSeires;
             else
                 assert(false && "undefined macro type.");
 
@@ -1973,7 +1979,7 @@ void PlacementInfo::loadPlacementUnitInformation(std::string locFile)
     reloadNets();
 }
 
-void PlacementInfo::checkClockUtilization(bool dump)
+bool PlacementInfo::checkClockUtilization(bool dump)
 {
     clockNetCoverages.clear();
     clockRegionUtilization.clear();
@@ -2022,12 +2028,14 @@ void PlacementInfo::checkClockUtilization(bool dump)
         }
     }
 
+    bool isLegal = true;
     print_info("Clock region untilization:");
     for (int i = deviceInfo->getClockRegionNumY() - 1; i >= 0; i--)
     {
         for (int j = 0; j < deviceInfo->getClockRegionNumX(); j++)
         {
             std::cout << std::left << std::setw(4) << clockRegionUtilization[i][j];
+            isLegal &= ((clockRegionUtilization[i][j]) <= 24);
         }
         std::cout << "\n";
     }
@@ -2037,8 +2045,68 @@ void PlacementInfo::checkClockUtilization(bool dump)
     {
         for (int j = 0; j < deviceInfo->getClockRegionNumX(); j++)
         {
-            std::cout << std::left << std::setw(4) << deviceInfo->getMaxUtilizationOfClockColumns_InClockRegion(j, i);
+            int halfColumnUtil = deviceInfo->getMaxUtilizationOfClockColumns_InClockRegion(j, i);
+            std::cout << std::left << std::setw(4) << halfColumnUtil;
+            isLegal &= (halfColumnUtil <= 12);
         }
         std::cout << "\n";
+    }
+
+    return isLegal;
+}
+
+void PlacementInfo::dumpOverflowClockUtilization()
+{
+
+    for (int i = deviceInfo->getClockRegionNumY() - 1; i >= 0; i--)
+    {
+        for (int j = 0; j < deviceInfo->getClockRegionNumX(); j++)
+        {
+            std::cout << "clock region " << i << "  " << j
+                      << " ===================================================================\n";
+            auto curClockRegion = deviceInfo->getClockRegions()[i][j];
+            if (curClockRegion->getMaxUtilizationOfClockColumns() > 12)
+            {
+                auto curColumn = curClockRegion->getMaxUtilizationClockColumnsPtr();
+
+                for (auto curClockNet : clockNets)
+                {
+                    auto designNet = curClockNet->getDesignNet();
+                    std::vector<DesignInfo::DesignCell *> cellsInColumn;
+                    cellsInColumn.clear();
+                    for (auto curPin : designNet->getPins())
+                    {
+                        auto curCell = curPin->getCell();
+                        auto loc = cellId2location[curCell->getCellId()];
+                        if (loc.X <= curColumn->getRight() && loc.X >= curColumn->getLeft() &&
+                            loc.Y <= curColumn->getTop() && loc.Y >= curColumn->getBottom())
+                        {
+                            cellsInColumn.push_back(curCell);
+                        }
+                    }
+
+                    if (cellsInColumn.size())
+                    {
+                        std::cout << "clockSrcPin: " << curClockNet->getDesignNet()->getName() << " has "
+                                  << cellsInColumn.size() << " cell in the targetColumn:\n";
+                        for (auto tmpCell : cellsInColumn)
+                        {
+                            std::cout << "   " << tmpCell->getName() << "\n";
+                        }
+                        std::cout << "packing record:=========================================================\n";
+                        if (clockCol2ClockNets[curColumn].find(designNet) != clockCol2ClockNets[curColumn].end())
+                        {
+                            std::cout << "design net is found in packing record.";
+                        }
+                        else
+                        {
+                            std::cout << "design net is not found in packing record.";
+                        }
+                        std::cout << "===================================================================\n";
+                        std::cout << "===================================================================\n";
+                    }
+                }
+            }
+        }
     }
 }

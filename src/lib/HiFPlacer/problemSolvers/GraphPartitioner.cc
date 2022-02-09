@@ -11,6 +11,10 @@
  */
 
 #include "GraphPartitioner.h"
+#include <fstream>
+#include <string>
+#include <sys/stat.h>
+#include <unistd.h>
 
 template <class NodeList, class NetList>
 void GraphPartitioner<NodeList, NetList>::solve(int eachClusterDSPNum, int eachClusterBRAMNum)
@@ -80,6 +84,12 @@ void GraphPartitioner<NodeList, NetList>::recursiveMinCutPartition(
                    std::ref(eachClusterDSPNum), std::ref(eachClusterBRAMNum));
     t1.join();
     t2.join();
+}
+
+inline bool checkFileExist(const std::string &name)
+{
+    struct stat buffer;
+    return (stat(name.c_str(), &buffer) == 0);
 }
 
 template <class NodeList, class NetList>
@@ -164,8 +174,22 @@ unsigned GraphPartitioner<NodeList, NetList>::minCutBipartition(const std::vecto
     }
 
     unsigned int shareMemorySize = 6 + numHyperNodes + numPlacementNets + 1 + numPlacementPins + numHyperNodes + 2;
+
+    std::string targetPath = getExePath() + "/partitionHyperGraph";
+
+    if (!checkFileExist(targetPath))
+        targetPath = getExePath() + "/partitionHyperGraph";
+    if (!checkFileExist(targetPath))
+        targetPath = getExePath() + "/partitionHyperGraph";
+
+    if (!checkFileExist(targetPath))
+    {
+        std::cout << "try to find [" << targetPath << "] but not found.\n";
+        assert(false && "target partitioning process executable should be found!");
+    }
+
     ExternalProcessFunc *externalProc =
-        new ExternalProcessFunc(getExePath() + "/partitionHyperGraph", shareMemorySize * 4, graphPartitioner->verbose);
+        new ExternalProcessFunc(targetPath, shareMemorySize * 4, graphPartitioner->verbose);
     int *shareMemory = (int *)externalProc->getSharedMemory();
     shareMemory[0] = numHyperNodes;
     shareMemory[1] = numPlacementNets;

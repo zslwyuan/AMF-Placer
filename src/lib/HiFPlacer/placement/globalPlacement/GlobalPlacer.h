@@ -188,8 +188,9 @@ class GlobalPlacer
      *
      * @param currentIteration the current global placement iteration in this round
      * @param spreadRegionSizeLimit the maximum number of bins in a spreadRegion
+     * @param displacementLimit
      */
-    void spreading(int currentIteration, int spreadRegionSizeLimit = 100000000);
+    void spreading(int currentIteration, int spreadRegionSizeLimit = 100000000, float displacementLimit = -10);
 
     inline WirelengthOptimizer *getWirelengthOptimizer()
     {

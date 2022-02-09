@@ -66,7 +66,7 @@ delayList = []
 for XYPair in disXY2delay.keys():
     XList.append(XYPair[0])
     YList.append(XYPair[1])
-    delayList.append(min(disXY2delay[XYPair]))
+    delayList.append(np.mean(disXY2delay[XYPair]))
 
 z = np.array(delayList)
 x = np.array(XList)

@@ -40,7 +40,7 @@ class PlacementTimingOptimizer
 
     void enhanceNetWeight_LevelBased(int levelThr);
     void propogateArrivalTime();
-    void conductStaticTimingAnalysis();
+    void conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
     void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,
                                                            float targetY);
     void setPinsLocation();
@@ -79,10 +79,18 @@ class PlacementTimingOptimizer
         return effectFactor;
     }
 
+    inline void setEffectFactor(float _effectFactor)
+    {
+        effectFactor = _effectFactor;
+    }
+
     const float timingC[10] = {150.38575401, -620.94694989, -274.2735654, 494.72583191, 234.67951055};
 
     inline float getDelayByModel(float X1, float Y1, float X2, float Y2)
     {
+        if (conservativeTiming)
+            return getDelayByModel_conservative(X1, Y1, X2, Y2);
+
         int clockRegionX0, clockRegionY0;
         deviceInfo->getClockRegionByLocation(X1, Y1, clockRegionX0, clockRegionY0);
         int clockRegionX1, clockRegionY1;
@@ -98,8 +106,57 @@ class PlacementTimingOptimizer
 
         if (delay < 0.05)
             delay = 0.05;
+        // if (delay < 0.1)
+        // {
+        //     float dis = std::sqrt(X * X + Y * Y);
+        //     if (dis > 0.001)
+        //         delay = 0.1;
+        //     else
+        //         delay = 0.05;
+        // }
+
+        // delay *= 1.1;
 
         return delay;
+    }
+
+    inline float getDelayByModel_conservative(float X1, float Y1, float X2, float Y2)
+    {
+        int clockRegionX0, clockRegionY0;
+        deviceInfo->getClockRegionByLocation(X1, Y1, clockRegionX0, clockRegionY0);
+        int clockRegionX1, clockRegionY1;
+        deviceInfo->getClockRegionByLocation(X2, Y2, clockRegionX1, clockRegionY1);
+
+        float X = std::fabs(X1 - X2) * 2;
+        float Y = std::fabs(Y1 - Y2);
+
+        float delay = (timingC[0] + std::pow(X, 0.3) * timingC[1] + std::pow(Y, 0.3) * timingC[2] +
+                       std::pow(X, 0.5) * timingC[3] + std::pow(Y, 0.5) * timingC[4]) /
+                          1000.0 +
+                      std::abs(clockRegionX1 - clockRegionX0) * 0.5;
+
+        if (delay < 0.1)
+        {
+            float dis = std::sqrt(X * X + Y * Y);
+            if (dis > 0.001)
+                delay = 0.1;
+            else
+                delay = 0.05;
+        }
+
+        delay *= 1.1;
+
+        return delay;
+    }
+
+    inline bool isConservativeTiming()
+    {
+        return conservativeTiming;
+    }
+
+    inline void pauseCounter()
+    {
+        enableCounter = false;
     }
 
   private:
@@ -129,6 +186,8 @@ class PlacementTimingOptimizer
     bool clockRegionClusterTooLarge = false;
     std::vector<float> pois;
     std::vector<std::vector<int>> clockRegionclusters;
+    bool conservativeTiming = false;
+    bool enableCounter = true;
 };
 
 #endif

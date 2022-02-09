@@ -595,6 +595,8 @@ void ClusterPlacer::setClusterNetsAdjMat()
 
     float pathThr = placementInfo->getMediumPathThresholdLevel();
 
+    int ignoredConnectCnt = 0;
+    bool cutShortPathNets = !isDensePlacement();
     for (auto net : placementInfo->getPlacementNets())
     {
         for (auto driveU : net->getDriverUnits())
@@ -624,7 +626,7 @@ void ClusterPlacer::setClusterNetsAdjMat()
                 int B = UBeDriven->getId();
                 int maxLength = getPlacementUnitMaxPathLen(UBeDriven);
 
-                if (maxLength > 0 && maxLength < 3 && net->getUnitsBeDriven().size() < 8)
+                if (maxLength > 0 && maxLength < 3 && net->getUnitsBeDriven().size() < 8 && cutShortPathNets)
                     continue;
 
                 int clusterA = placementUnit2ClusterId[A];

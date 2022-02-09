@@ -152,6 +152,13 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
     for (int i = 0; i < iterNum || (!stopStrictly); i++)
     {
 
+        float displacementLimit = -10;
+        if (timingOptimizer)
+        {
+            if (timingOptimizer->getEffectFactor() >= 1)
+                displacementLimit = 10;
+        }
+
         if (timingOptimizer)
             timingOptimizer->conductStaticTimingAnalysis();
 
@@ -162,7 +169,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         {
             WLOptimizer->GlobalPlacementQPSolve(
                 pseudoNetWeight, j == 0, true, enableMacroPseudoNet2Site, pseudoNetWeightConsiderNetNum,
-                (i > 1 || continuePreviousIteration) && hasUserDefinedClusterInfo, timingOptimizer);
+                (i > 1 || continuePreviousIteration) && hasUserDefinedClusterInfo, displacementLimit, timingOptimizer);
             if (progressRatio > 0.5)
                 timingOptEnabled = true;
         }
@@ -178,7 +185,8 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         }
 
         // upperBound: Placement Unit Spreading
-        spreading(i, spreadRegionBinNumLimit);
+
+        spreading(i, spreadRegionBinNumLimit, displacementLimit);
 
         upperBoundHPWL = placementInfo->updateB2BAndGetTotalHPWL();
         print_status("Spreader Iteration#" + to_string_align3(i) + " Done HPWL=" + std::to_string(upperBoundHPWL));
@@ -223,7 +231,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
 
         upperBoundHPWL = placementInfo->updateB2BAndGetTotalHPWL();
 
-        placementInfo->checkClockUtilization(dumpClockUtilization);
+        bool clockLegal = placementInfo->checkClockUtilization(dumpClockUtilization);
         if (!updateMinHPWLAfterLegalization && macroCloseToSite)
         {
             print_warning("macroCloseToSite=" + std::to_string(macroCloseToSite) +
@@ -236,7 +244,6 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
 
         // heuristic update pseudoNetWeight
         updatePseudoNetWeight(pseudoNetWeight, i);
-        timingOptimizer->enhanceNetWeight_LevelBased(placementInfo->getMediumPathThresholdLevel());
 
         print_info("upperBoundHPWL / lowerBoundHPWL=" + std::to_string(upperBoundHPWL / lowerBoundHPWL));
         print_info("averageMacroLegalDisplacementL=" + std::to_string(averageMacroLegalDisplacement));
@@ -245,6 +252,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         print_info("progressRatio=" + std::to_string(progressRatio));
         print_info("upperBoundHPWL=" + std::to_string(upperBoundHPWL));
         print_info("minHPWL=" + std::to_string(minHPWL));
+        print_info("clockLegal=" + std::to_string(clockLegal));
 
         // converge criteria
         bool criteria0 = upperBoundHPWL / lowerBoundHPWL < 1.02 &&
@@ -259,7 +267,8 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
 
         if (macroLegalizationFixed)
             iterCntAfterMacrosFixed++;
-        if (criteria0 || criteria1 || criteria2 || criteria3 || criteria4)
+        // criteria0 || criteria1 || criteria2 ||
+        if (criteria3 || criteria4)
         {
             print_status("Global Placer: B2B converge");
             BRAMDSPLegalizer->dumpMatching(true, true);
@@ -565,29 +574,30 @@ void GlobalPlacer::macroLegalize(int curIteration)
     }
 }
 
-void GlobalPlacer::spreading(int currentIteration, int spreadRegionSizeLimit)
+void GlobalPlacer::spreading(int currentIteration, int spreadRegionSizeLimit, float displacementLimit)
 {
     placementInfo->updateElementBinGrid();
     float supplyRatio = (placementInfo->getBinGridW() < 2.5) ? 0.95 : (0.80 + 0.1 * progressRatio);
+
     if (!macroLegalizationFixed)
     {
         std::string sharedCellType_SLICEL_CARRY8 = "SLICEL_CARRY8";
         generalSpreader = new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_CARRY8, currentIteration,
                                               supplyRatio, verbose);
-        generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
+        generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware, displacementLimit);
         delete generalSpreader;
     }
 
     std::string sharedCellType_SLICEL_MUXF8 = "SLICEL_MUXF8";
     generalSpreader =
         new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_MUXF8, currentIteration, 0.75, verbose);
-    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
+    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware, displacementLimit);
     delete generalSpreader;
 
     std::string sharedCellType_SLICEL_MUXF7 = "SLICEL_MUXF7";
     generalSpreader =
         new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_MUXF7, currentIteration, 0.75, verbose);
-    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
+    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware, displacementLimit);
     delete generalSpreader;
 
     // we gradually increase the shrinkRatio since the area adjustion of LUT/FF will be more accurate.
@@ -596,13 +606,13 @@ void GlobalPlacer::spreading(int currentIteration, int spreadRegionSizeLimit)
     std::string sharedCellType_SLICEL_LUT = "SLICEL_LUT";
     generalSpreader =
         new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_LUT, currentIteration, supplyRatio, verbose);
-    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
+    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware, displacementLimit);
     delete generalSpreader;
 
     std::string sharedCellType_SLICEL_FF = "SLICEL_FF";
     generalSpreader =
         new GeneralSpreader(placementInfo, JSONCfg, sharedCellType_SLICEL_FF, currentIteration, supplyRatio, verbose);
-    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware);
+    generalSpreader->spreadPlacementUnits(spreadingForgetRatio, enableClockRegionAware, displacementLimit);
     delete generalSpreader;
 
     generalSpreader = nullptr;
@@ -641,7 +651,7 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
         print_warning("GlobalPlacer: clock region aware optimization is enabled.");
         enableClockRegionAware = true;
     }
-    if (progressRatio > 0.6)
+    if (progressRatio > 0.75)
     {
         BRAMDSPLegalizer->setClockRegionCasLegalization(true);
     }

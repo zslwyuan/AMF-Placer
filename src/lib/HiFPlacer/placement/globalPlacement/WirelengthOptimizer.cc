@@ -67,7 +67,7 @@ void WirelengthOptimizer::reloadPlacementInfo()
 void WirelengthOptimizer::GlobalPlacementQPSolve(float pesudoNetWeight, bool firstIteration,
                                                  bool forwardSolutionToNextIteration, bool enableMacroPseudoNet2Site,
                                                  bool considerNetNum, bool enableUserDefinedClusterOpt,
-                                                 PlacementTimingOptimizer *timingOptimizer)
+                                                 float displacementLimit, PlacementTimingOptimizer *timingOptimizer)
 {
     if (verbose)
         print_status("A QP Iteration Started.");
@@ -90,8 +90,7 @@ void WirelengthOptimizer::GlobalPlacementQPSolve(float pesudoNetWeight, bool fir
         print_status("Solver Done.");
 
     // solverLoadFixedData();
-
-    solverWriteBackData();
+    solverWriteBackData(displacementLimit);
 
     if (verbose)
         print_status("A QP Iteration Started.");
@@ -136,33 +135,85 @@ void WirelengthOptimizer::solverLoadFixedData()
     }
 }
 
-void WirelengthOptimizer::solverWriteBackData()
+void WirelengthOptimizer::solverWriteBackData(float displacementLimit)
 {
+    bool displacementLimitEnable = displacementLimit > 0;
     assert(xSolver->solverSettings.solutionForward == ySolver->solverSettings.solutionForward);
-    if (xSolver->solverSettings.solutionForward)
+
+    if (displacementLimitEnable)
     {
-        for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+        if (xSolver->solverSettings.solutionForward)
         {
-            auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
-            if (tmpPU->isFixed())
-                continue;
-            float fX = xSolver->solverData.oriSolution[tmpPUId];
-            float fY = ySolver->solverData.oriSolution[tmpPUId];
-            placementInfo->legalizeXYInArea(tmpPU, fX, fY);
-            tmpPU->setAnchorLocation(fX, fY);
+            for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+            {
+                auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
+                if (tmpPU->isFixed())
+                    continue;
+                float fX = xSolver->solverData.oriSolution[tmpPUId];
+                float fY = ySolver->solverData.oriSolution[tmpPUId];
+                float disX = std::fabs(fX - tmpPU->X());
+                float disY = std::fabs(fY - tmpPU->Y());
+                float dis = std::sqrt(disX * disX + disY * disY);
+                float disRatio = displacementLimit / dis;
+                if (disRatio < 1)
+                {
+                    fX = tmpPU->X() + (fX - tmpPU->X()) * disRatio;
+                    fY = tmpPU->Y() + (fY - tmpPU->Y()) * disRatio;
+                }
+                placementInfo->legalizeXYInArea(tmpPU, fX, fY);
+                tmpPU->setAnchorLocation(fX, fY);
+            }
+        }
+        else
+        {
+            for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+            {
+                auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
+                if (tmpPU->isFixed())
+                    continue;
+                float fX = xSolver->solverData.solution[tmpPUId];
+                float fY = ySolver->solverData.solution[tmpPUId];
+                float disX = std::fabs(fX - tmpPU->X());
+                float disY = std::fabs(fY - tmpPU->Y());
+                float dis = std::sqrt(disX * disX + disY * disY);
+                float disRatio = displacementLimit / dis;
+                if (disRatio < 1)
+                {
+                    fX = tmpPU->X() + (fX - tmpPU->X()) * disRatio;
+                    fY = tmpPU->Y() + (fY - tmpPU->Y()) * disRatio;
+                }
+                placementInfo->legalizeXYInArea(tmpPU, fX, fY);
+                tmpPU->setAnchorLocation(fX, fY);
+            }
         }
     }
     else
     {
-        for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+        if (xSolver->solverSettings.solutionForward)
         {
-            auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
-            if (tmpPU->isFixed())
-                continue;
-            float fX = xSolver->solverData.solution[tmpPUId];
-            float fY = ySolver->solverData.solution[tmpPUId];
-            placementInfo->legalizeXYInArea(tmpPU, fX, fY);
-            tmpPU->setAnchorLocation(fX, fY);
+            for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+            {
+                auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
+                if (tmpPU->isFixed())
+                    continue;
+                float fX = xSolver->solverData.oriSolution[tmpPUId];
+                float fY = ySolver->solverData.oriSolution[tmpPUId];
+                placementInfo->legalizeXYInArea(tmpPU, fX, fY);
+                tmpPU->setAnchorLocation(fX, fY);
+            }
+        }
+        else
+        {
+            for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+            {
+                auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
+                if (tmpPU->isFixed())
+                    continue;
+                float fX = xSolver->solverData.solution[tmpPUId];
+                float fY = ySolver->solverData.solution[tmpPUId];
+                placementInfo->legalizeXYInArea(tmpPU, fX, fY);
+                tmpPU->setAnchorLocation(fX, fY);
+            }
         }
     }
 }
@@ -203,6 +254,9 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
         //     * 2.5);
         addPseudoNet_SlackBased((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight, slackPowerFactor,
                                 timingOptimizer);
+        if (timingOptimizer->getEffectFactor() > 0.5)
+            LUTLUTPairing_TimingDriven((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight, 5,
+                                       timingOptimizer);
     }
 
     if (enableUserDefinedClusterOpt)
@@ -249,9 +303,6 @@ void WirelengthOptimizer::updateB2BNetWeightWorker(PlacementInfo *placementInfo,
         if (net->getDesignNet()->checkIsPowerNet()) // Power nets are on the entrie device. Ignore them.
             continue;
 
-        float enhanceFixedPinRatio = 1.0;
-        if (net->getDesignNet()->checkContainFixedPins())
-            enhanceFixedPinRatio = 5.0;
         if (net->updateNetBounds(updateX, updateY))
         {
             net->updateBound2BoundNetWeight(objectiveMatrixTripletList, objectiveMatrixDiag, objectiveVector,
@@ -555,7 +606,12 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
 
     // auto deviceInfo = placementInfo->getDeviceInfo();
 
-    int enhanceNetCnt = 0;
+    std::vector<int> slackCntVec(100, 0);
+    int totalSlackChecked = 0;
+
+    std::map<PlacementInfo::PlacementNet *, int> netActualSlackPinNum;
+    netActualSlackPinNum.clear();
+
     for (auto curNet : placementInfo->getPlacementNets())
     {
         auto designNet = curNet->getDesignNet();
@@ -563,6 +619,109 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
             continue;
 
         if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 || curNet->getUnits().size() >= 1000)
+            continue;
+        auto &pins = designNet->getPins();
+        int pinNum = pins.size();
+
+        assert(curNet->getUnits().size() == (unsigned int)pinNum);
+
+        int driverPinInNet = -1;
+
+        for (int i = 0; i < pinNum; i++)
+        {
+            if (pins[i]->isOutputPort())
+            {
+                driverPinInNet = i;
+                break;
+            }
+        }
+
+        assert(driverPinInNet >= 0);
+
+        // get the srcPin information
+        auto srcCell = pins[driverPinInNet]->getCell();
+        unsigned int srcCellId = srcCell->getCellId();
+        auto srcNode = timingNodes[srcCellId];
+        auto srcLoc = cellLoc[srcCellId];
+        // iterate the sinkPin for evaluation and enhancement
+
+        netActualSlackPinNum[curNet] = 0;
+        for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
+        {
+            if (pinBeDriven == driverPinInNet)
+                continue;
+
+            // get the sinkPin information
+            auto sinkCell = pins[pinBeDriven]->getCell();
+            unsigned int sinkCellId = sinkCell->getCellId();
+            auto sinkNode = timingNodes[sinkCellId];
+            auto sinkLoc = cellLoc[sinkCellId];
+            float netDelay = timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+            float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
+
+            if (slack > 0)
+                continue;
+
+            netActualSlackPinNum[curNet]++;
+            int slotId = (int)(-slack / 0.1);
+            if (slotId >= 100)
+                slotId = 100;
+            if (slotId < 0)
+                slotId = 0;
+            slackCntVec[slotId] += 1;
+            totalSlackChecked++;
+        }
+    }
+
+    float slackThr = 0;
+    int slackUnderThrCnt = 0;
+    float careRatio = 0.5;
+
+    if (timingOptimizer->isConservativeTiming())
+        careRatio = 20000.0 / totalSlackChecked;
+    if (careRatio <= 0.9 && totalSlackChecked > 0)
+    {
+        for (unsigned int i = 0; i < slackCntVec.size(); i++)
+        {
+            slackUnderThrCnt += slackCntVec[i];
+            if (slackUnderThrCnt > totalSlackChecked * (1 - careRatio))
+                break;
+            slackThr -= 0.1;
+        }
+    }
+
+    std::string outputStr = "";
+    for (unsigned int i = 0; i < slackCntVec.size(); i++)
+    {
+        outputStr += " " + std::to_string(slackCntVec[i]);
+    }
+    print_info("Slack distribution:" + outputStr);
+    print_info("slackThr = " + std::to_string(slackThr));
+
+    if (timingOptimizer->isConservativeTiming())
+    {
+        timingWeight *= 0.45;
+    }
+
+    int enhanceNetCnt = 0;
+    unsigned int highFanoutThr = 10000;
+
+    if (placementInfo->getNetDistributionByDensity(512) < 200)
+    {
+        highFanoutThr = 1000;
+        print_warning("highFanoutThr is set to 1000");
+    }
+
+    // int targetCellId = placementInfo->getDesignInfo()->getCell(targetCellName)->getCellId();
+
+    for (auto curNet : placementInfo->getPlacementNets())
+    {
+        auto designNet = curNet->getDesignNet();
+        if (designNet->checkIsPowerNet() || designNet->checkIsGlobalClock())
+            continue;
+
+        if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 ||
+            curNet->getUnits().size() >= highFanoutThr)
             continue;
         auto &PUs = curNet->getUnits();
         auto &pins = designNet->getPins();
@@ -590,14 +749,16 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
         auto srcLoc = cellLoc[srcCellId];
         int driverPathLen = timingNodes[srcCellId]->getLongestPathLength();
 
-        float w = 2 * timingWeight / std::pow((float)(pinNum - 1), 0.5);
+        if (netActualSlackPinNum[curNet] == 0)
+            continue;
 
-        if (netPinEnhanceRate.find(designNet) == netPinEnhanceRate.end())
-        {
-            netPinEnhanceRate[designNet] = std::vector<float>(pinNum, 1.0);
-        }
+        float w = 2 * timingWeight / std::pow((float)(netActualSlackPinNum[curNet]), 0.5);
 
-        auto &pinEnhanceRate = netPinEnhanceRate[designNet];
+        // if (srcCell->getCellId() == targetCellId)
+        // {
+        //     std::cout << "driver: " << targetCellName << " x: " << srcLoc.X << " y: " << srcLoc.Y << "\n";
+        // }
+        // auto &pinEnhanceRate = netPinEnhanceRate[designNet];
         // iterate the sinkPin for evaluation and enhancement
         for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
         {
@@ -620,30 +781,38 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
             float enhanceRatio = std::pow(1 - slack / clockPeriod, slackPowFactor);
             // * std::pow(netDelay / expectedAvgDelay_driver, 0.6);
 
-            if (srcNode->checkIsRegister())
+            if (timingOptimizer->getEffectFactor() < 0.5)
             {
-                if (succPathLen > 0)
+                if (srcNode->checkIsRegister())
                 {
-                    float expectedAvgDelay_succ = clockPeriod / succPathLen;
-                    if (netDelay > expectedAvgDelay_succ)
-                        enhanceRatio =
-                            std::max(enhanceRatio, (float)std::pow((netDelay / expectedAvgDelay_succ), 0.66));
+                    if (succPathLen > 0)
+                    {
+                        float expectedAvgDelay_succ = clockPeriod / succPathLen;
+                        if (netDelay > expectedAvgDelay_succ)
+                            enhanceRatio =
+                                std::max(enhanceRatio, (float)std::pow((netDelay / expectedAvgDelay_succ), 0.66));
+                    }
                 }
-            }
-            else
-            {
-                if (driverPathLen > 0)
+                else
                 {
-                    float expectedAvgDelay_driver = clockPeriod / driverPathLen;
-                    if (netDelay > expectedAvgDelay_driver)
-                        enhanceRatio =
-                            std::max(enhanceRatio, (float)std::pow((netDelay / expectedAvgDelay_driver), 0.66));
+                    if (driverPathLen > 0)
+                    {
+                        float expectedAvgDelay_driver = clockPeriod / driverPathLen;
+                        if (netDelay > expectedAvgDelay_driver)
+                            enhanceRatio =
+                                std::max(enhanceRatio, (float)std::pow((netDelay / expectedAvgDelay_driver), 0.66));
+                    }
                 }
             }
 
             // enhanceRatio = std::pow(enhanceRatio, 0.5) * std::pow(pinEnhanceRate[pinBeDriven], 0.5);
             // pinEnhanceRate[pinBeDriven] = enhanceRatio;
-
+            // if (srcCell->getCellId() == targetCellId)
+            // {
+            //     std::cout << "sink: " << sinkCell->getName() << " x: " << sinkLoc.X << " y: " << sinkLoc.Y
+            //               << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
+            //               << " enhanceRatio: " << enhanceRatio << "\n";
+            // }
             curNet->addPseudoNet_enhancePin2Pin(
                 xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                 xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,
@@ -661,11 +830,128 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
     // outfile0.close();
 }
 
+void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float disThreshold,
+                                                     PlacementTimingOptimizer *timingOptimizer)
+{
+    float w = 2 * timingWeight / std::pow(2, 0.5);
+    if (disThreshold < 0)
+        return;
+    print_status("IncrementalBELPacker Timing Driven Pairing LUTs.");
+    std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
+
+    assert(placementInfo->getTimingInfo());
+
+    // float maxEnhanceRatio = 0;
+    auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
+    float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+    assert(cellLoc.size() == timingNodes.size());
+
+    int LUTLUTPairCnt = 0;
+    int longLenThr = placementInfo->getLongPathThresholdLevel();
+
+    // std::sort(LUTsToEnhanceNet.begin(), LUTsToEnhanceNet.end(),
+    //           [](const CellWithScore &a, const CellWithScore &b) -> bool { return a.score < b.score; });
+
+    for (auto curCell : placementInfo->getDesignInfo()->getCells())
+    {
+        auto predLUTPU =
+            dynamic_cast<PlacementInfo::PlacementUnit *>(placementInfo->getPlacementUnitByCellId(curCell->getCellId()));
+        if (curCell->isLUT() && !curCell->isVirtualCell())
+        {
+            assert(curCell->getOutputPins().size() > 0);
+            if (curCell->getOutputPins().size() == 1)
+            {
+                if (curCell->getOutputPins()[0]
+                        ->isUnconnected()) // interestingly, some LUTs generated by Vivado might have no output
+                    continue;
+                assert(curCell->getOutputPins()[0]->getNet());
+
+                auto curNet = curCell->getOutputPins()[0]->getNet();
+                auto curPNet = placementInfo->getPlacementNetByDesignNetId(curNet->getElementIdInType());
+
+                if (!curPNet)
+                    continue;
+                auto srcCell = curCell;
+                unsigned int srcCellId = srcCell->getCellId();
+                auto srcNode = timingNodes[srcCellId];
+                auto srcLoc = cellLoc[srcCellId];
+                int driverPathLen = timingNodes[srcCellId]->getLongestPathLength();
+
+                if (driverPathLen < longLenThr)
+                    continue;
+
+                float worstSlack = 0.0;
+                DesignInfo::DesignCell *targetSinkCell = nullptr;
+                int pinBeDriven = -1;
+                int pinOffsetId = -1;
+                for (auto curPin : curNet->getPins())
+                {
+                    pinOffsetId++;
+                    auto sinkCell = curPin->getCell();
+                    if (!sinkCell->isLUT() || sinkCell == curCell)
+                        continue;
+                    unsigned int sinkCellId = sinkCell->getCellId();
+                    auto sinkNode = timingNodes[sinkCellId];
+                    auto sinkLoc = cellLoc[sinkCellId];
+                    int succPathLen = sinkNode->getLongestPathLength();
+                    if (succPathLen < longLenThr)
+                        continue;
+                    float netDelay = timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+                    float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
+
+                    float curDis = getCellDistance(srcLoc, sinkLoc);
+
+                    if (curDis < disThreshold && slack < worstSlack)
+                    {
+                        PlacementInfo::PlacementUnit *tmpSuccPU =
+                            placementInfo->getPlacementUnitByCellId(sinkCell->getCellId());
+
+                        worstSlack = slack;
+                        targetSinkCell = sinkCell;
+                        pinBeDriven = pinOffsetId;
+                    }
+                }
+
+                if (targetSinkCell)
+                {
+                    PlacementInfo::PlacementUnit *succLUTPU =
+                        placementInfo->getPlacementUnitByCellId(targetSinkCell->getCellId());
+                    float enhanceRatio = std::pow(1 - worstSlack / clockPeriod, slackPowerFactor);
+
+                    int driverPinInNet = -1;
+                    auto &pins = curNet->getPins();
+                    for (int i = 0; i < pins.size(); i++)
+                    {
+                        if (pins[i]->isOutputPort())
+                        {
+                            driverPinInNet = i;
+                            break;
+                        }
+                    }
+                    curPNet->addPseudoNet_enhancePin2Pin(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,
+                        predLUTPU->getId(), succLUTPU->getId(), driverPinInNet, pinBeDriven);
+
+                    curPNet->addPseudoNet_enhancePin2Pin(
+                        ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
+                        ySolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, false, true,
+                        predLUTPU->getId(), succLUTPU->getId(), driverPinInNet, pinBeDriven);
+                }
+            }
+            else
+            {
+                // this is a LUT6_2, has two output pins and we don't pack them temporarily.
+            }
+        }
+    }
+}
+
 void WirelengthOptimizer::addPseudoNet2LoctionForAllPUs(float pesudoNetWeight, bool considerNetNum)
 {
     int numPUs = placementInfo->getPlacementUnits().size();
     float minDist = 0.5;
-    float powFactor = placementInfo->getProgress() * 0.45 + 0.5;
+    float powFactor = placementInfo->getProgress() * 0.5 + 0.5;
 
     if (considerNetNum)
     {
@@ -759,7 +1045,6 @@ void WirelengthOptimizer::addPseudoNet2LoctionForAllPUs(float pesudoNetWeight, b
 
 void WirelengthOptimizer::updatePseudoNetForUserDefinedClusters(float pesudoNetWeight)
 {
-    auto &cellLoc = placementInfo->getCellId2location();
     userDefinedClusterFadeOutFactor *= 0.9;
     std::vector<std::vector<DesignInfo::DesignCell *>> &predefinedCellClusters =
         placementInfo->getDesignInfo()->getPredefinedClusters();

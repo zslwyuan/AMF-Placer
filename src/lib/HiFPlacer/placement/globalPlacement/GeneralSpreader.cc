@@ -37,7 +37,7 @@ GeneralSpreader::GeneralSpreader(PlacementInfo *placementInfo, std::map<std::str
     }
 }
 
-void GeneralSpreader::spreadPlacementUnits(float forgetRatio, bool enableClockRegionAware,
+void GeneralSpreader::spreadPlacementUnits(float forgetRatio, bool enableClockRegionAware, float displacementLimit,
                                            unsigned int spreadRegionBinSizeLimit)
 {
     if (verbose) // usually commented for debug
@@ -147,9 +147,9 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio, bool enableClockRe
             }
         }
 
-        if (nJobs > 4)
-            omp_set_num_threads(
-                4); // we don't need that high parallelism here since regionNum will be small in later iterations
+        // we don't need that high parallelism here since regionNum will be small in later iterations
+        // if (nJobs > 4)
+        //     omp_set_num_threads(4);
 #pragma omp parallel sections
         {
 #pragma omp section
@@ -227,7 +227,7 @@ void GeneralSpreader::spreadPlacementUnits(float forgetRatio, bool enableClockRe
         if (verbose)
             print_status("GeneralSpreader: updating Placement Units With Spreaded Cell Locations");
         updatePlacementUnitsWithSpreadedCellLocations(involvedPUs, involvedCells, involvedPUVec, forgetRatio,
-                                                      enableClockRegionAware);
+                                                      enableClockRegionAware, displacementLimit);
         if (verbose)
             print_status("GeneralSpreader: updated Placement Units With Spreaded Cell Locations");
         dumpLUTFFCoordinate();
@@ -295,8 +295,9 @@ void GeneralSpreader::findOverflowBins(float overflowThreshold)
 void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker(
     PlacementInfo *placementInfo, std::set<PlacementInfo::PlacementUnit *> &involvedPUs,
     std::set<DesignInfo::DesignCell *> &involvedCells, std::vector<PlacementInfo::PlacementUnit *> &involvedPUVec,
-    float forgetRatio, int startId, int endId)
+    float forgetRatio, float displacementLimit, int startId, int endId)
 {
+    bool displacementLimitEnable = displacementLimit > 0;
     std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
     for (int curPUID = startId; curPUID < endId; curPUID++)
     {
@@ -315,7 +316,13 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker(
             else
             {
                 makeCellInLegalArea(placementInfo, cellLoc[curCell->getCellId()].X, cellLoc[curCell->getCellId()].Y);
-                curPU->setSpreadLocation(cellLoc[curCell->getCellId()].X, cellLoc[curCell->getCellId()].Y, forgetRatio);
+                if (displacementLimitEnable)
+                    curPU->setSpreadLocation_WithLimitDisplacement(cellLoc[curCell->getCellId()].X,
+                                                                   cellLoc[curCell->getCellId()].Y, forgetRatio,
+                                                                   displacementLimit);
+                else
+                    curPU->setSpreadLocation(cellLoc[curCell->getCellId()].X, cellLoc[curCell->getCellId()].Y,
+                                             forgetRatio);
                 placementInfo->transferCellBinInfo(curCell->getCellId(), curPU->X(), curPU->Y());
                 cellLoc[curCell->getCellId()].X = curPU->X();
                 cellLoc[curCell->getCellId()].Y = curPU->Y();
@@ -367,7 +374,11 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker(
                 float curNewPUX = tmpTotalX;
                 float curNewPUY = tmpTotalY;
                 placementInfo->legalizeXYInArea(curPU, curNewPUX, curNewPUY);
-                curPU->setSpreadLocation(curNewPUX, curNewPUY, forgetRatio);
+                if (displacementLimitEnable)
+                    curPU->setSpreadLocation_WithLimitDisplacement(curNewPUX, curNewPUY, forgetRatio,
+                                                                   displacementLimit);
+                else
+                    curPU->setSpreadLocation(curNewPUX, curNewPUY, forgetRatio);
                 placementInfo->enforceLegalizeXYInArea(curPU);
                 for (int vId = 0; vId < curMacro->getNumOfCells(); vId++)
                 {
@@ -390,9 +401,11 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker(
 
 void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
     std::set<PlacementInfo::PlacementUnit *> &involvedPUs, std::set<DesignInfo::DesignCell *> &involvedCells,
-    std::vector<PlacementInfo::PlacementUnit *> &involvedPUVec, float forgetRatio, bool enableClockRegionAware)
+    std::vector<PlacementInfo::PlacementUnit *> &involvedPUVec, float forgetRatio, bool enableClockRegionAware,
+    float displacementLimit)
 {
     std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
+    bool displacementLimitEnable = displacementLimit > 0;
     if (enableClockRegionAware)
     {
         auto &PU2ClockRegionColumn = placementInfo->getPU2ClockRegionColumn();
@@ -431,10 +444,11 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
         }
         for (int threadId = 0; threadId < nJobs; threadId++)
         {
-            std::thread *newThread = new std::thread(
-                GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker, placementInfo,
-                std::ref(involvedPUs), std::ref(involvedCells), std::ref(involvedPUVec), std::ref(forgetRatio),
-                std::ref(startEndPairs[threadId].first), std::ref(startEndPairs[threadId].second));
+            std::thread *newThread =
+                new std::thread(GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocationsWorker, placementInfo,
+                                std::ref(involvedPUs), std::ref(involvedCells), std::ref(involvedPUVec),
+                                std::ref(forgetRatio), std::ref(displacementLimit),
+                                std::ref(startEndPairs[threadId].first), std::ref(startEndPairs[threadId].second));
             threadsVec.push_back(newThread);
         }
         for (int threadId = 0; threadId < nJobs; threadId++)
@@ -461,8 +475,14 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
                 {
                     makeCellInLegalArea(placementInfo, cellLoc[curCell->getCellId()].X,
                                         cellLoc[curCell->getCellId()].Y);
-                    curPU->setSpreadLocation(cellLoc[curCell->getCellId()].X, cellLoc[curCell->getCellId()].Y,
-                                             forgetRatio);
+
+                    if (displacementLimitEnable)
+                        curPU->setSpreadLocation_WithLimitDisplacement(cellLoc[curCell->getCellId()].X,
+                                                                       cellLoc[curCell->getCellId()].Y, forgetRatio,
+                                                                       displacementLimit);
+                    else
+                        curPU->setSpreadLocation(cellLoc[curCell->getCellId()].X, cellLoc[curCell->getCellId()].Y,
+                                                 forgetRatio);
                     placementInfo->transferCellBinInfo(curCell->getCellId(), curPU->X(), curPU->Y());
                     cellLoc[curCell->getCellId()].X = curPU->X();
                     cellLoc[curCell->getCellId()].Y = curPU->Y();
@@ -513,7 +533,13 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
                     float curNewPUX = tmpTotalX;
                     float curNewPUY = tmpTotalY;
                     placementInfo->legalizeXYInArea(curPU, curNewPUX, curNewPUY);
-                    curPU->setSpreadLocation(curNewPUX, curNewPUY, forgetRatio);
+
+                    if (displacementLimitEnable)
+                        curPU->setSpreadLocation_WithLimitDisplacement(curNewPUX, curNewPUY, forgetRatio,
+                                                                       displacementLimit);
+                    else
+                        curPU->setSpreadLocation(curNewPUX, curNewPUY, forgetRatio);
+
                     placementInfo->enforceLegalizeXYInArea(curPU);
                     for (int vId = 0; vId < curMacro->getNumOfCells(); vId++)
                     {
@@ -542,7 +568,7 @@ GeneralSpreader::SpreadRegion *GeneralSpreader::expandFromABin(PlacementInfo::Pl
         new GeneralSpreader::SpreadRegion(curBin, placementInfo, binGrid, capacityShrinkRatio);
 
     float binUnitSize = std::min(curBin->right() - curBin->left(), curBin->top() - curBin->bottom());
-    if (!useSimpleExpland && binUnitSize > 1.25)
+    if (!useSimpleExpland)
     {
         while (resRegion->getOverflowRatio() > capacityShrinkRatio &&
                resRegion->smartFindExpandDirection(coveredBinSet) && resRegion->getBinsInRegion().size() < numBinThr)

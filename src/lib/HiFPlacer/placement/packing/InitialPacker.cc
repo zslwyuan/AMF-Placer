@@ -228,7 +228,8 @@ void InitialPacker::findDSPMacros()
         for (DesignInfo::DesignPin *pinBeDriven : curCell->getInputPins())
         {
             if (pinBeDriven->getRefPinName().find("ACIN[") == 0 || pinBeDriven->getRefPinName().find("BCIN[") == 0 ||
-                pinBeDriven->getRefPinName().find("PCIN[") == 0)
+                pinBeDriven->getRefPinName().find("PCIN[") == 0 ||
+                pinBeDriven->getRefPinName().find("CARRYCASCIN") == 0)
             {
                 if (pinBeDriven->getDriverPin())
                 {
@@ -241,7 +242,7 @@ void InitialPacker::findDSPMacros()
         if (!noCASInput)
             continue;
 
-        std::vector<std::string> portPatterns{"ACIN[", "BCIN[", "PCIN["};
+        std::vector<std::string> portPatterns{"ACIN[", "BCIN[", "PCIN[", "CARRYCASCIN"};
         std::vector<DesignInfo::DesignCell *> curMacroCores = BFSExpandViaSpecifiedPorts(portPatterns, curCell, false);
 
         if (curMacroCores.size() <= 1)

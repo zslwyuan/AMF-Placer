@@ -675,7 +675,7 @@ class CLBLegalizer
 
         for (auto curNet : nets)
         {
-            if (curNet->getDesignNet()->getPins().size() > 1000) // it could be clock
+            if (curNet->getDesignNet()->getPins().size() > 10000) // it could be clock
                 continue;
             oriHPWL += curNet->getHPWL(y2xRatio);
             newHPWL += curNet->getNewHPWLByTrying(curPU, PUX, PUY, y2xRatio);
@@ -702,7 +702,7 @@ class CLBLegalizer
 
         for (auto curNet : nets)
         {
-            if (curNet->getDesignNet()->getPins().size() > 1000) // it could be clock
+            if (curNet->getDesignNet()->getPins().size() > 10000) // it could be clock
                 continue;
             oriHPWL += curNet->getHPWL(y2xRatio);
             newHPWL += curNet->getNewHPWLByTrying(tmpPU, PUX, PUY, y2xRatio);

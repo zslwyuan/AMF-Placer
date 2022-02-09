@@ -535,14 +535,14 @@ void MacroLegalizer::findPossibleLegalLocation(bool fixedColumn)
         if (DesignInfo::isDSP(curCellType) || DesignInfo::isBRAM(curCellType))
         {
             auto tmpPU = placementInfo->getPlacementUnitByCellId(curCell->getCellId());
-            if (auto unpacked = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(tmpPU))
+            if (dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(tmpPU))
             {
                 macroLength = cellOffset = 1;
             }
             else if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
             {
 
-                for (cellOffset = 0; cellOffset < tmpMacro->getCells().size(); cellOffset++)
+                for (cellOffset = 0; cellOffset < (int)(tmpMacro->getCells().size()); cellOffset++)
                 {
                     if (tmpMacro->getCell(cellOffset) == curCell)
                     {

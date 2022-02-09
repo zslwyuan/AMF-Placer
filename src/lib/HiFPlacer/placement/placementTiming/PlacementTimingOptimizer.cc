@@ -55,6 +55,14 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
     for (auto tmpNet : designInfo->getNets())
         tmpNet->setOverallTimingNetEnhancement(1.0);
 
+    unsigned int highFanoutThr = 10000;
+
+    if (placementInfo->getNetDistributionByDensity(512) < 200)
+    {
+        highFanoutThr = 1000;
+        print_warning("highFanoutThr is set to 1000");
+    }
+
     for (auto cellA : designInfo->getCells())
     {
         if (cellA->isVirtualCell())
@@ -71,8 +79,8 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                         continue;
                     // int pinBIdInNet = 0;
                     auto pins = curPinA->getNet()->getPins();
-                    int pinNum = pins.size();
-                    if (pinNum <= 1 || pinNum >= 1000)
+                    unsigned int pinNum = pins.size();
+                    if (pinNum <= 1 || pinNum >= highFanoutThr)
                         continue;
 
                     int targetPathLen = -1;
@@ -83,6 +91,8 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                             auto curCell = pinBeDriven->getCell();
                             if (curCell)
                             {
+                                if (timingNodes[curCell->getCellId()]->getForwardLevel() > 2)
+                                    continue;
                                 if (targetPathLen < timingNodes[curCell->getCellId()]->getLongestPathLength())
                                     targetPathLen = timingNodes[curCell->getCellId()]->getLongestPathLength();
                             }
@@ -129,16 +139,38 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
                         continue;
                     // int pinBIdInNet = 0;
                     auto pins = curPinA->getNet()->getPins();
-                    int pinNum = pins.size();
-                    if (pinNum <= 1 || pinNum >= 1000)
+                    unsigned int pinNum = pins.size();
+                    if (pinNum <= 1 || pinNum >= highFanoutThr)
                         continue;
+
+                    int longPathCnt = 0;
+                    if (timingNodes[cellA->getCellId()]->getForwardLevel() > targetPathLen * 0.75)
+                    {
+                        longPathCnt = pinNum;
+                    }
+                    else
+                    {
+                        for (auto pinBeDriven : pins)
+                        {
+                            if (pinBeDriven->isInputPort())
+                            {
+                                auto curCell = pinBeDriven->getCell();
+                                if (curCell)
+                                {
+                                    if (timingNodes[curCell->getCellId()]->getLongestPathLength() < targetPathLen * 0.5)
+                                        continue;
+                                    longPathCnt++;
+                                }
+                            }
+                        }
+                    }
 
                     float enhanceRatio;
                     float overflowRatio = std::pow((float)0.8 * targetPathLen / levelThr, 1);
                     // if (overflowRatio > 10)
                     //     overflowRatio = 10;
-                    if (pinNum < 200)
-                        enhanceRatio = 1.5 * (overflowRatio + 0.005 * pinNum);
+                    if (longPathCnt < 200)
+                        enhanceRatio = 1.5 * (overflowRatio + 0.005 * longPathCnt);
                     else
                         enhanceRatio = 1.5 * (overflowRatio + 1);
 
@@ -194,16 +226,91 @@ void PlacementTimingOptimizer::setPinsLocation()
     }
 }
 
-void PlacementTimingOptimizer::conductStaticTimingAnalysis()
+void PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisticTiming)
 {
     print_status("PlacementTimingOptimizer: conducting Static Timing Analysis");
 
-    STA_Cnt++;
+    unsigned int highFanoutThr = 10000;
+
+    if (placementInfo->getNetDistributionByDensity(512) < 200)
+    {
+        highFanoutThr = 1000;
+        print_warning("highFanoutThr is set to 1000");
+    }
+
+    if (enableCounter)
+        STA_Cnt++;
+    if (STA_Cnt == 31)
+    {
+        // int totalSlackChecked = 0;
+        // auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
+        // auto &cellLoc = placementInfo->getCellId2location();
+        // assert(cellLoc.size() == timingNodes.size());
+        // for (auto curNet : placementInfo->getPlacementNets())
+        // {
+        //     auto designNet = curNet->getDesignNet();
+        //     if (designNet->checkIsPowerNet() || designNet->checkIsGlobalClock())
+        //         continue;
+
+        //     if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 ||
+        //         curNet->getUnits().size() >= highFanoutThr)
+        //         continue;
+        //     auto &pins = designNet->getPins();
+        //     unsigned int pinNum = pins.size();
+
+        //     assert(curNet->getUnits().size() == (unsigned int)pinNum);
+
+        //     int driverPinInNet = -1;
+
+        //     for (unsigned int i = 0; i < pinNum; i++)
+        //     {
+        //         if (pins[i]->isOutputPort())
+        //         {
+        //             driverPinInNet = i;
+        //             break;
+        //         }
+        //     }
+
+        //     assert(driverPinInNet >= 0);
+
+        //     // get the srcPin information
+        //     auto srcCell = pins[driverPinInNet]->getCell();
+        //     unsigned int srcCellId = srcCell->getCellId();
+        //     auto srcNode = timingNodes[srcCellId];
+        //     auto srcLoc = cellLoc[srcCellId];
+
+        //     // iterate the sinkPin for evaluation and enhancement
+        //     for (unsigned int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
+        //     {
+        //         if (pinBeDriven == (unsigned int)driverPinInNet)
+        //             continue;
+
+        //         // get the sinkPin information
+        //         auto sinkCell = pins[pinBeDriven]->getCell();
+        //         unsigned int sinkCellId = sinkCell->getCellId();
+        //         auto sinkNode = timingNodes[sinkCellId];
+        //         auto sinkLoc = cellLoc[sinkCellId];
+        //         float netDelay = getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+        //         float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
+
+        //         if (slack > 0)
+        //             continue;
+
+        //         totalSlackChecked++;
+        //     }
+        // }
+
+        // if (totalSlackChecked > 15000)
+        conservativeTiming = true;
+    }
+    if (enforeOptimisticTiming)
+        conservativeTiming = false;
+
     effectFactor = (STA_Cnt / 30.0);
     if (effectFactor < 1)
         effectFactor = std::pow(effectFactor, 1);
     else
-        effectFactor = 1;
+        effectFactor = (effectFactor - 1) * 0.3 + 1;
 
     bool printOut = false;
     std::string dumpFileName = "optNetDelayInfo.txt";
@@ -219,11 +326,18 @@ void PlacementTimingOptimizer::conductStaticTimingAnalysis()
                "your path settings");
     }
 
+    // std::string cellName =
+    // "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/i_mult/i_div/mem_q[4][sbe][result][55]_i_8"; int targetCellId =
+    // placementInfo->getDesignInfo()->getCell(cellName)->getCellId(); auto targetCellLoc =
+    // placementInfo->getCellId2location()[targetCellId]; print_warning("targetCellLoc X:" +
+    // std::to_string(targetCellLoc.X) + " Y:" + std::to_string(targetCellLoc.Y));
+
     assert(timingInfo);
     auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
     setPinsLocation();
 
     auto &pinLoc = placementInfo->getPinId2location();
+    auto &cellLoc = placementInfo->getCellId2location();
 
     auto &edges = timingGraph->getEdges();
     int numEdges = edges.size();
@@ -260,11 +374,68 @@ void PlacementTimingOptimizer::conductStaticTimingAnalysis()
     std::cout << "An example of long delay path for the current placement:\n";
     for (auto id : resPath)
     {
-        std::cout << designInfo->getCells()[id]->getName()
+        std::cout << designInfo->getCells()[id]->getName() << " X:" << cellLoc[id].X << " Y:" << cellLoc[id].Y
                   << "   [delay]: " << timingGraph->getNodes()[id]->getLatestArrival()
                   << "   [required]: " << timingGraph->getNodes()[id]->getRequiredArrivalTime() << "\n";
     }
 
+    // // important:::  chip/tile1/g_ariane_core.core/ariane/id_stage_i/operand_b_q[63]_i_31__0
+    // print_warning("===========================================================================\n");
+    // std::string cellNames[31] = {
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/commit_pointer_q_reg[0][0]_rep__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/i___0_i_11__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/i___0_i_6__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mstatus_q[mprv]_i_4__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mstatus_q[mie]_i_5__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mstatus_q[mprv]_i_13__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/ex_stage_i/csr_buffer_i/mstatus_q[sie]_i_20__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/dcsr_q[cause][8]_i_49__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/dcsr_q_reg[cause][8]_i_28__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/dcsr_q_reg[cause][8]_i_13__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/dcsr_q_reg[cause][8]_i_5__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/csr_regfile_i/dpc_q[1]_i_2__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/csr_regfile_i/i__i_4__1",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/commit_pointer_q[0][2]_i_2__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/ex_stage_i/i_mult/i_div/mem_q[4][sbe][result][55]_i_8__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_issue_read_operands/mem_q[4][sbe][result][55]_i_4__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/operand_a_q[63]_i_135__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/operand_a_q_reg[63]_i_119__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/id_stage_i/operand_a_q[63]_i_95__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/id_stage_i/operand_a_q[63]_i_70__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_issue_read_operands/operand_a_q[63]_i_31__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/id_stage_i/operand_a_q[63]_i_11__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/operand_a_q[63]_i_13__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mult_valid_q_i_28__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mult_valid_q_i_10__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mult_valid_q_i_2__1",
+    //     "chip/tile1/g_ariane_core.core/ariane/id_stage_i/mem_q[0][sbe][fu][2]_i_3__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q[0][sbe][fu][2]_i_2__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q[1][sbe][fu][2]_i_1__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q[1][sbe][ex][tval][63]_i_1__0",
+    //     "chip/tile1/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q_reg[1][sbe][ex][tval][18]"};
+
+    // std::vector<std::string> cellNameVec(cellNames, cellNames + 31);
+    // for (int i = 0; i < cellNameVec.size() - 1; i++)
+    // {
+    //     auto id = designInfo->getCell(cellNameVec[i])->getCellId();
+    //     auto curNode = timingGraph->getNodes()[id];
+    //     for (auto edge : curNode->getOutEdges())
+    //     {
+    //         auto &pin1Loc = pinLoc[edge->getSourcePin()->getElementIdInType()];
+    //         auto &pin2Loc = pinLoc[edge->getSinkPin()->getElementIdInType()];
+    //         if (pin1Loc.X < -5 && pin1Loc.Y < -5)
+    //             continue;
+    //         if (pin2Loc.X < -5 && pin2Loc.Y < -5)
+    //             continue;
+    //         float delay = getDelayByModel(pin1Loc.X, pin1Loc.Y, pin2Loc.X, pin2Loc.Y);
+    //         if (edge->getSinkPin()->getCell()->getName() == cellNameVec[i + 1])
+    //         {
+    //             std::cout << cellNameVec[i] << "X:" << pin1Loc.X << " Y:" << pin1Loc.Y << "   [ToNextDelay]: " <<
+    //             delay
+    //                       << "\n";
+    //         }
+    //     }
+    // }
     if (printOut)
     {
         for (auto node : timingInfo->getSimplePlacementTimingInfo())
@@ -335,6 +506,7 @@ void PlacementTimingOptimizer::incrementalStaticTimingAnalysis_forPUWithLocation
 
 void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio)
 {
+    placementInfo->updateElementBinGrid();
     conductStaticTimingAnalysis();
     print_warning("PlacementTimingOptimizer: clustering long path in one clock region");
     placementInfo->updateElementBinGrid();
@@ -345,18 +517,20 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     auto YX2ClockRegion = deviceInfo->getClockRegions();
     auto &PU2ClockRegionCenter = placementInfo->getPU2ClockRegionCenters();
     auto &PU2ClockRegionColumn = placementInfo->getPU2ClockRegionColumn();
+
     PU2ClockRegionCenter.clear();
     PU2ClockRegionColumn.clear();
 
     std::set<int> extractedCellIds;
     std::set<PlacementInfo::PlacementUnit *> extractedPUs;
+
     extractedCellIds.clear();
     extractedPUs.clear();
     clockRegionclusters.clear();
 
-    int fanoutThr = placementInfo->getHighFanOutThr();
+    unsigned int fanoutThr = 512; // placementInfo->getHighFanOutThr();
     unsigned int maxSize = 0;
-    int sizeThr = 200000;
+    int sizeThr = 20000;
     if (placementInfo->isDensePlacement() || clockRegionClusterTooLarge)
         sizeThr = 2000;
     for (unsigned int nodeId = 0; nodeId < timingNodes.size() * 0.1; nodeId++)
@@ -563,24 +737,40 @@ void PlacementTimingOptimizer::stretchClockRegionColumns()
         newClockRegionX2cellNum[pair.second] += PU->getWeight();
     }
 
-    for (int colX = 0; colX < curClockRegionX2cellNum.size(); colX++)
+    for (unsigned int colX = 0; colX < curClockRegionX2cellNum.size(); colX++)
     {
         float stretchRatio = (float)newClockRegionX2cellNum[colX] / (float)curClockRegionX2cellNum[colX];
 
+        float bottomLimit = placementInfo->getGlobalBinMinLocY();
+        float topLimit = placementInfo->getGlobalBinMaxLocY();
+        float completeH = topLimit - bottomLimit;
         float oriTopY = curClockRegionX2MaxY[colX];
         float oriBottomY = curClockRegionX2MinY[colX];
+        float oriH = std::abs(oriTopY - oriBottomY);
+        bool maybeCongestion =
+            completeH * 0.625 > oriH && (oriBottomY < 0.075 * completeH || oriTopY > 0.925 * completeH);
+
+        if (oriBottomY < 0.075 * completeH)
+            bottomLimit = std::max(std::max(oriBottomY, bottomLimit), (float)0.05 * completeH);
+        if (oriTopY > 0.925 * completeH)
+            topLimit = std::min(std::min(oriTopY, topLimit), (float)0.95 * completeH);
+
         if (std::abs(oriTopY - oriBottomY) < 0.1)
             continue;
-        if (stretchRatio > 1)
+        if (stretchRatio > 1 || (maybeCongestion && stretchRatio > 0.95))
         {
-            stretchRatio *= 1.05;
-            float oriH = oriTopY - oriBottomY;
+            if (maybeCongestion)
+            {
+                print_warning("PlacementTimingOptimizer: " + std::to_string(colX) +
+                              "th column is stretched more to avoid potential congestion");
+                stretchRatio *= 1.1;
+            }
+            else
+                stretchRatio *= 1.05;
             float newH = stretchRatio * oriH;
             float deltaH = newH - oriH;
             float newTopY = oriTopY + deltaH / 2;
             float newBottomY = oriBottomY - deltaH / 2;
-            float bottomLimit = placementInfo->getGlobalBinMinLocY();
-            float topLimit = placementInfo->getGlobalBinMaxLocY();
 
             if (newBottomY < bottomLimit)
             {

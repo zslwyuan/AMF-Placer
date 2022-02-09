@@ -19,8 +19,8 @@
 #include "Eigen/Eigen"
 #include "Eigen/SparseCore"
 #include "PlacementInfo.h"
-#include "QPSolverWrapper.h"
 #include "PlacementTimingOptimizer.h"
+#include "QPSolverWrapper.h"
 #include <assert.h>
 #include <fstream>
 #include <iostream>
@@ -74,7 +74,7 @@ class WirelengthOptimizer
     void GlobalPlacementQPSolve(float pesudoNetWeight, bool firstIteration = true,
                                 bool forwardSolutionToNextIteration = false, bool enableMacroPseudoNet2Site = false,
                                 bool considerNetNum = true, bool enableUserDefinedClusterOpt = false,
-                                PlacementTimingOptimizer *timingOptimizer = nullptr);
+                                float displacementLimit = -10, PlacementTimingOptimizer *timingOptimizer = nullptr);
 
     /**
      * @brief update the net weights in the quadratic model according to B2B net HPWL model.
@@ -200,7 +200,7 @@ class WirelengthOptimizer
      * @brief write placement location from  the solver to the PlacementInfo
      *
      */
-    void solverWriteBackData();
+    void solverWriteBackData(float displacementLimit);
 
     /**
      * @brief  add the legalization pseudo nets to force macros move to the legal sites
@@ -250,6 +250,8 @@ class WirelengthOptimizer
      */
     void addPseudoNet_SlackBased(float timingWeight, double slackPowFactor, PlacementTimingOptimizer *timingOptimizer);
 
+    void LUTLUTPairing_TimingDriven(float timingWeight, float disThreshold, PlacementTimingOptimizer *timingOptimizer);
+
     /**
      * @brief add pseudo nets for clock region
      *
@@ -273,6 +275,29 @@ class WirelengthOptimizer
     {
         return std::abs(x0 - x1) + y2xRatio * std::abs(y0 - y1);
     }
+    inline float getCellDistance(PlacementInfo::Location &A, PlacementInfo::Location &B)
+    {
+        return fabs(A.X - B.X) + y2xRatio * fabs(A.Y - B.Y);
+    }
+
+    typedef struct _PUWithScore
+    {
+        PlacementInfo::PlacementUnit *PU;
+        float score;
+
+        _PUWithScore(PlacementInfo::PlacementUnit *PU, float score) : PU(PU), score(score)
+        {
+        }
+    } PUWithScore;
+    typedef struct _CellWithScore
+    {
+        DesignInfo::DesignCell *cell;
+        float score;
+
+        _CellWithScore(DesignInfo::DesignCell *cell, float score) : cell(cell), score(score)
+        {
+        }
+    } CellWithScore;
 
     PlacementInfo *placementInfo;
 
@@ -343,6 +368,10 @@ class WirelengthOptimizer
     int macroPseudoNetCnt = 0;
 
     std::map<DesignInfo::DesignNet *, std::vector<float>> netPinEnhanceRate;
+
+    // For debug usage
+    // std::string targetCellName =
+    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/commit_pointer_q[0][2]_i_2";
 };
 
 #endif

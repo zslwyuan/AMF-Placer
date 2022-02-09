@@ -25,6 +25,7 @@ void ParallelCLBPacker::prePackLegalizedMacros(PlacementInfo::PlacementMacro *tm
         {
             deviceSite2PackingSite[legalSites[i]]->mapCarryRelatedCellsToSlots(tmpMacro, i);
             deviceSite2PackingSite[legalSites[i]]->addCarry();
+            placementInfo->addPUIntoClockColumn(tmpMacro, legalSites[i]);
         }
     }
     else if (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MCLB)
@@ -35,6 +36,7 @@ void ParallelCLBPacker::prePackLegalizedMacros(PlacementInfo::PlacementMacro *tm
         {
             deviceSite2PackingSite[legalSites[i]]->mapLUTRAMRelatedCellsToSlots(tmpMacro);
             deviceSite2PackingSite[legalSites[i]]->addLUTRAMMacro();
+            placementInfo->addPUIntoClockColumn(tmpMacro, legalSites[i]);
         }
     }
 }
@@ -282,12 +284,15 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
                 numFixed++;
 
         float fixedRatio = (float)numFixed / (float)placementInfo->getPlacementUnits().size();
-        if (fixedRatio > 0.25 && WLOptimizer)
+        if (fixedRatio > 0.25 && WLOptimizer && iterCnt < 32)
         {
+            placementInfo->updateElementBinGrid();
+            timingOptimizer->pauseCounter();
             timingOptimizer->conductStaticTimingAnalysis();
+            placementInfo->getPU2ClockRegionCenters().clear();
             print_status("ParallelCLBPacker: Move unfixed elements with WLOptimizer");
             WLOptimizer->GlobalPlacementQPSolve(placementInfo->getPseudoNetWeight() * 2 * (1 + fixedRatio), true, true,
-                                                true, true, false, timingOptimizer);
+                                                true, true, false, 1, timingOptimizer);
             dumpAllCellsCoordinate();
         }
 

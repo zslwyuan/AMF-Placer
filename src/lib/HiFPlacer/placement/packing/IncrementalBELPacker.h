@@ -17,8 +17,9 @@
 
 #include "DesignInfo.h"
 #include "DeviceInfo.h"
-#include "PlacementInfo.h"
 #include "KDTree/KDTree.h"
+#include "PlacementInfo.h"
+#include "PlacementTimingOptimizer.h"
 #include <assert.h>
 #include <fstream>
 #include <iostream>
@@ -77,6 +78,8 @@ class IncrementalBELPacker
      */
     void LUTFFPairing(float disThreshold);
 
+    void LUTLUTPairing_TimingDriven(float disThreshold, PlacementTimingOptimizer *timingOptimizer);
+
     /**
      * @brief try to pair FFs in the design netlist which are neighbors according to a given threshold and the control
      * set compatibility
@@ -122,6 +125,26 @@ class IncrementalBELPacker
     };
 
   private:
+    typedef struct _PUWithScore
+    {
+        PlacementInfo::PlacementUnit *PU;
+        float score;
+
+        _PUWithScore(PlacementInfo::PlacementUnit *PU, float score) : PU(PU), score(score)
+        {
+        }
+    } PUWithScore;
+
+    typedef struct _CellWithScore
+    {
+        DesignInfo::DesignCell *cell;
+        float score;
+
+        _CellWithScore(DesignInfo::DesignCell *cell, float score) : cell(cell), score(score)
+        {
+        }
+    } CellWithScore;
+
     DesignInfo *designInfo;
     DeviceInfo *deviceInfo;
     PlacementInfo *placementInfo;

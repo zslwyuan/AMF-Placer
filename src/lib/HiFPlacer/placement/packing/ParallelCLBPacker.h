@@ -1777,6 +1777,19 @@ class ParallelCLBPacker
          */
         void finalMapToSlotsForCommonLUTFFInSite();
 
+        bool isMuxMacro(DesignInfo::DesignCell *cell)
+        {
+            if (!cell)
+                return false;
+            auto tmpPU = placementInfo->getPlacementUnitByCell(cell);
+            if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
+            {
+                return (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX7 ||
+                        tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX8);
+            }
+            return false;
+        }
+
         /**
          * @brief finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site
          *

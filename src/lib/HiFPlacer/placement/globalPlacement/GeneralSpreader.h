@@ -15,10 +15,10 @@
 #ifndef _GENERALSPREADER
 #define _GENERALSPREADER
 
-#include "const.h"
 #include "DesignInfo.h"
 #include "DeviceInfo.h"
 #include "PlacementInfo.h"
+#include "const.h"
 #include "dumpZip.h"
 #include <assert.h>
 #include <fstream>
@@ -61,7 +61,7 @@ class GeneralSpreader
      * @param enableClockRegionAware spread but limit in specific clock region
      * @param spreadRegionBinSizeLimit the maximum size of the spread region for a overflow bin
      */
-    void spreadPlacementUnits(float forgetRatio, bool enableClockRegionAware = false,
+    void spreadPlacementUnits(float forgetRatio, bool enableClockRegionAware = false, float displacementLimit = -10,
                               unsigned int spreadRegionBinSizeLimit = 1000000);
     void dumpLUTFFCoordinate();
 
@@ -1150,7 +1150,8 @@ class GeneralSpreader
     void updatePlacementUnitsWithSpreadedCellLocations(std::set<PlacementInfo::PlacementUnit *> &involvedPUs,
                                                        std::set<DesignInfo::DesignCell *> &involvedCells,
                                                        std::vector<PlacementInfo::PlacementUnit *> &involvedPUVec,
-                                                       float forgetRatio, bool enableClockRegionAware);
+                                                       float forgetRatio, bool enableClockRegionAware,
+                                                       float displacementLimit);
 
     /**
      * @brief multi-threading workers for updating the information of the involved PlacementUnit(s)
@@ -1167,7 +1168,7 @@ class GeneralSpreader
     static void updatePlacementUnitsWithSpreadedCellLocationsWorker(
         PlacementInfo *placementInfo, std::set<PlacementInfo::PlacementUnit *> &involvedPUs,
         std::set<DesignInfo::DesignCell *> &involvedCells, std::vector<PlacementInfo::PlacementUnit *> &involvedPUVec,
-        float forgetRatio, int startId, int endId);
+        float forgetRatio, float displacementLimit, int startId, int endId);
 
     /**
      * @brief ensure the X/Y is in the legal range of the target device

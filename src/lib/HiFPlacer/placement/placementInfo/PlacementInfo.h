@@ -16,9 +16,9 @@
 
 #include "DesignInfo.h"
 #include "DeviceInfo.h"
-#include "PlacementTimingInfo.h"
 #include "Eigen/Core"
 #include "Eigen/SparseCore"
+#include "PlacementTimingInfo.h"
 #include "dumpZip.h"
 #include <assert.h>
 #include <fstream>
@@ -1079,6 +1079,40 @@ class PlacementInfo
             anchorY = y;
         }
 
+        /**
+         * @brief Set the Spread Location based on forgetting ratio
+         *
+         * @param x
+         * @param y
+         * @param forgetRatio how much should the PlacementUnit forget the original location from later iteration
+         * @param limitDisplacement limit the displacement
+         */
+        inline void setSpreadLocation_WithLimitDisplacement(float x, float y, float forgetRatio,
+                                                            float limitDisplacement)
+        {
+            assert(!locked);
+
+            if (lastSpreadX > -100 && lastSpreadY > -100)
+            {
+                assert(forgetRatio <= 1);
+                float disX = std::fabs(x - lastSpreadX) * forgetRatio;
+                float disY = std::fabs(x - lastSpreadX) * forgetRatio;
+                float dis = std::sqrt(disX * disX + disY * disY);
+                if (dis / limitDisplacement > 1)
+                    forgetRatio /= (dis / limitDisplacement);
+
+                x = x * forgetRatio + lastSpreadX * (1 - forgetRatio);
+                y = y * forgetRatio + lastSpreadY * (1 - forgetRatio);
+
+                // lastSpreadX = x;
+                // lastSpreadY = y;
+            }
+            lastAnchorX = x;
+            lastAnchorY = y;
+            anchorX = x;
+            anchorY = y;
+        }
+
         inline void setAnchorLocationAndForgetTheOriginalOne(float x, float y)
         {
             assert(!locked);
@@ -1452,6 +1486,7 @@ class PlacementInfo
         enum PlacementMacroType
         {
             PlacementMacroType_LUTFFPair = 0, // LUT-FF pair during  incremental packing
+            PlacementMacroType_LUTLUTSeires,  // LUT-LUT pair during  incremental packing
             PlacementMacroType_FFFFPair,      // FF-FF pair during  incremental packing
             PlacementMacroType_HALFCLB,
             PlacementMacroType_LCLB,  // vendor defined primitives, like FFs for system reset, have to be placed in
@@ -3055,6 +3090,12 @@ class PlacementInfo
         return cellId2PlacementUnitVec[cellId];
     }
 
+    inline PlacementNet *getPlacementNetByDesignNetId(int netId)
+    {
+        assert((unsigned int)netId < designNetId2PlacementNet.size());
+        return designNetId2PlacementNet[netId];
+    }
+
     /**
      * @brief directly set weight in the quadratic Matrix and vector according to given request.
      *
@@ -4129,8 +4170,12 @@ class PlacementInfo
     /**
      * @brief check the utlization of the clock regions on the device
      *@param dump dump the clock utilization
+     * @return true if the placement does not cause clock legalization problem
+     * @return false if the placement causes clock legalization problem
      */
-    void checkClockUtilization(bool dump);
+    bool checkClockUtilization(bool dump);
+
+    void dumpOverflowClockUtilization();
 
     /**
      * @brief check whether the given PlacementUnit can be mapped to the site considering the half-column clock
@@ -4305,6 +4350,20 @@ class PlacementInfo
         return highFanOutThr;
     }
 
+    inline int getNetDistributionByDensity(int density)
+    {
+        int ret = 0;
+        for (int i = 0; i <= 7; i++)
+        {
+            if (netPinNumDistribution[i] >= density)
+            {
+                ret += netDistribution[i];
+            }
+        }
+
+        return ret;
+    }
+
   private:
     CompatiblePlacementTable *compatiblePlacementTable = nullptr;
     std::vector<PlacementUnit *> placementUnits;
@@ -4400,6 +4459,7 @@ class PlacementInfo
 
     std::vector<PlacementNet *> placementNets;
     std::vector<std::vector<PlacementNet *>> placementUnitId2Nets;
+    std::vector<PlacementNet *> designNetId2PlacementNet;
 
     std::vector<PlacementNet *> clockNets;
     std::vector<std::vector<int>> clockRegionUtilization;
@@ -4457,6 +4517,8 @@ class PlacementInfo
     std::string cellType2fixedAmoFileName;
     std::string cellType2sharedCellTypeFileName;
     std::string sharedCellType2BELtypeFileName;
+    int netPinNumDistribution[8] = {8, 16, 24, 32, 64, 256, 512, 1000000};
+    int netDistribution[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 
     /**
      * @brief a factor to tune the weights of the net spanning in Y-coordinate relative to the net spanning

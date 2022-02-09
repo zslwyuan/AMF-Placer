@@ -113,6 +113,10 @@ DeviceInfo::DeviceInfo(std::map<std::string, std::string> &JSONCfg, std::string 
         {
             addTile(tileName, tileType);
             DeviceTile *curTile = name2Tile[tileName];
+            if (siteName == "RAMB36_X16Y15")
+            {
+                std::cout << "tileName:" << tileName << "\n";
+            }
             addSite(siteName, siteType, centerX, centerY, clockRegionX, clockRegionY, curTile);
             DeviceSite *curSite = name2Site[siteName];
             if (coord2ClockRegion.find(clockRegionCoord) == coord2ClockRegion.end())
@@ -226,6 +230,7 @@ void DeviceInfo::mapClockRegionToArray()
         {
             assert(clockRegions[i][j]->getLeft() == clockRegionXBounds[j]);
             assert(clockRegions[i][j]->getBottom() == clockRegionYBounds[i]);
+            std::cout << "dealing with clock region : X " << j << " Y " << i << "\n";
             clockRegions[i][j]->mapSiteToClockColumns();
         }
     }
@@ -257,7 +262,7 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
     assert(sites.size() > 0);
     for (unsigned int i = 0; i < sites.size(); i++)
     {
-        if (sites[i]->getName().find("SLICE") != std::string::npos)
+        if (sites[i]->getName().find("SLICE") == 0)
         {
             leftSiteX = sites[i]->getSiteX();
             bottomSiteY = sites[i]->getSiteY();
@@ -266,7 +271,7 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
     }
     for (int i = sites.size() - 1; i >= 0; i--)
     {
-        if (sites[i]->getName().find("SLICE") != std::string::npos)
+        if (sites[i]->getName().find("SLICE") == 0)
         {
             rightSiteX = sites[i]->getSiteX();
             topSiteY = sites[i]->getSiteY();
@@ -274,8 +279,32 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
         }
     }
 
+    for (unsigned int i = 0; i < sites.size(); i++)
+    {
+        if (sites[i]->getTile()->getTileIdX() < leftTileIdX)
+        {
+            leftTileIdX = sites[i]->getTile()->getTileIdX();
+        }
+        if (sites[i]->getTile()->getTileIdX() > rightTileIdX)
+        {
+            rightTileIdX = sites[i]->getTile()->getTileIdX();
+        }
+        if (sites[i]->getName().find("SLICE") == 0)
+        {
+            if (sites[i]->getTile()->getTileIdY() < bottomTileIdY)
+            {
+                bottomTileIdY = sites[i]->getTile()->getTileIdY();
+            }
+            if (sites[i]->getTile()->getTileIdY() > topTileIdY)
+            {
+                topTileIdY = sites[i]->getTile()->getTileIdY();
+            }
+        }
+    }
+
+    std::cout << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
     clockColumns = std::vector<std::vector<ClockColumn *>>(
-        columnNumY, std::vector<ClockColumn *>(rightSiteX - leftSiteX + 1, nullptr));
+        columnNumY, std::vector<ClockColumn *>((rightTileIdX - leftTileIdX + 1), nullptr));
     for (int levelY = 0; levelY < columnNumY; levelY++)
     {
         for (unsigned int colOffset = 0; colOffset < clockColumns[levelY].size(); colOffset++)
@@ -283,22 +312,30 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
             clockColumns[levelY][colOffset] = new ClockColumn();
         }
     }
-
-    int eachLevelY = (topSiteY - bottomSiteY + 1) / columnNumY;
+    int eachLevelY = (topTileIdY - bottomTileIdY + 1) / columnNumY;
     for (auto curSite : sites)
     {
-        if (curSite->getName().find("SLICE") == std::string::npos)
+        if (curSite->getName().find("SLICE") != 0)
         {
             // currently, BRAM/DSP slices will not lead to clock utilization overflow
             continue;
         }
         int levelY = (curSite->getSiteY() - bottomSiteY) / eachLevelY;
+        int offsetX = curSite->getTile()->getTileIdX() - leftTileIdX;
+        if (levelY < 0)
+        {
+            std::cout << curSite->getName() << "\n";
+        }
         assert(levelY >= 0);
+        if (levelY >= (int)clockColumns.size())
+        {
+            std::cout << curSite->getName() << "\n";
+        }
         assert(levelY < (int)clockColumns.size());
-        assert(curSite->getSiteX() - leftSiteX >= 0);
-        assert(curSite->getSiteX() - leftSiteX < (int)clockColumns[levelY].size());
-        clockColumns[levelY][curSite->getSiteX() - leftSiteX]->addSite(curSite);
-        curSite->setClockHalfColumn(clockColumns[levelY][curSite->getSiteX() - leftSiteX]);
+        assert(offsetX >= 0);
+        assert(offsetX < (int)clockColumns[levelY].size());
+        clockColumns[levelY][offsetX]->addSite(curSite);
+        curSite->setClockHalfColumn(clockColumns[levelY][offsetX]);
     }
 
     assert(clockColumns.size() > 0);
@@ -306,15 +343,36 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
     colWidth = (rightX - leftX) / clockColumns[0].size();
 
     float offsetY = bottomY;
+    std::cout << "ClockRegionBoundary:  l:" << leftX << " r:" << rightX << " b:" << bottomY << " t:" << topY << "\n";
     for (int levelY = 0; levelY < columnNumY; levelY++)
     {
-        float offsetX = leftX;
         for (unsigned int colOffset = 0; colOffset < clockColumns[levelY].size(); colOffset++)
         {
-            clockColumns[levelY][colOffset]->setBoundary(offsetX, offsetX + colWidth, offsetY + colHeight, offsetY);
-            offsetX += colWidth;
+            if (clockColumns[levelY][colOffset]->getSites().size() == 0)
+                continue;
+            clockColumns[levelY][colOffset]->setBottom(bottomY + levelY * colHeight);
+            clockColumns[levelY][colOffset]->setTop(bottomY + (levelY + 1) * colHeight);
+            if (colOffset == 0)
+            {
+                clockColumns[levelY][colOffset]->setLeft(leftX);
+            }
+            else
+            {
+                clockColumns[levelY][colOffset]->setLeft(clockColumns[levelY][colOffset]->getLeft() - 0.25);
+            }
+            if (colOffset == clockColumns[levelY].size() - 1)
+            {
+                clockColumns[levelY][colOffset]->setRight(rightX);
+            }
+            else
+            {
+                clockColumns[levelY][colOffset]->setRight(clockColumns[levelY][colOffset]->getRight() + 0.25);
+            }
+            std::cout << "   l:" << clockColumns[levelY][colOffset]->getLeft()
+                      << " r:" << clockColumns[levelY][colOffset]->getRight()
+                      << " b:" << clockColumns[levelY][colOffset]->getBottom()
+                      << " t:" << clockColumns[levelY][colOffset]->getTop() << "\n";
         }
-        offsetY += colHeight;
     }
 }
 

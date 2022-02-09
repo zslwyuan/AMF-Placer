@@ -1611,6 +1611,10 @@ class DesignInfo
 
     inline DesignCell *getCell(std::string &tmpName)
     {
+        if (name2Cell.find(tmpName) == name2Cell.end())
+        {
+            std::cout << "cannot find:" << tmpName << "\n";
+        }
         return name2Cell[tmpName];
     }
 
