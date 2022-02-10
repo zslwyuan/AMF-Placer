@@ -346,6 +346,8 @@ class WirelengthOptimizer
      */
     bool directMacroLegalize = false;
 
+    float pin2pinEnhance = 5.0;
+
     /**
      * @brief the fade-out factor for the user-defined clusters
      *

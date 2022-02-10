@@ -491,7 +491,8 @@ void ParallelCLBPacker::exceptionHandling(bool verbose)
             {
                 std::cout << PUPoints[i].getPU() << "\n=================================================\n";
             }
-            // break;
+            assert("fail to handle exceptions" && false);
+            break;
         }
         if (Dc < 1)
             Dc = 1;
@@ -558,7 +559,7 @@ bool ParallelCLBPacker::exceptionPULegalize(PlacementInfo::PlacementUnit *curPU,
                                                                 displacementThreshold, y2xRatio, clockRegionAware);
     else
         candidateSitesToPlaceThePU =
-            findNeiborSitesFromBinGrid(DesignInfo::CellType_LUT4, curPU->X(), curPU->Y(), displacementThreshold - 2,
+            findNeiborSitesFromBinGrid(DesignInfo::CellType_LUT4, curPU->X(), curPU->Y(), displacementThreshold - 3,
                                        displacementThreshold, y2xRatio, clockRegionAware);
     std::vector<siteWithScore> sitesToRipUp;
     sitesToRipUp.clear();
@@ -775,7 +776,7 @@ bool ParallelCLBPacker::ripUpAndLegalizae(
                 else
                     candidateSitesToPlaceThePU =
                         findNeiborSitesFromBinGrid(DesignInfo::CellType_LUT4, curTargetPackingSite->getCLBSite()->X(),
-                                                   curTargetPackingSite->getCLBSite()->Y(), displacementThreshold - 2,
+                                                   curTargetPackingSite->getCLBSite()->Y(), displacementThreshold - 3,
                                                    displacementThreshold, y2xRatio, clockRegionAware);
 
                 float highestScoreIncrease = -1e5;

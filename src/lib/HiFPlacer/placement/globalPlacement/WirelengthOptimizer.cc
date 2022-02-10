@@ -28,6 +28,10 @@ WirelengthOptimizer::WirelengthOptimizer(PlacementInfo *placementInfo, std::map<
     {
         useUnconstrainedCG = JSONCfg["useUnconstrainedCG"] == "true";
     }
+    if (JSONCfg.find("pin2pinEnhance") != JSONCfg.end())
+    {
+        pin2pinEnhance = std::stof(JSONCfg["pin2pinEnhance"]);
+    }
     if (JSONCfg.find("y2xRatio") != JSONCfg.end())
         y2xRatio = std::stof(JSONCfg["y2xRatio"]);
     float leftBound = placementInfo->getGlobalMinX() - 0.5;
@@ -255,8 +259,8 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
         addPseudoNet_SlackBased((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight, slackPowerFactor,
                                 timingOptimizer);
         if (timingOptimizer->getEffectFactor() > 0.5)
-            LUTLUTPairing_TimingDriven((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight, 5,
-                                       timingOptimizer);
+            LUTLUTPairing_TimingDriven((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight,
+                                       pin2pinEnhance, timingOptimizer);
     }
 
     if (enableUserDefinedClusterOpt)

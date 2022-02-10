@@ -1,22 +1,28 @@
 import os
 
+arg1 = 2
+while (arg1 < 8):
+    overallTcl = open(
+        "/home/zslwyuan-laptop/Documents/AMF-Placer/overall.tcl", "w")
+    outputPath = "/home/zslwyuan-laptop/Documents/AMF-Placer-DCP/dse/"
+    outputName = "OpenPiton_"+str(arg1).replace(".", "p")
 
-for arg1 in [2, -1,  4]:
-    for arg2 in [2, -1,  1]:
-        for arg3 in [-1, 1, 2]:
-            overallTcl = open(
-                "/home/zslwyuan-laptop/Documents/AMF-Placer/overall.tcl", "w")
-            outputPath = "/home/zslwyuan-laptop/Documents/AMF-Placer-DCP/dse/"
-            outputName = "OpenPiton_"+str(arg1)+"_"+str(arg2)+"_"+str(arg3)
+    templateFile = open("../benchmarks/testConfig/OpenPiton_template.json")
+    outputFile = open("../benchmarks/testConfig/OpenPiton.json", "w")
+    for line in templateFile.readlines():
+        print(line.replace("XXXXXX", str(arg1)), end="", file=outputFile)
+    outputFile.close()
+    templateFile.close()
 
-            os.system(
-                "./AMFPlacer ../benchmarks/testConfig/OpenPiton.json "+str(arg1)+" "+str(arg2)+" "+str(arg3)+" > "+outputPath+outputName+".placerLog")
+    os.system(
+        "./AMFPlacer ../benchmarks/testConfig/OpenPiton.json > "+outputPath+outputName+".placerLog")
 
-            print("open_checkpoint /home/zslwyuan-laptop/Documents/AMF-Placer-Vivado/midOpenPiton/OpenPiton.dcp", file=overallTcl)
-            print("source /home/zslwyuan-laptop/Documents/AMF-Placer/build/dumpData_OpenPiton/DumpCLBPacking-first-0.tcl", file=overallTcl)
-            print("write_checkpoint /home/zslwyuan-laptop/Documents/AMF-Placer-DCP/dse/" +
-                  outputName+".dcp -force", file=overallTcl)
-            overallTcl.close()
-            os.system("vivado -mode batch -source /home/zslwyuan-laptop/Documents/AMF-Placer/overall.tcl -journal " +
-                      outputPath+outputName+".jou"
-                      + " -log " + outputPath+outputName+".log")
+    print("open_checkpoint /home/zslwyuan-laptop/Documents/AMF-Placer-Vivado/midOpenPiton/OpenPiton.dcp", file=overallTcl)
+    print("source /home/zslwyuan-laptop/Documents/AMF-Placer/build/dumpData_OpenPiton/DumpCLBPacking-first-0.tcl", file=overallTcl)
+    print("write_checkpoint /home/zslwyuan-laptop/Documents/AMF-Placer-DCP/dse/" +
+          outputName+".dcp -force", file=overallTcl)
+    overallTcl.close()
+    os.system("vivado -mode batch -source /home/zslwyuan-laptop/Documents/AMF-Placer/overall.tcl -journal " +
+              outputPath+outputName+".jou"
+              + " -log " + outputPath+outputName+".log")
+    arg1 = arg1 + 0.75
