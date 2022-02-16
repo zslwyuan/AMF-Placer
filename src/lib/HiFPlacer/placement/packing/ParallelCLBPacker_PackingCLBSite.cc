@@ -50,6 +50,8 @@ void ParallelCLBPacker::PackingCLBSite::removeInvalidClustersFromPQ()
             priorityQueue[i] = nullptr;
         }
     }
+    if (determinedClusterInSite)
+        assert(determinedClusterInSite->areAllPUsValidForThisSite(PUId2PackingCLBSite, this));
     priorityQueue.resize(validCnt);
 }
 

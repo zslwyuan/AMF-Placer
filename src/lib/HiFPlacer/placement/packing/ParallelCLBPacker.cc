@@ -317,6 +317,18 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         // placementInfo->updateB2BAndGetTotalHPWL();
 
         packCLBsIteration(false, debug);
+
+        for (auto packingSite : packingSites)
+        {
+            if (packingSite)
+            {
+                if (packingSite->getDeterminedClusterInSite())
+                {
+                    assert(packingSite->getDeterminedClusterInSite()->areAllPUsValidForThisSite(PUId2PackingCLBSite,
+                                                                                                packingSite));
+                }
+            }
+        }
         // dumpCLBPacking();
     }
     print_status("ParallelCLBPacker: finish iterative packing");

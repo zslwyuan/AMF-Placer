@@ -185,10 +185,8 @@ class AMFPlacer
         placementInfo->createGridBins(2, 2);
         placementInfo->adjustLUTFFUtilization(-10, true);
         // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
-        // timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
 
-        // timingOptimizer->moveDriverIntoBetterClockRegion(longPathThr, 0.75);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, 25, timingOptimizer);
         JSON["SpreaderSimpleExpland"] = "true";
