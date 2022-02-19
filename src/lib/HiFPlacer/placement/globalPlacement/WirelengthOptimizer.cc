@@ -252,10 +252,8 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
 
     if (timingOptimizer)
     {
-        // addPseudoNet_LevelBased(
-        //     placementInfo->getLongPathThresholdLevel(), (0.05 * timingOptimizer->getEffectFactor()) *
-        //     generalNetWeight, placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod()
-        //     * 2.5);
+        slackThr = timingOptimizer->getSlackThr();
+
         addPseudoNet_SlackBased((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight, slackPowerFactor,
                                 timingOptimizer);
         if (timingOptimizer->getEffectFactor() > 0.5)
@@ -392,207 +390,6 @@ void WirelengthOptimizer::addPseudoNetForMacros(float pesudoNetWeight, bool cons
     }
 }
 
-void WirelengthOptimizer::addPseudoNet_LevelBased(int levelThr, float timingWeight, double disExpected)
-{
-    assert(placementInfo->getTimingInfo());
-    if (levelThr < 4)
-        return;
-
-    float maxEnhanceRatio = 0;
-    auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
-    auto &cellLoc = placementInfo->getCellId2location();
-    assert(cellLoc.size() == timingNodes.size());
-
-    float powFactor = 0.5 + 0.2 * placementInfo->getProgress();
-    // std::ofstream outfile0("timingOptProc.log");
-
-    auto deviceInfo = placementInfo->getDeviceInfo();
-
-    for (auto curNet : placementInfo->getPlacementNets())
-    {
-        auto designNet = curNet->getDesignNet();
-        if (designNet->checkIsPowerNet())
-            continue;
-
-        if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 || curNet->getUnits().size() >= 500)
-            continue;
-        auto &PUs = curNet->getUnits();
-        auto &pins = designNet->getPins();
-        int pinNum = pins.size();
-
-        assert(curNet->getUnits().size() == (unsigned int)pinNum);
-
-        int driverPinInNet = -1;
-
-        for (int i = 0; i < pinNum; i++)
-        {
-            if (pins[i]->isOutputPort())
-            {
-                driverPinInNet = i;
-                break;
-            }
-        }
-
-        assert(driverPinInNet >= 0);
-
-        // get the srcPin information
-        auto srcCell = pins[driverPinInNet]->getCell();
-        unsigned int srcCellId = srcCell->getCellId();
-        int driverPathLen = timingNodes[srcCellId]->getLongestPathLength();
-        int driverBackwardLevel = timingNodes[srcCellId]->getBackwardLevel();
-        int driverForwardLevel = timingNodes[srcCellId]->getForwardLevel();
-        auto srcLoc = cellLoc[srcCellId];
-
-        int srcClockRegionXId, srcClockRegionYId;
-        deviceInfo->getClockRegionByLocation(srcLoc.X, srcLoc.Y, srcClockRegionXId, srcClockRegionYId);
-
-        // outfile0 << "handling net:" << curNet->getDesignNet()->getName() << "\n";
-        // outfile0 << "handling driverpin:" << pins[driverPinInNet]->getName()
-        //          << " driverBackwardLevel:" << driverBackwardLevel << " locX:" << srcLoc.X << " locY:" << srcLoc.Y
-        //          << "\n";
-        if (srcCell->isTimingEndPoint())
-        {
-            // outfile0 << "    is TimingEndPoint\n";
-            // calculate the base weight
-            float w = 2 * timingWeight / std::pow((float)(pinNum - 1), 0.5);
-
-            // iterate the sinkPin for evaluation and enhancement
-            for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
-            {
-                if (pinBeDriven == driverPinInNet)
-                    continue;
-
-                // get the sinkPin information
-                auto sinkCell = pins[pinBeDriven]->getCell();
-                unsigned int sinkCellId = sinkCell->getCellId();
-                auto sinkLoc = cellLoc[sinkCellId];
-                int succBackwardLevel = timingNodes[sinkCellId]->getBackwardLevel();
-                // outfile0 << "        analyzing pin:" << pins[pinBeDriven]->getName()
-                //          << " succBackwardLevel:" << succBackwardLevel << " locX:" << sinkLoc.X << " locY:" <<
-                //          sinkLoc.Y
-                //          << "\n";
-                // calculate the distance
-                double dis = manhattanDis(srcLoc.X, srcLoc.Y, sinkLoc.X, sinkLoc.Y);
-
-                int sinkClockRegionXId, sinkClockRegionYId;
-                deviceInfo->getClockRegionByLocation(sinkLoc.X, sinkLoc.Y, sinkClockRegionXId, sinkClockRegionYId);
-
-                // dis += std::abs(sinkClockRegionXId - srcClockRegionXId) * 10;
-
-                // handle the potential sinkPins on the longest path by checking the backward level
-                if (succBackwardLevel + 1 >= levelThr)
-                {
-                    // the expected distance
-                    double disThr = disExpected / (succBackwardLevel + 1);
-                    if (dis > disThr)
-                    {
-                        // enhance the net based on the distance overflow ratio
-                        float enhanceRatio = std::pow(dis / disThr, (double)powFactor);
-                        // outfile0 << "        enhanced by " << enhanceRatio << " dis:" << dis << " disThr:" << disThr
-                        //          << "\n";
-                        curNet->addPseudoNet_enhancePin2Pin(
-                            xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
-                            xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,
-                            PUs[driverPinInNet]->getId(), PUs[pinBeDriven]->getId(), driverPinInNet, pinBeDriven);
-
-                        curNet->addPseudoNet_enhancePin2Pin(
-                            ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
-                            ySolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, false, true,
-                            PUs[driverPinInNet]->getId(), PUs[pinBeDriven]->getId(), driverPinInNet, pinBeDriven);
-                    }
-                }
-            }
-        }
-        else
-        {
-            // outfile0 << "    is NOT TimingEndPoint\n";
-            if (driverPathLen < levelThr)
-                continue;
-
-            // calculate the base weight
-            float w = 2 * timingWeight / std::pow((float)(pinNum - 1), 0.5);
-
-            // iterate the sinkPin for evaluation and enhancement
-            for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
-            {
-                if (pinBeDriven == driverPinInNet)
-                    continue;
-
-                // get the sinkPin information
-                auto sinkCell = pins[pinBeDriven]->getCell();
-                unsigned int sinkCellId = sinkCell->getCellId();
-                auto sinkLoc = cellLoc[sinkCellId];
-                int succPathLen = timingNodes[sinkCellId]->getLongestPathLength();
-                int succBackwardLevel = timingNodes[sinkCellId]->getBackwardLevel();
-                // outfile0 << "        analyzing pin:" << pins[pinBeDriven]->getName()
-                //          << " succBackwardLevel:" << succBackwardLevel << " locX:" << sinkLoc.X << " locY:" <<
-                //          sinkLoc.Y
-                //          << "\n";
-                // calculate the distance
-                double dis = manhattanDis(srcLoc.X, srcLoc.Y, sinkLoc.X, sinkLoc.Y);
-
-                int sinkClockRegionXId, sinkClockRegionYId;
-                deviceInfo->getClockRegionByLocation(sinkLoc.X, sinkLoc.Y, sinkClockRegionXId, sinkClockRegionYId);
-
-                // dis += std::abs(sinkClockRegionXId - srcClockRegionXId) * 10;
-
-                // handle the potential sinkPins on the longest path by checking the backward level
-                if (succBackwardLevel >= driverBackwardLevel - 3)
-                {
-                    if (timingNodes[sinkCellId]->checkIsRegister() && driverForwardLevel >= driverPathLen * 0.9)
-                    {
-                        // the expected distance
-                        double disThr = disExpected / (driverForwardLevel + 1);
-                        if (dis > disThr)
-                        {
-                            // enhance the net based on the distance overflow ratio
-                            float enhanceRatio = std::pow(dis / disThr, powFactor);
-                            // outfile0 << "        enhanced by " << enhanceRatio << " dis:" << dis << " disThr:" <<
-                            // disThr
-                            //          << "\n";
-                            curNet->addPseudoNet_enhancePin2Pin(
-                                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
-                                xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,
-                                PUs[driverPinInNet]->getId(), PUs[pinBeDriven]->getId(), driverPinInNet, pinBeDriven);
-
-                            curNet->addPseudoNet_enhancePin2Pin(
-                                ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
-                                ySolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, false, true,
-                                PUs[driverPinInNet]->getId(), PUs[pinBeDriven]->getId(), driverPinInNet, pinBeDriven);
-                        }
-                    }
-                    else if (succPathLen >= 1 && succPathLen >= driverPathLen * 0.9)
-                    {
-                        // the expected distance
-                        double disThr = disExpected / succPathLen;
-                        if (dis > disThr)
-                        {
-                            // enhance the net based on the distance overflow ratio
-                            float enhanceRatio = std::pow(dis / disThr, powFactor);
-                            // outfile0 << "        enhanced by " << enhanceRatio << " dis:" << dis << " disThr:" <<
-                            // disThr
-                            //          << "\n";
-                            curNet->addPseudoNet_enhancePin2Pin(
-                                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
-                                xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,
-                                PUs[driverPinInNet]->getId(), PUs[pinBeDriven]->getId(), driverPinInNet, pinBeDriven);
-
-                            curNet->addPseudoNet_enhancePin2Pin(
-                                ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
-                                ySolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, false, true,
-                                PUs[driverPinInNet]->getId(), PUs[pinBeDriven]->getId(), driverPinInNet, pinBeDriven);
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    print_status("WirelengthOptimizer: enhanceNetWeight_LevelBased done (maxEnhancedRatio=" +
-                 std::to_string(maxEnhanceRatio) + ")");
-    // outfile0.close();
-}
-
 void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double slackPowFactor,
                                                   PlacementTimingOptimizer *timingOptimizer)
 {
@@ -605,107 +402,7 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
     float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
     auto &cellLoc = placementInfo->getCellId2location();
     assert(cellLoc.size() == timingNodes.size());
-
-    // std::ofstream outfile0("timingOptProc.log");
-
-    // auto deviceInfo = placementInfo->getDeviceInfo();
-
-    std::vector<int> slackCntVec(100, 0);
-    int totalSlackChecked = 0;
-
-    std::map<PlacementInfo::PlacementNet *, int> netActualSlackPinNum;
-    netActualSlackPinNum.clear();
-
-    for (auto curNet : placementInfo->getPlacementNets())
-    {
-        auto designNet = curNet->getDesignNet();
-        if (designNet->checkIsPowerNet() || designNet->checkIsGlobalClock())
-            continue;
-
-        if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 || curNet->getUnits().size() >= 1000)
-            continue;
-        auto &pins = designNet->getPins();
-        int pinNum = pins.size();
-
-        assert(curNet->getUnits().size() == (unsigned int)pinNum);
-
-        int driverPinInNet = -1;
-
-        for (int i = 0; i < pinNum; i++)
-        {
-            if (pins[i]->isOutputPort())
-            {
-                driverPinInNet = i;
-                break;
-            }
-        }
-
-        assert(driverPinInNet >= 0);
-
-        // get the srcPin information
-        auto srcCell = pins[driverPinInNet]->getCell();
-        unsigned int srcCellId = srcCell->getCellId();
-        auto srcNode = timingNodes[srcCellId];
-        auto srcLoc = cellLoc[srcCellId];
-        // iterate the sinkPin for evaluation and enhancement
-
-        netActualSlackPinNum[curNet] = 0;
-        for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
-        {
-            if (pinBeDriven == driverPinInNet)
-                continue;
-
-            // get the sinkPin information
-            auto sinkCell = pins[pinBeDriven]->getCell();
-            unsigned int sinkCellId = sinkCell->getCellId();
-            auto sinkNode = timingNodes[sinkCellId];
-            auto sinkLoc = cellLoc[sinkCellId];
-            float netDelay = timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
-            float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
-
-            if (slack > 0)
-                continue;
-
-            netActualSlackPinNum[curNet]++;
-            int slotId = (int)(-slack / 0.1);
-            if (slotId >= 100)
-                slotId = 100;
-            if (slotId < 0)
-                slotId = 0;
-            slackCntVec[slotId] += 1;
-            totalSlackChecked++;
-        }
-    }
-
-    float slackThr = 0;
-    int slackUnderThrCnt = 0;
-    float careRatio = 0.5;
-
-    if (timingOptimizer->isConservativeTiming())
-        careRatio = 20000.0 / totalSlackChecked;
-    if (careRatio <= 0.9 && totalSlackChecked > 0)
-    {
-        for (unsigned int i = 0; i < slackCntVec.size(); i++)
-        {
-            slackUnderThrCnt += slackCntVec[i];
-            if (slackUnderThrCnt > totalSlackChecked * (1 - careRatio))
-                break;
-            slackThr -= 0.1;
-        }
-    }
-
-    std::string outputStr = "";
-    for (unsigned int i = 0; i < slackCntVec.size(); i++)
-    {
-        outputStr += " " + std::to_string(slackCntVec[i]);
-    }
-    print_info("Slack distribution:" + outputStr);
-    print_info("slackThr = " + std::to_string(slackThr));
-
-    if (timingOptimizer->isConservativeTiming())
-    {
-        timingWeight *= 0.45;
-    }
+    auto &netActualSlackPinNum = timingOptimizer->getNetActualSlackPinNum();
 
     int enhanceNetCnt = 0;
     unsigned int highFanoutThr = 10000;
@@ -716,7 +413,7 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
         print_warning("highFanoutThr is set to 1000");
     }
 
-    // int targetCellId = placementInfo->getDesignInfo()->getCell(targetCellName)->getCellId();
+    int targetCellId = placementInfo->getDesignInfo()->getCell(targetCellName)->getCellId();
 
     for (auto curNet : placementInfo->getPlacementNets())
     {
@@ -758,10 +455,10 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
 
         float w = 2 * timingWeight / std::pow((float)(netActualSlackPinNum[curNet]), 0.5);
 
-        // if (srcCell->getCellId() == targetCellId)
-        // {
-        //     std::cout << "driver: " << targetCellName << " x: " << srcLoc.X << " y: " << srcLoc.Y << "\n";
-        // }
+        if (srcCell->getCellId() == targetCellId)
+        {
+            std::cout << "driver: " << targetCellName << " x: " << srcLoc.X << " y: " << srcLoc.Y << "\n";
+        }
         // auto &pinEnhanceRate = netPinEnhanceRate[designNet];
         // iterate the sinkPin for evaluation and enhancement
         for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
@@ -783,6 +480,8 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
             enhanceNetCnt++;
             // enhance the net based on the slack
             float enhanceRatio = std::pow(1 - slack / clockPeriod, slackPowFactor);
+            if (slack < slackThr)
+                enhanceRatio = std::pow(enhanceRatio, slack / slackThr * 3);
             // * std::pow(netDelay / expectedAvgDelay_driver, 0.6);
 
             if (timingOptimizer->getEffectFactor() < 0.5)
@@ -811,12 +510,18 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
 
             // enhanceRatio = std::pow(enhanceRatio, 0.5) * std::pow(pinEnhanceRate[pinBeDriven], 0.5);
             // pinEnhanceRate[pinBeDriven] = enhanceRatio;
-            // if (srcCell->getCellId() == targetCellId)
-            // {
-            //     std::cout << "sink: " << sinkCell->getName() << " x: " << sinkLoc.X << " y: " << sinkLoc.Y
-            //               << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
-            //               << " enhanceRatio: " << enhanceRatio << "\n";
-            // }
+            if (srcCell->getCellId() == targetCellId)
+            {
+                std::cout << "sink: " << sinkCell->getName() << " x: " << sinkLoc.X << " y: " << sinkLoc.Y
+                          << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
+                          << " enhanceRatio: " << enhanceRatio << "\n";
+            }
+            if (sinkCell->getCellId() == targetCellId)
+            {
+                std::cout << "src: " << srcCell->getName() << " x: " << srcLoc.X << " y: " << srcLoc.Y
+                          << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
+                          << " enhanceRatio: " << enhanceRatio << "\n";
+            }
             curNet->addPseudoNet_enhancePin2Pin(
                 xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                 xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,
@@ -840,7 +545,7 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
     float w = 2 * timingWeight / std::pow(2, 0.5);
     if (disThreshold < 0)
         return;
-    print_status("IncrementalBELPacker Timing Driven Pairing LUTs.");
+    print_status("WirelengthOptimizer: Timing Driven Pairing LUTs.");
     std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
 
     assert(placementInfo->getTimingInfo());
@@ -855,12 +560,12 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
 
     // std::sort(LUTsToEnhanceNet.begin(), LUTsToEnhanceNet.end(),
     //           [](const CellWithScore &a, const CellWithScore &b) -> bool { return a.score < b.score; });
-
+    int targetCellId = placementInfo->getDesignInfo()->getCell(targetCellName)->getCellId();
     for (auto curCell : placementInfo->getDesignInfo()->getCells())
     {
         auto predLUTPU =
             dynamic_cast<PlacementInfo::PlacementUnit *>(placementInfo->getPlacementUnitByCellId(curCell->getCellId()));
-        if (curCell->isLUT() && !curCell->isVirtualCell())
+        if ((curCell->isLUT() || curCell->isMux() || curCell->isCarry()) && !curCell->isVirtualCell())
         {
             assert(curCell->getOutputPins().size() > 0);
             if (curCell->getOutputPins().size() == 1)
@@ -888,6 +593,9 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
                 DesignInfo::DesignCell *targetSinkCell = nullptr;
                 int pinBeDriven = -1;
                 int pinOffsetId = -1;
+                if (curNet->getPins().size() > 16)
+                    continue;
+
                 for (auto curPin : curNet->getPins())
                 {
                     pinOffsetId++;
@@ -931,6 +639,25 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
                             driverPinInNet = i;
                             break;
                         }
+                    }
+
+                    unsigned int sinkCellId = targetSinkCell->getCellId();
+                    auto sinkNode = timingNodes[sinkCellId];
+                    auto sinkLoc = cellLoc[sinkCellId];
+                    float netDelay = timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+                    float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
+
+                    if (srcCell->getCellId() == targetCellId)
+                    {
+                        std::cout << "LUTParing sink: " << targetSinkCell->getName() << " x: " << sinkLoc.X
+                                  << " y: " << sinkLoc.Y << " netDelay: " << netDelay << " slack: " << slack
+                                  << " w: " << w << " enhanceRatio: " << enhanceRatio << "\n";
+                    }
+                    if (targetSinkCell->getCellId() == targetCellId)
+                    {
+                        std::cout << "LUTParing src: " << srcCell->getName() << " x: " << srcLoc.X << " y: " << srcLoc.Y
+                                  << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
+                                  << " enhanceRatio: " << enhanceRatio << "\n";
                     }
                     curPNet->addPseudoNet_enhancePin2Pin(
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,

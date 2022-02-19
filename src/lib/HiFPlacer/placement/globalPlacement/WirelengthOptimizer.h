@@ -233,15 +233,6 @@ class WirelengthOptimizer
     void updatePseudoNetForUserDefinedClusters(float pesudoNetWeight);
 
     /**
-     * @brief add pseudo net for timing optimization based on the length of timing path and the span of the nets
-     *
-     * @param levelThr the threshold of the level of the timing path to trigger to timing optimzation
-     * @param timingWeight the common weight factor for pseudo nets for timing
-     * @param disExpected the expected total length of timing paths
-     */
-    void addPseudoNet_LevelBased(int levelThr, float timingWeight, double disExpected);
-
-    /**
      * @brief add pseudo net for timing optimization based on the timing slack of each elements in the design netlist
      *
      * @param timingWeight the common weight factor for pseudo nets for timing
@@ -371,9 +362,10 @@ class WirelengthOptimizer
 
     std::map<DesignInfo::DesignNet *, std::vector<float>> netPinEnhanceRate;
 
+    float slackThr = 0;
+
     // For debug usage
-    // std::string targetCellName =
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/commit_pointer_q[0][2]_i_2";
+    std::string targetCellName = "chip/tile1/g_ariane_core.core/ariane/ex_stage_i/csr_buffer_i/i__i_8__0";
 };
 
 #endif

@@ -185,8 +185,10 @@ class AMFPlacer
         placementInfo->createGridBins(2, 2);
         placementInfo->adjustLUTFFUtilization(-10, true);
         // placementInfo->getDesignInfo()->resetNetEnhanceRatio();
+        // timingOptimizer->enhanceNetWeight_LevelBased(mediumPathThr);
         globalPlacer->setNeighborDisplacementUpperbound(2.0);
 
+        // timingOptimizer->moveDriverIntoBetterClockRegion(longPathThr, 0.75);
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) * 2 / 9, true, 5, true,
                                                   true, 25, timingOptimizer);
         JSON["SpreaderSimpleExpland"] = "true";
@@ -205,7 +207,7 @@ class AMFPlacer
         timingOptimizer->conductStaticTimingAnalysis();
         // finally pack the elements into sites on the FPGA device
         parallelCLBPacker =
-            new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.25, 0.5, 6, 10, 0.1, "first",
+            new ParallelCLBPacker(designInfo, deviceinfo, placementInfo, JSON, 3, 10, 0.25, 0.5, 6, 10, 0.02, "first",
                                   timingOptimizer, globalPlacer->getWirelengthOptimizer());
         parallelCLBPacker->packCLBs(30, true);
         parallelCLBPacker->setPULocationToPackedSite();

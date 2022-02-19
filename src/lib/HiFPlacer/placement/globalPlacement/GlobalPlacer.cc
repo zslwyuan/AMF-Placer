@@ -651,15 +651,14 @@ void GlobalPlacer::updatePseudoNetWeight(float &pseudoNetWeight, int curIter)
         print_warning("GlobalPlacer: clock region aware optimization is enabled.");
         enableClockRegionAware = true;
     }
-    if (progressRatio > 0.75)
-    {
-        BRAMDSPLegalizer->setClockRegionCasLegalization(true);
-    }
     if (placementInfo->isClockLegalizationRisky())
     {
         enableClockRegionAware = false;
     }
-
+    if (progressRatio > 0.75)
+    {
+        BRAMDSPLegalizer->setClockRegionCasLegalization(true);
+    }
     int numRecorded = historyHPWLs.size();
     if (numRecorded > 5)
     {

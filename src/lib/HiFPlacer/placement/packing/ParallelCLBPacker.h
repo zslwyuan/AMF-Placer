@@ -1536,6 +1536,7 @@ class ParallelCLBPacker
 
         inline float getHPWLChangeForPU(PlacementInfo::PlacementUnit *tmpPU)
         {
+            return std::fabs(tmpPU->X() - getCLBSite()->X()) + y2xRatio * std::fabs(tmpPU->Y() - getCLBSite()->Y());
             float changeHPWL = 0;
             for (auto tmpNet : *tmpPU->getNetsSetPtr())
             {

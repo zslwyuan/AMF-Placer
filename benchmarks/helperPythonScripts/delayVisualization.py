@@ -50,23 +50,24 @@ while (lineId < len(lines)):
 
         disX = abs(drivenSiteX-driverSiteX)
         disY = abs(drivenSiteY-driverSiteY)
-        tupleXY = (disX, disY)
-        delay = int(delayLine.split(" ")[1])
-        if (not tupleXY in disXY2delay.keys()):
-            disXY2delay[tupleXY] = []
-        disXY2delay[tupleXY].append(delay)
-        XList.append(disX)
-        YList.append(disY)
-        delayList.append(delay)
+        if (disX*disX+disY*disY>36):
+            tupleXY = (disX, disY)
+            delay = int(delayLine.split(" ")[1])
+            if (not tupleXY in disXY2delay.keys()):
+                disXY2delay[tupleXY] = []
+            disXY2delay[tupleXY].append(delay)
+            XList.append(disX)
+            YList.append(disY)
+            delayList.append(delay)
     lineId += 3
 
-XList = []
-YList = []
-delayList = []
-for XYPair in disXY2delay.keys():
-    XList.append(XYPair[0])
-    YList.append(XYPair[1])
-    delayList.append(np.mean(disXY2delay[XYPair]))
+#XList = []
+#YList = []
+#delayList = []
+#for XYPair in disXY2delay.keys():
+#    XList.append(XYPair[0])
+#    YList.append(XYPair[1])
+#    delayList.append(np.mean(disXY2delay[XYPair]))
 
 z = np.array(delayList)
 x = np.array(XList)

@@ -113,10 +113,7 @@ DeviceInfo::DeviceInfo(std::map<std::string, std::string> &JSONCfg, std::string 
         {
             addTile(tileName, tileType);
             DeviceTile *curTile = name2Tile[tileName];
-            if (siteName == "RAMB36_X16Y15")
-            {
-                std::cout << "tileName:" << tileName << "\n";
-            }
+
             addSite(siteName, siteType, centerX, centerY, clockRegionX, clockRegionY, curTile);
             DeviceSite *curSite = name2Site[siteName];
             if (coord2ClockRegion.find(clockRegionCoord) == coord2ClockRegion.end())

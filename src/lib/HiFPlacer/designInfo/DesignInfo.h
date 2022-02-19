@@ -1008,8 +1008,7 @@ class DesignInfo
          */
         inline bool isLogicRelated()
         {
-            return (isLUT() || isMux() || isFF() || isLUTRAM() || originallyIsLUTRAM() || isBRAM() || isDSP() ||
-                    isShifter());
+            return (isLUT() || isFF() || isLUTRAM() || originallyIsLUTRAM() || isBRAM() || isDSP() || isShifter());
         }
 
         /**
