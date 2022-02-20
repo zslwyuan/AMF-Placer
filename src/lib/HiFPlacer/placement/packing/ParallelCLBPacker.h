@@ -317,7 +317,7 @@ class ParallelCLBPacker
          * @return true
          * @return false
          */
-        inline bool compatibleWith(int inputCSId)
+        inline bool compatibleWith(int inputCSId) const
         {
             if (CSId == -1)
                 return true;
@@ -533,6 +533,18 @@ class ParallelCLBPacker
              */
             bool compatibleInOneHalfCLB(DesignInfo::ControlSetInfo *CSPtr, int anotherHalfCLB);
 
+            /**
+             * @brief  check whether  a given half CLB can be placed with another given half CLB
+             *
+             * Since in current architecture, FFs are packed in half CLBs in the site. The control sets of half CLB
+             * pairs should be compatible.
+             *
+             * @param halfCLB a given half CLB
+             * @param anotherHalfCLB  the other one half CLB id in this half CLB pair
+             * @return true if the given half CLB can be placed with another given half CLB
+             * @return false if the given half CLB CANNOT be placed with another given half CLB
+             */
+            bool compatibleInOneHalfCLB(int halfCLB, int anotherHalfCLB);
             /**
              * @brief try to add a given LUT into this cluster
              *
@@ -1717,6 +1729,24 @@ class ParallelCLBPacker
                     }
                 }
             }
+            SiteBELMapping &operator=(const SiteBELMapping &anotherMapping)
+            {
+                Carry = anotherMapping.Carry;
+                for (int i = 0; i < 2; i++)
+                {
+                    MuxF8[i] = anotherMapping.MuxF8[i];
+                    for (int j = 0; j < 2; j++)
+                    {
+                        MuxF7[i][j] = anotherMapping.MuxF7[i][j];
+                        for (int k = 0; k < 4; k++)
+                        {
+                            LUTs[i][j][k] = anotherMapping.LUTs[i][j][k];
+                            FFs[i][j][k] = anotherMapping.FFs[i][j][k];
+                        }
+                    }
+                }
+                return (*this);
+            }
 
             ~SiteBELMapping()
             {
@@ -1735,6 +1765,25 @@ class ParallelCLBPacker
         void mapCarryRelatedCellsToSlots(PlacementInfo::PlacementMacro *_CARRYChain, float siteOffset);
         void mapLUTRAMRelatedCellsToSlots(PlacementInfo::PlacementMacro *_LUTRAMMacro);
         void finalMapToSlotsForCarrySite();
+
+        inline bool compatibleInOneHalfCLB(int halfCLB, int anotherHalfCLB)
+        {
+            assert(determinedClusterInSite);
+            auto &FFControlSets = determinedClusterInSite->getFFControlSets();
+            if (FFControlSets[halfCLB].getCSId() < 0 || FFControlSets[anotherHalfCLB].getCSId() < 0)
+            {
+                return true;
+            }
+            else if (FFControlSets[anotherHalfCLB].getCLK() == FFControlSets[halfCLB].getCLK() &&
+                     FFControlSets[anotherHalfCLB].getSR() == FFControlSets[halfCLB].getSR() &&
+                     DesignInfo::FFSRCompatible(FFControlSets[anotherHalfCLB].getFFType(),
+                                                FFControlSets[halfCLB].getFFType()))
+            {
+                return true;
+            }
+
+            return false;
+        }
 
         /**
          * @brief map cells in MUXF8 macro to CLB slot
@@ -1769,8 +1818,10 @@ class ParallelCLBPacker
         /**
          * @brief greedily find the exact slots for the LUTs/FFs in the site
          *
+         * @param FFControlSetOrderId control the order of FF Control sets
+         *
          */
-        void greedyMapForCommonLUTFFInSite();
+        void greedyMapForCommonLUTFFInSite(int FFControlSetOrderId);
 
         /**
          * @brief finally map LUTs/FFs to the exact slots in the sites
@@ -1974,6 +2025,12 @@ class ParallelCLBPacker
         std::set<DesignInfo::DesignCell *> fixedLUTsInPairs;
         std::set<DesignInfo::DesignCell *> conflictLUTs;
         SiteBELMapping slotMapping;
+
+        int best_DirectConnect = -1;
+        SiteBELMapping best_SlotMapping;
+        std::set<DesignInfo::DesignCell *> best_mappedCells;
+        std::set<DesignInfo::DesignCell *> best_mappedLUTs;
+        std::set<DesignInfo::DesignCell *> best_mappedFFs;
     };
 
     /**

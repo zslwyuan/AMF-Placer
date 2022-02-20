@@ -209,6 +209,22 @@ bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::compatibleInOneHalfCL
     return false;
 }
 
+bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::compatibleInOneHalfCLB(int halfCLB, int anotherHalfCLB)
+{
+    if (FFControlSets[halfCLB].getCSId() < 0 || FFControlSets[anotherHalfCLB].getCSId() < 0)
+    {
+        return true;
+    }
+    else if (FFControlSets[anotherHalfCLB].getCLK() == FFControlSets[halfCLB].getCLK() &&
+             FFControlSets[anotherHalfCLB].getSR() == FFControlSets[halfCLB].getSR() &&
+             DesignInfo::FFSRCompatible(FFControlSets[anotherHalfCLB].getFFType(), FFControlSets[halfCLB].getFFType()))
+    {
+        return true;
+    }
+
+    return false;
+}
+
 bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addToFFSet(std::vector<DesignInfo::DesignCell *> curFFs,
                                                                       int halfCLB)
 {
