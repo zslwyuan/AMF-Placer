@@ -1979,6 +1979,42 @@ void PlacementInfo::loadPlacementUnitInformation(std::string locFile)
     reloadNets();
 }
 
+void PlacementInfo::enhanceRiskyClockNet()
+{
+    auto &clockRegions = deviceInfo->getClockRegions();
+
+    for (auto curClockNet : clockNets)
+    {
+        int leftId, rightId, topId, bottomId;
+        deviceInfo->getClockRegionByLocation(curClockNet->getLeftPinX(), curClockNet->getBottomPinY(), leftId,
+                                             bottomId);
+        deviceInfo->getClockRegionByLocation(curClockNet->getRightPinX(), curClockNet->getTopPinY(), rightId, topId);
+        assert(leftId >= 0 && leftId < deviceInfo->getClockRegionNumX());
+        assert(rightId >= 0 && rightId < deviceInfo->getClockRegionNumX());
+        assert(topId >= 0 && topId < deviceInfo->getClockRegionNumY());
+        assert(bottomId >= 0 && bottomId < deviceInfo->getClockRegionNumY());
+
+        bool enhanced = false;
+        for (int i = bottomId; i <= topId && !enhanced; i++)
+        {
+            for (int j = leftId; j <= rightId && !enhanced; j++)
+            {
+                if (clockRegionUtilization[i][j] >= 18)
+                {
+                    if ((rightId - leftId + 1) * (topId - bottomId + 1) < 15)
+                    {
+                        if (curClockNet->getPinOffsetsInUnit().size() < 5000)
+                        {
+                            curClockNet->getDesignNet()->setOverallTimingNetEnhancement(1.1);
+                            enhanced = true;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 bool PlacementInfo::checkClockUtilization(bool dump)
 {
     clockNetCoverages.clear();

@@ -118,6 +118,8 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
     print_status("GlobalPlacer GlobalPlacement_CLBElements started");
 
     WLOptimizer->reloadPlacementInfo();
+    for (auto tmpNet : placementInfo->getDesignInfo()->getNets())
+        tmpNet->setOverallTimingNetEnhancement(1.0);
 
     pseudoNetWeight = 1.0;
 
@@ -157,6 +159,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         {
             if (timingOptimizer->getEffectFactor() >= 1)
                 displacementLimit = 10;
+            placementInfo->enhanceRiskyClockNet();
         }
 
         if (timingOptimizer)
@@ -572,6 +575,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
             print_warning("Macros will be locked for a while");
         }
     }
+    placementInfo->updateElementBinGrid();
 }
 
 void GlobalPlacer::spreading(int currentIteration, int spreadRegionSizeLimit, float displacementLimit)

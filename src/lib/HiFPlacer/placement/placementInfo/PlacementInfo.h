@@ -4175,6 +4175,8 @@ class PlacementInfo
      */
     bool checkClockUtilization(bool dump);
 
+    void enhanceRiskyClockNet();
+
     void dumpOverflowClockUtilization();
 
     /**

@@ -52,8 +52,6 @@ void PlacementTimingOptimizer::enhanceNetWeight_LevelBased(int levelThr)
 
     float maxEnhanceRatio = 0;
     auto timingNodes = timingInfo->getSimplePlacementTimingInfo();
-    for (auto tmpNet : designInfo->getNets())
-        tmpNet->setOverallTimingNetEnhancement(1.0);
 
     unsigned int highFanoutThr = 10000;
 
@@ -705,7 +703,6 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     clockRegionclusters.clear();
 
     unsigned int fanoutThr = 512; // placementInfo->getHighFanOutThr();
-    unsigned int maxSize = 0;
     int sizeThr = 20000;
     if (placementInfo->isDensePlacement() || clockRegionClusterTooLarge)
         sizeThr = 2000;
@@ -864,8 +861,6 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
     dumpClockRegionClusters();
     // if (!placementInfo->isDensePlacement())
     stretchClockRegionColumns();
-
-    print_info("PlacementTimingOptimizer: largest long-path cluster size=" + std::to_string(maxSize));
 }
 
 void PlacementTimingOptimizer::stretchClockRegionColumns()

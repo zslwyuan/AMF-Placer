@@ -222,6 +222,8 @@ void ClusterPlacer::createLongPathClusterUnits()
 
 void ClusterPlacer::createClockBasedClusterUnits()
 {
+    if (placementInfo->getDesignInfo()->getClocksInDesign().size() > 20)
+        return;
     // add the predefined clusters
     for (auto curClock : placementInfo->getDesignInfo()->getClocksInDesign())
     {

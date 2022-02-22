@@ -365,7 +365,7 @@ class WirelengthOptimizer
     float slackThr = 0;
 
     // For debug usage
-    std::string targetCellName = "chip/tile1/g_ariane_core.core/ariane/ex_stage_i/csr_buffer_i/i__i_8__0";
+    // std::string targetCellName = "chip/tile1/g_ariane_core.core/ariane/ex_stage_i/csr_buffer_i/i__i_8__0";
 };
 
 #endif

@@ -1087,15 +1087,27 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite(int FFCont
         }
     }
 
-    int directConnectCnt = 0;
+    auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
+    float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+    float directConnectCnt = 0;
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 2; j++)
         {
             for (int k = 0; k < 4; k++)
             {
-                directConnectCnt +=
-                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][k], slotMapping.FFs[i][j][k]);
+                if (checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][k], slotMapping.FFs[i][j][k]))
+                {
+                    auto srcCell = slotMapping.LUTs[i][j][k];
+                    unsigned int srcCellId = srcCell->getCellId();
+                    auto srcNode = timingNodes[srcCellId];
+                    int succPathLen = srcNode->getLongestPathLength();
+                    float slack = (srcNode->getLatestArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod;
+                    if (slack > 0.1)
+                        directConnectCnt += slack;
+                    else
+                        directConnectCnt += 0.1;
+                }
             }
         }
     }

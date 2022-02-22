@@ -413,7 +413,7 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
         print_warning("highFanoutThr is set to 1000");
     }
 
-    int targetCellId = placementInfo->getDesignInfo()->getCell(targetCellName)->getCellId();
+    // int targetCellId = placementInfo->getDesignInfo()->getCell(targetCellName)->getCellId();
 
     for (auto curNet : placementInfo->getPlacementNets())
     {
@@ -455,12 +455,14 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
 
         float w = 2 * timingWeight / std::pow((float)(netActualSlackPinNum[curNet]), 0.5);
 
-        if (srcCell->getCellId() == targetCellId)
-        {
-            std::cout << "driver: " << targetCellName << " x: " << srcLoc.X << " y: " << srcLoc.Y << "\n";
-        }
+        // if (srcCell->getCellId() == targetCellId)
+        // {
+        //     std::cout << "driver: " << targetCellName << " x: " << srcLoc.X << " y: " << srcLoc.Y << "\n";
+        // }
         // auto &pinEnhanceRate = netPinEnhanceRate[designNet];
         // iterate the sinkPin for evaluation and enhancement
+        bool initialPlacing = timingOptimizer->getEffectFactor() < 1;
+        float timingEffect = timingOptimizer->getEffectFactor();
         for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
         {
             if (pinBeDriven == driverPinInNet)
@@ -481,7 +483,24 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
             // enhance the net based on the slack
             float enhanceRatio = std::pow(1 - slack / clockPeriod, slackPowFactor);
             if (slack < slackThr)
+            {
                 enhanceRatio = std::pow(enhanceRatio, slack / slackThr * 3);
+                // if (timingEffect < 0.25)
+                // {
+                //     if (enhanceRatio > 36)
+                //         enhanceRatio = 36;
+                // }
+                // else if (timingEffect < 0.5)
+                // {
+                //     if (enhanceRatio > 25)
+                //         enhanceRatio = 25;
+                // }
+                // else if (enhanceRatio > 36)
+                // {
+                //     if (enhanceRatio > 16)
+                //         enhanceRatio = 16;
+                // }
+            }
             // * std::pow(netDelay / expectedAvgDelay_driver, 0.6);
 
             if (timingOptimizer->getEffectFactor() < 0.5)
@@ -510,18 +529,18 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
 
             // enhanceRatio = std::pow(enhanceRatio, 0.5) * std::pow(pinEnhanceRate[pinBeDriven], 0.5);
             // pinEnhanceRate[pinBeDriven] = enhanceRatio;
-            if (srcCell->getCellId() == targetCellId)
-            {
-                std::cout << "sink: " << sinkCell->getName() << " x: " << sinkLoc.X << " y: " << sinkLoc.Y
-                          << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
-                          << " enhanceRatio: " << enhanceRatio << "\n";
-            }
-            if (sinkCell->getCellId() == targetCellId)
-            {
-                std::cout << "src: " << srcCell->getName() << " x: " << srcLoc.X << " y: " << srcLoc.Y
-                          << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
-                          << " enhanceRatio: " << enhanceRatio << "\n";
-            }
+            // if (srcCell->getCellId() == targetCellId)
+            // {
+            //     std::cout << "sink: " << sinkCell->getName() << " x: " << sinkLoc.X << " y: " << sinkLoc.Y
+            //               << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
+            //               << " enhanceRatio: " << enhanceRatio << "\n";
+            // }
+            // if (sinkCell->getCellId() == targetCellId)
+            // {
+            //     std::cout << "src: " << srcCell->getName() << " x: " << srcLoc.X << " y: " << srcLoc.Y
+            //               << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
+            //               << " enhanceRatio: " << enhanceRatio << "\n";
+            // }
             curNet->addPseudoNet_enhancePin2Pin(
                 xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                 xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,
@@ -560,7 +579,7 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
 
     // std::sort(LUTsToEnhanceNet.begin(), LUTsToEnhanceNet.end(),
     //           [](const CellWithScore &a, const CellWithScore &b) -> bool { return a.score < b.score; });
-    int targetCellId = placementInfo->getDesignInfo()->getCell(targetCellName)->getCellId();
+    // int targetCellId = placementInfo->getDesignInfo()->getCell(targetCellName)->getCellId();
     for (auto curCell : placementInfo->getDesignInfo()->getCells())
     {
         auto predLUTPU =
@@ -647,18 +666,19 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
                     float netDelay = timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
                     float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
 
-                    if (srcCell->getCellId() == targetCellId)
-                    {
-                        std::cout << "LUTParing sink: " << targetSinkCell->getName() << " x: " << sinkLoc.X
-                                  << " y: " << sinkLoc.Y << " netDelay: " << netDelay << " slack: " << slack
-                                  << " w: " << w << " enhanceRatio: " << enhanceRatio << "\n";
-                    }
-                    if (targetSinkCell->getCellId() == targetCellId)
-                    {
-                        std::cout << "LUTParing src: " << srcCell->getName() << " x: " << srcLoc.X << " y: " << srcLoc.Y
-                                  << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
-                                  << " enhanceRatio: " << enhanceRatio << "\n";
-                    }
+                    // if (srcCell->getCellId() == targetCellId)
+                    // {
+                    //     std::cout << "LUTParing sink: " << targetSinkCell->getName() << " x: " << sinkLoc.X
+                    //               << " y: " << sinkLoc.Y << " netDelay: " << netDelay << " slack: " << slack
+                    //               << " w: " << w << " enhanceRatio: " << enhanceRatio << "\n";
+                    // }
+                    // if (targetSinkCell->getCellId() == targetCellId)
+                    // {
+                    //     std::cout << "LUTParing src: " << srcCell->getName() << " x: " << srcLoc.X << " y: " <<
+                    //     srcLoc.Y
+                    //               << " netDelay: " << netDelay << " slack: " << slack << " w: " << w
+                    //               << " enhanceRatio: " << enhanceRatio << "\n";
+                    // }
                     curPNet->addPseudoNet_enhancePin2Pin(
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, w * enhanceRatio, y2xRatio, true, false,

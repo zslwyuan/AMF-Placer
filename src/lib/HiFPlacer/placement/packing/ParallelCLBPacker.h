@@ -2026,7 +2026,7 @@ class ParallelCLBPacker
         std::set<DesignInfo::DesignCell *> conflictLUTs;
         SiteBELMapping slotMapping;
 
-        int best_DirectConnect = -1;
+        float best_DirectConnect = -1;
         SiteBELMapping best_SlotMapping;
         std::set<DesignInfo::DesignCell *> best_mappedCells;
         std::set<DesignInfo::DesignCell *> best_mappedLUTs;
