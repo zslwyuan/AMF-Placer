@@ -243,6 +243,7 @@ class ParallelCLBPacker
          */
         inline void removeXthFF(int i)
         {
+            assert(i < FFs.size());
             FFs.erase(FFs.begin() + i);
         }
 
@@ -252,7 +253,7 @@ class ParallelCLBPacker
          * @param curFF a given FF cell
          * @return int
          */
-        inline int findFF(DesignInfo::DesignCell *curFF)
+        inline int findFF(DesignInfo::DesignCell *curFF) const
         {
             for (unsigned int i = 0; i < FFs.size(); i++)
             {
@@ -603,6 +604,80 @@ class ParallelCLBPacker
              */
             bool addFFGroup(std::vector<DesignInfo::DesignCell *> curFFs, int enforceHalfCLB, bool enforceMainFFSlot,
                             bool isMuxMacro);
+
+            bool isMuxMacro(DesignInfo::DesignCell *cell)
+            {
+                if (!cell)
+                    return false;
+                auto tmpPU = placementInfo->getPlacementUnitByCell(cell);
+                if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
+                {
+                    return (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX7 ||
+                            tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX8);
+                }
+                return false;
+            }
+
+            /**
+             * @brief try to move FFs in Mux slot to other controlSet
+             *
+             */
+            void evictFFsFromMuxHalfCLB()
+            {
+                std::vector<bool> foundMuxFF(4, false);
+                for (unsigned int i = 0; i < getFFControlSets().size(); i++)
+                {
+                    auto &CSFF = FFControlSets[i];
+                    for (auto FF : CSFF.getFFs())
+                    {
+                        if (isMuxMacro(FF))
+                        {
+                            foundMuxFF[i] = true;
+                            break;
+                        }
+                    }
+                }
+                for (unsigned int i = 0; i < FFControlSets.size(); i++)
+                {
+                    auto &CSFF = FFControlSets[i];
+                    if (foundMuxFF[i])
+                    {
+                        std::set<DesignInfo::DesignCell *> movedFFs;
+                        movedFFs.clear();
+                        for (auto FF : CSFF.getFFs())
+                        {
+                            if (!isMuxMacro(FF) && FF && FF->getControlSetInfo())
+                            {
+                                for (unsigned int k = 0; k < FFControlSets.size(); k++)
+                                {
+                                    if (k == i || foundMuxFF[k])
+                                        continue;
+                                    int CSId = FF->getControlSetInfo()->getId();
+
+                                    if (FFControlSets[k].getFFs().size() < 4 && FFControlSets[k].compatibleWith(CSId))
+                                    {
+                                        int anotherSetId = k - 1 + ((k % 2 == 0) ? 2 : 0);
+                                        if (compatibleInOneHalfCLB(i, anotherSetId))
+                                        {
+                                            assert(addFF(FF, k));
+                                            movedFFs.insert(FF);
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        assert(movedFFs.size() < 4);
+
+                        for (auto movedFF : movedFFs)
+                        {
+                            int movedId = CSFF.findFF(movedFF);
+                            assert(movedId >= 0);
+                            CSFF.removeXthFF(movedId);
+                        }
+                    }
+                }
+            }
 
             /**
              * @brief remove a specific LUT from this candidate cluster
@@ -1766,6 +1841,14 @@ class ParallelCLBPacker
         void mapLUTRAMRelatedCellsToSlots(PlacementInfo::PlacementMacro *_LUTRAMMacro);
         void finalMapToSlotsForCarrySite();
 
+        /**
+         * @brief check whether two half CLB can be packed togather
+         *
+         * @param halfCLB
+         * @param anotherHalfCLB
+         * @return true
+         * @return false
+         */
         inline bool compatibleInOneHalfCLB(int halfCLB, int anotherHalfCLB)
         {
             assert(determinedClusterInSite);
@@ -1812,6 +1895,14 @@ class ParallelCLBPacker
         /**
          * @brief find the slots in the site for Muxes
          *
+         * @param FFControlSetOrderId control the order of FF Control sets
+         *
+         */
+        void greedyMapMuxForCommonLUTFFInSite(int FFControlSetOrderId);
+
+        /**
+         * @brief find the slots in the site for Muxes by enumeration
+         *
          */
         void greedyMapMuxForCommonLUTFFInSite();
 
@@ -1838,6 +1929,18 @@ class ParallelCLBPacker
             {
                 return (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX7 ||
                         tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX8);
+            }
+            return false;
+        }
+
+        bool isCarryMacro(DesignInfo::DesignCell *cell)
+        {
+            if (!cell)
+                return false;
+            auto tmpPU = placementInfo->getPlacementUnitByCell(cell);
+            if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
+            {
+                return (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_CARRY);
             }
             return false;
         }
