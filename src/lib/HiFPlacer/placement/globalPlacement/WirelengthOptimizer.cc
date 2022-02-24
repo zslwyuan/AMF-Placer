@@ -485,21 +485,6 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
             if (slack < slackThr)
             {
                 enhanceRatio = std::pow(enhanceRatio, slack / slackThr * 3);
-                // if (timingEffect < 0.25)
-                // {
-                //     if (enhanceRatio > 36)
-                //         enhanceRatio = 36;
-                // }
-                // else if (timingEffect < 0.5)
-                // {
-                //     if (enhanceRatio > 25)
-                //         enhanceRatio = 25;
-                // }
-                // else if (enhanceRatio > 36)
-                // {
-                //     if (enhanceRatio > 16)
-                //         enhanceRatio = 16;
-                // }
             }
             // * std::pow(netDelay / expectedAvgDelay_driver, 0.6);
 

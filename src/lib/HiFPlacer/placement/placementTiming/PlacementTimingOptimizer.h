@@ -38,7 +38,6 @@ class PlacementTimingOptimizer
     {
     }
 
-    void enhanceNetWeight_LevelBased(int levelThr);
     void propogateArrivalTime();
     void conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
     void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,

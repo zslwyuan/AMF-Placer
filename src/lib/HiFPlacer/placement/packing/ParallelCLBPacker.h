@@ -618,6 +618,18 @@ class ParallelCLBPacker
                 return false;
             }
 
+            bool isCarryMacro(DesignInfo::DesignCell *cell)
+            {
+                if (!cell)
+                    return false;
+                auto tmpPU = placementInfo->getPlacementUnitByCell(cell);
+                if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(tmpPU))
+                {
+                    return (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_CARRY);
+                }
+                return false;
+            }
+
             /**
              * @brief try to move FFs in Mux slot to other controlSet
              *
@@ -677,6 +689,67 @@ class ParallelCLBPacker
                         }
                     }
                 }
+            }
+
+            /**
+             * @brief try to move FFs in Mux slot to other controlSet
+             *
+             */
+            bool evictFFsFromCarryHalfCLB(int FFSetId)
+            {
+                std::vector<bool> foundCarryFF(4, false);
+                for (unsigned int i = 0; i < getFFControlSets().size(); i++)
+                {
+                    auto &CSFF = FFControlSets[i];
+                    for (auto FF : CSFF.getFFs())
+                    {
+                        if (isCarryMacro(FF))
+                        {
+                            foundCarryFF[i] = true;
+                            break;
+                        }
+                    }
+                }
+
+                auto &CSFF = FFControlSets[FFSetId];
+                std::set<DesignInfo::DesignCell *> movedFFs;
+                movedFFs.clear();
+                if (foundCarryFF[FFSetId])
+                {
+                    FFControlSets_backup = FFControlSets;
+                    for (auto FF : CSFF.getFFs())
+                    {
+                        if (!isCarryMacro(FF) && FF && FF->getControlSetInfo())
+                        {
+                            for (unsigned int k = 0; k < FFControlSets.size(); k++)
+                            {
+                                if (k == FFSetId || foundCarryFF[k])
+                                    continue;
+                                int CSId = FF->getControlSetInfo()->getId();
+
+                                if (FFControlSets[k].getFFs().size() < 4 && FFControlSets[k].compatibleWith(CSId))
+                                {
+                                    int anotherSetId = k - 1 + ((k % 2 == 0) ? 2 : 0);
+                                    if (compatibleInOneHalfCLB(FFSetId, anotherSetId))
+                                    {
+                                        assert(addFF(FF, k));
+                                        movedFFs.insert(FF);
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    assert(movedFFs.size() < 4);
+
+                    for (auto movedFF : movedFFs)
+                    {
+                        int movedId = CSFF.findFF(movedFF);
+                        assert(movedId >= 0);
+                        CSFF.removeXthFF(movedId);
+                    }
+                }
+                return movedFFs.size() > 0;
             }
 
             /**
@@ -1373,6 +1446,11 @@ class ParallelCLBPacker
                 return 0;
             }
 
+            void recoverFFControlSets()
+            {
+                FFControlSets = FFControlSets_backup;
+            }
+
           private:
             const unsigned int MaxNum_ControlSet = 4;
             const unsigned int MaxNum_FFinControlSet = 4;
@@ -1466,6 +1544,7 @@ class ParallelCLBPacker
              *
              */
             std::vector<PackedControlSet> FFControlSets;
+            std::vector<PackedControlSet> FFControlSets_backup;
 
             /**
              * @brief the set of LUTs have not been paired with other LUTs in the clutser

@@ -508,6 +508,16 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite()
     for (int i = 0; i < 24; i++)
         finalMapToSlotsForCarrySite(i);
 
+    for (int targetFFSetId = 0; targetFFSetId < 4; targetFFSetId++)
+    {
+        if (determinedClusterInSite->evictFFsFromCarryHalfCLB(targetFFSetId))
+        {
+            for (int i = 0; i < 24; i++)
+                finalMapToSlotsForCarrySite(i);
+            determinedClusterInSite->recoverFFControlSets();
+        }
+    }
+
     slotMapping = best_SlotMapping;
     mappedCells = best_mappedCells;
     mappedLUTs = best_mappedLUTs;
