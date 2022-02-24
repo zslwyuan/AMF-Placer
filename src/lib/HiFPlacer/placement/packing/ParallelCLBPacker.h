@@ -1839,6 +1839,19 @@ class ParallelCLBPacker
 
         void mapCarryRelatedCellsToSlots(PlacementInfo::PlacementMacro *_CARRYChain, float siteOffset);
         void mapLUTRAMRelatedCellsToSlots(PlacementInfo::PlacementMacro *_LUTRAMMacro);
+
+        /**
+         * @brief find the slots in the site for Muxes
+         *
+         * @param FFControlSetOrderId control the order of FF Control sets
+         *
+         */
+        void finalMapToSlotsForCarrySite(int FFControlSetOrderId);
+
+        /**
+         * @brief find the slots in the site for Carry by enumeration
+         *
+         */
         void finalMapToSlotsForCarrySite();
 
         /**
@@ -1912,7 +1925,7 @@ class ParallelCLBPacker
          * @param FFControlSetOrderId control the order of FF Control sets
          *
          */
-        void greedyMapForCommonLUTFFInSite(int FFControlSetOrderId);
+        void finalMapToSlotsForCommonLUTFFInSite(int FFControlSetOrderId);
 
         /**
          * @brief finally map LUTs/FFs to the exact slots in the sites

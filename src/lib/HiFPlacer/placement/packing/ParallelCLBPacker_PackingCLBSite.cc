@@ -492,9 +492,129 @@ void ParallelCLBPacker::PackingCLBSite::updateStep(bool initial, bool debug)
     }
 }
 
+bool isLUT6(DesignInfo::DesignCell *cell)
+{
+    if (!cell)
+        return false;
+    return (cell->getOriCellType() == DesignInfo::CellType_LUT6) ||
+           (cell->getOriCellType() == DesignInfo::CellType_LUT6_2);
+}
+
 void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite()
 {
+    assert(checkIsPrePackedSite() && checkIsCarrySite());
+    assert(determinedClusterInSite->getSingleLUTs().size() + determinedClusterInSite->getPairedLUTs().size() <= 8);
+
+    for (int i = 0; i < 24; i++)
+        finalMapToSlotsForCarrySite(i);
+
+    slotMapping = best_SlotMapping;
+    mappedCells = best_mappedCells;
+    mappedLUTs = best_mappedLUTs;
+    mappedFFs = best_mappedFFs;
+}
+
+void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite(int FFControlSetOrderId)
+{
     assert(isCarrySite);
+
+    int FFSwapOption[24][4] = {{0, 1, 2, 3}, {0, 1, 3, 2}, {0, 2, 1, 3}, {0, 2, 3, 1}, {0, 3, 1, 2}, {0, 3, 2, 1},
+                               {1, 0, 2, 3}, {1, 0, 3, 2}, {1, 2, 0, 3}, {1, 2, 3, 0}, {1, 3, 0, 2}, {1, 3, 2, 0},
+                               {2, 0, 1, 3}, {2, 0, 3, 1}, {2, 1, 0, 3}, {2, 1, 3, 0}, {2, 3, 0, 1}, {2, 3, 1, 0},
+                               {3, 0, 1, 2}, {3, 0, 2, 1}, {3, 1, 0, 2}, {3, 1, 2, 0}, {3, 2, 0, 1}, {3, 2, 1, 0}};
+
+    slotMapping = SiteBELMapping();
+    mappedCells.clear();
+    mappedLUTs.clear();
+    mappedFFs.clear();
+    mapCarryRelatedCellsToSlots(CARRYChain, CARRYChainSiteOffset);
+    std::map<DesignInfo::DesignCell *, DesignInfo::DesignCell *> FF2LUT;
+    // auto &singleLUTs = determinedClusterInSite->getSingleLUTs();
+    // auto &pairedLUTs = determinedClusterInSite->getPairedLUTs();
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            int halfCLBId = i * 2 + j;
+            auto &CSFF = determinedClusterInSite->getFFControlSets()[FFSwapOption[FFControlSetOrderId][halfCLBId]];
+            int anotherHalfCLBId = i * 2 + (1 - j);
+            auto &anotherCSFF =
+                determinedClusterInSite->getFFControlSets()[FFSwapOption[FFControlSetOrderId][anotherHalfCLBId]];
+            if (!compatibleInOneHalfCLB(FFSwapOption[FFControlSetOrderId][halfCLBId],
+                                        FFSwapOption[FFControlSetOrderId][anotherHalfCLBId]))
+            {
+                return;
+            }
+            if (halfCLBId != FFSwapOption[FFControlSetOrderId][halfCLBId])
+            {
+                for (auto FF : CSFF.getFFs())
+                {
+                    if (placementInfo->getPlacementUnitByCell(FF)->checkHasCARRY())
+                    {
+                        return;
+                    }
+                }
+            }
+            if (anotherHalfCLBId != FFSwapOption[FFControlSetOrderId][anotherHalfCLBId])
+            {
+                for (auto FF : anotherCSFF.getFFs())
+                {
+                    if (placementInfo->getPlacementUnitByCell(FF)->checkHasCARRY())
+                    {
+                        return;
+                    }
+                }
+            }
+        }
+    }
+
+    // mapped FFs
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            for (int k = 0; k < 4; k++)
+            {
+                if (!slotMapping.FFs[i][j][k])
+                {
+                    int halfCLBId = i * 2 + j;
+                    auto &CSFF =
+                        determinedClusterInSite->getFFControlSets()[FFSwapOption[FFControlSetOrderId][halfCLBId]];
+
+                    for (auto tmpFF : CSFF.getFFs())
+                    {
+                        if (mappedFFs.find(tmpFF) == mappedFFs.end())
+                        {
+                            mappedFFs.insert(tmpFF);
+                            mappedCells.insert(tmpFF);
+                            slotMapping.FFs[i][j][k] = tmpFF;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    for (auto &FFSet : determinedClusterInSite->getFFControlSets())
+    {
+        for (auto curFF : FFSet.getFFs())
+        {
+            PlacementInfo::PlacementMacro *pairMacro =
+                dynamic_cast<PlacementInfo::PlacementMacro *>(placementInfo->getPlacementUnitByCell(curFF));
+            if (pairMacro)
+            {
+                if (pairMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_LUTFFPair)
+                {
+                    assert(pairMacro->getCells().size() == 2);
+                    assert(pairMacro->getCells()[0]->isLUT());
+                    assert(pairMacro->getCells()[1]->isFF());
+                    FF2LUT[pairMacro->getCells()[1]] = pairMacro->getCells()[0];
+                }
+            }
+        }
+    }
 
     assert(fixedPairedLUTs.size() + determinedClusterInSite->getSingleLUTs().size() +
                determinedClusterInSite->getPairedLUTs().size() <=
@@ -608,69 +728,124 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite()
         }
     }
 
-    // mapped FFs
-    for (int i = 0; i < 2; i++)
+    assert(fixedPairedLUTs.size() + determinedClusterInSite->getSingleLUTs().size() +
+               determinedClusterInSite->getPairedLUTs().size() <=
+           8);
+
+    int LUTSwapOptions[4][4] = {{0, 1, 0, 1}, {1, 0, 0, 1}, {1, 0, 1, 0}, {0, 1, 1, 0}};
+
+    for (int i0 = 0; i0 < 2; i0++)
     {
-        for (int j = 0; j < 2; j++)
+        for (int k0 = 0; k0 < 4; k0++)
         {
-            for (int k = 0; k < 4; k++)
+            for (int i1 = 0; i1 < 2; i1++)
             {
-                if (!slotMapping.FFs[i][j][k])
+                for (int k1 = 0; k1 < 4; k1++)
                 {
-                    int halfCLBId = i * 2 + j;
-                    auto &CSFF = determinedClusterInSite->getFFControlSets()[halfCLBId];
-                    // if (slotMapping.LUTs[i][j][k])
-                    // {
-                    //     if (slotMapping.LUTs[i][j][k]->isLUT6())
-                    //     {
-                    //         if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(
-                    //                 placementInfo->getPlacementUnitByCell(slotMapping.LUTs[i][0][k])))
-                    //         {
-                    //             if (tmpMacro->getMacroType() ==
-                    //                 PlacementInfo::PlacementMacro::PlacementMacroType_BEL)
-                    //             {
-                    //                 for (auto tmpCell : tmpMacro->getCells())
-                    //                 {
-                    //                     if (tmpCell->isFF())
-                    //                     {
-                    //                         if (mappedFFs.find(tmpCell) == mappedFFs.end())
-                    //                         {
-                    //                             for (auto tmpFF : CSFF.getFFs())
-                    //                             {
-                    //                                 if (mappedFFs.find(tmpFF) == mappedFFs.end() &&
-                    //                                     tmpFF == tmpCell)
-                    //                                 {
-                    //                                     mappedFFs.insert(tmpFF);
-                    //                                     mappedCells.insert(tmpFF);
-                    //                                     slotMapping.FFs[i][j][k] = tmpFF;
-                    //                                 }
-                    //                             }
-                    //                         }
-                    //                     }
-                    //                 }
-                    //             }
-                    //         }
-                    //         continue;
-                    //     }
-                    // }
-                    for (auto tmpFF : CSFF.getFFs())
+                    if (i0 == i1 && k0 == k1)
                     {
-                        if (mappedFFs.find(tmpFF) == mappedFFs.end())
+                        continue;
+                    }
+                    if ((isCarryMacro(slotMapping.LUTs[i0][0][k0]) || isCarryMacro(slotMapping.FFs[i0][0][k0]) ||
+                         isCarryMacro(slotMapping.LUTs[i0][1][k0]) || isCarryMacro(slotMapping.FFs[i0][1][k0]) ||
+                         isCarryMacro(slotMapping.LUTs[i1][0][k1]) || isCarryMacro(slotMapping.FFs[i1][0][k1]) ||
+                         isCarryMacro(slotMapping.LUTs[i1][1][k1]) || isCarryMacro(slotMapping.FFs[i1][1][k1])))
+                        continue;
+                    int oriDirectInternalRouteNum =
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][0][k0], slotMapping.FFs[i0][0][k0]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][1][k0], slotMapping.FFs[i0][1][k0]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][0][k1], slotMapping.FFs[i1][0][k1]) +
+                        checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][1][k1], slotMapping.FFs[i1][1][k1]);
+
+                    int optDirectInternalRouteNum = -1;
+                    int optimalOption = -1;
+                    for (int optionId = 0; optionId < 4; optionId++)
+                    {
+                        // switch locations
+                        int newDirectInternalRouteNum =
+                            checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][LUTSwapOptions[optionId][0]][k1],
+                                                    slotMapping.FFs[i0][0][k0]) +
+                            checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i1][LUTSwapOptions[optionId][1]][k1],
+                                                    slotMapping.FFs[i0][1][k0]) +
+                            checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][LUTSwapOptions[optionId][2]][k0],
+                                                    slotMapping.FFs[i1][0][k1]) +
+                            checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i0][LUTSwapOptions[optionId][3]][k0],
+                                                    slotMapping.FFs[i1][1][k1]);
+                        if (isLUT6(slotMapping.LUTs[i1][LUTSwapOptions[optionId][1]][k1]) ||
+                            isLUT6(slotMapping
+                                       .LUTs[i0][LUTSwapOptions[optionId][3]][k0])) // illegal to put LUT6 at LUT5 slot
+                            continue;
+                        if (newDirectInternalRouteNum > optDirectInternalRouteNum)
                         {
-                            mappedFFs.insert(tmpFF);
-                            mappedCells.insert(tmpFF);
-                            slotMapping.FFs[i][j][k] = tmpFF;
-                            break;
+                            optimalOption = optionId;
+                            optDirectInternalRouteNum = newDirectInternalRouteNum;
                         }
+                    }
+
+                    if (oriDirectInternalRouteNum < optDirectInternalRouteNum)
+                    {
+                        DesignInfo::DesignCell *tmpLUT0 = slotMapping.LUTs[i1][LUTSwapOptions[optimalOption][0]][k1];
+                        DesignInfo::DesignCell *tmpLUT1 = slotMapping.LUTs[i1][LUTSwapOptions[optimalOption][1]][k1];
+                        DesignInfo::DesignCell *tmpLUT2 = slotMapping.LUTs[i0][LUTSwapOptions[optimalOption][2]][k0];
+                        DesignInfo::DesignCell *tmpLUT3 = slotMapping.LUTs[i0][LUTSwapOptions[optimalOption][3]][k0];
+                        slotMapping.LUTs[i0][0][k0] = tmpLUT0;
+                        assert(!isLUT6(tmpLUT1));
+                        slotMapping.LUTs[i0][1][k0] = tmpLUT1;
+                        slotMapping.LUTs[i1][0][k1] = tmpLUT2;
+                        assert(!isLUT6(tmpLUT3));
+                        slotMapping.LUTs[i1][1][k1] = tmpLUT3;
+                        continue;
                     }
                 }
             }
         }
     }
 
-    assert(fixedPairedLUTs.size() + determinedClusterInSite->getSingleLUTs().size() +
-               determinedClusterInSite->getPairedLUTs().size() <=
-           8);
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            if ((isCarryMacro(slotMapping.FFs[i][j][0]) || isCarryMacro(slotMapping.FFs[i][j][1]) ||
+                 isCarryMacro(slotMapping.FFs[i][j][2]) || isCarryMacro(slotMapping.FFs[i][j][3])))
+                continue;
+            int oriDirectInternalRouteNum =
+                checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][0], slotMapping.FFs[i][j][0]) +
+                checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][1], slotMapping.FFs[i][j][1]) +
+                checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][2], slotMapping.FFs[i][j][2]) +
+                checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][3], slotMapping.FFs[i][j][3]);
+            int optDirectInternalRouteNum = -1;
+            int optimalOption = -1;
+            for (int optionId = 0; optionId < 24; optionId++)
+            {
+                int newDirectInternalRouteNum =
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][0],
+                                            slotMapping.FFs[i][j][FFSwapOption[optionId][0]]) +
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][1],
+                                            slotMapping.FFs[i][j][FFSwapOption[optionId][1]]) +
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][2],
+                                            slotMapping.FFs[i][j][FFSwapOption[optionId][2]]) +
+                    checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][3],
+                                            slotMapping.FFs[i][j][FFSwapOption[optionId][3]]);
+                if (newDirectInternalRouteNum > optDirectInternalRouteNum)
+                {
+                    optimalOption = optionId;
+                    optDirectInternalRouteNum = newDirectInternalRouteNum;
+                }
+            }
+            if (oriDirectInternalRouteNum < optDirectInternalRouteNum)
+            {
+                DesignInfo::DesignCell *tmpFF0 = slotMapping.FFs[i][j][FFSwapOption[optimalOption][0]];
+                DesignInfo::DesignCell *tmpFF1 = slotMapping.FFs[i][j][FFSwapOption[optimalOption][1]];
+                DesignInfo::DesignCell *tmpFF2 = slotMapping.FFs[i][j][FFSwapOption[optimalOption][2]];
+                DesignInfo::DesignCell *tmpFF3 = slotMapping.FFs[i][j][FFSwapOption[optimalOption][3]];
+                slotMapping.FFs[i][j][0] = tmpFF0;
+                slotMapping.FFs[i][j][1] = tmpFF1;
+                slotMapping.FFs[i][j][2] = tmpFF2;
+                slotMapping.FFs[i][j][3] = tmpFF3;
+                continue;
+            }
+        }
+    }
 
     if (determinedClusterInSite)
     {
@@ -700,17 +875,42 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite()
             assert(FFCnt == mappedFFs.size());
         }
     }
+
+    auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
+    float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+    float directConnectCnt = 0;
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            for (int k = 0; k < 4; k++)
+            {
+                if (checkDirectLUTFFConnect(FF2LUT, slotMapping.LUTs[i][j][k], slotMapping.FFs[i][j][k]))
+                {
+                    auto srcCell = slotMapping.LUTs[i][j][k];
+                    unsigned int srcCellId = srcCell->getCellId();
+                    auto srcNode = timingNodes[srcCellId];
+                    // int succPathLen = srcNode->getLongestPathLength();
+                    float slack = (srcNode->getLatestArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod;
+                    if (slack > 0.1)
+                        directConnectCnt += slack;
+                    else
+                        directConnectCnt += 0.1;
+                }
+            }
+        }
+    }
+    if (directConnectCnt > best_DirectConnect)
+    {
+        best_SlotMapping = slotMapping;
+        best_mappedCells = mappedCells;
+        best_mappedLUTs = mappedLUTs;
+        best_mappedFFs = mappedFFs;
+        best_DirectConnect = directConnectCnt;
+    }
 }
 
-bool isLUT6(DesignInfo::DesignCell *cell)
-{
-    if (!cell)
-        return false;
-    return (cell->getOriCellType() == DesignInfo::CellType_LUT6) ||
-           (cell->getOriCellType() == DesignInfo::CellType_LUT6_2);
-}
-
-void ParallelCLBPacker::PackingCLBSite::greedyMapForCommonLUTFFInSite(int FFControlSetOrderId)
+void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite(int FFControlSetOrderId)
 {
     int FFSwapOption[24][4] = {{0, 1, 2, 3}, {0, 1, 3, 2}, {0, 2, 1, 3}, {0, 2, 3, 1}, {0, 3, 1, 2}, {0, 3, 2, 1},
                                {1, 0, 2, 3}, {1, 0, 3, 2}, {1, 2, 0, 3}, {1, 2, 3, 0}, {1, 3, 0, 2}, {1, 3, 2, 0},
@@ -1878,7 +2078,7 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite()
     assert(determinedClusterInSite->getSingleLUTs().size() + determinedClusterInSite->getPairedLUTs().size() <= 8);
 
     for (int i = 0; i < 24; i++)
-        greedyMapForCommonLUTFFInSite(i);
+        finalMapToSlotsForCommonLUTFFInSite(i);
 
     slotMapping = best_SlotMapping;
     mappedCells = best_mappedCells;
