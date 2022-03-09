@@ -227,7 +227,7 @@ void DeviceInfo::mapClockRegionToArray()
         {
             assert(clockRegions[i][j]->getLeft() == clockRegionXBounds[j]);
             assert(clockRegions[i][j]->getBottom() == clockRegionYBounds[i]);
-            std::cout << "dealing with clock region : X " << j << " Y " << i << "\n";
+            // std::cout << "dealing with clock region : X " << j << " Y " << i << "\n";
             clockRegions[i][j]->mapSiteToClockColumns();
         }
     }
@@ -299,7 +299,7 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
         }
     }
 
-    std::cout << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
+    // std::cout << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
     clockColumns = std::vector<std::vector<ClockColumn *>>(
         columnNumY, std::vector<ClockColumn *>((rightTileIdX - leftTileIdX + 1), nullptr));
     for (int levelY = 0; levelY < columnNumY; levelY++)
@@ -340,7 +340,7 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
     colWidth = (rightX - leftX) / clockColumns[0].size();
 
     float offsetY = bottomY;
-    std::cout << "ClockRegionBoundary:  l:" << leftX << " r:" << rightX << " b:" << bottomY << " t:" << topY << "\n";
+    // std::cout << "ClockRegionBoundary:  l:" << leftX << " r:" << rightX << " b:" << bottomY << " t:" << topY << "\n";
     for (int levelY = 0; levelY < columnNumY; levelY++)
     {
         for (unsigned int colOffset = 0; colOffset < clockColumns[levelY].size(); colOffset++)
@@ -365,10 +365,10 @@ void DeviceInfo::ClockRegion::mapSiteToClockColumns()
             {
                 clockColumns[levelY][colOffset]->setRight(clockColumns[levelY][colOffset]->getRight() + 0.25);
             }
-            std::cout << "   l:" << clockColumns[levelY][colOffset]->getLeft()
-                      << " r:" << clockColumns[levelY][colOffset]->getRight()
-                      << " b:" << clockColumns[levelY][colOffset]->getBottom()
-                      << " t:" << clockColumns[levelY][colOffset]->getTop() << "\n";
+            // std::cout << "   l:" << clockColumns[levelY][colOffset]->getLeft()
+            //           << " r:" << clockColumns[levelY][colOffset]->getRight()
+            //           << " b:" << clockColumns[levelY][colOffset]->getBottom()
+            //           << " t:" << clockColumns[levelY][colOffset]->getTop() << "\n";
         }
     }
 }
