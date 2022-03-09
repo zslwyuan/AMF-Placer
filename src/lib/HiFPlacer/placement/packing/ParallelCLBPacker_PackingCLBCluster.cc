@@ -473,6 +473,10 @@ int ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum(Pla
     {
         return 1;
     }
+    // if (curNet->getDesignNet())
+    //     if (curNet->getDesignNet()->getDriverPins().size() == 1)
+    //         if (curNet->getDesignNet()->getDriverPins()[0]->getCell()->isFF())
+    //             return 1;
     for (auto tmpPU : curNet->getUnits())
     {
         if (PUs.find(tmpPU) != PUs.end())

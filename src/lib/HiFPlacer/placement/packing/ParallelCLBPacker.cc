@@ -337,7 +337,8 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         // assert(!incrementalPacking && "for incremental packing, it is not worthy to do exception handling");
         exceptionHandling(true);
         int packNum = packingSites.size();
-
+        placementInfo->updateElementBinGrid();
+        timingOptimizer->conductStaticTimingAnalysis();
 #pragma omp parallel for schedule(dynamic)
         for (int i = 0; i < packNum; i++)
             packingSites[i]->finalMapToSlots();

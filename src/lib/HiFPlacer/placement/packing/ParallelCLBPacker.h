@@ -243,7 +243,8 @@ class ParallelCLBPacker
          */
         inline void removeXthFF(int i)
         {
-            assert(i < FFs.size());
+            assert(i < (int)FFs.size());
+            assert(i >= 0);
             FFs.erase(FFs.begin() + i);
         }
 
@@ -695,7 +696,7 @@ class ParallelCLBPacker
              * @brief try to move FFs in Mux slot to other controlSet
              *
              */
-            bool evictFFsFromCarryHalfCLB(int FFSetId)
+            bool evictFFsFromCarryHalfCLB(unsigned int FFSetId)
             {
                 std::vector<bool> foundCarryFF(4, false);
                 for (unsigned int i = 0; i < getFFControlSets().size(); i++)
@@ -2127,7 +2128,41 @@ class ParallelCLBPacker
                 return 0;
             if (FF2LUT.find(tmpFF) == FF2LUT.end())
                 return 0;
+            if (tmpLUT->isVirtualCell() || tmpFF->isVirtualCell())
+                return false;
             return FF2LUT[tmpFF] == tmpLUT;
+        }
+
+        /**
+         * @brief check whether the FF/LUT are directly connected and calculate the slack
+         *
+         * @param FF2LUT
+         * @param tmpLUT
+         * @param tmpFF
+         * @return float
+         */
+        inline float checkDirectLUTFFConnect_slack(std::map<DesignInfo::DesignCell *, DesignInfo::DesignCell *> &FF2LUT,
+                                                   DesignInfo::DesignCell *tmpLUT, DesignInfo::DesignCell *tmpFF)
+        {
+
+            auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
+            float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+            if (!tmpFF || !tmpLUT)
+                return 0.0;
+            if (FF2LUT.find(tmpFF) == FF2LUT.end())
+                return 0.0;
+            if (tmpLUT->isVirtualCell() || tmpFF->isVirtualCell())
+                return 0.0;
+
+            if (FF2LUT[tmpFF] != tmpLUT)
+                return 0.0;
+
+            auto srcCell = tmpLUT;
+            unsigned int srcCellId = srcCell->getCellId();
+            auto srcNode = timingNodes[srcCellId];
+            // int succPathLen = srcNode->getLongestPathLength();
+            float slack = (srcNode->getLatestArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
+            return slack;
         }
 
         inline void setClockRegionAwareTo(bool _clockRegionAware)
@@ -2221,7 +2256,7 @@ class ParallelCLBPacker
         std::set<DesignInfo::DesignCell *> conflictLUTs;
         SiteBELMapping slotMapping;
 
-        float best_DirectConnect = -1;
+        float best_DirectConnect = -100000000;
         SiteBELMapping best_SlotMapping;
         std::set<DesignInfo::DesignCell *> best_mappedCells;
         std::set<DesignInfo::DesignCell *> best_mappedLUTs;
