@@ -48,11 +48,12 @@ MacroLegalizer::MacroLegalizer(std::string legalizerName, PlacementInfo *placeme
     clockRegionAware = false;
 }
 
-void MacroLegalizer::legalize(bool exactLegalization, bool directLegalization)
+void MacroLegalizer::legalize(bool exactLegalization, bool directLegalization, bool _timingDrivenLegalize)
 {
     if (verbose)
         print_status("MacroLegalizer[" + legalizerName + "] Started Legalization.");
 
+    timingDrivenLegalize = _timingDrivenLegalize;
     resetSettings();
     findMacroType2AvailableSites();
     getMacrosToLegalize();
@@ -213,14 +214,19 @@ float MacroLegalizer::DPForMinHPWL(int colNum, std::vector<std::vector<DeviceInf
         for (unsigned int j = totalMacroCellNum - 1; j < curColSites.size(); j++)
         {
             float curHPWLChange = getHPWLChange(curColPU[0], curColSites[j - heightPURow + 1]);
-            if ((curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1) ||
-                curColSites[j]->getClockRegionY() != curColSites[j - heightPURow + 1]->getClockRegionY())
+            if ((curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1))
             {
                 // we need to ensure that there is no occpupied sites in this range
                 curHPWLChange = 1100000000.0;
             }
             if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curColPU[0]))
             {
+                if (curMacro->getMacroType() != PlacementInfo::PlacementMacro::PlacementMacroType_CARRY &&
+                    curColSites[j]->getClockRegionY() != curColSites[j - heightPURow + 1]->getClockRegionY())
+                {
+                    // we need to ensure that there is no occpupied sites in this range
+                    curHPWLChange = 1100000000.0;
+                }
                 if (curMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_BRAM)
                 {
                     // we need to ensure BRAM macros starts from site with even siteY
@@ -252,14 +258,19 @@ float MacroLegalizer::DPForMinHPWL(int colNum, std::vector<std::vector<DeviceInf
                  j++) // j start from heightPURow because PU0 must occupy 1+ site(s)
             {
                 float curHPWLChange = getHPWLChange(curColPU[i], curColSites[j - heightPURow + 1]);
-                if ((curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1) ||
-                    curColSites[j]->getClockRegionY() != curColSites[j - heightPURow + 1]->getClockRegionY())
+                if ((curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1))
                 {
                     // we need to ensure that there is no occpupied sites in this range
                     curHPWLChange = 1100000000.0;
                 }
                 if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curColPU[i]))
                 {
+                    if (curMacro->getMacroType() != PlacementInfo::PlacementMacro::PlacementMacroType_CARRY &&
+                        curColSites[j]->getClockRegionY() != curColSites[j - heightPURow + 1]->getClockRegionY())
+                    {
+                        // we need to ensure that there is no occpupied sites in this range
+                        curHPWLChange = 1100000000.0;
+                    }
                     if (curMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_BRAM)
                     {
                         // we need to ensure BRAM macros starts from site with even siteY
@@ -284,6 +295,27 @@ float MacroLegalizer::DPForMinHPWL(int colNum, std::vector<std::vector<DeviceInf
 
                 f[i][j] = std::min(f[i][j - 1], f[i - 1][j - heightPURow] + curHPWLChange);
             }
+        }
+
+        if (minLastPUTop < 0)
+        {
+            int PUCnt = 0;
+            for (int i = 0; i < numPUs; i++)
+            {
+                std::cout << curColPU[i] << "\n";
+                PUCnt += getMarcroCellNum(curColPU[i]);
+            }
+            std::cout << "total PU Cnt=" << PUCnt << "\n";
+            for (int i = 0; i < numPUs; i++)
+                for (int j = 0; j < curColSites.size(); j++)
+                {
+                    if (fChoice[i][j])
+                    {
+                        std::cout << "PU#" << i << " (" << getMarcroCellNum(curColPU[i]) << "): " << j << "\n";
+                        break;
+                    }
+                }
+            std::cout.flush();
         }
 
         assert(minLastPUTop >= 0);
@@ -334,6 +366,143 @@ float MacroLegalizer::DPForMinHPWL(int colNum, std::vector<std::vector<DeviceInf
     }
 
     return tmpTotalDisplacement;
+}
+
+bool MacroLegalizer::macroCanBeFitIn(int colId, std::vector<std::vector<DeviceInfo::DeviceSite *>> &Column2Sites,
+                                     std::deque<PlacementInfo::PlacementUnit *> Column2PUs)
+{
+    int c = colId;
+
+    int numPUs = Column2PUs.size();
+    if (!numPUs)
+        return true;
+
+    auto &curColSites = Column2Sites[c];
+    auto &curColPU = Column2PUs;
+
+    sortSitesBySiteY(curColSites);
+    sortPUsByPU2Y(curColPU);
+
+    // initialize
+
+    std::vector<std::vector<float>> f(numPUs, std::vector<float>(curColSites.size(), 1000000000.0));
+    std::vector<std::vector<bool>> fChoice(
+        numPUs, std::vector<bool>(curColSites.size(), 0)); // used for tracing back macro-site mapping
+
+    int minLastPUTop = -1;
+
+    int totalMacroCellNum = 0;
+    int heightPURow = getMarcroCellNum(curColPU[0]);
+    totalMacroCellNum += heightPURow;
+    float minHPWLChange = 1100000000.0;
+    for (unsigned int j = totalMacroCellNum - 1; j < curColSites.size(); j++)
+    {
+        float curHPWLChange = 1;
+        if ((curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1))
+        {
+            // we need to ensure that there is no occpupied sites in this range
+            curHPWLChange = 1100000000.0;
+        }
+        if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curColPU[0]))
+        {
+            if (curMacro->getMacroType() != PlacementInfo::PlacementMacro::PlacementMacroType_CARRY &&
+                curColSites[j]->getClockRegionY() != curColSites[j - heightPURow + 1]->getClockRegionY())
+            {
+                // we need to ensure that there is no occpupied sites in this range
+                curHPWLChange = 1100000000.0;
+            }
+            if (curMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_BRAM)
+            {
+                // we need to ensure BRAM macros starts from site with even siteY
+                if (curMacro->getCells().size() > 1 && curColSites[j - heightPURow + 1]->getSiteY() % 2 != 0)
+                {
+                    curHPWLChange = 1100000000.0;
+                }
+            }
+        }
+        if (curHPWLChange < minHPWLChange)
+        {
+            minHPWLChange = curHPWLChange;
+            fChoice[0][j] = 1;
+            if (numPUs == 1)
+            {
+                minLastPUTop = j;
+            }
+        }
+        f[0][j] = minHPWLChange;
+    }
+
+    // DP to minimize HPWL
+    for (int i = 1; i < numPUs; i++)
+    {
+        float minVal = 100000000.0;
+        int heightPURow = getMarcroCellNum(curColPU[i]);
+        totalMacroCellNum += heightPURow;
+        for (unsigned int j = totalMacroCellNum - 1; j < curColSites.size();
+             j++) // j start from heightPURow because PU0 must occupy 1+ site(s)
+        {
+            float curHPWLChange = 1;
+            if ((curColSites[j]->getSiteY() - curColSites[j - heightPURow + 1]->getSiteY() != heightPURow - 1))
+            {
+                // we need to ensure that there is no occpupied sites in this range
+                curHPWLChange = 1100000000.0;
+            }
+            if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curColPU[i]))
+            {
+                if (curMacro->getMacroType() != PlacementInfo::PlacementMacro::PlacementMacroType_CARRY &&
+                    curColSites[j]->getClockRegionY() != curColSites[j - heightPURow + 1]->getClockRegionY())
+                {
+                    // we need to ensure that there is no occpupied sites in this range
+                    curHPWLChange = 1100000000.0;
+                }
+                if (curMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_BRAM)
+                {
+                    // we need to ensure BRAM macros starts from site with even siteY
+                    if (curMacro->getCells().size() > 1 && curColSites[j - heightPURow + 1]->getSiteY() % 2 != 0)
+                    {
+                        curHPWLChange = 1100000000.0;
+                    }
+                }
+            }
+            if (f[i][j - 1] > f[i - 1][j - heightPURow] + curHPWLChange)
+            {
+                fChoice[i][j] = 1;
+                if (i == numPUs - 1)
+                {
+                    if (f[i - 1][j - heightPURow] + curHPWLChange < minVal)
+                    {
+                        minVal = f[i - 1][j - heightPURow] + curHPWLChange;
+                        minLastPUTop = j;
+                    }
+                }
+            }
+
+            f[i][j] = std::min(f[i][j - 1], f[i - 1][j - heightPURow] + curHPWLChange);
+        }
+    }
+
+    if (minLastPUTop < 0)
+    {
+        int PUCnt = 0;
+        for (int i = 0; i < numPUs; i++)
+        {
+            std::cout << curColPU[i] << "\n";
+            PUCnt += getMarcroCellNum(curColPU[i]);
+        }
+        std::cout << "total PU Cnt=" << PUCnt << "\n";
+        for (int i = 0; i < numPUs; i++)
+            for (int j = 0; j < curColSites.size(); j++)
+            {
+                if (fChoice[i][j])
+                {
+                    std::cout << "PU#" << i << " (" << getMarcroCellNum(curColPU[i]) << "): " << j << "\n";
+                    break;
+                }
+            }
+        std::cout.flush();
+    }
+
+    return (minLastPUTop >= 0);
 }
 
 void MacroLegalizer::getMacrosToLegalize()
@@ -990,23 +1159,25 @@ void MacroLegalizer::updatePUMatchingLocation(bool isRoughLegalization, bool upd
 void MacroLegalizer::spreadMacros(int columnNum, std::vector<int> &columnUntilization,
                                   std::vector<std::vector<DeviceInfo::DeviceSite *>> &column2Sites,
                                   std::vector<std::deque<PlacementInfo::PlacementUnit *>> &column2PUs,
-                                  std::map<DesignInfo::DesignCell *, int> &cell2Column, float budgeRatio)
+                                  std::map<DesignInfo::DesignCell *, int> &cell2Column, float globalBudgeRatio)
 {
+    std::vector<float> budgetRatios(columnNum, globalBudgeRatio);
     while (true)
     {
         int overflowColId = -1;
         std::vector<int> accumulationUtil(columnNum, 0), accumulationCapacity(columnNum, 0);
         accumulationUtil[0] = columnUntilization[0];
-        accumulationCapacity[0] = column2Sites[0].size() * budgeRatio;
+        accumulationCapacity[0] = column2Sites[0].size() * budgetRatios[0];
         for (int colId = 1; colId < columnNum; colId++)
         {
             accumulationUtil[colId] = accumulationUtil[colId - 1] + columnUntilization[colId];
-            accumulationCapacity[colId] = accumulationCapacity[colId - 1] + column2Sites[colId].size() * budgeRatio;
+            accumulationCapacity[colId] =
+                accumulationCapacity[colId - 1] + column2Sites[colId].size() * budgetRatios[colId];
         }
 
         for (int colId = 0; colId < columnNum; colId++)
         {
-            if (budgeRatio == 1)
+            if (budgetRatios[colId] == 1)
             {
                 if (column2Sites[colId].size() < (unsigned int)columnUntilization[colId])
                 {
@@ -1016,11 +1187,19 @@ void MacroLegalizer::spreadMacros(int columnNum, std::vector<int> &columnUntiliz
             }
             else
             {
-                if (column2Sites[colId].size() * (budgeRatio + 0.05) < (unsigned int)columnUntilization[colId])
+                if (column2Sites[colId].size() * budgetRatios[colId] < (unsigned int)columnUntilization[colId])
                 {
                     overflowColId = colId;
                     break;
                 }
+            }
+
+            if (!macroCanBeFitIn(colId, column2Sites, column2PUs[colId]))
+            {
+                assert(budgetRatios[colId] - 0.05 > 0);
+                budgetRatios[colId] -= 0.05;
+                overflowColId = colId;
+                break;
             }
         }
         if (overflowColId < 0)
@@ -1029,11 +1208,12 @@ void MacroLegalizer::spreadMacros(int columnNum, std::vector<int> &columnUntiliz
         }
         else
         {
-            print_warning("column overflow resolving");
+            print_warning("column overflow resolving col:" + std::to_string(overflowColId));
             for (int colId = 0; colId < columnNum; colId++)
             {
                 std::cout << " colId#" << colId << " columnUntilization:" << columnUntilization[colId] << " "
-                          << " siteCap:" << column2Sites[colId].size() << "\n";
+                          << " siteCap:" << column2Sites[colId].size()
+                          << " actualSiteCap:" << column2Sites[colId].size() * budgetRatios[colId] << "\n";
             }
             int leftAvaliableCapacity = 0;
             int rightAvaliableCapacity = 0;
@@ -1051,9 +1231,12 @@ void MacroLegalizer::spreadMacros(int columnNum, std::vector<int> &columnUntiliz
                 rightUtil += accumulationUtil[columnNum - 1] - accumulationUtil[overflowColId];
             }
 
-            int overflowNum = (unsigned int)columnUntilization[overflowColId] -
-                              column2Sites[overflowColId].size() * budgeRatio; // spread more for redundant space
+            int overflowNum =
+                (unsigned int)columnUntilization[overflowColId] -
+                column2Sites[overflowColId].size() * budgetRatios[overflowColId]; // spread more for redundant space
             int toLeft = 0;
+
+            std::cout << " overflowNum=" << overflowNum << "\n";
 
             int totalAvailableCapacity = rightAvaliableCapacity + leftAvaliableCapacity - leftUtil - rightUtil;
             assert(totalAvailableCapacity > 0);

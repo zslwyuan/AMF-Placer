@@ -69,8 +69,9 @@ class MacroLegalizer
      *
      * @param exactLegalization true to ensure elements in a macro are consecutive
      * @param directLegalization direct legalize the macros without rough legalization phase
+     * @param _timingDrivenLegalize disable the evaluation of HPWL change but use check displacement change
      */
-    void legalize(bool exactLegalization = false, bool directLegalization = false);
+    void legalize(bool exactLegalization = false, bool directLegalization = false, bool _timingDrivenLegalize = false);
 
     /**
      * @brief Get the average displacement of exact legalization for the involved PlacementUnit
@@ -451,6 +452,7 @@ class MacroLegalizer
     float y2xRatio = 1.0;
     bool clockRegionAware = false;
     bool clockRegionCasLegalization = false;
+    bool timingDrivenLegalize = false;
     int clockRegionHeightOfDSE_BRAM = 24;
 
     /**
@@ -609,11 +611,24 @@ class MacroLegalizer
      * @param column2Sites a vector reording device sites in each column
      * @param column2PUs a vector reording PlacementUnits in each column
      * @param cell2Column a map recording the column id for each PlacementUnit
+     * @param globalBudgeRatio control the density in all columns
      */
     void spreadMacros(int columnNum, std::vector<int> &columnUntilization,
                       std::vector<std::vector<DeviceInfo::DeviceSite *>> &column2Sites,
                       std::vector<std::deque<PlacementInfo::PlacementUnit *>> &column2PUs,
-                      std::map<DesignInfo::DesignCell *, int> &cell2Column, float budgeRatio = 1);
+                      std::map<DesignInfo::DesignCell *, int> &cell2Column, float globalBudgeRatio = 1);
+
+    /**
+     * @brief check whether the current macros can be fitted in the column legally.
+     *
+     * @param colId the target column Id
+     * @param Column2Sites
+     * @param Column2PUs
+     * @return true if the current macros can be fitted in the column legally.
+     * @return false  if the current macros CANNOT be fitted in the column legally.
+     */
+    bool macroCanBeFitIn(int colId, std::vector<std::vector<DeviceInfo::DeviceSite *>> &Column2Sites,
+                         std::deque<PlacementInfo::PlacementUnit *> Column2PUs);
 
     /**
      * @brief find the column which contains the most of cells in a macro in a specific range of columns
@@ -741,6 +756,9 @@ class MacroLegalizer
             numCellsInMacro = tmpMacro->getCells().size();
         }
 
+        if (timingDrivenLegalize)
+            return (std::fabs(PUX - tmpPU->X()) + y2xRatio * std::fabs(PUY - tmpPU->Y())) / numCellsInMacro;
+
         for (auto curNet : nets)
         {
             if (curNet->getDesignNet()->getPins().size() > 10000) // it could be clock
@@ -770,6 +788,9 @@ class MacroLegalizer
         PUX = curSite->X();
         PUY = curSite->Y();
 
+        if (timingDrivenLegalize)
+            return std::fabs(PUX - tmpPU->X()) + y2xRatio * std::fabs(PUY - tmpPU->Y());
+
         for (auto curNet : nets)
         {
             if (curNet->getDesignNet()->getPins().size() > 10000) // it could be clock
@@ -792,6 +813,8 @@ class MacroLegalizer
     inline float getHPWLChange(PlacementInfo::PlacementUnit *tmpPU, float PUX, float PUY)
     {
 
+        if (timingDrivenLegalize)
+            return std::fabs(PUX - tmpPU->X()) + y2xRatio * std::fabs(PUY - tmpPU->Y());
         float oriHPWL = 0.0;
         float newHPWL = 0.0;
         auto nets = placementInfo->getPlacementUnitId2Nets()[tmpPU->getId()];
