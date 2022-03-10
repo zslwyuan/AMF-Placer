@@ -159,7 +159,10 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         {
             if (timingOptimizer->getEffectFactor() >= 1)
                 displacementLimit = 10;
-            placementInfo->enhanceRiskyClockNet();
+
+            if (timingOptimizer->getEffectFactor() > 0.5)
+                placementInfo->enhanceRiskyClockNet();
+            placementInfo->enhanceHighFanoutNet();
         }
 
         if (timingOptimizer)
@@ -202,17 +205,23 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         // legalize macros (DSPs/BRAMs)
         if (enableMacroPseudoNet2Site)
         {
+            bool timingDrivenLegalization = false;
+            if (timingOptimizer)
+            {
+                if (timingOptimizer->getEffectFactor() > 0.6)
+                    timingDrivenLegalization = true;
+            }
             if (!continuePreviousIteration)
             {
                 if (i >= 8)
                 {
-                    macroLegalize(i);
+                    macroLegalize(i, timingDrivenLegalization);
                     print_status("Legalization Iteration#" + to_string_align3(i) + " Done");
                 }
             }
             else
             {
-                macroLegalize(i);
+                macroLegalize(i, timingDrivenLegalization);
                 print_status("Legalization Iteration#" + to_string_align3(i) + " Done");
             }
         }
@@ -422,7 +431,7 @@ void GlobalPlacer::dumpLUTCoordinate()
     }
 }
 
-void GlobalPlacer::macroLegalize(int curIteration)
+void GlobalPlacer::macroLegalize(int curIteration, bool timingDriven)
 {
     // based on the global placement convergence progress and legalization displacement, select different strategies.
     // TODO: make this part more clean and clear for reader!
@@ -452,7 +461,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
 
         placementInfo->getDeviceInfo()->resetAllSiteMapping();
         mCLBLegalizer->legalize();
-        BRAMDSPLegalizer->legalize();
+        BRAMDSPLegalizer->legalize(false, false, timingDriven);
         averageMacroLegalDisplacement = BRAMDSPLegalizer->getAverageDisplacementOfRoughLegalization();
         historyAverageDisplacement.push_back(averageMacroLegalDisplacement);
     }
@@ -498,7 +507,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
                 {
                     print_status("BRAMDSPLegalizer: Launch.");
                     BRAMDSPLegalizer->resetSitesMapped();
-                    BRAMDSPLegalizer->legalize(true, directMacroLegalize);
+                    BRAMDSPLegalizer->legalize(true, directMacroLegalize, timingDriven);
                     macroCloseToSite = false;
                 }
                 if (averageCarryLegalDisplacement > 2 || averageMCLBLegalDisplacement > 3)
@@ -510,7 +519,7 @@ void GlobalPlacer::macroLegalize(int curIteration)
                         print_status("mCLBLegalizer: Launch.");
                         mCLBLegalizer->legalize(true);
                         print_status("CARRYMacroLegalizer: Launch.");
-                        CARRYMacroLegalizer->legalize(true, directMacroLegalize);
+                        CARRYMacroLegalizer->legalize(true, directMacroLegalize, timingDriven);
                     }
                     macroCloseToSite = false;
                 }

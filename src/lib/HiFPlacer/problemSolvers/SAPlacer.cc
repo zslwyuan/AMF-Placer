@@ -34,6 +34,8 @@ double SAPlacer::evaluateClusterPlacement(const std::vector<std::vector<std::vec
                 resWL += clusterAdjMat[clusterA][clusterB] *
                          (fabs(cluster2XY[clusterA].first - cluster2XY[clusterB].first) * regionW +
                           y2xRatio * fabs(cluster2XY[clusterA].second - cluster2XY[clusterB].second) * regionH);
+                if (cluster2XY[clusterA].first == 2 || cluster2XY[clusterB].first == 2)
+                    resWL += fabs(cluster2XY[clusterA].first - cluster2XY[clusterB].first) * regionW * 0.5;
             }
         }
     for (unsigned int clusterA = 0; clusterA < clusterAdjMat.size(); clusterA++)
@@ -443,7 +445,7 @@ void SAPlacer::worker(SAPlacer *saPlacer, std::vector<std::vector<std::vector<in
     // double inputE = oriE;
 
     int SAIterNum = (totalIterNum - 1);
-    for (int k = SAIterNum + 10000; k >= 0; k--)
+    for (int k = SAIterNum; k >= 0; k--)
     {
 
         float temperature = (float)(k + 1) / SAIterNum;
@@ -482,25 +484,63 @@ void SAPlacer::greedyPlaceACluster(const std::vector<std::pair<int, int>> &init_
                                    std::vector<std::pair<int, int>> &res_cluster2XY,
                                    std::vector<std::vector<std::vector<int>>> &res_grid2clusters, int clusterIdToPlace)
 {
-    double res = 10e+10;
-    for (int gridY = 0; gridY < gridH; gridY++)
-        for (int gridX = 0; gridX < gridW; gridX++)
+    std::vector<bool> placed;
+    placed.clear();
+
+    for (unsigned int clusterA = 0; clusterA < clusterAdjMat.size(); clusterA++)
+    {
+        placed.push_back(init_cluster2XY[clusterA].first >= 0 && init_cluster2XY[clusterA].second >= 0);
+    }
+
+    int highConnectCluster = -1;
+    float connectRatio = 0;
+
+    for (unsigned int clusterB = 0; clusterB < clusterAdjMat.size(); clusterB++)
+    {
+        if (!placed[clusterB])
         {
-            std::vector<std::pair<int, int>> new_cluster2XY;
-            std::vector<std::vector<std::vector<int>>> new_grid2clusters;
-            new_cluster2XY = init_cluster2XY;
-            new_grid2clusters = init_grid2clusters;
-            new_cluster2XY[clusterIdToPlace].first = gridX;
-            new_cluster2XY[clusterIdToPlace].second = gridY;
-            new_grid2clusters[gridY][gridX].push_back(clusterIdToPlace);
-            double tmpRes = incrementalEvaluateClusterPlacement(new_grid2clusters, new_cluster2XY);
-            if (tmpRes < res)
+            if (clusterAdjMat[clusterIdToPlace][clusterB] > 0.00001)
             {
-                res = tmpRes;
-                res_cluster2XY = new_cluster2XY;
-                res_grid2clusters = new_grid2clusters;
+                if (clusterAdjMat[clusterIdToPlace][clusterB] > connectRatio)
+                {
+                    connectRatio = clusterAdjMat[clusterIdToPlace][clusterB];
+                    highConnectCluster = clusterB;
+                }
             }
         }
+    }
+
+    if (highConnectCluster < 0)
+    {
+        int gridY0 = random() % (gridH * gridW) / gridW;
+        int gridX0 = random() % (gridH * gridW) % gridW;
+        res_cluster2XY[clusterIdToPlace].first = gridX0;
+        res_cluster2XY[clusterIdToPlace].second = gridY0;
+        res_grid2clusters[gridY0][gridX0].push_back(clusterIdToPlace);
+    }
+    else
+    {
+
+        double res = 10e+10;
+        for (int gridY = 0; gridY < gridH; gridY++)
+            for (int gridX = 0; gridX < gridW; gridX++)
+            {
+                std::vector<std::pair<int, int>> new_cluster2XY;
+                std::vector<std::vector<std::vector<int>>> new_grid2clusters;
+                new_cluster2XY = init_cluster2XY;
+                new_grid2clusters = init_grid2clusters;
+                new_cluster2XY[clusterIdToPlace].first = gridX;
+                new_cluster2XY[clusterIdToPlace].second = gridY;
+                new_grid2clusters[gridY][gridX].push_back(clusterIdToPlace);
+                double tmpRes = incrementalEvaluateClusterPlacement(new_grid2clusters, new_cluster2XY);
+                if (tmpRes < res)
+                {
+                    res = tmpRes;
+                    res_cluster2XY = new_cluster2XY;
+                    res_grid2clusters = new_grid2clusters;
+                }
+            }
+    }
 }
 
 int SAPlacer::greedyFindNextClusterToPlace(std::vector<std::pair<int, int>> &tmp_cluster2XY,
@@ -557,22 +597,57 @@ int SAPlacer::greedyFindNextClusterToPlace(std::vector<std::pair<int, int>> &tmp
 void SAPlacer::greedyInitialize(std::vector<std::pair<int, int>> &init_cluster2XY,
                                 std::vector<std::vector<std::vector<int>>> &init_grid2clusters, int initOffset)
 {
-    int tmpCluster = initOffset % clusterAdjMat.size();
     for (unsigned int clusterId = 0; clusterId < clusterAdjMat.size(); clusterId++)
     {
         init_cluster2XY.push_back(std::pair<int, int>(-1, -1));
     }
 
-    std::vector<std::pair<int, int>> new_cluster2XY;
-    std::vector<std::vector<std::vector<int>>> new_grid2clusters;
-    new_cluster2XY = init_cluster2XY;
-    new_grid2clusters = init_grid2clusters;
+    int iterNum = clusterAdjMat.size();
 
-    greedyPlaceACluster(init_cluster2XY, init_grid2clusters, new_cluster2XY, new_grid2clusters, tmpCluster);
+    while (iterNum == clusterAdjMat.size())
+    {
+        for (int i = 0; i < clusterAdjMat.size(); i++)
+        {
+            bool placed = false;
+            for (unsigned int fixedUnitId = 0; fixedUnitId < cluster2FixedUnitMat[i].size(); fixedUnitId++)
+            {
+                if (cluster2FixedUnitMat[i][fixedUnitId])
+                {
+                    if (random() % 2 == 0)
+                    {
+                        std::vector<std::pair<int, int>> new_cluster2XY;
+                        std::vector<std::vector<std::vector<int>>> new_grid2clusters;
+                        new_cluster2XY = init_cluster2XY;
+                        new_grid2clusters = init_grid2clusters;
 
-    init_cluster2XY = new_cluster2XY;
-    init_grid2clusters = new_grid2clusters;
-    int iterNum = clusterAdjMat.size() - 1;
+                        greedyPlaceACluster(init_cluster2XY, init_grid2clusters, new_cluster2XY, new_grid2clusters, i);
+                        iterNum--;
+                        init_cluster2XY = new_cluster2XY;
+                        init_grid2clusters = new_grid2clusters;
+                        placed = true;
+                    }
+                    break;
+                }
+            }
+            // if (!placed)
+            // {
+            //     if (random() % 10 == 0)
+            //     {
+            //         std::vector<std::pair<int, int>> new_cluster2XY;
+            //         std::vector<std::vector<std::vector<int>>> new_grid2clusters;
+            //         new_cluster2XY = init_cluster2XY;
+            //         new_grid2clusters = init_grid2clusters;
+
+            //         greedyPlaceACluster(init_cluster2XY, init_grid2clusters, new_cluster2XY, new_grid2clusters, i);
+            //         iterNum--;
+            //         init_cluster2XY = new_cluster2XY;
+            //         init_grid2clusters = new_grid2clusters;
+            //         placed = true;
+            //     }
+            // }
+        }
+    }
+
     while (iterNum--)
     {
         int nextClusterId = greedyFindNextClusterToPlace(init_cluster2XY, init_grid2clusters);

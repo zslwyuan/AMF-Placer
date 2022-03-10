@@ -406,6 +406,27 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
 {
     std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
     bool displacementLimitEnable = displacementLimit > 0;
+    // if (enableClockRegionAware)
+    // {
+    //     auto &PU2ClockRegionColumn = placementInfo->getPU2ClockRegionColumn();
+    //     auto &clockRegions = placementInfo->getDeviceInfo()->getClockRegions();
+    //     for (auto curCell : involvedCells)
+    //     {
+    //         auto PU = placementInfo->getPlacementUnitByCellId(curCell->getCellId());
+    //         if (PU2ClockRegionColumn.find(PU) != PU2ClockRegionColumn.end())
+    //         {
+    //             int clockRegionX = PU2ClockRegionColumn[PU];
+    //             float rLeft = clockRegions[0][clockRegionX]->getLeft();
+    //             float rRight = clockRegions[0][clockRegionX]->getRight();
+    //             if (cellLoc[curCell->getCellId()].X < rLeft)
+    //                 cellLoc[curCell->getCellId()].X = rLeft + 0.1;
+    //             if (cellLoc[curCell->getCellId()].X > rRight)
+    //                 cellLoc[curCell->getCellId()].X = rRight - 0.1;
+    //         }
+    //     }
+    // }
+
+    // VCU108 Optimization
     if (enableClockRegionAware)
     {
         auto &PU2ClockRegionColumn = placementInfo->getPU2ClockRegionColumn();
@@ -416,15 +437,31 @@ void GeneralSpreader::updatePlacementUnitsWithSpreadedCellLocations(
             if (PU2ClockRegionColumn.find(PU) != PU2ClockRegionColumn.end())
             {
                 int clockRegionX = PU2ClockRegionColumn[PU];
-                float rLeft = clockRegions[0][clockRegionX]->getLeft();
-                float rRight = clockRegions[0][clockRegionX]->getRight();
-                if (cellLoc[curCell->getCellId()].X < rLeft)
-                    cellLoc[curCell->getCellId()].X = rLeft + 0.1;
-                if (cellLoc[curCell->getCellId()].X > rRight)
-                    cellLoc[curCell->getCellId()].X = rRight - 0.1;
+                if (clockRegionX == 2)
+                {
+                    float rLeft = clockRegions[0][clockRegionX]->getLeft();
+                    float rRight = clockRegions[0][clockRegionX]->getRight();
+                    if (cellLoc[curCell->getCellId()].X < rLeft)
+                        cellLoc[curCell->getCellId()].X = rLeft + 0.1;
+                    if (cellLoc[curCell->getCellId()].X > rRight)
+                        cellLoc[curCell->getCellId()].X = rRight - 0.1;
+                }
+                else if (clockRegionX < 2)
+                {
+                    float rRight = clockRegions[0][1]->getRight();
+                    if (cellLoc[curCell->getCellId()].X > rRight)
+                        cellLoc[curCell->getCellId()].X = rRight - 0.1;
+                }
+                else if (clockRegionX > 2)
+                {
+                    float rLeft = clockRegions[0][3]->getLeft();
+                    if (cellLoc[curCell->getCellId()].X < rLeft)
+                        cellLoc[curCell->getCellId()].X = rLeft + 0.1;
+                }
             }
         }
     }
+
     if (involvedPUs.size() > 100)
     {
         std::vector<std::thread *> threadsVec;

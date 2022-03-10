@@ -279,8 +279,9 @@ class GlobalPlacer
      * @brief legalize specific types of macro to the target regions
      *
      * @param curIteration
+     * @param timingDriven disable the evaluation of HPWL change but use check displacement change
      */
-    void macroLegalize(int curIteration);
+    void macroLegalize(int curIteration, bool timingDriven = false);
 
     void printPlacedUnits(std::ostream &os);
     void dumpLUTCoordinate();

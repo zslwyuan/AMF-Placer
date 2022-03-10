@@ -143,12 +143,13 @@ void WirelengthOptimizer::solverWriteBackData(float displacementLimit)
 {
     bool displacementLimitEnable = displacementLimit > 0;
     assert(xSolver->solverSettings.solutionForward == ySolver->solverSettings.solutionForward);
-
+    unsigned int numPUs = placementInfo->getPlacementUnits().size();
     if (displacementLimitEnable)
     {
         if (xSolver->solverSettings.solutionForward)
         {
-            for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+#pragma omp parallel for
+            for (unsigned int tmpPUId = 0; tmpPUId < numPUs; tmpPUId++)
             {
                 auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
                 if (tmpPU->isFixed())
@@ -170,7 +171,8 @@ void WirelengthOptimizer::solverWriteBackData(float displacementLimit)
         }
         else
         {
-            for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+#pragma omp parallel for
+            for (unsigned int tmpPUId = 0; tmpPUId < numPUs; tmpPUId++)
             {
                 auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
                 if (tmpPU->isFixed())
@@ -195,7 +197,8 @@ void WirelengthOptimizer::solverWriteBackData(float displacementLimit)
     {
         if (xSolver->solverSettings.solutionForward)
         {
-            for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+#pragma omp parallel for
+            for (unsigned int tmpPUId = 0; tmpPUId < numPUs; tmpPUId++)
             {
                 auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
                 if (tmpPU->isFixed())
@@ -208,7 +211,8 @@ void WirelengthOptimizer::solverWriteBackData(float displacementLimit)
         }
         else
         {
-            for (unsigned int tmpPUId = 0; tmpPUId < placementInfo->getPlacementUnits().size(); tmpPUId++)
+#pragma omp parallel for
+            for (unsigned int tmpPUId = 0; tmpPUId < numPUs; tmpPUId++)
             {
                 auto tmpPU = placementInfo->getPlacementUnits()[tmpPUId];
                 if (tmpPU->isFixed())
@@ -704,11 +708,13 @@ void WirelengthOptimizer::addPseudoNet2LoctionForAllPUs(float pesudoNetWeight, b
                     {
                         float curX = curPU->X();
                         float lastX = curPU->lastX();
+                        float size = curPU->getNetsSetPtr()->size();
+                        if (size > 128)
+                            size = 128;
                         placementInfo->addPseudoNetsInPlacementInfo(
                             xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                             xSolver->solverData.objectiveVector, curPU, curX,
-                            std::pow(curPU->getNetsSetPtr()->size(), powFactor) * pesudoNetWeight /
-                                std::max(minDist, std::fabs(lastX - curX)),
+                            std::pow(size, powFactor) * pesudoNetWeight / std::max(minDist, std::fabs(lastX - curX)),
                             y2xRatio, true, false);
                     }
                 }
@@ -724,11 +730,13 @@ void WirelengthOptimizer::addPseudoNet2LoctionForAllPUs(float pesudoNetWeight, b
                     {
                         float curY = curPU->Y();
                         float lastY = curPU->lastY();
+                        float size = curPU->getNetsSetPtr()->size();
+                        if (size > 128)
+                            size = 128;
                         placementInfo->addPseudoNetsInPlacementInfo(
                             ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
                             ySolver->solverData.objectiveVector, curPU, curY,
-                            std::pow(curPU->getNetsSetPtr()->size(), powFactor) * pesudoNetWeight /
-                                std::max(minDist, std::fabs(lastY - curY)),
+                            std::pow(size, powFactor) * pesudoNetWeight / std::max(minDist, std::fabs(lastY - curY)),
                             y2xRatio, false, true);
                     }
                 }
@@ -870,6 +878,8 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
     if (pesudoNetWeight <= 0)
         return;
     auto &PU2ClockRegionCenter = placementInfo->getPU2ClockRegionCenters();
+    auto &PU2ClockRegionColumn = placementInfo->getPU2ClockRegionColumn();
+    auto &clockRegions = placementInfo->getDeviceInfo()->getClockRegions();
 
     if (PU2ClockRegionCenter.size() <= 0)
         return;
@@ -878,22 +888,76 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
     {
         auto curPU = PUXY.first;
         float cX = PUXY.second.first;
-        if (std::fabs(curPU->X() - cX) > 6)
-            placementInfo->addPseudoNetsInPlacementInfo(
-                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
-                xSolver->solverData.objectiveVector, curPU, cX,
-                pesudoNetWeight * std::pow(curPU->getNetsSetPtr()->size(), 1.1), y2xRatio, true, false);
-        else if (std::fabs(curPU->X() - cX) > 3)
-            placementInfo->addPseudoNetsInPlacementInfo(
-                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
-                xSolver->solverData.objectiveVector, curPU, cX, pesudoNetWeight * curPU->getNetsSetPtr()->size(),
-                y2xRatio, true, false);
-        else
-            placementInfo->addPseudoNetsInPlacementInfo(
-                xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
-                xSolver->solverData.objectiveVector, curPU, cX,
-                std::fabs(curPU->X() - cX) / 3 * pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true,
-                false);
+        if (PU2ClockRegionColumn.find(curPU) != PU2ClockRegionColumn.end())
+        {
+            int clockRegionX = PU2ClockRegionColumn[curPU];
+
+            if (clockRegionX == 2)
+            {
+                if (std::fabs(curPU->X() - cX) > 6)
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        pesudoNetWeight * std::pow(curPU->getNetsSetPtr()->size(), 1.1), y2xRatio, true, false);
+                else if (std::fabs(curPU->X() - cX) > 3)
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true, false);
+                else
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        std::fabs(curPU->X() - cX) / 3 * pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio,
+                        true, false);
+            }
+            else if (clockRegionX < 2)
+            {
+
+                float rLeft = clockRegions[0][1]->getLeft();
+                float rRight = clockRegions[0][1]->getRight();
+                cX = (rLeft + rRight) / 2;
+                if ((curPU->X() - cX) > 6)
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        pesudoNetWeight * std::pow(curPU->getNetsSetPtr()->size(), 1.1), y2xRatio, true, false);
+                else if ((curPU->X() - cX) > 3)
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true, false);
+                else if ((curPU->X() - cX) > 0)
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        (curPU->X() - cX) / 3 * pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true,
+                        false);
+            }
+            else if (clockRegionX > 2)
+            {
+                float rLeft = clockRegions[0][3]->getLeft();
+                float rRight = clockRegions[0][3]->getRight();
+                cX = (rLeft + rRight) / 2;
+                if ((curPU->X() - cX) < -6)
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        pesudoNetWeight * std::pow(curPU->getNetsSetPtr()->size(), 1.1), y2xRatio, true, false);
+                else if ((curPU->X() - cX) < -3)
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true, false);
+                else if ((curPU->X() - cX) < 0)
+                    placementInfo->addPseudoNetsInPlacementInfo(
+                        xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
+                        xSolver->solverData.objectiveVector, curPU, cX,
+                        (cX - curPU->X()) / 3 * pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true,
+                        false);
+            }
+        }
+
         // placementInfo->addPseudoNetsInPlacementInfo(
         //     ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
         //     ySolver->solverData.objectiveVector, curPU, cY, pesudoNetWeight * curPU->getNetsSetPtr()->size(),

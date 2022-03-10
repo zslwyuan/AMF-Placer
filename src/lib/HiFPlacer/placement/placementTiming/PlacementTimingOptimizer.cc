@@ -49,7 +49,7 @@ void PlacementTimingOptimizer::setPinsLocation()
     }
 }
 
-void PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisticTiming)
+float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisticTiming)
 {
     print_status("PlacementTimingOptimizer: conducting Static Timing Analysis");
 
@@ -204,109 +204,41 @@ void PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimistic
 
     // // important:::  chip/tile1/g_ariane_core.core/ariane/id_stage_i/operand_b_q[63]_i_31__0
     // print_warning("===========================================================================\n");
-    // std::string cellNames[41] = {
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/"
-    //     "gen_inside_pipeline[0].mid_pipe_dest_exp_q_reg[1][2]",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][0]_i_261",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][0]_i_188",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_400",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_401",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_350",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_220",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][0]_i_109",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_264",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_227",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_117",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_39",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_130",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_43",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][1]_i_15",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][result][7]_i_65",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][result][7]_i_56",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][result][7]_i_33",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q_reg[7][sbe][result][7]_i_12",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q[7][sbe][result][8]_i_32",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q_reg[7][sbe][result][8]_i_19",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q_reg[7][sbe][result][16]_i_22",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q_reg[7][sbe][result][21]_i_24",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q_reg[7][sbe][result][32]_i_20",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q_reg[7][sbe][result][40]_i_20",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q_reg[7][sbe][result][48]_i_24",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/mem_q_reg[7][sbe][result][56]_i_19",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][4]_i_150",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][4]_i_123",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q_reg[7][sbe][ex][cause][4]_i_70",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][4]_i_36",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][ex][cause][4]_i_22",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][result][50]_i_22",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][result][31]_i_18",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[3].i_opgroup_block/gen_merged_slice.i_multifmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fpnew_cast_multi/mem_q[7][sbe][result][24]_i_15",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[2].i_opgroup_block/gen_parallel_slices[0].active_format.i_fmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_noncomp/mem_q[7][sbe][result][24]_i_8",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/fpu_gen.fpu_i/fpu_gen.i_fpnew_bulk/"
-    //     "gen_operation_groups[0].i_opgroup_block/gen_parallel_slices[1].active_format.i_fmt_slice/"
-    //     "gen_num_lanes[0].active_lane.lane_instance.i_fma/mem_q[7][sbe][result][24]_i_4",
-    //     "chip/tile0/g_ariane_core.core/ariane/ex_stage_i/lsu_i/i_pipe_reg_load/imm_q[24]_i_6",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/imm_q[24]_i_2",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_scoreboard/imm_q[24]_i_1",
-    //     "chip/tile0/g_ariane_core.core/ariane/issue_stage_i/i_issue_read_operands/imm_q_reg[24]"};
+    // std::string cellNames[17] = {
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "icmp_ln222_reg_11182_pp2_iter3_reg_reg[0]",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U76/device_chain_kernbkb_DSP48_0_U/"
+    //     "select_ln143_42_reg_24411[7]_i_37",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "p_i_96__14",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "p_i_40__15",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "p_i_38__15",
+    //     "design_1_i/device_chain_kernel_0/inst/select_ln143_37_reg_24311[16]_i_22",
+    //     "design_1_i/device_chain_kernel_0/inst/select_ln143_37_reg_24311_reg[16]_i_6",
+    //     "design_1_i/device_chain_kernel_0/inst/select_ln143_37_reg_24311_reg[16]_i_3",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U104/device_chain_kernbkb_DSP48_0_U/p_i_26__50",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U104/device_chain_kernbkb_DSP48_0_U/p_i_3__49",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U104/device_chain_kernbkb_DSP48_0_U/p_i_2__49",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U104/device_chain_kernbkb_DSP48_0_U/p_i_1__49",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321[0]_i_74",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321_reg[0]_i_28",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321[0]_i_7",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321[0]_i_1",
+    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
+    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321_reg[0]"};
 
-    // std::vector<std::string> cellNameVec(cellNames, cellNames + 41);
+    // std::vector<std::string> cellNameVec(cellNames, cellNames + 17);
     // float totalDelay = 0;
     // for (int i = 0; i < cellNameVec.size() - 1; i++)
     // {
@@ -344,6 +276,8 @@ void PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimistic
         }
         outfile0.close();
     }
+
+    return maxDelay;
 }
 
 float PlacementTimingOptimizer::getSlackThr()
@@ -545,6 +479,8 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
             {
                 std::set<PlacementInfo::PlacementUnit *> PUsInLongPaths;
                 PUsInLongPaths.clear();
+
+                float totalWeight = 0;
                 for (auto &candidateCellId : candidateCellIds)
                 {
                     auto PUInPath = placementInfo->getPlacementUnitByCellId(candidateCellId);
@@ -552,10 +488,11 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                         PUsInLongPaths.find(PUInPath) == PUsInLongPaths.end())
                     {
                         PUsInLongPaths.insert(PUInPath);
+                        totalWeight += PUInPath->getWeight();
                     }
                 }
 
-                if (PUsInLongPaths.size() >= 8)
+                if (totalWeight >= pathLenThr)
                 {
                     std::map<std::pair<int, int>, float> clockRegionYX2Cnt;
                     clockRegionYX2Cnt.clear();
@@ -573,6 +510,10 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                             auto tmpLoc = cellLoc[cellId];
                             deviceInfo->getClockRegionByLocation(tmpLoc.X, tmpLoc.Y, clockRegionX, clockRegionY);
                             std::pair<int, int> tmpClockLocYX(-1, clockRegionX);
+                            // if (clockRegionX < 2)
+                            //     clockRegionX = 1;
+                            // if (clockRegionX > 2)
+                            //     clockRegionX = 3;
                             if (clockRegionYX2Cnt.find(tmpClockLocYX) == clockRegionYX2Cnt.end())
                             {
                                 clockRegionYX2Cnt[tmpClockLocYX] = 0;
@@ -612,8 +553,13 @@ void PlacementTimingOptimizer::clusterLongPathInOneClockRegion(int pathLenThr, f
                         }
                     }
 
-                    if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) && maxClockRegionWeight >= 4)
+                    if ((maxClockRegionWeight > totalClockRegionWeight * clusterThrRatio) &&
+                        maxClockRegionWeight >= pathLenThr * 0.333)
                     {
+                        // if (optClockLocYX.second < 2)
+                        //     optClockLocYX.second = 1;
+                        // if (optClockLocYX.second > 2)
+                        //     optClockLocYX.second = 3;
                         auto optClockRegion = YX2ClockRegion[0][optClockLocYX.second];
                         float cX = (optClockRegion->getLeft() + optClockRegion->getRight()) / 2;
                         std::vector<int> PUIdsInLongPaths;

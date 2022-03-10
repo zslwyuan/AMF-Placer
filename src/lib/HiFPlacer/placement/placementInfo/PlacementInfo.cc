@@ -589,10 +589,13 @@ void PlacementInfo::reloadNets()
     {
         outputStr +=
             "netPin<" + std::to_string(netPinNumDistribution[i]) + ": " + std::to_string(netDistribution[i]) + ", ";
-        if (netDistribution[i] < 10000 && netPinNumDistribution[i] < highFanOutThr)
+        if (netDistribution[i] > 1000 && netPinNumDistribution[i] > 64)
         {
-            highFanOutThr = netPinNumDistribution[i];
-            print_warning("PlacementInfo: High Fanout Thr=" + std::to_string(highFanOutThr));
+            if (netDistribution[i] > netDistribution[i - 1] * 2)
+            {
+                highFanOutThr = netPinNumDistribution[i];
+                print_warning("PlacementInfo: High Fanout Thr=" + std::to_string(highFanOutThr));
+            }
         }
     }
     print_info("PlacementInfo: " + outputStr);
@@ -1979,6 +1982,21 @@ void PlacementInfo::loadPlacementUnitInformation(std::string locFile)
     reloadNets();
 }
 
+void PlacementInfo::enhanceHighFanoutNet()
+{
+    for (auto curPNet : placementNets)
+    {
+        if (auto curNet = curPNet->getDesignNet())
+        {
+            if (!curNet->checkIsGlobalClock() && !curNet->checkIsGlobalClock() && curNet->getPins().size() < 10000 &&
+                curNet->getPins().size() >= highFanOutThr)
+            {
+                curNet->enhanceOverallTimingNetEnhancement(1.2);
+            }
+        }
+    }
+}
+
 void PlacementInfo::enhanceRiskyClockNet()
 {
     auto &clockRegions = deviceInfo->getClockRegions();
@@ -2005,7 +2023,7 @@ void PlacementInfo::enhanceRiskyClockNet()
                     {
                         if (curClockNet->getPinOffsetsInUnit().size() < 5000)
                         {
-                            curClockNet->getDesignNet()->setOverallTimingNetEnhancement(1.1);
+                            curClockNet->getDesignNet()->setOverallTimingNetEnhancement(1.2);
                             enhanced = true;
                         }
                     }

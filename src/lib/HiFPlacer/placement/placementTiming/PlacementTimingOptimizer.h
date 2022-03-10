@@ -39,7 +39,7 @@ class PlacementTimingOptimizer
     }
 
     void propogateArrivalTime();
-    void conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
+    float conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
     void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,
                                                            float targetY);
     void setPinsLocation();
@@ -133,8 +133,9 @@ class PlacementTimingOptimizer
             X *= 2;
             float delay = (timingC0[0] + std::pow(X, 0.3) * timingC0[1] + std::pow(Y, 0.3) * timingC0[2] +
                            std::pow(X, 0.5) * timingC0[3] + std::pow(Y, 0.5) * timingC0[4]) /
-                              1000.0 +
-                          std::abs(clockRegionX1 - clockRegionX0) * 0.5;
+                          1000.0;
+            if (std::abs(clockRegionX1 - clockRegionX0) > 1 || clockRegionX1 == 2 || clockRegionX0 == 2)
+                delay += std::abs(clockRegionX1 - clockRegionX0) * 0.5;
 
             if (delay < 0.05)
                 delay = 0.05;
@@ -145,8 +146,9 @@ class PlacementTimingOptimizer
             X *= 2;
             float delay = (timingC1[0] + std::pow(X, 0.3) * timingC1[1] + std::pow(Y, 0.3) * timingC1[2] +
                            std::pow(X, 0.5) * timingC1[3] + std::pow(Y, 0.5) * timingC1[4]) /
-                              1000.0 +
-                          std::abs(clockRegionX1 - clockRegionX0) * 0.5;
+                          1000.0;
+            if (std::abs(clockRegionX1 - clockRegionX0) > 1 || clockRegionX1 == 2 || clockRegionX0 == 2)
+                delay += std::abs(clockRegionX1 - clockRegionX0) * 0.5;
 
             if (delay < 0.05)
                 delay = 0.05;
@@ -157,8 +159,9 @@ class PlacementTimingOptimizer
             X *= 2;
             float delay = (timingC2[0] + std::pow(X, 0.3) * timingC2[1] + std::pow(Y, 0.3) * timingC2[2] +
                            std::pow(X, 0.5) * timingC2[3] + std::pow(Y, 0.5) * timingC2[4]) /
-                              1000.0 +
-                          std::abs(clockRegionX1 - clockRegionX0) * 0.5;
+                          1000.0;
+            if (std::abs(clockRegionX1 - clockRegionX0) > 1 || clockRegionX1 == 2 || clockRegionX0 == 2)
+                delay += std::abs(clockRegionX1 - clockRegionX0) * 0.5;
 
             if (delay < 0.05)
                 delay = 0.05;
