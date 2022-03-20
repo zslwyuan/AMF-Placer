@@ -1614,6 +1614,7 @@ class DesignInfo
         if (name2Cell.find(tmpName) == name2Cell.end())
         {
             std::cout << "cannot find:" << tmpName << "\n";
+            return nullptr;
         }
         return name2Cell[tmpName];
     }

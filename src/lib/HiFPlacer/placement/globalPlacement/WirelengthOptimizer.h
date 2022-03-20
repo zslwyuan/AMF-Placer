@@ -55,6 +55,11 @@ class WirelengthOptimizer
             delete xSolver;
         if (ySolver)
             delete ySolver;
+        for (auto list : PNetId2SlackEnhanceTuples)
+        {
+            if (list)
+                delete list;
+        }
     }
 
     /**
@@ -232,14 +237,32 @@ class WirelengthOptimizer
      */
     void updatePseudoNetForUserDefinedClusters(float pesudoNetWeight);
 
+    typedef struct _slackEnhanceTuple
+    {
+        float weight;
+        int PUAId, PUBId, PinAId, PinBId;
+
+        _slackEnhanceTuple(float weight, int PUAId, int PUBId, int PinAId, int PinBId)
+            : weight(weight), PUAId(PUAId), PUBId(PUBId), PinAId(PinAId), PinBId(PinBId)
+        {
+        }
+        _slackEnhanceTuple()
+        {
+        }
+    } slackEnhanceTuple;
+
+    std::vector<std::vector<slackEnhanceTuple> *> PNetId2SlackEnhanceTuples;
+
     /**
-     * @brief add pseudo net for timing optimization based on the timing slack of each elements in the design netlist
+     * @brief add pseudo net for timing optimization based on the timing slack of each elements in the design
+     * netlist
      *
      * @param timingWeight the common weight factor for pseudo nets for timing
      * @param slackPowFactor a factor for the sensitivity of negative timing slack
      * @param timingOptimizer the handler of timing-related analysis
      */
-    void addPseudoNet_SlackBased(float timingWeight, double slackPowFactor, PlacementTimingOptimizer *timingOptimizer);
+    void addPseudoNet_SlackBased(float timingWeight, double slackPowFactor, PlacementTimingOptimizer *timingOptimizer,
+                                 bool calculate = false);
 
     void LUTLUTPairing_TimingDriven(float timingWeight, float disThreshold, PlacementTimingOptimizer *timingOptimizer);
 
@@ -365,7 +388,8 @@ class WirelengthOptimizer
     float slackThr = 0;
 
     // For debug usage
-    // std::string targetCellName = "chip/tile1/g_ariane_core.core/ariane/ex_stage_i/csr_buffer_i/i__i_8__0";
+    std::string targetCellName = "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_392_1_reg_27413_reg[20]";
+    int targetCellId = -1;
 };
 
 #endif

@@ -1223,18 +1223,38 @@ class PlacementInfo
 
         inline int getUnitsBeDrivenByThisPU()
         {
-            int res = 0;
+            if (numUnitsBeDrivenByThisPU >= 0)
+                return numUnitsBeDrivenByThisPU;
+            numUnitsBeDrivenByThisPU = 0;
             for (auto tmpNet : *nets)
             {
                 if (tmpNet->getDriverUnits().size() == 1)
                 {
                     if (tmpNet->getDriverUnits()[0] == this)
                     {
-                        res += tmpNet->getUnitsBeDriven().size();
+                        numUnitsBeDrivenByThisPU += tmpNet->getUnitsBeDriven().size();
                     }
                 }
             }
-            return res;
+            return numUnitsBeDrivenByThisPU;
+        }
+
+        inline int getUnitsDriveThisPU()
+        {
+            if (numUnitsDriveThisPU >= 0)
+                return numUnitsDriveThisPU;
+            numUnitsDriveThisPU = 0;
+            for (auto tmpNet : *nets)
+            {
+                if (tmpNet->getDriverUnits().size() == 1)
+                {
+                    if (tmpNet->getDriverUnits()[0] != this)
+                    {
+                        numUnitsDriveThisPU += 1;
+                    }
+                }
+            }
+            return numUnitsDriveThisPU;
         }
 
         inline void addDSP()
@@ -1401,6 +1421,8 @@ class PlacementInfo
         int FFcnt = 0;
         int CARRYcnt = 0;
         int MUXcnt = 0;
+        int numUnitsBeDrivenByThisPU = -1;
+        int numUnitsDriveThisPU = -1;
 
         bool packed = false;
     };

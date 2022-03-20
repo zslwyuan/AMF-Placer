@@ -204,41 +204,36 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisti
 
     // // important:::  chip/tile1/g_ariane_core.core/ariane/id_stage_i/operand_b_q[63]_i_31__0
     // print_warning("===========================================================================\n");
-    // std::string cellNames[17] = {
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "icmp_ln222_reg_11182_pp2_iter3_reg_reg[0]",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U76/device_chain_kernbkb_DSP48_0_U/"
-    //     "select_ln143_42_reg_24411[7]_i_37",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "p_i_96__14",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "p_i_40__15",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "p_i_38__15",
-    //     "design_1_i/device_chain_kernel_0/inst/select_ln143_37_reg_24311[16]_i_22",
-    //     "design_1_i/device_chain_kernel_0/inst/select_ln143_37_reg_24311_reg[16]_i_6",
-    //     "design_1_i/device_chain_kernel_0/inst/select_ln143_37_reg_24311_reg[16]_i_3",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U104/device_chain_kernbkb_DSP48_0_U/p_i_26__50",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U104/device_chain_kernbkb_DSP48_0_U/p_i_3__49",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U104/device_chain_kernbkb_DSP48_0_U/p_i_2__49",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/device_chain_kernbkb_U104/device_chain_kernbkb_DSP48_0_U/p_i_1__49",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321[0]_i_74",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321_reg[0]_i_28",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321[0]_i_7",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321[0]_i_1",
-    //     "design_1_i/device_chain_kernel_0/inst/grp_load_compute_store_fu_2148/grp_device_chain_tiled_7_fu_3151/"
-    //     "grp_chain_dp_score_fu_5073/or_ln883_189_reg_24321_reg[0]"};
+    // std::string cellNames[27] = {
+    //     "design_1_i/DigitRec_0/inst/ap_CS_fsm_reg[7]_replica_1",
+    //     "design_1_i/DigitRec_0/inst/knn_set_392_0_reg_26773[31]_i_2",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_392_1_reg_27413[1]_i_2",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_393_1_reg_27371[31]_i_100",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_393_1_reg_27371_reg[31]_i_28",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_393_1_reg_27371_reg[31]_i_9",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_393_1_reg_27371[31]_i_75",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_393_1_reg_27371[31]_i_16",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_393_1_reg_27371_reg[31]_i_8",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_397_1_reg_27031[31]_i_90",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_397_1_reg_27031[31]_i_31",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_397_1_reg_27031_reg[31]_i_8",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_397_1_reg_27031_reg[31]_i_6",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_391_1_reg_27113[31]_i_87",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_391_1_reg_27113[31]_i_29",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_391_1_reg_27113_reg[31]_i_7",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_391_1_reg_27113_reg[31]_i_4",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_395_1_reg_27287[31]_i_39",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_395_1_reg_27287[31]_i_27",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_395_1_reg_27287_reg[31]_i_6",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_395_1_reg_27287_reg[31]_i_4",
+    //     "design_1_i/DigitRec_0/inst/knn_set_387_352_reg_26953[8]_i_5",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_390_1_reg_27155[31]_i_5",
+    //     "design_1_i/DigitRec_0/inst/knn_set_387_352_reg_26953[8]_i_4",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_392_1_reg_27413[31]_i_4",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_392_1_reg_27413[31]_i_2",
+    //     "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter31_knn_set_392_1_reg_27413_reg[20]"};
 
-    // std::vector<std::string> cellNameVec(cellNames, cellNames + 17);
+    // std::vector<std::string> cellNameVec(cellNames, cellNames + 27);
     // float totalDelay = 0;
     // for (int i = 0; i < cellNameVec.size() - 1; i++)
     // {
@@ -294,7 +289,7 @@ float PlacementTimingOptimizer::getSlackThr()
 
     // auto deviceInfo = placementInfo->getDeviceInfo();
 
-    std::vector<int> slackCntVec(100, 0);
+    std::vector<int> slackCntVec(200, 0);
     int totalSlackChecked = 0;
 
     netActualSlackPinNum.clear();
