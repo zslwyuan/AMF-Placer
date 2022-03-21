@@ -566,9 +566,25 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
                     if (enhanceRatio > 0)
                     {
                         float shrinkRatio = pinEnhanceRate[pinBeDriven] / enhanceRatio;
-                        if (timingOptimizer->getEffectFactor() >= 1 && shrinkRatio > 200)
+                        if (timingOptimizer->getEffectFactor() >= 1)
                         {
-                            enhanceRatio = std::pow(enhanceRatio, 0.1) * std::pow(pinEnhanceRate[pinBeDriven], 0.9);
+                            if (shrinkRatio > 300)
+                            {
+                                enhanceRatio = std::pow(enhanceRatio, 0.1) * std::pow(pinEnhanceRate[pinBeDriven], 0.9);
+                            }
+                            else if (shrinkRatio > 200)
+                            {
+                                enhanceRatio = std::pow(enhanceRatio, 0.2) * std::pow(pinEnhanceRate[pinBeDriven], 0.8);
+                            }
+                            else if (shrinkRatio > 100)
+                            {
+                                enhanceRatio =
+                                    std::pow(enhanceRatio, 0.33) * std::pow(pinEnhanceRate[pinBeDriven], 0.67);
+                            }
+                            else if (shrinkRatio > 64)
+                            {
+                                enhanceRatio = std::pow(enhanceRatio, 0.4) * std::pow(pinEnhanceRate[pinBeDriven], 0.6);
+                            }
                         }
                         pinEnhanceRate[pinBeDriven] = enhanceRatio;
                     }
