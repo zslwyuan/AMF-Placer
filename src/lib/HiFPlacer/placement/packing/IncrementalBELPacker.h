@@ -78,8 +78,6 @@ class IncrementalBELPacker
      */
     void LUTFFPairing(float disThreshold);
 
-    void LUTLUTPairing_TimingDriven(float disThreshold, PlacementTimingOptimizer *timingOptimizer);
-
     /**
      * @brief try to pair FFs in the design netlist which are neighbors according to a given threshold and the control
      * set compatibility

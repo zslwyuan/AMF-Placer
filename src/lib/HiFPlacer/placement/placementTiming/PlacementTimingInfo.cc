@@ -12,7 +12,7 @@
 
 #include "PlacementTimingInfo.h"
 #include "PlacementInfo.h"
-
+#include "stringCheck.h"
 #include <algorithm>
 #include <cmath>
 #include <codecvt>
@@ -29,6 +29,31 @@ PlacementTimingInfo::PlacementTimingInfo(DesignInfo *designInfo, DeviceInfo *dev
 
     if (JSONCfg.find("ClockPeriod") != JSONCfg.end())
         clockPeriod = std::stof(JSONCfg["ClockPeriod"]);
+
+    clockNet2Period.clear();
+    cellId2Period.clear();
+    for (auto pair : JSONCfg)
+    {
+        if (pair.first.find("ClockPeriod:") != std::string::npos)
+        {
+            auto clockDriver = pair.first;
+            std::string from = "ClockPeriod:";
+            std::string to = "";
+            replaceAll(clockDriver, from, to);
+            auto driverNet = designInfo->getNet(clockDriver);
+            float tmpClkPeriod = std::stof(pair.second);
+
+            clockNet2Period[driverNet] = tmpClkPeriod;
+            for (auto succPin : driverNet->getPinsBeDriven())
+            {
+                auto cell = succPin->getCell();
+                if (cell)
+                {
+                    cellId2Period[cell->getCellId()] = tmpClkPeriod;
+                }
+            }
+        }
+    }
 }
 
 void PlacementTimingInfo::buildSimpleTimingGraph()
@@ -45,6 +70,14 @@ void PlacementTimingInfo::buildSimpleTimingGraph()
         if (curCell->isTimingEndPoint())
         {
             newNode->setIsRegister();
+            if (cellId2Period.find(curCell->getCellId()) != cellId2Period.end())
+            {
+                newNode->setClockPeriod(cellId2Period[curCell->getCellId()]);
+            }
+            else
+            {
+                newNode->setClockPeriod(clockPeriod);
+            }
         }
         simpleTimingGraph->insertTimingNode(newNode);
     }
@@ -281,6 +314,29 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::ba
         backwardlevel2NodeIds[level] = filteredList;
     }
 
+    for (unsigned int level = 0; level < backwardlevel2NodeIds.size() - 1; level++)
+    {
+        for (auto curId : backwardlevel2NodeIds[level])
+        {
+            assert(curId < nodes.size());
+            float curClockPeriod = nodes[curId]->getClockPeriod();
+            if (curClockPeriod < 0)
+            {
+                continue;
+            }
+            for (auto inEdge : nodes[curId]->getInEdges())
+            {
+                int nextId = inEdge->getSource()->getId();
+
+                assert(nextId < nodes.size());
+                if (!nodes[nextId]->checkIsRegister())
+                {
+                    nodes[nextId]->setClockPeriod(curClockPeriod);
+                }
+            }
+        }
+    }
+
     for (unsigned int i = 0; i < nodes.size(); i++)
     {
         nodes[i]->sortOutEdgesByBackwardLevel();
@@ -476,7 +532,8 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::pr
     for (int j = 0; j < nodeNum; j++)
     {
         auto curNode = nodes[j];
-        curNode->setLatestArrival(0.0);
+        curNode->setLatestInputArrival(0.0);
+        curNode->setLatestOutputArrival(0.0);
         curNode->setSlowestPredecessorId(-1);
     }
     for (unsigned int i = 1; i < forwardlevel2NodeIds.size(); i++)
@@ -490,13 +547,45 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::pr
             for (auto inEdge : curNode->getInEdges())
             {
                 int predId = inEdge->getSource()->getId();
-                float predDelay = inEdge->getSource()->getLatestArrival();
+                float predDelay = inEdge->getSource()->getLatestInputArrival();
                 float edgeDelay = inEdge->getDelay();
-                float newDelay = predDelay + edgeDelay + curNode->getInnerDelay();
-                if (newDelay > curNode->getLatestArrival())
+                float newDelay = predDelay + edgeDelay + inEdge->getSource()->getInnerDelay();
+                if (newDelay > curNode->getLatestInputArrival())
                 {
-                    curNode->setLatestArrival(newDelay);
+                    curNode->setLatestInputArrival(newDelay);
                     curNode->setSlowestPredecessorId(predId);
+                    // curNode->setLatestOutputArrival(newDelay + curNode->getInnerDelay());
+                    curNode->setLatestOutputArrival(newDelay);
+                }
+            }
+        }
+    }
+
+    int numNodeInLayer = forwardlevel2NodeIds[0].size();
+#pragma omp parallel for
+    for (int j = 0; j < numNodeInLayer; j++)
+    {
+        auto curNodeId = forwardlevel2NodeIds[0][j];
+        assert(curNodeId < nodes.size());
+        auto curNode = nodes[curNodeId];
+        if (curNode->getDesignNode()->isVirtualCell())
+            continue;
+
+        for (auto inEdge : curNode->getInEdges())
+        {
+            if (inEdge->getSource())
+            {
+                if (inEdge->getSource()->getForwardLevel() > 0)
+                {
+                    int predId = inEdge->getSource()->getId();
+                    float predDelay = inEdge->getSource()->getLatestInputArrival();
+                    float edgeDelay = inEdge->getDelay();
+                    float newDelay = predDelay + edgeDelay + inEdge->getSource()->getInnerDelay();
+                    if (newDelay > curNode->getLatestInputArrival())
+                    {
+                        curNode->setLatestInputArrival(newDelay);
+                        curNode->setSlowestPredecessorId(predId);
+                    }
                 }
             }
         }
@@ -510,7 +599,7 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::ba
     for (int j = 0; j < nodeNum; j++)
     {
         auto curNode = nodes[j];
-        curNode->setRequiredArrivalTime(clockPeriod);
+        curNode->setInitialRequiredArrivalTime(clockPeriod);
         curNode->setEarlestSuccessorId(-1);
     }
     for (unsigned int i = 1; i < backwardlevel2NodeIds.size(); i++)
@@ -543,13 +632,37 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLonge
     int slowestPredecessorId = curNodeId;
     std::vector<int> resPath;
     resPath.clear();
-
+    resPath.push_back(slowestPredecessorId);
     while (slowestPredecessorId != -1)
     {
-        resPath.push_back(slowestPredecessorId);
         slowestPredecessorId = nodes[slowestPredecessorId]->getSlowestPredecessorId();
+        resPath.push_back(slowestPredecessorId);
+
+        if (slowestPredecessorId == -1 || nodes[slowestPredecessorId]->getForwardLevel() == 0)
+            break;
     }
     return resPath;
+}
+
+template <typename nodeType>
+bool PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLongestPathFromNode(int curNodeId,
+                                                                                   std::vector<bool> &isCovered,
+                                                                                   std::vector<int> &resPath)
+{
+    int slowestPredecessorId = curNodeId;
+    resPath.clear();
+    resPath.push_back(slowestPredecessorId);
+    while (slowestPredecessorId != -1)
+    {
+        slowestPredecessorId = nodes[slowestPredecessorId]->getSlowestPredecessorId();
+        resPath.push_back(slowestPredecessorId);
+
+        if (isCovered[slowestPredecessorId])
+            return false;
+        if (slowestPredecessorId == -1 || nodes[slowestPredecessorId]->getForwardLevel() == 0)
+            break;
+    }
+    return true;
 }
 
 template class PlacementTimingInfo::TimingGraph<DesignInfo::DesignCell>;

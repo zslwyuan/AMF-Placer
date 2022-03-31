@@ -600,6 +600,14 @@ void PlacementInfo::reloadNets()
     }
     print_info("PlacementInfo: " + outputStr);
 
+    if (simplePlacementTimingInfo->getSimplePlacementTimingGraph())
+    {
+        for (auto timingNode : simplePlacementTimingInfo->getSimplePlacementTimingGraph()->getNodes())
+        {
+            timingNode->setClusterId(cellId2PlacementUnit[timingNode->getId()]->getId());
+        }
+    }
+
     // updateLongPaths();
     print_status("reload placementNets and #register-related PU=" + std::to_string(PUsContainingFF.size()));
 }
@@ -1446,7 +1454,7 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
                 if (clockRegion2Inflat.find(rloc) != clockRegion2Inflat.end())
                 {
                     cnt++;
-                    if (curBin->getRequiredBinShrinkRatio() > 0.6)
+                    if (curBin->getRequiredBinShrinkRatio() > 0.75)
                     {
                         curBin->setRequiredBinShrinkRatio(curBin->getRequiredBinShrinkRatio() * 0.75);
                     }
@@ -1464,7 +1472,7 @@ void PlacementInfo::adjustLUTFFUtilization_Clocking()
                 std::pair<int, int> rloc(clockRegionY, clockRegionX);
                 if (clockRegion2Inflat.find(rloc) != clockRegion2Inflat.end())
                 {
-                    if (curBin->getRequiredBinShrinkRatio() > 0.6)
+                    if (curBin->getRequiredBinShrinkRatio() > 0.75)
                     {
                         curBin->setRequiredBinShrinkRatio(curBin->getRequiredBinShrinkRatio() * 0.85);
                     }
@@ -1999,8 +2007,6 @@ void PlacementInfo::enhanceHighFanoutNet()
 
 void PlacementInfo::enhanceRiskyClockNet()
 {
-    auto &clockRegions = deviceInfo->getClockRegions();
-
     for (auto curClockNet : clockNets)
     {
         int leftId, rightId, topId, bottomId;

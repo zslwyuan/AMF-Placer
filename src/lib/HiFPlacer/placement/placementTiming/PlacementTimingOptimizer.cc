@@ -49,6 +49,74 @@ void PlacementTimingOptimizer::setPinsLocation()
     }
 }
 
+std::vector<int> PlacementTimingOptimizer::findCriticalPath()
+{
+
+    assert(timingInfo);
+    auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
+    float maxDelay = 0;
+    int maxDelayId = -1;
+    for (unsigned int i = 0; i < timingGraph->getNodes().size(); i++)
+    {
+        if (timingGraph->getNodes()[i]->getLatestInputArrival() > maxDelay)
+        {
+            maxDelay = timingGraph->getNodes()[i]->getLatestInputArrival();
+            maxDelayId = i;
+        }
+    }
+
+    std::vector<std::vector<int>> resPaths;
+    auto resPath = timingGraph->backTraceDelayLongestPathFromNode(maxDelayId);
+
+    return resPath;
+}
+
+std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float criticalRatio)
+{
+
+    assert(timingInfo);
+    auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
+    timingGraph->sortedEndpointByDelay();
+    std::vector<bool> isCovered(timingGraph->getNodes().size(), false);
+    std::vector<std::vector<int>> resPaths;
+
+    for (auto curEndpoint : timingGraph->getSortedTimingEndpoints())
+    {
+        if (isCovered[curEndpoint->getId()])
+            continue;
+        std::vector<int> resPath;
+        bool findSuccessfully =
+            timingGraph->backTraceDelayLongestPathFromNode(curEndpoint->getId(), isCovered, resPath);
+        if (findSuccessfully)
+        {
+            std::cout << "find endpoint [" << curEndpoint->getDesignNode()
+                      << "] delay=" << curEndpoint->getLatestInputArrival() << " with " << resPath.size()
+                      << " nodes in path.\n";
+            resPaths.push_back(resPath);
+        }
+
+        for (auto cellId : resPath)
+        {
+            auto PU = placementInfo->getPlacementUnitByCellId(cellId);
+            if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(PU))
+            {
+                isCovered[unpackedCell->getCell()->getCellId()] = true;
+            }
+            else if (auto macro = dynamic_cast<PlacementInfo::PlacementMacro *>(PU))
+            {
+                for (auto cell : macro->getCells())
+                {
+                    isCovered[cell->getCellId()] = true;
+                }
+            }
+        }
+        if (resPaths.size() > 20)
+            break;
+    }
+
+    return resPaths;
+}
+
 float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisticTiming)
 {
     print_status("PlacementTimingOptimizer: conducting Static Timing Analysis");
@@ -114,7 +182,7 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisti
         //         auto sinkNode = timingNodes[sinkCellId];
         //         auto sinkLoc = cellLoc[sinkCellId];
         //         float netDelay = getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
-        //         float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
+        //         float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestOutputArrival() - netDelay;
 
         //         if (slack > 0)
         //             continue;
@@ -176,7 +244,7 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisti
         if (pin2Loc.X < -5 && pin2Loc.Y < -5)
             continue;
 
-        edge->setDelay(getDelayByModel(pin1Loc.X, pin1Loc.Y, pin2Loc.X, pin2Loc.Y));
+        edge->setDelay(getDelayByModel(edge->getSink(), edge->getSource(), pin1Loc.X, pin1Loc.Y, pin2Loc.X, pin2Loc.Y));
     }
 
     timingGraph->propogateArrivalTime();
@@ -185,9 +253,9 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisti
     int maxDelayId = -1;
     for (unsigned int i = 0; i < timingGraph->getNodes().size(); i++)
     {
-        if (timingGraph->getNodes()[i]->getLatestArrival() > maxDelay)
+        if (timingGraph->getNodes()[i]->getLatestInputArrival() > maxDelay)
         {
-            maxDelay = timingGraph->getNodes()[i]->getLatestArrival();
+            maxDelay = timingGraph->getNodes()[i]->getLatestInputArrival();
             maxDelayId = i;
         }
     }
@@ -198,7 +266,7 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisti
     for (auto id : resPath)
     {
         std::cout << designInfo->getCells()[id]->getName() << " X:" << cellLoc[id].X << " Y:" << cellLoc[id].Y
-                  << "   [delay]: " << timingGraph->getNodes()[id]->getLatestArrival()
+                  << "   [delay]: " << timingGraph->getNodes()[id]->getLatestInputArrival()
                   << "   [required]: " << timingGraph->getNodes()[id]->getRequiredArrivalTime() << "\n";
     }
 
@@ -281,7 +349,6 @@ float PlacementTimingOptimizer::getSlackThr()
 
     // float maxEnhanceRatio = 0;
     auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
-    float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
     auto &cellLoc = placementInfo->getCellId2location();
     assert(cellLoc.size() == timingNodes.size());
 
@@ -338,8 +405,8 @@ float PlacementTimingOptimizer::getSlackThr()
             unsigned int sinkCellId = sinkCell->getCellId();
             auto sinkNode = timingNodes[sinkCellId];
             auto sinkLoc = cellLoc[sinkCellId];
-            float netDelay = getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
-            float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
+            float netDelay = getDelayByModel(sinkNode, srcNode, sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+            float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestOutputArrival() - netDelay;
 
             if (slack > 0)
                 continue;
@@ -405,7 +472,7 @@ void PlacementTimingOptimizer::incrementalStaticTimingAnalysis_forPUWithLocation
         if (pin2Loc.X < -5 && pin2Loc.Y < -5)
             continue;
 
-        edge->setDelay(getDelayByModel(pin1Loc.X, pin1Loc.Y, pin2Loc.X, pin2Loc.Y));
+        edge->setDelay(getDelayByModel(edge->getSink(), edge->getSource(), pin1Loc.X, pin1Loc.Y, pin2Loc.X, pin2Loc.Y));
     }
 
     timingGraph->propogateArrivalTime();
@@ -414,9 +481,9 @@ void PlacementTimingOptimizer::incrementalStaticTimingAnalysis_forPUWithLocation
     int maxDelayId = -1;
     for (unsigned int i = 0; i < timingGraph->getNodes().size(); i++)
     {
-        if (timingGraph->getNodes()[i]->getLatestArrival() > maxDelay)
+        if (timingGraph->getNodes()[i]->getLatestInputArrival() > maxDelay)
         {
-            maxDelay = timingGraph->getNodes()[i]->getLatestArrival();
+            maxDelay = timingGraph->getNodes()[i]->getLatestInputArrival();
             maxDelayId = i;
         }
     }
@@ -427,7 +494,7 @@ void PlacementTimingOptimizer::incrementalStaticTimingAnalysis_forPUWithLocation
     for (auto id : resPath)
     {
         std::cout << designInfo->getCells()[id]->getName()
-                  << "   [delay]: " << timingGraph->getNodes()[id]->getLatestArrival()
+                  << "   [delay]: " << timingGraph->getNodes()[id]->getLatestInputArrival()
                   << "   [required]: " << timingGraph->getNodes()[id]->getRequiredArrivalTime() << "\n";
     }
 }

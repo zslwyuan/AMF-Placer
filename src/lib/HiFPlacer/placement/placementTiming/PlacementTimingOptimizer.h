@@ -39,6 +39,8 @@ class PlacementTimingOptimizer
     }
 
     void propogateArrivalTime();
+    std::vector<int> findCriticalPath();
+    std::vector<std::vector<int>> findCriticalPaths(float criticalRatio);
     float conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
     void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,
                                                            float targetY);
@@ -81,6 +83,17 @@ class PlacementTimingOptimizer
     inline void setEffectFactor(float _effectFactor)
     {
         effectFactor = _effectFactor;
+    }
+
+    inline float getDelayByModel(PlacementTimingInfo::TimingGraph<DesignInfo::DesignCell>::TimingNode *node1,
+                                 PlacementTimingInfo::TimingGraph<DesignInfo::DesignCell>::TimingNode *node2, float X1,
+                                 float Y1, float X2, float Y2)
+    {
+        float delay = getDelayByModel_conservative(X1, Y1, X2, Y2);
+        // if (node1->getClusterId() >= 0 && node2->getClusterId() >= 0 &&
+        //     node1->getClusterId() != node2->getClusterId() && delay > 0.05)
+        //     delay -= 0.05;
+        return delay;
     }
 
     inline float getDelayByModel(float X1, float Y1, float X2, float Y2)

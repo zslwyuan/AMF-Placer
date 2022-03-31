@@ -903,7 +903,8 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite(int FFContro
                     // int succPathLen = srcNode->getLongestPathLength();
                     if (srcNode->getForwardLevel() < 0)
                         continue;
-                    float slack = (srcNode->getLatestArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
+                    float slack =
+                        (srcNode->getLatestInputArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
                     directConnectCnt += slack;
                 }
             }
@@ -1325,7 +1326,8 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite(int 
                     // int succPathLen = srcNode->getLongestPathLength();
                     if (srcNode->getForwardLevel() < 0)
                         continue;
-                    float slack = (srcNode->getLatestArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
+                    float slack =
+                        (srcNode->getLatestInputArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
                     directConnectCnt += slack;
                 }
             }
@@ -2077,7 +2079,8 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite(int FFC
                     // int succPathLen = srcNode->getLongestPathLength();
                     if (srcNode->getForwardLevel() < 0)
                         continue;
-                    float slack = (srcNode->getLatestArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
+                    float slack =
+                        (srcNode->getLatestInputArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
                     directConnectCnt += slack;
                 }
             }
@@ -2135,6 +2138,7 @@ void ParallelCLBPacker::PackingCLBSite::mapCarryRelatedCellsToSlots(PlacementInf
         {
             if (curCell->isCarry())
             {
+                carryCell = curCell;
                 auto curCarry = curCell;
                 slotMapping.Carry = curCarry;
                 mappedCells.insert(curCarry);

@@ -436,7 +436,7 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
 
         // float maxEnhanceRatio = 0;
         auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
-        float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+        // float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
         auto &cellLoc = placementInfo->getCellId2location();
         assert(cellLoc.size() == timingNodes.size());
         auto &netActualSlackPinNum = timingOptimizer->getNetActualSlackPinNum();
@@ -519,9 +519,15 @@ void WirelengthOptimizer::addPseudoNet_SlackBased(float timingWeight, double sla
                 auto sinkNode = timingNodes[sinkCellId];
                 auto sinkLoc = cellLoc[sinkCellId];
                 int succPathLen = sinkNode->getLongestPathLength();
-                float netDelay = timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
-                float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
-
+                float netDelay =
+                    timingOptimizer->getDelayByModel(sinkNode, srcNode, sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+                float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestOutputArrival() - netDelay;
+                float clockPeriod = sinkNode->getClockPeriod();
+                if (clockPeriod < 0)
+                {
+                    clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+                    std::cout << sinkCell << " has no clock setting!!\n";
+                }
                 if (slack > 0)
                     continue;
                 enhanceNetCnt++;
@@ -656,7 +662,7 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
 
     // float maxEnhanceRatio = 0;
     auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
-    float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+    // float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
     assert(cellLoc.size() == timingNodes.size());
 
     int LUTLUTPairCnt = 0;
@@ -715,8 +721,9 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
                         int succPathLen = sinkNode->getLongestPathLength();
                         if (succPathLen < longLenThr)
                             continue;
-                        float netDelay = timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
-                        float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
+                        float netDelay = timingOptimizer->getDelayByModel(sinkNode, srcNode, sinkLoc.X, sinkLoc.Y,
+                                                                          srcLoc.X, srcLoc.Y);
+                        float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestOutputArrival() - netDelay;
 
                         float curDis = getCellDistance(srcLoc, sinkLoc);
 
@@ -734,6 +741,14 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
 
                 if (targetSinkCell)
                 {
+                    unsigned int sinkCellId = targetSinkCell->getCellId();
+                    auto sinkNode = timingNodes[sinkCellId];
+                    auto sinkLoc = cellLoc[sinkCellId];
+                    float clockPeriod = sinkNode->getClockPeriod();
+                    if (clockPeriod < 0)
+                    {
+                        clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+                    }
                     PlacementInfo::PlacementUnit *succLUTPU =
                         placementInfo->getPlacementUnitByCellId(targetSinkCell->getCellId());
                     float enhanceRatio = std::pow(1 - worstSlack / clockPeriod, slackPowerFactor);
@@ -749,11 +764,9 @@ void WirelengthOptimizer::LUTLUTPairing_TimingDriven(float timingWeight, float d
                         }
                     }
 
-                    unsigned int sinkCellId = targetSinkCell->getCellId();
-                    auto sinkNode = timingNodes[sinkCellId];
-                    auto sinkLoc = cellLoc[sinkCellId];
-                    float netDelay = timingOptimizer->getDelayByModel(sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
-                    float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestArrival() - netDelay;
+                    float netDelay =
+                        timingOptimizer->getDelayByModel(sinkNode, srcNode, sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+                    float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestOutputArrival() - netDelay;
 
                     if (srcCell->getCellId() == targetCellId)
                     {

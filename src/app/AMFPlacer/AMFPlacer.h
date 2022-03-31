@@ -212,7 +212,6 @@ class AMFPlacer
         parallelCLBPacker->packCLBs(30, true);
         parallelCLBPacker->setPULocationToPackedSite();
         timingOptimizer->conductStaticTimingAnalysis();
-        timingOptimizer->conductStaticTimingAnalysis(true);
         placementInfo->checkClockUtilization(true);
         print_info("Current Total HPWL = " + std::to_string(placementInfo->updateB2BAndGetTotalHPWL()));
         placementInfo->resetLUTFFDeterminedOccupation();

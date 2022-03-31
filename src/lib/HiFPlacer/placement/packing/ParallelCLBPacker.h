@@ -918,6 +918,21 @@ class ParallelCLBPacker
                 }
             }
 
+            inline bool checkAddPU(PlacementInfo::PlacementUnit *tmpPU)
+            {
+                PackingCLBCluster *fakeCluster = new PackingCLBCluster(this);
+                if (fakeCluster->addPU(tmpPU, false))
+                {
+                    delete fakeCluster;
+                    return true;
+                }
+                else
+                {
+                    delete fakeCluster;
+                    return false;
+                }
+            }
+
             /**
              * @brief find/print the reason why the PlacementUnit fails to be added into this cluster
              *
@@ -940,6 +955,104 @@ class ParallelCLBPacker
             inline const std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> &getPUs() const
             {
                 return PUs;
+            }
+
+            inline std::set<DesignInfo::DesignCell *> getCellSet()
+            {
+                std::set<DesignInfo::DesignCell *> res;
+                res.clear();
+
+                for (auto cs : FFControlSets)
+                {
+                    for (auto FF : cs.getFFs())
+                    {
+                        if (FF)
+                        {
+                            res.insert(FF);
+                        }
+                    }
+                }
+                for (auto LUT : singleLUTs)
+                {
+                    if (LUT)
+                    {
+                        res.insert(LUT);
+                    }
+                }
+
+                for (auto LUTPair : pairedLUTs)
+                {
+                    if (LUTPair.first)
+                    {
+                        res.insert(LUTPair.first);
+                    }
+                    if (LUTPair.second)
+                    {
+                        res.insert(LUTPair.second);
+                    }
+                }
+
+                if (parentPackingCLB->getCarryCell())
+                {
+                    res.insert(parentPackingCLB->getCarryCell());
+                }
+
+                for (auto PU : PUs)
+                {
+                    // if (PU->checkHasMUX())
+                    // {
+                    //     if (auto muxMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(PU))
+                    //     {
+                    //         for (auto cell : muxMacro->getCells())
+                    //         {
+                    //             res.insert(cell);
+                    //         }
+                    //     }
+                    // }
+                    if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(PU))
+                    {
+                        if (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX7)
+                        {
+                            for (auto cell : tmpMacro->getCells())
+                            {
+                                res.insert(cell);
+                            }
+                        }
+                        else if (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_MUX8)
+                        {
+                            for (auto cell : tmpMacro->getCells())
+                            {
+                                res.insert(cell);
+                            }
+                        }
+                    }
+                }
+
+                if (parentPackingCLB->getLUTRAMMacro())
+                {
+                    for (auto cell : parentPackingCLB->getLUTRAMMacro()->getCells())
+                    {
+                        res.insert(cell);
+                    }
+                }
+
+                if (parentPackingCLB->getFixedPairedLUTs().size())
+                {
+
+                    for (auto LUTPair : parentPackingCLB->getFixedPairedLUTs())
+                    {
+                        if (LUTPair.first)
+                        {
+                            res.insert(LUTPair.first);
+                        }
+                        if (LUTPair.second)
+                        {
+                            res.insert(LUTPair.second);
+                        }
+                    }
+                }
+
+                return res;
             }
 
             inline const std::vector<PackedControlSet> &getFFControlSets() const
@@ -1424,7 +1537,7 @@ class ParallelCLBPacker
                     if (unpacked->getCell()->isVirtualCell() ||
                         timingNodes[unpacked->getCell()->getCellId()]->checkIsRegister())
                         return 0;
-                    return (timingNodes[unpacked->getCell()->getCellId()]->getLatestArrival() -
+                    return (timingNodes[unpacked->getCell()->getCellId()]->getLatestInputArrival() -
                             timingNodes[unpacked->getCell()->getCellId()]->getRequiredArrivalTime());
                 }
                 else if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
@@ -1437,7 +1550,7 @@ class ParallelCLBPacker
 
                         if (timingNodes[tmpCell->getCellId()]->checkIsRegister())
                             continue;
-                        float negativeSlack = (timingNodes[tmpCell->getCellId()]->getLatestArrival() -
+                        float negativeSlack = (timingNodes[tmpCell->getCellId()]->getLatestInputArrival() -
                                                timingNodes[tmpCell->getCellId()]->getRequiredArrivalTime());
                         if (negativeSlack > maxNegativeSlack)
                             maxNegativeSlack = negativeSlack;
@@ -1848,6 +1961,11 @@ class ParallelCLBPacker
             return CARRYChain;
         }
 
+        inline DesignInfo::DesignCell *getCarryCell()
+        {
+            return carryCell;
+        }
+
         inline PlacementInfo::PlacementMacro *getLUTRAMMacro()
         {
             return LUTRAMMacro;
@@ -2161,7 +2279,7 @@ class ParallelCLBPacker
             unsigned int srcCellId = srcCell->getCellId();
             auto srcNode = timingNodes[srcCellId];
             // int succPathLen = srcNode->getLongestPathLength();
-            float slack = (srcNode->getLatestArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
+            float slack = (srcNode->getLatestInputArrival() - srcNode->getRequiredArrivalTime()) / clockPeriod + 20;
             return slack;
         }
 
@@ -2244,6 +2362,7 @@ class ParallelCLBPacker
         bool isLUTRAMSite = false;
         PlacementInfo::PlacementMacro *CARRYChain = nullptr;
         PlacementInfo::PlacementMacro *LUTRAMMacro = nullptr;
+        DesignInfo::DesignCell *carryCell = nullptr;
         int CARRYChainSiteOffset = -1;
 
         bool debug = false;
@@ -2339,6 +2458,8 @@ class ParallelCLBPacker
      */
     void packCLBs(int packIterNum, bool doExceptionHandling, bool debug = false);
 
+    void timingDrivenDetailedPlacement(int iterId, float displacementRatio);
+
     /**
      * @brief handle the PlacementUnits that cannot be packed during the parallel procedure
      *
@@ -2365,6 +2486,11 @@ class ParallelCLBPacker
                                                                       float displacementLowerbound,
                                                                       float displacementUpperbound, float y2xRatio,
                                                                       bool clockRegionAware);
+
+    std::vector<DeviceInfo::DeviceSite *> *
+    findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCellType, float targetX, float targetY,
+                               float displacementLowerbound, float displacementUpperbound, float y2xRatio,
+                               bool clockRegionAware, float p2x, float p2y, float p3x, float p3y, int numLimit);
 
     /**
      * @brief try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into CLB
@@ -2500,6 +2626,7 @@ class ParallelCLBPacker
     std::vector<PlacementInfo::PlacementUnit *> unpackedPUsVec;
     std::map<PackingCLBSite *, PlacementInfo::PlacementUnit *> involvedPackingSite2PU;
     std::vector<PULocation> PUPoints;
+    std::vector<PackingCLBSite *> cellId2PackingSite;
 
     float y2xRatio = 1.0;
 

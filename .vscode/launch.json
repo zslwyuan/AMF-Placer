@@ -8,12 +8,12 @@
             "name": "g++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/../../Documents/AMFPlacer_build/build/AMFPlacer",
+            "program": "${workspaceFolder}/../../Documents/AMF-Placer/build/AMFPlacer",
             "args": [
-                "${workspaceFolder}/../../Documents/AMFPlacer_build/benchmarks/testConfig/optimsoc.json"
+                "${workspaceFolder}/../../Documents/AMF-Placer/benchmarks/testConfig/OpenPiton.json"
             ],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/../../Documents/AMFPlacer_build/build/",
+            "cwd": "${workspaceFolder}/../../Documents/AMF-Placer/build/",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",

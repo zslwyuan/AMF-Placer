@@ -255,19 +255,29 @@ class PlacementTimingInfo
              *
              * @return float
              */
-            inline float getLatestArrival()
+            inline float getLatestInputArrival()
             {
-                return latestArrival;
+                return latestInputArrival;
             }
 
             /**
              * @brief Set the latest arrival time to the output of this timing node
              *
-             * @param _latestArrival
+             * @param _latestInputArrival
              */
-            inline void setLatestArrival(float _latestArrival)
+            inline void setLatestInputArrival(float _latestInputArrival)
             {
-                latestArrival = _latestArrival;
+                latestInputArrival = _latestInputArrival;
+            }
+
+            inline void setLatestOutputArrival(float _latestOutputArrival)
+            {
+                latestOutputArrival = _latestOutputArrival;
+            }
+
+            inline float getLatestOutputArrival()
+            {
+                return latestOutputArrival;
             }
 
             /**
@@ -331,6 +341,19 @@ class PlacementTimingInfo
             }
 
             /**
+             * @brief Set the required arrival time
+             *
+             * @param _requiredArrival
+             */
+            inline void setInitialRequiredArrivalTime(float _requiredArrival)
+            {
+                if (clockPeriod > 0)
+                    requiredArrival = clockPeriod;
+                else
+                    requiredArrival = _requiredArrival;
+            }
+
+            /**
              * @brief Get the earliest successor node Id
              *
              * @return int
@@ -350,17 +373,40 @@ class PlacementTimingInfo
                 earliestSuccessorId = _earliestSuccessorId;
             }
 
+            inline void setClockPeriod(float _clockPeriod)
+            {
+                clockPeriod = _clockPeriod;
+            }
+
+            inline float getClockPeriod()
+            {
+                return clockPeriod;
+            }
+
+            inline void setClusterId(int _clusterId)
+            {
+                clusterId = _clusterId;
+            }
+
+            inline float getClusterId()
+            {
+                return clusterId;
+            }
+
           private:
             /**
              * @brief the pointer linked to the design element (pin or cell)
              *
              */
-            nodeType *designNode;
+            nodeType *designNode = nullptr;
             int id;
-            float latestArrival = 0.0;    // ns
+            float latestInputArrival = 0.0; // ns
+            float latestOutputArrival = 0.0;
             float requiredArrival = 10.0; // ns
+            float clockPeriod = -10;
             int slowestPredecessorId = -1;
             int earliestSuccessorId = -1;
+            int clusterId = -1;
 
             /**
              * @brief the node can have internal delay (e.g., cell delay)
@@ -575,6 +621,8 @@ class PlacementTimingInfo
          */
         std::vector<int> backTraceDelayLongestPathFromNode(int curNodeId);
 
+        bool backTraceDelayLongestPathFromNode(int curNodeId, std::vector<bool> &isCovered, std::vector<int> &resPath);
+
         /**
          * @brief Set the Longest Path Length for each TimingNode in the TimingGraph and get a sorted vector of
          * TimingNodes
@@ -593,6 +641,26 @@ class PlacementTimingInfo
                            ? (a->getForwardLevel() < b->getForwardLevel())
                            : (a->getLongestPathLength() > b->getLongestPathLength());
             });
+        }
+
+        void sortedEndpointByDelay()
+        {
+            delaySortedTimingEndpointNodes.clear();
+            for (auto id : forwardlevel2NodeIds[0])
+            {
+                if (nodes[id]->getInEdges().size() == 0)
+                    continue;
+                delaySortedTimingEndpointNodes.push_back(nodes[id]);
+            }
+            std::sort(delaySortedTimingEndpointNodes.begin(), delaySortedTimingEndpointNodes.end(),
+                      [](TimingNode *a, TimingNode *b) -> bool {
+                          return (a->getLatestInputArrival() > b->getLatestInputArrival());
+                      });
+        }
+
+        inline std::vector<TimingNode *> &getSortedTimingEndpoints()
+        {
+            return delaySortedTimingEndpointNodes;
         }
 
         /**
@@ -689,6 +757,7 @@ class PlacementTimingInfo
         PlacementTimingInfo *timingInfo = nullptr;
         std::vector<TimingNode *> nodes;
         std::vector<TimingNode *> pathLenSortedNodes;
+        std::vector<TimingNode *> delaySortedTimingEndpointNodes;
         std::vector<TimingEdge *> edges;
 
         /**
@@ -768,6 +837,9 @@ class PlacementTimingInfo
     bool verbose = false;
 
     float clockPeriod = 10.0; // ns
+
+    std::map<DesignInfo::DesignNet *, float> clockNet2Period;
+    std::map<int, float> cellId2Period;
 };
 
 #endif

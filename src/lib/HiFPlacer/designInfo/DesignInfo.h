@@ -1613,10 +1613,20 @@ class DesignInfo
     {
         if (name2Cell.find(tmpName) == name2Cell.end())
         {
-            std::cout << "cannot find:" << tmpName << "\n";
+            std::cout << "cannot find cell:" << tmpName << "\n";
             return nullptr;
         }
         return name2Cell[tmpName];
+    }
+
+    inline DesignNet *getNet(std::string &tmpName)
+    {
+        if (name2Net.find(tmpName) == name2Net.end())
+        {
+            std::cout << "cannot find net:" << tmpName << "\n";
+            return nullptr;
+        }
+        return name2Net[tmpName];
     }
 
     /**
