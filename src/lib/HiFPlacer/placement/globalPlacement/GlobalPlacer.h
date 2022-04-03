@@ -281,7 +281,8 @@ class GlobalPlacer
      * @param curIteration
      * @param timingDriven disable the evaluation of HPWL change but use check displacement change
      */
-    void macroLegalize(int curIteration, bool timingDriven = false);
+    void macroLegalize(int curIteration, bool timingDriven = false,
+                       PlacementTimingOptimizer *timingOptimizer = nullptr);
 
     void printPlacedUnits(std::ostream &os);
     void dumpLUTCoordinate();

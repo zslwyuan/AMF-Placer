@@ -431,7 +431,7 @@ void GlobalPlacer::dumpLUTCoordinate()
     }
 }
 
-void GlobalPlacer::macroLegalize(int curIteration, bool timingDriven)
+void GlobalPlacer::macroLegalize(int curIteration, bool timingDriven, PlacementTimingOptimizer *timingOptimizer)
 {
     // based on the global placement convergence progress and legalization displacement, select different strategies.
     // TODO: make this part more clean and clear for reader!

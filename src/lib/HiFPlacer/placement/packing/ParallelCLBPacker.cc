@@ -365,8 +365,31 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
             setPULocationToPackedSite();
             timingOptimizer->conductStaticTimingAnalysis();
         }
-
-        timingOptimizer->findCriticalPaths(0.9);
+        for (int i = 0; i < 10; i++)
+        {
+            cellId2PackingSite = std::vector<PackingCLBSite *>(placementInfo->getCells().size(), nullptr);
+            PUId2PackingCLBSite.clear();
+            PUId2PackingCLBSite.resize(placementInfo->getPlacementUnits().size(), nullptr);
+            for (auto packingSite : packingSites)
+            {
+                if (packingSite)
+                {
+                    if (packingSite->getDeterminedClusterInSite())
+                    {
+                        auto cellSet = packingSite->getDeterminedClusterInSite()->getCellSet();
+                        for (auto cell : cellSet)
+                        {
+                            cellId2PackingSite[cell->getCellId()] = packingSite;
+                            auto curPU = placementInfo->getPlacementUnitByCellId(cell->getCellId());
+                            PUId2PackingCLBSite[curPU->getId()] = packingSite;
+                        }
+                    }
+                }
+            }
+            timingDrivenDetailedPlacement(i, 1.0 - i / 10.0);
+            setPULocationToPackedSite();
+            timingOptimizer->conductStaticTimingAnalysis();
+        }
 
 #pragma omp parallel for schedule(dynamic)
         for (int i = 0; i < packNum; i++)
@@ -456,9 +479,8 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
             auto cellId = cellIdsInCriticalPath[orderI];
             auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
             auto curCell = designInfo->getCells()[cellId];
-
             // std::cout << curCell << " has following candidates: \n";
-            if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() && !curPU->hasRegister())
+            if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM())
             {
                 if (orderI > 0 && orderI < cellIdsInCriticalPath.size() - 1)
                 {
@@ -479,7 +501,7 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
                             DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
                             PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, 5 * displacementRatio, y2xRatio,
                             false, predSite->getCLBSite()->X(), predSite->getCLBSite()->Y(),
-                            succSite->getCLBSite()->X(), succSite->getCLBSite()->Y(), 5);
+                            succSite->getCLBSite()->X(), succSite->getCLBSite()->Y(), 10);
                         for (auto curDeviceSite : *candidateSitesToPlaceTheCell_cone)
                         {
                             if (deviceSite2PackingSite.find(curDeviceSite) == deviceSite2PackingSite.end())
@@ -530,7 +552,7 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
             auto curCell = designInfo->getCells()[cellId];
 
             // std::cout << curCell << " has following candidates: \n";
-            if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() && !curPU->hasRegister())
+            if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM())
             {
                 std::vector<DeviceInfo::DeviceSite *> *candidateSitesToPlaceTheCell = findNeiborSitesFromBinGrid(
                     DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),

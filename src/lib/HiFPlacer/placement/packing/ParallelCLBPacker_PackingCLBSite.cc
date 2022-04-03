@@ -1991,9 +1991,9 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite(int FFC
     {
         for (int j = 0; j < 2; j++)
         {
-            if ((isMuxMacro(slotMapping.FFs[i][j][0]) || isMuxMacro(slotMapping.FFs[i][j][1]) ||
-                 isMuxMacro(slotMapping.FFs[i][j][2]) || isMuxMacro(slotMapping.FFs[i][j][3])))
-                continue;
+            // if ((isMuxMacro(slotMapping.FFs[i][j][0]) || isMuxMacro(slotMapping.FFs[i][j][1]) ||
+            //      isMuxMacro(slotMapping.FFs[i][j][2]) || isMuxMacro(slotMapping.FFs[i][j][3])))
+            //     continue;
             float oriDirectInternalRoute_slack =
                 checkDirectLUTFFConnect_slack(FF2LUT, slotMapping.LUTs[i][j][0], slotMapping.FFs[i][j][0]) +
                 checkDirectLUTFFConnect_slack(FF2LUT, slotMapping.LUTs[i][j][1], slotMapping.FFs[i][j][1]) +
@@ -2003,6 +2003,20 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite(int FFC
             int optimalOption = -1;
             for (int optionId = 0; optionId < 24; optionId++)
             {
+                bool moveFFofMux = false;
+                for (int checkFFId = 0; checkFFId < 4; checkFFId++)
+                {
+                    if (FFSwapOption[optionId][checkFFId] != checkFFId)
+                    {
+                        if (isMuxMacro(slotMapping.FFs[i][j][checkFFId]))
+                        {
+                            moveFFofMux = true;
+                        }
+                    }
+                }
+                if (moveFFofMux)
+                    continue;
+
                 float newDirectInternalRoute_slack =
                     checkDirectLUTFFConnect_slack(FF2LUT, slotMapping.LUTs[i][j][0],
                                                   slotMapping.FFs[i][j][FFSwapOption[optionId][0]]) +
