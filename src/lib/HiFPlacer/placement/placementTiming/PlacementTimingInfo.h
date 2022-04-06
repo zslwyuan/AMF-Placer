@@ -837,6 +837,7 @@ class PlacementTimingInfo
     bool verbose = false;
 
     float clockPeriod = 10.0; // ns
+    bool DSPCritical = false;
 
     std::map<DesignInfo::DesignNet *, float> clockNet2Period;
     std::map<int, float> cellId2Period;

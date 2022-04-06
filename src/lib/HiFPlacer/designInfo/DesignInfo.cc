@@ -15,6 +15,7 @@
 #include "strPrint.h"
 #include "stringCheck.h"
 #include <assert.h>
+#include <queue>
 #include <regex>
 
 void DesignInfo::DesignPin::updateParentCellNetInfo()
@@ -291,6 +292,67 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
     }
 
     loadUserDefinedClusterNets();
+
+    // int DSPInLoopsCnt = 0;
+    // int coverCnt = 0;
+    // int lenThr = 10;
+    // for (auto startCell : cells)
+    // {
+    //     if (startCell->isDSP())
+    //     {
+    //         std::queue<DesignCell *> nodeQ;
+    //         std::map<DesignCell *, int> cell2Len;
+    //         std::set<DesignCell *> nodeSet;
+    //         nodeSet.clear();
+    //         nodeSet.insert(startCell);
+    //         nodeQ.push(startCell);
+    //         cell2Len[startCell] = 1;
+    //         bool loopFound = false;
+    //         int maxLen = 1;
+    //         while (nodeQ.size() && !loopFound)
+    //         {
+    //             DesignCell *curCell = nodeQ.front();
+    //             int curLen = cell2Len[curCell];
+    //             nodeQ.pop();
+    //             nodeSet.erase(curCell);
+
+    //             for (auto outputNet : curCell->getOutputNets())
+    //             {
+    //                 for (auto succPin : outputNet->getPinsBeDriven())
+    //                 {
+    //                     auto succCell = succPin->getCell();
+    //                     if (succCell && curCell != succCell)
+    //                     {
+    //                         if (succCell == startCell)
+    //                         {
+    //                             loopFound = true;
+    //                             break;
+    //                         }
+    //                         if (!succCell->isFF() && !succCell->isBRAM())
+    //                         {
+    //                             if (nodeSet.find(succCell) == nodeSet.end())
+    //                             {
+    //                                 nodeSet.insert(succCell);
+    //                                 nodeQ.push(succCell);
+    //                             }
+    //                             if (cell2Len.find(succCell) == cell2Len.end())
+    //                                 cell2Len[succCell] = curLen + 1;
+    //                             else if (curLen + 1 > cell2Len[succCell])
+    //                                 cell2Len[succCell] = curLen + 1;
+    //                             if (cell2Len[succCell] > maxLen)
+    //                                 maxLen = cell2Len[succCell];
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         coverCnt += nodeSet.size();
+    //         if (maxLen > 10)
+    //             DSPInLoopsCnt++;
+    //     }
+    // }
+
+    // print_warning("DSP in loops cnt=" + std::to_string(DSPInLoopsCnt));
 
     print_status("New Design Info Created.");
 }

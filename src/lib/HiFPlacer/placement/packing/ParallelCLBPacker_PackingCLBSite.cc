@@ -815,9 +815,9 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite(int FFContro
     {
         for (int j = 0; j < 2; j++)
         {
-            if ((isCarryMacro(slotMapping.FFs[i][j][0]) || isCarryMacro(slotMapping.FFs[i][j][1]) ||
-                 isCarryMacro(slotMapping.FFs[i][j][2]) || isCarryMacro(slotMapping.FFs[i][j][3])))
-                continue;
+            // if ((isCarryMacro(slotMapping.FFs[i][j][0]) || isCarryMacro(slotMapping.FFs[i][j][1]) ||
+            //      isCarryMacro(slotMapping.FFs[i][j][2]) || isCarryMacro(slotMapping.FFs[i][j][3])))
+            //     continue;
             float oriDirectInternalRoute_slack =
                 checkDirectLUTFFConnect_slack(FF2LUT, slotMapping.LUTs[i][j][0], slotMapping.FFs[i][j][0]) +
                 checkDirectLUTFFConnect_slack(FF2LUT, slotMapping.LUTs[i][j][1], slotMapping.FFs[i][j][1]) +
@@ -827,6 +827,20 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite(int FFContro
             int optimalOption = -1;
             for (int optionId = 0; optionId < 24; optionId++)
             {
+                bool moveFFofCarry = false;
+                for (int checkFFId = 0; checkFFId < 4; checkFFId++)
+                {
+                    if (FFSwapOption[optionId][checkFFId] != checkFFId)
+                    {
+                        if (isCarryMacro(slotMapping.FFs[i][j][checkFFId]))
+                        {
+                            moveFFofCarry = true;
+                        }
+                    }
+                }
+                if (moveFFofCarry)
+                    continue;
+
                 float newDirectInternalRoute_slack =
                     checkDirectLUTFFConnect_slack(FF2LUT, slotMapping.LUTs[i][j][0],
                                                   slotMapping.FFs[i][j][FFSwapOption[optionId][0]]) +

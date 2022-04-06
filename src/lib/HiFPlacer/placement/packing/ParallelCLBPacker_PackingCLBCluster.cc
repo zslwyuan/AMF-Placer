@@ -252,9 +252,10 @@ bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addFF(DesignInfo::Des
         }
         else
         {
+            const int orderIds[4] = {1, 3, 0, 2};
             for (unsigned int i = 0; i < FFControlSets.size(); i++)
             {
-                if (addToFFSet(curFF, i))
+                if (addToFFSet(curFF, orderIds[i]))
                     return true;
             }
         }
@@ -317,7 +318,7 @@ bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addFFGroup(std::vecto
     {
         if (enforceMainFFSlot)
         {
-            for (unsigned int i = 0; i < FFControlSets.size(); i += 2)
+            for (int i = 0; i < (int)FFControlSets.size(); i += 2)
             {
                 int anotherSetId = i - 1 + ((i % 2 == 0) ? 2 : 0);
                 if (FFControlSets[i].getFFs().size() + curFFs.size() <= 4 && FFControlSets[i].compatibleWith(CSId))
@@ -327,6 +328,7 @@ bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addFFGroup(std::vecto
                         if (!isMuxMacro || (isMuxMacro && checkNumMuxCompatibleInFFSet(i, addNum)))
                         {
                             assert(addToFFSet(curFFs, i));
+                            FFControlSets[i].setMustMainSlots();
                             return true;
                         }
                     }
@@ -335,7 +337,7 @@ bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addFFGroup(std::vecto
         }
         else
         {
-            for (unsigned int i = 0; i < FFControlSets.size(); i++)
+            for (int i = 0; i < (int)FFControlSets.size(); i++)
             {
                 int anotherSetId = i - 1 + ((i % 2 == 0) ? 2 : 0);
                 if (FFControlSets[i].getFFs().size() + curFFs.size() <= 4 && FFControlSets[i].compatibleWith(CSId))

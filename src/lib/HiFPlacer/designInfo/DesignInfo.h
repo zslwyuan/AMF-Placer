@@ -958,6 +958,10 @@ class DesignInfo
         {
             return cellType == CellType_DSP48E2;
         }
+        inline bool checkHasDSPReg()
+        {
+            return hasDSPReg;
+        }
         inline bool isIO()
         {
             return cellType == CellType_GTHE3_CHANNEL || cellType == CellType_GTHE3_COMMON ||
@@ -1093,6 +1097,11 @@ class DesignInfo
             return clockNetPtrs;
         }
 
+        inline void setHasDSPReg(bool _hasDSPReg)
+        {
+            hasDSPReg = _hasDSPReg;
+        }
+
       private:
         std::vector<DesignPin *> pinPtrs;
         std::vector<DesignPin *> inputPinPtrs;
@@ -1106,6 +1115,7 @@ class DesignInfo
         DesignCellType cellType;
         DesignCellType oriCellType;
         bool isVirtual = false;
+        bool hasDSPReg = false;
         ControlSetInfo *controlSetInfo = nullptr;
     };
 
@@ -1354,19 +1364,6 @@ class DesignInfo
     inline bool isShifter(DesignCellType cellType)
     {
         return cellType == CellType_SRL16E || cellType == CellType_SRLC32E;
-    }
-
-    /**
-     * @brief check whether the cell type is an endpoint in timing graph
-     *
-     * @param cellType a given cell type
-     * @return true
-     * @return false
-     */
-    inline bool isTimingEndPoint(DesignCellType cellType)
-    {
-        return (isFF(cellType) || isLUTRAM(cellType) || isBRAM(cellType) || isDSP(cellType) || isIO(cellType) ||
-                isClockBuffer(cellType) || isShifter(cellType));
     }
 
     /**

@@ -30,6 +30,9 @@ PlacementTimingInfo::PlacementTimingInfo(DesignInfo *designInfo, DeviceInfo *dev
     if (JSONCfg.find("ClockPeriod") != JSONCfg.end())
         clockPeriod = std::stof(JSONCfg["ClockPeriod"]);
 
+    if (JSONCfg.find("DSPCritical") != JSONCfg.end())
+        DSPCritical = JSONCfg["DSPCritical"] == "true";
+
     clockNet2Period.clear();
     cellId2Period.clear();
     for (auto pair : JSONCfg)
@@ -69,14 +72,17 @@ void PlacementTimingInfo::buildSimpleTimingGraph()
 
         if (curCell->isTimingEndPoint())
         {
-            newNode->setIsRegister();
-            if (cellId2Period.find(curCell->getCellId()) != cellId2Period.end())
+            if (!(DSPCritical && curCell->isDSP()))
             {
-                newNode->setClockPeriod(cellId2Period[curCell->getCellId()]);
-            }
-            else
-            {
-                newNode->setClockPeriod(clockPeriod);
+                newNode->setIsRegister();
+                if (cellId2Period.find(curCell->getCellId()) != cellId2Period.end())
+                {
+                    newNode->setClockPeriod(cellId2Period[curCell->getCellId()]);
+                }
+                else
+                {
+                    newNode->setClockPeriod(clockPeriod);
+                }
             }
         }
         simpleTimingGraph->insertTimingNode(newNode);
@@ -92,6 +98,8 @@ void PlacementTimingInfo::buildSimpleTimingGraph()
             assert(srcPin);
             auto curNet = srcPin->getNet();
             if (!curNet)
+                continue;
+            if (curNet->checkIsGlobalClock() || curNet->checkIsPowerNet())
                 continue;
             for (auto pinBeDriven : curNet->getPinsBeDriven())
             {

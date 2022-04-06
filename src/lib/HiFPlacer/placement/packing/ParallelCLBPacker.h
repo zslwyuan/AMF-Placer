@@ -321,9 +321,19 @@ class ParallelCLBPacker
          */
         inline bool compatibleWith(int inputCSId) const
         {
-            if (CSId == -1)
+            if (CSId == -1 || inputCSId == -1)
                 return true;
             return inputCSId == CSId;
+        }
+
+        inline void setMustMainSlots()
+        {
+            mustMainSlots = true;
+        }
+
+        inline bool isMustMainSlots()
+        {
+            return mustMainSlots;
         }
 
       private:
@@ -333,6 +343,7 @@ class ParallelCLBPacker
         DesignInfo::DesignNet *CE = nullptr;
         DesignInfo::DesignCellType FFType;
         std::vector<DesignInfo::DesignCell *> FFs;
+        bool mustMainSlots = false;
     };
 
     /**
@@ -1932,6 +1943,14 @@ class ParallelCLBPacker
             determinedClusterInSite->updateScoreInSite();
         }
 
+        inline void setDSPBRAM(DesignInfo::DesignCell *_DSPBRAMCell)
+        {
+            assert(determinedClusterInSite == nullptr);
+            assert(_DSPBRAMCell);
+            isDSPBRAMSite = true;
+            DSPBRAMCell = _DSPBRAMCell;
+        }
+
         inline bool checkIsPrePackedSite()
         {
             return isCarrySite || isLUTRAMSite;
@@ -1940,6 +1959,11 @@ class ParallelCLBPacker
         inline bool checkIsCarrySite()
         {
             return isCarrySite;
+        }
+
+        inline bool checkIsDSPBRAMSite()
+        {
+            return isDSPBRAMSite;
         }
 
         inline bool checkIsMuxSite()
@@ -1969,6 +1993,11 @@ class ParallelCLBPacker
         inline PlacementInfo::PlacementMacro *getLUTRAMMacro()
         {
             return LUTRAMMacro;
+        }
+
+        inline DesignInfo::DesignCell *getDSPBRAMCell()
+        {
+            return DSPBRAMCell;
         }
 
         inline int getCarrySiteOffset()
@@ -2360,9 +2389,11 @@ class ParallelCLBPacker
 
         bool isCarrySite = false;
         bool isLUTRAMSite = false;
+        bool isDSPBRAMSite = false;
         PlacementInfo::PlacementMacro *CARRYChain = nullptr;
         PlacementInfo::PlacementMacro *LUTRAMMacro = nullptr;
         DesignInfo::DesignCell *carryCell = nullptr;
+        DesignInfo::DesignCell *DSPBRAMCell = nullptr;
         int CARRYChainSiteOffset = -1;
 
         bool debug = false;
@@ -2458,7 +2489,9 @@ class ParallelCLBPacker
      */
     void packCLBs(int packIterNum, bool doExceptionHandling, bool debug = false);
 
-    void timingDrivenDetailedPlacement(int iterId, float displacementRatio);
+    void addDSPBRAMPackingSites();
+
+    void timingDrivenDetailedPlacement(int iterId, float displacementRatio, bool aggressive = false);
 
     /**
      * @brief handle the PlacementUnits that cannot be packed during the parallel procedure

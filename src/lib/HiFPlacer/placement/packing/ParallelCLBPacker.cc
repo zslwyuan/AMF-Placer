@@ -339,8 +339,9 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         int packNum = packingSites.size();
         placementInfo->updateElementBinGrid();
         timingOptimizer->conductStaticTimingAnalysis();
+        addDSPBRAMPackingSites();
 
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 50; i++)
         {
             cellId2PackingSite = std::vector<PackingCLBSite *>(placementInfo->getCells().size(), nullptr);
             PUId2PackingCLBSite.clear();
@@ -359,34 +360,16 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
                             PUId2PackingCLBSite[curPU->getId()] = packingSite;
                         }
                     }
-                }
-            }
-            timingDrivenDetailedPlacement(i, 1.0 - i / 20.0);
-            setPULocationToPackedSite();
-            timingOptimizer->conductStaticTimingAnalysis();
-        }
-        for (int i = 0; i < 10; i++)
-        {
-            cellId2PackingSite = std::vector<PackingCLBSite *>(placementInfo->getCells().size(), nullptr);
-            PUId2PackingCLBSite.clear();
-            PUId2PackingCLBSite.resize(placementInfo->getPlacementUnits().size(), nullptr);
-            for (auto packingSite : packingSites)
-            {
-                if (packingSite)
-                {
-                    if (packingSite->getDeterminedClusterInSite())
+                    else if (packingSite->checkIsDSPBRAMSite())
                     {
-                        auto cellSet = packingSite->getDeterminedClusterInSite()->getCellSet();
-                        for (auto cell : cellSet)
-                        {
-                            cellId2PackingSite[cell->getCellId()] = packingSite;
-                            auto curPU = placementInfo->getPlacementUnitByCellId(cell->getCellId());
-                            PUId2PackingCLBSite[curPU->getId()] = packingSite;
-                        }
+                        cellId2PackingSite[packingSite->getDSPBRAMCell()->getCellId()] = packingSite;
+                        auto curPU =
+                            placementInfo->getPlacementUnitByCellId(packingSite->getDSPBRAMCell()->getCellId());
+                        PUId2PackingCLBSite[curPU->getId()] = packingSite;
                     }
                 }
             }
-            timingDrivenDetailedPlacement(i, 1.0 - i / 10.0);
+            timingDrivenDetailedPlacement(i, 1.0 - i / 50.0);
             setPULocationToPackedSite();
             timingOptimizer->conductStaticTimingAnalysis();
         }
@@ -424,7 +407,7 @@ inline float getAngle(float v1x, float v1y, float v2x, float v2y)
     return angle;
 }
 
-void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displacementRatio)
+void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displacementRatio, bool aggressive)
 {
     print_status("ParallelCLBPacker: conducting timing-driven detailed placement.");
     auto oriCellIdsInCriticalPaths = timingOptimizer->findCriticalPaths(0.9);
@@ -439,18 +422,20 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
 
         std::vector<int> cellIdsInCriticalPath;
         PlacementInfo::PlacementUnit *lastPU = nullptr;
-
+        std::set<PlacementInfo::PlacementUnit *> PUsInCriticalPathSet;
         for (auto cellId : oriCellIdsInCriticalPath)
         {
-            if (lastPU != placementInfo->getPlacementUnitByCellId(cellId))
+            if (PUsInCriticalPathSet.find(placementInfo->getPlacementUnitByCellId(cellId)) ==
+                PUsInCriticalPathSet.end())
             {
-                lastPU = placementInfo->getPlacementUnitByCellId(cellId);
+                PUsInCriticalPathSet.insert(placementInfo->getPlacementUnitByCellId(cellId));
                 cellIdsInCriticalPath.push_back(cellId);
             }
         }
-        std::cout << "processing endpoint [" << designInfo->getCells()[cellIdsInCriticalPath[0]] << "]  with "
-                  << cellIdsInCriticalPath.size() << " nodes in path.\n";
-        bool BRAMLike = false;
+        // std::cout << "processing endpoint [" << designInfo->getCells()[cellIdsInCriticalPath[0]] << "]  with "
+        //           << cellIdsInCriticalPath.size() << " nodes in path.\n";
+
+        bool CellUnmapped = false;
         for (auto cellId : cellIdsInCriticalPath)
         {
             auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
@@ -458,29 +443,28 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
             auto curCell = designInfo->getCells()[cellId];
             if (!curPackingSite)
             {
-                BRAMLike = true;
-                std::cout << "a cell of the PU does not map to sites: " << curCell << "\n";
+                CellUnmapped = true;
+                // std::cout << "a cell of the PU does not map to sites: " << curCell << "\n";
                 break;
             }
             assert(curPackingSite);
             cellId2CandidateSites[cellId] = std::vector<PackingCLBSite *>(1, curPackingSite);
             sitesCandidates.insert(curPackingSite);
-            site2TrialCluster[curPackingSite] =
-                new PackingCLBSite::PackingCLBCluster(curPackingSite->getDeterminedClusterInSite());
+            if (!curPackingSite->checkIsDSPBRAMSite())
+                site2TrialCluster[curPackingSite] =
+                    new PackingCLBSite::PackingCLBCluster(curPackingSite->getDeterminedClusterInSite());
         }
-
-        if (BRAMLike)
+        if (CellUnmapped)
             continue;
+        // find candidate sites for each possible PU
 
-        // find candidate sites for each possible PU
-        // find candidate sites for each possible PU
         for (int orderI = cellIdsInCriticalPath.size() - 1; orderI >= 0; orderI--)
         {
             auto cellId = cellIdsInCriticalPath[orderI];
             auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
             auto curCell = designInfo->getCells()[cellId];
             // std::cout << curCell << " has following candidates: \n";
-            if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM())
+            if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() && !curPU->checkHasBRAM() && !curPU->checkHasDSP())
             {
                 if (orderI > 0 && orderI < cellIdsInCriticalPath.size() - 1)
                 {
@@ -499,8 +483,8 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
                         assert(PUId2PackingCLBSite[curPU->getId()]);
                         auto candidateSitesToPlaceTheCell_cone = findNeiborSitesFromBinGrid(
                             DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
-                            PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, 5 * displacementRatio, y2xRatio,
-                            false, predSite->getCLBSite()->X(), predSite->getCLBSite()->Y(),
+                            PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, 5.0 * displacementRatio,
+                            y2xRatio, false, predSite->getCLBSite()->X(), predSite->getCLBSite()->Y(),
                             succSite->getCLBSite()->X(), succSite->getCLBSite()->Y(), 10);
                         for (auto curDeviceSite : *candidateSitesToPlaceTheCell_cone)
                         {
@@ -538,11 +522,6 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
                     }
                 }
             }
-
-            // for (auto packingSite : cellId2CandidateSites[cellId])
-            // {
-            //     std::cout << "      " << packingSite->getCLBSite()->getName() << "\n";
-            // }
         }
 
         for (int orderI = cellIdsInCriticalPath.size() - 1; orderI >= 0; orderI--)
@@ -552,7 +531,7 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
             auto curCell = designInfo->getCells()[cellId];
 
             // std::cout << curCell << " has following candidates: \n";
-            if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM())
+            if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() && !curPU->checkHasBRAM() && !curPU->checkHasDSP())
             {
                 std::vector<DeviceInfo::DeviceSite *> *candidateSitesToPlaceTheCell = findNeiborSitesFromBinGrid(
                     DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
@@ -599,11 +578,6 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
             // {
             //     std::cout << "      " << packingSite->getCLBSite()->getName() << "\n";
             // }
-        }
-
-        for (auto pair : site2TrialCluster)
-        {
-            delete pair.second;
         }
 
         // calculate the shortest paths
@@ -670,6 +644,11 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
                 replaceCnt++;
             }
             bestEndChoice = shortestPath_LayerSite_backtrace[i][bestEndChoice];
+        }
+
+        for (auto pair : site2TrialCluster)
+        {
+            delete pair.second;
         }
     }
 
@@ -1295,7 +1274,7 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
                 float vy = tmpSite->Y() - targetY;
                 float tmpPUDis = fabs(vx) + y2xRatio * fabs(vy);
                 if (tmpPUDis > displacementLowerbound && tmpPUDis <= displacementUpperbound &&
-                    std::fabs(getAngle(vx, vy, vxCom, vyCom)) < M_PI / 8)
+                    std::fabs(getAngle(vx, vy, vxCom, vyCom)) < M_PI / 6)
                 {
                     int siteClockRegionX, siteClockRegionY;
                     placementInfo->getDeviceInfo()->getClockRegionByLocation(tmpSite->X(), targetY, siteClockRegionX,
@@ -1349,7 +1328,7 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
                         {
                             float vx = bX - targetX;
                             float vy = bY - targetY;
-                            if (std::fabs(getAngle(vx, vy, vxCom, vyCom)) < M_PI / 8)
+                            if (std::fabs(getAngle(vx, vy, vxCom, vyCom)) < M_PI / 6)
                             {
                                 overlap = true;
                             }
@@ -1680,6 +1659,112 @@ bool hasLUT62(ParallelCLBPacker::PackingCLBSite::SiteBELMapping &slots)
         }
     }
     return false;
+}
+
+void ParallelCLBPacker::addDSPBRAMPackingSites()
+{
+    for (auto &DSPBRAM_LegalSitePair : placementInfo->getPULegalSite())
+    {
+        if (auto tmpMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(DSPBRAM_LegalSitePair.first))
+        {
+            if (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_BRAM)
+            {
+                assert(tmpMacro->getCells().size() == DSPBRAM_LegalSitePair.second.size());
+                for (unsigned int i = 0; i < tmpMacro->getCells().size(); i++)
+                {
+                    auto curCell = tmpMacro->getCells()[i];
+                    auto targetSite = DSPBRAM_LegalSitePair.second[i];
+                    if (!curCell->isVirtualCell())
+                    {
+                        if (curCell->getOriCellType() == DesignInfo::CellType_RAMB36E2 ||
+                            curCell->getOriCellType() == DesignInfo::CellType_FIFO36E2)
+                        {
+                            assert(targetSite->getSiteY() % 2 == 0);
+                            PackingCLBSite *tmpPackingSite = new PackingCLBSite(
+                                placementInfo, targetSite, unchangedIterationThr, numNeighbor, deltaD, curD, maxD,
+                                PQSize, y2xRatio, HPWLWeight, PUId2PackingCLBSite);
+                            tmpPackingSite->setDSPBRAM(curCell);
+                            deviceSite2PackingSite[targetSite] = tmpPackingSite;
+                            packingSites.push_back(tmpPackingSite);
+                        }
+                        else if (curCell->getOriCellType() == DesignInfo::CellType_RAMB18E2 ||
+                                 curCell->getOriCellType() == DesignInfo::CellType_FIFO18E2)
+                        {
+                            PackingCLBSite *tmpPackingSite = new PackingCLBSite(
+                                placementInfo, targetSite, unchangedIterationThr, numNeighbor, deltaD, curD, maxD,
+                                PQSize, y2xRatio, HPWLWeight, PUId2PackingCLBSite);
+                            tmpPackingSite->setDSPBRAM(curCell);
+                            deviceSite2PackingSite[targetSite] = tmpPackingSite;
+                            packingSites.push_back(tmpPackingSite);
+                        }
+                        else
+                        {
+                            assert(false && "undefined situtation");
+                        }
+                    }
+                    else
+                    {
+                        assert(targetSite->getSiteY() % 2 == 1);
+                    }
+                }
+            }
+            else if (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_DSP)
+            {
+                assert(tmpMacro->getCells().size() == DSPBRAM_LegalSitePair.second.size());
+                for (unsigned int i = 0; i < tmpMacro->getCells().size(); i++)
+                {
+                    auto curCell = tmpMacro->getCells()[i];
+                    auto targetSite = DSPBRAM_LegalSitePair.second[i];
+                    if (!curCell->isVirtualCell())
+                    {
+                        PackingCLBSite *tmpPackingSite =
+                            new PackingCLBSite(placementInfo, targetSite, unchangedIterationThr, numNeighbor, deltaD,
+                                               curD, maxD, PQSize, y2xRatio, HPWLWeight, PUId2PackingCLBSite);
+                        tmpPackingSite->setDSPBRAM(curCell);
+                        deviceSite2PackingSite[targetSite] = tmpPackingSite;
+                        packingSites.push_back(tmpPackingSite);
+                    }
+                    else
+                    {
+                        assert(false && "there should be no virtual DSP");
+                    }
+                }
+            }
+            else
+            {
+                // assert(false && "undefined situtation");
+            }
+        }
+        else if (auto tmpUnppackedCell =
+                     dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(DSPBRAM_LegalSitePair.first))
+        {
+            assert(1 == DSPBRAM_LegalSitePair.second.size());
+            auto curCell = tmpUnppackedCell->getCell();
+            auto targetSite = DSPBRAM_LegalSitePair.second[0];
+            if (curCell->getOriCellType() == DesignInfo::CellType_RAMB18E2)
+            {
+                PackingCLBSite *tmpPackingSite =
+                    new PackingCLBSite(placementInfo, targetSite, unchangedIterationThr, numNeighbor, deltaD, curD,
+                                       maxD, PQSize, y2xRatio, HPWLWeight, PUId2PackingCLBSite);
+                tmpPackingSite->setDSPBRAM(curCell);
+                deviceSite2PackingSite[targetSite] = tmpPackingSite;
+                packingSites.push_back(tmpPackingSite);
+            }
+            else if (curCell->getOriCellType() == DesignInfo::CellType_DSP48E2)
+            {
+                PackingCLBSite *tmpPackingSite =
+                    new PackingCLBSite(placementInfo, targetSite, unchangedIterationThr, numNeighbor, deltaD, curD,
+                                       maxD, PQSize, y2xRatio, HPWLWeight, PUId2PackingCLBSite);
+                tmpPackingSite->setDSPBRAM(curCell);
+                deviceSite2PackingSite[targetSite] = tmpPackingSite;
+                packingSites.push_back(tmpPackingSite);
+            }
+            else
+            {
+                // assert(false && "undefined situtation");
+            }
+        }
+    }
 }
 
 void ParallelCLBPacker::dumpDSPBRAMPlacementTcl(std::ofstream &outfileTcl)
