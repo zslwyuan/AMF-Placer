@@ -2523,7 +2523,7 @@ class ParallelCLBPacker
     std::vector<DeviceInfo::DeviceSite *> *
     findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCellType, float targetX, float targetY,
                                float displacementLowerbound, float displacementUpperbound, float y2xRatio,
-                               bool clockRegionAware, float p2x, float p2y, float p3x, float p3y, int numLimit);
+                               bool clockRegionAware, float v1x, float v1y, float v2x, float v2y, int numLimit);
 
     /**
      * @brief try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into CLB

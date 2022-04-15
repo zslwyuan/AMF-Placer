@@ -466,9 +466,9 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
             // std::cout << curCell << " has following candidates: \n";
             if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() && !curPU->checkHasBRAM() && !curPU->checkHasDSP())
             {
+                float v1x = 0, v1y = 0, v2x = 0, v2y = 0;
                 if (orderI > 0 && orderI < cellIdsInCriticalPath.size() - 1)
                 {
-                    float v1x, v1y, v2x, v2y;
                     auto predSite = cellId2PackingSite[cellIdsInCriticalPath[orderI - 1]];
                     auto curSite = cellId2PackingSite[cellId];
                     auto succSite = cellId2PackingSite[cellIdsInCriticalPath[orderI + 1]];
@@ -477,49 +477,64 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
                     v1y = predSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
                     v2x = succSite->getCLBSite()->X() - curSite->getCLBSite()->X();
                     v2y = succSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
+                }
+                else if (orderI == 0)
+                {
+                    auto curSite = cellId2PackingSite[cellId];
+                    auto succSite = cellId2PackingSite[cellIdsInCriticalPath[orderI + 1]];
+                    assert(curSite && succSite);
+                    v1x = v2x = succSite->getCLBSite()->X() - curSite->getCLBSite()->X();
+                    v1y = v2y = succSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
+                }
+                else
+                {
+                    auto predSite = cellId2PackingSite[cellIdsInCriticalPath[orderI - 1]];
+                    auto curSite = cellId2PackingSite[cellId];
+                    assert(predSite && curSite);
+                    v1x = v2x = predSite->getCLBSite()->X() - curSite->getCLBSite()->X();
+                    v1y = v2y = predSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
+                }
 
-                    if (std::fabs(getAngle(v1x, v1y, v2x, v2y)) < M_PI / 3)
+                if (std::fabs(getAngle(v1x, v1y, v2x, v2y)) < M_PI / 3)
+                {
+                    assert(PUId2PackingCLBSite[curPU->getId()]);
+                    auto candidateSitesToPlaceTheCell_cone = findNeiborSitesFromBinGrid(
+                        DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
+                        PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, 5.0 * displacementRatio, y2xRatio,
+                        false, v1x, v1y, v2x, v2y, 10);
+                    for (auto curDeviceSite : *candidateSitesToPlaceTheCell_cone)
                     {
-                        assert(PUId2PackingCLBSite[curPU->getId()]);
-                        auto candidateSitesToPlaceTheCell_cone = findNeiborSitesFromBinGrid(
-                            DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
-                            PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, 5.0 * displacementRatio,
-                            y2xRatio, false, predSite->getCLBSite()->X(), predSite->getCLBSite()->Y(),
-                            succSite->getCLBSite()->X(), succSite->getCLBSite()->Y(), 10);
-                        for (auto curDeviceSite : *candidateSitesToPlaceTheCell_cone)
+                        if (deviceSite2PackingSite.find(curDeviceSite) == deviceSite2PackingSite.end())
+                            continue;
+                        PackingCLBSite *candidatePackingSite = deviceSite2PackingSite[curDeviceSite];
+
+                        PackingCLBSite::PackingCLBCluster *trialCluster = nullptr;
+                        if (sitesCandidates.find(candidatePackingSite) == sitesCandidates.end())
                         {
-                            if (deviceSite2PackingSite.find(curDeviceSite) == deviceSite2PackingSite.end())
-                                continue;
-                            PackingCLBSite *candidatePackingSite = deviceSite2PackingSite[curDeviceSite];
-
-                            PackingCLBSite::PackingCLBCluster *trialCluster = nullptr;
-                            if (sitesCandidates.find(candidatePackingSite) == sitesCandidates.end())
+                            if (!candidatePackingSite->getDeterminedClusterInSite())
                             {
-                                if (!candidatePackingSite->getDeterminedClusterInSite())
-                                {
-                                    auto determinedClusterInSite =
-                                        new PackingCLBSite::PackingCLBCluster(candidatePackingSite);
-                                    candidatePackingSite->setDeterminedClusterInSite(determinedClusterInSite);
-                                }
-                                trialCluster = new PackingCLBSite::PackingCLBCluster(
-                                    candidatePackingSite->getDeterminedClusterInSite());
-                                site2TrialCluster[candidatePackingSite] = trialCluster;
+                                auto determinedClusterInSite =
+                                    new PackingCLBSite::PackingCLBCluster(candidatePackingSite);
+                                candidatePackingSite->setDeterminedClusterInSite(determinedClusterInSite);
                             }
-                            else
-                            {
-                                trialCluster = site2TrialCluster[candidatePackingSite];
-                            }
-
-                            if (trialCluster->checkAddPU(curPU))
-                            {
-                                assert(trialCluster->addPU(curPU));
-                                cellId2CandidateSites[cellId].push_back(candidatePackingSite);
-                                sitesCandidates.insert(candidatePackingSite);
-                            }
-                            // }
+                            trialCluster = new PackingCLBSite::PackingCLBCluster(
+                                candidatePackingSite->getDeterminedClusterInSite());
+                            site2TrialCluster[candidatePackingSite] = trialCluster;
                         }
-                        delete candidateSitesToPlaceTheCell_cone;
+                        else
+                        {
+                            trialCluster = site2TrialCluster[candidatePackingSite];
+                        }
+
+                        if (trialCluster->checkAddPU(curPU))
+                        {
+                            assert(trialCluster->addPU(curPU));
+                            cellId2CandidateSites[cellId].push_back(candidatePackingSite);
+                            sitesCandidates.insert(candidatePackingSite);
+                        }
+                        // }
                     }
+                    delete candidateSitesToPlaceTheCell_cone;
                 }
             }
         }
@@ -633,10 +648,12 @@ void ParallelCLBPacker::timingDrivenDetailedPlacement(int iterId, float displace
 
                 auto &curCandidates = cellId2CandidateSites[curCellId];
 
+                if (!cellId2CandidateSites[curCellId][bestEndChoice]->getDeterminedClusterInSite()->checkAddPU(curPU))
+                    continue;
+
                 cellId2CandidateSites[curCellId][0]->getDeterminedClusterInSite()->removePUToConstructDetCluster(curPU);
 
                 assert(bestEndChoice < cellId2CandidateSites[curCellId].size());
-                assert(cellId2CandidateSites[curCellId][bestEndChoice]->getDeterminedClusterInSite());
                 assert(cellId2CandidateSites[curCellId][bestEndChoice]->getDeterminedClusterInSite()->addPU(curPU));
                 PUId2PackingCLBSite[curPU->getId()] = cellId2CandidateSites[curCellId][bestEndChoice];
                 placementInfo->addPUIntoClockColumn(curPU,
@@ -1220,8 +1237,8 @@ bool ParallelCLBPacker::ripUpAndLegalizae(
 std::vector<DeviceInfo::DeviceSite *> *
 ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCellType, float targetX, float targetY,
                                               float displacementLowerbound, float displacementUpperbound,
-                                              float y2xRatio, bool clockRegionAware, float p2x, float p2y, float p3x,
-                                              float p3y, int numLimit)
+                                              float y2xRatio, bool clockRegionAware, float v1x, float v1y, float v2x,
+                                              float v2y, int numLimit)
 {
     assert(displacementLowerbound < displacementUpperbound);
     // please note that the input DesignCell is only used to find the corresponding binGrid for site search.
@@ -1236,11 +1253,7 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
     int clockRegionX, clockRegionY;
     placementInfo->getDeviceInfo()->getClockRegionByLocation(targetX, targetY, clockRegionX, clockRegionY);
 
-    float v1x, v1y, v2x, v2y, vxCom, vyCom;
-    v1x = p2x - targetX;
-    v1y = p2y - targetY;
-    v2x = p3x - targetX;
-    v2y = p3y - targetY;
+    float vxCom, vyCom;
     vxCom = v1x + v2x;
     vyCom = v1y + v2y;
 

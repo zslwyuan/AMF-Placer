@@ -17,10 +17,15 @@
 #include "DesignInfo.h"
 #include "DeviceInfo.h"
 #include "PlacementInfo.h"
+#include "readZip.h"
+#include "strPrint.h"
+#include "stringCheck.h"
 #include <assert.h>
+#include <cmath>
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <queue>
 #include <set>
 #include <sstream>
 #include <string>
@@ -52,6 +57,8 @@ class InitialPacker
           cellId2PlacementUnit(placementInfo->getCellId2PlacementUnit()),
           cellId2PlacementUnitVec(placementInfo->getCellId2PlacementUnitVec()), JSONCfg(JSONCfg)
     {
+        if (JSONCfg.find("DSPCritical") != JSONCfg.end())
+            DSPCritical = JSONCfg["DSPCritical"] == "true";
     }
 
     /**
@@ -82,6 +89,7 @@ class InitialPacker
      *
      */
     void findDSPMacros();
+    void setDSPRegs(std::vector<DesignInfo::DesignCell *> &DSPTailsToBeCheckedRegisterAttr);
 
     /**
      * @brief detects LUTRAM macros and clusters the related cells into PlacementInfo::PlacementMacro
@@ -336,6 +344,7 @@ class InitialPacker
     std::map<int, PlacementInfo::PlacementUnit *> &cellId2PlacementUnit;
     std::vector<PlacementInfo::PlacementUnit *> &cellId2PlacementUnitVec;
     std::map<std::string, std::string> &JSONCfg;
+    bool DSPCritical = false;
 
     void mapCarryRelatedRouteThru(PlacementInfo::PlacementMacro *CARRYChain, DesignInfo::DesignCell *coreCell,
                                   float CARRYChainSiteOffset);

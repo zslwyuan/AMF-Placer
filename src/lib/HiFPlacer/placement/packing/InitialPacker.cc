@@ -12,12 +12,6 @@
  */
 
 #include "InitialPacker.h"
-#include "readZip.h"
-#include "strPrint.h"
-#include "stringCheck.h"
-#include <assert.h>
-#include <cmath>
-#include <queue>
 
 void InitialPacker::pack()
 {
@@ -214,6 +208,10 @@ void InitialPacker::findDSPMacros()
 
     std::vector<DesignInfo::DesignCell *> &curCellsInDesign = designInfo->getCells();
     int curNumCells = designInfo->getNumCells();
+
+    std::vector<DesignInfo::DesignCell *> DSPTailsToBeCheckedRegisterAttr;
+    DSPTailsToBeCheckedRegisterAttr.clear();
+
     for (int curCellId = 0; curCellId < curNumCells; curCellId++)
     {
         auto curCell = curCellsInDesign[curCellId];
@@ -245,6 +243,8 @@ void InitialPacker::findDSPMacros()
         std::vector<std::string> portPatterns{"ACIN[", "BCIN[", "PCIN[", "CARRYCASCIN"};
         std::vector<DesignInfo::DesignCell *> curMacroCores = BFSExpandViaSpecifiedPorts(portPatterns, curCell, false);
 
+        if (curMacroCores.size())
+            DSPTailsToBeCheckedRegisterAttr.push_back(curMacroCores[curMacroCores.size() - 1]);
         if (curMacroCores.size() <= 1)
             continue;
 
@@ -276,6 +276,11 @@ void InitialPacker::findDSPMacros()
     for (auto macro : res)
         cellInDSPMacrosCnt += macro->getCells().size();
 
+    if (DSPCritical)
+    {
+        setDSPRegs(DSPTailsToBeCheckedRegisterAttr);
+    }
+
     // std::cout << "highlight_objects -color yellow [get_cells { ";
     // for (auto macro : res)
     //     for (auto cell : macro->getCells())
@@ -285,6 +290,61 @@ void InitialPacker::findDSPMacros()
     print_info("#DSP Macro: " + std::to_string(res.size()));
     print_info("#DSP Macro Cells: " + std::to_string(cellInDSPMacrosCnt));
     print_status("DSP Macro Extracted.");
+}
+
+void InitialPacker::setDSPRegs(std::vector<DesignInfo::DesignCell *> &DSPTailsToBeCheckedRegisterAttr)
+{
+    int DSPRegCount = 0;
+
+    for (auto startCell : DSPTailsToBeCheckedRegisterAttr)
+    {
+        std::queue<DesignInfo::DesignCell *> nodeQ;
+        std::set<DesignInfo::DesignCell *> nodeSet;
+        nodeSet.clear();
+        nodeSet.insert(startCell);
+        nodeQ.push(startCell);
+        bool found = false;
+
+        while (nodeQ.size() && !found)
+        {
+            auto curNode = nodeQ.front();
+            nodeQ.pop();
+
+            for (auto outNet : curNode->getOutputNets())
+            {
+                if (!outNet)
+                    continue;
+                for (auto pin : outNet->getPinsBeDriven())
+                {
+                    auto nextCell = pin->getCell();
+                    if (nextCell)
+                    {
+                        if (nodeSet.find(nextCell) == nodeSet.end())
+                        {
+                            nodeSet.insert(nextCell);
+
+                            if (!nextCell->isTimingEndPoint())
+                                nodeQ.push(nextCell);
+                            if (nextCell->isDSP())
+                            {
+                                if (cellId2PlacementUnit[nextCell->getCellId()] !=
+                                    cellId2PlacementUnit[startCell->getCellId()])
+                                {
+                                    startCell->setHasDSPReg(true);
+                                    DSPRegCount++;
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    print_warning(std::to_string(DSPRegCount) + " DSPs have set registered.\n");
+    return;
 }
 
 void InitialPacker::findLUTRAMMacros()
