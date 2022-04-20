@@ -1,8 +1,8 @@
-faceDetect.log:274827:INFO: [Route 35-57] Estimated Timing Summary | WNS=0.262  | TNS=0.000  | WHS=0.030  | THS=0.000  |
+faceDetect.log:274827:INFO: [Route 35-57] Estimated Timing Summary | WNS=0.332  | TNS=0.000  | WHS=0.030  | THS=0.000  |
 optimsoc.log:941538:INFO: [Route 35-57] Estimated Timing Summary | WNS=-8.563 | TNS=-721613.877| WHS=0.030  | THS=0.000  |
 OpenPiton.log:629965:INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.803 | TNS=-29168.703| WHS=0.030  | THS=0.000  |
-halfsqueezenet.log:282344:INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.678 | TNS=-36.012| WHS=0.030  | THS=0.000  |
-BLSTM_midDensity.log:443776:INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.718 | TNS=-59.528| WHS=0.029  | THS=0.000  |
-digitRecognition.log:543654:INFO: [Route 35-57] Estimated Timing Summary | WNS=-4.715 | TNS=-88780.813| WHS=0.016  | THS=0.000  |
+halfsqueezenet.log:282336:INFO: [Route 35-57] Estimated Timing Summary | WNS=-1.479 | TNS=-31.165| WHS=0.030  | THS=0.000  |
+BLSTM_midDensity.log:443751:INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.703 | TNS=-65.376| WHS=0.024  | THS=0.000  |
+digitRecognition.log:543680:INFO: [Route 35-57] Estimated Timing Summary | WNS=-4.423 | TNS=-95962.809| WHS=0.016  | THS=0.000  |
 minimap_GENE.log:1397422:INFO: [Route 35-57] Estimated Timing Summary | WNS=0.024  | TNS=0.000  | WHS=0.030  | THS=0.000  |
-MemN2N.log:594278:INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.584 | TNS=-2315.042| WHS=0.029  | THS=0.000  |
+MemN2N.log:594284:INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.465 | TNS=-2238.969| WHS=0.030  | THS=0.000  |

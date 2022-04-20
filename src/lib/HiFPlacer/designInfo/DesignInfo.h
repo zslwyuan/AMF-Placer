@@ -1102,6 +1102,16 @@ class DesignInfo
             hasDSPReg = _hasDSPReg;
         }
 
+        inline void setTimingLength(int _timingLength)
+        {
+            timingLength = _timingLength;
+        }
+
+        inline int getTimingLength()
+        {
+            return timingLength;
+        }
+
       private:
         std::vector<DesignPin *> pinPtrs;
         std::vector<DesignPin *> inputPinPtrs;
@@ -1117,6 +1127,7 @@ class DesignInfo
         bool isVirtual = false;
         bool hasDSPReg = false;
         ControlSetInfo *controlSetInfo = nullptr;
+        int timingLength = 0;
     };
 
     /**

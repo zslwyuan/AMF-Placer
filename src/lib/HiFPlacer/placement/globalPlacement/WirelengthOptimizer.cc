@@ -32,6 +32,8 @@ WirelengthOptimizer::WirelengthOptimizer(PlacementInfo *placementInfo, std::map<
     {
         pin2pinEnhance = std::stof(JSONCfg["pin2pinEnhance"]);
     }
+    if (JSONCfg.find("DSPCritical") != JSONCfg.end())
+        DSPCritical = JSONCfg["DSPCritical"] == "true";
     if (JSONCfg.find("y2xRatio") != JSONCfg.end())
         y2xRatio = std::stof(JSONCfg["y2xRatio"]);
     float leftBound = placementInfo->getGlobalMinX() - 0.5;
@@ -805,6 +807,40 @@ void WirelengthOptimizer::addPseudoNet2LoctionForAllPUs(float pesudoNetWeight, b
     float minDist = 0.5;
     float powFactor = placementInfo->getProgress() * 0.5 + 0.5;
 
+    std::vector<int> netCnt(101, 0);
+
+    int netSizeThr = 1;
+    for (int PUId = 0; PUId < numPUs; PUId++)
+    {
+        auto curPU = placementInfo->getPlacementUnits()[PUId];
+
+        float curX = curPU->X();
+        int size = curPU->getNetsSetPtr()->size() / 5;
+        if (size > 100)
+            size = 100;
+        netCnt[size]++;
+    }
+
+    int highInterconnectPUCnt = 0;
+    for (int i = 100; i >= 2; i--)
+    {
+        highInterconnectPUCnt += netCnt[i];
+        if (highInterconnectPUCnt > 300)
+            break;
+        netSizeThr = i * 5;
+    }
+
+    print_info("WirelengthOptimizer: PU net pin cnt distribution (netSizeThr=" + std::to_string(netSizeThr) + "):");
+
+    for (int i = 0; i <= 100; i++)
+        std::cout << netCnt[i] << " ";
+    std::cout << "\n";
+
+    if (netSizeThr > 100)
+        netSizeThr = 128;
+    else
+        netSizeThr = 64; //+ placementInfo->getProgress() * 128;
+
     if (considerNetNum)
     {
 #pragma omp parallel sections
@@ -821,8 +857,8 @@ void WirelengthOptimizer::addPseudoNet2LoctionForAllPUs(float pesudoNetWeight, b
                         float curX = curPU->X();
                         float lastX = curPU->lastX();
                         float size = curPU->getNetsSetPtr()->size();
-                        if (size > 128)
-                            size = 128;
+                        if (size > netSizeThr)
+                            size = netSizeThr;
                         placementInfo->addPseudoNetsInPlacementInfo(
                             xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                             xSolver->solverData.objectiveVector, curPU, curX,
@@ -843,8 +879,8 @@ void WirelengthOptimizer::addPseudoNet2LoctionForAllPUs(float pesudoNetWeight, b
                         float curY = curPU->Y();
                         float lastY = curPU->lastY();
                         float size = curPU->getNetsSetPtr()->size();
-                        if (size > 128)
-                            size = 128;
+                        if (size > netSizeThr)
+                            size = netSizeThr;
                         placementInfo->addPseudoNetsInPlacementInfo(
                             ySolver->solverData.objectiveMatrixTripletList, ySolver->solverData.objectiveMatrixDiag,
                             ySolver->solverData.objectiveVector, curPU, curY,
@@ -1013,12 +1049,12 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,
                         pesudoNetWeight * std::pow(curPU->getNetsSetPtr()->size(), 1.1), y2xRatio, true, false);
-                else if (std::fabs(curPU->X() - cX) > 3)
+                else if (std::fabs(curPU->X() - cX) > 3 && !DSPCritical)
                     placementInfo->addPseudoNetsInPlacementInfo(
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,
                         pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true, false);
-                else
+                else if (!DSPCritical)
                     placementInfo->addPseudoNetsInPlacementInfo(
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,
@@ -1036,12 +1072,12 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,
                         pesudoNetWeight * std::pow(curPU->getNetsSetPtr()->size(), 1.1), y2xRatio, true, false);
-                else if ((curPU->X() - cX) > 3)
+                else if ((curPU->X() - cX) > 3 && !DSPCritical)
                     placementInfo->addPseudoNetsInPlacementInfo(
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,
                         pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true, false);
-                else if ((curPU->X() - cX) > 0)
+                else if ((curPU->X() - cX) > 0 && !DSPCritical)
                     placementInfo->addPseudoNetsInPlacementInfo(
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,
@@ -1058,12 +1094,12 @@ void WirelengthOptimizer::updatePseudoNetForClockRegion(float pesudoNetWeight)
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,
                         pesudoNetWeight * std::pow(curPU->getNetsSetPtr()->size(), 1.1), y2xRatio, true, false);
-                else if ((curPU->X() - cX) < -3)
+                else if ((curPU->X() - cX) < -3 && !DSPCritical)
                     placementInfo->addPseudoNetsInPlacementInfo(
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,
                         pesudoNetWeight * curPU->getNetsSetPtr()->size(), y2xRatio, true, false);
-                else if ((curPU->X() - cX) < 0)
+                else if ((curPU->X() - cX) < 0 && !DSPCritical)
                     placementInfo->addPseudoNetsInPlacementInfo(
                         xSolver->solverData.objectiveMatrixTripletList, xSolver->solverData.objectiveMatrixDiag,
                         xSolver->solverData.objectiveVector, curPU, cX,

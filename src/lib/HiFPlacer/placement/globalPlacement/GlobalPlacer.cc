@@ -42,6 +42,9 @@ GlobalPlacer::GlobalPlacer(PlacementInfo *placementInfo, std::map<std::string, s
         }
     }
 
+    if (JSONCfg.find("DSPCritical") != JSONCfg.end())
+        DSPCritical = JSONCfg["DSPCritical"] == "true";
+
     if (JSONCfg.find("DumpClockUtilization") != JSONCfg.end())
     {
         dumpClockUtilization = JSONCfg["DumpClockUtilization"] == "true";
@@ -211,7 +214,7 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
                 if (timingOptimizer->getEffectFactor() > 0.6)
                     timingDrivenLegalization = true;
             }
-            if (!continuePreviousIteration)
+            if (!continuePreviousIteration && !DSPCritical)
             {
                 if (i >= 8)
                 {

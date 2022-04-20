@@ -147,6 +147,8 @@ class AMFPlacer
         timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);
         globalPlacer->GlobalPlacement_fixedCLB(1, 0.0002);
 
+        placementInfo->getTimingInfo()->setDSPInnerDelay();
+
         globalPlacer->GlobalPlacement_CLBElements(std::stoi(JSON["GlobalPlacementIteration"]) / 3, false, 5, true, true,
                                                   200, timingOptimizer);
         timingOptimizer->clusterLongPathInOneClockRegion(longPathThr, 0.5);

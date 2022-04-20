@@ -407,6 +407,8 @@ class GlobalPlacer
 
     bool dumpClockUtilization = false;
 
+    bool DSPCritical = false;
+
     int macroLockedIterCnt = 0;
     std::deque<float> historyAverageDisplacement;
 

@@ -3329,6 +3329,10 @@ class PlacementInfo
         float coord_offsetY = cellY - startY;
         binIdX = static_cast<int>((coord_offsetX) / binWidth);
         binIdY = static_cast<int>((coord_offsetY) / binHeight);
+        if (binIdY < 0)
+            binIdY = 0;
+        if (binIdX < 0)
+            binIdX = 0;
     }
 
     /**

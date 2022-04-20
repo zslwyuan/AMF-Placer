@@ -497,13 +497,18 @@ void DesignInfo::loadUserDefinedClusterNets()
             for (auto tmpName : strV)
             {
                 assert(name2Cell.find(tmpName) != name2Cell.end());
-                if (userDefinedClusterCells.find(name2Cell[tmpName]) == userDefinedClusterCells.end())
+                auto curCell = name2Cell[tmpName];
+                // if (!curCell->isTimingEndPoint() && curCell->getTimingLength() < 7)
+                //     continue;
+                if (userDefinedClusterCells.find(curCell) == userDefinedClusterCells.end())
                 {
-                    userDefinedClusterCellsVec.push_back(name2Cell[tmpName]);
-                    userDefinedClusterCells.insert(name2Cell[tmpName]);
-                    allCellsInClusters.insert(name2Cell[tmpName]);
+                    userDefinedClusterCellsVec.push_back(curCell);
+                    userDefinedClusterCells.insert(curCell);
+                    allCellsInClusters.insert(curCell);
                 }
             }
+            if ((float)userDefinedClusterCellsVec.size() / (float)strV.size() < 0.8)
+                continue;
             predefinedClusters.push_back(userDefinedClusterCellsVec);
 
             bool hasDSP = false;

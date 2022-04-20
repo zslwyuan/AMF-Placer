@@ -241,9 +241,10 @@ class WirelengthOptimizer
     {
         float weight;
         int PUAId, PUBId, PinAId, PinBId;
+        float YEnhance;
 
-        _slackEnhanceTuple(float weight, int PUAId, int PUBId, int PinAId, int PinBId)
-            : weight(weight), PUAId(PUAId), PUBId(PUBId), PinAId(PinAId), PinBId(PinBId)
+        _slackEnhanceTuple(float weight, int PUAId, int PUBId, int PinAId, int PinBId, float YEnhance = 1.0)
+            : weight(weight), PUAId(PUAId), PUBId(PUBId), PinAId(PinAId), PinBId(PinBId), YEnhance(YEnhance)
         {
         }
         _slackEnhanceTuple()
@@ -359,6 +360,8 @@ class WirelengthOptimizer
      *
      */
     bool directMacroLegalize = false;
+
+    bool DSPCritical = false;
 
     float pin2pinEnhance = 5.0;
 

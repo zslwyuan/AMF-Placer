@@ -59,6 +59,24 @@ PlacementTimingInfo::PlacementTimingInfo(DesignInfo *designInfo, DeviceInfo *dev
     }
 }
 
+void PlacementTimingInfo::setDSPInnerDelay()
+{
+    if (!DSPCritical)
+        return;
+    auto &nodes = simpleTimingGraph->getNodes();
+    for (auto curCell : designInfo->getCells())
+    {
+
+        if (curCell->isDSP())
+        {
+            auto newNode = nodes[curCell->getCellId()];
+            newNode->setInnerDelay(1.3);
+        }
+    }
+
+    print_status("PlacementTimingInfo: set DSP inner delay");
+}
+
 void PlacementTimingInfo::buildSimpleTimingGraph()
 {
     print_status("PlacementTimingInfo: building simple timing graph (TimingNode is DesignCell)");
@@ -72,7 +90,19 @@ void PlacementTimingInfo::buildSimpleTimingGraph()
 
         if (curCell->isTimingEndPoint())
         {
-            if (!(DSPCritical && curCell->isDSP()))
+            if (!curCell->isDSP())
+            {
+                newNode->setIsRegister();
+                if (cellId2Period.find(curCell->getCellId()) != cellId2Period.end())
+                {
+                    newNode->setClockPeriod(cellId2Period[curCell->getCellId()]);
+                }
+                else
+                {
+                    newNode->setClockPeriod(clockPeriod);
+                }
+            }
+            else if (!DSPCritical || curCell->checkHasDSPReg())
             {
                 newNode->setIsRegister();
                 if (cellId2Period.find(curCell->getCellId()) != cellId2Period.end())
@@ -557,7 +587,12 @@ template <typename nodeType> void PlacementTimingInfo::TimingGraph<nodeType>::pr
                 int predId = inEdge->getSource()->getId();
                 float predDelay = inEdge->getSource()->getLatestInputArrival();
                 float edgeDelay = inEdge->getDelay();
-                float newDelay = predDelay + edgeDelay + inEdge->getSource()->getInnerDelay();
+                float newDelay;
+
+                if (inEdge->getSource()->getInnerDelay() < 1.0 || inEdge->getSource()->getForwardLevel() > 0)
+                    newDelay = predDelay + edgeDelay + inEdge->getSource()->getInnerDelay();
+                else
+                    newDelay = predDelay + edgeDelay;
                 if (newDelay > curNode->getLatestInputArrival())
                 {
                     curNode->setLatestInputArrival(newDelay);
@@ -654,7 +689,7 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLonge
 
 template <typename nodeType>
 bool PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLongestPathFromNode(int curNodeId,
-                                                                                   std::vector<bool> &isCovered,
+                                                                                   std::vector<int> &isCovered,
                                                                                    std::vector<int> &resPath)
 {
     int slowestPredecessorId = curNodeId;
@@ -665,7 +700,7 @@ bool PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLongestPathFromNo
         slowestPredecessorId = nodes[slowestPredecessorId]->getSlowestPredecessorId();
         resPath.push_back(slowestPredecessorId);
 
-        if (isCovered[slowestPredecessorId])
+        if (isCovered[slowestPredecessorId] > 30)
             return false;
         if (slowestPredecessorId == -1 || nodes[slowestPredecessorId]->getForwardLevel() == 0)
             break;

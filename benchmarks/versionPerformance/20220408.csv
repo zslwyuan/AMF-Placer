@@ -1,0 +1,57 @@
+ALL_OPT |||
+faceDetect | 0.332  | 0.000  |
+optimsoc | -8.563 | -721613.877|
+OpenPiton | -2.687 | -29168.703|
+halfsqueezenet | -1.109 | -31.165|
+BLSTM_midDensity | -0.703 | -65.376|
+digitRecognition | -4.423 | -95962.809|
+minimap_GENE | 0.024  | 0.000  |
+MemN2N | -2.465 | -2238.969|
+
+NO_RADAR |||
+faceDetect | 0.200  | 0.000  |
+optimsoc | -8.602 | -720110.780|
+OpenPiton | -2.962 | -32960.768|
+halfsqueezenet | -1.702 | -36.283|
+BLSTM_midDensity | -0.812 | -82.285|
+digitRecognition | -4.607 | -91767.717|
+minimap_GENE | 0.026  | 0.000  |
+MemN2N | -2.501 | -1984.683|
+
+NO_CLOCKREGION_OPT |||
+faceDetect | 0.217  | 0.000  |
+optimsoc | -6.083 | -524299.860|
+OpenPiton | -3.504 | -19445.361|
+halfsqueezenet | -3.201 | -70.627|
+BLSTM_midDensity | -0.944 | -242.269|
+digitRecognition | -4.179 | -81723.643|
+minimap_GENE | -0.403 | -32.336|
+MemN2N | -2.977 | -2676.651|
+
+NO_CRITICALPATH_GP_OPT |||
+faceDetect | 0.438  | 0.000  |
+optimsoc | -8.502 | -802159.368|
+OpenPiton | -3.779 | -34387.820|
+halfsqueezenet | -2.943 | -87.329|
+BLSTM_midDensity | -0.704 | -91.104|
+digitRecognition | -5.572 | -89743.466|
+minimap_GENE | -0.478 | -76.441|
+MemN2N | -2.462 | -1811.187|
+
+NO_PATTERN_GUIDE |||
+faceDetect | -1.116 | -1.116 |
+OpenPiton | -4.696 | -31236.130|
+halfsqueezenet | -1.634 | -34.925|
+BLSTM_midDensity | -0.704 | -59.994|
+digitRecognition | -4.976 | -83821.025|
+minimap_GENE | -0.397 | -90.141|
+MemN2N | -6.095 | -15738.040|
+
+NO_ALL |||
+faceDetect | 0.287  | 0.000  |
+OpenPiton | -3.868 | -50051.563|
+halfsqueezenet | -1.160 | -21.988|
+BLSTM_midDensity | -0.869 | -259.911|
+digitRecognition | -6.354 | -101967.024|
+minimap_GENE | -0.929 | -1115.245|
+MemN2N.log | -2.543 | -1915.161|

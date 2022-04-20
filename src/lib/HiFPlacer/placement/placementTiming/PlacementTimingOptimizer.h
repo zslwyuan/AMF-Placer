@@ -41,12 +41,12 @@ class PlacementTimingOptimizer
     void propogateArrivalTime();
     std::vector<int> findCriticalPath();
     std::vector<std::vector<int>> findCriticalPaths(float criticalRatio);
+    float getWorstSlackOfCell(DesignInfo::DesignCell *srcCell);
     float conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
     void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,
                                                            float targetY);
     void setPinsLocation();
     void clusterLongPathInOneClockRegion(int pathLenThr, float clusterThrRatio);
-    void moveDriverIntoBetterClockRegion(int pathLenThr, float clusterThrRatio);
     void dumpClockRegionClusters();
     void stretchClockRegionColumns();
 
@@ -209,6 +209,7 @@ class PlacementTimingOptimizer
 
     bool verbose = false;
     float y2xRatio = 1;
+    bool DSPCritical = false;
 
     inline float getDis(float x1, float y1, float x2, float y2)
     {

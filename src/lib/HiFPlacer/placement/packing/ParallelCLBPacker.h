@@ -2491,8 +2491,8 @@ class ParallelCLBPacker
 
     void addDSPBRAMPackingSites();
 
-    void timingDrivenDetailedPlacement(int iterId, float displacementRatio, bool aggressive = false);
-
+    int timingDrivenDetailedPlacement_shortestPath(int iterId, float displacementRatio);
+    int timingDrivenDetailedPlacement_swap(int iterId);
     /**
      * @brief handle the PlacementUnits that cannot be packed during the parallel procedure
      *

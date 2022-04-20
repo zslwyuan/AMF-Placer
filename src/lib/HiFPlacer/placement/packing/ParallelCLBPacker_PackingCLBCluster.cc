@@ -531,7 +531,8 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::updateScoreInSite()
         }
     }
 
-    scoreInSite = totalCellNum * 0.45 + 0.05 * totalLen + 0.5 * totalConnectivityScore - HPWLWeight * HPWLChange;
+    scoreInSite = totalCellNum * 0.45 + 0.05 * totalLen + 0.5 * totalConnectivityScore - HPWLWeight * HPWLChange -
+                  0.2 * (singleLUTs.size() + pairedLUTs.size());
 }
 
 void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite(
@@ -575,7 +576,8 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScor
         }
     }
 
-    scoreInSite = totalCellNum * 0.45 + 0.05 * totalLen + 0.5 * totalConnectivityScore - HPWLWeight * HPWLChange;
+    scoreInSite = totalCellNum * 0.45 + 0.05 * totalLen + 0.5 * totalConnectivityScore - HPWLWeight * HPWLChange -
+                  0.2 * (singleLUTs.size() + pairedLUTs.size());
 }
 
 bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPU(PlacementInfo::PlacementUnit *tmpPU, bool allowOverlap)
@@ -613,6 +615,14 @@ bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPU(PlacementInfo::
         {
             if (parentPackingCLB->getCLBSite()->getSiteType() == "SLICEM")
                 return false;
+        }
+        else if (tmpMacro->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_LUTFFPair)
+        {
+            if (tmpMacro->getCells()[0]->isLUT6())
+            {
+                if (tmpMacro->getCells()[0]->getTimingLength() > 10)
+                    enforceMainFF = true;
+            }
         }
     }
 
