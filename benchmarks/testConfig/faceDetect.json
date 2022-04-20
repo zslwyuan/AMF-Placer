@@ -42,6 +42,7 @@
     "y2xRatio": "0.4",
     "ClusterPlacerVerbose": "false",
     "GlobalPlacerVerbose": "false",
+    "DSPCritical": "true",
     // "SpreaderSimpleExpland": "true",
     // "pseudoNetWeightConsiderNetNum" : "false",
     // "disableSpreadingConvergeRatio" : "true",
