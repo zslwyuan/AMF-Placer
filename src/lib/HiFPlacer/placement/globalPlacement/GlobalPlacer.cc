@@ -166,10 +166,11 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
             if (timingOptimizer->getEffectFactor() > 0.5)
                 placementInfo->enhanceRiskyClockNet();
             placementInfo->enhanceHighFanoutNet();
-        }
 
-        if (timingOptimizer)
             timingOptimizer->conductStaticTimingAnalysis();
+            if (timingOptimizer->getEffectFactor() > 1)
+                timingDrivenDetailedPlacement_shortestPath_intermediate(timingOptimizer);
+        }
 
         // lowerBound: Quadratic Programming based Wirelength Optimization
         lowerBoundIterNum = (placementInfo->getProgress() < 0.965 && !macroCloseToSite) ? 2 : 2;
@@ -1166,4 +1167,165 @@ void GlobalPlacer::dumpBRAMCoordinate(bool enforced)
             print_status("GlobalPlacer: dumped coordinate archieve to: " + dumpFile);
         }
     }
+}
+
+int GlobalPlacer::timingDrivenDetailedPlacement_shortestPath_intermediate(PlacementTimingOptimizer *timingOptimizer)
+{
+    float range = 0.75;
+    print_status("ParallelCLBPacker: conducting timing-driven detailed placement based on shortest path.");
+    auto oriCellIdsInCriticalPaths = timingOptimizer->findCriticalPaths(0.9);
+    std::set<PlacementInfo::PlacementUnit *> PUsTouched;
+    PUsTouched.clear();
+    std::vector<PlacementInfo::Location> &cellLoc = placementInfo->getCellId2location();
+
+    int replaceCnt = 0;
+    for (auto oriCellIdsInCriticalPath : oriCellIdsInCriticalPaths)
+    {
+        std::map<int, std::vector<PlacementInfo::Location>> cellId2CandidateLocation;
+        cellId2CandidateLocation.clear();
+
+        std::vector<int> cellIdsInCriticalPath;
+        PlacementInfo::PlacementUnit *lastPU = nullptr;
+        std::set<PlacementInfo::PlacementUnit *> PUsInCriticalPathSet;
+        for (auto cellId : oriCellIdsInCriticalPath)
+        {
+            if (PUsInCriticalPathSet.find(placementInfo->getPlacementUnitByCellId(cellId)) ==
+                PUsInCriticalPathSet.end())
+            {
+                PUsInCriticalPathSet.insert(placementInfo->getPlacementUnitByCellId(cellId));
+                cellIdsInCriticalPath.push_back(cellId);
+            }
+        }
+
+        bool CellUnmapped = false;
+        for (auto cellId : cellIdsInCriticalPath)
+        {
+            auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
+
+            cellId2CandidateLocation[cellId] = std::vector<PlacementInfo::Location>(1, cellLoc[cellId]);
+        }
+
+        for (int orderI = cellIdsInCriticalPath.size() - 1; orderI >= 0; orderI--)
+        {
+            auto cellId = cellIdsInCriticalPath[orderI];
+            auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
+
+            if (PUsTouched.find(curPU) != PUsTouched.end())
+            {
+                continue;
+            }
+            // std::cout << curCell << " has following candidates: \n";
+            if (!curPU->isFixed() && !curPU->isLocked() && !curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() &&
+                !curPU->checkHasBRAM() && !curPU->checkHasDSP())
+            {
+                auto curX = cellLoc[cellId].X;
+                auto curY = cellLoc[cellId].Y;
+                for (float cX = curX - 1.0 * range; cX < curX + 1.1 * range; cX += 0.5 * range)
+                {
+                    for (float cY = curY - 2.0 * range; cY < curY + 2.1 * range; cY += 1 * range)
+                    {
+                        if (std::fabs(cX - curX) + std::fabs(cY - curY) < 0.1)
+                            continue;
+                        PlacementInfo::Location newLoc;
+                        newLoc.X = cX;
+                        newLoc.Y = cY;
+                        cellId2CandidateLocation[cellId].push_back(newLoc);
+                    }
+                }
+            }
+        }
+        for (int orderI = cellIdsInCriticalPath.size() - 1; orderI >= 0; orderI--)
+        {
+            auto cellId = cellIdsInCriticalPath[orderI];
+            auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
+            PUsTouched.insert(curPU);
+        }
+        // calculate the shortest paths
+        std::vector<std::vector<float>> shortestPath_LayerSite;
+        std::vector<std::vector<int>> shortestPath_LayerSite_backtrace;
+        shortestPath_LayerSite.push_back(
+            std::vector<float>(cellId2CandidateLocation[cellIdsInCriticalPath[0]].size(), 0.0));
+        shortestPath_LayerSite_backtrace.push_back(
+            std::vector<int>(cellId2CandidateLocation[cellIdsInCriticalPath[0]].size(), -1));
+
+        int bestEndChoice = -1;
+        float bestChoiceDelay = 100000;
+
+        for (int i = 1; i < cellIdsInCriticalPath.size(); i++)
+        {
+            auto predCell = cellIdsInCriticalPath[i - 1];
+            auto curCell = cellIdsInCriticalPath[i];
+            auto &predCandidates = cellId2CandidateLocation[predCell];
+            auto &curCandidates = cellId2CandidateLocation[curCell];
+            shortestPath_LayerSite.push_back(std::vector<float>(cellId2CandidateLocation[curCell].size(), 100000.0));
+            shortestPath_LayerSite_backtrace.push_back(std::vector<int>(cellId2CandidateLocation[curCell].size(), -1));
+
+            for (int j = 0; j < predCandidates.size(); j++)
+            {
+                for (int k = 0; k < curCandidates.size(); k++)
+                {
+                    float predX = predCandidates[j].X, predY = predCandidates[j].Y;
+                    float curX = curCandidates[k].X, curY = curCandidates[k].Y;
+
+                    float delay = timingOptimizer->getDelayByModel(predX, predY, curX, curY);
+
+                    if (shortestPath_LayerSite[i][k] > shortestPath_LayerSite[i - 1][j] + delay)
+                    {
+                        shortestPath_LayerSite[i][k] = shortestPath_LayerSite[i - 1][j] + delay;
+                        shortestPath_LayerSite_backtrace[i][k] = j;
+
+                        if (i == cellIdsInCriticalPath.size() - 1)
+                        {
+                            if (shortestPath_LayerSite[i][k] < bestChoiceDelay)
+                            {
+                                bestChoiceDelay = shortestPath_LayerSite[i][k];
+                                bestEndChoice = k;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        for (int i = shortestPath_LayerSite.size() - 1; i >= 0; i--)
+        {
+            if (bestEndChoice)
+            {
+                auto curCellId = cellIdsInCriticalPath[i];
+                auto curPU = placementInfo->getPlacementUnitByCellId(curCellId);
+                auto curCell = placementInfo->getCells()[curCellId];
+
+                auto &curCandidates = cellId2CandidateLocation[curCellId];
+                if (!curPU->isFixed() && !curPU->isLocked() && !curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() &&
+                    !curPU->checkHasBRAM() && !curPU->checkHasDSP())
+                {
+                    if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
+                    {
+                        float offsetX_InMacro = curMacro->getCellOffsetXInMacro(curCell),
+                              offsetY_InMacro = curMacro->getCellOffsetYInMacro(curCell);
+
+                        float resX = curCandidates[bestEndChoice].X - offsetX_InMacro;
+                        float resY = curCandidates[bestEndChoice].Y - offsetY_InMacro;
+
+                        placementInfo->legalizeXYInArea(curPU, resX, resY);
+                        curPU->setAnchorLocationAndForgetTheOriginalOne(resX, resY);
+                    }
+                    else
+                    {
+                        placementInfo->legalizeXYInArea(curPU, curCandidates[bestEndChoice].X,
+                                                        curCandidates[bestEndChoice].Y);
+                        curPU->setAnchorLocationAndForgetTheOriginalOne(curCandidates[bestEndChoice].X,
+                                                                        curCandidates[bestEndChoice].Y);
+                    }
+                    replaceCnt++;
+                }
+            }
+            bestEndChoice = shortestPath_LayerSite_backtrace[i][bestEndChoice];
+        }
+    }
+
+    placementInfo->updateElementBinGrid();
+    print_status("ParallelCLBPacker: conducted timing-driven detailed placement (shortest path) and " +
+                 std::to_string(replaceCnt) + " PlacementUnits are replaced.");
+    return replaceCnt;
 }

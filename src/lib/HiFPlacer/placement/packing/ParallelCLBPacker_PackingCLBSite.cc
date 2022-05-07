@@ -522,6 +522,7 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite()
     mappedCells = best_mappedCells;
     mappedLUTs = best_mappedLUTs;
     mappedFFs = best_mappedFFs;
+    moveLUTToLUT6Slot();
 }
 
 void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCarrySite(int FFControlSetOrderId)
@@ -1659,6 +1660,7 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite()
     mappedCells = best_mappedCells;
     mappedLUTs = best_mappedLUTs;
     mappedFFs = best_mappedFFs;
+    moveLUTToLUT6Slot();
 }
 
 void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite(int FFControlSetOrderId)
@@ -2137,6 +2139,29 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite()
     mappedCells = best_mappedCells;
     mappedLUTs = best_mappedLUTs;
     mappedFFs = best_mappedFFs;
+    moveLUTToLUT6Slot();
+}
+
+void ParallelCLBPacker::PackingCLBSite::moveLUTToLUT6Slot()
+{
+    if (!determinedClusterInSite)
+        return;
+
+    for (int i = 0; i < 2; i++)
+    {
+        for (int k = 0; k < 4; k++)
+        {
+            if (!slotMapping.LUTs[i][0][k] && slotMapping.LUTs[i][1][k])
+            {
+                if (determinedClusterInSite->getSingleLUTs().find(slotMapping.LUTs[i][1][k]) !=
+                    determinedClusterInSite->getSingleLUTs().end())
+                {
+                    slotMapping.LUTs[i][0][k] = slotMapping.LUTs[i][1][k];
+                    slotMapping.LUTs[i][1][k] = nullptr;
+                }
+            }
+        }
+    }
 }
 
 void ParallelCLBPacker::PackingCLBSite::mapLUTRAMRelatedCellsToSlots(PlacementInfo::PlacementMacro *_LUTRAMMacro)

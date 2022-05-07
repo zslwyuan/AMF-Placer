@@ -198,6 +198,8 @@ class GlobalPlacer
         return WLOptimizer;
     }
 
+    int timingDrivenDetailedPlacement_shortestPath_intermediate(PlacementTimingOptimizer *timingOptimizer);
+
   private:
     PlacementInfo *placementInfo;
 

@@ -117,16 +117,16 @@ std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float 
     {
         if (isCovered[curEndpoint->getId()])
             continue;
-        if (curEndpoint->getLatestInputArrival() / timingGraph->getClockPeriod() < 0.9)
+        if (curEndpoint->getLatestInputArrival() / timingGraph->getClockPeriod() < criticalRatio)
             break;
         std::vector<int> resPath;
         bool findSuccessfully =
             timingGraph->backTraceDelayLongestPathFromNode(curEndpoint->getId(), isCovered, resPath);
         if (findSuccessfully)
         {
-            std::cout << "find endpoint [" << curEndpoint->getDesignNode()
-                      << "] delay=" << curEndpoint->getLatestInputArrival() << " with " << resPath.size()
-                      << " nodes in path.\n";
+            // std::cout << "find endpoint [" << curEndpoint->getDesignNode()
+            //           << "] delay=" << curEndpoint->getLatestInputArrival() << " with " << resPath.size()
+            //           << " nodes in path.\n";
             resPaths.push_back(resPath);
             for (auto cellId : resPath)
             {

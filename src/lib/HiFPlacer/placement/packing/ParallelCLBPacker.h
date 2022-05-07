@@ -2185,6 +2185,8 @@ class ParallelCLBPacker
             return false;
         }
 
+        void moveLUTToLUT6Slot();
+
         /**
          * @brief finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site
          *
@@ -2491,6 +2493,7 @@ class ParallelCLBPacker
 
     void addDSPBRAMPackingSites();
 
+    int timingDrivenDetailedPlacement_shortestPath_intermediate();
     int timingDrivenDetailedPlacement_shortestPath(int iterId, float displacementRatio);
     int timingDrivenDetailedPlacement_swap(int iterId);
     /**
