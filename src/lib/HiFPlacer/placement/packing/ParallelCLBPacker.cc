@@ -376,7 +376,7 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         timingOptimizer->conductStaticTimingAnalysis();
         addDSPBRAMPackingSites();
         int replaceCnt = 1000;
-        for (int i = 0; i < 100 && replaceCnt > 5; i++)
+        for (int i = 0; i < 120 && replaceCnt > 5; i++)
         {
             cellId2PackingSite = std::vector<PackingCLBSite *>(placementInfo->getCells().size(), nullptr);
             PUId2PackingCLBSite.clear();
@@ -404,7 +404,12 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
                     }
                 }
             }
-            replaceCnt = timingDrivenDetailedPlacement_shortestPath(i, 1.0 - i / 105.0);
+            i++;
+            if (i >= 100)
+                replaceCnt = timingDrivenDetailedPlacement_shortestPath(i, 1.0 - 100.0 / 105.0);
+            else
+                replaceCnt = timingDrivenDetailedPlacement_shortestPath(i, 1.0 - i / 105.0);
+
             setPULocationToPackedSite();
             timingOptimizer->conductStaticTimingAnalysis();
         }
@@ -530,125 +535,127 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_shortestPath(int iterId, fl
 
         for (int siteCandidateLimit = 1; siteCandidateLimit <= 10; siteCandidateLimit++)
         {
-            if (5.0 * displacementRatio > 0.3)
+            float displacementThr = 5.0 * displacementRatio;
+            if (displacementThr < 1)
+                displacementThr = 1;
+            for (int orderI = cellIdsInCriticalPath.size() - 1; orderI >= 0; orderI--)
             {
-                for (int orderI = cellIdsInCriticalPath.size() - 1; orderI >= 0; orderI--)
+                auto cellId = cellIdsInCriticalPath[orderI];
+                auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
+                if (PUsTouched.find(curPU) != PUsTouched.end())
                 {
-                    auto cellId = cellIdsInCriticalPath[orderI];
-                    auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
-                    if (PUsTouched.find(curPU) != PUsTouched.end())
+                    continue;
+                }
+                auto curCell = designInfo->getCells()[cellId];
+                // std::cout << curCell << " has following candidates: \n";
+                if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() && !curPU->checkHasBRAM() &&
+                    !curPU->checkHasDSP())
+                {
+                    float v1x = 0, v1y = 0, v2x = 0, v2y = 0;
+                    if (orderI > 0 && orderI < cellIdsInCriticalPath.size() - 1)
                     {
-                        continue;
+                        auto predSite = cellId2PackingSite[cellIdsInCriticalPath[orderI - 1]];
+                        int predSiteOrderId = orderI - 1;
+                        auto curSite = cellId2PackingSite[cellId];
+                        auto succSite = cellId2PackingSite[cellIdsInCriticalPath[orderI + 1]];
+                        int succSiteOrderId = orderI + 1;
+                        assert(predSite && curSite && succSite);
+                        // while (curSite == predSite && predSiteOrderId - 1 >= 0)
+                        // {
+                        //     predSiteOrderId--;
+                        //     predSite = cellId2PackingSite[cellIdsInCriticalPath[predSiteOrderId]];
+                        // }
+                        // while (curSite == succSite && succSiteOrderId + 1 <= cellIdsInCriticalPath.size() - 1)
+                        // {
+                        //     succSiteOrderId++;
+                        //     succSite = cellId2PackingSite[cellIdsInCriticalPath[succSiteOrderId]];
+                        // }
+                        v1x = predSite->getCLBSite()->X() - curSite->getCLBSite()->X();
+                        v1y = predSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
+                        v2x = succSite->getCLBSite()->X() - curSite->getCLBSite()->X();
+                        v2y = succSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
                     }
-                    auto curCell = designInfo->getCells()[cellId];
-                    // std::cout << curCell << " has following candidates: \n";
-                    if (!curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() && !curPU->checkHasBRAM() &&
-                        !curPU->checkHasDSP())
+                    else if (orderI == 0)
                     {
-                        float v1x = 0, v1y = 0, v2x = 0, v2y = 0;
-                        if (orderI > 0 && orderI < cellIdsInCriticalPath.size() - 1)
+                        auto curSite = cellId2PackingSite[cellId];
+                        auto succSite = cellId2PackingSite[cellIdsInCriticalPath[orderI + 1]];
+                        assert(curSite && succSite);
+                        int succSiteOrderId = orderI + 1;
+                        while (curSite == succSite && succSiteOrderId + 1 <= cellIdsInCriticalPath.size() - 1)
                         {
-                            auto predSite = cellId2PackingSite[cellIdsInCriticalPath[orderI - 1]];
-                            int predSiteOrderId = orderI - 1;
-                            auto curSite = cellId2PackingSite[cellId];
-                            auto succSite = cellId2PackingSite[cellIdsInCriticalPath[orderI + 1]];
-                            int succSiteOrderId = orderI + 1;
-                            assert(predSite && curSite && succSite);
-                            // while (curSite == predSite && predSiteOrderId - 1 >= 0)
-                            // {
-                            //     predSiteOrderId--;
-                            //     predSite = cellId2PackingSite[cellIdsInCriticalPath[predSiteOrderId]];
-                            // }
-                            // while (curSite == succSite && succSiteOrderId + 1 <= cellIdsInCriticalPath.size() - 1)
-                            // {
-                            //     succSiteOrderId++;
-                            //     succSite = cellId2PackingSite[cellIdsInCriticalPath[succSiteOrderId]];
-                            // }
-                            v1x = predSite->getCLBSite()->X() - curSite->getCLBSite()->X();
-                            v1y = predSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
-                            v2x = succSite->getCLBSite()->X() - curSite->getCLBSite()->X();
-                            v2y = succSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
+                            succSiteOrderId++;
+                            succSite = cellId2PackingSite[cellIdsInCriticalPath[succSiteOrderId]];
                         }
-                        else if (orderI == 0)
+                        v1x = v2x = succSite->getCLBSite()->X() - curSite->getCLBSite()->X();
+                        v1y = v2y = succSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
+                    }
+                    else
+                    {
+                        auto predSite = cellId2PackingSite[cellIdsInCriticalPath[orderI - 1]];
+                        auto curSite = cellId2PackingSite[cellId];
+                        assert(predSite && curSite);
+                        int predSiteOrderId = orderI - 1;
+                        while (curSite == predSite && predSiteOrderId - 1 >= 0)
                         {
-                            auto curSite = cellId2PackingSite[cellId];
-                            auto succSite = cellId2PackingSite[cellIdsInCriticalPath[orderI + 1]];
-                            assert(curSite && succSite);
-                            int succSiteOrderId = orderI + 1;
-                            while (curSite == succSite && succSiteOrderId + 1 <= cellIdsInCriticalPath.size() - 1)
-                            {
-                                succSiteOrderId++;
-                                succSite = cellId2PackingSite[cellIdsInCriticalPath[succSiteOrderId]];
-                            }
-                            v1x = v2x = succSite->getCLBSite()->X() - curSite->getCLBSite()->X();
-                            v1y = v2y = succSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
+                            predSiteOrderId--;
+                            predSite = cellId2PackingSite[cellIdsInCriticalPath[predSiteOrderId]];
                         }
-                        else
-                        {
-                            auto predSite = cellId2PackingSite[cellIdsInCriticalPath[orderI - 1]];
-                            auto curSite = cellId2PackingSite[cellId];
-                            assert(predSite && curSite);
-                            int predSiteOrderId = orderI - 1;
-                            while (curSite == predSite && predSiteOrderId - 1 >= 0)
-                            {
-                                predSiteOrderId--;
-                                predSite = cellId2PackingSite[cellIdsInCriticalPath[predSiteOrderId]];
-                            }
-                            v1x = v2x = predSite->getCLBSite()->X() - curSite->getCLBSite()->X();
-                            v1y = v2y = predSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
-                        }
-                        if (std::fabs(v1x) + std::fabs(v1y) + std::fabs(v2x) + std::fabs(v2y) < 0.1)
-                            continue;
-                        if (std::fabs(getAngle(v1x, v1y, v2x, v2y)) < M_PI / 3)
-                        {
-                            assert(PUId2PackingCLBSite[curPU->getId()]);
-                            auto candidateSitesToPlaceTheCell_cone = findNeiborSitesFromBinGrid(
-                                DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
-                                PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, 5.0 * displacementRatio,
-                                y2xRatio, false, v1x, v1y, v2x, v2y, 10);
-                            candidateSitesToPlaceTheCell_cone->resize(siteCandidateLimit);
-                            for (auto curDeviceSite : *candidateSitesToPlaceTheCell_cone)
-                            {
-                                if (deviceSite2PackingSite.find(curDeviceSite) == deviceSite2PackingSite.end())
-                                    continue;
-                                PackingCLBSite *candidatePackingSite = deviceSite2PackingSite[curDeviceSite];
+                        v1x = v2x = predSite->getCLBSite()->X() - curSite->getCLBSite()->X();
+                        v1y = v2y = predSite->getCLBSite()->Y() - curSite->getCLBSite()->Y();
+                    }
+                    if (std::fabs(v1x) + std::fabs(v1y) + std::fabs(v2x) + std::fabs(v2y) < 0.1)
+                        continue;
+                    if (std::fabs(getAngle(v1x, v1y, v2x, v2y)) < M_PI / 2)
+                    {
+                        assert(PUId2PackingCLBSite[curPU->getId()]);
+                        auto candidateSitesToPlaceTheCell_cone = findNeiborSitesFromBinGrid(
+                            DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
+                            PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, displacementThr, y2xRatio, false,
+                            v1x, v1y, v2x, v2y, 20);
 
-                                bool duplicate = false;
-                                for (auto existCandidate : cellId2CandidateSites[cellId])
-                                {
-                                    if (existCandidate == candidatePackingSite)
-                                        duplicate = true;
-                                }
-                                if (duplicate)
-                                    continue;
-                                PackingCLBSite::PackingCLBCluster *trialCluster = nullptr;
-                                if (sitesCandidates.find(candidatePackingSite) == sitesCandidates.end())
-                                {
-                                    if (!candidatePackingSite->getDeterminedClusterInSite())
-                                    {
-                                        auto determinedClusterInSite =
-                                            new PackingCLBSite::PackingCLBCluster(candidatePackingSite);
-                                        candidatePackingSite->setDeterminedClusterInSite(determinedClusterInSite);
-                                    }
-                                    trialCluster = new PackingCLBSite::PackingCLBCluster(
-                                        candidatePackingSite->getDeterminedClusterInSite());
-                                    site2TrialCluster[candidatePackingSite] = trialCluster;
-                                }
-                                else
-                                {
-                                    trialCluster = site2TrialCluster[candidatePackingSite];
-                                }
-
-                                if (trialCluster->checkAddPU(curPU))
-                                {
-                                    assert(trialCluster->addPU(curPU));
-                                    cellId2CandidateSites[cellId].push_back(candidatePackingSite);
-                                    sitesCandidates.insert(candidatePackingSite);
-                                }
-                                // }
+                        for (auto curDeviceSite : *candidateSitesToPlaceTheCell_cone)
+                        {
+                            if (deviceSite2PackingSite.find(curDeviceSite) == deviceSite2PackingSite.end())
+                                continue;
+                            PackingCLBSite *candidatePackingSite = deviceSite2PackingSite[curDeviceSite];
+                            if (cellId2CandidateSites[cellId].size() >= siteCandidateLimit)
+                                break;
+                            bool duplicate = false;
+                            for (auto existCandidate : cellId2CandidateSites[cellId])
+                            {
+                                if (existCandidate == candidatePackingSite)
+                                    duplicate = true;
                             }
-                            delete candidateSitesToPlaceTheCell_cone;
+                            if (duplicate)
+                                continue;
+                            PackingCLBSite::PackingCLBCluster *trialCluster = nullptr;
+                            if (sitesCandidates.find(candidatePackingSite) == sitesCandidates.end())
+                            {
+                                if (!candidatePackingSite->getDeterminedClusterInSite())
+                                {
+                                    auto determinedClusterInSite =
+                                        new PackingCLBSite::PackingCLBCluster(candidatePackingSite);
+                                    candidatePackingSite->setDeterminedClusterInSite(determinedClusterInSite);
+                                }
+                                trialCluster = new PackingCLBSite::PackingCLBCluster(
+                                    candidatePackingSite->getDeterminedClusterInSite());
+                                site2TrialCluster[candidatePackingSite] = trialCluster;
+                            }
+                            else
+                            {
+                                trialCluster = site2TrialCluster[candidatePackingSite];
+                            }
+
+                            if (trialCluster->checkAddPU(curPU))
+                            {
+                                assert(trialCluster->addPU(curPU));
+                                cellId2CandidateSites[cellId].push_back(candidatePackingSite);
+                                sitesCandidates.insert(candidatePackingSite);
+                            }
+
+                            // }
                         }
+                        delete candidateSitesToPlaceTheCell_cone;
                     }
                 }
             }
@@ -670,7 +677,8 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_shortestPath(int iterId, fl
                         DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
                         PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, 0.8 + displacementRatio, y2xRatio,
                         false);
-                    candidateSitesToPlaceTheCell->resize(siteCandidateLimit);
+                    if (cellId2CandidateSites[cellId].size() >= siteCandidateLimit + 1)
+                        break;
                     // std::cout << curCell << " has " << candidateSitesToPlaceTheCell->size()
                     //           << " neighbors and candidates are:\n";
                     for (auto curDeviceSite : *candidateSitesToPlaceTheCell)
@@ -1784,7 +1792,7 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
                 float vy = tmpSite->Y() - targetY;
                 float tmpPUDis = fabs(vx) + y2xRatio * fabs(vy);
                 if (tmpPUDis > displacementLowerbound && tmpPUDis <= displacementUpperbound &&
-                    std::fabs(getAngle(vx, vy, vxCom, vyCom)) < M_PI / 6)
+                    std::fabs(getAngle(vx, vy, vxCom, vyCom)) < 0.42 * M_PI)
                 {
                     int siteClockRegionX, siteClockRegionY;
                     placementInfo->getDeviceInfo()->getClockRegionByLocation(tmpSite->X(), targetY, siteClockRegionX,
@@ -1838,7 +1846,7 @@ ParallelCLBPacker::findNeiborSitesFromBinGrid(DesignInfo::DesignCellType curCell
                         {
                             float vx = bX - targetX;
                             float vy = bY - targetY;
-                            if (std::fabs(getAngle(vx, vy, vxCom, vyCom)) < M_PI / 6)
+                            if (std::fabs(getAngle(vx, vy, vxCom, vyCom)) < 0.42 * M_PI)
                             {
                                 overlap = true;
                             }
@@ -2623,7 +2631,7 @@ void ParallelCLBPacker::dumpPlacementTcl(std::string dumpTclFile)
                   "foreach line $lines {\n"
                   "   incr lineCnt\n"
                   "   set placeBatch [concat $placeBatch $line]\n"
-                  "   if {$lineCnt == 5 } {\n"
+                  "   if {$lineCnt == 2 } {\n"
                   "       set result [catch {place_cell  $placeBatch }]\n"
                   "       if {$result} {\n"
                   "           puts $b $placeBatch\n"

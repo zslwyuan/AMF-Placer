@@ -1215,14 +1215,22 @@ int GlobalPlacer::timingDrivenDetailedPlacement_shortestPath_intermediate(Placem
                 continue;
             }
             // std::cout << curCell << " has following candidates: \n";
-            if (!curPU->isFixed() && !curPU->isLocked() && !curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() &&
-                !curPU->checkHasBRAM() && !curPU->checkHasDSP())
+            if (!curPU->isFixed() && !curPU->isLocked() && !curPU->checkHasLUTRAM() && !curPU->checkHasBRAM() &&
+                !curPU->checkHasDSP())
             {
+                float tmpRange = range;
+                if (curPU->checkHasCARRY())
+                {
+                    if (curPU->getCARRYNum() <= 2)
+                        tmpRange = tmpRange / curPU->getCARRYNum();
+                    else
+                        continue;
+                }
                 auto curX = cellLoc[cellId].X;
                 auto curY = cellLoc[cellId].Y;
-                for (float cX = curX - 1.0 * range; cX < curX + 1.1 * range; cX += 0.5 * range)
+                for (float cX = curX - 1.0 * tmpRange; cX < curX + 1.1 * tmpRange; cX += 0.5 * tmpRange)
                 {
-                    for (float cY = curY - 2.0 * range; cY < curY + 2.1 * range; cY += 1 * range)
+                    for (float cY = curY - 2.0 * tmpRange; cY < curY + 2.1 * tmpRange; cY += 1 * tmpRange)
                     {
                         if (std::fabs(cX - curX) + std::fabs(cY - curY) < 0.1)
                             continue;
@@ -1296,8 +1304,8 @@ int GlobalPlacer::timingDrivenDetailedPlacement_shortestPath_intermediate(Placem
                 auto curCell = placementInfo->getCells()[curCellId];
 
                 auto &curCandidates = cellId2CandidateLocation[curCellId];
-                if (!curPU->isFixed() && !curPU->isLocked() && !curPU->checkHasCARRY() && !curPU->checkHasLUTRAM() &&
-                    !curPU->checkHasBRAM() && !curPU->checkHasDSP())
+                if (!curPU->isFixed() && !curPU->isLocked() && !curPU->checkHasLUTRAM() && !curPU->checkHasBRAM() &&
+                    !curPU->checkHasDSP())
                 {
                     if (auto curMacro = dynamic_cast<PlacementInfo::PlacementMacro *>(curPU))
                     {

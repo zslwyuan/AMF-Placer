@@ -145,7 +145,7 @@ std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float 
             }
         }
 
-        if (resPaths.size() > 300)
+        if (resPaths.size() > 1000)
             break;
     }
 

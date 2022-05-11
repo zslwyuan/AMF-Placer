@@ -698,9 +698,25 @@ class ParallelCLBPacker
                             int movedId = CSFF.findFF(movedFF);
                             assert(movedId >= 0);
                             CSFF.removeXthFF(movedId);
+                            if (CSFF.getSize() == 0)
+                            {
+                                CSFF.reset();
+                            }
                         }
                     }
                 }
+            }
+
+            void moveFFFromCS1ToCS0(DesignInfo::DesignCell *targetFF, int CSGroupId1, int CSGroupId0)
+            {
+                int FFId = FFControlSets[CSGroupId1].findFF(targetFF);
+                assert(FFId >= 0);
+                FFControlSets[CSGroupId1].removeXthFF(FFId);
+                if (FFControlSets[CSGroupId1].getSize() == 0)
+                {
+                    FFControlSets[CSGroupId1].reset();
+                }
+                FFControlSets[CSGroupId0].addFF(targetFF);
             }
 
             /**
@@ -759,6 +775,10 @@ class ParallelCLBPacker
                         int movedId = CSFF.findFF(movedFF);
                         assert(movedId >= 0);
                         CSFF.removeXthFF(movedId);
+                        if (CSFF.getSize() == 0)
+                        {
+                            CSFF.reset();
+                        }
                     }
                 }
                 return movedFFs.size() > 0;

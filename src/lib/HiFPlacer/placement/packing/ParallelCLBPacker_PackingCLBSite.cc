@@ -947,6 +947,7 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite(int 
     mappedLUTs.clear();
     mappedFFs.clear();
     std::map<DesignInfo::DesignCell *, DesignInfo::DesignCell *> FF2LUT;
+    std::map<DesignInfo::DesignCell *, DesignInfo::DesignCell *> LUT2FF;
     auto &singleLUTs = determinedClusterInSite->getSingleLUTs();
     auto &pairedLUTs = determinedClusterInSite->getPairedLUTs();
 
@@ -1030,6 +1031,7 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite(int 
                     assert(pairMacro->getCells()[0]->isLUT());
                     assert(pairMacro->getCells()[1]->isFF());
                     FF2LUT[pairMacro->getCells()[1]] = pairMacro->getCells()[0];
+                    LUT2FF[pairMacro->getCells()[0]] = pairMacro->getCells()[1];
                 }
             }
         }
@@ -1324,6 +1326,64 @@ void ParallelCLBPacker::PackingCLBSite::finalMapToSlotsForCommonLUTFFInSite(int 
         }
     }
 
+    std::map<DesignInfo::DesignCell *, std::array<int, 3>> cell2slot;
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            for (int k = 0; k < 4; k++)
+            {
+                if (slotMapping.FFs[i][j][k])
+                {
+                    cell2slot[slotMapping.FFs[i][j][k]] = std::array<int, 3>({i, j, k});
+                }
+                if (slotMapping.LUTs[i][j][k])
+                {
+                    cell2slot[slotMapping.LUTs[i][j][k]] = std::array<int, 3>({i, j, k});
+                }
+            }
+        }
+    }
+
+    // Move FF to empty slot if possible to increase direct connect
+    for (int i0 = 0; i0 < 2; i0++)
+    {
+        for (int j0 = 0; j0 < 2; j0++)
+        {
+            for (int k0 = 0; k0 < 4; k0++)
+            {
+                if (!slotMapping.LUTs[i0][j0][k0])
+                    continue;
+                if (LUT2FF.find(slotMapping.LUTs[i0][j0][k0]) != LUT2FF.end())
+                {
+                    auto targetFF = LUT2FF[slotMapping.LUTs[i0][j0][k0]];
+                    if (slotMapping.FFs[i0][j0][k0] == nullptr)
+                    {
+                        int halfCLBId0 = i0 * 2 + j0;
+                        auto &CSFF0 =
+                            determinedClusterInSite->getFFControlSets()[FFSwapOption[FFControlSetOrderId][halfCLBId0]];
+                        int i1 = cell2slot[targetFF].at(0);
+                        int j1 = cell2slot[targetFF].at(1);
+                        int k1 = cell2slot[targetFF].at(2);
+                        int halfCLBId1 = i1 * 2 + j1;
+                        auto &CSFF1 =
+                            determinedClusterInSite->getFFControlSets()[FFSwapOption[FFControlSetOrderId][halfCLBId1]];
+                        if (CSFF0.compatibleWith(CSFF1.getCSId()))
+                        {
+                            if (FFSwapOption[FFControlSetOrderId][halfCLBId1] !=
+                                FFSwapOption[FFControlSetOrderId][halfCLBId0])
+                                determinedClusterInSite->moveFFFromCS1ToCS0(
+                                    targetFF, FFSwapOption[FFControlSetOrderId][halfCLBId1],
+                                    FFSwapOption[FFControlSetOrderId][halfCLBId0]);
+                            slotMapping.FFs[i0][j0][k0] = targetFF;
+                            slotMapping.FFs[i1][j1][k1] = nullptr;
+                            cell2slot[targetFF] = std::array<int, 3>({i0, j0, k0});
+                        }
+                    }
+                }
+            }
+        }
+    }
     auto &timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
     float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
     float directConnectCnt = 0;
@@ -1715,34 +1775,6 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite(int FFC
         }
     }
 
-    // mapped FFs
-    for (int i = 0; i < 2; i++)
-    {
-        for (int j = 0; j < 2; j++)
-        {
-            for (int k = 0; k < 4; k++)
-            {
-                if (!slotMapping.FFs[i][j][k])
-                {
-                    int halfCLBId = i * 2 + j;
-                    auto &CSFF =
-                        determinedClusterInSite->getFFControlSets()[FFSwapOption[FFControlSetOrderId][halfCLBId]];
-
-                    for (auto tmpFF : CSFF.getFFs())
-                    {
-                        if (mappedFFs.find(tmpFF) == mappedFFs.end())
-                        {
-                            mappedFFs.insert(tmpFF);
-                            mappedCells.insert(tmpFF);
-                            slotMapping.FFs[i][j][k] = tmpFF;
-                            break;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     for (auto &FFSet : determinedClusterInSite->getFFControlSets())
     {
         for (auto curFF : FFSet.getFFs())
@@ -1796,6 +1828,34 @@ void ParallelCLBPacker::PackingCLBSite::greedyMapMuxForCommonLUTFFInSite(int FFC
         int targetHalfCLB = findMuxFromHalfCLB(MUXF7Macros[i]);
         assert(targetHalfCLB % 2 == 0);
         mapMuxF7Macro(targetHalfCLB / 2, MUXF7Macros[i]);
+    }
+
+    // mapped FFs
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            for (int k = 3; k >= 0; k--)
+            {
+                if (!slotMapping.FFs[i][j][k])
+                {
+                    int halfCLBId = i * 2 + j;
+                    auto &CSFF =
+                        determinedClusterInSite->getFFControlSets()[FFSwapOption[FFControlSetOrderId][halfCLBId]];
+
+                    for (auto tmpFF : CSFF.getFFs())
+                    {
+                        if (mappedFFs.find(tmpFF) == mappedFFs.end())
+                        {
+                            mappedFFs.insert(tmpFF);
+                            mappedCells.insert(tmpFF);
+                            slotMapping.FFs[i][j][k] = tmpFF;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     assert(determinedClusterInSite->getSingleLUTs().size() + determinedClusterInSite->getPairedLUTs().size() <= 8);
