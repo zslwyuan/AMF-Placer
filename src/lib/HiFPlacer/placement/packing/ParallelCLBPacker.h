@@ -2026,6 +2026,57 @@ class ParallelCLBPacker
         }
 
         /**
+         * @brief check how many input pins will be needed if the two LUTs are packed.
+         *
+         * @param LUTA
+         * @param LUTB
+         * @return unsigned int
+         */
+        inline unsigned int getPairPinNum(DesignInfo::DesignCell *LUTA, DesignInfo::DesignCell *LUTB)
+        {
+            if (LUTA->getInputPins().size() == 6 || LUTB->getInputPins().size() == 6 || LUTA->isLUT6() ||
+                LUTB->isLUT6())
+                return 12;
+
+            int pinNumA = 0;
+            int totalPin = 0;
+            int netIds[5]; // be aware that a LUT might have pins connected to the same net and they should be
+                           // treated as different inputs.
+
+            for (auto tmpPin : LUTA->getInputPins())
+            {
+                if (!tmpPin->isUnconnected())
+                {
+                    netIds[pinNumA] = tmpPin->getNet()->getElementIdInType();
+                    pinNumA++;
+                }
+            }
+            totalPin = pinNumA;
+            for (auto tmpPin : LUTB->getInputPins())
+            {
+                if (!tmpPin->isUnconnected())
+                {
+                    bool matched = false;
+                    for (int i = 0; i < pinNumA; i++)
+                    {
+                        if (netIds[i] >= 0 && netIds[i] == tmpPin->getNet()->getElementIdInType())
+                        {
+                            netIds[i] = -1;
+                            matched = true;
+                            break;
+                        }
+                    }
+                    if (!matched)
+                    {
+                        totalPin++;
+                    }
+                }
+            }
+
+            return totalPin;
+        }
+
+        /**
          * @brief SiteBELMapping is a contain recording the mapping between cells and BELs.
          *
          * We hold the cell information in arrays of slots.
@@ -2068,6 +2119,140 @@ class ParallelCLBPacker
                     }
                 }
                 return (*this);
+            }
+
+            inline bool canDirectConnectInSlot(DesignInfo::DesignCell *targetLUT,
+                                               DesignInfo::DesignCell *targetFF) const
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        bool compatible = true;
+                        if (targetLUT->isLUT6() && j == 1)
+                            continue;
+                        for (int k = 0; k < 4; k++)
+                        {
+                            if (FFs[i][j][k])
+                            {
+                                if (FFs[i][j][k]->getControlSetInfo())
+                                {
+                                    if (FFs[i][j][k]->getControlSetInfo()->getId() !=
+                                        targetFF->getControlSetInfo()->getId())
+                                    {
+                                        compatible = false;
+                                    }
+                                }
+                            }
+                        }
+                        for (int k = 0; k < 4; k++)
+                        {
+                            if (FFs[i][1 - j][k])
+                            {
+                                if (FFs[i][1 - j][k]->getControlSetInfo())
+                                {
+                                    if (FFs[i][1 - j][k]->getControlSetInfo()->getCLK() !=
+                                            targetFF->getControlSetInfo()->getCLK() ||
+                                        FFs[i][1 - j][k]->getControlSetInfo()->getSR() !=
+                                            targetFF->getControlSetInfo()->getSR())
+                                    {
+                                        compatible = false;
+                                    }
+                                }
+                            }
+                        }
+                        if (compatible)
+                        {
+                            for (int k = 0; k < 4; k++)
+                            {
+                                if (!LUTs[i][j][k] && !FFs[i][j][k])
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                    }
+                }
+                return false;
+            }
+
+            inline void addLUTFFPair(DesignInfo::DesignCell *targetLUT, DesignInfo::DesignCell *targetFF)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        bool compatible = true;
+                        if (targetLUT->isLUT6() && j == 1)
+                            continue;
+                        for (int k = 0; k < 4; k++)
+                        {
+                            if (FFs[i][j][k])
+                            {
+                                if (FFs[i][j][k]->getControlSetInfo())
+                                {
+                                    if (FFs[i][j][k]->getControlSetInfo()->getId() !=
+                                        targetFF->getControlSetInfo()->getId())
+                                    {
+                                        compatible = false;
+                                    }
+                                }
+                            }
+                        }
+                        for (int k = 0; k < 4; k++)
+                        {
+                            if (FFs[i][1 - j][k])
+                            {
+                                if (FFs[i][1 - j][k]->getControlSetInfo())
+                                {
+                                    if (FFs[i][1 - j][k]->getControlSetInfo()->getCLK() !=
+                                            targetFF->getControlSetInfo()->getCLK() ||
+                                        FFs[i][1 - j][k]->getControlSetInfo()->getSR() !=
+                                            targetFF->getControlSetInfo()->getSR())
+                                    {
+                                        compatible = false;
+                                    }
+                                }
+                            }
+                        }
+                        if (compatible)
+                        {
+                            for (int k = 0; k < 4; k++)
+                            {
+                                if (!LUTs[i][j][k] && !FFs[i][j][k])
+                                {
+                                    LUTs[i][j][k] = targetLUT;
+                                    FFs[i][j][k] = targetFF;
+                                    return;
+                                }
+                            }
+                        }
+                    }
+                }
+                assert(false && "the LUT-FF pair should be assigned to a slot");
+                return;
+            }
+
+            inline void removeLUTFFPair(DesignInfo::DesignCell *targetLUT, DesignInfo::DesignCell *targetFF)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 2; j++)
+                    {
+                        for (int k = 0; k < 4; k++)
+                        {
+                            if (LUTs[i][j][k] == targetLUT)
+                            {
+                                LUTs[i][j][k] = nullptr;
+                            }
+                            if (FFs[i][j][k] == targetFF)
+                            {
+                                FFs[i][j][k] = nullptr;
+                            }
+                        }
+                    }
+                }
+                return;
             }
 
             ~SiteBELMapping()
@@ -2215,6 +2400,7 @@ class ParallelCLBPacker
         {
             if (determinedClusterInSite)
             {
+                best_DirectConnect = -100000000;
                 if (checkIsCarrySite())
                 {
                     finalMapToSlotsForCarrySite();
@@ -2282,6 +2468,11 @@ class ParallelCLBPacker
             return slotMapping;
         }
 
+        SiteBELMapping &getSlotMappingRef()
+        {
+            return slotMapping;
+        }
+
         /**
          * @brief check whether the FF/LUT are directly connected
          *
@@ -2337,6 +2528,45 @@ class ParallelCLBPacker
         inline void setClockRegionAwareTo(bool _clockRegionAware)
         {
             clockRegionAware = _clockRegionAware;
+        }
+
+        inline std::array<int, 3> getLUTSlot(DesignInfo::DesignCell *targetCell)
+        {
+            assert(targetCell->isLUT());
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    for (int k = 0; k < 4; k++)
+                    {
+                        if (slotMapping.LUTs[i][j][k] == targetCell)
+                        {
+                            return std::array<int, 3>{i, j, k};
+                        }
+                    }
+                }
+            }
+            assert(false && "the LUT should be found in slots.");
+            return std::array<int, 3>{-1, -1, -1};
+        }
+        inline std::array<int, 3> getFFSlot(DesignInfo::DesignCell *targetCell)
+        {
+            assert(targetCell->isFF());
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 2; j++)
+                {
+                    for (int k = 0; k < 4; k++)
+                    {
+                        if (slotMapping.FFs[i][j][k] == targetCell)
+                        {
+                            return std::array<int, 3>{i, j, k};
+                        }
+                    }
+                }
+            }
+            assert(false && "the FF should be found in slots.");
+            return std::array<int, 3>{-1, -1, -1};
         }
 
       private:
@@ -2516,6 +2746,7 @@ class ParallelCLBPacker
     int timingDrivenDetailedPlacement_shortestPath_intermediate();
     int timingDrivenDetailedPlacement_shortestPath(int iterId, float displacementRatio);
     int timingDrivenDetailedPlacement_swap(int iterId);
+    int timingDrivenDetailedPlacement_LUTFFPairReloacationAfterSlotMapping();
     /**
      * @brief handle the PlacementUnits that cannot be packed during the parallel procedure
      *

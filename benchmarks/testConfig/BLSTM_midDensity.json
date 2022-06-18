@@ -47,6 +47,7 @@
     // "disableSpreadingConvergeRatio" : "true",
     "drawClusters": "false",
     "MKL": "true",
+    "DSPCritical": "true",
     "dumpDirectory": "./dumpData_BLSTM_midDensity",
     //"useUnconstrainedCG" : "false"
 }

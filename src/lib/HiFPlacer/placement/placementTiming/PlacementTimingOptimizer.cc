@@ -104,7 +104,8 @@ std::vector<int> PlacementTimingOptimizer::findCriticalPath()
     return resPath;
 }
 
-std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float criticalRatio)
+std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float criticalRatio, bool checkOverlap,
+                                                                          int pathNumThr)
 {
 
     assert(timingInfo);
@@ -128,31 +129,64 @@ std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float 
             //           << "] delay=" << curEndpoint->getLatestInputArrival() << " with " << resPath.size()
             //           << " nodes in path.\n";
             resPaths.push_back(resPath);
-            for (auto cellId : resPath)
+            if (checkOverlap)
             {
-                auto PU = placementInfo->getPlacementUnitByCellId(cellId);
-                if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(PU))
+                for (auto cellId : resPath)
                 {
-                    isCovered[unpackedCell->getCell()->getCellId()]++;
-                }
-                else if (auto macro = dynamic_cast<PlacementInfo::PlacementMacro *>(PU))
-                {
-                    for (auto cell : macro->getCells())
+                    auto PU = placementInfo->getPlacementUnitByCellId(cellId);
+                    if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(PU))
                     {
-                        isCovered[cell->getCellId()]++;
+                        isCovered[unpackedCell->getCell()->getCellId()]++;
+                    }
+                    else if (auto macro = dynamic_cast<PlacementInfo::PlacementMacro *>(PU))
+                    {
+                        for (auto cell : macro->getCells())
+                        {
+                            isCovered[cell->getCellId()]++;
+                        }
                     }
                 }
             }
         }
 
-        if (resPaths.size() > 1000)
+        if (resPaths.size() > pathNumThr)
             break;
     }
+    // std::string cellNames[24] = {"design_1_i/DigitRec_0/inst/ap_CS_fsm_reg[9]_replica_1",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_311_0_reg_21661[31]_i_2",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_84",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_18",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_8",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_132",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_37",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_9",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_182",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_55",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_10",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_66",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_14",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001_reg[31]_i_4",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175[31]_i_40",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175[31]_i_28",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175_reg[31]_i_5",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175_reg[31]_i_3",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_5",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_1",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_306_343_reg_21841[8]_i_5",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919[31]_i_3",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919[31]_i_1",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919_reg[1]"};
+
+    // for (int i = 0; i < 24; i++)
+    // {
+    //     int cellId = placementInfo->getDesignInfo()->getCell(cellNames[i])->getCellId();
+    //     std::cout << "name : " << cellNames[i] << " coverCnt:" << isCovered[cellId] << "\n";
+    // }
 
     return resPaths;
 }
 
-float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisticTiming)
+float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool disableOptimisticTiming)
 {
     print_status("PlacementTimingOptimizer: conducting Static Timing Analysis");
 
@@ -166,12 +200,10 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisti
 
     if (enableCounter)
         STA_Cnt++;
-    if (STA_Cnt == 31)
-    {
-        conservativeTiming = true;
-    }
-    if (enforeOptimisticTiming)
-        conservativeTiming = false;
+
+    increaseLowDelayVal = false;
+    if (disableOptimisticTiming)
+        increaseLowDelayVal = true;
 
     effectFactor = (STA_Cnt / 30.0);
     if (effectFactor < 1)
@@ -248,35 +280,32 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool enforeOptimisti
 
     // // important:::  chip/tile1/g_ariane_core.core/ariane/id_stage_i/operand_b_q[63]_i_31__0
     // print_warning("===========================================================================\n");
-    // std::string cellNames[13] = {
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "IntermediateDout_loc_U/U_fifo_w32_d2_A_x1_ram/SRL_SIG_reg[0][16]",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "IntermediateDout_loc_U/U_fifo_w32_d2_A_x1_ram/mul_ln550_fu_269_p2__0_i_1",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/mul_ln606_fu_461_p2__0",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/mul_ln606_fu_461_p2__1",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/ram_reg_0_i_248",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/ram_reg_0_i_253",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/ram_reg_0_i_209",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/ram_reg_0_i_217",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/ram_reg_0_i_170",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/ram_reg_0_i_169",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/line_buffer_V_U/SWU_NoP_variable_OgC_ram_U/ram_reg_0_i_116",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/line_buffer_V_U/SWU_NoP_variable_OgC_ram_U/ram_reg_0_i_93",
-    //     "design_1_i/halfsqueezenet_0/inst/grp_DoFire_fu_312/HALFFIRE_ACT_variabl_U0/CONV2D_ACT_NoP_varia_5_U0/"
-    //     "SWU_NoP_variable_U0/line_buffer_V_U/SWU_NoP_variable_OgC_ram_U/ram_reg_0_i_5"};
+    // std::string cellNames[24] = {"design_1_i/DigitRec_0/inst/ap_CS_fsm_reg[9]_replica_1",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_311_0_reg_21661[31]_i_2",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_84",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_18",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_8",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_132",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_37",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_9",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_182",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_55",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_10",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_66",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_14",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001_reg[31]_i_4",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175[31]_i_40",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175[31]_i_28",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175_reg[31]_i_5",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175_reg[31]_i_3",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_5",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_1",
+    //                              "design_1_i/DigitRec_0/inst/knn_set_306_343_reg_21841[8]_i_5",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919[31]_i_3",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919[31]_i_1",
+    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919_reg[1]"};
 
-    // std::vector<std::string> cellNameVec(cellNames, cellNames + 13);
+    // std::vector<std::string> cellNameVec(cellNames, cellNames + 24);
     // float totalDelay = 0;
     // for (int i = 0; i < cellNameVec.size() - 1; i++)
     // {

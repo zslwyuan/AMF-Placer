@@ -283,10 +283,10 @@ void WirelengthOptimizer::updateB2BNetWeight(float pesudoNetWeight, bool enableM
 
     if (timingOptimizer)
     {
-        addPseudoNet_SlackBased((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight, slackPowerFactor,
+        addPseudoNet_SlackBased((0.25 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight, slackPowerFactor,
                                 timingOptimizer);
         if (timingOptimizer->getEffectFactor() > 0.5)
-            LUTLUTPairing_TimingDriven((0.2 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight,
+            LUTLUTPairing_TimingDriven((0.25 * timingOptimizer->getEffectFactor()) * generalTimingNetWeight,
                                        pin2pinEnhance, timingOptimizer);
     }
 

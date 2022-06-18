@@ -1,0 +1,4 @@
+# Constraints
+
+set_location -inst_name corePLL/corePLL_0/pll_inst_0 -fixed true -x 1 -y 377
+set_location -inst_name rxPLL/rxPLL_0/pll_inst_0     -fixed true -x 0 -y 377

@@ -2036,6 +2036,11 @@ void PlacementInfo::enhanceRiskyClockNet()
                 }
             }
         }
+
+        // if (curClockNet->getDesignNet()->getName().find("ddr") != std::string::npos)
+        // {
+        //     curClockNet->getDesignNet()->setOverallTimingNetEnhancement(2);
+        // }
     }
 }
 

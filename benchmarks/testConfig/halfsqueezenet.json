@@ -9,6 +9,7 @@
     "unpredictable macro file": "../benchmarks/VCU108/design/halfsqueezenet/halfsqueezenet_unpredictableMacros",
     "clock file": "../benchmarks/VCU108/design/halfsqueezenet/halfsqueezenet_clocks",
     "fixed units file": "../benchmarks/VCU108/design/halfsqueezenet/halfsqueezenet_fixedUnits",
+    "designCluster": "../benchmarks/VCU108/design/halfsqueezenet/halfsqueezenet_clusters.zip",
     "Dump Cluster file": "./dumpClusters",
     "Dump Cluster Simulated Annealig file": "./dumpSATrace",
     // "SLICEL_LUT": "./SLICEL_LUT_density",

@@ -700,8 +700,21 @@ bool PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLongestPathFromNo
         slowestPredecessorId = nodes[slowestPredecessorId]->getSlowestPredecessorId();
         resPath.push_back(slowestPredecessorId);
 
-        if (isCovered[slowestPredecessorId] > 30)
-            return false;
+        if (isCovered[slowestPredecessorId] > 30 && nodes[slowestPredecessorId]->getForwardLevel() > 5 &&
+            nodes[slowestPredecessorId]->getOutEdges().size() > 1)
+        {
+            // if (nodes[slowestPredecessorId]->getDesignNode()->isDSP() ||
+            //     nodes[slowestPredecessorId]->getDesignNode()->isBRAM() ||
+            //     nodes[slowestPredecessorId]->getDesignNode()->isCarry())
+            // {
+            //     if (isCovered[slowestPredecessorId] > 60)
+            //         return false;
+            // }
+            // else
+            {
+                return false;
+            }
+        }
         if (slowestPredecessorId == -1 || nodes[slowestPredecessorId]->getForwardLevel() == 0)
             break;
     }

@@ -1,0 +1,17 @@
+[
+    {
+        "commit": "6a0addc8e78bec308e2888f614fe3be6768c0d34",
+        "name": "api-generator-sifive",
+        "source": "git@github.com:sifive/api-generator-sifive.git"
+    },
+    {
+        "commit": "612ed01df3be83ad0198fb9bd7e367ea43df3d56",
+        "name": "sifive-blocks",
+        "source": "git@github.com:sifive/sifive-blocks.git"
+    },
+    {
+        "commit": "203d59b05677663ce69c68b6a0685604f1588f76",
+        "name": "rocket-chip",
+        "source": "git@github.com:chipsalliance/rocket-chip.git"
+    }
+]

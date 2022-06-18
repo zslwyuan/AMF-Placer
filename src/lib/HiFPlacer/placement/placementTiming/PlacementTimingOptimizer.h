@@ -40,7 +40,8 @@ class PlacementTimingOptimizer
 
     void propogateArrivalTime();
     std::vector<int> findCriticalPath();
-    std::vector<std::vector<int>> findCriticalPaths(float criticalRatio);
+    std::vector<std::vector<int>> findCriticalPaths(float criticalRatio, bool checkOverlap = true,
+                                                    int pathNumThr = 1000);
     float getWorstSlackOfCell(DesignInfo::DesignCell *srcCell);
     float conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
     void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,
@@ -101,32 +102,6 @@ class PlacementTimingOptimizer
         return getDelayByModel_conservative(X1, Y1, X2, Y2);
     }
 
-    const float timingC[10] = {150.38575401, -620.94694989, -274.2735654, 494.72583191, 234.67951055};
-
-    inline float getDelayByModel_agressive(float X1, float Y1, float X2, float Y2)
-    {
-        if (conservativeTiming)
-            return getDelayByModel_conservative(X1, Y1, X2, Y2);
-
-        int clockRegionX0, clockRegionY0;
-        deviceInfo->getClockRegionByLocation(X1, Y1, clockRegionX0, clockRegionY0);
-        int clockRegionX1, clockRegionY1;
-        deviceInfo->getClockRegionByLocation(X2, Y2, clockRegionX1, clockRegionY1);
-
-        float X = std::fabs(X1 - X2) * 2;
-        float Y = std::fabs(Y1 - Y2);
-
-        float delay = (timingC[0] + std::pow(X, 0.3) * timingC[1] + std::pow(Y, 0.3) * timingC[2] +
-                       std::pow(X, 0.5) * timingC[3] + std::pow(Y, 0.5) * timingC[4]) /
-                          1000.0 +
-                      std::abs(clockRegionX1 - clockRegionX0) * 0.5;
-
-        if (delay < 0.05)
-            delay = 0.05;
-
-        return delay;
-    }
-
     const float timingC0[10] = {95.05263521, -26.50563359, 77.42394117, 106.29195883, -14.975527};
     const float timingC1[10] = {123.05017047, -169.25614191, -117.28028144, 208.53573639, 174.2573465};
     const float timingC2[10] = {234.7694101, -433.99467294, -64.96319998, 373.78606257, 139.45226658};
@@ -182,11 +157,6 @@ class PlacementTimingOptimizer
         }
     }
 
-    inline bool isConservativeTiming()
-    {
-        return conservativeTiming;
-    }
-
     inline void pauseCounter()
     {
         enableCounter = false;
@@ -227,7 +197,7 @@ class PlacementTimingOptimizer
     std::vector<float> pois;
     std::vector<std::vector<int>> clockRegionclusters;
     std::map<PlacementInfo::PlacementNet *, int> netActualSlackPinNum;
-    bool conservativeTiming = false;
+    bool increaseLowDelayVal = false;
     bool enableCounter = true;
 };
 

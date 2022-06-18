@@ -1,0 +1,11 @@
+# 
+# User Locked I/O Bank Settings
+# 
+
+set_iobank -bank_name Bank0 -vcci 1.80 -fixed true
+set_iobank -bank_name Bank1 -vcci 1.20 -fixed true
+set_iobank -bank_name Bank2 -vcci 3.30 -fixed true
+set_iobank -bank_name Bank4 -vcci 1.80 -fixed true
+set_iobank -bank_name Bank5 -vcci 3.30 -fixed true
+set_iobank -bank_name Bank6 -vcci 1.80 -fixed true
+set_iobank -bank_name Bank7 -vcci 1.80 -fixed true

@@ -28,6 +28,7 @@
     "DumpLUTFFPair": "./DumpLUTFFPair",
     "DumpClockUtilization": "true",
     "ClockPeriod": "10",
+    // "ClockPeriod:chipset/chipset_impl/mc_top/i_ddr4_0/inst/u_ddr4_infrastructure/u_bufg_divClk/O" : "3.3",
     // "DumpMacroLegalization" : "./DumpMacroLegalizationLog",
     // "MacroLegalizationVerbose" : "true",
     // "CLBLegalizationVerbose" : "true",

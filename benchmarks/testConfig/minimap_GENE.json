@@ -9,7 +9,7 @@
     "unpredictable macro file": "../benchmarks/VCU108/design/minimap2/minimap2_unpredictableMacros",
     "fixed units file": "../benchmarks/VCU108/design/minimap2/minimap2_fixedUnits",
     "clock file": "../benchmarks/VCU108/design/minimap2/minimap2_clocks",
-    // "designCluster": "../benchmarks/VCU108/design/minimap2/minimap2_clusters.zip",
+    "designCluster": "../benchmarks/VCU108/design/minimap2/minimap2_clusters.zip",
     "Dump Cluster file": "./dumpClusters",
     "Dump Cluster Simulated Annealig file": "./dumpSATrace",
     // "SLICEL_LUT": "./SLICEL_LUT_density",
