@@ -1,0 +1,10 @@
+mig/island/blackbox/inst/u_ddr4_infrastructure/u_bufg_riuClk/O
+dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.u_bufg_icon_tck/O
+chiptop/system/tile_prci_domain/tile_reset_domain/tile/ptw/g_0[1023]_i_1_bufg_place/O
+chiptop/system/tile_prci_domain/tile_reset_domain/tile/core/valid_2_0[1023]_i_1_bufg_place/O
+chiptop/system/resetSynchronizer/bundleOut_0_member_allClocks_subsystem_sbus_0_reset_catcher/io_sync_reset_chain/output_chain/sync_0_reg_inv_bufg_place/O
+harnessSysPLL/inst/clkout1_buf/O
+chiptop/system/tile_prci_domain/tile_reset_domain/tile/ptw/valid_2_0[1023]_i_2_bufg_place/O
+mig/island/blackbox/inst/u_ddr4_infrastructure/u_bufg_dbg_clk/O
+mig_io_port_c0_sys_clk_i_BUFG_inst/O
+mig/island/blackbox/inst/u_ddr4_infrastructure/u_bufg_divClk/O

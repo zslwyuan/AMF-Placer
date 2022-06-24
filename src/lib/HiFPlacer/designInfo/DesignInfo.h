@@ -25,11 +25,11 @@
 #define CELLTYPESTRS                                                                                                   \
     "LUT1", "LUT2", "LUT3", "LUT4", "LUT5", "LUT6", "LUT6_2", "FDCE", "FDPE", "FDRE", "FDSE", "LDCE", "AND2B1L",       \
         "CARRY8", "DSP48E2", "MUXF7", "MUXF8", "SRL16E", "SRLC32E", "RAM32M16", "RAM64M", "RAM64X1D", "RAM32M",        \
-        "RAM32X1D", "RAM32X1S", "RAM64X1S", "RAM64M8", "FIFO36E2", "FIFO18E2", "RAMB18E2", "RAMB36E2", "BUFGCE",       \
-        "BUFG_GT", "BUFG_GT_SYNC", "BUFGCE_DIV", "BUFGCTRL", "GTHE3_CHANNEL", "GTHE3_COMMON", "IOBUF", "IBUF",         \
-        "IBUFDS", "IOBUFDS", "IBUFDS_GTE3", "IBUF_ANALOG", "IOBUFE3", "MMCME3_ADV", "OBUF", "OBUFT", "PCIE_3_1",       \
-        "BSCANE2", "SYSMONE1", "RXTX_BITSLICE", "BITSLICE_CONTROL", "TX_BITSLICE_TRI", "OSERDESE3", "RIU_OR",          \
-        "PLLE3_ADV", "HPIO_VREF", "OBUFDS_DUAL_BUF"
+        "RAM32X1D", "RAM32X1S", "RAM64X1S", "RAM64M8", "RAM256X1D", "FIFO36E2", "FIFO18E2", "RAMB18E2", "RAMB36E2",    \
+        "BUFGCE", "BUFG_GT", "BUFG_GT_SYNC", "BUFGCE_DIV", "BUFGCTRL", "GTHE3_CHANNEL", "GTHE3_COMMON", "IOBUF",       \
+        "IBUF", "IBUFDS", "IOBUFDS", "IBUFDS_GTE3", "IBUF_ANALOG", "IOBUFE3", "MMCME3_ADV", "OBUF", "OBUFT",           \
+        "PCIE_3_1", "BSCANE2", "SYSMONE1", "RXTX_BITSLICE", "BITSLICE_CONTROL", "TX_BITSLICE_TRI", "OSERDESE3",        \
+        "RIU_OR", "PLLE3_ADV", "HPIO_VREF", "OBUFDS_DUAL_BUF"
 
 /**
  * @brief Information related to FPGA designs, including design cells and their interconnections.
@@ -90,7 +90,8 @@ class DesignInfo
         CellType_RAM32X1D,
         CellType_RAM32X1S,
         CellType_RAM64X1S,
-        CellType_RAM64M8, // these are LUTRAMs
+        CellType_RAM64M8,
+        CellType_RAM256X1D, // these are LUTRAMs
 
         CellType_FIFO36E2,
         CellType_FIFO18E2,
@@ -927,7 +928,7 @@ class DesignInfo
             return (cellType == CellType_RAM32M16 || cellType == CellType_RAM32X1D || cellType == CellType_RAM64X1S ||
                     cellType == CellType_RAM64M || cellType == CellType_RAM64X1D || cellType == CellType_RAM32M ||
                     cellType == CellType_RAM32X1D || cellType == CellType_RAM32X1S || cellType == CellType_RAM64X1S ||
-                    cellType == CellType_RAM64M8);
+                    cellType == CellType_RAM64M8 || cellType == CellType_RAM256X1D);
         }
         inline bool originallyIsLUTRAM()
         {
@@ -935,7 +936,8 @@ class DesignInfo
                     oriCellType == CellType_RAM64X1S || oriCellType == CellType_RAM64M ||
                     oriCellType == CellType_RAM64X1D || oriCellType == CellType_RAM32M ||
                     oriCellType == CellType_RAM32X1D || oriCellType == CellType_RAM32X1S ||
-                    oriCellType == CellType_RAM64X1S || oriCellType == CellType_RAM64M8);
+                    oriCellType == CellType_RAM64X1S || oriCellType == CellType_RAM64M8 ||
+                    oriCellType == CellType_RAM256X1D);
         }
         inline bool isBRAM()
         {
@@ -1340,7 +1342,7 @@ class DesignInfo
         return (cellType == CellType_RAM32M16 || cellType == CellType_RAM32X1D || cellType == CellType_RAM64X1S ||
                 cellType == CellType_RAM64M || cellType == CellType_RAM64X1D || cellType == CellType_RAM32M ||
                 cellType == CellType_RAM32X1D || cellType == CellType_RAM32X1S || cellType == CellType_RAM64X1S ||
-                cellType == CellType_RAM64M8);
+                cellType == CellType_RAM64M8 || cellType == CellType_RAM256X1D);
     }
 
     inline static bool isFF(DesignCellType cellType)

@@ -41,7 +41,7 @@ class PlacementTimingOptimizer
     void propogateArrivalTime();
     std::vector<int> findCriticalPath();
     std::vector<std::vector<int>> findCriticalPaths(float criticalRatio, bool checkOverlap = true,
-                                                    int pathNumThr = 1000);
+                                                    int pathNumThr = 1000, int converThr = 30);
     float getWorstSlackOfCell(DesignInfo::DesignCell *srcCell);
     float conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
     void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,

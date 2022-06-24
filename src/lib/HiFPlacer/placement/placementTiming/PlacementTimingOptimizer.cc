@@ -105,7 +105,7 @@ std::vector<int> PlacementTimingOptimizer::findCriticalPath()
 }
 
 std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float criticalRatio, bool checkOverlap,
-                                                                          int pathNumThr)
+                                                                          int pathNumThr, int converThr)
 {
 
     assert(timingInfo);
@@ -122,7 +122,7 @@ std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float 
             break;
         std::vector<int> resPath;
         bool findSuccessfully =
-            timingGraph->backTraceDelayLongestPathFromNode(curEndpoint->getId(), isCovered, resPath);
+            timingGraph->backTraceDelayLongestPathFromNode(curEndpoint->getId(), isCovered, resPath, converThr);
         if (findSuccessfully)
         {
             // std::cout << "find endpoint [" << curEndpoint->getDesignNode()

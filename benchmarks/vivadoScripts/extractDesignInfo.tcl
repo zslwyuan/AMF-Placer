@@ -1,5 +1,6 @@
+# open_checkpoint "/Softwares/chipyard/fpga/generated-src/chipyard.fpga.vcu108.VCU108FPGATestHarness.RocketVCU108Config/obj/post_route.dcp"
 # replace this with the name for your benchmark
-set benchmarkName "OpenPiton" 
+set benchmarkName "Gemmini" 
 # replace this path with your one to specify where to store the files of extracted data
 set targetFolderPath "/home/tingyuan/tmpFiles/" 
 

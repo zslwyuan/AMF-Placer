@@ -690,7 +690,8 @@ std::vector<int> PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLonge
 template <typename nodeType>
 bool PlacementTimingInfo::TimingGraph<nodeType>::backTraceDelayLongestPathFromNode(int curNodeId,
                                                                                    std::vector<int> &isCovered,
-                                                                                   std::vector<int> &resPath)
+                                                                                   std::vector<int> &resPath,
+                                                                                   int converThr)
 {
     int slowestPredecessorId = curNodeId;
     resPath.clear();

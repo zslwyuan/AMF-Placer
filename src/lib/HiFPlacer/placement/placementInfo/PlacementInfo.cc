@@ -283,6 +283,8 @@ void PlacementInfo::printStat(bool verbose)
     print_info("Total Unpacked Placement Unit(s): " + std::to_string(designInfo->getNumCells() - cellInMacros.size()));
     print_info("Total Macro Placement Unit(s): " +
                std::to_string(placementUnits.size() - (designInfo->getNumCells() - cellInMacros.size())));
+    print_info("Cells in Macros Percentage: " +
+               std::to_string((float)(cellInMacros.size()) / (float)designInfo->getNumCells()));
 }
 
 void PlacementInfo::PlacementBinInfo::addSiteIntoBin(DeviceInfo::DeviceSite *curSite)
@@ -1665,6 +1667,8 @@ void PlacementInfo::updateCells2PlacementUnits()
         assert(cellId2PlacementUnit[i]);
         cellId2PlacementUnitVec[i] = cellId2PlacementUnit[i];
     }
+
+    macroRatio = (float)(cellInMacros.size()) / (float)designInfo->getNumCells();
 }
 
 void PlacementInfo::dumpVivadoPlacementTclWithPULegalizationInfo(std::string dumpFile)
@@ -2037,10 +2041,10 @@ void PlacementInfo::enhanceRiskyClockNet()
             }
         }
 
-        // if (curClockNet->getDesignNet()->getName().find("ddr") != std::string::npos)
-        // {
-        //     curClockNet->getDesignNet()->setOverallTimingNetEnhancement(2);
-        // }
+        if (curClockNet->getDesignNet()->getName().find("_ddr") != std::string::npos)
+        {
+            curClockNet->getDesignNet()->setOverallTimingNetEnhancement(1.1);
+        }
     }
 }
 

@@ -41,6 +41,14 @@ foreach curCell $RAM32X1Ss {
     puts $fo "name=> $curCell loc=>  $tmpLoc bel=>  $tmpBEL"
 }
 
+set RAM256X1Ds [get_cells $allCells -filter {REF_NAME =~ "RAM256X1D"}]
+foreach curCell $RAM256X1Ds {
+    set tmpLoc [get_property LOC $curCell]
+    set tmpBEL [get_property BEL $curCell]
+    puts $fo "name=> $curCell loc=>  $tmpLoc bel=>  $tmpBEL"
+}
+
+
 set AsyncRegs [get_cells $allCells -filter { ASYNC_REG == "TRUE" }  ]
 foreach curCell $AsyncRegs {
     set tmpLoc [get_property LOC $curCell]

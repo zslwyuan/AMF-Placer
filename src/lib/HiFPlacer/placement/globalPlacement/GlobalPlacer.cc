@@ -1317,13 +1317,28 @@ int GlobalPlacer::timingDrivenDetailedPlacement_shortestPath_intermediate(Placem
 
                         placementInfo->legalizeXYInArea(curPU, resX, resY);
                         curPU->setAnchorLocationAndForgetTheOriginalOne(resX, resY);
+                        for (int vId = 0; vId < curMacro->getNumOfCells(); vId++)
+                        {
+                            DesignInfo::DesignCellType cellType;
+                            float offsetX_InMacro, offsetY_InMacro;
+                            curMacro->getVirtualCellInfo(vId, offsetX_InMacro, offsetY_InMacro, cellType);
+                            DesignInfo::DesignCell *curCellInMacro = curMacro->getCell(vId);
+
+                            float cellX = curMacro->X() + offsetX_InMacro;
+                            float cellY = curMacro->Y() + offsetY_InMacro;
+
+                            cellLoc[curCellInMacro->getCellId()].X = cellX;
+                            cellLoc[curCellInMacro->getCellId()].Y = cellY;
+                        }
                     }
-                    else
+                    else if (auto unpacked = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(curPU))
                     {
                         placementInfo->legalizeXYInArea(curPU, curCandidates[bestEndChoice].X,
                                                         curCandidates[bestEndChoice].Y);
                         curPU->setAnchorLocationAndForgetTheOriginalOne(curCandidates[bestEndChoice].X,
                                                                         curCandidates[bestEndChoice].Y);
+                        cellLoc[unpacked->getCell()->getCellId()].X = curCandidates[bestEndChoice].X;
+                        cellLoc[unpacked->getCell()->getCellId()].Y = curCandidates[bestEndChoice].Y;
                     }
                     replaceCnt++;
                 }

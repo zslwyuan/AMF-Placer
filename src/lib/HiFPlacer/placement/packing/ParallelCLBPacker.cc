@@ -415,7 +415,7 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         }
 
         replaceCnt = 1000;
-        for (int i = 0; i < 20 && replaceCnt > 5; i++)
+        for (int i = 0; i < 40 && replaceCnt > 5; i++)
         {
             cellId2PackingSite = std::vector<PackingCLBSite *>(placementInfo->getCells().size(), nullptr);
             PUId2PackingCLBSite.clear();
@@ -810,16 +810,21 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_shortestPath(int iterId, fl
 
                 auto &curCandidates = cellId2CandidateSites[curCellId];
 
-                if (!cellId2CandidateSites[curCellId][bestEndChoice]->getDeterminedClusterInSite()->checkAddPU(curPU))
+                auto targetPackingSite = cellId2CandidateSites[curCellId][bestEndChoice];
+                if (!targetPackingSite->getDeterminedClusterInSite()->checkAddPU(curPU))
                     continue;
 
                 cellId2CandidateSites[curCellId][0]->getDeterminedClusterInSite()->removePUToConstructDetCluster(curPU);
 
                 assert(bestEndChoice < cellId2CandidateSites[curCellId].size());
-                assert(cellId2CandidateSites[curCellId][bestEndChoice]->getDeterminedClusterInSite()->addPU(curPU));
-                PUId2PackingCLBSite[curPU->getId()] = cellId2CandidateSites[curCellId][bestEndChoice];
-                placementInfo->addPUIntoClockColumn(curPU,
-                                                    cellId2CandidateSites[curCellId][bestEndChoice]->getCLBSite());
+                assert(targetPackingSite->getDeterminedClusterInSite()->addPU(curPU));
+                PUId2PackingCLBSite[curPU->getId()] = targetPackingSite;
+                placementInfo->addPUIntoClockColumn(curPU, targetPackingSite->getCLBSite());
+                auto cellSet = targetPackingSite->getDeterminedClusterInSite()->getCellSet();
+                for (auto cell : cellSet)
+                {
+                    cellId2PackingSite[cell->getCellId()] = targetPackingSite;
+                }
                 replaceCnt++;
             }
             bestEndChoice = shortestPath_LayerSite_backtrace[i][bestEndChoice];
@@ -1498,7 +1503,8 @@ void ParallelCLBPacker::exceptionHandling(bool verbose)
     PUPoints.clear();
     for (auto PU : inputUnpackedPUsVec)
     {
-        PUPoints.emplace_back(PU);
+        if (!PU->isLocked())
+            PUPoints.emplace_back(PU);
     }
 
     while (PUPoints.size())

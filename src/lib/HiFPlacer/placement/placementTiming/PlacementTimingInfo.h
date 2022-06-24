@@ -621,7 +621,8 @@ class PlacementTimingInfo
          */
         std::vector<int> backTraceDelayLongestPathFromNode(int curNodeId);
 
-        bool backTraceDelayLongestPathFromNode(int curNodeId, std::vector<int> &isCovered, std::vector<int> &resPath);
+        bool backTraceDelayLongestPathFromNode(int curNodeId, std::vector<int> &isCovered, std::vector<int> &resPath,
+                                               int converThr = 30);
 
         /**
          * @brief Set the Longest Path Length for each TimingNode in the TimingGraph and get a sorted vector of

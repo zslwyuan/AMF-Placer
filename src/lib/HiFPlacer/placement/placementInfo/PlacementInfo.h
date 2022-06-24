@@ -4394,6 +4394,11 @@ class PlacementInfo
         return ret;
     }
 
+    inline float getMacroRatio()
+    {
+        return macroRatio;
+    }
+
   private:
     CompatiblePlacementTable *compatiblePlacementTable = nullptr;
     std::vector<PlacementUnit *> placementUnits;
@@ -4583,6 +4588,8 @@ class PlacementInfo
     bool LUTFFUtilizationAdjusted = false;
 
     int highFanOutThr = 10000000;
+
+    float macroRatio = 0.0;
 };
 
 std::ostream &operator<<(std::ostream &os, PlacementInfo::PlacementMacro *curMacro);
