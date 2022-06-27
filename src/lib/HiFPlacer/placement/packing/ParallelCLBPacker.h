@@ -2680,6 +2680,20 @@ class ParallelCLBPacker
     } siteWithScore;
 
     /**
+     * @brief helper struct for candidate site sorting
+     *
+     */
+    typedef struct _PUWithScore
+    {
+        PlacementInfo::PlacementUnit *PU;
+        float score;
+
+        _PUWithScore(PlacementInfo::PlacementUnit *PU, float score) : PU(PU), score(score)
+        {
+        }
+    } PUWithScore;
+
+    /**
      * @brief PULocation is a helper class to find the neighbor PlacementUnits with KD-Tree
      *
      */

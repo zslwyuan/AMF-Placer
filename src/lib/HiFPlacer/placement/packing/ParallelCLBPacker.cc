@@ -287,41 +287,6 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         if (fixedRatio > 0.25 && WLOptimizer && iterCnt < 32)
         {
             placementInfo->updateElementBinGrid();
-            ///////////////////
-
-            // if (iterCnt < 7)
-            // {
-            //     cellId2PackingSite = std::vector<PackingCLBSite *>(placementInfo->getCells().size(), nullptr);
-            //     PUId2PackingCLBSite.clear();
-            //     PUId2PackingCLBSite.resize(placementInfo->getPlacementUnits().size(), nullptr);
-            //     for (auto packingSite : packingSites)
-            //     {
-            //         if (packingSite)
-            //         {
-            //             if (packingSite->getDeterminedClusterInSite())
-            //             {
-            //                 auto cellSet = packingSite->getDeterminedClusterInSite()->getCellSet();
-            //                 for (auto cell : cellSet)
-            //                 {
-            //                     cellId2PackingSite[cell->getCellId()] = packingSite;
-            //                     auto curPU = placementInfo->getPlacementUnitByCellId(cell->getCellId());
-            //                     PUId2PackingCLBSite[curPU->getId()] = packingSite;
-            //                 }
-            //             }
-            //             else if (packingSite->checkIsDSPBRAMSite())
-            //             {
-            //                 cellId2PackingSite[packingSite->getDSPBRAMCell()->getCellId()] = packingSite;
-            //                 auto curPU =
-            //                     placementInfo->getPlacementUnitByCellId(packingSite->getDSPBRAMCell()->getCellId());
-            //                 PUId2PackingCLBSite[curPU->getId()] = packingSite;
-            //             }
-            //         }
-            //     }
-            //     timingDrivenDetailedPlacement_shortestPath_intermediate();
-            //     placementInfo->updateElementBinGrid();
-            // }
-
-            ///////////////////
             timingOptimizer->pauseCounter();
             timingOptimizer->conductStaticTimingAnalysis();
             placementInfo->getPU2ClockRegionCenters().clear();
@@ -370,10 +335,12 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
     if (doExceptionHandling)
     {
         // assert(!incrementalPacking && "for incremental packing, it is not worthy to do exception handling");
-        exceptionHandling(true);
-        int packNum = packingSites.size();
         placementInfo->updateElementBinGrid();
         timingOptimizer->conductStaticTimingAnalysis();
+        exceptionHandling(true);
+        placementInfo->updateElementBinGrid();
+        timingOptimizer->conductStaticTimingAnalysis();
+        int packNum = packingSites.size();
         addDSPBRAMPackingSites();
         int replaceCnt = 1000;
         for (int i = 0; i < 120 && replaceCnt > 5; i++)
@@ -451,7 +418,7 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         for (int i = 0; i < packNum; i++)
             packingSites[i]->finalMapToSlots();
 
-        // timingDrivenDetailedPlacement_LUTFFPairReloacationAfterSlotMapping();
+        timingDrivenDetailedPlacement_LUTFFPairReloacationAfterSlotMapping();
     }
 
     // ensure the packing is legal
@@ -846,6 +813,37 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_LUTFFPairReloacationAfterSl
 {
     print_status("ParallelCLBPacker: re-place some LUT-FF pairs since they are not connected via internal nets.");
     auto oriCellIdsInCriticalPaths = timingOptimizer->findCriticalPaths(1, false, 100);
+
+    // auto &sortedTimingNodes = timingOptimizer->getSortedTimingNodes();
+    // std::vector<bool> FFDirectlyDrivenButNotInOneSlot;
+    // FFDirectlyDrivenButNotInOneSlot.clear();
+    // FFDirectlyDrivenButNotInOneSlot.resize(designInfo->getCells().size(), 0);
+    // for (auto node : sortedTimingNodes)
+    // {
+    //     int cellId = node->getDesignNode()->getCellId();
+    //     bool shouldRelocateLUTFFPair = false;
+    //     PackingCLBSite *srcSite = nullptr;
+    //     auto LUTFFPair = dynamic_cast<PlacementInfo::PlacementMacro
+    //     *>(placementInfo->getPlacementUnitByCellId(cellId)); DesignInfo::DesignCell *targetLUT = nullptr;
+    //     DesignInfo::DesignCell *targetFF = nullptr;
+    //     if (LUTFFPair)
+    //     {
+    //         if (LUTFFPair->getMacroType() == PlacementInfo::PlacementMacro::PlacementMacroType_LUTFFPair)
+    //         {
+    //             auto curPackingSite = cellId2PackingSite[cellId];
+    //             targetLUT = LUTFFPair->getCells()[0];
+    //             targetFF = LUTFFPair->getCells()[1];
+    //             auto LUTLoc = curPackingSite->getLUTSlot(targetLUT);
+    //             auto FFLoc = curPackingSite->getFFSlot(targetFF);
+    //             shouldRelocateLUTFFPair = !(LUTLoc[0] == FFLoc[0] && LUTLoc[1] == FFLoc[1] && LUTLoc[2] == FFLoc[2]);
+    //             srcSite = curPackingSite;
+    //         }
+    //         FFDirectlyDrivenButNotInOneSlot[cellId] = shouldRelocateLUTFFPair;
+    //     }
+    // }
+
+    // auto oriCellIdsInCriticalPaths = timingOptimizer->findCriticalPaths(1, FFDirectlyDrivenButNotInOneSlot);
+    // oriCellIdsInCriticalPaths.resize(200);
     std::set<PlacementInfo::PlacementUnit *> PUsTouched;
     PUsTouched.clear();
     int replaceCnt = 0;
@@ -893,9 +891,9 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_LUTFFPairReloacationAfterSl
             continue;
 
         // std::cout << "handling " << LUTFFPair << "\n";
-        int siteCandidateLimit = 10;
+        int siteCandidateLimit = 9;
 
-        float displacementThr = 2;
+        float displacementThr = 1.5;
         int orderI = 0;
         auto cellId = cellIdsInCriticalPath[orderI];
         auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
@@ -981,7 +979,7 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_LUTFFPairReloacationAfterSl
         {
             std::vector<DeviceInfo::DeviceSite *> *candidateSitesToPlaceTheCell = findNeiborSitesFromBinGrid(
                 DesignInfo::CellType_LUT4, PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X(),
-                PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, 1.2, y2xRatio, false);
+                PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y(), 0, displacementThr, y2xRatio, false);
             if (cellId2CandidateSites[cellId].size() >= siteCandidateLimit + 1)
                 break;
             // std::cout << curCell << " has " << candidateSitesToPlaceTheCell->size()
@@ -1509,6 +1507,7 @@ void ParallelCLBPacker::exceptionHandling(bool verbose)
 
     while (PUPoints.size())
     {
+        timingOptimizer->getPUId2Slack(true); // update PU slack information
         // build k-d tree
         kdt::KDTree<PULocation> kdtree(PUPoints, y2xRatio);
         processedPUs.clear();
@@ -1640,6 +1639,8 @@ void ParallelCLBPacker::exceptionHandling(bool verbose)
         avgLUTWeight /= tmpLUTCnt;
         print_info("there are " + std::to_string(tmpFFCnt) + " FFs(avgW=" + std::to_string(avgFFWeight) + ") and " +
                    std::to_string(tmpLUTCnt) + " LUTs(avgW=" + std::to_string(avgLUTWeight) + ") ");
+        placementInfo->updateElementBinGrid();
+        timingOptimizer->conductStaticTimingAnalysis();
     }
 
     if (verbose)
@@ -1711,8 +1712,11 @@ bool ParallelCLBPacker::exceptionPULegalize(PlacementInfo::PlacementUnit *curPU,
 
         sitesToRipUp.emplace_back(packingSite, score);
     }
-    std::sort(sitesToRipUp.begin(), sitesToRipUp.end(),
-              [](const siteWithScore &a, const siteWithScore &b) -> bool { return a.score > b.score; });
+    std::sort(sitesToRipUp.begin(), sitesToRipUp.end(), [](const siteWithScore &a, const siteWithScore &b) -> bool {
+        return a.score == b.score
+                   ? (a.site->getCLBSite()->getElementIdInParent() > b.site->getCLBSite()->getElementIdInParent())
+                   : (a.score > b.score);
+    });
 
     // if (verbose)
     // {
@@ -1825,8 +1829,21 @@ bool ParallelCLBPacker::ripUpAndLegalizae(
             std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> evictedPUs = backup_determinedCluster->getPUs();
             std::set<PlacementInfo::PlacementUnit *, Packing_PUcompare> notEvictedPUs;
             notEvictedPUs.clear();
+
+            auto &PUId2Slack = timingOptimizer->getPUId2Slack();
+            std::vector<PUWithScore> PUsWithSlack;
+            PUsWithSlack.clear();
             for (auto evictedPU : evictedPUs)
             {
+                PUsWithSlack.emplace_back(evictedPU, PUId2Slack[evictedPU->getId()]);
+            }
+            std::sort(PUsWithSlack.begin(), PUsWithSlack.end(), [](const PUWithScore &a, const PUWithScore &b) -> bool {
+                return a.score == b.score ? (a.PU->getId() > b.PU->getId()) : (a.score < b.score);
+            });
+
+            for (auto evictedPU_scorePair : PUsWithSlack)
+            {
+                auto evictedPU = evictedPU_scorePair.PU;
                 assert(curTargetPackingSite->getDeterminedClusterInSite()->getPUs().find(evictedPU) ==
                        curTargetPackingSite->getDeterminedClusterInSite()->getPUs().end());
                 // if (verbose)

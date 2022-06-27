@@ -42,6 +42,8 @@ class PlacementTimingOptimizer
     std::vector<int> findCriticalPath();
     std::vector<std::vector<int>> findCriticalPaths(float criticalRatio, bool checkOverlap = true,
                                                     int pathNumThr = 1000, int converThr = 30);
+    std::vector<std::vector<int>> findCriticalPaths(float criticalRatio,
+                                                    std::vector<bool> &FFDirectlyDrivenButNotInOneSlot);
     float getWorstSlackOfCell(DesignInfo::DesignCell *srcCell);
     float conductStaticTimingAnalysis(bool enforeOptimisticTiming = false);
     void incrementalStaticTimingAnalysis_forPUWithLocation(PlacementInfo::PlacementUnit *curPU, float targetX,
@@ -168,6 +170,16 @@ class PlacementTimingOptimizer
         return netActualSlackPinNum;
     }
 
+    std::vector<float> &getPUId2Slack(bool update = false);
+
+    inline std::vector<PlacementTimingInfo::TimingGraph<DesignInfo::DesignCell>::TimingNode *> &getSortedTimingNodes()
+    {
+        assert(timingInfo);
+        auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
+        timingGraph->sortedEndpointByDelay();
+        return timingGraph->getSortedTimingEndpoints();
+    }
+
   private:
     PlacementInfo *placementInfo = nullptr;
     PlacementTimingInfo *timingInfo = nullptr;
@@ -197,6 +209,7 @@ class PlacementTimingOptimizer
     std::vector<float> pois;
     std::vector<std::vector<int>> clockRegionclusters;
     std::map<PlacementInfo::PlacementNet *, int> netActualSlackPinNum;
+    std::vector<float> PUId2Slack;
     bool increaseLowDelayVal = false;
     bool enableCounter = true;
 };

@@ -152,36 +152,53 @@ std::vector<std::vector<int>> PlacementTimingOptimizer::findCriticalPaths(float 
         if (resPaths.size() > pathNumThr)
             break;
     }
-    // std::string cellNames[24] = {"design_1_i/DigitRec_0/inst/ap_CS_fsm_reg[9]_replica_1",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_311_0_reg_21661[31]_i_2",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_84",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_18",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_8",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_132",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_37",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_9",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_182",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_55",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799_reg[31]_i_10",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_66",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_14",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001_reg[31]_i_4",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175[31]_i_40",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175[31]_i_28",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175_reg[31]_i_5",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_314_1_reg_22175_reg[31]_i_3",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_307_3_reg_21799[31]_i_5",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_310_1_reg_22001[31]_i_1",
-    //                              "design_1_i/DigitRec_0/inst/knn_set_306_343_reg_21841[8]_i_5",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919[31]_i_3",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919[31]_i_1",
-    //                              "design_1_i/DigitRec_0/inst/ap_phi_reg_pp2_iter25_knn_set_316_1_reg_21919_reg[1]"};
 
-    // for (int i = 0; i < 24; i++)
-    // {
-    //     int cellId = placementInfo->getDesignInfo()->getCell(cellNames[i])->getCellId();
-    //     std::cout << "name : " << cellNames[i] << " coverCnt:" << isCovered[cellId] << "\n";
-    // }
+    return resPaths;
+}
+
+std::vector<std::vector<int>>
+PlacementTimingOptimizer::findCriticalPaths(float criticalRatio, std::vector<bool> &FFDirectlyDrivenButNotInOneSlot)
+{
+
+    assert(timingInfo);
+    auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
+    timingGraph->sortedEndpointByDelay();
+    std::vector<int> isCovered(timingGraph->getNodes().size(), 0);
+    std::vector<std::vector<int>> resPaths;
+
+    for (auto curEndpoint : timingGraph->getSortedTimingEndpoints())
+    {
+        if (isCovered[curEndpoint->getId()] || !FFDirectlyDrivenButNotInOneSlot[curEndpoint->getId()])
+            continue;
+        if (curEndpoint->getLatestInputArrival() / timingGraph->getClockPeriod() < criticalRatio)
+            break;
+        std::vector<int> resPath;
+        bool findSuccessfully =
+            timingGraph->backTraceDelayLongestPathFromNode(curEndpoint->getId(), isCovered, resPath, 100);
+        if (findSuccessfully)
+        {
+            // std::cout << "find endpoint [" << curEndpoint->getDesignNode()
+            //           << "] delay=" << curEndpoint->getLatestInputArrival() << " with " << resPath.size()
+            //           << " nodes in path.\n";
+            resPath.resize(2);
+            resPaths.push_back(resPath);
+            for (auto cellId : resPath)
+            {
+                auto PU = placementInfo->getPlacementUnitByCellId(cellId);
+                if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(PU))
+                {
+                    isCovered[unpackedCell->getCell()->getCellId()] = 1;
+                }
+                else if (auto macro = dynamic_cast<PlacementInfo::PlacementMacro *>(PU))
+                {
+                    for (auto cell : macro->getCells())
+                    {
+                        isCovered[cell->getCellId()] = 1;
+                    }
+                }
+            }
+        }
+    }
 
     return resPaths;
 }
@@ -865,4 +882,89 @@ void PlacementTimingOptimizer::propogateArrivalTime()
 {
     assert(timingInfo);
     // auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
+}
+
+std::vector<float> &PlacementTimingOptimizer::getPUId2Slack(bool update)
+{
+    if (update)
+    {
+        auto timingNodes = placementInfo->getTimingInfo()->getSimplePlacementTimingInfo();
+        // float clockPeriod = placementInfo->getTimingInfo()->getSimplePlacementTimingGraph()->getClockPeriod();
+        auto &cellLoc = placementInfo->getCellId2location();
+        assert(cellLoc.size() == timingNodes.size());
+
+        unsigned int highFanoutThr = 1000;
+
+        int PUNum = placementInfo->getPlacementUnits().size();
+        PUId2Slack.clear();
+        PUId2Slack.resize(PUNum, 0);
+
+#pragma omp parallel for
+        for (int PUId = 0; PUId < PUNum; PUId++)
+        {
+            auto &curPU = placementInfo->getPlacementUnits()[PUId];
+
+            for (auto curNet : *(curPU->getNetsSetPtr()))
+            {
+                if (curNet->getDriverUnits().size() == 0)
+                    continue;
+                if (curNet->getDriverUnits()[0] != curPU)
+                    continue;
+
+                auto designNet = curNet->getDesignNet();
+                assert(designNet);
+                if (designNet->checkIsPowerNet() || designNet->checkIsGlobalClock())
+                    continue;
+
+                if (curNet->getDriverUnits().size() != 1 || curNet->getUnits().size() <= 1 ||
+                    curNet->getUnits().size() >= highFanoutThr)
+                    continue;
+                auto &PUs = curNet->getUnits();
+                auto &pins = designNet->getPins();
+                int pinNum = pins.size();
+
+                assert(curNet->getUnits().size() == (unsigned int)pinNum);
+
+                int driverPinInNet = -1;
+
+                for (int i = 0; i < pinNum; i++)
+                {
+                    if (pins[i]->isOutputPort())
+                    {
+                        driverPinInNet = i;
+                        break;
+                    }
+                }
+
+                assert(driverPinInNet >= 0);
+
+                // get the srcPin information
+                auto srcCell = pins[driverPinInNet]->getCell();
+                unsigned int srcCellId = srcCell->getCellId();
+                auto srcNode = timingNodes[srcCellId];
+                auto srcLoc = cellLoc[srcCellId];
+
+                for (int pinBeDriven = 0; pinBeDriven < pinNum; pinBeDriven++)
+                {
+                    if (pinBeDriven == driverPinInNet)
+                        continue;
+
+                    // get the sinkPin information
+                    auto sinkCell = pins[pinBeDriven]->getCell();
+                    unsigned int sinkCellId = sinkCell->getCellId();
+                    auto sinkNode = timingNodes[sinkCellId];
+                    auto sinkLoc = cellLoc[sinkCellId];
+
+                    float netDelay = getDelayByModel(sinkNode, srcNode, sinkLoc.X, sinkLoc.Y, srcLoc.X, srcLoc.Y);
+                    float slack = sinkNode->getRequiredArrivalTime() - srcNode->getLatestOutputArrival() - netDelay;
+                    if (slack < 0)
+                    {
+                        if (slack < PUId2Slack[PUId])
+                            PUId2Slack[PUId] = slack;
+                    }
+                }
+            }
+        }
+    }
+    return PUId2Slack;
 }
