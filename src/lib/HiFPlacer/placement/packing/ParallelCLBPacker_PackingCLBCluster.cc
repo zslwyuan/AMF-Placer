@@ -119,8 +119,16 @@ bool ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addLUT(DesignInfo::De
             {
                 if (!(parentPackingCLB->conflictLUTsContain(curLUT) &&
                       parentPackingCLB->conflictLUTsContain(singleLUT)))
-                    LUTToPair = singleLUT;
-                break;
+                {
+                    if (!LUTToPair)
+                    {
+                        LUTToPair = singleLUT;
+                    }
+                    else if (LUTToPair->getCellId() > singleLUT->getCellId())
+                    {
+                        LUTToPair = singleLUT;
+                    }
+                }
             }
         }
         if (LUTToPair)
@@ -479,25 +487,31 @@ int ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum(Pla
     //     if (curNet->getDesignNet()->getDriverPins().size() == 1)
     //         if (curNet->getDesignNet()->getDriverPins()[0]->getCell()->isFF())
     //             return 1;
-    for (auto tmpPU : curNet->getUnits())
+    for (auto tmpPU : curNet->getUnitsBeDriven())
     {
         if (PUs.find(tmpPU) != PUs.end())
         {
             res++;
         }
     }
+
+    if (!res)
+        res = 1;
     return res;
 }
 
 void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::updateScoreInSite()
 {
-    std::set<PlacementInfo::PlacementNet *> nets;
+    std::set<PlacementInfo::PlacementNet *, Packing_Netcompare> nets;
     nets.clear();
     // net2ConnectivityScore.clear();
 
     HPWLChange = 0;
-    totalCellNum = 0;
+    totalNetNum = 0;
     totalLen = 0;
+
+    totalCellNum = 0;
+
     for (auto tmpPU : PUs)
     {
         HPWLChange += getHPWLChangeForPU(tmpPU);
@@ -511,8 +525,12 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::updateScoreInSite()
                 nets.insert(tmpNet);
             }
         }
-        totalCellNum += tmpPU->getNetsSetPtr()->size() * 0.5; //(tmpPU->getWeight() > 1 ? (tmpPU->getWeight() / 2) : 1);
+        totalNetNum += tmpPU->getNetsSetPtr()->size() * 0.5; //(tmpPU->getWeight() > 1 ? (tmpPU->getWeight() / 2) : 1);
         totalLen += getPlacementUnitMaxPathLen(tmpPU);
+        if (tmpPU->getType() == PlacementInfo::PlacementUnitType_Macro)
+            totalCellNum += tmpPU->getWeight();
+        else
+            totalCellNum += 1;
     }
 
     totalConnectivityScore = 0;
@@ -531,23 +549,24 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::updateScoreInSite()
         }
     }
 
-    scoreInSite = totalCellNum * 0.45 + 0.05 * totalLen + 0.5 * totalConnectivityScore - HPWLWeight * HPWLChange -
+    scoreInSite = totalNetNum * 0.45 + 0.05 * totalLen + 0.5 * totalConnectivityScore - HPWLWeight * HPWLChange -
                   0.2 * (singleLUTs.size() + pairedLUTs.size());
 }
 
 void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite(
     PlacementInfo::PlacementUnit *curPU)
 {
-    HPWLChange += getHPWLChangeForPU(curPU);
-    totalCellNum += curPU->getNetsSetPtr()->size() * 0.5; // (curPU->getWeight() > 1 ? (curPU->getWeight() / 2) : 1);
-    totalLen += getPlacementUnitMaxPathLen(curPU);
-
-    std::set<PlacementInfo::PlacementNet *> nets;
+    std::set<PlacementInfo::PlacementNet *, Packing_Netcompare> nets;
     nets.clear();
     // net2ConnectivityScore.clear();
 
+    HPWLChange = 0;
+    totalNetNum = 0;
+    totalLen = 0;
+    totalCellNum = 0;
     for (auto tmpPU : PUs)
     {
+        HPWLChange += getHPWLChangeForPU(tmpPU);
         for (auto tmpNet : *tmpPU->getNetsSetPtr())
         {
             if (tmpNet->getUnits().size() > 64) // ignore large net
@@ -558,6 +577,12 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScor
                 nets.insert(tmpNet);
             }
         }
+        totalNetNum += tmpPU->getNetsSetPtr()->size() * 0.5; //(tmpPU->getWeight() > 1 ? (tmpPU->getWeight() / 2) : 1);
+        totalLen += getPlacementUnitMaxPathLen(tmpPU);
+        if (tmpPU->getType() == PlacementInfo::PlacementUnitType_Macro)
+            totalCellNum += tmpPU->getWeight();
+        else
+            totalCellNum += 1;
     }
 
     totalConnectivityScore = 0;
@@ -566,6 +591,7 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScor
         if (tmpNet->getUnits().size() > 1)
         {
             float tmpConnectivityVal = (float)(getInternalPinsNum(tmpNet) - 1) / (float)(tmpNet->getUnits().size() - 1);
+
             //   net2ConnectivityScore[tmpNet] = tmpConnectivityVal;
             totalConnectivityScore += tmpConnectivityVal;
         }
@@ -576,7 +602,7 @@ void ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScor
         }
     }
 
-    scoreInSite = totalCellNum * 0.45 + 0.05 * totalLen + 0.5 * totalConnectivityScore - HPWLWeight * HPWLChange -
+    scoreInSite = totalNetNum * 0.45 + 0.05 * totalLen + 0.5 * totalConnectivityScore - HPWLWeight * HPWLChange -
                   0.2 * (singleLUTs.size() + pairedLUTs.size());
 }
 

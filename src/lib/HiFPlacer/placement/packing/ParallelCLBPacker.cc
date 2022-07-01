@@ -12,6 +12,7 @@
  */
 
 #include "ParallelCLBPacker.h"
+#define TIMINGDP
 
 void ParallelCLBPacker::prePackLegalizedMacros(PlacementInfo::PlacementMacro *tmpMacro)
 {
@@ -177,6 +178,34 @@ void ParallelCLBPacker::packCLBsIteration(bool initial, bool debug)
                     if (!PUId2PackingCLBSiteCandidate[tmpPU->getId()])
                     {
                         PUId2PackingCLBSiteCandidate[tmpPU->getId()] = tmpPackingSite;
+                        // if (tmpPU->getId() == 117104)
+                        // {
+                        //     std::ofstream debugFile;
+                        //     debugFile.open("OpenPitonSLICE_SLICE_X38Y213", std::ios_base::app);
+                        //     assert(debugFile.is_open() && debugFile.good() &&
+                        //            "The path for placement Tcl dumping does not exist and please check your path "
+                        //            "settings");
+
+                        //     debugFile << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<First Choice >>>>>>>>>>>>>>>\n";
+                        //     debugFile << PUId2PackingCLBSiteCandidate[117104]->getCLBSite()->getName() << "\n";
+                        //     debugFile << PUId2PackingCLBSiteCandidate[117104]->getPriorityQueueTop();
+                        //     debugFile << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>\n";
+                        //     debugFile.close();
+                        // }
+                        // if (tmpPU->getId() == 116959)
+                        // {
+                        //     std::ofstream debugFile;
+                        //     debugFile.open("OpenPitonSLICE_SLICE_X38Y213", std::ios_base::app);
+                        //     assert(debugFile.is_open() && debugFile.good() &&
+                        //            "The path for placement Tcl dumping does not exist and please check your path "
+                        //            "settings");
+
+                        //     debugFile << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<First Choice >>>>>>>>>>>>>>>\n";
+                        //     debugFile << PUId2PackingCLBSiteCandidate[116959]->getCLBSite()->getName() << "\n";
+                        //     debugFile << PUId2PackingCLBSiteCandidate[116959]->getPriorityQueueTop();
+                        //     debugFile << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>\n";
+                        //     debugFile.close();
+                        // }
                     }
                     else
                     {
@@ -188,6 +217,46 @@ void ParallelCLBPacker::packCLBsIteration(bool initial, bool debug)
                         if (newDeltaScore > oriDeltaScore)
                         {
                             PUId2PackingCLBSiteCandidate[tmpPU->getId()] = tmpPackingSite;
+                            // if (tmpPU->getId() == 117104)
+                            // {
+                            //     std::ofstream debugFile;
+                            //     debugFile.open("OpenPitonSLICE_SLICE_X38Y213", std::ios_base::app);
+                            //     assert(debugFile.is_open() && debugFile.good() &&
+                            //            "The path for placement Tcl dumping does not exist and please check your path
+                            //            " "settings");
+
+                            //     debugFile
+                            //         << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Second Choice >>>>>>>>>>>>>>> :
+                            //         newDeltaScore"
+                            //         << newDeltaScore << "  oriDeltaScore:" << oriDeltaScore << "\n";
+                            //     debugFile << PUId2PackingCLBSiteCandidate[117104]->getCLBSite()->getName() << "\n";
+                            //     debugFile << PUId2PackingCLBSiteCandidate[117104]->getPriorityQueueTop();
+                            //     debugFile << "-----------------------------------------------------------------\n";
+                            //     if (PUId2PackingCLBSiteCandidate[117104]->getDeterminedClusterInSite())
+                            //         debugFile << PUId2PackingCLBSiteCandidate[117104]->getDeterminedClusterInSite();
+                            //     debugFile << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>\n";
+                            //     debugFile.close();
+                            // }
+                            // if (tmpPU->getId() == 116959)
+                            // {
+                            //     std::ofstream debugFile;
+                            //     debugFile.open("OpenPitonSLICE_SLICE_X38Y213", std::ios_base::app);
+                            //     assert(debugFile.is_open() && debugFile.good() &&
+                            //            "The path for placement Tcl dumping does not exist and please check your path
+                            //            " "settings");
+
+                            //     debugFile
+                            //         << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Second Choice >>>>>>>>>>>>>>> :
+                            //         newDeltaScore"
+                            //         << newDeltaScore << "  oriDeltaScore:" << oriDeltaScore << "\n";
+                            //     debugFile << PUId2PackingCLBSiteCandidate[116959]->getCLBSite()->getName() << "\n";
+                            //     debugFile << PUId2PackingCLBSiteCandidate[116959]->getPriorityQueueTop();
+                            //     debugFile << "-----------------------------------------------------------------\n";
+                            //     if (PUId2PackingCLBSiteCandidate[116959]->getDeterminedClusterInSite())
+                            //         debugFile << PUId2PackingCLBSiteCandidate[116959]->getDeterminedClusterInSite();
+                            //     debugFile << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>\n";
+                            //     debugFile.close();
+                            // }
                         }
                     }
                 }
@@ -210,6 +279,10 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
     placementInfo->updateElementBinGrid(); // we don't need utilization information here, we can update LUT/FF
                                            // utilization when needed.
     int iterCnt = 0;
+    std::ofstream debugFile;
+    debugFile.open("OpenPitonSLICE_SLICE_X38Y213");
+    debugFile.close();
+
     packCLBsIteration(true, debug);
     print_status("ParallelCLBPacker: initial packCLBsIteration done.");
     while (true)
@@ -343,6 +416,8 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         int packNum = packingSites.size();
         addDSPBRAMPackingSites();
         int replaceCnt = 1000;
+
+#ifdef TIMINGDP
         for (int i = 0; i < 120 && replaceCnt > 5; i++)
         {
             cellId2PackingSite = std::vector<PackingCLBSite *>(placementInfo->getCells().size(), nullptr);
@@ -414,11 +489,13 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
             setPULocationToPackedSite();
             timingOptimizer->conductStaticTimingAnalysis();
         }
+#endif
 #pragma omp parallel for schedule(dynamic)
         for (int i = 0; i < packNum; i++)
             packingSites[i]->finalMapToSlots();
-
+#ifdef TIMINGDP
         timingDrivenDetailedPlacement_LUTFFPairReloacationAfterSlotMapping();
+#endif
     }
 
     // ensure the packing is legal

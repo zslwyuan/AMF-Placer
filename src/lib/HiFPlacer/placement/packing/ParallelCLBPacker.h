@@ -58,6 +58,14 @@ struct Packing_PUcompare
     }
 };
 
+struct Packing_Netcompare
+{
+    inline bool operator()(PlacementInfo::PlacementNet *lhs, PlacementInfo::PlacementNet *rhs) const
+    {
+        return lhs->getId() < rhs->getId();
+    }
+};
+
 /**
  * @brief ParallelCLBPacker will finally pack LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel approach.
  *
@@ -234,6 +242,9 @@ class ParallelCLBPacker
                 }
             }
             FFs.push_back(curFF);
+            std::sort(FFs.begin(), FFs.end(), [](DesignInfo::DesignCell *a, DesignInfo::DesignCell *b) -> bool {
+                return a->getCellId() > b->getCellId();
+            });
         }
 
         /**
@@ -442,6 +453,7 @@ class ParallelCLBPacker
                 // net2ConnectivityScore = anotherPackingCLBCluster->getNet2ConnectivityScore();
                 HPWLChange = anotherPackingCLBCluster->getHPWLChange();
                 totalConnectivityScore = anotherPackingCLBCluster->getTotalConnectivityScore();
+                totalNetNum = anotherPackingCLBCluster->getTotalNetNum();
                 totalCellNum = anotherPackingCLBCluster->getTotalCellNum();
                 totalLen = anotherPackingCLBCluster->getTotalLen();
                 numMuxes = anotherPackingCLBCluster->getNumMuxes();
@@ -1102,6 +1114,23 @@ class ParallelCLBPacker
             }
 
             /**
+             * @brief Get the sorted list of single LUTs in this cluster (some other LUTs have been paired for packing)
+             *
+             * @return std::vector<DesignInfo::DesignCell *>&
+             */
+            inline std::vector<DesignInfo::DesignCell *> getSortedSingleLUTs()
+            {
+                std::vector<DesignInfo::DesignCell *> LUTs;
+                LUTs.clear();
+                for (auto tmpLUT : singleLUTs)
+                    LUTs.push_back(tmpLUT);
+                std::sort(LUTs.begin(), LUTs.end(), [](DesignInfo::DesignCell *a, DesignInfo::DesignCell *b) -> bool {
+                    return a->getCellId() > b->getCellId();
+                });
+                return LUTs;
+            }
+
+            /**
              * @brief remove a single LUT from the set of single LUTs in this cluster
              *
              * @param tmpLUT a given single LUT
@@ -1195,6 +1224,27 @@ class ParallelCLBPacker
             inline const std::set<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>> &getPairedLUTs() const
             {
                 return pairedLUTs;
+            }
+
+            /**
+             * @brief Get the sorted list of the paired LUTs
+             *
+             * @return std::vector<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>>&
+             */
+            inline std::vector<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>> getSortedPairedLUTs()
+            {
+                std::vector<std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *>> pairedLUTs_new;
+                pairedLUTs_new.clear();
+                for (auto tmpLUTs : pairedLUTs)
+                    pairedLUTs_new.push_back(tmpLUTs);
+
+                std::sort(pairedLUTs_new.begin(), pairedLUTs_new.end(),
+                          [](std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *> &a,
+                             std::pair<DesignInfo::DesignCell *, DesignInfo::DesignCell *> &b) -> bool {
+                              return a.first->getCellId() > b.first->getCellId();
+                          });
+
+                return pairedLUTs_new;
             }
 
             /**
@@ -1403,6 +1453,16 @@ class ParallelCLBPacker
             inline float getHPWLChange() const
             {
                 return HPWLChange;
+            }
+
+            /**
+             * @brief Get the total number of cells in this cluster
+             *
+             * @return int
+             */
+            inline int getTotalNetNum() const
+            {
+                return totalNetNum;
             }
 
             /**
@@ -1661,6 +1721,7 @@ class ParallelCLBPacker
              * displacement of these elements might lead to bad routing.
              *
              */
+            int totalNetNum = 0;
             int totalCellNum = 0;
 
             /**
@@ -2634,7 +2695,7 @@ class ParallelCLBPacker
         // std::map<PlacementInfo::PlacementUnit *, float> PU2HPWLChange;
         std::vector<PackingCLBCluster *> seedClusters;
         std::vector<PackingCLBCluster *> priorityQueue;
-        std::map<PlacementInfo::PlacementUnit *, int> PU2TopCnt;
+        std::map<PlacementInfo::PlacementUnit *, int, Packing_PUcompare> PU2TopCnt;
         const std::vector<PackingCLBSite *> &PUId2PackingCLBSite;
         PackingCLBCluster *determinedClusterInSite = nullptr;
         float detScore = 0;
