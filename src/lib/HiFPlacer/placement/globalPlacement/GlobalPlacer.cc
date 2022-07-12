@@ -164,7 +164,10 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
                 displacementLimit = 10;
 
             if (timingOptimizer->getEffectFactor() > 0.5)
+            {
                 placementInfo->enhanceRiskyClockNet();
+                placementInfo->enhanceDDRNet();
+            }
             placementInfo->enhanceHighFanoutNet();
 
             timingOptimizer->conductStaticTimingAnalysis();

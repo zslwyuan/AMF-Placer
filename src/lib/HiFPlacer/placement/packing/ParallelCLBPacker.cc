@@ -418,7 +418,7 @@ void ParallelCLBPacker::packCLBs(int packIterNum, bool doExceptionHandling, bool
         int replaceCnt = 1000;
 
 #ifdef TIMINGDP
-        for (int i = 0; i < 120 && replaceCnt > 5; i++)
+        for (int i = 0; (i < 120 || replaceCnt > 60) && i < 150; i++)
         {
             cellId2PackingSite = std::vector<PackingCLBSite *>(placementInfo->getCells().size(), nullptr);
             PUId2PackingCLBSite.clear();
@@ -777,12 +777,6 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_shortestPath(int iterId, fl
             }
         }
 
-        for (int orderI = cellIdsInCriticalPath.size() - 1; orderI >= 0; orderI--)
-        {
-            auto cellId = cellIdsInCriticalPath[orderI];
-            auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
-            PUsTouched.insert(curPU);
-        }
         // calculate the shortest paths
         std::vector<std::vector<float>> shortestPath_LayerSite;
         std::vector<std::vector<int>> shortestPath_LayerSite_backtrace;
@@ -856,7 +850,10 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_shortestPath(int iterId, fl
 
                 auto targetPackingSite = cellId2CandidateSites[curCellId][bestEndChoice];
                 if (!targetPackingSite->getDeterminedClusterInSite()->checkAddPU(curPU))
+                {
+                    bestEndChoice = shortestPath_LayerSite_backtrace[i][bestEndChoice];
                     continue;
+                }
 
                 cellId2CandidateSites[curCellId][0]->getDeterminedClusterInSite()->removePUToConstructDetCluster(curPU);
 
@@ -874,6 +871,103 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_shortestPath(int iterId, fl
             bestEndChoice = shortestPath_LayerSite_backtrace[i][bestEndChoice];
         }
 
+        for (int i = 0; i < shortestPath_LayerSite.size() - 1; i++)
+        {
+            auto curCellId = cellIdsInCriticalPath[i];
+            auto curPU = placementInfo->getPlacementUnitByCellId(curCellId);
+            auto nextCellId = cellIdsInCriticalPath[i + 1];
+            auto nextPU = placementInfo->getPlacementUnitByCellId(nextCellId);
+            if (curPU->checkHasCARRY() || curPU->checkHasLUTRAM() || curPU->checkHasBRAM() || curPU->checkHasDSP() ||
+                nextPU->checkHasCARRY() || nextPU->checkHasLUTRAM() || nextPU->checkHasBRAM() ||
+                nextPU->checkHasDSP() || PUsTouched.find(curPU) != PUsTouched.end() ||
+                PUsTouched.find(nextPU) != PUsTouched.end() || curPU == nextPU || curPU->isLocked() ||
+                nextPU->isLocked())
+            {
+                continue;
+            }
+            if (PUId2PackingCLBSite[curPU->getId()] == PUId2PackingCLBSite[nextPU->getId()])
+                continue;
+
+            float oriDis = 0;
+            float newDis = 0;
+            auto curPackingSite = PUId2PackingCLBSite[curPU->getId()];
+            auto nextPackingSite = PUId2PackingCLBSite[nextPU->getId()];
+            float curX = PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X();
+            float curY = PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y();
+            float nextX = PUId2PackingCLBSite[nextPU->getId()]->getCLBSite()->X();
+            float nextY = PUId2PackingCLBSite[nextPU->getId()]->getCLBSite()->Y();
+
+            if (timingOptimizer->getDelayByModel(nextX, nextY, curX, curY) > 0.5)
+                continue;
+
+            if (i > 0)
+            {
+                auto prevCellId = cellIdsInCriticalPath[i - 1];
+                assert(cellId2PackingSite[prevCellId]);
+                float headX = cellId2PackingSite[prevCellId]->getCLBSite()->X();
+                float headY = cellId2PackingSite[prevCellId]->getCLBSite()->Y();
+                oriDis += timingOptimizer->getDelayByModel(headX, headY, curX, curY);
+                newDis += timingOptimizer->getDelayByModel(headX, headY, nextX, nextY);
+            }
+
+            if (i < shortestPath_LayerSite.size() - 1)
+            {
+                auto succCellId = cellIdsInCriticalPath[i + 1];
+                assert(cellId2PackingSite[succCellId]);
+                float tailX = cellId2PackingSite[succCellId]->getCLBSite()->X();
+                float tailY = cellId2PackingSite[succCellId]->getCLBSite()->Y();
+                newDis += timingOptimizer->getDelayByModel(tailX, tailY, curX, curY);
+                oriDis += timingOptimizer->getDelayByModel(tailX, tailY, nextX, nextY);
+            }
+
+            if (newDis < oriDis)
+            {
+                auto trialClusterWithCurPU =
+                    new PackingCLBSite::PackingCLBCluster(curPackingSite->getDeterminedClusterInSite());
+                auto trialClusterWithNextPU =
+                    new PackingCLBSite::PackingCLBCluster(nextPackingSite->getDeterminedClusterInSite());
+                assert(trialClusterWithCurPU->contains(curPU));
+                trialClusterWithCurPU->removePUToConstructDetCluster(curPU);
+                assert(trialClusterWithNextPU->contains(nextPU));
+                trialClusterWithNextPU->removePUToConstructDetCluster(nextPU);
+                if (trialClusterWithCurPU->addPU(nextPU))
+                {
+                    if (trialClusterWithNextPU->addPU(curPU))
+                    {
+                        curPackingSite->getDeterminedClusterInSite()->removePUToConstructDetCluster(curPU);
+                        assert(curPackingSite->getDeterminedClusterInSite()->addPU(nextPU));
+                        nextPackingSite->getDeterminedClusterInSite()->removePUToConstructDetCluster(nextPU);
+                        assert(nextPackingSite->getDeterminedClusterInSite()->addPU(curPU));
+
+                        PUId2PackingCLBSite[curPU->getId()] = nextPackingSite;
+                        placementInfo->addPUIntoClockColumn(curPU, nextPackingSite->getCLBSite());
+                        auto cellSet = nextPackingSite->getDeterminedClusterInSite()->getCellSet();
+                        for (auto cell : cellSet)
+                        {
+                            cellId2PackingSite[cell->getCellId()] = nextPackingSite;
+                        }
+
+                        PUId2PackingCLBSite[nextPU->getId()] = curPackingSite;
+                        placementInfo->addPUIntoClockColumn(nextPU, curPackingSite->getCLBSite());
+                        cellSet = curPackingSite->getDeterminedClusterInSite()->getCellSet();
+                        for (auto cell : cellSet)
+                        {
+                            cellId2PackingSite[cell->getCellId()] = curPackingSite;
+                        }
+                    }
+                }
+
+                delete trialClusterWithCurPU;
+                delete trialClusterWithNextPU;
+            }
+        }
+
+        for (int orderI = cellIdsInCriticalPath.size() - 1; orderI >= 0; orderI--)
+        {
+            auto cellId = cellIdsInCriticalPath[orderI];
+            auto curPU = placementInfo->getPlacementUnitByCellId(cellId);
+            PUsTouched.insert(curPU);
+        }
         for (auto pair : site2TrialCluster)
         {
             delete pair.second;
@@ -1498,9 +1592,105 @@ int ParallelCLBPacker::timingDrivenDetailedPlacement_swap(int iterId)
                     cellId2PackingSite[unpackedCell_curPU->getCell()->getCellId()] = bestCandidatePackingSite;
                     cellId2PackingSite[unpackedCell_bestSwapCandidatePU->getCell()->getCellId()] =
                         PUId2PackingCLBSite[curPU->getId()];
+
+                    auto tmpSwapPackingSite = PUId2PackingCLBSite[bestSwapCandidatePU->getId()];
+                    PUId2PackingCLBSite[bestSwapCandidatePU->getId()] = PUId2PackingCLBSite[curPU->getId()];
+                    PUId2PackingCLBSite[curPU->getId()] = tmpSwapPackingSite;
                     replaceCnt++;
                 }
                 delete candidateSitesToPlaceTheCell_cone;
+            }
+        }
+
+        for (int i = 0; i < cellIdsInCriticalPath.size() - 1; i++)
+        {
+            auto curCellId = cellIdsInCriticalPath[i];
+            auto curPU = placementInfo->getPlacementUnitByCellId(curCellId);
+            auto nextCellId = cellIdsInCriticalPath[i + 1];
+            auto nextPU = placementInfo->getPlacementUnitByCellId(nextCellId);
+            if (curPU->checkHasCARRY() || curPU->checkHasLUTRAM() || curPU->checkHasBRAM() || curPU->checkHasDSP() ||
+                nextPU->checkHasCARRY() || nextPU->checkHasLUTRAM() || nextPU->checkHasBRAM() ||
+                nextPU->checkHasDSP() || PUsTouched.find(curPU) != PUsTouched.end() ||
+                PUsTouched.find(nextPU) != PUsTouched.end() || curPU == nextPU || curPU->isLocked() ||
+                nextPU->isLocked())
+            {
+                continue;
+            }
+            if (PUId2PackingCLBSite[curPU->getId()] == PUId2PackingCLBSite[nextPU->getId()])
+                continue;
+
+            float oriDis = 0;
+            float newDis = 0;
+            auto curPackingSite = PUId2PackingCLBSite[curPU->getId()];
+            auto nextPackingSite = PUId2PackingCLBSite[nextPU->getId()];
+            float curX = PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->X();
+            float curY = PUId2PackingCLBSite[curPU->getId()]->getCLBSite()->Y();
+            float nextX = PUId2PackingCLBSite[nextPU->getId()]->getCLBSite()->X();
+            float nextY = PUId2PackingCLBSite[nextPU->getId()]->getCLBSite()->Y();
+
+            if (timingOptimizer->getDelayByModel(nextX, nextY, curX, curY) > 0.5)
+                continue;
+
+            if (i > 0)
+            {
+                auto prevCellId = cellIdsInCriticalPath[i - 1];
+                assert(cellId2PackingSite[prevCellId]);
+                float headX = cellId2PackingSite[prevCellId]->getCLBSite()->X();
+                float headY = cellId2PackingSite[prevCellId]->getCLBSite()->Y();
+                oriDis += timingOptimizer->getDelayByModel(headX, headY, curX, curY);
+                newDis += timingOptimizer->getDelayByModel(headX, headY, nextX, nextY);
+            }
+
+            if (i < cellIdsInCriticalPath.size() - 1)
+            {
+                auto succCellId = cellIdsInCriticalPath[i + 1];
+                assert(cellId2PackingSite[succCellId]);
+                float tailX = cellId2PackingSite[succCellId]->getCLBSite()->X();
+                float tailY = cellId2PackingSite[succCellId]->getCLBSite()->Y();
+                newDis += timingOptimizer->getDelayByModel(tailX, tailY, curX, curY);
+                oriDis += timingOptimizer->getDelayByModel(tailX, tailY, nextX, nextY);
+            }
+
+            if (newDis < oriDis)
+            {
+                auto trialClusterWithCurPU =
+                    new PackingCLBSite::PackingCLBCluster(curPackingSite->getDeterminedClusterInSite());
+                auto trialClusterWithNextPU =
+                    new PackingCLBSite::PackingCLBCluster(nextPackingSite->getDeterminedClusterInSite());
+                assert(trialClusterWithCurPU->contains(curPU));
+                trialClusterWithCurPU->removePUToConstructDetCluster(curPU);
+
+                assert(trialClusterWithNextPU->contains(nextPU));
+                trialClusterWithNextPU->removePUToConstructDetCluster(nextPU);
+                if (trialClusterWithCurPU->addPU(nextPU))
+                {
+                    if (trialClusterWithNextPU->addPU(curPU))
+                    {
+                        curPackingSite->getDeterminedClusterInSite()->removePUToConstructDetCluster(curPU);
+                        assert(curPackingSite->getDeterminedClusterInSite()->addPU(nextPU));
+                        nextPackingSite->getDeterminedClusterInSite()->removePUToConstructDetCluster(nextPU);
+                        assert(nextPackingSite->getDeterminedClusterInSite()->addPU(curPU));
+
+                        PUId2PackingCLBSite[curPU->getId()] = nextPackingSite;
+                        placementInfo->addPUIntoClockColumn(curPU, nextPackingSite->getCLBSite());
+                        auto cellSet = nextPackingSite->getDeterminedClusterInSite()->getCellSet();
+                        for (auto cell : cellSet)
+                        {
+                            cellId2PackingSite[cell->getCellId()] = nextPackingSite;
+                        }
+
+                        PUId2PackingCLBSite[nextPU->getId()] = curPackingSite;
+                        placementInfo->addPUIntoClockColumn(nextPU, curPackingSite->getCLBSite());
+                        cellSet = curPackingSite->getDeterminedClusterInSite()->getCellSet();
+                        for (auto cell : cellSet)
+                        {
+                            cellId2PackingSite[cell->getCellId()] = curPackingSite;
+                        }
+                    }
+                }
+
+                delete trialClusterWithCurPU;
+                delete trialClusterWithNextPU;
             }
         }
 

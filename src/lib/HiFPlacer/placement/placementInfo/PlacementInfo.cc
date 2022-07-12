@@ -2048,6 +2048,20 @@ void PlacementInfo::enhanceRiskyClockNet()
     }
 }
 
+void PlacementInfo::enhanceDDRNet()
+{
+    for (auto curPNet : placementNets)
+    {
+        if (auto curNet = curPNet->getDesignNet())
+        {
+            if (curNet->getName().find("_ddr") != std::string::npos)
+            {
+                curNet->setOverallTimingNetEnhancement(1.2);
+            }
+        }
+    }
+}
+
 bool PlacementInfo::checkClockUtilization(bool dump)
 {
     clockNetCoverages.clear();

@@ -4203,6 +4203,8 @@ class PlacementInfo
 
     void enhanceRiskyClockNet();
 
+    void enhanceDDRNet();
+
     void enhanceHighFanoutNet();
 
     void dumpOverflowClockUtilization();

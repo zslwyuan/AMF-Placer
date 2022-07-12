@@ -257,6 +257,28 @@ class ParallelCLBPacker
             assert(i < (int)FFs.size());
             assert(i >= 0);
             FFs.erase(FFs.begin() + i);
+            updateCSID();
+        }
+
+        inline void updateCSID()
+        {
+            bool allVirtual = true;
+            for (unsigned int i = 0; i < FFs.size(); i++)
+            {
+                if (!FFs[i]->isVirtualCell())
+                {
+                    allVirtual = false;
+                    break;
+                }
+            }
+
+            if (allVirtual)
+            {
+                CSId = -1;
+                CLK = nullptr;
+                SR = nullptr;
+                CE = nullptr;
+            }
         }
 
         /**
@@ -2095,6 +2117,9 @@ class ParallelCLBPacker
          */
         inline unsigned int getPairPinNum(DesignInfo::DesignCell *LUTA, DesignInfo::DesignCell *LUTB)
         {
+            assert(LUTA);
+            assert(LUTB);
+
             if (LUTA->getInputPins().size() == 6 || LUTB->getInputPins().size() == 6 || LUTA->isLUT6() ||
                 LUTB->isLUT6())
                 return 12;
@@ -2228,6 +2253,8 @@ class ParallelCLBPacker
                             {
                                 if (!LUTs[i][j][k] && !FFs[i][j][k])
                                 {
+                                    if (targetLUT->isLUT6() && LUTs[i][1 - j][k])
+                                        continue;
                                     return true;
                                 }
                             }
@@ -2282,6 +2309,8 @@ class ParallelCLBPacker
                             {
                                 if (!LUTs[i][j][k] && !FFs[i][j][k])
                                 {
+                                    if (targetLUT->isLUT6() && LUTs[i][1 - j][k])
+                                        continue;
                                     LUTs[i][j][k] = targetLUT;
                                     FFs[i][j][k] = targetFF;
                                     return;
