@@ -144,6 +144,11 @@ class MacroLegalizer
         clockRegionCasLegalization = _clockRegionCasLegalization;
     }
 
+    inline bool hasNoTarget()
+    {
+        return noTarget;
+    }
+
   private:
     std::string legalizerName;
     PlacementInfo *placementInfo;
@@ -475,6 +480,8 @@ class MacroLegalizer
      *
      */
     float roughAverageDisplacement = 10000.0;
+
+    bool noTarget = false;
 
     /**
      * @brief displacement threshold to detect potential legal sites

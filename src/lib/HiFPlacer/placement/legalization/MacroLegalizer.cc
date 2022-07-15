@@ -58,6 +58,13 @@ void MacroLegalizer::legalize(bool exactLegalization, bool directLegalization, b
     findMacroType2AvailableSites();
     getMacrosToLegalize();
 
+    if (initialMacrosToLegalize.size() == 0)
+    {
+        print_warning("MacroLegalizer[" + legalizerName + "] find no target elements.");
+        noTarget = true;
+        return;
+    }
+
     if (!directLegalization)
     {
         roughlyLegalize();
