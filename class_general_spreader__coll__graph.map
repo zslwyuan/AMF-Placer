@@ -1,8 +1,9 @@
 <map id="GeneralSpreader" name="GeneralSpreader">
-<area shape="rect" id="node1" title="GeneralSpreader accounts for the cell spreading, which controls the cell density of specific resource..." alt="" coords="175,288,293,315"/>
-<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="181,199,287,225"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="88,95,265,136"/>
-<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="71,5,155,32"/>
-<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="289,102,435,129"/>
-<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="355,5,439,32"/>
+<area shape="rect" id="node1" title="GeneralSpreader accounts for the cell spreading, which controls the cell density of specific resource..." alt="" coords="171,317,289,344"/>
+<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="177,213,283,240"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="92,95,269,136"/>
+<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,5,89,32"/>
+<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="409,102,555,129"/>
+<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="279,5,363,32"/>
+<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="547,199,721,255"/>
 </map>

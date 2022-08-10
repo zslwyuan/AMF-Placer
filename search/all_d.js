@@ -74,7 +74,7 @@ var searchData=
   ['mindist_71',['minDist',['../class_placement_info_1_1_placement_net.html#a0ce68d71aa0e306090f470411947894d',1,'PlacementInfo::PlacementNet']]],
   ['minexpandsize_72',['minExpandSize',['../class_general_spreader_1_1_spread_region_1_1_sub_box.html#ab1b26c61f35b65e682985e696f9119bb',1,'GeneralSpreader::SpreadRegion::SubBox']]],
   ['minhpwl_73',['minHPWL',['../class_global_placer.html#acbb6d46127132e8ce093335fc59ed9a0',1,'GlobalPlacer::minHPWL()'],['../class_placement_info.html#a3d05e3d71f96fe6455ae7ea2ab0b7e33',1,'PlacementInfo::minHPWL()']]],
-  ['mixed_2dsize_20packing_74',['Mixed-size Packing',['../_5_4_packing.html',1,'_5_explanation']]],
+  ['mixed_2dsize_20packing_74',['Mixed-size Packing',['../md_doc_pages__5_4_packing.html',1,'']]],
   ['mklornot_75',['MKLorNot',['../struct_q_p_solver_wrapper_1_1solver_settings_type.html#ac9658bb92ac52126933c91205b0d06a7',1,'QPSolverWrapper::solverSettingsType::MKLorNot()'],['../class_wirelength_optimizer.html#add0094daef574ec0a9924082f901478e',1,'WirelengthOptimizer::MKLorNot()']]],
   ['movedriverintobetterclockregion_76',['moveDriverIntoBetterClockRegion',['../class_placement_timing_optimizer.html#ac9cc5481cb0d15ec670deddffa1cb593',1,'PlacementTimingOptimizer']]],
   ['mtx_77',['mtx',['../class_placement_info_1_1_placement_bin_info.html#a3a664c14c135fcfc043518fe33cd6f5d',1,'PlacementInfo::PlacementBinInfo']]],

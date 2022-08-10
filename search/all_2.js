@@ -18,7 +18,7 @@ var searchData=
   ['beltypes_15',['BELTypes',['../class_device_info.html#ac5495de041cb166b0747cb67eb73ffad',1,'DeviceInfo']]],
   ['benchmarkname_16',['benchmarkName',['../namespacegothrough_benchmarks.html#ae0458c8294593049bdb87ab8c5a650c4',1,'gothroughBenchmarks.benchmarkName()'],['../namespacepaint_placement.html#ae0237c75054de03e93ac0039a9a2a6f5',1,'paintPlacement.benchmarkName()']]],
   ['benchmarks_20and_20experimental_20results_17',['Benchmarks and Experimental Results',['../_3_benchmark_info.html',1,'']]],
-  ['benchmarks_20details_18',['Benchmarks Details',['../_3_1__benchmarks_details.html',1,'_3_benchmarkInfo']]],
+  ['benchmarks_20details_18',['Benchmarks Details',['../md_doc_pages__3_1__benchmarks_details.html',1,'']]],
   ['bfscheckedgeattributes_19',['BFSCheckEdgeAttributes',['../namespace_vivado_graph_util.html#a9ee0f53f3e41f2ac9b152da65e07830b',1,'VivadoGraphUtil']]],
   ['bfsexpandviaspecifiedports_20',['BFSExpandViaSpecifiedPorts',['../class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849',1,'InitialPacker::BFSExpandViaSpecifiedPorts(std::string portPattern, DesignInfo::DesignCell *startCell, bool exactMatch=false)'],['../class_initial_packer.html#a56f0933facb5f3e34b8b9f058ee911ac',1,'InitialPacker::BFSExpandViaSpecifiedPorts(std::vector&lt; std::string &gt; portPatterns, DesignInfo::DesignCell *startCell, bool exactMatch=false)']]],
   ['bfsfromnode_21',['BFSFromNode',['../class_placement_timing_info_1_1_timing_graph.html#a4793b2378cc7cfc71f18e7a6329a78d5',1,'PlacementTimingInfo::TimingGraph']]],
@@ -53,6 +53,6 @@ var searchData=
   ['brampus_50',['BRAMPUs',['../class_macro_legalizer.html#ac75c31e92389b122b6bc738e66dd8504',1,'MacroLegalizer']]],
   ['bramrownum_51',['BRAMRowNum',['../class_macro_legalizer.html#a1c1632f9190ac90ef8038a72ae6cfac2',1,'MacroLegalizer']]],
   ['buffer_5f_52',['buffer_',['../struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e',1,'FILEbuf']]],
-  ['build_20the_20placer_53',['Build the Placer',['../_2_1__build_the_placer.html',1,'_2_getStarted']]],
+  ['build_20the_20placer_53',['Build the Placer',['../md_doc_pages__2_1__build_the_placer.html',1,'']]],
   ['buildsimpletiminggraph_54',['buildSimpleTimingGraph',['../class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c',1,'PlacementInfo::buildSimpleTimingGraph()'],['../class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17',1,'PlacementTimingInfo::buildSimpleTimingGraph()']]]
 ];

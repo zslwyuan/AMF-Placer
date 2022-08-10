@@ -36,6 +36,8 @@ var hierarchy =
     [ "GeneralSpreader", "class_general_spreader.html", null ],
     [ "GlobalPlacer", "class_global_placer.html", null ],
     [ "GraphPartitioner< NodeList, NetList >", "class_graph_partitioner.html", null ],
+    [ "GraphPartitioner< std::vector< PlacementInfo::ClusterUnit * >, std::vector< PlacementInfo::ClusterNet * > >", "class_graph_partitioner.html", null ],
+    [ "GraphPartitioner< std::vector< PlacementInfo::PlacementUnit * >, std::vector< PlacementInfo::PlacementNet * > >", "class_graph_partitioner.html", null ],
     [ "IncrementalBELPacker", "class_incremental_b_e_l_packer.html", null ],
     [ "InitialPacker", "class_initial_packer.html", null ],
     [ "PlacementInfo::Location", "struct_placement_info_1_1_location.html", null ],
@@ -83,6 +85,7 @@ var hierarchy =
     [ "GeneralSpreader::SpreadRegion::SubBox", "class_general_spreader_1_1_spread_region_1_1_sub_box.html", null ],
     [ "PlacementTimingInfo::TimingGraph< nodeType >::TimingEdge", "class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html", null ],
     [ "PlacementTimingInfo::TimingGraph< nodeType >", "class_placement_timing_info_1_1_timing_graph.html", null ],
+    [ "PlacementTimingInfo::TimingGraph< DesignInfo::DesignCell >", "class_placement_timing_info_1_1_timing_graph.html", null ],
     [ "PlacementTimingInfo::TimingGraph< nodeType >::TimingNode", "class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html", null ],
     [ "WirelengthOptimizer", "class_wirelength_optimizer.html", null ]
 ];

@@ -1,11 +1,12 @@
 <map id="WirelengthOptimizer" name="WirelengthOptimizer">
-<area shape="rect" id="node1" title="WirelengthOptimizer builds numerical models based on the element locations and calls solvers to find ..." alt="" coords="917,211,1056,237"/>
-<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="667,135,774,161"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="234,127,411,169"/>
-<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,151,89,177"/>
-<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="250,76,395,103"/>
-<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,15,89,41"/>
-<area shape="rect" id="node7" href="$class_q_p_solver_wrapper.html" title=" " alt="" coords="657,256,784,283"/>
-<area shape="rect" id="node8" href="$struct_q_p_solver_wrapper_1_1solver_data_type.html" title=" " alt="" coords="211,256,434,283"/>
-<area shape="rect" id="node9" href="$struct_q_p_solver_wrapper_1_1solver_settings_type.html" title=" " alt="" coords="201,307,444,333"/>
+<area shape="rect" id="node1" title="WirelengthOptimizer builds numerical models based on the element locations and calls solvers to find ..." alt="" coords="965,228,1104,255"/>
+<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="691,141,798,168"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="234,51,411,93"/>
+<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,13,89,40"/>
+<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="250,203,395,229"/>
+<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,148,89,175"/>
+<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="657,219,832,275"/>
+<area shape="rect" id="node8" href="$class_q_p_solver_wrapper.html" title=" " alt="" coords="681,312,808,339"/>
+<area shape="rect" id="node9" href="$struct_q_p_solver_wrapper_1_1solver_data_type.html" title=" " alt="" coords="211,363,434,389"/>
+<area shape="rect" id="node10" href="$struct_q_p_solver_wrapper_1_1solver_settings_type.html" title=" " alt="" coords="201,312,444,339"/>
 </map>

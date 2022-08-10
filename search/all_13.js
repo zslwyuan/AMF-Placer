@@ -11,7 +11,7 @@ var searchData=
   ['score_8',['score',['../struct_parallel_c_l_b_packer_1_1__site_with_score.html#af97263482708b9d94b22a8f606cbe843',1,'ParallelCLBPacker::_siteWithScore']]],
   ['scoreinsite_9',['scoreInSite',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a883826e41a0e22d9d6390e1feb5b5dce',1,'ParallelCLBPacker::PackingCLBSite::PackingCLBCluster']]],
   ['seedclusters_10',['seedClusters',['../class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a4f0482e477aa26c81cb606edfc331b88',1,'ParallelCLBPacker::PackingCLBSite']]],
-  ['set_20the_20placement_20configuration_20in_20json_20file_11',['Set the Placement Configuration in JSON file',['../_2_3__setthe_placement_configurationin_j_s_o_nfile.html',1,'_2_getStarted']]],
+  ['set_20the_20placement_20configuration_20in_20json_20file_11',['Set the Placement Configuration in JSON file',['../md_doc_pages__2_3__setthe_placement_configurationin_j_s_o_nfile.html',1,'']]],
   ['setanchorlocation_12',['setAnchorLocation',['../class_placement_info_1_1_placement_unit.html#a41c9eba04c1d8ed3b2a6c30662550d38',1,'PlacementInfo::PlacementUnit']]],
   ['setanchorlocationandforgettheoriginalone_13',['setAnchorLocationAndForgetTheOriginalOne',['../class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f',1,'PlacementInfo::PlacementUnit']]],
   ['setbackwardlevel_14',['setBackwardLevel',['../class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a075bbf26dd1ccb35b110af17bbd656f3',1,'PlacementTimingInfo::TimingGraph::TimingNode']]],

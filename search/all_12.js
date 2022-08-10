@@ -85,6 +85,6 @@ var searchData=
   ['row_82',['row',['../class_placement_info_1_1_placement_hybrid_bin_info.html#ade58c1c853cd67784c0c6c63fbf48e2d',1,'PlacementInfo::PlacementHybridBinInfo::row()'],['../class_placement_info_1_1_placement_site_bin_info.html#a339adcbf981c3a00f3081c8633bd6bd4',1,'PlacementInfo::PlacementSiteBinInfo::row()'],['../class_placement_info_1_1_placement_bin_info.html#ad1fd61475fd0c201604579144b978427',1,'PlacementInfo::PlacementBinInfo::row()']]],
   ['rstride_83',['rstride',['../namespacedelay_visualization.html#a464a11f22089fcb5231709ce7ef421bf',1,'delayVisualization']]],
   ['run_84',['run',['../class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981',1,'AMFPlacer']]],
-  ['run_20an_20example_85',['Run An Example',['../_2_2__run_an_example.html',1,'_2_getStarted']]],
-  ['runtime_20log_20explanation_86',['Runtime Log Explanation',['../_6_runtime_log.html',1,'_5_explanation']]]
+  ['run_20an_20example_85',['Run An Example',['../md_doc_pages__2_2__run_an_example.html',1,'']]],
+  ['runtime_20log_20explanation_86',['Runtime Log Explanation',['../md_doc_pages__6_runtime_log.html',1,'']]]
 ];

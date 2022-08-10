@@ -1,22 +1,25 @@
 <map id="AMFPlacer" name="AMFPlacer">
-<area shape="rect" id="node1" title="AMFPlacer is an analytical mixed&#45;size FPGA placer." alt="" coords="1615,781,1701,808"/>
-<area shape="rect" id="node2" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,611,89,637"/>
-<area shape="rect" id="node4" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="687,445,793,472"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="234,725,411,766"/>
-<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="250,560,395,587"/>
-<area shape="rect" id="node7" href="$class_initial_packer.html" title="InitialPacker will identify macros from the design netlist based on pattern matching." alt="" coords="1048,1033,1143,1060"/>
-<area shape="rect" id="node8" href="$class_incremental_b_e_l_packer.html" title="IncrementalBELPacker incrementally packs some LUTs/FFs during global placement based on their distanc..." alt="" coords="1017,781,1173,808"/>
-<area shape="rect" id="node17" href="$class_macro_legalizer.html" title="MacroLegalizer maps DSP/BRAM/CARRY macros to legal location." alt="" coords="1040,653,1151,680"/>
-<area shape="rect" id="node19" href="$class_c_l_b_legalizer.html" title="CLBLegalizer maps CLBs (each of which consists of one site) to legal location. e.g...." alt="" coords="1045,379,1145,405"/>
-<area shape="rect" id="node20" href="$class_parallel_c_l_b_packer.html" title="ParallelCLBPacker will finally pack LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel appr..." alt="" coords="1029,883,1161,909"/>
-<area shape="rect" id="node3" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,975,89,1001"/>
-<area shape="rect" id="node9" href="$class_global_placer.html" title="GlobalPlacer accounts for the general iterations in global placement." alt="" coords="1375,319,1471,345"/>
-<area shape="rect" id="node10" href="$class_cluster_placer.html" title="ClusterPlacer will cluster nodes in the given netlist and place the clusters on the device based on s..." alt="" coords="1045,203,1145,229"/>
-<area shape="rect" id="node12" href="$class_wirelength_optimizer.html" title="WirelengthOptimizer builds numerical models based on the element locations and calls solvers to find ..." alt="" coords="1026,112,1165,139"/>
-<area shape="rect" id="node16" href="$class_general_spreader.html" title="GeneralSpreader accounts for the cell spreading, which controls the cell density of specific resource..." alt="" coords="1036,328,1155,355"/>
-<area shape="rect" id="node11" href="$class_s_a_placer.html" title=" " alt="" coords="701,157,779,184"/>
-<area shape="rect" id="node13" href="$class_q_p_solver_wrapper.html" title=" " alt="" coords="677,67,803,93"/>
-<area shape="rect" id="node14" href="$struct_q_p_solver_wrapper_1_1solver_data_type.html" title=" " alt="" coords="211,112,434,139"/>
-<area shape="rect" id="node15" href="$struct_q_p_solver_wrapper_1_1solver_settings_type.html" title=" " alt="" coords="201,61,444,88"/>
-<area shape="rect" id="node18" href="$class_min_cost_bipartite_matcher.html" title=" " alt="" coords="657,560,823,587"/>
+<area shape="rect" id="node1" title="AMFPlacer is an analytical mixed&#45;size FPGA placer." alt="" coords="1659,471,1745,497"/>
+<area shape="rect" id="node2" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,575,89,601"/>
+<area shape="rect" id="node4" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="691,592,798,619"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="234,637,411,678"/>
+<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="250,249,395,276"/>
+<area shape="rect" id="node8" href="$class_initial_packer.html" title="InitialPacker will identify macros from the design netlist based on pattern matching." alt="" coords="1092,471,1187,497"/>
+<area shape="rect" id="node9" href="$class_incremental_b_e_l_packer.html" title="IncrementalBELPacker incrementally packs some LUTs/FFs during global placement based on their distanc..." alt="" coords="1061,341,1217,368"/>
+<area shape="rect" id="node20" href="$class_macro_legalizer.html" title="MacroLegalizer maps DSP/BRAM/CARRY macros to legal location." alt="" coords="1084,985,1195,1012"/>
+<area shape="rect" id="node22" href="$class_c_l_b_legalizer.html" title="CLBLegalizer maps CLBs (each of which consists of one site) to legal location. e.g...." alt="" coords="1089,919,1189,945"/>
+<area shape="rect" id="node23" href="$class_parallel_c_l_b_packer.html" title="ParallelCLBPacker will finally pack LUT/FF/MUX/CARRY elements into legal CLB sites in a parallel appr..." alt="" coords="1073,164,1205,191"/>
+<area shape="rect" id="node3" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,193,89,220"/>
+<area shape="rect" id="node10" href="$class_global_placer.html" title="GlobalPlacer accounts for the general iterations in global placement." alt="" coords="1419,771,1515,797"/>
+<area shape="rect" id="node11" href="$class_cluster_placer.html" title="ClusterPlacer will cluster nodes in the given netlist and place the clusters on the device based on s..." alt="" coords="1089,1177,1189,1204"/>
+<area shape="rect" id="node15" href="$class_wirelength_optimizer.html" title="WirelengthOptimizer builds numerical models based on the element locations and calls solvers to find ..." alt="" coords="1070,771,1209,797"/>
+<area shape="rect" id="node19" href="$class_general_spreader.html" title="GeneralSpreader accounts for the cell spreading, which controls the cell density of specific resource..." alt="" coords="1080,608,1199,635"/>
+<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="657,209,832,265"/>
+<area shape="rect" id="node12" href="$class_s_a_placer.html" title=" " alt="" coords="706,1367,783,1393"/>
+<area shape="rect" id="node13" href="$class_graph_partitioner.html" title=" " alt="" coords="662,1148,827,1233"/>
+<area shape="rect" id="node14" href="$class_graph_partitioner.html" title=" " alt="" coords="665,1257,824,1343"/>
+<area shape="rect" id="node16" href="$class_q_p_solver_wrapper.html" title=" " alt="" coords="681,864,808,891"/>
+<area shape="rect" id="node17" href="$struct_q_p_solver_wrapper_1_1solver_data_type.html" title=" " alt="" coords="211,832,434,859"/>
+<area shape="rect" id="node18" href="$struct_q_p_solver_wrapper_1_1solver_settings_type.html" title=" " alt="" coords="201,883,444,909"/>
+<area shape="rect" id="node21" href="$class_min_cost_bipartite_matcher.html" title=" " alt="" coords="662,1047,827,1073"/>
 </map>
