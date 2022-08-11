@@ -25,11 +25,11 @@
 #define CELLTYPESTRS                                                                                                   \
     "LUT1", "LUT2", "LUT3", "LUT4", "LUT5", "LUT6", "LUT6_2", "FDCE", "FDPE", "FDRE", "FDSE", "LDCE", "AND2B1L",       \
         "CARRY8", "DSP48E2", "MUXF7", "MUXF8", "SRL16E", "SRLC32E", "RAM32M16", "RAM64M", "RAM64X1D", "RAM32M",        \
-        "RAM32X1D", "RAM32X1S", "RAM64X1S", "RAM64M8", "FIFO36E2", "FIFO18E2", "RAMB18E2", "RAMB36E2", "BUFGCE",       \
-        "BUFG_GT", "BUFG_GT_SYNC", "BUFGCE_DIV", "BUFGCTRL", "GTHE3_CHANNEL", "GTHE3_COMMON", "IOBUF", "IBUF",         \
-        "IBUFDS", "IOBUFDS", "IBUFDS_GTE3", "IBUF_ANALOG", "IOBUFE3", "MMCME3_ADV", "OBUF", "OBUFT", "PCIE_3_1",       \
-        "BSCANE2", "SYSMONE1", "RXTX_BITSLICE", "BITSLICE_CONTROL", "TX_BITSLICE_TRI", "OSERDESE3", "RIU_OR",          \
-        "PLLE3_ADV", "HPIO_VREF", "OBUFDS_DUAL_BUF"
+        "RAM32X1D", "RAM32X1S", "RAM64X1S", "RAM64M8", "RAM256X1D", "FIFO36E2", "FIFO18E2", "RAMB18E2", "RAMB36E2",    \
+        "BUFGCE", "BUFG_GT", "BUFG_GT_SYNC", "BUFGCE_DIV", "BUFGCTRL", "GTHE3_CHANNEL", "GTHE3_COMMON", "IOBUF",       \
+        "IBUF", "IBUFDS", "IOBUFDS", "IBUFDS_GTE3", "IBUF_ANALOG", "IOBUFE3", "MMCME3_ADV", "OBUF", "OBUFT",           \
+        "PCIE_3_1", "BSCANE2", "SYSMONE1", "RXTX_BITSLICE", "BITSLICE_CONTROL", "TX_BITSLICE_TRI", "OSERDESE3",        \
+        "RIU_OR", "PLLE3_ADV", "HPIO_VREF", "OBUFDS_DUAL_BUF"
 
 /**
  * @brief Information related to FPGA designs, including design cells and their interconnections.
@@ -90,7 +90,8 @@ class DesignInfo
         CellType_RAM32X1D,
         CellType_RAM32X1S,
         CellType_RAM64X1S,
-        CellType_RAM64M8, // these are LUTRAMs
+        CellType_RAM64M8,
+        CellType_RAM256X1D, // these are LUTRAMs
 
         CellType_FIFO36E2,
         CellType_FIFO18E2,
@@ -326,6 +327,16 @@ class DesignInfo
             netName = _netName;
         }
 
+        inline int getAliasNetId()
+        {
+            return aliasNetId;
+        }
+
+        inline void setAliasNetId(int _aliasNetId)
+        {
+            aliasNetId = _aliasNetId;
+        }
+
         /**
          * @brief bind the pin to the net's pointer for later processing
          *
@@ -463,6 +474,16 @@ class DesignInfo
             return offsetYInCell;
         }
 
+        inline bool isFixed()
+        {
+            return fixed;
+        }
+
+        inline void setFixed()
+        {
+            fixed = true;
+        }
+
       private:
         /**
          * @brief pin type could be:
@@ -476,10 +497,12 @@ class DesignInfo
         DesignNet *netPtr = nullptr;
         bool inputOrNot;
         bool unconnected = false;
+        bool fixed = false;
         std::string driverPinName;
         DesignPin *driverPin = nullptr;
         float offsetXInCell = 0.0;
         float offsetYInCell = 0.0;
+        int aliasNetId = -1;
     };
 
     /**
@@ -715,11 +738,22 @@ class DesignInfo
             return isPowerNet;
         }
 
+        inline bool checkContainFixedPins()
+        {
+            return containFixedPins;
+        }
+
+        inline void setContainFixedPins()
+        {
+            containFixedPins = true;
+        }
+
       private:
         std::vector<std::string> pinNames;
         std::vector<DesignPin *> pinPtrs;
         std::vector<DesignPin *> driverPinPtrs;
         std::vector<DesignPin *> BeDrivenPinPtrs;
+        bool containFixedPins = false;
         std::map<std::pair<int, int>, float> pinIdPinIdInNet2EnhanceRatio;
         float overallClusterEnhanceRatio = 1.0;
         float overallTimingEnhanceRatio = 1.0;
@@ -894,7 +928,7 @@ class DesignInfo
             return (cellType == CellType_RAM32M16 || cellType == CellType_RAM32X1D || cellType == CellType_RAM64X1S ||
                     cellType == CellType_RAM64M || cellType == CellType_RAM64X1D || cellType == CellType_RAM32M ||
                     cellType == CellType_RAM32X1D || cellType == CellType_RAM32X1S || cellType == CellType_RAM64X1S ||
-                    cellType == CellType_RAM64M8);
+                    cellType == CellType_RAM64M8 || cellType == CellType_RAM256X1D);
         }
         inline bool originallyIsLUTRAM()
         {
@@ -902,7 +936,8 @@ class DesignInfo
                     oriCellType == CellType_RAM64X1S || oriCellType == CellType_RAM64M ||
                     oriCellType == CellType_RAM64X1D || oriCellType == CellType_RAM32M ||
                     oriCellType == CellType_RAM32X1D || oriCellType == CellType_RAM32X1S ||
-                    oriCellType == CellType_RAM64X1S || oriCellType == CellType_RAM64M8);
+                    oriCellType == CellType_RAM64X1S || oriCellType == CellType_RAM64M8 ||
+                    oriCellType == CellType_RAM256X1D);
         }
         inline bool isBRAM()
         {
@@ -924,6 +959,10 @@ class DesignInfo
         inline bool isDSP()
         {
             return cellType == CellType_DSP48E2;
+        }
+        inline bool checkHasDSPReg()
+        {
+            return hasDSPReg;
         }
         inline bool isIO()
         {
@@ -1060,6 +1099,21 @@ class DesignInfo
             return clockNetPtrs;
         }
 
+        inline void setHasDSPReg(bool _hasDSPReg)
+        {
+            hasDSPReg = _hasDSPReg;
+        }
+
+        inline void setTimingLength(int _timingLength)
+        {
+            timingLength = _timingLength;
+        }
+
+        inline int getTimingLength()
+        {
+            return timingLength;
+        }
+
       private:
         std::vector<DesignPin *> pinPtrs;
         std::vector<DesignPin *> inputPinPtrs;
@@ -1073,7 +1127,9 @@ class DesignInfo
         DesignCellType cellType;
         DesignCellType oriCellType;
         bool isVirtual = false;
+        bool hasDSPReg = false;
         ControlSetInfo *controlSetInfo = nullptr;
+        int timingLength = 0;
     };
 
     /**
@@ -1286,7 +1342,7 @@ class DesignInfo
         return (cellType == CellType_RAM32M16 || cellType == CellType_RAM32X1D || cellType == CellType_RAM64X1S ||
                 cellType == CellType_RAM64M || cellType == CellType_RAM64X1D || cellType == CellType_RAM32M ||
                 cellType == CellType_RAM32X1D || cellType == CellType_RAM32X1S || cellType == CellType_RAM64X1S ||
-                cellType == CellType_RAM64M8);
+                cellType == CellType_RAM64M8 || cellType == CellType_RAM256X1D);
     }
 
     inline static bool isFF(DesignCellType cellType)
@@ -1321,19 +1377,6 @@ class DesignInfo
     inline bool isShifter(DesignCellType cellType)
     {
         return cellType == CellType_SRL16E || cellType == CellType_SRLC32E;
-    }
-
-    /**
-     * @brief check whether the cell type is an endpoint in timing graph
-     *
-     * @param cellType a given cell type
-     * @return true
-     * @return false
-     */
-    inline bool isTimingEndPoint(DesignCellType cellType)
-    {
-        return (isFF(cellType) || isLUTRAM(cellType) || isBRAM(cellType) || isDSP(cellType) || isIO(cellType) ||
-                isClockBuffer(cellType) || isShifter(cellType));
     }
 
     /**
@@ -1578,7 +1621,22 @@ class DesignInfo
 
     inline DesignCell *getCell(std::string &tmpName)
     {
+        if (name2Cell.find(tmpName) == name2Cell.end())
+        {
+            std::cout << "cannot find cell:" << tmpName << "\n";
+            return nullptr;
+        }
         return name2Cell[tmpName];
+    }
+
+    inline DesignNet *getNet(std::string &tmpName)
+    {
+        if (name2Net.find(tmpName) == name2Net.end())
+        {
+            std::cout << "cannot find net:" << tmpName << "\n";
+            return nullptr;
+        }
+        return name2Net[tmpName];
     }
 
     /**
@@ -1672,6 +1730,7 @@ class DesignInfo
     std::vector<DesignCell *> cells;
     std::vector<DesignPin *> pins;
     std::map<std::string, DesignNet *> name2Net;
+    std::map<std::string, int> aliasNet2AliasNetId;
     std::map<std::string, DesignCell *> name2Cell;
 
     /**

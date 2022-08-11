@@ -15,7 +15,9 @@
 #include "strPrint.h"
 #include "stringCheck.h"
 #include <assert.h>
+#include <queue>
 #include <regex>
+#include <cmath>
 
 void DesignInfo::DesignPin::updateParentCellNetInfo()
 {
@@ -159,6 +161,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
     clock2Cells.clear();
     clocks.clear();
     clockSet.clear();
+    aliasNet2AliasNetId.clear();
 
     print_status("Design Information Loading.");
 
@@ -169,7 +172,8 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
 
     std::string line;
     std::getline(infile, line);
-    std::string cellType, cellName, targetName, dir, refpinname, netName, drivepinName, fill0, fill1, fill2, fill3;
+    std::string cellType, cellName, targetName, dir, refpinname, netName, drivepinName, fill0, fill1, fill2, fill3,
+        aliasNetName;
     std::istringstream iss(line);
     iss >> fill0 >> cellName >> fill1 >> cellType;
 
@@ -180,6 +184,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
     {
         std::istringstream iss(line);
         iss >> fill0 >> targetName;
+        drivepinName = "";
         if (strContains(fill0, "pin=>"))
         {
             iss >> fill3 >> refpinname >> fill0 >> dir >> fill1 >> netName >> fill2 >> drivepinName;
@@ -188,11 +193,18 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
                                               dir == std::string("IN"), curCell, pins.size());
             pins.push_back(curPin);
             curCell->addPin(curPin);
+            aliasNetName = netName;
 
-            if (netName == "drivepin=>")
+            if (aliasNet2AliasNetId.find(aliasNetName) == aliasNet2AliasNetId.end())
+            {
+                int numAliasNet = aliasNet2AliasNetId.size();
+                aliasNet2AliasNetId[aliasNetName] = numAliasNet;
+            }
+            if (netName == "drivepin=>" || drivepinName == "")
             {
                 curPin->updateParentCellNetInfo();
                 curPin->setUnconnected();
+                // print_warning(line);
                 continue; // not connected
             }
             assert(drivepinName != "");
@@ -214,6 +226,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
             addPinToNet(curPin);                             // update net in netlist
             curPin->connectToNetVariable(name2Net[netName]); // bind to a net pointer
             curPin->updateParentCellNetInfo();
+            curPin->setAliasNetId(aliasNet2AliasNetId[aliasNetName]);
         }
         else if (strContains(fill0, "curCell=>"))
         {
@@ -282,6 +295,67 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
     }
 
     loadUserDefinedClusterNets();
+
+    // int DSPInLoopsCnt = 0;
+    // int coverCnt = 0;
+    // int lenThr = 10;
+    // for (auto startCell : cells)
+    // {
+    //     if (startCell->isDSP())
+    //     {
+    //         std::queue<DesignCell *> nodeQ;
+    //         std::map<DesignCell *, int> cell2Len;
+    //         std::set<DesignCell *> nodeSet;
+    //         nodeSet.clear();
+    //         nodeSet.insert(startCell);
+    //         nodeQ.push(startCell);
+    //         cell2Len[startCell] = 1;
+    //         bool loopFound = false;
+    //         int maxLen = 1;
+    //         while (nodeQ.size() && !loopFound)
+    //         {
+    //             DesignCell *curCell = nodeQ.front();
+    //             int curLen = cell2Len[curCell];
+    //             nodeQ.pop();
+    //             nodeSet.erase(curCell);
+
+    //             for (auto outputNet : curCell->getOutputNets())
+    //             {
+    //                 for (auto succPin : outputNet->getPinsBeDriven())
+    //                 {
+    //                     auto succCell = succPin->getCell();
+    //                     if (succCell && curCell != succCell)
+    //                     {
+    //                         if (succCell == startCell)
+    //                         {
+    //                             loopFound = true;
+    //                             break;
+    //                         }
+    //                         if (!succCell->isFF() && !succCell->isBRAM())
+    //                         {
+    //                             if (nodeSet.find(succCell) == nodeSet.end())
+    //                             {
+    //                                 nodeSet.insert(succCell);
+    //                                 nodeQ.push(succCell);
+    //                             }
+    //                             if (cell2Len.find(succCell) == cell2Len.end())
+    //                                 cell2Len[succCell] = curLen + 1;
+    //                             else if (curLen + 1 > cell2Len[succCell])
+    //                                 cell2Len[succCell] = curLen + 1;
+    //                             if (cell2Len[succCell] > maxLen)
+    //                                 maxLen = cell2Len[succCell];
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //         coverCnt += nodeSet.size();
+    //         if (maxLen > 10)
+    //             DSPInLoopsCnt++;
+    //     }
+    // }
+
+    // print_warning("DSP in loops cnt=" + std::to_string(DSPInLoopsCnt));
 
     print_status("New Design Info Created.");
 }
@@ -376,23 +450,26 @@ void DesignInfo::updateFFControlSets()
             curCS->addFF(curCell);
         }
     }
+    enhanceFFControlSetNets();
+    print_info("DesignInfo: find #controlSets: " + std::to_string(controlSets.size()));
 }
 
 void DesignInfo::enhanceFFControlSetNets()
 {
-    if (controlSets.size())
+    if (controlSets.size() && controlSets.size() > cells.size() / 5000)
     {
+        float enhanceRatio = std::pow((float)controlSets.size(), 0.1);
         for (auto CS : controlSets)
         {
             if (CS->getCE())
             {
-                if (CS->getCE()->getPins().size() < 5000 && CS->getCE()->getPins().size() > 25)
-                    CS->getCE()->enhanceOverallClusterNetEnhancement(1.2);
+                if (CS->getCE()->getPins().size() < 5000 && CS->getCE()->getPins().size() > 200)
+                    CS->getCE()->setOverallClusterNetEnhancement(2 * enhanceRatio);
             }
             if (CS->getSR())
             {
-                if (CS->getSR()->getPins().size() < 5000 && CS->getSR()->getPins().size() > 25)
-                    CS->getSR()->enhanceOverallClusterNetEnhancement(1.2);
+                if (CS->getSR()->getPins().size() < 5000 && CS->getSR()->getPins().size() > 200)
+                    CS->getSR()->setOverallClusterNetEnhancement(2 * enhanceRatio);
             }
         }
     }
@@ -426,13 +503,18 @@ void DesignInfo::loadUserDefinedClusterNets()
             for (auto tmpName : strV)
             {
                 assert(name2Cell.find(tmpName) != name2Cell.end());
-                if (userDefinedClusterCells.find(name2Cell[tmpName]) == userDefinedClusterCells.end())
+                auto curCell = name2Cell[tmpName];
+                // if (!curCell->isTimingEndPoint() && curCell->getTimingLength() < 7)
+                //     continue;
+                if (userDefinedClusterCells.find(curCell) == userDefinedClusterCells.end())
                 {
-                    userDefinedClusterCellsVec.push_back(name2Cell[tmpName]);
-                    userDefinedClusterCells.insert(name2Cell[tmpName]);
-                    allCellsInClusters.insert(name2Cell[tmpName]);
+                    userDefinedClusterCellsVec.push_back(curCell);
+                    userDefinedClusterCells.insert(curCell);
+                    allCellsInClusters.insert(curCell);
                 }
             }
+            if ((float)userDefinedClusterCellsVec.size() / (float)strV.size() < 0.8)
+                continue;
             predefinedClusters.push_back(userDefinedClusterCellsVec);
 
             bool hasDSP = false;
@@ -521,6 +603,10 @@ DesignInfo::DesignCellType DesignInfo::fromStringToCellType(std::string &cellNam
             return static_cast<DesignCellType>(i);
     }
     print_error("no such type: " + typeName + " for cell: " + cellName);
+    for (std::size_t i = 0; i < DesignCellTypeStr.size(); ++i)
+    {
+        std::cout << DesignCellTypeStr[i] << " " << typeName << " " << (DesignCellTypeStr[i] == typeName) << "\n";
+    }
     assert(false && "no such type. Please check your DesignCellType enum definition and CELLTYPESTRS macro.");
 }
 

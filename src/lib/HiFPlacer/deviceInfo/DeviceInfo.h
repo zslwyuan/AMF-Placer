@@ -16,6 +16,7 @@
 #include "strPrint.h"
 #include <assert.h>
 #include <fstream>
+#include <iostream>
 #include <map>
 #include <set>
 #include <sstream>
@@ -221,7 +222,8 @@ class DeviceInfo
         void setTile(DeviceElement *parentTilePtr);
         inline DeviceTile *getTile()
         {
-            return tile;
+            assert(parentTile);
+            return parentTile;
         };
 
         /**
@@ -367,7 +369,6 @@ class DeviceInfo
 
       private:
         std::string siteType;
-        DeviceTile *tile;
         ClockRegion *clockRegion = nullptr;
         ClockColumn *clockHalfColumn = nullptr;
         std::vector<DeviceBEL *> childrenBELs;
@@ -413,6 +414,11 @@ class DeviceInfo
         DeviceTile(std::string &name, std::string &tileType, DeviceInfo *device, int id)
             : DeviceElement(name, DeviceElementType_Tile, id), tileType(tileType), device(device)
         {
+            if (name.rfind("X") != std::string::npos && name.rfind("Y") != std::string::npos)
+            {
+                tileIdX = std::stoi(name.substr(name.rfind("X") + 1, name.rfind("Y") - name.rfind("X") - 1));
+                tileIdY = std::stoi(name.substr(name.rfind("Y") + 1, name.size() - name.rfind("Y") - 1));
+            }
         }
 
         ~DeviceTile()
@@ -429,10 +435,22 @@ class DeviceInfo
             return tileType;
         }
 
+        inline int getTileIdX()
+        {
+            return tileIdX;
+        }
+
+        inline int getTileIdY()
+        {
+            return tileIdY;
+        }
+
       private:
         std::string tileType;
         std::vector<DeviceSite *> childrenSites;
         DeviceInfo *device;
+        int tileIdX = -1,
+            tileIdY = -1; // idX/idY are not the exact locations. It can be used to detect the half clock column.
     };
 
     /**
@@ -461,7 +479,23 @@ class DeviceInfo
 
         void addSite(DeviceSite *curSite)
         {
+            if (curSite->X() < left)
+                left = curSite->X();
+            if (curSite->X() > right)
+                right = curSite->X();
+            if (curSite->getName().find("SLICE") != std::string::npos)
+            {
+                if (curSite->Y() > top)
+                    top = curSite->Y();
+                if (curSite->Y() < bottom)
+                    bottom = curSite->Y();
+            }
             sites.push_back(curSite);
+        }
+
+        inline std::vector<DeviceSite *> &getSites()
+        {
+            return sites;
         }
 
         /**
@@ -516,6 +550,26 @@ class DeviceInfo
             bottom = _bottom;
         }
 
+        inline void setLeft(float x)
+        {
+            left = x;
+        }
+
+        inline void setRight(float x)
+        {
+            right = x;
+        }
+
+        inline void setTop(float y)
+        {
+            top = y;
+        }
+
+        inline void setBottom(float y)
+        {
+            bottom = y;
+        }
+
         inline std::map<int, std::vector<int>> &getClockNetId2CellIds()
         {
             return clockNetId2CellIds;
@@ -536,10 +590,30 @@ class DeviceInfo
             return id;
         }
 
+        inline float getLeft()
+        {
+            return left;
+        }
+
+        inline float getRight()
+        {
+            return right;
+        }
+
+        inline float getTop()
+        {
+            return top;
+        }
+
+        inline float getBottom()
+        {
+            return bottom;
+        }
+
       private:
         int id;
         std::vector<DeviceSite *> sites;
-        float left, right, top, bottom;
+        float left = 1000000, right = -1000000, top = -1000000, bottom = 1000000;
 
         /**
          * @brief counter for the elements for each clock in the clock column
@@ -583,6 +657,7 @@ class DeviceInfo
             rightX = curSite->X();
             topY = curSite->Y();
             bottomY = curSite->Y();
+            tiles.insert(curSite->getTile());
         }
 
         ~ClockRegion()
@@ -612,11 +687,15 @@ class DeviceInfo
                 leftX = tmpSite->X();
             if (tmpSite->X() > rightX)
                 rightX = tmpSite->X();
-            if (tmpSite->Y() > topY)
-                topY = tmpSite->Y();
-            if (tmpSite->Y() < bottomY)
-                bottomY = tmpSite->Y();
+            if (tmpSite->getName().find("SLICE") != std::string::npos)
+            {
+                if (tmpSite->Y() > topY)
+                    topY = tmpSite->Y();
+                if (tmpSite->Y() < bottomY)
+                    bottomY = tmpSite->Y();
+            }
             sites.push_back(tmpSite);
+            tiles.insert(tmpSite->getTile());
         }
 
         inline void setLeft(float x)
@@ -762,6 +841,27 @@ class DeviceInfo
             return res;
         }
 
+        inline ClockColumn *getMaxUtilizationClockColumnsPtr()
+        {
+            int res = 0;
+            ClockColumn *resPtr = nullptr;
+            for (auto &row : clockColumns)
+            {
+                for (auto clockColumn : row)
+                {
+                    if (clockColumn)
+                    {
+                        if (clockColumn->getClockNum() > res)
+                        {
+                            res = clockColumn->getClockNum();
+                            resPtr = clockColumn;
+                        }
+                    }
+                }
+            }
+            return resPtr;
+        }
+
         inline std::vector<std::vector<ClockColumn *>> &getClockColumns()
         {
             return clockColumns;
@@ -769,11 +869,13 @@ class DeviceInfo
 
       private:
         std::vector<DeviceSite *> sites;
+        std::set<DeviceTile *> tiles;
         std::vector<std::vector<ClockColumn *>> clockColumns;
         int columnNumY = 2;
         int gridX, gridY;
         float leftX, rightX, topY, bottomY;
         int leftSiteX, bottomSiteY, rightSiteX, topSiteY;
+        int leftTileIdX = 1000000, bottomTileIdY = 1000000, rightTileIdX = -1, topTileIdY = -1;
         float colHeight;
         float colWidth;
     };
