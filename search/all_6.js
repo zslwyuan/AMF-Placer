@@ -45,7 +45,7 @@ var searchData=
   ['findpu2sitesindistance_42',['findPU2SitesInDistance',['../class_c_l_b_legalizer.html#a2add935df0c96989390f616634fca284',1,'CLBLegalizer']]],
   ['findsitetype2availablesites_43',['findSiteType2AvailableSites',['../class_c_l_b_legalizer.html#a904d4134d8a08133239b005cf20f1cba',1,'CLBLegalizer']]],
   ['findunpackedunits_44',['findUnpackedUnits',['../class_initial_packer.html#aa81da495335eae350a1e31505c899369',1,'InitialPacker']]],
-  ['fixed_45',['fixed',['../class_placement_info_1_1_placement_unit.html#a6fc23ecb325238fa84779d012d69365b',1,'PlacementInfo::PlacementUnit']]],
+  ['fixed_45',['fixed',['../class_design_info_1_1_design_pin.html#aac7b7c390c331c0702c9ad907f6cf5ec',1,'DesignInfo::DesignPin::fixed()'],['../class_placement_info_1_1_placement_unit.html#a6fc23ecb325238fa84779d012d69365b',1,'PlacementInfo::PlacementUnit::fixed()']]],
   ['fixedcells_46',['fixedCells',['../class_placement_info_1_1_placement_macro.html#a0e5b25b403f1b07a80c2dfe825c049bf',1,'PlacementInfo::PlacementMacro']]],
   ['fixedcolumnaveragedisplacement_47',['fixedColumnAverageDisplacement',['../class_c_l_b_legalizer.html#af68cfd1ec72257309beff1017f2dcdc6',1,'CLBLegalizer::fixedColumnAverageDisplacement()'],['../class_macro_legalizer.html#ac10b80e1de702a5fdd0b872465ea5c4c',1,'MacroLegalizer::fixedColumnAverageDisplacement()']]],
   ['fixedcolumnlegalize_48',['fixedColumnLegalize',['../class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8',1,'CLBLegalizer::fixedColumnLegalize()'],['../class_macro_legalizer.html#a54abe9e01da807f896e887901b744861',1,'MacroLegalizer::fixedColumnLegalize()']]],

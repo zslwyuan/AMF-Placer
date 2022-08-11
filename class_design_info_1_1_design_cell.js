@@ -8,6 +8,7 @@ var class_design_info_1_1_design_cell =
     [ "addClockNet", "class_design_info_1_1_design_cell.html#ace592fb8f31d9795085d19579795dfd0", null ],
     [ "addNetForPin", "class_design_info_1_1_design_cell.html#aad7f3857c4b9584e94def14bde121ffd", null ],
     [ "addPin", "class_design_info_1_1_design_cell.html#a16cdc343adeeac7222745a64e4ed420d", null ],
+    [ "checkHasDSPReg", "class_design_info_1_1_design_cell.html#a9c1317a697455a32f850d362bc258704", null ],
     [ "getCellId", "class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6", null ],
     [ "getCellType", "class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5", null ],
     [ "getClockNets", "class_design_info_1_1_design_cell.html#aac2fb10ed37806637102fa6fbba9a32d", null ],
@@ -18,6 +19,7 @@ var class_design_info_1_1_design_cell =
     [ "getOutputNets", "class_design_info_1_1_design_cell.html#af6d1f6d7609262c31df1b6ffdc6210a9", null ],
     [ "getOutputPins", "class_design_info_1_1_design_cell.html#a96c9bca15a03ea9bb257cf2fd961ae23", null ],
     [ "getPins", "class_design_info_1_1_design_cell.html#ab652adf65add326a363b8e2f0d426e53", null ],
+    [ "getTimingLength", "class_design_info_1_1_design_cell.html#a348c3380129eef8b09738b7fd7dc9e1e", null ],
     [ "isBRAM", "class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f", null ],
     [ "isCarry", "class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1", null ],
     [ "isClockBuffer", "class_design_info_1_1_design_cell.html#a1b3e3d6fd8c0d80e24536065f960c448", null ],
@@ -35,10 +37,13 @@ var class_design_info_1_1_design_cell =
     [ "isVirtualCell", "class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e", null ],
     [ "originallyIsLUTRAM", "class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea", null ],
     [ "setControlSetInfo", "class_design_info_1_1_design_cell.html#a9de4f44871d9dfb5558ced3b7354abc4", null ],
+    [ "setHasDSPReg", "class_design_info_1_1_design_cell.html#ae12c49aeef02d547c15ce5ffa911b1ac", null ],
+    [ "setTimingLength", "class_design_info_1_1_design_cell.html#ac85918e6af6cceedcba756b0584e4f95", null ],
     [ "setVirtualType", "class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9", null ],
     [ "cellType", "class_design_info_1_1_design_cell.html#a11d37bd5d1d876eb3d4cafd1e1d650e5", null ],
     [ "clockNetPtrs", "class_design_info_1_1_design_cell.html#ade4ef21bdee75959cdd6346cae1819bc", null ],
     [ "controlSetInfo", "class_design_info_1_1_design_cell.html#ae76eb33f8bda7480cafe79a4ce0df883", null ],
+    [ "hasDSPReg", "class_design_info_1_1_design_cell.html#adf5779d2f25acce4def92504be773e40", null ],
     [ "inputNetPtrs", "class_design_info_1_1_design_cell.html#afa97edd4752a1323ad76b89c413fc3fa", null ],
     [ "inputPinPtrs", "class_design_info_1_1_design_cell.html#a771dc656d22b0300d33293ee73aab7fa", null ],
     [ "isVirtual", "class_design_info_1_1_design_cell.html#a5f7714ccbb1e756cead3c3cd709e84a6", null ],
@@ -48,5 +53,6 @@ var class_design_info_1_1_design_cell =
     [ "outputNetPtrs", "class_design_info_1_1_design_cell.html#a076d9215e1243f9fd184c54ae1e59733", null ],
     [ "outputPinPtrs", "class_design_info_1_1_design_cell.html#ae3eb7bbb42835b660984dbc690bf4f7e", null ],
     [ "pinNames", "class_design_info_1_1_design_cell.html#a3b6298cda62eefab12eb5550fcccd407", null ],
-    [ "pinPtrs", "class_design_info_1_1_design_cell.html#a0df7aa2581c5459536e343898e082ef0", null ]
+    [ "pinPtrs", "class_design_info_1_1_design_cell.html#a0df7aa2581c5459536e343898e082ef0", null ],
+    [ "timingLength", "class_design_info_1_1_design_cell.html#ab9e96a657e66d7d9d5a8ec9351875c89", null ]
 ];

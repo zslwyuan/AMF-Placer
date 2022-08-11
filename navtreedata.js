@@ -86,17 +86,17 @@ var NAVTREEINDEX =
 [
 "_1_intro.html",
 "class_cluster_placer.html#a0ca64fdff91000c046420b66bec9a89b",
-"class_design_info_1_1_design_cell.html#ae3eb7bbb42835b660984dbc690bf4f7e",
-"class_device_info_1_1_device_site.html#a4fa8bd3745f4b0c786f8cbde4be2540b",
-"class_graph_partitioner.html#afef6ea8b9c40241bfca4d434997cc050",
-"class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9",
-"class_placement_info.html#a3fe3ef0ea00604e37968c16ae051fee2",
-"class_placement_info_1_1_placement_bin_info.html#adc82c5284eed5ba6f62a053a2f44ba16",
-"class_placement_info_1_1_placement_unit.html#adc924c5fffa4c89c40830172e53243c1",
-"class_vivado_graph_util_1_1_vivado_core_cluster.html#aed11ac29678529554353667ea78e1d2e",
-"export_device_location_8py.html#ae5fa6579ce96d0de3d103e4b132594c4",
-"namespaceexport_device_location.html#a3a6c5bce2489cccea1d272f520dcce9a",
-"struct_placement_info_1_1_placement_site_type_info_1_1location.html#acf2986955232817aa25cfc69bfa893a8"
+"class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121",
+"class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083",
+"class_global_placer.html#acbb6d46127132e8ce093335fc59ed9a0",
+"class_min_cost_bipartite_matcher.html#ad474ef3d6ff1a0a4b655a40e798dd3fa",
+"class_placement_info.html#a079c3a89eb2ae18ddeb110c261129f49",
+"class_placement_info_1_1_placement_bin_info.html#a435264b83f562a7b10ad95a1a4c26bc1",
+"class_placement_info_1_1_placement_unit.html#a5da6175f473345876ee67558b2f5851c",
+"class_s_a_placer.html#ae47ad4a92d0eb418cc60d6eed378eb30",
+"dump_zip_8h_source.html",
+"namespacedelay_visualization.html#a7cf4e9f731d50d19e0971a5de523e499",
+"struct_general_spreader_1_1_spread_region_1_1expand_op.html#aa32823d340c9c1907b11c22b795be158"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

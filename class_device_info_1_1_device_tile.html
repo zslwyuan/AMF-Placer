@@ -128,6 +128,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a07ca3dc6391d63d24e538ed6634baf19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a250fa8414af947fa0153b440fb845d45"><td class="memItemLeft" align="right" valign="top">std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_device_tile.html#a250fa8414af947fa0153b440fb845d45">getTileType</a> ()</td></tr>
 <tr class="separator:a250fa8414af947fa0153b440fb845d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa04108a58fa65f185ebcab9721a25e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_device_tile.html#a0fa04108a58fa65f185ebcab9721a25e">getTileIdX</a> ()</td></tr>
+<tr class="separator:a0fa04108a58fa65f185ebcab9721a25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4017356d2a8e71a974fb324593633a4f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_device_tile.html#a4017356d2a8e71a974fb324593633a4f">getTileIdY</a> ()</td></tr>
+<tr class="separator:a4017356d2a8e71a974fb324593633a4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_device_info_1_1_device_element"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_device_info_1_1_device_element')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_device_info_1_1_device_element.html">DeviceInfo::DeviceElement</a></td></tr>
 <tr class="memitem:aad7a64fef770f7dcfd3358e0b8eacf2d inherit pub_methods_class_device_info_1_1_device_element"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_device_element.html#aad7a64fef770f7dcfd3358e0b8eacf2d">DeviceElement</a> (std::string &amp;<a class="el" href="class_device_info_1_1_device_element.html#a180226fed5d7cc1ab896d15874da0946">name</a>, <a class="el" href="class_device_info_1_1_device_element.html">DeviceElement</a> *<a class="el" href="class_device_info_1_1_device_element.html#af6074719aaaecd79e33b6f91407476dd">parentPtr</a>, <a class="el" href="class_device_info.html#ad8e78db93607285b5c88b6664f8463c1">DeviceElementType</a> <a class="el" href="class_device_info_1_1_device_element.html#a25bb0e81d6b7573cc55c69f31a34e083">type</a>, int <a class="el" href="class_device_info_1_1_device_element.html#a638ff2a8f092b28a9b258b1f7e551bb0">id</a>)</td></tr>
 <tr class="separator:aad7a64fef770f7dcfd3358e0b8eacf2d inherit pub_methods_class_device_info_1_1_device_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,11 +156,15 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a92e0d10e70e10ea4e47485c299e3e0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7e6d4200904d3c0e790dd8e135f0252"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_info.html">DeviceInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_device_tile.html#ab7e6d4200904d3c0e790dd8e135f0252">device</a></td></tr>
 <tr class="separator:ab7e6d4200904d3c0e790dd8e135f0252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af11763b5ce71f5bbf9741ec194f820d8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_device_tile.html#af11763b5ce71f5bbf9741ec194f820d8">tileIdX</a> = -1</td></tr>
+<tr class="separator:af11763b5ce71f5bbf9741ec194f820d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60fb0678078390dccc86627b72e4aa87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_device_tile.html#a60fb0678078390dccc86627b72e4aa87">tileIdY</a> = -1</td></tr>
+<tr class="separator:a60fb0678078390dccc86627b72e4aa87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >A tile is a combination of sites. </p>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00402">402</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00403">403</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a418bbf7c53575795960c897a86a39a83" name="a418bbf7c53575795960c897a86a39a83"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a418bbf7c53575795960c897a86a39a83">&#9670;&nbsp;</a></span>DeviceTile()</h2>
@@ -215,7 +223,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00413">413</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00414">414</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -242,7 +250,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00418">418</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00424">424</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -263,9 +271,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8cc_source.html#l00392">392</a> of file <a class="el" href="_device_info_8cc_source.html">DeviceInfo.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8cc_source.html#l00447">447</a> of file <a class="el" href="_device_info_8cc_source.html">DeviceInfo.cc</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00468">DeviceInfo::addSite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00523">DeviceInfo::addSite()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -302,9 +310,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00423">423</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00429">429</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00468">DeviceInfo::addSite()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00523">DeviceInfo::addSite()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -315,6 +323,60 @@ Here is the caller graph for this function:</div>
 <area shape="rect" href="class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,13,157,39"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a0fa04108a58fa65f185ebcab9721a25e" name="a0fa04108a58fa65f185ebcab9721a25e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa04108a58fa65f185ebcab9721a25e">&#9670;&nbsp;</a></span>getTileIdX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceInfo::DeviceTile::getTileIdX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00438">438</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="a4017356d2a8e71a974fb324593633a4f" name="a4017356d2a8e71a974fb324593633a4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4017356d2a8e71a974fb324593633a4f">&#9670;&nbsp;</a></span>getTileIdY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceInfo::DeviceTile::getTileIdY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00443">443</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -341,9 +403,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00427">427</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00433">433</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00487">DeviceInfo::addTile()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00542">DeviceInfo::addTile()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -378,9 +440,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00434">434</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00450">450</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00423">getChildrenSites()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00429">getChildrenSites()</a>.</p>
 
 </div>
 </div>
@@ -404,7 +466,59 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00435">435</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00451">451</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="af11763b5ce71f5bbf9741ec194f820d8" name="af11763b5ce71f5bbf9741ec194f820d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11763b5ce71f5bbf9741ec194f820d8">&#9670;&nbsp;</a></span>tileIdX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceInfo::DeviceTile::tileIdX = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00452">452</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00414">DeviceTile()</a>, and <a class="el" href="_device_info_8h_source.html#l00438">getTileIdX()</a>.</p>
+
+</div>
+</div>
+<a id="a60fb0678078390dccc86627b72e4aa87" name="a60fb0678078390dccc86627b72e4aa87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60fb0678078390dccc86627b72e4aa87">&#9670;&nbsp;</a></span>tileIdY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceInfo::DeviceTile::tileIdY = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00453">453</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00414">DeviceTile()</a>, and <a class="el" href="_device_info_8h_source.html#l00443">getTileIdY()</a>.</p>
 
 </div>
 </div>
@@ -428,9 +542,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00433">433</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00449">449</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00427">getTileType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00433">getTileType()</a>.</p>
 
 </div>
 </div>

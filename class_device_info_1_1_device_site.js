@@ -45,6 +45,5 @@ var class_device_info_1_1_device_site =
     [ "sitePins", "class_device_info_1_1_device_site.html#a5f3a70569c16f9f6e82a76fbb026903a", null ],
     [ "siteType", "class_device_info_1_1_device_site.html#a4fa8bd3745f4b0c786f8cbde4be2540b", null ],
     [ "siteX", "class_device_info_1_1_device_site.html#a7b541b06de4230f9b2e1731253bc801b", null ],
-    [ "siteY", "class_device_info_1_1_device_site.html#afd0c0c0ec61dffba69d7d0df11bd795c", null ],
-    [ "tile", "class_device_info_1_1_device_site.html#ad65bea11e63eae86284a39bbc5809c36", null ]
+    [ "siteY", "class_device_info_1_1_device_site.html#afd0c0c0ec61dffba69d7d0df11bd795c", null ]
 ];

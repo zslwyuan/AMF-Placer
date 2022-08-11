@@ -138,6 +138,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a03bf0f8ed2eaa2b8117c11f6e474c2cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a03bf0f8ed2eaa2b8117c11f6e474c2cc">getMaxUtilizationOfClockColumns</a> ()</td></tr>
 <tr class="memdesc:a03bf0f8ed2eaa2b8117c11f6e474c2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Max Utilization Of Clock Columns.  <a href="class_device_info_1_1_clock_region.html#a03bf0f8ed2eaa2b8117c11f6e474c2cc">More...</a><br /></td></tr>
 <tr class="separator:a03bf0f8ed2eaa2b8117c11f6e474c2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9390539c107373c4cd74a53d87dfd467"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_info_1_1_clock_column.html">ClockColumn</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a9390539c107373c4cd74a53d87dfd467">getMaxUtilizationClockColumnsPtr</a> ()</td></tr>
+<tr class="separator:a9390539c107373c4cd74a53d87dfd467"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d72d7a84403733d3b2aa38ee787eb79"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="class_device_info_1_1_clock_column.html">ClockColumn</a> * &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a7d72d7a84403733d3b2aa38ee787eb79">getClockColumns</a> ()</td></tr>
 <tr class="separator:a7d72d7a84403733d3b2aa38ee787eb79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -145,6 +147,8 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aef2fd50b9a9f505b4050510cac303208"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_device_info_1_1_device_site.html">DeviceSite</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#aef2fd50b9a9f505b4050510cac303208">sites</a></td></tr>
 <tr class="separator:aef2fd50b9a9f505b4050510cac303208"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97892ceada224ff3a96be1924000fc51"><td class="memItemLeft" align="right" valign="top">std::set&lt; <a class="el" href="class_device_info_1_1_device_tile.html">DeviceTile</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a97892ceada224ff3a96be1924000fc51">tiles</a></td></tr>
+<tr class="separator:a97892ceada224ff3a96be1924000fc51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a075171470ae59388e9a78d9bfecc5a82"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; <a class="el" href="class_device_info_1_1_clock_column.html">ClockColumn</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a075171470ae59388e9a78d9bfecc5a82">clockColumns</a></td></tr>
 <tr class="separator:a075171470ae59388e9a78d9bfecc5a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a839d738a4e69f56c6b9d49c57f143b87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a839d738a4e69f56c6b9d49c57f143b87">columnNumY</a> = 2</td></tr>
@@ -169,6 +173,14 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a5fb9a7a4b03c9e47c4f7e606f8ee30fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefdb168b01a80cfd957cf3e31a9f6733"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#aefdb168b01a80cfd957cf3e31a9f6733">topSiteY</a></td></tr>
 <tr class="separator:aefdb168b01a80cfd957cf3e31a9f6733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2456ca5cbfb84072f28058619261c3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a7e2456ca5cbfb84072f28058619261c3">leftTileIdX</a> = 1000000</td></tr>
+<tr class="separator:a7e2456ca5cbfb84072f28058619261c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eb0870ae2cf45f247125fe2c740d1c0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a5eb0870ae2cf45f247125fe2c740d1c0">bottomTileIdY</a> = 1000000</td></tr>
+<tr class="separator:a5eb0870ae2cf45f247125fe2c740d1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0fc66f5d42dcd33bce54e207793fd8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#aa0fc66f5d42dcd33bce54e207793fd8a">rightTileIdX</a> = -1</td></tr>
+<tr class="separator:aa0fc66f5d42dcd33bce54e207793fd8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcbfa0ba08f95df719321ee2875aa53d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#afcbfa0ba08f95df719321ee2875aa53d">topTileIdY</a> = -1</td></tr>
+<tr class="separator:afcbfa0ba08f95df719321ee2875aa53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaacc5a84dc81dc4cd69755fd2d470c85"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#aaacc5a84dc81dc4cd69755fd2d470c85">colHeight</a></td></tr>
 <tr class="separator:aaacc5a84dc81dc4cd69755fd2d470c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a438ceb50d9b5b7b97d0aa25ab0b0520f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_device_info_1_1_clock_region.html#a438ceb50d9b5b7b97d0aa25ab0b0520f">colWidth</a></td></tr>
@@ -178,7 +190,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p >class for clock regions on FPGA </p>
 <p >Clock region is a concept in the FPGA clocking to constrain the number of clocks in a specific region </p>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00565">565</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00639">639</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a742fee4138c51d1d39d2fb8963c3f9e3" name="a742fee4138c51d1d39d2fb8963c3f9e3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a742fee4138c51d1d39d2fb8963c3f9e3">&#9670;&nbsp;</a></span>ClockRegion()</h2>
@@ -212,18 +224,19 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00573">573</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00647">647</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_device_info_1_1_clock_region_a742fee4138c51d1d39d2fb8963c3f9e3_cgraph.png" border="0" usemap="#aclass_device_info_1_1_clock_region_a742fee4138c51d1d39d2fb8963c3f9e3_cgraph" alt=""/></div>
 <map name="aclass_device_info_1_1_clock_region_a742fee4138c51d1d39d2fb8963c3f9e3_cgraph" id="aclass_device_info_1_1_clock_region_a742fee4138c51d1d39d2fb8963c3f9e3_cgraph">
-<area shape="rect" title="Construct a new Clock Region object." alt="" coords="5,136,168,177"/>
+<area shape="rect" title="Construct a new Clock Region object." alt="" coords="5,169,168,211"/>
 <area shape="rect" href="class_device_info_1_1_device_site.html#a1db113d4da2ff21bb1a71948c7a5ddf8" title=" " alt="" coords="223,5,377,47"/>
 <area shape="rect" href="class_device_info_1_1_device_site.html#a03674f7e97a9152447bab8f56cb5935d" title=" " alt="" coords="223,71,377,112"/>
-<area shape="rect" href="class_device_info_1_1_device_site.html#a012ee1ec701d3a387fe2942b4cadb854" title=" " alt="" coords="223,136,377,177"/>
-<area shape="rect" href="class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="216,202,384,229"/>
-<area shape="rect" href="class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="216,253,384,279"/>
+<area shape="rect" href="class_device_info_1_1_device_site.html#a2b4a614a367960c94900962ca9c4a6e8" title=" " alt="" coords="223,136,377,177"/>
+<area shape="rect" href="class_device_info_1_1_device_site.html#a012ee1ec701d3a387fe2942b4cadb854" title=" " alt="" coords="223,201,377,243"/>
+<area shape="rect" href="class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="216,267,384,294"/>
+<area shape="rect" href="class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="216,318,384,345"/>
 </map>
 </div>
 
@@ -252,7 +265,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00588">588</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00663">663</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -314,7 +327,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00711">711</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00790">790</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -350,16 +363,18 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00607">607</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00682">682</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_device_info_1_1_clock_region_a13a7c2a81aeb7d693eaecc6593aa3e43_cgraph.png" border="0" usemap="#aclass_device_info_1_1_clock_region_a13a7c2a81aeb7d693eaecc6593aa3e43_cgraph" alt=""/></div>
 <map name="aclass_device_info_1_1_clock_region_a13a7c2a81aeb7d693eaecc6593aa3e43_cgraph" id="aclass_device_info_1_1_clock_region_a13a7c2a81aeb7d693eaecc6593aa3e43_cgraph">
-<area shape="rect" title="add a site in the clock region and update the boundary of the clock region" alt="" coords="5,64,168,105"/>
-<area shape="rect" href="class_device_info_1_1_device_site.html#a012ee1ec701d3a387fe2942b4cadb854" title=" " alt="" coords="223,5,377,47"/>
-<area shape="rect" href="class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="216,71,384,98"/>
-<area shape="rect" href="class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="216,122,384,149"/>
+<area shape="rect" title="add a site in the clock region and update the boundary of the clock region" alt="" coords="5,136,168,177"/>
+<area shape="rect" href="class_device_info_1_1_device_element.html#aeb68936902acc7288fc46a983f402db5" title=" " alt="" coords="216,5,393,47"/>
+<area shape="rect" href="class_device_info_1_1_device_site.html#a2b4a614a367960c94900962ca9c4a6e8" title=" " alt="" coords="228,71,381,112"/>
+<area shape="rect" href="class_device_info_1_1_device_site.html#a012ee1ec701d3a387fe2942b4cadb854" title=" " alt="" coords="228,136,381,177"/>
+<area shape="rect" href="class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="221,202,389,229"/>
+<area shape="rect" href="class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="221,253,389,279"/>
 </map>
 </div>
 
@@ -391,7 +406,7 @@ Here is the call graph for this function:</div>
 <p>Get the Bottom boundary of the clock region. </p>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00677">677</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00756">756</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -418,7 +433,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00765">765</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00865">865</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +463,54 @@ Here is the call graph for this function:</div>
 <p>Get the Left boundary of the clock region. </p>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00647">647</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00726">726</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_info_1_1_clock_region_a9962a5906837db3837dd9871a72112e0_icgraph.png" border="0" usemap="#aclass_device_info_1_1_clock_region_a9962a5906837db3837dd9871a72112e0_icgraph" alt=""/></div>
+<map name="aclass_device_info_1_1_clock_region_a9962a5906837db3837dd9871a72112e0_icgraph" id="aclass_device_info_1_1_clock_region_a9962a5906837db3837dd9871a72112e0_icgraph">
+<area shape="rect" title="Get the Left boundary of the clock region." alt="" coords="228,5,391,47"/>
+<area shape="rect" href="class_device_info_1_1_clock_region.html#a83c8ee86be388d609d42fa5a8fcea97a" title="for the clock column constraints, we need to map site to columns." alt="" coords="5,5,180,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9390539c107373c4cd74a53d87dfd467" name="a9390539c107373c4cd74a53d87dfd467"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9390539c107373c4cd74a53d87dfd467">&#9670;&nbsp;</a></span>getMaxUtilizationClockColumnsPtr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_device_info_1_1_clock_column.html">ClockColumn</a> * DeviceInfo::ClockRegion::getMaxUtilizationClockColumnsPtr </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00844">844</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_info_1_1_clock_region_a9390539c107373c4cd74a53d87dfd467_cgraph.png" border="0" usemap="#aclass_device_info_1_1_clock_region_a9390539c107373c4cd74a53d87dfd467_cgraph" alt=""/></div>
+<map name="aclass_device_info_1_1_clock_region_a9390539c107373c4cd74a53d87dfd467_cgraph" id="aclass_device_info_1_1_clock_region_a9390539c107373c4cd74a53d87dfd467_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,233,47"/>
+<area shape="rect" href="class_device_info_1_1_clock_column.html#ab5fbe628f0bc91e23cc74ae1413f788c" title=" " alt="" coords="281,5,448,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -478,7 +540,7 @@ Here is the call graph for this function:</div>
 <p>Get the Max Utilization Of Clock Columns. </p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00746">746</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00825">825</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +570,18 @@ Here is the call graph for this function:</div>
 <p>Get the Right boundary of the clock region. </p>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00657">657</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00736">736</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_info_1_1_clock_region_a159da42d1d44716c450c900bbdfbd703_icgraph.png" border="0" usemap="#aclass_device_info_1_1_clock_region_a159da42d1d44716c450c900bbdfbd703_icgraph" alt=""/></div>
+<map name="aclass_device_info_1_1_clock_region_a159da42d1d44716c450c900bbdfbd703_icgraph" id="aclass_device_info_1_1_clock_region_a159da42d1d44716c450c900bbdfbd703_icgraph">
+<area shape="rect" title="Get the Right boundary of the clock region." alt="" coords="228,5,391,47"/>
+<area shape="rect" href="class_device_info_1_1_clock_region.html#a83c8ee86be388d609d42fa5a8fcea97a" title="for the clock column constraints, we need to map site to columns." alt="" coords="5,5,180,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -538,7 +611,7 @@ Here is the call graph for this function:</div>
 <p>Get the Top boundary of the clock region. </p>
 <dl class="section return"><dt>Returns</dt><dd>float </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00667">667</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00746">746</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -559,7 +632,19 @@ Here is the call graph for this function:</div>
 
 <p>for the clock column constraints, we need to map site to columns. </p>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8cc_source.html#l00250">250</a> of file <a class="el" href="_device_info_8cc_source.html">DeviceInfo.cc</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8cc_source.html#l00252">252</a> of file <a class="el" href="_device_info_8cc_source.html">DeviceInfo.cc</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_device_info_1_1_clock_region_a83c8ee86be388d609d42fa5a8fcea97a_cgraph.png" border="0" usemap="#aclass_device_info_1_1_clock_region_a83c8ee86be388d609d42fa5a8fcea97a_cgraph" alt=""/></div>
+<map name="aclass_device_info_1_1_clock_region_a83c8ee86be388d609d42fa5a8fcea97a_cgraph" id="aclass_device_info_1_1_clock_region_a83c8ee86be388d609d42fa5a8fcea97a_cgraph">
+<area shape="rect" title="for the clock column constraints, we need to map site to columns." alt="" coords="5,100,180,141"/>
+<area shape="rect" href="class_device_info_1_1_clock_region.html#a9962a5906837db3837dd9871a72112e0" title="Get the Left boundary of the clock region." alt="" coords="228,5,391,47"/>
+<area shape="rect" href="class_device_info_1_1_clock_region.html#a159da42d1d44716c450c900bbdfbd703" title="Get the Right boundary of the clock region." alt="" coords="228,71,391,112"/>
+<area shape="rect" href="class_device_info.html#a642f56bb5214e579dccfdd67ef165adf" title=" " alt="" coords="240,137,379,163"/>
+<area shape="rect" href="class_device_info.html#a6e840bd8c98ed729f8b5ff328dab3e82" title=" " alt="" coords="245,187,374,214"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -588,7 +673,7 @@ Here is the call graph for this function:</div>
 
 <p>reset the clock utilization for each column in the clock region </p>
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00692">692</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00771">771</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -616,7 +701,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00637">637</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00716">716</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -644,7 +729,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00622">622</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00701">701</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -672,7 +757,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00627">627</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00706">706</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -700,7 +785,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00632">632</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00711">711</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
 </div>
 </div>
@@ -725,9 +810,35 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00776">776</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00877">877</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
+
+</div>
+</div>
+<a id="a5eb0870ae2cf45f247125fe2c740d1c0" name="a5eb0870ae2cf45f247125fe2c740d1c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5eb0870ae2cf45f247125fe2c740d1c0">&#9670;&nbsp;</a></span>bottomTileIdY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceInfo::ClockRegion::bottomTileIdY = 1000000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00878">878</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
 
 </div>
 </div>
@@ -751,9 +862,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00775">775</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00876">876</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00711">addClockAndCell()</a>, <a class="el" href="_device_info_8h_source.html#l00607">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00573">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00677">getBottom()</a>, <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00637">setBottom()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00790">addClockAndCell()</a>, <a class="el" href="_device_info_8h_source.html#l00682">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00756">getBottom()</a>, <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00716">setBottom()</a>.</p>
 
 </div>
 </div>
@@ -777,9 +888,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00772">772</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00873">873</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00711">addClockAndCell()</a>, <a class="el" href="_device_info_8h_source.html#l00573">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00765">getClockColumns()</a>, <a class="el" href="_device_info_8h_source.html#l00746">getMaxUtilizationOfClockColumns()</a>, <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>, <a class="el" href="_device_info_8h_source.html#l00692">resetClockUtilizationInfo()</a>, and <a class="el" href="_device_info_8h_source.html#l00588">~ClockRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00790">addClockAndCell()</a>, <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00865">getClockColumns()</a>, <a class="el" href="_device_info_8h_source.html#l00844">getMaxUtilizationClockColumnsPtr()</a>, <a class="el" href="_device_info_8h_source.html#l00825">getMaxUtilizationOfClockColumns()</a>, <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>, <a class="el" href="_device_info_8h_source.html#l00771">resetClockUtilizationInfo()</a>, and <a class="el" href="_device_info_8h_source.html#l00663">~ClockRegion()</a>.</p>
 
 </div>
 </div>
@@ -803,9 +914,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00777">777</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00879">879</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00711">addClockAndCell()</a>, and <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00790">addClockAndCell()</a>, and <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
 
 </div>
 </div>
@@ -829,9 +940,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00773">773</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00874">874</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
 
 </div>
 </div>
@@ -855,9 +966,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00778">778</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00880">880</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00711">addClockAndCell()</a>, and <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00790">addClockAndCell()</a>, and <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
 
 </div>
 </div>
@@ -881,9 +992,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00774">774</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00875">875</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00573">ClockRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>.</p>
 
 </div>
 </div>
@@ -907,9 +1018,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00774">774</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00875">875</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00573">ClockRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>.</p>
 
 </div>
 </div>
@@ -933,9 +1044,35 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00776">776</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00877">877</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
+
+</div>
+</div>
+<a id="a7e2456ca5cbfb84072f28058619261c3" name="a7e2456ca5cbfb84072f28058619261c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2456ca5cbfb84072f28058619261c3">&#9670;&nbsp;</a></span>leftTileIdX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceInfo::ClockRegion::leftTileIdX = 1000000</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00878">878</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
 
 </div>
 </div>
@@ -959,9 +1096,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00775">775</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00876">876</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00711">addClockAndCell()</a>, <a class="el" href="_device_info_8h_source.html#l00607">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00573">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00647">getLeft()</a>, <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00622">setLeft()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00790">addClockAndCell()</a>, <a class="el" href="_device_info_8h_source.html#l00682">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00726">getLeft()</a>, <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00701">setLeft()</a>.</p>
 
 </div>
 </div>
@@ -985,9 +1122,35 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00776">776</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00877">877</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
+
+</div>
+</div>
+<a id="aa0fc66f5d42dcd33bce54e207793fd8a" name="aa0fc66f5d42dcd33bce54e207793fd8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0fc66f5d42dcd33bce54e207793fd8a">&#9670;&nbsp;</a></span>rightTileIdX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceInfo::ClockRegion::rightTileIdX = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00878">878</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
 
 </div>
 </div>
@@ -1011,9 +1174,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00775">775</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00876">876</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00607">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00573">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00657">getRight()</a>, <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00627">setRight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00682">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00736">getRight()</a>, <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00706">setRight()</a>.</p>
 
 </div>
 </div>
@@ -1037,9 +1200,35 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00771">771</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00871">871</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00607">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00573">ClockRegion()</a>, <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00588">~ClockRegion()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00682">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>, <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00663">~ClockRegion()</a>.</p>
+
+</div>
+</div>
+<a id="a97892ceada224ff3a96be1924000fc51" name="a97892ceada224ff3a96be1924000fc51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97892ceada224ff3a96be1924000fc51">&#9670;&nbsp;</a></span>tiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::set&lt;<a class="el" href="class_device_info_1_1_device_tile.html">DeviceTile</a> *&gt; DeviceInfo::ClockRegion::tiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00872">872</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00682">addSite()</a>, and <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>.</p>
 
 </div>
 </div>
@@ -1063,9 +1252,35 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00776">776</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00877">877</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
+
+</div>
+</div>
+<a id="afcbfa0ba08f95df719321ee2875aa53d" name="afcbfa0ba08f95df719321ee2875aa53d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcbfa0ba08f95df719321ee2875aa53d">&#9670;&nbsp;</a></span>topTileIdY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int DeviceInfo::ClockRegion::topTileIdY = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00878">878</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>.</p>
 
 </div>
 </div>
@@ -1089,9 +1304,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00775">775</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_device_info_8h_source.html#l00876">876</a> of file <a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00607">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00573">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00667">getTop()</a>, <a class="el" href="_device_info_8cc_source.html#l00250">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00632">setTop()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_device_info_8h_source.html#l00682">addSite()</a>, <a class="el" href="_device_info_8h_source.html#l00647">ClockRegion()</a>, <a class="el" href="_device_info_8h_source.html#l00746">getTop()</a>, <a class="el" href="_device_info_8cc_source.html#l00252">mapSiteToClockColumns()</a>, and <a class="el" href="_device_info_8h_source.html#l00711">setTop()</a>.</p>
 
 </div>
 </div>

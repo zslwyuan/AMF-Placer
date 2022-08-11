@@ -1,6 +1,7 @@
 <map id="DeviceInfo::getSites" name="DeviceInfo::getSites">
-<area shape="rect" id="node1" title=" " alt="" coords="411,31,549,57"/>
+<area shape="rect" id="node1" title=" " alt="" coords="411,64,549,91"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="164,5,363,32"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="165,56,361,83"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_clock_region.html#a83c8ee86be388d609d42fa5a8fcea97a" title="for the clock column constraints, we need to map site to columns." alt="" coords="176,57,351,98"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="165,123,361,149"/>
 <area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,32"/>
 </map>
