@@ -11,7 +11,7 @@ To enable the performance optimization of application mapping on modern field-pr
 certain critical path portions of the designs might be prearranged into many multi-cell macros during synthesis.
 These movable macros with constraints of shape and resources lead to challenging mixed-size placement for FPGA
 designs which cannot be addressed by previous works of analytical placers. In this work, we propose AMF-Placer,
-an open-source analytical mixed-size FPGA placer supporting mixed-size placement on FPGA, with an interface to
+an open-source analytical mixed-size FPGA placer supporting mixed-size placement of heterogeneous resources (LUT/FF/LUTRAM/MUX/CARRY/DSP/BRAM...) on FPGA, with an interface to
 Xilinx Vivado. To speed up the convergence and improve the quality of the placement, AMF-Placer is equipped with
 a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Based on a set
 of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results
