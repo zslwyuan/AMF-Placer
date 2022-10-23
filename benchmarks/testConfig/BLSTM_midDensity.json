@@ -23,7 +23,7 @@
     "GlobalPlacerPrintHPWL": "true",
     "DumpCLBPacking": "./DumpCLBPacking",
     "DumpLUTFFPair": "./DumpLUTFFPair",
-    "ClockPeriod": "7.5",
+    "ClockPeriod": "8",
     "DumpClockUtilization": "true",
     // "DumpMacroLegalization" : "./DumpMacroLegalizationLog",
     // "MacroLegalizationVerbose" : "true",
