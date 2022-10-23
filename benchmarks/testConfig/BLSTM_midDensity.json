@@ -23,7 +23,7 @@
     "GlobalPlacerPrintHPWL": "true",
     "DumpCLBPacking": "./DumpCLBPacking",
     "DumpLUTFFPair": "./DumpLUTFFPair",
-    "ClockPeriod": "8",
+    "ClockPeriod": "7.5",
     "DumpClockUtilization": "true",
     // "DumpMacroLegalization" : "./DumpMacroLegalizationLog",
     // "MacroLegalizationVerbose" : "true",
@@ -47,7 +47,6 @@
     // "disableSpreadingConvergeRatio" : "true",
     "drawClusters": "false",
     "MKL": "true",
-    "DSPCritical": "true",
     "dumpDirectory": "./dumpData_BLSTM_midDensity",
     //"useUnconstrainedCG" : "false"
 }

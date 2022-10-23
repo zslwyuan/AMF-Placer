@@ -37,7 +37,7 @@
     "clockRegionYNum": "8",
     "clockRegionDSPNum": "30",
     "clockRegionBRAMNum": "96",
-    "ClockPeriod": "20",
+    "ClockPeriod": "15",
     "jobs": "8",
     "y2xRatio": "0.4",
     "ClusterPlacerVerbose": "false",

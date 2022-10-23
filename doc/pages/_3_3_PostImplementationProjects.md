@@ -18,10 +18,12 @@ Users can directly open the .xpr file with Vivado. There might be some warnings 
 </center>
 
 
-For the latest results of our timing-driven placement, we have prepared our post-AMF-placement checkpoint of Vivado and the detailed implementation of our timing-driven solution will be available soon.
+For the latest results of our timing-driven placement, we have prepared Vivado placement checkpoint and our post-AMF-placement checkpoint with various configuration and Vivado versions in [Google Drive](https://drive.google.com/drive/folders/1hEo9_n9WjYeoUC_lRI71KXp6jStc4iRn?usp=sharing) and [Tencent Weiyun Disk](https://share.weiyun.com/w50lBmqZ)
 
-|   Online Storage    |         Link          |  Link  |                                              Link                                              |                                              Link                                              |                                              Link                                               |                                             Link                                             | Link  |        Link        |
-| :-----------------: | :-------------------: | :----: | :--------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: | :---: | :----------------: |
-|    Google Drive     | Rosetta FaceDetection | SpooNN | [OptimSoC](https://drive.google.com/file/d/1P-91LgLzDrptQi31PdxWbOBqm8IhNjpy/view?usp=sharing) | [MiniMap2](https://drive.google.com/file/d/19Tfilc5XFWK80R2GbcJXlEZYmCFE7KpD/view?usp=sharing) | [OpenPiton](https://drive.google.com/file/d/1uNf9EvaVSaV6-82esd7if-Ife0tSaPuz/view?usp=sharing) | [MemN2N](https://drive.google.com/file/d/1pWUD6aTO3FZsS6WpV819haWlD1EvYgmZ/view?usp=sharing) | BLSTM | Rosetta DigitRecog |
-| Tencent Weiyun Disk | Rosetta FaceDetection | SpooNN |                         [OptimSoC](https://share.weiyun.com/ehWiXtKg)                          |                         [MiniMap2](https://share.weiyun.com/6qeF4ser)                          |                         [OpenPiton](https://share.weiyun.com/EShQD9IV)                          |                         [MemN2N](https://share.weiyun.com/mtBnqgI0)                          | BLSTM | Rosetta DigitRecog |
-
+1. Cfg0: all the optimization techniques are enabled as the configuration.
+2. Cfg1: disable path-length-aware clustering before partitioning
+3. Cfg2: disable blockage-aware spreading and anchor insertion
+4. Cfg3: disable WNS-aware timing criticality pseudo net weight
+5. Cfg4: disable path-length-aware parallel packing
+6. Cfg5: disable sector-guided site candidate selection and just use the original small square window
+7. Cfg6: disable sector-guided site candidate selection and simply enlarge the square window
