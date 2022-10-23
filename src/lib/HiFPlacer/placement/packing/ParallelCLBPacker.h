@@ -2046,12 +2046,12 @@ class ParallelCLBPacker
             determinedClusterInSite->updateScoreInSite();
         }
 
-        inline void setDSPBRAM(DesignInfo::DesignCell *_DSPBRAMCell)
+        inline void setNonCLBCell(DesignInfo::DesignCell *_NonCLBCell)
         {
             assert(determinedClusterInSite == nullptr);
-            assert(_DSPBRAMCell);
-            isDSPBRAMSite = true;
-            DSPBRAMCell = _DSPBRAMCell;
+            assert(_NonCLBCell);
+            isNonCLBSite = true;
+            nonCLBCell = _NonCLBCell;
         }
 
         inline bool checkIsPrePackedSite()
@@ -2064,9 +2064,9 @@ class ParallelCLBPacker
             return isCarrySite;
         }
 
-        inline bool checkIsDSPBRAMSite()
+        inline bool checkIsNonCLBSite()
         {
-            return isDSPBRAMSite;
+            return isNonCLBSite;
         }
 
         inline bool checkIsMuxSite()
@@ -2098,9 +2098,9 @@ class ParallelCLBPacker
             return LUTRAMMacro;
         }
 
-        inline DesignInfo::DesignCell *getDSPBRAMCell()
+        inline DesignInfo::DesignCell *getNonCLBCell()
         {
-            return DSPBRAMCell;
+            return nonCLBCell;
         }
 
         inline int getCarrySiteOffset()
@@ -2731,11 +2731,11 @@ class ParallelCLBPacker
 
         bool isCarrySite = false;
         bool isLUTRAMSite = false;
-        bool isDSPBRAMSite = false;
+        bool isNonCLBSite = false;
         PlacementInfo::PlacementMacro *CARRYChain = nullptr;
         PlacementInfo::PlacementMacro *LUTRAMMacro = nullptr;
         DesignInfo::DesignCell *carryCell = nullptr;
-        DesignInfo::DesignCell *DSPBRAMCell = nullptr;
+        DesignInfo::DesignCell *nonCLBCell = nullptr;
         int CARRYChainSiteOffset = -1;
 
         bool debug = false;
@@ -2845,7 +2845,7 @@ class ParallelCLBPacker
      */
     void packCLBs(int packIterNum, bool doExceptionHandling, bool debug = false);
 
-    void addDSPBRAMPackingSites();
+    void addNonCLBPackingSites();
 
     int timingDrivenDetailedPlacement_shortestPath_intermediate();
     int timingDrivenDetailedPlacement_shortestPath(int iterId, float displacementRatio);

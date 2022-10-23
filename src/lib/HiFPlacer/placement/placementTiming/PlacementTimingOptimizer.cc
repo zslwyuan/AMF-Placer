@@ -819,6 +819,8 @@ void PlacementTimingOptimizer::stretchClockRegionColumns()
                 newTopY = topLimit;
             }
             newH = newTopY - newBottomY;
+            if (oriH < 0.01)
+                continue;
             stretchRatio = newH / oriH;
             for (auto PU : clockRegionX2PUs[colX])
             {

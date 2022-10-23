@@ -133,6 +133,11 @@ class CLBLegalizer
     void resetSitesMapped();
     void dumpMatching(bool fixedColumn = false, bool enforce = false);
 
+    inline bool hasNoTarget()
+    {
+        return noTarget;
+    }
+
   private:
     std::string legalizerName;
     PlacementInfo *placementInfo;
@@ -427,6 +432,8 @@ class CLBLegalizer
      *
      */
     float roughAverageDisplacement = 10000.0;
+
+    bool noTarget = false;
 
     /**
      * @brief displacement threshold to detect potential legal sites

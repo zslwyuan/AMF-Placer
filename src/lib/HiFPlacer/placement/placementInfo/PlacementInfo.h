@@ -1470,10 +1470,16 @@ class PlacementInfo
             setPlaced();
             siteName = _siteName;
             BELName = _BELName;
-            setAnchorLocation(deviceInfo->getSite(siteName)->X(), deviceInfo->getSite(siteName)->Y());
-            deviceInfo->getSite(siteName)->setOccupied();
+            lockedSite = deviceInfo->getSite(siteName);
+            setAnchorLocation(lockedSite->X(), lockedSite->Y());
+            lockedSite->setOccupied();
             if (lock)
                 setLocked();
+        }
+
+        inline DeviceInfo::DeviceSite *getLockedSite()
+        {
+            return lockedSite;
         }
 
         inline DesignInfo::DesignCell *getCell()
@@ -1496,6 +1502,7 @@ class PlacementInfo
         // DesignInfo::DesignCellType virtualCellType;
         std::string siteName;
         std::string BELName;
+        DeviceInfo::DeviceSite *lockedSite = nullptr;
     };
 
     /**

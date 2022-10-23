@@ -17,6 +17,7 @@
 #include <assert.h>
 #include <queue>
 #include <regex>
+#include <cmath>
 
 void DesignInfo::DesignPin::updateParentCellNetInfo()
 {
@@ -183,6 +184,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
     {
         std::istringstream iss(line);
         iss >> fill0 >> targetName;
+        drivepinName = "";
         if (strContains(fill0, "pin=>"))
         {
             iss >> fill3 >> refpinname >> fill0 >> dir >> fill1 >> netName >> fill2 >> drivepinName;
@@ -202,6 +204,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
             {
                 curPin->updateParentCellNetInfo();
                 curPin->setUnconnected();
+                // print_warning(line);
                 continue; // not connected
             }
             assert(drivepinName != "");
@@ -447,23 +450,26 @@ void DesignInfo::updateFFControlSets()
             curCS->addFF(curCell);
         }
     }
+    enhanceFFControlSetNets();
+    print_info("DesignInfo: find #controlSets: " + std::to_string(controlSets.size()));
 }
 
 void DesignInfo::enhanceFFControlSetNets()
 {
-    if (controlSets.size())
+    if (controlSets.size() && controlSets.size() > cells.size() / 5000)
     {
+        float enhanceRatio = std::pow((float)controlSets.size(), 0.1);
         for (auto CS : controlSets)
         {
             if (CS->getCE())
             {
-                if (CS->getCE()->getPins().size() < 5000 && CS->getCE()->getPins().size() > 25)
-                    CS->getCE()->enhanceOverallClusterNetEnhancement(1.2);
+                if (CS->getCE()->getPins().size() < 5000 && CS->getCE()->getPins().size() > 200)
+                    CS->getCE()->setOverallClusterNetEnhancement(2 * enhanceRatio);
             }
             if (CS->getSR())
             {
-                if (CS->getSR()->getPins().size() < 5000 && CS->getSR()->getPins().size() > 25)
-                    CS->getSR()->enhanceOverallClusterNetEnhancement(1.2);
+                if (CS->getSR()->getPins().size() < 5000 && CS->getSR()->getPins().size() > 200)
+                    CS->getSR()->setOverallClusterNetEnhancement(2 * enhanceRatio);
             }
         }
     }
@@ -597,6 +603,10 @@ DesignInfo::DesignCellType DesignInfo::fromStringToCellType(std::string &cellNam
             return static_cast<DesignCellType>(i);
     }
     print_error("no such type: " + typeName + " for cell: " + cellName);
+    for (std::size_t i = 0; i < DesignCellTypeStr.size(); ++i)
+    {
+        std::cout << DesignCellTypeStr[i] << " " << typeName << " " << (DesignCellTypeStr[i] == typeName) << "\n";
+    }
     assert(false && "no such type. Please check your DesignCellType enum definition and CELLTYPESTRS macro.");
 }
 

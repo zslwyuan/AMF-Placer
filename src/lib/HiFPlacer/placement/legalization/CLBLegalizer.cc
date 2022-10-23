@@ -71,6 +71,12 @@ void CLBLegalizer::legalize(bool exactLegalization)
     resetSettings();
     findSiteType2AvailableSites();
     getPUsToLegalize();
+    if (initialPUsToLegalize.size() == 0)
+    {
+        print_warning("CLBLegalizer find no target elements.");
+        noTarget = true;
+        return;
+    }
     roughlyLegalize();
 
     updatePUMatchingLocation(true, !exactLegalization);
