@@ -1,10 +1,10 @@
 <map id="MacroLegalizer" name="MacroLegalizer">
-<area shape="rect" id="node1" title="MacroLegalizer maps DSP/BRAM/CARRY macros to legal location." alt="" coords="961,161,1072,188"/>
-<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="626,96,733,123"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="201,46,379,87"/>
-<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,13,89,40"/>
-<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="217,181,363,208"/>
-<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,165,89,192"/>
-<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="592,147,767,203"/>
-<area shape="rect" id="node8" href="$class_min_cost_bipartite_matcher.html" title=" " alt="" coords="597,227,762,253"/>
+<area shape="rect" id="node1" title="MacroLegalizer maps DSP/BRAM/CARRY macros to legal location." alt="" coords="961,161,1072,186"/>
+<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="626,97,733,122"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="201,45,379,85"/>
+<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,14,89,39"/>
+<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="217,181,363,206"/>
+<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,166,89,191"/>
+<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="592,146,767,201"/>
+<area shape="rect" id="node8" href="$class_min_cost_bipartite_matcher.html" title=" " alt="" coords="597,225,762,250"/>
 </map>

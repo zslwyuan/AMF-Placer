@@ -1,5 +1,5 @@
 <map id="GeneralSpreader::SpreadRegion::smartFindExpandDirection" name="GeneralSpreader::SpreadRegion::smartFindExpandDirection">
-<area shape="rect" id="node1" title="find the legal expansion direction" alt="" coords="5,39,212,80"/>
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#ac1de28ec53a39a4082076020bdb6ad8c" title="evaluation the utilization and capacity of the incoming bins which will be included in the SpreadRegi..." alt="" coords="260,5,467,47"/>
-<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region.html#a128b368690e276b0eccd3bfc68047dac" title="check whether an expansion in a given direction will make the SpreadRegion overlapped with some bins ..." alt="" coords="260,71,467,112"/>
+<area shape="rect" id="node1" title="find the legal expansion direction" alt="" coords="5,37,212,77"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#ac1de28ec53a39a4082076020bdb6ad8c" title="evaluation the utilization and capacity of the incoming bins which will be included in the SpreadRegi..." alt="" coords="260,5,467,45"/>
+<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region.html#a128b368690e276b0eccd3bfc68047dac" title="check whether an expansion in a given direction will make the SpreadRegion overlapped with some bins ..." alt="" coords="260,69,467,109"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="PlacementInfo::resetPULegalInformation" name="PlacementInfo::resetPULegalInformation">
-<area shape="rect" id="node1" title="forget all the legalization information" alt="" coords="229,5,421,47"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#aadb6ba900abf8a5d1c03e0fd7edd320c" title="Construct a new Global Placer object based on placement information." alt="" coords="5,13,181,39"/>
+<area shape="rect" id="node1" title="forget all the legalization information" alt="" coords="229,5,421,45"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#aadb6ba900abf8a5d1c03e0fd7edd320c" title="Construct a new Global Placer object based on placement information." alt="" coords="5,13,181,38"/>
 </map>

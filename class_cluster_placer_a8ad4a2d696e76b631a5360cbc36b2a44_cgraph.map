@@ -1,9 +1,18 @@
 <map id="ClusterPlacer::setClusterNetsAdjMat" name="ClusterPlacer::setClusterNetsAdjMat">
-<area shape="rect" id="node1" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="5,141,171,182"/>
-<area shape="rect" id="node2" href="$_cluster_placer_8cc.html#a5735b045bfe96dc29dca1cfb7f34116d" title=" " alt="" coords="277,5,383,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a00864f7c104c5bbac820accd054b12e1" title=" " alt="" coords="219,57,441,98"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="230,123,430,149"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="231,173,429,200"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="220,224,440,251"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="234,275,426,317"/>
+<area shape="rect" id="node1" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement" alt="" coords="5,219,171,259"/>
+<area shape="rect" id="node2" href="$_cluster_placer_8cc.html#a5735b045bfe96dc29dca1cfb7f34116d" title=" " alt="" coords="277,5,383,31"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a00864f7c104c5bbac820accd054b12e1" title=" " alt="" coords="219,55,441,95"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="230,120,430,145"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="231,169,429,195"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a80bec37ddde34d28be1b2c43a99aa614" title=" " alt="" coords="242,219,418,259"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="220,284,440,309"/>
+<area shape="rect" id="node8" href="$class_cluster_placer.html#a9a4d2db91199026d0313fb397af1efbc" title=" " alt="" coords="237,334,423,374"/>
+<area shape="rect" id="node12" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="234,398,426,438"/>
+<area shape="rect" id="node13" href="$class_cluster_placer.html#afe8e9b1d5a4831c3adc66004e30ed2ca" title=" " alt="" coords="223,463,437,488"/>
+<area shape="rect" id="node9" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="494,287,703,327"/>
+<area shape="rect" id="node11" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="503,352,694,377"/>
+<area shape="rect" id="node10" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="756,287,920,327"/>
+<area shape="rect" id="node14" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="489,413,708,439"/>
+<area shape="rect" id="node15" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="489,463,708,488"/>
+<area shape="rect" id="node16" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="503,512,695,537"/>
 </map>

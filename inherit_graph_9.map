@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="5,56,183,83"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_b_e_l.html" title="BEL(Basic Element of Logic), the smallest undividable element." alt="" coords="231,5,385,32"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html" title="Site class for site on device." alt="" coords="231,56,385,83"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites." alt="" coords="233,107,383,133"/>
+<area shape="rect" id="node1" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="5,55,183,80"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_b_e_l.html" title="BEL(Basic Element of Logic), the smallest undividable element." alt="" coords="231,5,385,31"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html" title="Site class for site on device." alt="" coords="231,55,385,80"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites." alt="" coords="233,104,383,129"/>
 </map>

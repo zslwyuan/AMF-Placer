@@ -1,6 +1,6 @@
 <map id="DesignInfo::DesignPin::getCell" name="DesignInfo::DesignPin::getCell">
-<area shape="rect" id="node1" title="Get the Cell object of the pin." alt="" coords="424,27,573,69"/>
-<area shape="rect" id="node2" href="$_design_info_8cc.html#afcc51cada541a58044dce79b039ee20c" title=" " alt="" coords="248,5,333,32"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c" title="let the parent cell know that one of its pin connects to a specific net" alt="" coords="205,57,376,98"/>
-<area shape="rect" id="node4" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="5,64,157,91"/>
+<area shape="rect" id="node1" title="Get the Cell object of the pin." alt="" coords="424,27,573,67"/>
+<area shape="rect" id="node2" href="$_design_info_8cc.html#afcc51cada541a58044dce79b039ee20c" title=" " alt="" coords="248,5,333,31"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c" title="let the parent cell know that one of its pin connects to a specific net" alt="" coords="205,55,376,95"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="5,63,157,88"/>
 </map>

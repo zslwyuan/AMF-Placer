@@ -1,5 +1,23 @@
 var namespaces_dup =
 [
+    [ "AMF-Vivado", "namespace_a_m_f-_vivado.html", [
+      [ "benchmarkNames", "namespace_a_m_f-_vivado.html#a69225ac9b2f188d0f6f7cb52bcf6a376", null ],
+      [ "errorCode", "namespace_a_m_f-_vivado.html#affa1b1551cac4f4dbc16fe38239abee2", null ],
+      [ "file", "namespace_a_m_f-_vivado.html#a6cde6c1d391de7625a5b03534a3f6ebf", null ],
+      [ "outputName", "namespace_a_m_f-_vivado.html#a167ba0894754f58b3c3d584623ee9b14", null ],
+      [ "outputPath", "namespace_a_m_f-_vivado.html#a8d2c4c786d473e2756f485bfc2fcb44e", null ],
+      [ "overallTcl", "namespace_a_m_f-_vivado.html#a10c2f033f22f08bcbf952b01c1bf631a", null ]
+    ] ],
+    [ "checkHalfColumn", "namespacecheck_half_column.html", [
+      [ "clockInHalfColumns", "namespacecheck_half_column.html#aa1c3487edcbccae64fdbdc9cdae1c3be", null ],
+      [ "clockNum", "namespacecheck_half_column.html#a6fb274f18162e5f0bcb75c85b526d4da", null ],
+      [ "curLine", "namespacecheck_half_column.html#a5d6eba023768e87209fc2a052e9bc845", null ],
+      [ "halfColId", "namespacecheck_half_column.html#a47b8132ea7ef070a5ca7a3052da8079e", null ],
+      [ "i", "namespacecheck_half_column.html#a94e88d3d9b2bcfc6fc02258129763c4f", null ],
+      [ "inputFile", "namespacecheck_half_column.html#a53a64ced536754d376ce3ed3d8127842", null ],
+      [ "lines", "namespacecheck_half_column.html#a2f4b070bb1c0225694a911581d6010b5", null ],
+      [ "rowY", "namespacecheck_half_column.html#a21142cb47181741efdc3e16a894cfdf1", null ]
+    ] ],
     [ "coordDensityVisualization", "namespacecoord_density_visualization.html", [
       [ "check_bom", "namespacecoord_density_visualization.html#a385900e7e4d9b308dddd9a39751128b1", null ],
       [ "gzdecode", "namespacecoord_density_visualization.html#ada95ad6130e91010068c8dc2e554c50f", null ],
@@ -23,7 +41,7 @@ var namespaces_dup =
       [ "data", "namespacedelay_visualization.html#ac5da16cbe8d0cf44f04d5da65d90eef5", null ],
       [ "delay", "namespacedelay_visualization.html#a4af859be1cda3b7b74ac4c1ee994ff67", null ],
       [ "delayLine", "namespacedelay_visualization.html#a40b6288fd14483765feff6d6ced3fa1a", null ],
-      [ "delayList", "namespacedelay_visualization.html#a4ad2e5e42dd21766a764bc9d1e7a7a79", null ],
+      [ "delayList", "namespacedelay_visualization.html#a62d33f9c3550747f24e1ede41f7ba57c", null ],
       [ "disX", "namespacedelay_visualization.html#ac5d631aaea2978509202ecf95b52b97e", null ],
       [ "disXY2delay", "namespacedelay_visualization.html#ad1d9397e327ed49c90493230bf599d4f", null ],
       [ "disY", "namespacedelay_visualization.html#a3416b90e04117796460529ec82969acd", null ],
@@ -47,11 +65,11 @@ var namespaces_dup =
       [ "tupleXY", "namespacedelay_visualization.html#a04e15315dfc971bae0b2448b5a4fde7f", null ],
       [ "x", "namespacedelay_visualization.html#abdecb7eb227fd115a6108d477dbdb33d", null ],
       [ "X", "namespacedelay_visualization.html#a610b19b995483e5e4b88acf11a8f3903", null ],
-      [ "XList", "namespacedelay_visualization.html#a25811c4b7ca8a7b80179ad4a39023ebf", null ],
+      [ "XList", "namespacedelay_visualization.html#a721b93ea263102915addd9ff84e5ce0a", null ],
       [ "XX", "namespacedelay_visualization.html#a6dec3af7c3fa523a0baa309c68c0f540", null ],
       [ "y", "namespacedelay_visualization.html#a7cf4e9f731d50d19e0971a5de523e499", null ],
       [ "Y", "namespacedelay_visualization.html#a4eab9deb90dd75dad65777eeb28314bd", null ],
-      [ "YList", "namespacedelay_visualization.html#a5b43eaeeb4457451cd1522051b7abe8f", null ],
+      [ "YList", "namespacedelay_visualization.html#a0d509a08566e8b581ef3fe697e66bb32", null ],
       [ "YY", "namespacedelay_visualization.html#a57f9c0c0945def229789e143e9482078", null ],
       [ "z", "namespacedelay_visualization.html#a037e06eb6ea64c80217a926a5a9e3146", null ],
       [ "Z", "namespacedelay_visualization.html#ab3ad91cd7b0251da71c9d1c3296f3d93", null ]
@@ -63,6 +81,16 @@ var namespaces_dup =
       [ "file", "namespacedensity_visualization.html#a8bbe83121ec8e038b430450b0350d325", null ],
       [ "im", "namespacedensity_visualization.html#a388e4bb6a3257c71d8da392a76ffc76b", null ],
       [ "numpy_array", "namespacedensity_visualization.html#a21250a6f00ff249f62b8a40d78a36242", null ]
+    ] ],
+    [ "DSE", "namespace_d_s_e.html", [
+      [ "end", "namespace_d_s_e.html#a8d67be26f63fd035cbdf32c6b8674201", null ],
+      [ "errorCode", "namespace_d_s_e.html#ab4dee27797be8642252bda9c6114ac0f", null ],
+      [ "file", "namespace_d_s_e.html#a221131a4c52c8cffb1914707f4d81481", null ],
+      [ "outputFile", "namespace_d_s_e.html#af05b7c5789c883f32b3129e938d57e19", null ],
+      [ "outputName", "namespace_d_s_e.html#a5ef0ea4c617a6dfbaa8b969f6033ead4", null ],
+      [ "outputPath", "namespace_d_s_e.html#a0e8fecf1e5d6c6c3a96467cc9d9553f0", null ],
+      [ "overallTcl", "namespace_d_s_e.html#acd8be8308e5c903fa9ce33155a58f8d8", null ],
+      [ "templateFile", "namespace_d_s_e.html#a13a4f2dcfb46042616f0f903457bb07e", null ]
     ] ],
     [ "exportDeviceLocation", "namespaceexport_device_location.html", "namespaceexport_device_location" ],
     [ "figProcess", "namespacefig_process.html", [
@@ -124,7 +152,7 @@ var namespaces_dup =
       [ "parser", "namespacepaint_placement.html#a3ae501222e44801db734a947c2896af6", null ],
       [ "patternStr", "namespacepaint_placement.html#a0aed3921c1f77cfd5af4ce288f6d9466", null ],
       [ "required", "namespacepaint_placement.html#a531ac58f7a8e8c199ce44d940d5ff1f3", null ],
-      [ "targetImgName", "namespacepaint_placement.html#a2108cfe91124efc15a19096d86d9e9bd", null ],
+      [ "targetImgName", "namespacepaint_placement.html#a8f68f020c6c115e35065fea89c0122e7", null ],
       [ "textFile", "namespacepaint_placement.html#a8a94d9deb55feabf0f6b1fbae9a6bd4a", null ],
       [ "VivadoCells", "namespacepaint_placement.html#ae964954f828c42ad38a643d47b2a9f7f", null ],
       [ "VivadoGraph", "namespacepaint_placement.html#aaefa194f54af639b4bec7997c4e7b8ce", null ],

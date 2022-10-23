@@ -1,11 +1,13 @@
 <map id="ParallelCLBPacker::dumpCLBPlacementTcl" name="ParallelCLBPacker::dumpCLBPlacementTcl">
-<area shape="rect" id="node1" title=" " alt="" coords="5,90,165,131"/>
-<area shape="rect" id="node2" href="$_parallel_c_l_b_packer_8cc.html#a26fb856dc508059a8744a3ab61473f2e" title=" " alt="" coords="235,5,383,32"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="221,57,398,98"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="213,122,405,163"/>
-<area shape="rect" id="node7" href="$_parallel_c_l_b_packer_8cc.html#a982f039565b9c69197d92d1617d102c9" title=" " alt="" coords="268,191,351,217"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="453,118,605,159"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="653,118,831,159"/>
-<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="453,183,605,225"/>
-<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="453,249,605,290"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,149,165,189"/>
+<area shape="rect" id="node2" href="$_parallel_c_l_b_packer_8cc.html#a26fb856dc508059a8744a3ab61473f2e" title=" " alt="" coords="235,5,383,31"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="221,55,398,95"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="213,119,405,159"/>
+<area shape="rect" id="node7" href="$_parallel_c_l_b_packer_8cc.html#a982f039565b9c69197d92d1617d102c9" title=" " alt="" coords="268,184,351,209"/>
+<area shape="rect" id="node10" href="$string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930" title=" " alt="" coords="270,233,349,259"/>
+<area shape="rect" id="node11" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title=" " alt="" coords="278,283,341,308"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="453,113,605,153"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="653,113,831,153"/>
+<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="453,177,605,217"/>
+<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="453,241,605,281"/>
 </map>

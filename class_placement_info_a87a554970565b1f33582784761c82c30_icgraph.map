@@ -1,7 +1,7 @@
 <map id="PlacementInfo::setProgress" name="PlacementInfo::setProgress">
-<area shape="rect" id="node1" title="Set the progress ratio, indicating the progress of the placement convergence,." alt="" coords="647,46,829,73"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="165,5,364,47"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="413,68,599,109"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,71,365,112"/>
+<area shape="rect" id="node1" title="Set the progress ratio, indicating the progress of the placement convergence,." alt="" coords="660,45,843,70"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="413,5,612,45"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="420,69,605,109"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,69,365,109"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,77,116,102"/>
 </map>

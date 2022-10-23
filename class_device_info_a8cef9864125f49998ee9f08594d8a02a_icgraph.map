@@ -1,4 +1,4 @@
 <map id="DeviceInfo::addSite" name="DeviceInfo::addSite">
-<area shape="rect" id="node1" title="add a site into the device information class" alt="" coords="205,5,340,32"/>
-<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,32"/>
+<area shape="rect" id="node1" title="add a site into the device information class" alt="" coords="205,5,340,31"/>
+<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,31"/>
 </map>

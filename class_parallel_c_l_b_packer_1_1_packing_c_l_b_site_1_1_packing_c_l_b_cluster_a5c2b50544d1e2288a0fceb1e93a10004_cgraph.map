@@ -1,7 +1,9 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::maxCardinalityMatching" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::maxCardinalityMatching">
-<area shape="rect" id="node1" title="conduct maximun cardinality matching algorithm to pair LUTs" alt="" coords="5,45,244,101"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1" title="check whether a given cell is unpackable" alt="" coords="312,5,511,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af423d1ee6ada68bf164aef48e9baf2c5" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="292,85,531,141"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="579,59,731,101"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="579,125,731,166"/>
+<area shape="rect" id="node1" title="conduct maximun cardinality matching algorithm to pair LUTs" alt="" coords="5,84,244,139"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1" title="check whether a given cell is unpackable" alt="" coords="312,5,511,60"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af423d1ee6ada68bf164aef48e9baf2c5" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="292,84,531,139"/>
+<area shape="rect" id="node6" href="$_parallel_c_l_b_packer___packing_c_l_b_site_8cc.html#a8bda09f4d43a5a29ceb92e9ef5ae5fb4" title=" " alt="" coords="379,163,444,188"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="579,27,731,67"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="579,91,731,131"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="579,155,731,195"/>
 </map>

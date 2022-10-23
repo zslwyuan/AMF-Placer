@@ -1,0 +1,8 @@
+<map id="PlacementTimingOptimizer::conductStaticTimingAnalysis" name="PlacementTimingOptimizer::conductStaticTimingAnalysis">
+<area shape="rect" id="node1" title=" " alt="" coords="692,120,888,160"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,5,395,45"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,99,116,125"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="474,120,613,160"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="210,120,349,160"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="443,235,644,275"/>
+</map>

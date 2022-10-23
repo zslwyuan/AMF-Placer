@@ -1,13 +1,13 @@
 <map id="PlacementInfo::setPULegalXY" name="PlacementInfo::setPULegalXY">
-<area shape="rect" id="node1" title="set the legalization of some PlacementUnit objects" alt="" coords="1129,143,1328,170"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="879,5,1057,47"/>
-<area shape="rect" id="node7" href="$class_macro_legalizer.html#a77e9e1f1fbbf77fb805b34d57d3198f4" title="finally dynamic programming to legalize the macros which have been mapped to the columns." alt="" coords="875,136,1061,177"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="436,228,577,269"/>
-<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="859,71,1077,112"/>
-<area shape="rect" id="node11" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="855,201,1081,243"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="653,78,802,105"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="413,177,600,203"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,169,365,211"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,206,116,233"/>
-<area shape="rect" id="node8" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,177,807,203"/>
+<area shape="rect" id="node1" title="set the legalization of some PlacementUnit objects" alt="" coords="1129,141,1328,166"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="879,5,1057,45"/>
+<area shape="rect" id="node7" href="$class_macro_legalizer.html#a77e9e1f1fbbf77fb805b34d57d3198f4" title="finally dynamic programming to legalize the macros which have been mapped to the columns." alt="" coords="875,133,1061,173"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="436,223,577,263"/>
+<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="859,69,1077,109"/>
+<area shape="rect" id="node11" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="855,197,1081,237"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="653,77,802,102"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="413,173,600,198"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,165,365,205"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,202,116,227"/>
+<area shape="rect" id="node8" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,173,807,198"/>
 </map>

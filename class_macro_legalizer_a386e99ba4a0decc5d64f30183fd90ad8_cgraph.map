@@ -1,5 +1,7 @@
 <map id="MacroLegalizer::getHPWLChange" name="MacroLegalizer::getHPWLChange">
-<area shape="rect" id="node1" title="get the HPWL change when the given PlacementUnit moves to the given location" alt="" coords="5,46,223,73"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="279,5,454,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="271,71,463,112"/>
+<area shape="rect" id="node1" title="get the HPWL change when the given PlacementUnit moves to the given location" alt="" coords="5,109,223,134"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="279,5,454,45"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="271,69,463,109"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="279,133,454,173"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="279,197,454,237"/>
 </map>

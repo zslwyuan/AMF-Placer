@@ -1,4 +1,4 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPairPinNum" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPairPinNum">
-<area shape="rect" id="node1" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="292,5,531,61"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5c2b50544d1e2288a0fceb1e93a10004" title="conduct maximun cardinality matching algorithm to pair LUTs" alt="" coords="5,5,244,61"/>
+<area shape="rect" id="node1" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="292,5,531,60"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5c2b50544d1e2288a0fceb1e93a10004" title="conduct maximun cardinality matching algorithm to pair LUTs" alt="" coords="5,5,244,60"/>
 </map>

@@ -1,0 +1,6 @@
+<map id="PlacementInfo::PlacementUnit::getCARRYNum" name="PlacementInfo::PlacementUnit::getCARRYNum">
+<area shape="rect" id="node1" title=" " alt="" coords="673,13,848,53"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#a1af8f5d351111595d5333dfc5e25cac7" title=" " alt="" coords="413,5,625,60"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,13,365,53"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,45"/>
+</map>

@@ -1,52 +1,52 @@
 <map id="PlacementInfo::loadPlacementUnitInformation" name="PlacementInfo::loadPlacementUnitInformation">
-<area shape="rect" id="node1" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="5,1641,204,1683"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="275,593,450,635"/>
-<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_macro.html#a1e000fe47cfe3a0fdc88e2fef72f5999" title="add information of a fixed cell" alt="" coords="275,1247,450,1288"/>
-<area shape="rect" id="node22" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="283,1313,442,1339"/>
-<area shape="rect" id="node24" href="$class_placement_info.html#a7d3c19092744c966a273aa65b75a9ffb" title=" " alt="" coords="265,1364,460,1405"/>
-<area shape="rect" id="node25" href="$class_device_info.html#ae3cbdcebbe46b3447ad56d38db566583" title="Get a site based on a given name." alt="" coords="267,1430,459,1457"/>
-<area shape="rect" id="node26" href="$class_placement_info_1_1_placement_unit.html#aa8016d572d4e10c18b3f031428ad3db1" title=" " alt="" coords="275,1481,450,1523"/>
-<area shape="rect" id="node27" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="563,1506,654,1533"/>
-<area shape="rect" id="node28" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="313,1649,412,1675"/>
-<area shape="rect" id="node29" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="275,1598,450,1625"/>
-<area shape="rect" id="node33" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title=" " alt="" coords="252,1699,473,1755"/>
-<area shape="rect" id="node34" href="$class_placement_info_1_1_placement_unit.html#a531ed51b8a516bf258c3d0237a9aad42" title=" " alt="" coords="521,1739,696,1780"/>
-<area shape="rect" id="node35" href="$class_placement_info_1_1_placement_unit.html#aa981acea66b64adc88749452146f1280" title=" " alt="" coords="521,1804,696,1845"/>
-<area shape="rect" id="node36" href="$class_placement_info_1_1_placement_unpacked_cell.html#ac7d3b8b70966af2d4689019d1585a48d" title=" " alt="" coords="271,1881,454,1923"/>
-<area shape="rect" id="node40" href="$class_placement_info_1_1_placement_unit.html#a5da6175f473345876ee67558b2f5851c" title=" " alt="" coords="521,2153,696,2195"/>
-<area shape="rect" id="node43" href="$class_device_info_1_1_device_site.html#a5969ec6730d275ff3a2e299adda5651b" title=" " alt="" coords="286,1999,439,2040"/>
-<area shape="rect" id="node44" href="$class_placement_info.html#a87a554970565b1f33582784761c82c30" title="Set the progress ratio, indicating the progress of the placement convergence,." alt="" coords="271,2065,454,2091"/>
-<area shape="rect" id="node45" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="275,2116,450,2157"/>
-<area shape="rect" id="node46" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title=" " alt="" coords="331,2182,394,2209"/>
-<area shape="rect" id="node47" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="263,1181,462,1223"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="521,397,696,439"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="521,463,696,504"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="521,528,696,569"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#adb09a5119212197bddd75634241baaa2" title=" " alt="" coords="521,593,696,635"/>
-<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#a34b224d1c2aa243ad1f9003fe2b88797" title=" " alt="" coords="521,659,696,700"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title=" " alt="" coords="521,724,696,765"/>
-<area shape="rect" id="node9" href="$class_placement_info_1_1_placement_unit.html#a06cbf23f1032d78a25997e727374f415" title=" " alt="" coords="521,789,696,831"/>
-<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html#aac2fb10ed37806637102fa6fbba9a32d" title="Get the clock nets connected to this cell for later legalization." alt="" coords="533,855,685,896"/>
-<area shape="rect" id="node11" href="$class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="533,920,685,961"/>
-<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="533,985,685,1027"/>
-<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="533,5,685,47"/>
-<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="533,1051,685,1092"/>
-<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="533,1116,685,1157"/>
-<area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="533,71,685,112"/>
-<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="533,136,685,177"/>
-<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="533,201,685,243"/>
-<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="533,267,685,308"/>
-<area shape="rect" id="node20" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="533,332,685,373"/>
-<area shape="rect" id="node23" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="540,1365,677,1391"/>
-<area shape="rect" id="node30" href="$class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="541,1557,677,1583"/>
-<area shape="rect" id="node31" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="521,1608,696,1649"/>
-<area shape="rect" id="node32" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title=" " alt="" coords="521,1673,696,1715"/>
-<area shape="rect" id="node37" href="$class_device_info.html#af80ea4926947a5bf90165e9051e159f7" title=" " alt="" coords="543,1971,674,1998"/>
-<area shape="rect" id="node38" href="$class_placement_info_1_1_placement_unit.html#a41c9eba04c1d8ed3b2a6c30662550d38" title="Set the Anchor Location for the PlacementUnit." alt="" coords="521,2023,696,2064"/>
-<area shape="rect" id="node39" href="$class_device_info_1_1_device_site.html#a16f6632ebc643578d57c77356f003502" title=" " alt="" coords="532,2088,685,2129"/>
-<area shape="rect" id="node41" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="525,1870,693,1897"/>
-<area shape="rect" id="node42" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="525,1921,693,1947"/>
-<area shape="rect" id="node48" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="525,1181,692,1223"/>
-<area shape="rect" id="node49" href="$class_placement_info.html#a2b439a4c51e2b0cd354ab098e5c43aaa" title="Get the Bin Grid object for all types of BEL." alt="" coords="522,1247,695,1274"/>
-<area shape="rect" id="node50" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="533,1299,685,1340"/>
+<area shape="rect" id="node1" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="5,1485,204,1525"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="275,581,450,621"/>
+<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_macro.html#a1e000fe47cfe3a0fdc88e2fef72f5999" title="add information of a fixed cell" alt="" coords="275,1097,450,1137"/>
+<area shape="rect" id="node22" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="283,1162,442,1187"/>
+<area shape="rect" id="node24" href="$class_placement_info.html#a7d3c19092744c966a273aa65b75a9ffb" title=" " alt="" coords="265,1212,460,1252"/>
+<area shape="rect" id="node25" href="$class_device_info.html#ae3cbdcebbe46b3447ad56d38db566583" title="Get a site based on a given name." alt="" coords="267,1277,459,1302"/>
+<area shape="rect" id="node26" href="$class_placement_info_1_1_placement_unit.html#aa8016d572d4e10c18b3f031428ad3db1" title=" " alt="" coords="275,1327,450,1367"/>
+<area shape="rect" id="node27" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="569,1207,660,1233"/>
+<area shape="rect" id="node28" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="565,1257,664,1282"/>
+<area shape="rect" id="node29" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="275,1493,450,1518"/>
+<area shape="rect" id="node36" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title=" " alt="" coords="252,1542,473,1597"/>
+<area shape="rect" id="node37" href="$class_placement_info_1_1_placement_unit.html#a531ed51b8a516bf258c3d0237a9aad42" title=" " alt="" coords="527,1679,702,1719"/>
+<area shape="rect" id="node38" href="$class_placement_info_1_1_placement_unit.html#aa981acea66b64adc88749452146f1280" title=" " alt="" coords="527,1743,702,1783"/>
+<area shape="rect" id="node39" href="$class_placement_info_1_1_placement_unpacked_cell.html#ac7d3b8b70966af2d4689019d1585a48d" title=" " alt="" coords="271,1743,454,1783"/>
+<area shape="rect" id="node43" href="$class_placement_info_1_1_placement_unit.html#a5da6175f473345876ee67558b2f5851c" title=" " alt="" coords="527,2085,702,2125"/>
+<area shape="rect" id="node46" href="$class_device_info_1_1_device_site.html#a5969ec6730d275ff3a2e299adda5651b" title=" " alt="" coords="286,1857,439,1897"/>
+<area shape="rect" id="node47" href="$class_placement_info.html#a87a554970565b1f33582784761c82c30" title="Set the progress ratio, indicating the progress of the placement convergence,." alt="" coords="271,1922,454,1947"/>
+<area shape="rect" id="node48" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="275,1972,450,2012"/>
+<area shape="rect" id="node49" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title=" " alt="" coords="331,2037,394,2062"/>
+<area shape="rect" id="node50" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="263,1033,462,1073"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="527,581,702,621"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="527,645,702,685"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="527,709,702,749"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#adb09a5119212197bddd75634241baaa2" title=" " alt="" coords="527,773,702,813"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#a34b224d1c2aa243ad1f9003fe2b88797" title=" " alt="" coords="527,837,702,877"/>
+<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title=" " alt="" coords="527,901,702,941"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_placement_unit.html#a06cbf23f1032d78a25997e727374f415" title=" " alt="" coords="527,965,702,1005"/>
+<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html#aac2fb10ed37806637102fa6fbba9a32d" title="Get the clock nets connected to this cell for later legalization." alt="" coords="539,5,691,45"/>
+<area shape="rect" id="node11" href="$class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="539,69,691,109"/>
+<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="539,133,691,173"/>
+<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="539,197,691,237"/>
+<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="539,1093,691,1133"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="539,1029,691,1069"/>
+<area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="539,261,691,301"/>
+<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="539,325,691,365"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="539,389,691,429"/>
+<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="539,453,691,493"/>
+<area shape="rect" id="node20" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="539,517,691,557"/>
+<area shape="rect" id="node23" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="546,1158,683,1183"/>
+<area shape="rect" id="node30" href="$class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="547,1485,683,1510"/>
+<area shape="rect" id="node31" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="533,1535,697,1575"/>
+<area shape="rect" id="node32" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="521,1599,708,1654"/>
+<area shape="rect" id="node33" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="527,1307,702,1347"/>
+<area shape="rect" id="node34" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title=" " alt="" coords="527,1371,702,1411"/>
+<area shape="rect" id="node35" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="577,1435,652,1461"/>
+<area shape="rect" id="node40" href="$class_device_info.html#af80ea4926947a5bf90165e9051e159f7" title=" " alt="" coords="549,1807,680,1833"/>
+<area shape="rect" id="node41" href="$class_placement_info_1_1_placement_unit.html#a41c9eba04c1d8ed3b2a6c30662550d38" title="Set the Anchor Location for the PlacementUnit." alt="" coords="527,1857,702,1897"/>
+<area shape="rect" id="node42" href="$class_device_info_1_1_device_site.html#a16f6632ebc643578d57c77356f003502" title=" " alt="" coords="538,1921,691,1961"/>
+<area shape="rect" id="node44" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="531,1986,699,2011"/>
+<area shape="rect" id="node45" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="531,2035,699,2061"/>
 </map>

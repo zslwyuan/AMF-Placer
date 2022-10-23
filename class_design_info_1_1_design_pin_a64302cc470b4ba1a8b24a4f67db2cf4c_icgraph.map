@@ -1,4 +1,4 @@
 <map id="DesignInfo::DesignPin::updateParentCellNetInfo" name="DesignInfo::DesignPin::updateParentCellNetInfo">
-<area shape="rect" id="node1" title="let the parent cell know that one of its pin connects to a specific net" alt="" coords="205,5,376,47"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="5,13,157,39"/>
+<area shape="rect" id="node1" title="let the parent cell know that one of its pin connects to a specific net" alt="" coords="205,5,376,45"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="5,13,157,38"/>
 </map>

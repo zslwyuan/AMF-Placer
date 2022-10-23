@@ -1,12 +1,16 @@
 <map id="src/lib/HiFPlacer/placement/packing" name="src/lib/HiFPlacer/placement/packing">
-<area shape="rect" id="node1" href="dir_e9147f10d7efc0049b6e4f87b4e8ba41.html" title="placementInfo" alt="" coords="27,148,131,196"/>
-<area shape="rect" id="node2" href="dir_05bcca247e50a758667f4bf4ace23d01.html" title="packing" alt="" coords="59,52,131,100"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000013_000016.html" title="3" alt="" coords="90,124,98,139"/>
-<area shape="rect" id="node3" href="dir_8123db4e8a40e6438fec5e6db506bc57.html" title="designInfo" alt="" coords="155,148,237,196"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000013_000004.html" title="3" alt="" coords="160,122,168,137"/>
-<area shape="rect" id="node4" href="dir_87d18a4dc5174905bfd7d2dc734defe6.html" title="utils" alt="" coords="261,148,333,196"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000013_000023.html" title="12" alt="" coords="241,131,256,146"/>
-<area shape="rect" id="node5" href="dir_90e976a79c54d109e30634fbea6d7ea0.html" title="deviceInfo" alt="" coords="357,148,440,196"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000013_000005.html" title="3" alt="" coords="339,131,347,146"/>
-<area shape="rect" id="clust1" href="dir_d06062ba4e99f3e31f782d0d437f7514.html" title="placement" alt="" coords="16,16,141,207"/>
+<area shape="rect" id="node1" href="dir_9d43f2e124485a8f9d75240e0f7c933d.html" title="placementTiming" alt="" coords="27,125,149,151"/>
+<area shape="rect" id="node2" href="dir_d0ef6ea9b6d22a7c76e4fb55e57f5814.html" title="globalPlacement" alt="" coords="173,125,291,151"/>
+<area shape="rect" id="node3" href="dir_e9147f10d7efc0049b6e4f87b4e8ba41.html" title="placementInfo" alt="" coords="316,125,420,151"/>
+<area shape="rect" id="node4" href="dir_05bcca247e50a758667f4bf4ace23d01.html" title="packing" alt="" coords="344,52,411,77"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000014_000018.html" title="2" alt="" coords="150,122,158,137"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000014_000008.html" title="1" alt="" coords="272,117,280,132"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000014_000017.html" title="3" alt="" coords="376,101,384,116"/>
+<area shape="rect" id="node5" href="dir_8123db4e8a40e6438fec5e6db506bc57.html" title="designInfo" alt="" coords="444,125,527,151"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000014_000004.html" title="3" alt="" coords="453,101,461,115"/>
+<area shape="rect" id="node6" href="dir_87d18a4dc5174905bfd7d2dc734defe6.html" title="utils" alt="" coords="551,125,598,151"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000014_000024.html" title="12" alt="" coords="530,107,544,121"/>
+<area shape="rect" id="node7" href="dir_90e976a79c54d109e30634fbea6d7ea0.html" title="deviceInfo" alt="" coords="623,125,705,151"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000014_000005.html" title="3" alt="" coords="603,107,611,121"/>
+<area shape="rect" id="clust1" href="dir_d06062ba4e99f3e31f782d0d437f7514.html" title="placement" alt="" coords="16,16,431,161"/>
 </map>

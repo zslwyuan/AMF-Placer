@@ -1,7 +1,7 @@
 <map id="MacroLegalizer::getDisplacement" name="MacroLegalizer::getDisplacement">
-<area shape="rect" id="node1" title=" " alt="" coords="5,93,219,120"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="270,5,438,32"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="267,57,441,98"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="270,123,438,149"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="267,174,441,215"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,92,219,117"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="270,5,438,31"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="267,55,441,95"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="270,120,438,145"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="267,170,441,210"/>
 </map>

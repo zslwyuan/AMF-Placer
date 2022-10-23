@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['getpinoffset_0',['getPinOffset',['../namespaceget_pin_offset.html',1,'']]],
-  ['gothroughbenchmarks_1',['gothroughBenchmarks',['../namespacegothrough_benchmarks.html',1,'']]]
+  ['figprocess_0',['figProcess',['../namespacefig_process.html',1,'']]]
 ];

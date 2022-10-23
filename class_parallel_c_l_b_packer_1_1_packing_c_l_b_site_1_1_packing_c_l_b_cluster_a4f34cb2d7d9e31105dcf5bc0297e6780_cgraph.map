@@ -1,6 +1,6 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getTotalCellWeight" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getTotalCellWeight">
-<area shape="rect" id="node1" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="5,39,244,95"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d" title="Get the Actual Occupation By Cell Id." alt="" coords="322,13,489,54"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad460b2959e4362540e884149090aa204" title=" " alt="" coords="292,78,519,119"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html#a5cfe1024c3908d336040aa5df6a9daf3" title="Get the Actual Occupation By Cell Id." alt="" coords="567,5,809,61"/>
+<area shape="rect" id="node1" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="5,37,244,92"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d" title="Get the Actual Occupation By Cell Id." alt="" coords="322,13,489,53"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad460b2959e4362540e884149090aa204" title=" " alt="" coords="292,77,519,117"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html#a5cfe1024c3908d336040aa5df6a9daf3" title="Get the Actual Occupation By Cell Id." alt="" coords="567,5,809,60"/>
 </map>

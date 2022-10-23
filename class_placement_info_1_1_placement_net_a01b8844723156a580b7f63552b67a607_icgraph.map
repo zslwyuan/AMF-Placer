@@ -1,0 +1,4 @@
+<map id="PlacementInfo::PlacementNet::getId" name="PlacementInfo::PlacementNet::getId">
+<area shape="rect" id="node1" title="Get the Id of the net in current placement procedure." alt="" coords="200,5,375,45"/>
+<area shape="rect" id="node2" href="$struct_packing___netcompare.html#a26b2b99b2fe06c19c8b5e16e3ea09c24" title=" " alt="" coords="5,5,152,45"/>
+</map>

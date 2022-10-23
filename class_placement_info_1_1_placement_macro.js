@@ -4,6 +4,7 @@ var class_placement_info_1_1_placement_macro =
     [ "fixedPlacementInfo_inMacro", "class_placement_info_1_1_placement_macro.html#a2b71da5701e8ceb0aea6df09a0cc1102", null ],
     [ "PlacementMacroType", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0", [
       [ "PlacementMacroType_LUTFFPair", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0adb93a8b7f594a4eadf9aa7296aebd430", null ],
+      [ "PlacementMacroType_LUTLUTSeires", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0af9a0c93b4b898c385868fae113890c44", null ],
       [ "PlacementMacroType_FFFFPair", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0aafa45e29dce08108cad64b881446e5b5", null ],
       [ "PlacementMacroType_HALFCLB", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a83bd7e6c1fd9f0186440ecdd271c7fc9", null ],
       [ "PlacementMacroType_LCLB", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a962d4dbcced2f1e69bddd22096443940", null ],

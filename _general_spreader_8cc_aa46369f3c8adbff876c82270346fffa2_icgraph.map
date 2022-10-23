@@ -1,8 +1,8 @@
 <map id="currentDateTime" name="currentDateTime">
-<area shape="rect" id="node1" title=" " alt="" coords="1123,13,1241,39"/>
-<area shape="rect" id="node2" href="$class_general_spreader.html#a6490458435738449c4a37257a8b2f365" title=" " alt="" coords="895,5,1075,47"/>
-<area shape="rect" id="node3" href="$class_general_spreader.html#ae7899f6c2516ccfadde73169919e7dbc" title="spread cells with a given forgetting ratio" alt="" coords="620,5,847,47"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="413,13,572,39"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1123,13,1241,38"/>
+<area shape="rect" id="node2" href="$class_general_spreader.html#a6490458435738449c4a37257a8b2f365" title=" " alt="" coords="895,5,1075,45"/>
+<area shape="rect" id="node3" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="620,5,847,45"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="413,13,572,38"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,45"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
 </map>

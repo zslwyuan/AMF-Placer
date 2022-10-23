@@ -3,7 +3,7 @@ var searchData=
   ['lastx_0',['lastX',['../class_placement_info_1_1_placement_unit.html#a741ca06a2543cfda68d5f36dc60177b6',1,'PlacementInfo::PlacementUnit']]],
   ['lasty_1',['lastY',['../class_placement_info_1_1_placement_unit.html#abd07a28459c1a5a81239c3fdc57e0a07',1,'PlacementInfo::PlacementUnit']]],
   ['left_2',['left',['../class_general_spreader_1_1_spread_region.html#a37f541916ccd3f1edc6be75fa9835a74',1,'GeneralSpreader::SpreadRegion::left()'],['../class_general_spreader_1_1_spread_region_1_1_sub_box.html#ae1c47878f5624d903f0a064aac81e972',1,'GeneralSpreader::SpreadRegion::SubBox::left()'],['../class_placement_info_1_1_placement_bin_info.html#a130a28c355550103d5b182e8a3f2bdd3',1,'PlacementInfo::PlacementBinInfo::left()'],['../class_placement_info_1_1_placement_hybrid_bin_info.html#a98ee22c8b5eb37cbf27fbb37d83a4b47',1,'PlacementInfo::PlacementHybridBinInfo::left()']]],
-  ['legalize_3',['legalize',['../class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84',1,'CLBLegalizer::legalize()'],['../class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84',1,'MacroLegalizer::legalize()']]],
+  ['legalize_3',['legalize',['../class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84',1,'CLBLegalizer::legalize()'],['../class_macro_legalizer.html#aee1d122d207f573442318c49d6662713',1,'MacroLegalizer::legalize()']]],
   ['legalizexyinarea_4',['legalizeXYInArea',['../class_placement_info.html#abec52af63f0dc9d260793fd798e2834d',1,'PlacementInfo']]],
   ['loadbeltype2falsebeltype_5',['loadBELType2FalseBELType',['../class_device_info.html#acf972e842012f53c4087c8da7032bd8e',1,'DeviceInfo']]],
   ['loadcellinfofromfile_6',['loadCellInfoFromFile',['../namespace_vivado_graph_util.html#a2a2f3aa8c9b662c8460b24edf8e490f8',1,'VivadoGraphUtil']]],
@@ -16,5 +16,6 @@ var searchData=
   ['loadpciepinoffset_13',['loadPCIEPinOffset',['../class_device_info.html#a09cd7b043b5de8bae70533abb88ab03a',1,'DeviceInfo']]],
   ['loadplacementunitinformation_14',['loadPlacementUnitInformation',['../class_placement_info.html#a06eafa4c917e1b967487c377224584e0',1,'PlacementInfo']]],
   ['loaduserdefinedclusternets_15',['loadUserDefinedClusterNets',['../class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc',1,'DesignInfo']]],
-  ['lutffpairing_16',['LUTFFPairing',['../class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6',1,'IncrementalBELPacker::LUTFFPairing()'],['../class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82',1,'InitialPacker::LUTFFPairing()']]]
+  ['lutffpairing_16',['LUTFFPairing',['../class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6',1,'IncrementalBELPacker::LUTFFPairing()'],['../class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82',1,'InitialPacker::LUTFFPairing()']]],
+  ['lutlutpairing_5ftimingdriven_17',['LUTLUTPairing_TimingDriven',['../class_wirelength_optimizer.html#ad13c56a5650aae1780b83e17c667f3f1',1,'WirelengthOptimizer']]]
 ];

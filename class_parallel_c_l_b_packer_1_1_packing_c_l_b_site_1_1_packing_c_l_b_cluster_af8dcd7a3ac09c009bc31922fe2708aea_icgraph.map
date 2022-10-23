@@ -1,0 +1,5 @@
+<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::compatibleInOneHalfCLB" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::compatibleInOneHalfCLB">
+<area shape="rect" id="node1" title="check whether a control set can be placed in a given half CLB" alt="" coords="292,45,531,100"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a124f86e84e62e49093f76ea73b9f23ea" title="try to move FFs in Mux slot to other controlSet" alt="" coords="5,5,244,60"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ade900004dbc40d457c5c002043cc873a" title="try to move FFs in Mux slot to other controlSet" alt="" coords="5,84,244,139"/>
+</map>

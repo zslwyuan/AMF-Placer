@@ -1,10 +1,10 @@
 <map id="CLBLegalizer::RandomPivotPartition" name="CLBLegalizer::RandomPivotPartition">
-<area shape="rect" id="node1" title=" " alt="" coords="5,125,189,167"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#aff846bcfd2560b9909f67fa18a3ac875" title=" " alt="" coords="237,107,413,134"/>
-<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#aa2cc92cb40a7ac04511d723c82985b11" title=" " alt="" coords="476,158,653,185"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="461,107,668,134"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="725,5,899,47"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="716,71,908,112"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="728,137,896,163"/>
-<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="728,187,896,214"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,124,189,164"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#aff846bcfd2560b9909f67fa18a3ac875" title=" " alt="" coords="237,106,413,131"/>
+<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#aa2cc92cb40a7ac04511d723c82985b11" title=" " alt="" coords="476,155,653,181"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="461,106,668,131"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="725,5,899,45"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="716,69,908,109"/>
+<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="728,134,896,159"/>
+<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="728,183,896,209"/>
 </map>

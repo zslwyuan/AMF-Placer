@@ -1,4 +1,4 @@
 <map id="GeneralSpreader::recordSpreadedCellLocations" name="GeneralSpreader::recordSpreadedCellLocations">
-<area shape="rect" id="node1" title="record the spreaded location in PlacementInfo for later forget&#45;ratio&#45;based location updating" alt="" coords="5,5,221,47"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="269,5,461,47"/>
+<area shape="rect" id="node1" title="record the spreaded location in PlacementInfo for later forget&#45;ratio&#45;based location updating" alt="" coords="5,5,221,45"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="269,5,461,45"/>
 </map>

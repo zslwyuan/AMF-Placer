@@ -1,4 +1,0 @@
-<map id="WirelengthOptimizer::manhattanDis" name="WirelengthOptimizer::manhattanDis">
-<area shape="rect" id="node1" title="evaluate the Mahattan distance between two locations" alt="" coords="244,5,383,47"/>
-<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a356a39a094802a6278647320d62e89f4" title="add pseudo net for timing optimization based on the length of timing path and the span of the nets" alt="" coords="5,5,196,47"/>
-</map>

@@ -1,4 +1,4 @@
 <map id="ParallelCLBPacker::PackingCLBSite::findMuxFromHalfCLB" name="ParallelCLBPacker::PackingCLBSite::findMuxFromHalfCLB">
-<area shape="rect" id="node1" title="find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mappe..." alt="" coords="5,5,204,61"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#ab7530c5a864f2260d9c868b25e7604d4" title=" " alt="" coords="252,13,427,54"/>
+<area shape="rect" id="node1" title="find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mappe..." alt="" coords="5,5,204,60"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#ab7530c5a864f2260d9c868b25e7604d4" title=" " alt="" coords="252,13,427,53"/>
 </map>

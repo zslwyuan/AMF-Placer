@@ -1,4 +1,4 @@
 <map id="DesignInfo::ControlSetInfo::setControlSetInfoAs" name="DesignInfo::ControlSetInfo::setControlSetInfoAs">
-<area shape="rect" id="node1" title="Set the control set information accoridng to a given FF." alt="" coords="227,5,400,47"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#a7a923ed95fb81c16a8551268bc1514cb" title="Construct a new Control Set Info object with signals of a given FF and a given ID." alt="" coords="5,5,179,47"/>
+<area shape="rect" id="node1" title="Set the control set information accoridng to a given FF." alt="" coords="227,5,400,45"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#a7a923ed95fb81c16a8551268bc1514cb" title="Construct a new Control Set Info object with signals of a given FF and a given ID." alt="" coords="5,5,179,45"/>
 </map>

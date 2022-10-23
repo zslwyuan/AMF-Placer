@@ -1,9 +1,15 @@
 var hierarchy =
 [
+    [ "IncrementalBELPacker::_CellWithScore", "struct_incremental_b_e_l_packer_1_1___cell_with_score.html", null ],
+    [ "WirelengthOptimizer::_CellWithScore", "struct_wirelength_optimizer_1_1___cell_with_score.html", null ],
     [ "PlacementInfo::_ClockNetCoverage", "struct_placement_info_1_1___clock_net_coverage.html", null ],
     [ "PlacementInfo::PlacementMacro::_fixedPlacementInfo_inMacro", "struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html", null ],
     [ "PlacementInfo::PlacementNet::_pinOffset", "struct_placement_info_1_1_placement_net_1_1__pin_offset.html", null ],
+    [ "IncrementalBELPacker::_PUWithScore", "struct_incremental_b_e_l_packer_1_1___p_u_with_score.html", null ],
+    [ "ParallelCLBPacker::_PUWithScore", "struct_parallel_c_l_b_packer_1_1___p_u_with_score.html", null ],
+    [ "WirelengthOptimizer::_PUWithScore", "struct_wirelength_optimizer_1_1___p_u_with_score.html", null ],
     [ "ParallelCLBPacker::_siteWithScore", "struct_parallel_c_l_b_packer_1_1__site_with_score.html", null ],
+    [ "WirelengthOptimizer::_slackEnhanceTuple", "struct_wirelength_optimizer_1_1__slack_enhance_tuple.html", null ],
     [ "AMFPlacer", "class_a_m_f_placer.html", null ],
     [ "std::array", null, [
       [ "IncrementalBELPacker::FFLocation", "class_incremental_b_e_l_packer_1_1_f_f_location.html", null ],
@@ -55,6 +61,7 @@ var hierarchy =
     ] ],
     [ "InitialPacker::PackedControlSet", "class_initial_packer_1_1_packed_control_set.html", null ],
     [ "ParallelCLBPacker::PackedControlSet", "class_parallel_c_l_b_packer_1_1_packed_control_set.html", null ],
+    [ "Packing_Netcompare", "struct_packing___netcompare.html", null ],
     [ "Packing_PUcompare", "struct_packing___p_ucompare.html", null ],
     [ "ParallelCLBPacker::PackingCLBSite::PackingCLBCluster", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html", null ],
     [ "ParallelCLBPacker::PackingCLBSite", "class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html", null ],

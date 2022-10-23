@@ -1,4 +1,4 @@
 <map id="DesignInfo::DesignNet" name="DesignInfo::DesignNet">
-<area shape="rect" id="node1" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="19,81,169,108"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node1" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="19,80,169,105"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="5,5,183,31"/>
 </map>

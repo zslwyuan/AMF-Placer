@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['figprocess_0',['figProcess',['../namespacefig_process.html',1,'']]]
+  ['exportdevicelocation_0',['exportDeviceLocation',['../namespaceexport_device_location.html',1,'']]]
 ];

@@ -1,6 +1,6 @@
 <map id="DesignInfo::DesignElement" name="DesignInfo::DesignElement">
-<area shape="rect" id="node1" title="basic class of element in a design." alt="" coords="169,5,346,32"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects" alt="" coords="5,80,157,107"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="182,80,333,107"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_pin.html" title="A design pin on a design cell connected to a net." alt="" coords="357,80,507,107"/>
+<area shape="rect" id="node1" title="basic class of element in a design." alt="" coords="169,5,346,31"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects" alt="" coords="5,79,157,104"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="182,79,333,104"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_pin.html" title="A design pin on a design cell connected to a net." alt="" coords="357,79,507,104"/>
 </map>

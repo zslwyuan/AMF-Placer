@@ -1,5 +1,5 @@
 <map id="InitialPacker::findUnpackedUnits" name="InitialPacker::findUnpackedUnits">
-<area shape="rect" id="node1" title="other non&#45;Macro elements will be instantiated as PlacementInfo::PlacementUnpackedCell" alt="" coords="340,5,519,47"/>
-<area shape="rect" id="node2" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,13,292,39"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title="other non&#45;Macro elements will be instantiated as PlacementInfo::PlacementUnpackedCell" alt="" coords="340,5,519,45"/>
+<area shape="rect" id="node2" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,13,292,38"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
 </map>

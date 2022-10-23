@@ -1,14 +1,12 @@
 <map id="src/lib/HiFPlacer/problemSolvers/MinCostBipartiteMatcher.h" name="src/lib/HiFPlacer/problemSolvers/MinCostBipartiteMatcher.h">
-<area shape="rect" id="node1" title=" " alt="" coords="290,5,513,47"/>
-<area shape="rect" id="node2" href="$_c_l_b_legalizer_8h.html" title="This header file contains the definitions of CLBLegalizer class and its internal modules and APIs whi..." alt="" coords="57,95,239,136"/>
-<area shape="rect" id="node8" href="$_macro_legalizer_8h.html" title="This header file contains the definitions of MacroLegalizer class and its internal modules and APIs w..." alt="" coords="305,95,497,136"/>
-<area shape="rect" id="node12" href="$_min_cost_bipartite_matcher_8cc.html" title=" " alt="" coords="522,95,753,136"/>
-<area shape="rect" id="node3" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="127,273,337,315"/>
-<area shape="rect" id="node7" href="$_c_l_b_legalizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the CLBLegalizer which maps CLBs (each of w..." alt="" coords="53,184,243,225"/>
-<area shape="rect" id="node4" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5,370,219,397"/>
-<area shape="rect" id="node6" href="$_global_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the GlobalPlacer which organizes/configures..." alt="" coords="243,363,461,404"/>
-<area shape="rect" id="node5" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="21,452,203,479"/>
-<area shape="rect" id="node9" href="$_wirelength_optimizer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="318,184,570,225"/>
-<area shape="rect" id="node11" href="$_macro_legalizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the MacroLegalizer which maps DSP/BRAM/CARR..." alt="" coords="594,184,793,225"/>
-<area shape="rect" id="node10" href="$_wirelength_optimizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the WirelengthOptimizer which builds numeri..." alt="" coords="361,273,620,315"/>
+<area shape="rect" id="node1" title=" " alt="" coords="318,5,541,45"/>
+<area shape="rect" id="node2" href="$_c_l_b_legalizer_8h.html" title="This header file contains the definitions of CLBLegalizer class and its internal modules and APIs whi..." alt="" coords="126,93,309,133"/>
+<area shape="rect" id="node8" href="$_macro_legalizer_8h.html" title="This header file contains the definitions of MacroLegalizer class and its internal modules and APIs w..." alt="" coords="333,93,525,133"/>
+<area shape="rect" id="node10" href="$_min_cost_bipartite_matcher_8cc.html" title=" " alt="" coords="550,93,781,133"/>
+<area shape="rect" id="node3" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="219,181,429,221"/>
+<area shape="rect" id="node7" href="$_c_l_b_legalizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the CLBLegalizer which maps CLBs (each of w..." alt="" coords="5,181,195,221"/>
+<area shape="rect" id="node4" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="97,277,311,302"/>
+<area shape="rect" id="node6" href="$_global_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the GlobalPlacer which organizes/configures..." alt="" coords="335,269,553,309"/>
+<area shape="rect" id="node5" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="113,357,295,383"/>
+<area shape="rect" id="node9" href="$_macro_legalizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the MacroLegalizer which maps DSP/BRAM/CARR..." alt="" coords="453,181,651,221"/>
 </map>

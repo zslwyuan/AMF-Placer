@@ -1,4 +1,4 @@
 <map id="DesignInfo::isShifter" name="DesignInfo::isShifter">
-<area shape="rect" id="node1" title=" " alt="" coords="229,5,368,32"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation" alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="229,5,368,31"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation" alt="" coords="5,5,181,31"/>
 </map>

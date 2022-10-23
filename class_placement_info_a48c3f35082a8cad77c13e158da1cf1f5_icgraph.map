@@ -1,4 +1,4 @@
 <map id="PlacementInfo::loadCompatiblePlacementTable" name="PlacementInfo::loadCompatiblePlacementTable">
-<area shape="rect" id="node1" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="249,5,451,47"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="5,13,201,39"/>
+<area shape="rect" id="node1" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="249,5,451,45"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="5,13,201,38"/>
 </map>

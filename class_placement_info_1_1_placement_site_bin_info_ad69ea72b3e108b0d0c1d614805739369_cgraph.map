@@ -1,7 +1,7 @@
 <map id="PlacementInfo::PlacementSiteBinInfo::addSiteIntoBin" name="PlacementInfo::PlacementSiteBinInfo::addSiteIntoBin">
-<area shape="rect" id="node1" title=" " alt="" coords="5,89,183,131"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html#aeb68936902acc7288fc46a983f402db5" title=" " alt="" coords="231,5,408,47"/>
-<area shape="rect" id="node3" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title=" " alt="" coords="279,71,359,98"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="235,122,403,149"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="235,173,403,199"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,88,183,128"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html#aeb68936902acc7288fc46a983f402db5" title=" " alt="" coords="231,5,408,45"/>
+<area shape="rect" id="node3" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title=" " alt="" coords="279,70,359,95"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="235,119,403,145"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="235,169,403,194"/>
 </map>

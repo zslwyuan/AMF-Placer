@@ -1,8 +1,8 @@
 <map id="GeneralSpreader::SpreadRegion::bottom" name="GeneralSpreader::SpreadRegion::bottom">
-<area shape="rect" id="node1" title="get the bottom bin coordinate Y of the SpreadRegion in bin grid" alt="" coords="895,39,1101,80"/>
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a0179a5805b8dafadb4ea6b759b924027" title="check whether overlapped with another SpreadRegion" alt="" coords="630,5,837,47"/>
-<area shape="rect" id="node3" href="$class_general_spreader.html#ae7899f6c2516ccfadde73169919e7dbc" title="spread cells with a given forgetting ratio" alt="" coords="620,71,847,112"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#ad380a1c77cb4c9f1ff2a625fa50c9009" title="cell spreading for all types of elements" alt="" coords="413,78,572,105"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,71,365,112"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
+<area shape="rect" id="node1" title="get the bottom bin coordinate Y of the SpreadRegion in bin grid" alt="" coords="895,37,1101,77"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a0179a5805b8dafadb4ea6b759b924027" title="check whether overlapped with another SpreadRegion" alt="" coords="630,5,837,45"/>
+<area shape="rect" id="node3" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="620,69,847,109"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="413,77,572,102"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,69,365,109"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,77,116,102"/>
 </map>

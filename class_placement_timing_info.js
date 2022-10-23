@@ -10,9 +10,13 @@ var class_placement_timing_info =
     [ "getSimplePlacementTimingGraph", "class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073", null ],
     [ "getSimplePlacementTimingInfo", "class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850", null ],
     [ "getSimplePlacementTimingInfo_PathLenSorted", "class_placement_timing_info.html#a79a30729d7c48abb94eacd0a6f7fe17d", null ],
+    [ "setDSPInnerDelay", "class_placement_timing_info.html#a2179a625c9672be64b4ed387e89f4642", null ],
+    [ "cellId2Period", "class_placement_timing_info.html#a2812c8b8f6c1a18ea8071f4f1719170b", null ],
+    [ "clockNet2Period", "class_placement_timing_info.html#a2650a53e27e2005cf9180a9ef91fd2b3", null ],
     [ "clockPeriod", "class_placement_timing_info.html#ae4c2ee3413ee6b3aa171c609de801c68", null ],
     [ "designInfo", "class_placement_timing_info.html#a5c3efe8bd0a1cc507f0c594f35359c39", null ],
     [ "deviceInfo", "class_placement_timing_info.html#af7d6bf0dd6c2b3cd47b124860c86ea26", null ],
+    [ "DSPCritical", "class_placement_timing_info.html#a73b5eef0ed494871f669a9baf74e4773", null ],
     [ "JSONCfg", "class_placement_timing_info.html#a8b8b3678712b093111c9077ab8b9fd6f", null ],
     [ "simpleTimingGraph", "class_placement_timing_info.html#a04e538b11ec8efaebacc9e881cf4d7ec", null ],
     [ "verbose", "class_placement_timing_info.html#a3d58b41c1e35e42cb1e3a8f36def75d2", null ]

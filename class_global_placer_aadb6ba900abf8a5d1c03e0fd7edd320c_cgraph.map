@@ -1,8 +1,8 @@
 <map id="GlobalPlacer::GlobalPlacer" name="GlobalPlacer::GlobalPlacer">
-<area shape="rect" id="node1" title="Construct a new Global Placer object based on placement information." alt="" coords="5,115,181,141"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="229,5,421,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a3fe3ef0ea00604e37968c16ae051fee2" title=" " alt="" coords="230,56,421,83"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a350a9094893fc894706a87a240773377" title="get the proportion of the PlacementUnit objects with high interconnection density" alt="" coords="238,107,413,149"/>
-<area shape="rect" id="node5" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="276,173,375,200"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#ab444444f740a718e9c81255fa31fe403" title="forget all the legalization information" alt="" coords="229,225,421,266"/>
+<area shape="rect" id="node1" title="Construct a new Global Placer object based on placement information." alt="" coords="5,112,181,137"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="229,5,421,31"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a3fe3ef0ea00604e37968c16ae051fee2" title=" " alt="" coords="230,55,421,80"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a350a9094893fc894706a87a240773377" title="get the proportion of the PlacementUnit objects with high interconnection density" alt="" coords="238,105,413,145"/>
+<area shape="rect" id="node5" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="276,169,375,195"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#ab444444f740a718e9c81255fa31fe403" title="forget all the legalization information" alt="" coords="229,219,421,259"/>
 </map>

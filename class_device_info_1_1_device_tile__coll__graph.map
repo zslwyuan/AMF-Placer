@@ -1,5 +1,5 @@
 <map id="DeviceInfo::DeviceTile" name="DeviceInfo::DeviceTile">
-<area shape="rect" id="node1" title="A tile is a combination of sites." alt="" coords="195,95,345,121"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="5,5,183,32"/>
-<area shape="rect" id="node3" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="288,5,372,32"/>
+<area shape="rect" id="node1" title="A tile is a combination of sites." alt="" coords="195,93,345,119"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="5,5,183,31"/>
+<area shape="rect" id="node3" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="288,5,372,31"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::contains" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::contains">
-<area shape="rect" id="node1" title="check whether the cluster contains a specific PlacementUnit" alt="" coords="279,5,517,61"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f" title="update the information of consistent PUs at the top of priority queue" alt="" coords="5,5,231,61"/>
+<area shape="rect" id="node1" title="check whether the cluster contains a specific PlacementUnit" alt="" coords="279,5,517,60"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f" title="update the information of consistent PUs at the top of priority queue" alt="" coords="5,5,231,60"/>
 </map>

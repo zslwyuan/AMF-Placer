@@ -1,0 +1,13 @@
+<map id="ParallelCLBPacker::ParallelCLBPacker" name="ParallelCLBPacker::ParallelCLBPacker">
+<area shape="rect" id="node1" title="Construct a new Parallel CLB Packer object." alt="" coords="5,97,144,137"/>
+<area shape="rect" id="node2" href="$class_device_info.html#aa023086a13e5e234f1397ef7d3bc6877" title=" " alt="" coords="192,5,384,31"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="192,55,384,80"/>
+<area shape="rect" id="node4" href="$class_device_info.html#a1ec4f9ac803f0d37ea7d331de133b27c" title="Get sites of a specfic type." alt="" coords="199,104,377,129"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="204,154,372,194"/>
+<area shape="rect" id="node11" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="243,219,333,244"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="447,90,621,130"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_placement_macro.html#ad1d97e835581847571928f7b84318ff7" title=" " alt="" coords="447,154,621,194"/>
+<area shape="rect" id="node10" href="$class_placement_info.html#a510251876a8d91d751f8cb4d01be0492" title="get the sites occupied by the legalized PlacementUnit objects" alt="" coords="432,219,636,244"/>
+<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38" title=" " alt="" coords="695,58,848,98"/>
+<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856" title=" " alt="" coords="684,122,859,162"/>
+</map>

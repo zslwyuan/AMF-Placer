@@ -1,5 +1,0 @@
-<map id="PlacementTimingOptimizer::conductStaticTimingAnalysis" name="PlacementTimingOptimizer::conductStaticTimingAnalysis">
-<area shape="rect" id="node1" title=" " alt="" coords="413,35,609,76"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,42,116,69"/>
-</map>

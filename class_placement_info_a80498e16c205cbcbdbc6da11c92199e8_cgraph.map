@@ -1,5 +1,5 @@
 <map id="PlacementInfo::checkClockColumnLegalization" name="PlacementInfo::checkClockColumnLegalization">
-<area shape="rect" id="node1" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="5,39,185,80"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38" title=" " alt="" coords="244,5,397,47"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856" title=" " alt="" coords="233,71,408,112"/>
+<area shape="rect" id="node1" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="5,37,185,77"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38" title=" " alt="" coords="244,5,397,45"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856" title=" " alt="" coords="233,69,408,109"/>
 </map>

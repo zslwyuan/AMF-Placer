@@ -1,5 +1,8 @@
 <map id="ParallelCLBPacker::prePackLegalizedMacros" name="ParallelCLBPacker::prePackLegalizedMacros">
-<area shape="rect" id="node1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="5,35,173,76"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#ad1d97e835581847571928f7b84318ff7" title=" " alt="" coords="236,5,411,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a510251876a8d91d751f8cb4d01be0492" title="get the sites occupied by the legalized PlacementUnit objects" alt="" coords="221,71,425,98"/>
+<area shape="rect" id="node1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="5,101,173,141"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="236,37,411,77"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_macro.html#ad1d97e835581847571928f7b84318ff7" title=" " alt="" coords="236,101,411,141"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a510251876a8d91d751f8cb4d01be0492" title="get the sites occupied by the legalized PlacementUnit objects" alt="" coords="221,166,425,191"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38" title=" " alt="" coords="484,5,637,45"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856" title=" " alt="" coords="473,69,648,109"/>
 </map>

@@ -1,12 +1,12 @@
 <map id="MacroLegalizer::RandomPivotPartition" name="MacroLegalizer::RandomPivotPartition">
-<area shape="rect" id="node1" title=" " alt="" coords="5,125,200,167"/>
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#ae277d2626728649d30340e40cc436de4" title=" " alt="" coords="248,107,435,134"/>
-<area shape="rect" id="node10" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title=" " alt="" coords="498,158,685,185"/>
-<area shape="rect" id="node3" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="483,107,700,134"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="748,5,940,47"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="748,71,940,112"/>
-<area shape="rect" id="node8" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="760,137,928,163"/>
-<area shape="rect" id="node9" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="760,187,928,214"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="988,5,1140,47"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1188,5,1365,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,124,200,164"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#ae277d2626728649d30340e40cc436de4" title=" " alt="" coords="248,106,435,131"/>
+<area shape="rect" id="node10" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title=" " alt="" coords="498,155,685,181"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="483,106,700,131"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="748,5,940,45"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="748,69,940,109"/>
+<area shape="rect" id="node8" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="760,134,928,159"/>
+<area shape="rect" id="node9" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="760,183,928,209"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="988,5,1140,45"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1188,5,1365,45"/>
 </map>

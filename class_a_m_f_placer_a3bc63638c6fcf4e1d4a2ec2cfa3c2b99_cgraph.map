@@ -1,5 +1,5 @@
 <map id="AMFPlacer::clearSomeAttributesCannotRecord" name="AMFPlacer::clearSomeAttributesCannotRecord">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,216,76"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="267,5,459,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="264,71,463,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,35,216,75"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="267,5,459,45"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a553758fbae83279f5e15b4b13ca38f11" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="264,70,463,95"/>
 </map>

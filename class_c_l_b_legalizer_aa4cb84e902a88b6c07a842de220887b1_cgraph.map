@@ -1,5 +1,5 @@
 <map id="CLBLegalizer::mapPUsToColumns" name="CLBLegalizer::mapPUsToColumns">
-<area shape="rect" id="node1" title="map PlacementUnit to the columns according to the locations of the cells in it" alt="" coords="5,42,228,69"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#ac6928f78f0fafdc7a2bcf480f4339b74" title="find the column which contains the most of cells in a macro in a specific range of columns" alt="" coords="280,5,467,47"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="276,71,471,98"/>
+<area shape="rect" id="node1" title="map PlacementUnit to the columns according to the locations of the cells in it" alt="" coords="5,42,228,67"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#ac6928f78f0fafdc7a2bcf480f4339b74" title="find the column which contains the most of cells in a macro in a specific range of columns" alt="" coords="280,5,467,45"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="276,70,471,95"/>
 </map>

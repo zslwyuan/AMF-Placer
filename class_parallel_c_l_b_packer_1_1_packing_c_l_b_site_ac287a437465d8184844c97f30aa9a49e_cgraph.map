@@ -1,0 +1,5 @@
+<map id="ParallelCLBPacker::PackingCLBSite::getPairPinNum" name="ParallelCLBPacker::PackingCLBSite::getPairPinNum">
+<area shape="rect" id="node1" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="5,37,217,77"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="265,5,417,45"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="265,69,417,109"/>
+</map>

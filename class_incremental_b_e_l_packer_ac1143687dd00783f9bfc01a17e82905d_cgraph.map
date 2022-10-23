@@ -1,6 +1,6 @@
 <map id="IncrementalBELPacker::isLUTsPackable" name="IncrementalBELPacker::isLUTsPackable">
-<area shape="rect" id="node1" title="check whether two LUTs can be packed to share one BEL" alt="" coords="5,71,161,112"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unpacked_cell.html#a6aec31ccc07b70535548a268f802d042" title=" " alt="" coords="209,5,384,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="221,71,373,112"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="221,136,373,177"/>
+<area shape="rect" id="node1" title="check whether two LUTs can be packed to share one BEL" alt="" coords="5,69,161,109"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unpacked_cell.html#a6aec31ccc07b70535548a268f802d042" title=" " alt="" coords="209,5,384,45"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="221,69,373,109"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="221,133,373,173"/>
 </map>

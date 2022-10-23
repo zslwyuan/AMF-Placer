@@ -1,9 +1,9 @@
 <map id="DesignInfo::isLogicRelated" name="DesignInfo::isLogicRelated">
-<area shape="rect" id="node1" title="check whether the cell is related to logic computation" alt="" coords="5,132,181,159"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title=" " alt="" coords="237,5,376,32"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="243,56,370,83"/>
-<area shape="rect" id="node4" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="249,107,365,133"/>
-<area shape="rect" id="node5" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="243,157,370,184"/>
-<area shape="rect" id="node6" href="$class_design_info.html#a68661265c8e549ee8f3a0209f6df1163" title=" " alt="" coords="229,208,384,235"/>
-<area shape="rect" id="node7" href="$class_design_info.html#aaf2cf53b8b5526ef4d192104e6b9c34b" title=" " alt="" coords="237,259,376,285"/>
+<area shape="rect" id="node1" title="check whether the cell is related to logic computation" alt="" coords="5,129,181,155"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title=" " alt="" coords="237,5,376,31"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="243,55,370,80"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title=" " alt="" coords="249,104,365,129"/>
+<area shape="rect" id="node5" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title=" " alt="" coords="243,153,370,179"/>
+<area shape="rect" id="node6" href="$class_design_info.html#a68661265c8e549ee8f3a0209f6df1163" title=" " alt="" coords="229,203,384,228"/>
+<area shape="rect" id="node7" href="$class_design_info.html#aaf2cf53b8b5526ef4d192104e6b9c34b" title=" " alt="" coords="237,252,376,277"/>
 </map>

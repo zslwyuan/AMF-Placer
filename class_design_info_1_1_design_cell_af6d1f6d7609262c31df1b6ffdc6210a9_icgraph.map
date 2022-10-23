@@ -1,9 +1,12 @@
 <map id="DesignInfo::DesignCell::getOutputNets" name="DesignInfo::DesignCell::getOutputNets">
-<area shape="rect" id="node1" title=" " alt="" coords="812,49,964,90"/>
-<area shape="rect" id="node2" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title="BFS to find the core cells of a macro based on some pre&#45;defined patterns of cascaded cells." alt="" coords="596,49,764,90"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="343,5,545,32"/>
-<area shape="rect" id="node6" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="340,56,548,83"/>
-<area shape="rect" id="node7" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="349,107,539,133"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,56,292,83"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,56,116,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="867,101,1019,141"/>
+<area shape="rect" id="node2" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title="BFS to find the core cells of a macro based on some pre&#45;defined patterns of cascaded cells." alt="" coords="645,58,813,98"/>
+<area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#a55e0fc63b73d9c9f79fe1bba3fe7d848" title=" " alt="" coords="640,133,819,173"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="371,5,572,31"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="367,55,575,80"/>
+<area shape="rect" id="node7" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="376,104,567,129"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="169,68,297,93"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,109,116,135"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title=" " alt="" coords="351,154,592,194"/>
+<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,130,303,170"/>
 </map>

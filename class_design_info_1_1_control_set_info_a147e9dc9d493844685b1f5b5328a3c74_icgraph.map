@@ -1,7 +1,11 @@
 <map id="DesignInfo::ControlSetInfo::getSR" name="DesignInfo::ControlSetInfo::getSR">
-<area shape="rect" id="node1" title=" " alt="" coords="292,107,465,148"/>
-<area shape="rect" id="node2" href="$class_initial_packer_1_1_packed_control_set.html#a28210c1c8b699373c703fb8ef3b8aadf" title=" " alt="" coords="32,5,217,47"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#abc899d2c065e4647150b3b8c7a362ea3" title="add a FF into this PackedControlSet and check the compatibility" alt="" coords="39,71,210,112"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title="try to add a given FF into a specific half CLB in this cluster" alt="" coords="5,135,244,191"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af8dcd7a3ac09c009bc31922fe2708aea" title="check whether a control set can be placed in a given half CLB" alt="" coords="5,215,244,271"/>
+<area shape="rect" id="node1" title=" " alt="" coords="579,181,752,221"/>
+<area shape="rect" id="node2" href="$class_initial_packer_1_1_packed_control_set.html#a28210c1c8b699373c703fb8ef3b8aadf" title=" " alt="" coords="319,5,504,45"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#abc899d2c065e4647150b3b8c7a362ea3" title="add a FF into this PackedControlSet and check the compatibility" alt="" coords="326,69,497,109"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping.html#a983b0d322fad4f041ee7955b40c2a680" title=" " alt="" coords="301,134,522,189"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title="try to add a given FF into a specific half CLB in this cluster" alt="" coords="292,213,531,267"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping.html#ae69efcfc12ec71c04ebece4d4665c90e" title=" " alt="" coords="301,291,522,346"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af8dcd7a3ac09c009bc31922fe2708aea" title="check whether a control set can be placed in a given half CLB" alt="" coords="292,370,531,425"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a124f86e84e62e49093f76ea73b9f23ea" title="try to move FFs in Mux slot to other controlSet" alt="" coords="5,330,244,385"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ade900004dbc40d457c5c002043cc873a" title="try to move FFs in Mux slot to other controlSet" alt="" coords="5,409,244,463"/>
 </map>

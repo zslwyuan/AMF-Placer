@@ -1,12 +1,12 @@
 <map id="swapVectors" name="swapVectors">
-<area shape="rect" id="node1" title=" " alt="" coords="1629,42,1728,69"/>
-<area shape="rect" id="node2" href="$_s_a_placer_8cc.html#a3fcf0d8c31545e9c9a22304951397d02" title=" " alt="" coords="1477,42,1581,69"/>
-<area shape="rect" id="node3" href="$class_s_a_placer.html#ada448d989f616f29324a46503677e55c" title=" " alt="" coords="1239,5,1429,47"/>
-<area shape="rect" id="node10" href="$class_s_a_placer.html#a35b64702be7d78a7bcede79181defb6f" title=" " alt="" coords="1255,71,1413,98"/>
-<area shape="rect" id="node4" href="$class_s_a_placer.html#afcbdf47a02d7b05b80a8936b7a09b827" title=" " alt="" coords="1068,42,1191,69"/>
-<area shape="rect" id="node5" href="$class_s_a_placer.html#a030b4efe05c4dd6791d8d1249518a27e" title=" " alt="" coords="905,42,1020,69"/>
-<area shape="rect" id="node6" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="672,42,857,69"/>
-<area shape="rect" id="node7" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,42,624,69"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,42,367,69"/>
-<area shape="rect" id="node9" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,42,116,69"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1637,45,1736,70"/>
+<area shape="rect" id="node2" href="$_s_a_placer_8cc.html#a3fcf0d8c31545e9c9a22304951397d02" title=" " alt="" coords="1485,45,1589,70"/>
+<area shape="rect" id="node3" href="$class_s_a_placer.html#ada448d989f616f29324a46503677e55c" title=" " alt="" coords="1243,5,1433,45"/>
+<area shape="rect" id="node10" href="$class_s_a_placer.html#a4050ae72ffc17107a2972305f0dd68a2" title=" " alt="" coords="1239,69,1437,109"/>
+<area shape="rect" id="node4" href="$class_s_a_placer.html#afcbdf47a02d7b05b80a8936b7a09b827" title=" " alt="" coords="1068,45,1191,70"/>
+<area shape="rect" id="node5" href="$class_s_a_placer.html#a030b4efe05c4dd6791d8d1249518a27e" title=" " alt="" coords="905,45,1020,70"/>
+<area shape="rect" id="node6" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="672,45,857,70"/>
+<area shape="rect" id="node7" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,45,624,70"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,45,367,70"/>
+<area shape="rect" id="node9" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,45,116,70"/>
 </map>

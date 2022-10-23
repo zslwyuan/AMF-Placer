@@ -25,6 +25,7 @@ var annotated_dup =
     [ "InitialPacker", "class_initial_packer.html", "class_initial_packer" ],
     [ "MacroLegalizer", "class_macro_legalizer.html", "class_macro_legalizer" ],
     [ "MinCostBipartiteMatcher", "class_min_cost_bipartite_matcher.html", "class_min_cost_bipartite_matcher" ],
+    [ "Packing_Netcompare", "struct_packing___netcompare.html", "struct_packing___netcompare" ],
     [ "Packing_PUcompare", "struct_packing___p_ucompare.html", "struct_packing___p_ucompare" ],
     [ "ParallelCLBPacker", "class_parallel_c_l_b_packer.html", "class_parallel_c_l_b_packer" ],
     [ "PlacementInfo", "class_placement_info.html", "class_placement_info" ],

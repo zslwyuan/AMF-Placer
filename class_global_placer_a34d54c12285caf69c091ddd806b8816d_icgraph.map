@@ -1,4 +1,4 @@
 <map id="GlobalPlacer::getMacroLegalizationWeight" name="GlobalPlacer::getMacroLegalizationWeight">
-<area shape="rect" id="node1" title="Get the current macro legalization weight object." alt="" coords="164,5,389,47"/>
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title="Get the current macro legalization weight object." alt="" coords="164,5,389,45"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
 </map>

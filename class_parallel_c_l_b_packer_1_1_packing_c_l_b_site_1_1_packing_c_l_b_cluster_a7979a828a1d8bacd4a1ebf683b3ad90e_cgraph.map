@@ -1,0 +1,6 @@
+<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::checkAddPU" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::checkAddPU">
+<area shape="rect" id="node1" title=" " alt="" coords="5,45,244,100"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a853324f96e6e9f90b8886e5c3359237d" title="try to add a given PlacementUnit into this cluster" alt="" coords="292,5,531,60"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ada3d97286321e70af77d9ce5b6bd2cba" title="Construct a new Packing CLB Cluster object (it should not be called.)" alt="" coords="292,84,531,139"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480" title=" " alt="" coords="579,13,753,53"/>
+</map>

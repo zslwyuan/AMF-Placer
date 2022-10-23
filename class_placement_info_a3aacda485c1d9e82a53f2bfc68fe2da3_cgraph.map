@@ -1,5 +1,5 @@
 <map id="PlacementInfo::getDisplacement" name="PlacementInfo::getDisplacement">
-<area shape="rect" id="node1" title="Get the Displacement from a given location to a device site (y2xRatio is considered...." alt="" coords="5,31,215,57"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="263,5,431,32"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="263,56,431,83"/>
+<area shape="rect" id="node1" title="Get the Displacement from a given location to a device site (y2xRatio is considered...." alt="" coords="5,31,215,56"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="263,5,431,31"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="263,55,431,80"/>
 </map>

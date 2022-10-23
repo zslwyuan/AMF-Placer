@@ -1,9 +1,9 @@
 <map id="CLBLegalizer::sortPartition" name="CLBLegalizer::sortPartition">
-<area shape="rect" id="node1" title=" " alt="" coords="5,133,181,159"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="229,107,436,134"/>
-<area shape="rect" id="node7" href="$class_c_l_b_legalizer.html#aa2cc92cb40a7ac04511d723c82985b11" title=" " alt="" coords="244,158,421,185"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="493,5,667,47"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="484,71,676,112"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="496,137,664,163"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="496,187,664,214"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,131,181,157"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="229,106,436,131"/>
+<area shape="rect" id="node7" href="$class_c_l_b_legalizer.html#aa2cc92cb40a7ac04511d723c82985b11" title=" " alt="" coords="244,155,421,181"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="493,5,667,45"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="484,69,676,109"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="496,134,664,159"/>
+<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="496,183,664,209"/>
 </map>

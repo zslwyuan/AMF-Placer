@@ -1,4 +1,4 @@
 <map id="GeneralSpreader::SpreadRegion::simpleFindExpandDirection" name="GeneralSpreader::SpreadRegion::simpleFindExpandDirection">
-<area shape="rect" id="node1" title="find the expansion direction iteratively in pre&#45;defined order" alt="" coords="5,5,212,47"/>
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a128b368690e276b0eccd3bfc68047dac" title="check whether an expansion in a given direction will make the SpreadRegion overlapped with some bins ..." alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node1" title="find the expansion direction iteratively in pre&#45;defined order" alt="" coords="5,5,212,45"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a128b368690e276b0eccd3bfc68047dac" title="check whether an expansion in a given direction will make the SpreadRegion overlapped with some bins ..." alt="" coords="260,5,467,45"/>
 </map>

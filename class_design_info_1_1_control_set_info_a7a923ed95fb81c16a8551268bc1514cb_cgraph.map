@@ -1,6 +1,6 @@
 <map id="DesignInfo::ControlSetInfo::ControlSetInfo" name="DesignInfo::ControlSetInfo::ControlSetInfo">
-<area shape="rect" id="node1" title="Construct a new Control Set Info object with signals of a given FF and a given ID." alt="" coords="5,39,179,80"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#a2fe56854a734a745337e68b3e4330f85" title="Set the control set information accoridng to a given FF." alt="" coords="227,39,400,80"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="448,5,600,47"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="448,71,600,112"/>
+<area shape="rect" id="node1" title="Construct a new Control Set Info object with signals of a given FF and a given ID." alt="" coords="5,37,179,77"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#a2fe56854a734a745337e68b3e4330f85" title="Set the control set information accoridng to a given FF." alt="" coords="227,37,400,77"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="448,5,600,45"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="448,69,600,109"/>
 </map>

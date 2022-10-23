@@ -1,5 +1,6 @@
 <map id="PlacementInfo::getGlobalBinGrid" name="PlacementInfo::getGlobalBinGrid">
-<area shape="rect" id="node1" title=" " alt="" coords="443,5,609,47"/>
-<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,5,395,47"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="683,5,849,45"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#a8895042533e6d09ee22c0ef2fc583283" title=" " alt="" coords="443,5,635,45"/>
+<area shape="rect" id="node3" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,5,395,45"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
 </map>

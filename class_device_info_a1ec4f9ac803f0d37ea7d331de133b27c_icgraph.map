@@ -1,16 +1,16 @@
 <map id="DeviceInfo::getSitesInType" name="DeviceInfo::getSitesInType">
-<area shape="rect" id="node1" title="Get sites of a specfic type." alt="" coords="1113,191,1291,218"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="413,30,612,56"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a49bda4c1fb14f95814387b25e2955d69" title=" " alt="" coords="881,66,1051,108"/>
-<area shape="rect" id="node5" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="890,132,1042,159"/>
-<area shape="rect" id="node6" href="$class_macro_legalizer.html#a6e15f046281564d3e9aee27027a0a62a" title="find available sites for each specific macro type required by the constructor" alt="" coords="880,184,1052,225"/>
-<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#a904d4134d8a08133239b005cf20f1cba" title="find available sites for each specific type required by the constructor" alt="" coords="874,249,1058,290"/>
-<area shape="rect" id="node12" href="$class_device_info.html#a09cd7b043b5de8bae70533abb88ab03a" title="load the detailed location information of pins on PCIE IO slot" alt="" coords="867,315,1065,342"/>
-<area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#a0eaa8cf35b2dc598df118be1d4ed0d34" title="Construct a new Parallel CLB Packer object." alt="" coords="897,366,1035,408"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,103,116,130"/>
-<area shape="rect" id="node7" href="$class_macro_legalizer.html#a8df43b8bd6a6c5df90438ae51b629f84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="660,191,819,218"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#ac94e8a273dba9609c1d113d370e1f6e7" title="legalize specific types of macro to the target regions" alt="" coords="419,191,606,218"/>
-<area shape="rect" id="node9" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,125,365,166"/>
-<area shape="rect" id="node11" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="665,248,814,275"/>
-<area shape="rect" id="node13" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="663,315,815,342"/>
+<area shape="rect" id="node1" title="Get sites of a specfic type." alt="" coords="1113,187,1291,212"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="413,30,612,55"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a49bda4c1fb14f95814387b25e2955d69" title=" " alt="" coords="881,65,1051,105"/>
+<area shape="rect" id="node5" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="890,130,1042,155"/>
+<area shape="rect" id="node6" href="$class_macro_legalizer.html#a6e15f046281564d3e9aee27027a0a62a" title="find available sites for each specific macro type required by the constructor" alt="" coords="880,180,1052,220"/>
+<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#a904d4134d8a08133239b005cf20f1cba" title="find available sites for each specific type required by the constructor" alt="" coords="874,244,1058,284"/>
+<area shape="rect" id="node12" href="$class_device_info.html#a09cd7b043b5de8bae70533abb88ab03a" title="load the detailed location information of pins on PCIE IO slot" alt="" coords="867,308,1065,334"/>
+<area shape="rect" id="node14" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object." alt="" coords="897,358,1035,398"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,102,116,127"/>
+<area shape="rect" id="node7" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="660,187,819,212"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="419,187,606,212"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,122,365,162"/>
+<area shape="rect" id="node11" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="665,243,814,268"/>
+<area shape="rect" id="node13" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="663,308,815,334"/>
 </map>

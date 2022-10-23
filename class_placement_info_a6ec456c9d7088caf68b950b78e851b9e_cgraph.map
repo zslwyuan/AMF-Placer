@@ -1,8 +1,12 @@
 <map id="PlacementInfo::reloadNets" name="PlacementInfo::reloadNets">
-<area shape="rect" id="node1" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="5,97,180,124"/>
-<area shape="rect" id="node2" href="$class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="247,5,383,32"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="228,57,403,98"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title=" " alt="" coords="228,122,403,163"/>
-<area shape="rect" id="node6" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="270,188,361,215"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_net.html#a85e89195055f943d8a24b9367b6718d1" title="check the attribute isGlobalClock" alt="" coords="451,122,601,163"/>
+<area shape="rect" id="node1" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="5,239,180,264"/>
+<area shape="rect" id="node2" href="$class_design_info.html#af74e4bca1c2b6bce455364a3590ae0c1" title=" " alt="" coords="253,5,389,31"/>
+<area shape="rect" id="node3" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="239,55,403,95"/>
+<area shape="rect" id="node4" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="228,120,415,175"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="234,199,409,239"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title=" " alt="" coords="234,263,409,303"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="284,328,359,353"/>
+<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="276,377,367,403"/>
+<area shape="rect" id="node10" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="272,427,371,452"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_net.html#a85e89195055f943d8a24b9367b6718d1" title="check the attribute isGlobalClock" alt="" coords="463,263,613,303"/>
 </map>

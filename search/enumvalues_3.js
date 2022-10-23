@@ -15,10 +15,11 @@ var searchData=
   ['placementmacrotype_5fhalfclb_12',['PlacementMacroType_HALFCLB',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a83bd7e6c1fd9f0186440ecdd271c7fc9',1,'PlacementInfo::PlacementMacro']]],
   ['placementmacrotype_5flclb_13',['PlacementMacroType_LCLB',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a962d4dbcced2f1e69bddd22096443940',1,'PlacementInfo::PlacementMacro']]],
   ['placementmacrotype_5flutffpair_14',['PlacementMacroType_LUTFFPair',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0adb93a8b7f594a4eadf9aa7296aebd430',1,'PlacementInfo::PlacementMacro']]],
-  ['placementmacrotype_5fmclb_15',['PlacementMacroType_MCLB',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a1f89986e01ab53a03b07da60428a466c',1,'PlacementInfo::PlacementMacro']]],
-  ['placementmacrotype_5fmux7_16',['PlacementMacroType_MUX7',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0ae5ecd2415ec0c0096a5dfbbf1477ac96',1,'PlacementInfo::PlacementMacro']]],
-  ['placementmacrotype_5fmux8_17',['PlacementMacroType_MUX8',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a46f6d8494e68797ff8b2e325490610bb',1,'PlacementInfo::PlacementMacro']]],
-  ['placementmacrotype_5fmux9_18',['PlacementMacroType_MUX9',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a68ad23e17b35f9d0b7ccbd0c0a6b1484',1,'PlacementInfo::PlacementMacro']]],
-  ['placementunittype_5fmacro_19',['PlacementUnitType_Macro',['../class_placement_info.html#a8d1d25b4d5ebf18dd1e77f12abdcf738a6d9202fc7d608efed2347031b818c3fc',1,'PlacementInfo']]],
-  ['placementunittype_5funpackedcell_20',['PlacementUnitType_UnpackedCell',['../class_placement_info.html#a8d1d25b4d5ebf18dd1e77f12abdcf738a2e7023fd4747ccc75b6b5037134a9438',1,'PlacementInfo']]]
+  ['placementmacrotype_5flutlutseires_15',['PlacementMacroType_LUTLUTSeires',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0af9a0c93b4b898c385868fae113890c44',1,'PlacementInfo::PlacementMacro']]],
+  ['placementmacrotype_5fmclb_16',['PlacementMacroType_MCLB',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a1f89986e01ab53a03b07da60428a466c',1,'PlacementInfo::PlacementMacro']]],
+  ['placementmacrotype_5fmux7_17',['PlacementMacroType_MUX7',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0ae5ecd2415ec0c0096a5dfbbf1477ac96',1,'PlacementInfo::PlacementMacro']]],
+  ['placementmacrotype_5fmux8_18',['PlacementMacroType_MUX8',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a46f6d8494e68797ff8b2e325490610bb',1,'PlacementInfo::PlacementMacro']]],
+  ['placementmacrotype_5fmux9_19',['PlacementMacroType_MUX9',['../class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0a68ad23e17b35f9d0b7ccbd0c0a6b1484',1,'PlacementInfo::PlacementMacro']]],
+  ['placementunittype_5fmacro_20',['PlacementUnitType_Macro',['../class_placement_info.html#a8d1d25b4d5ebf18dd1e77f12abdcf738a6d9202fc7d608efed2347031b818c3fc',1,'PlacementInfo']]],
+  ['placementunittype_5funpackedcell_21',['PlacementUnitType_UnpackedCell',['../class_placement_info.html#a8d1d25b4d5ebf18dd1e77f12abdcf738a2e7023fd4747ccc75b6b5037134a9438',1,'PlacementInfo']]]
 ];

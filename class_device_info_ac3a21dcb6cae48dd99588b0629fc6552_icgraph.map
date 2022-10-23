@@ -1,5 +1,5 @@
 <map id="DeviceInfo::addTileTypes" name="DeviceInfo::addTileTypes">
-<area shape="rect" id="node1" title=" " alt="" coords="385,5,552,32"/>
-<area shape="rect" id="node2" href="$class_device_info.html#a7b1f24ca293a4828b72969ac57576a86" title=" " alt="" coords="205,5,337,32"/>
-<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="385,5,552,31"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a7b1f24ca293a4828b72969ac57576a86" title=" " alt="" coords="205,5,337,31"/>
+<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,31"/>
 </map>

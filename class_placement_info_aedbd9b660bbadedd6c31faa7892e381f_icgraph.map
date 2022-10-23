@@ -1,5 +1,5 @@
 <map id="PlacementInfo::setDeterminedOccupation" name="PlacementInfo::setDeterminedOccupation">
-<area shape="rect" id="node1" title="Set the Determined Occupation of a specific cell." alt="" coords="353,5,549,47"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="164,5,305,47"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title="Set the Determined Occupation of a specific cell." alt="" coords="353,5,549,45"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="164,5,305,45"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
 </map>

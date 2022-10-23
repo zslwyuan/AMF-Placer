@@ -1,7 +1,7 @@
 <map id="CLBLegalizer::getDisplacement" name="CLBLegalizer::getDisplacement">
-<area shape="rect" id="node1" title=" " alt="" coords="5,93,208,120"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="259,5,427,32"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="256,57,431,98"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="259,123,427,149"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="256,174,431,215"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,92,208,117"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="259,5,427,31"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="256,55,431,95"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="259,120,427,145"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="256,170,431,210"/>
 </map>

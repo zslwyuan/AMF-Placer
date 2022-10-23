@@ -1,4 +1,4 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getHashConst" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getHashConst">
-<area shape="rect" id="node1" title="Get the hash code of this cluster without changing the class variables of this cluster." alt="" coords="139,5,377,61"/>
-<area shape="rect" id="node2" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="5,20,91,47"/>
+<area shape="rect" id="node1" title="Get the hash code of this cluster without changing the class variables of this cluster." alt="" coords="139,5,377,60"/>
+<area shape="rect" id="node2" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="5,20,91,45"/>
 </map>
