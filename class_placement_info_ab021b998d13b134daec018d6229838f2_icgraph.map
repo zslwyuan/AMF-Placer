@@ -1,4 +1,4 @@
 <map id="PlacementInfo::getMaxYFromSites" name="PlacementInfo::getMaxYFromSites">
-<area shape="rect" id="node1" title="Get the Max Y of sites to identify the boundary of the device." alt="" coords="249,5,443,45"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="5,13,201,38"/>
+<area shape="rect" id="node1" title="Get the Max Y of sites to identify the boundary of the device." alt="" coords="249,5,443,47"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="5,13,201,39"/>
 </map>

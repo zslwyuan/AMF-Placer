@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getInternalPinsNum">
-<area shape="rect" id="node1" title="Get the number of pins within this site for a given net (more pins are located in ont site will reduc..." alt="" coords="5,30,244,85"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="292,5,467,45"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_net.html#a3305aa473e6850500a55b06b5fd99ce0" title="Get the reference of the vector of the PlacementUnits driven by the net." alt="" coords="292,69,467,109"/>
+<area shape="rect" id="node1" title="Get the number of pins within this site for a given net (more pins are located in ont site will reduc..." alt="" coords="5,31,244,87"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html#a24b65537907b35b360960d9117d2c9c6" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="292,5,467,47"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_net.html#a3305aa473e6850500a55b06b5fd99ce0" title="Get the reference of the vector of the PlacementUnits driven by the net." alt="" coords="292,71,467,112"/>
 </map>

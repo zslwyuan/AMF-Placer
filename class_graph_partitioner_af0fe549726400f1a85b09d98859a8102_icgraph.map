@@ -1,4 +1,4 @@
 <map id="GraphPartitioner::minCutBipartition" name="GraphPartitioner::minCutBipartition">
-<area shape="rect" id="node1" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="228,5,391,45"/>
-<area shape="rect" id="node2" href="$class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="5,5,180,45"/>
+<area shape="rect" id="node1" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="228,5,391,47"/>
+<area shape="rect" id="node2" href="$class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="5,5,180,47"/>
 </map>

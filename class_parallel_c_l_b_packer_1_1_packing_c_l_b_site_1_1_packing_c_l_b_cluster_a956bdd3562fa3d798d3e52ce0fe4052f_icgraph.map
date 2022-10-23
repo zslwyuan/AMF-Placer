@@ -1,6 +1,6 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getNumMuxes" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getNumMuxes">
-<area shape="rect" id="node1" title="Get the total number of MUX cells in this cluster." alt="" coords="527,41,765,96"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5286ef6fe44a2827163314175d1ecf83" title=" " alt="" coords="251,13,468,53"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="240,77,479,132"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,5,192,60"/>
+<area shape="rect" id="node1" title="Get the total number of MUX cells in this cluster." alt="" coords="527,41,765,97"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5286ef6fe44a2827163314175d1ecf83" title=" " alt="" coords="251,13,468,54"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a77c01066baebeefbb78ab4e52e087086" title=" " alt="" coords="240,77,479,133"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a194daf0509a1ac9e452350235a990c96" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,5,192,61"/>
 </map>

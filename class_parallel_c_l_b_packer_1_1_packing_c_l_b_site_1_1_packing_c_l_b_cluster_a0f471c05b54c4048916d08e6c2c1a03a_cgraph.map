@@ -1,6 +1,6 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::isMuxMacro" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::isMuxMacro">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,244,60"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="292,13,484,53"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="532,13,684,53"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="732,13,909,53"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,244,61"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="292,13,484,54"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="532,13,684,54"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="732,13,909,54"/>
 </map>

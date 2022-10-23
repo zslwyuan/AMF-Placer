@@ -1,11 +1,11 @@
 <map id="MacroLegalizer::findMacroType2AvailableSites" name="MacroLegalizer::findMacroType2AvailableSites">
-<area shape="rect" id="node1" title="find available sites for each specific macro type required by the constructor" alt="" coords="5,112,177,152"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="225,5,407,45"/>
-<area shape="rect" id="node6" href="$class_device_info.html#a1ec4f9ac803f0d37ea7d331de133b27c" title="Get sites of a specfic type." alt="" coords="227,70,405,95"/>
-<area shape="rect" id="node7" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title=" " alt="" coords="247,119,385,145"/>
-<area shape="rect" id="node8" href="$class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="251,169,381,194"/>
-<area shape="rect" id="node9" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="253,218,379,243"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html#ab0eda5a61e6b57c45261526dfe8346cf" title="Get the Potential BEL Type IDs for a specific cell object." alt="" coords="455,5,719,45"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="767,5,919,45"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="967,5,1144,45"/>
+<area shape="rect" id="node1" title="find available sites for each specific macro type required by the constructor" alt="" coords="5,115,177,156"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="225,5,407,47"/>
+<area shape="rect" id="node6" href="$class_device_info.html#a1ec4f9ac803f0d37ea7d331de133b27c" title="Get sites of a specfic type." alt="" coords="227,71,405,98"/>
+<area shape="rect" id="node7" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title=" " alt="" coords="247,122,385,149"/>
+<area shape="rect" id="node8" href="$class_design_info.html#abae9f203e3842a4d54ff8b5fbdce8600" title=" " alt="" coords="251,173,381,199"/>
+<area shape="rect" id="node9" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title=" " alt="" coords="253,223,379,250"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html#ab0eda5a61e6b57c45261526dfe8346cf" title="Get the Potential BEL Type IDs for a specific cell object." alt="" coords="455,5,719,47"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="767,5,919,47"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="967,5,1144,47"/>
 </map>

@@ -1,8 +1,8 @@
 <map id="DeviceInfo::DeviceElement::getName" name="DeviceInfo::DeviceElement::getName">
-<area shape="rect" id="node1" title=" " alt="" coords="231,133,408,173"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_clock_column.html#a473a1526d2b67cc747d87c795d2f7079" title=" " alt="" coords="11,5,177,45"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_clock_region.html#a13a7c2a81aeb7d693eaecc6593aa3e43" title="add a site in the clock region and update the boundary of the clock region" alt="" coords="13,69,175,109"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_bin_info.html#ac07a09509c5f47ca215b4c3b60d20343" title="add a resource site into the bin" alt="" coords="7,133,181,173"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_site_bin_info.html#ad69ea72b3e108b0d0c1d614805739369" title=" " alt="" coords="5,197,183,237"/>
-<area shape="rect" id="node6" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="51,262,137,287"/>
+<area shape="rect" id="node1" title=" " alt="" coords="231,136,408,177"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_clock_column.html#a473a1526d2b67cc747d87c795d2f7079" title=" " alt="" coords="11,5,177,47"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_clock_region.html#a13a7c2a81aeb7d693eaecc6593aa3e43" title="add a site in the clock region and update the boundary of the clock region" alt="" coords="13,71,175,112"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_bin_info.html#ac07a09509c5f47ca215b4c3b60d20343" title="add a resource site into the bin" alt="" coords="7,136,181,177"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_site_bin_info.html#ad69ea72b3e108b0d0c1d614805739369" title=" " alt="" coords="5,201,183,243"/>
+<area shape="rect" id="node6" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html#a10fbe910a90188f5be1f19479a4a395e" title=" " alt="" coords="51,267,137,294"/>
 </map>

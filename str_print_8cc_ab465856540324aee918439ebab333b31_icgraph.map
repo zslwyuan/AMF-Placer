@@ -1,12 +1,12 @@
 <map id="print_error" name="print_error">
-<area shape="rect" id="node1" title=" " alt="" coords="581,173,661,198"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_bin_info.html#ac07a09509c5f47ca215b4c3b60d20343" title="add a resource site into the bin" alt="" coords="347,5,521,45"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_site_bin_info.html#ad69ea72b3e108b0d0c1d614805739369" title=" " alt="" coords="345,69,523,109"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_pin.html#ac73342bcdf23e55c53159ff3ec253382" title="get the pin type based on its reference name" alt="" coords="359,133,509,173"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="335,262,533,287"/>
-<area shape="rect" id="node8" href="$class_design_info.html#adf0324cc2aabb175c21af7242f26a0e7" title="translate a string into a DesignCellType for a cell" alt="" coords="351,197,517,237"/>
-<area shape="rect" id="node10" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="370,311,498,337"/>
-<area shape="rect" id="node5" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="70,145,222,170"/>
-<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="91,286,201,311"/>
-<area shape="rect" id="node9" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object." alt="" coords="5,197,287,237"/>
+<area shape="rect" id="node1" title=" " alt="" coords="581,177,661,203"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_bin_info.html#ac07a09509c5f47ca215b4c3b60d20343" title="add a resource site into the bin" alt="" coords="347,5,521,47"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_site_bin_info.html#ad69ea72b3e108b0d0c1d614805739369" title=" " alt="" coords="345,71,523,112"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_pin.html#ac73342bcdf23e55c53159ff3ec253382" title="get the pin type based on its reference name" alt="" coords="359,136,509,177"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="335,267,533,294"/>
+<area shape="rect" id="node8" href="$class_design_info.html#adf0324cc2aabb175c21af7242f26a0e7" title="translate a string into a DesignCellType for a cell" alt="" coords="351,201,517,243"/>
+<area shape="rect" id="node10" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="370,318,498,345"/>
+<area shape="rect" id="node5" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="70,147,222,174"/>
+<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="91,293,201,319"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object." alt="" coords="5,201,287,243"/>
 </map>

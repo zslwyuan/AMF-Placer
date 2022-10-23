@@ -1,5 +1,5 @@
 <map id="PlacementInfo::PlacementNet::getNewHPWLByTrying" name="PlacementInfo::PlacementNet::getNewHPWLByTrying">
-<area shape="rect" id="node1" title="Get the New HPWL By Trying to move a PlacementUnit object." alt="" coords="5,35,188,75"/>
-<area shape="rect" id="node2" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="241,5,423,45"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="236,70,428,95"/>
+<area shape="rect" id="node1" title="Get the New HPWL By Trying to move a PlacementUnit object." alt="" coords="5,35,188,76"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="241,5,423,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#adf045317e0e782adb5d40dae47bb6720" title=" " alt="" coords="236,71,428,98"/>
 </map>

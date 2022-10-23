@@ -1,8 +1,8 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addLUT" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addLUT">
-<area shape="rect" id="node1" title="try to add a given LUT into this cluster" alt="" coords="5,85,244,139"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="322,5,474,45"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="565,80,717,120"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac287a437465d8184844c97f30aa9a49e" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="292,120,504,160"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="565,165,717,205"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="552,5,729,45"/>
+<area shape="rect" id="node1" title="try to add a given LUT into this cluster" alt="" coords="5,86,244,142"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="322,5,474,47"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="565,81,717,123"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac287a437465d8184844c97f30aa9a49e" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="292,123,504,164"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="565,169,717,211"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="552,5,729,47"/>
 </map>

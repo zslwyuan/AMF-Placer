@@ -1,5 +1,5 @@
 <map id="PlacementInfo::setPseudoNetWeight" name="PlacementInfo::setPseudoNetWeight">
-<area shape="rect" id="node1" title="Set the Pseudo Net Weight according to a given value." alt="" coords="413,5,588,45"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,45"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
+<area shape="rect" id="node1" title="Set the Pseudo Net Weight according to a given value." alt="" coords="413,5,588,47"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

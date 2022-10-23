@@ -1,4 +1,4 @@
 <map id="DeviceInfo::mapClockRegionToArray" name="DeviceInfo::mapClockRegionToArray">
-<area shape="rect" id="node1" title="map recognized clock regions into an array for later clock utilization evaluation" alt="" coords="205,5,393,45"/>
-<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,13,157,38"/>
+<area shape="rect" id="node1" title="map recognized clock regions into an array for later clock utilization evaluation" alt="" coords="205,5,393,47"/>
+<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,13,157,39"/>
 </map>

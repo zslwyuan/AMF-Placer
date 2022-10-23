@@ -1,5 +1,5 @@
 <map id="DesignInfo::DesignCell::addNetForPin" name="DesignInfo::DesignCell::addNetForPin">
-<area shape="rect" id="node1" title="add a net and assign it into output/input net list" alt="" coords="5,37,157,77"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="205,5,383,45"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_pin.html#ab34cae7cdbaf860b759acc4005ea2606" title=" " alt="" coords="219,69,369,109"/>
+<area shape="rect" id="node1" title="add a net and assign it into output/input net list" alt="" coords="5,39,157,80"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="205,5,383,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_pin.html#ab34cae7cdbaf860b759acc4005ea2606" title=" " alt="" coords="219,71,369,112"/>
 </map>

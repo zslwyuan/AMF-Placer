@@ -1,12 +1,12 @@
 <map id="CLBLegalizer::dumpMatching" name="CLBLegalizer::dumpMatching">
-<area shape="rect" id="node1" title=" " alt="" coords="5,129,196,155"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title=" " alt="" coords="246,31,449,56"/>
-<area shape="rect" id="node5" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="244,80,451,105"/>
-<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="250,129,445,155"/>
-<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="302,179,393,204"/>
-<area shape="rect" id="node10" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="292,228,403,253"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="511,5,679,31"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="511,55,679,80"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="507,105,682,145"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="499,169,691,209"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,196,159"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title=" " alt="" coords="246,31,449,57"/>
+<area shape="rect" id="node5" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="244,81,451,108"/>
+<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="250,132,445,159"/>
+<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="302,183,393,209"/>
+<area shape="rect" id="node10" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="292,233,403,260"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="511,5,679,32"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="511,56,679,83"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="507,107,682,149"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="499,173,691,214"/>
 </map>

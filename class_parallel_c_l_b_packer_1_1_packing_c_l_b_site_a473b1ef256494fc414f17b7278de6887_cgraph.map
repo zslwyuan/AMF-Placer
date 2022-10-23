@@ -1,20 +1,20 @@
 <map id="ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs" name="ParallelCLBPacker::PackingCLBSite::findNewClustersWithNeighborPUs">
-<area shape="rect" id="node1" title="extend the clusters in the priority queue with the neighbor PlacementUnits" alt="" coords="5,205,224,259"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a853324f96e6e9f90b8886e5c3359237d" title="try to add a given PlacementUnit into this cluster" alt="" coords="272,71,511,126"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title="we use a hash function to encode the cluster to easily check duplicated clusters in the candidates" alt="" coords="559,142,797,197"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="272,205,511,259"/>
-<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a801d7aa80e88d917d3b1ccefb32a98c3" title="incrementally update the score of this cluster by considering that only a given PlacementUnit will be..." alt="" coords="272,283,511,338"/>
-<area shape="rect" id="node18" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aa55b27afffe7d72a9678684ba6340f7c" title="refresh the Id of the PackingCLBCluster so we can know it is changed." alt="" coords="272,362,511,417"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480" title=" " alt="" coords="591,77,765,117"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7839574b3af61d1ad3117aa547dfce05" title=" " alt="" coords="858,5,1066,45"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afbbc37ecef88e17c27b70d9982272e81" title=" " alt="" coords="865,70,1059,125"/>
-<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="875,149,1049,189"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2e8820284a04ee0a7d615769f324970e" title=" " alt="" coords="845,213,1079,253"/>
-<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8f89087f0c845cf7da3ca7cddf9b8f07" title=" " alt="" coords="565,391,791,446"/>
-<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abe4be1f7465d7c4be7730df39bc0aa01" title=" " alt="" coords="867,277,1057,317"/>
-<area shape="rect" id="node13" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="875,341,1049,381"/>
-<area shape="rect" id="node14" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="878,406,1046,431"/>
-<area shape="rect" id="node15" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="875,456,1049,496"/>
-<area shape="rect" id="node16" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="878,521,1046,546"/>
-<area shape="rect" id="node17" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="875,571,1049,611"/>
+<area shape="rect" id="node1" title="extend the clusters in the priority queue with the neighbor PlacementUnits" alt="" coords="5,205,224,261"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a853324f96e6e9f90b8886e5c3359237d" title="try to add a given PlacementUnit into this cluster" alt="" coords="272,71,511,127"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title="we use a hash function to encode the cluster to easily check duplicated clusters in the candidates" alt="" coords="559,142,797,198"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#add4302d2fbbe2da14f4094d10cc05b57" title="Get the hash code for this cluster." alt="" coords="272,205,511,261"/>
+<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a801d7aa80e88d917d3b1ccefb32a98c3" title="incrementally update the score of this cluster by considering that only a given PlacementUnit will be..." alt="" coords="272,285,511,341"/>
+<area shape="rect" id="node18" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aa55b27afffe7d72a9678684ba6340f7c" title="refresh the Id of the PackingCLBCluster so we can know it is changed." alt="" coords="272,365,511,421"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a2774c84798ed2a74fcf5679cf237a480" title=" " alt="" coords="591,77,765,119"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7839574b3af61d1ad3117aa547dfce05" title=" " alt="" coords="858,5,1066,47"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afbbc37ecef88e17c27b70d9982272e81" title=" " alt="" coords="865,70,1059,126"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="875,149,1049,191"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2e8820284a04ee0a7d615769f324970e" title=" " alt="" coords="845,215,1079,256"/>
+<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8f89087f0c845cf7da3ca7cddf9b8f07" title=" " alt="" coords="565,397,791,453"/>
+<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abe4be1f7465d7c4be7730df39bc0aa01" title=" " alt="" coords="867,280,1057,321"/>
+<area shape="rect" id="node13" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="875,345,1049,387"/>
+<area shape="rect" id="node14" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="878,411,1046,438"/>
+<area shape="rect" id="node15" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="875,463,1049,504"/>
+<area shape="rect" id="node16" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="878,529,1046,555"/>
+<area shape="rect" id="node17" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="875,580,1049,621"/>
 </map>

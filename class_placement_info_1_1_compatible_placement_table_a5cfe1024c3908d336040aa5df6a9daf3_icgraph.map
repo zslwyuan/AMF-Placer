@@ -1,12 +1,12 @@
 <map id="PlacementInfo::CompatiblePlacementTable::getActualOccupationByCellId" name="PlacementInfo::CompatiblePlacementTable::getActualOccupationByCellId">
-<area shape="rect" id="node1" title="Get the Actual Occupation By Cell Id." alt="" coords="1231,98,1473,153"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d" title="Get the Actual Occupation By Cell Id." alt="" coords="1016,105,1183,145"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="540,5,679,45"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="729,62,968,117"/>
-<area shape="rect" id="node9" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#ab4484e67518a9cb6593ae2e550769a1c" title="split horizontally the SubBox into smaller ones and assign cells to them" alt="" coords="745,141,952,181"/>
-<area shape="rect" id="node10" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#adc5cc5479c1a558406f690680ffb4049" title="split vertically the SubBox into smaller ones and assign cells to them" alt="" coords="745,205,952,245"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,39,303,79"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,71"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,69,681,109"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,67,489,107"/>
+<area shape="rect" id="node1" title="Get the Actual Occupation By Cell Id." alt="" coords="1231,99,1473,155"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d" title="Get the Actual Occupation By Cell Id." alt="" coords="1016,107,1183,148"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="540,5,679,47"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="729,63,968,119"/>
+<area shape="rect" id="node9" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#ab4484e67518a9cb6593ae2e550769a1c" title="split horizontally the SubBox into smaller ones and assign cells to them" alt="" coords="745,143,952,184"/>
+<area shape="rect" id="node10" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#adc5cc5479c1a558406f690680ffb4049" title="split vertically the SubBox into smaller ones and assign cells to them" alt="" coords="745,208,952,249"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,39,303,80"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,71,681,112"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,68,489,109"/>
 </map>

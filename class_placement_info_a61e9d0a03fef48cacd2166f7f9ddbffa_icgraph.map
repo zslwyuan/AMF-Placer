@@ -1,15 +1,15 @@
 <map id="PlacementInfo::getPU2ClockRegionColumn" name="PlacementInfo::getPU2ClockRegionColumn">
-<area shape="rect" id="node1" title="get the PlacementUnit Mapping to clock region column for timing optimzation" alt="" coords="1193,61,1383,101"/>
-<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="640,29,871,69"/>
-<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#a8895042533e6d09ee22c0ef2fc583283" title=" " alt="" coords="936,29,1128,69"/>
-<area shape="rect" id="node5" href="$class_general_spreader.html#adc369727fce67315da9600b84eeb33e0" title="update the information of the involved PlacementUnit(s)" alt="" coords="919,93,1145,133"/>
-<area shape="rect" id="node9" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region" alt="" coords="920,157,1144,197"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,132,116,157"/>
-<area shape="rect" id="node6" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="642,93,869,133"/>
-<area shape="rect" id="node7" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="423,100,582,125"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,93,365,133"/>
-<area shape="rect" id="node10" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="679,157,832,197"/>
-<area shape="rect" id="node11" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,157,592,197"/>
-<area shape="rect" id="node12" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,157,365,197"/>
-<area shape="rect" id="node13" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="195,221,334,261"/>
+<area shape="rect" id="node1" title="get the PlacementUnit Mapping to clock region column for timing optimzation" alt="" coords="1193,63,1383,104"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="640,30,871,71"/>
+<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#a8895042533e6d09ee22c0ef2fc583283" title=" " alt="" coords="936,30,1128,71"/>
+<area shape="rect" id="node5" href="$class_general_spreader.html#adc369727fce67315da9600b84eeb33e0" title="update the information of the involved PlacementUnit(s)" alt="" coords="919,95,1145,136"/>
+<area shape="rect" id="node9" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region" alt="" coords="920,160,1144,202"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,136,116,162"/>
+<area shape="rect" id="node6" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="642,95,869,136"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="423,102,582,129"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,95,365,136"/>
+<area shape="rect" id="node10" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="679,160,832,202"/>
+<area shape="rect" id="node11" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,160,592,202"/>
+<area shape="rect" id="node12" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,160,365,202"/>
+<area shape="rect" id="node13" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="195,226,334,267"/>
 </map>

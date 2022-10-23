@@ -1,4 +1,4 @@
 <map id="GlobalPlacer::clusterPlacement" name="GlobalPlacer::clusterPlacement">
-<area shape="rect" id="node1" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,5,367,31"/>
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,31"/>
+<area shape="rect" id="node1" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,5,367,32"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,32"/>
 </map>

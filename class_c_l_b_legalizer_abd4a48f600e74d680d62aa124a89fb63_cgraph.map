@@ -1,8 +1,8 @@
 <map id="CLBLegalizer::updatePUMatchingLocation" name="CLBLegalizer::updatePUMatchingLocation">
-<area shape="rect" id="node1" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="5,73,223,113"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="275,5,470,31"/>
-<area shape="rect" id="node3" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="335,55,410,80"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#adb467655582635a1c7f5743803397e11" title="set the legalization of some PlacementUnit objects" alt="" coords="273,104,472,129"/>
-<area shape="rect" id="node5" href="$class_c_l_b_legalizer.html#ae94f95634e5422c0fb13515ef6e86355" title=" " alt="" coords="271,153,475,179"/>
-<area shape="rect" id="node6" href="$class_c_l_b_legalizer.html#a2fdee84d63c4a56b4e8b78fd6ca91016" title=" " alt="" coords="523,153,679,179"/>
+<area shape="rect" id="node1" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="5,74,223,115"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="275,5,470,32"/>
+<area shape="rect" id="node3" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="335,56,410,83"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#adb467655582635a1c7f5743803397e11" title="set the legalization of some PlacementUnit objects" alt="" coords="273,107,472,133"/>
+<area shape="rect" id="node5" href="$class_c_l_b_legalizer.html#ae94f95634e5422c0fb13515ef6e86355" title=" " alt="" coords="271,157,475,184"/>
+<area shape="rect" id="node6" href="$class_c_l_b_legalizer.html#a2fdee84d63c4a56b4e8b78fd6ca91016" title=" " alt="" coords="523,157,679,184"/>
 </map>

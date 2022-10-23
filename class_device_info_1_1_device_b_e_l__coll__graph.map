@@ -1,10 +1,10 @@
 <map id="DeviceInfo::DeviceBEL" name="DeviceInfo::DeviceBEL">
-<area shape="rect" id="node1" title="BEL(Basic Element of Logic), the smallest undividable element." alt="" coords="816,44,971,69"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="5,44,183,69"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html" title="Site class for site on device." alt="" coords="589,120,743,145"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites." alt="" coords="280,95,431,120"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_clock_region.html" title="class for clock regions on FPGA" alt="" coords="274,144,437,169"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_clock_column.html" title="a column of site in clock region" alt="" coords="272,193,439,219"/>
-<area shape="rect" id="node7" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="52,112,136,137"/>
-<area shape="rect" id="node8" href="$class_device_info_1_1_device_site_1_1_device_site_pin_infos.html" title="a class record the pin on the site boundary" alt="" coords="279,243,432,283"/>
+<area shape="rect" id="node1" title="BEL(Basic Element of Logic), the smallest undividable element." alt="" coords="816,44,971,71"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="5,44,183,71"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html" title="Site class for site on device." alt="" coords="589,121,743,148"/>
+<area shape="rect" id="node6" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites." alt="" coords="280,95,431,121"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_clock_region.html" title="class for clock regions on FPGA" alt="" coords="274,145,437,172"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_clock_column.html" title="a column of site in clock region" alt="" coords="272,196,439,223"/>
+<area shape="rect" id="node7" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="52,112,136,139"/>
+<area shape="rect" id="node8" href="$class_device_info_1_1_device_site_1_1_device_site_pin_infos.html" title="a class record the pin on the site boundary" alt="" coords="279,247,432,289"/>
 </map>

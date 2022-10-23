@@ -1,4 +1,4 @@
 <map id="PlacementInfo::updateCells2PlacementUnits" name="PlacementInfo::updateCells2PlacementUnits">
-<area shape="rect" id="node1" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="5,5,192,45"/>
-<area shape="rect" id="node2" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="240,13,405,38"/>
+<area shape="rect" id="node1" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="5,5,192,47"/>
+<area shape="rect" id="node2" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="240,13,405,39"/>
 </map>

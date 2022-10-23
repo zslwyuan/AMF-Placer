@@ -1,6 +1,5 @@
 <map id="GeneralSpreader::findOverflowBins" name="GeneralSpreader::findOverflowBins">
-<area shape="rect" id="node1" title="find the overflow bins in the placement accoridng to a given threshold" alt="" coords="5,31,228,56"/>
-<area shape="rect" id="node2" href="$_device_info_8cc.html#abb4da392222931d03f964096bbd87a5f" title=" " alt="" coords="276,31,371,56"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="419,5,587,31"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="419,55,587,80"/>
+<area shape="rect" id="node1" title="find the overflow bins in the placement accoridng to a given threshold" alt="" coords="5,13,228,39"/>
+<area shape="rect" id="node2" href="$_general_spreader_8cc.html#ad1d44eeb87f791a442d9a84cf1a88c24" title=" " alt="" coords="276,13,371,39"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_bin_info.html#af85711584066024bc0549535095239f9" title="Get the Utilization Rate: utilization / (capacity * binShrinkRatio)" alt="" coords="419,5,593,47"/>
 </map>

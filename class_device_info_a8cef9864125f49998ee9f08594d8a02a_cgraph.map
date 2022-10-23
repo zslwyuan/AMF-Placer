@@ -1,7 +1,7 @@
 <map id="DeviceInfo::addSite" name="DeviceInfo::addSite">
-<area shape="rect" id="node1" title="add a site into the device information class" alt="" coords="5,99,140,125"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_tile.html#af0a84d687ac716d8e74175248a850166" title=" " alt="" coords="197,5,348,45"/>
-<area shape="rect" id="node3" href="$class_device_info.html#a8069eeed2c4a5d0ca7935ae17069d1f2" title="add a Site type into the set of the existing site types" alt="" coords="188,70,357,95"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_tile.html#a07ca3dc6391d63d24e538ed6634baf19" title=" " alt="" coords="197,120,348,160"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#ab91d27e474cd9c6638cde2fdd6bb1988" title=" " alt="" coords="196,184,349,224"/>
+<area shape="rect" id="node1" title="add a site into the device information class" alt="" coords="5,101,140,127"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_tile.html#af0a84d687ac716d8e74175248a850166" title=" " alt="" coords="197,5,348,47"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a8069eeed2c4a5d0ca7935ae17069d1f2" title="add a Site type into the set of the existing site types" alt="" coords="188,71,357,98"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_tile.html#a07ca3dc6391d63d24e538ed6634baf19" title=" " alt="" coords="197,123,348,164"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#ab91d27e474cd9c6638cde2fdd6bb1988" title=" " alt="" coords="196,188,349,229"/>
 </map>

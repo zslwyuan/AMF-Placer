@@ -1,48 +1,48 @@
 <map id="DesignInfo::DesignCell::isLUT" name="DesignInfo::DesignCell::isLUT">
-<area shape="rect" id="node1" title=" " alt="" coords="1592,814,1744,854"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="1024,364,1199,404"/>
-<area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="713,79,921,104"/>
-<area shape="rect" id="node14" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="739,492,895,532"/>
-<area shape="rect" id="node16" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="1326,237,1501,277"/>
-<area shape="rect" id="node18" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="988,842,1235,882"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1592,827,1744,868"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="1024,370,1199,411"/>
+<area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="713,78,921,105"/>
+<area shape="rect" id="node14" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="739,500,895,542"/>
+<area shape="rect" id="node16" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="1326,239,1501,280"/>
+<area shape="rect" id="node18" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="988,856,1235,898"/>
 <area shape="rect" id="node22" href="$_initial_packer_8cc.html#a0fd0a2e1abc315a9956507a413459e1b" title=" " alt="" coords="1055,28,1168,54"/>
-<area shape="rect" id="node23" href="$class_design_info_1_1_design_pin.html#ac73342bcdf23e55c53159ff3ec253382" title="get the pin type based on its reference name" alt="" coords="1339,1008,1488,1048"/>
-<area shape="rect" id="node25" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="1302,692,1525,718"/>
-<area shape="rect" id="node28" href="$class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80" title=" " alt="" coords="1283,907,1544,932"/>
-<area shape="rect" id="node30" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="1294,742,1533,767"/>
-<area shape="rect" id="node31" href="$class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="1328,842,1499,882"/>
-<area shape="rect" id="node32" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a02046d3133c75a9651fb9245c1f7b2b3" title=" " alt="" coords="1318,1072,1509,1112"/>
-<area shape="rect" id="node33" href="$class_design_info_1_1_design_cell.html#acc6994050c88aa084d812b3ce84ff824" title="check whether the cell is related to logic computation" alt="" coords="1337,1136,1489,1176"/>
-<area shape="rect" id="node34" href="$class_incremental_b_e_l_packer.html#ac1143687dd00783f9bfc01a17e82905d" title="check whether two LUTs can be packed to share one BEL" alt="" coords="1335,1200,1491,1240"/>
-<area shape="rect" id="node35" href="$class_placement_info_1_1_placement_unpacked_cell.html#af1321b99c4ffb11a58f00b555f854ce6" title="Construct a new Placement Unpacked Cell object." alt="" coords="1287,1264,1539,1304"/>
-<area shape="rect" id="node36" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="1012,994,1211,1034"/>
-<area shape="rect" id="node3" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="739,556,895,596"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="716,128,917,154"/>
-<area shape="rect" id="node8" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="721,342,912,367"/>
-<area shape="rect" id="node9" href="$class_initial_packer.html#a7b172c529adc0aad6f45f19e919ca213" title="detects LUTRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="707,391,926,416"/>
-<area shape="rect" id="node10" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="723,178,910,203"/>
-<area shape="rect" id="node11" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="739,228,895,268"/>
-<area shape="rect" id="node12" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="717,620,916,660"/>
-<area shape="rect" id="node13" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="725,292,908,318"/>
-<area shape="rect" id="node15" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="195,442,336,482"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,698,116,723"/>
-<area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="466,264,594,290"/>
-<area shape="rect" id="node17" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="1012,180,1211,220"/>
-<area shape="rect" id="node19" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="693,850,940,875"/>
-<area shape="rect" id="node20" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="451,875,609,900"/>
-<area shape="rect" id="node21" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,842,366,882"/>
-<area shape="rect" id="node24" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="1035,1059,1187,1084"/>
-<area shape="rect" id="node26" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="1027,716,1195,742"/>
-<area shape="rect" id="node27" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="716,684,917,724"/>
-<area shape="rect" id="node29" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="998,906,1225,946"/>
-<area shape="rect" id="node37" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="415,1153,645,1193"/>
-<area shape="rect" id="node38" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="747,1268,886,1308"/>
-<area shape="rect" id="node39" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="461,1282,599,1322"/>
-<area shape="rect" id="node40" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="437,927,623,952"/>
-<area shape="rect" id="node41" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="724,1103,909,1128"/>
-<area shape="rect" id="node44" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="721,1382,912,1422"/>
-<area shape="rect" id="node45" href="$class_placement_timing_optimizer.html#a8895042533e6d09ee22c0ef2fc583283" title=" " alt="" coords="721,1153,913,1193"/>
-<area shape="rect" id="node46" href="$class_global_placer.html#a1af8f5d351111595d5333dfc5e25cac7" title=" " alt="" coords="424,983,636,1038"/>
-<area shape="rect" id="node42" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="425,1074,635,1099"/>
-<area shape="rect" id="node43" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,991,367,1016"/>
+<area shape="rect" id="node23" href="$class_design_info_1_1_design_pin.html#ac73342bcdf23e55c53159ff3ec253382" title="get the pin type based on its reference name" alt="" coords="1339,1024,1488,1066"/>
+<area shape="rect" id="node25" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="1302,704,1525,730"/>
+<area shape="rect" id="node28" href="$class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80" title=" " alt="" coords="1283,922,1544,949"/>
+<area shape="rect" id="node30" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="1294,754,1533,781"/>
+<area shape="rect" id="node31" href="$class_placement_info.html#a3986d1e297f4f4e37dd7df1361f06c87" title="find neibor LUTs/FFs from bin grid" alt="" coords="1328,856,1499,898"/>
+<area shape="rect" id="node32" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a02046d3133c75a9651fb9245c1f7b2b3" title=" " alt="" coords="1318,1090,1509,1131"/>
+<area shape="rect" id="node33" href="$class_design_info_1_1_design_cell.html#acc6994050c88aa084d812b3ce84ff824" title="check whether the cell is related to logic computation" alt="" coords="1337,1155,1489,1196"/>
+<area shape="rect" id="node34" href="$class_incremental_b_e_l_packer.html#ac1143687dd00783f9bfc01a17e82905d" title="check whether two LUTs can be packed to share one BEL" alt="" coords="1335,1220,1491,1262"/>
+<area shape="rect" id="node35" href="$class_placement_info_1_1_placement_unpacked_cell.html#af1321b99c4ffb11a58f00b555f854ce6" title="Construct a new Placement Unpacked Cell object." alt="" coords="1287,1286,1539,1327"/>
+<area shape="rect" id="node36" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="1012,1008,1211,1050"/>
+<area shape="rect" id="node3" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="739,566,895,607"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="716,129,917,156"/>
+<area shape="rect" id="node8" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="721,348,912,374"/>
+<area shape="rect" id="node9" href="$class_initial_packer.html#a7b172c529adc0aad6f45f19e919ca213" title="detects LUTRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="707,398,926,425"/>
+<area shape="rect" id="node10" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="723,180,910,206"/>
+<area shape="rect" id="node11" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="739,231,895,272"/>
+<area shape="rect" id="node12" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="717,631,916,672"/>
+<area shape="rect" id="node13" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="725,297,908,324"/>
+<area shape="rect" id="node15" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="195,451,336,492"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,712,116,738"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="466,268,594,294"/>
+<area shape="rect" id="node17" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="1012,180,1211,222"/>
+<area shape="rect" id="node19" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="693,864,940,890"/>
+<area shape="rect" id="node20" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="451,889,609,916"/>
+<area shape="rect" id="node21" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,856,366,898"/>
+<area shape="rect" id="node24" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="1035,1074,1187,1101"/>
+<area shape="rect" id="node26" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="1027,729,1195,756"/>
+<area shape="rect" id="node27" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="716,696,917,738"/>
+<area shape="rect" id="node29" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="998,922,1225,963"/>
+<area shape="rect" id="node37" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="415,1168,645,1210"/>
+<area shape="rect" id="node38" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="747,1286,886,1327"/>
+<area shape="rect" id="node39" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="461,1300,599,1342"/>
+<area shape="rect" id="node40" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="437,942,623,969"/>
+<area shape="rect" id="node41" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="724,1117,909,1144"/>
+<area shape="rect" id="node44" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="721,1403,912,1444"/>
+<area shape="rect" id="node45" href="$class_placement_timing_optimizer.html#a8895042533e6d09ee22c0ef2fc583283" title=" " alt="" coords="721,1168,913,1210"/>
+<area shape="rect" id="node46" href="$class_global_placer.html#a1af8f5d351111595d5333dfc5e25cac7" title=" " alt="" coords="424,998,636,1054"/>
+<area shape="rect" id="node42" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="425,1089,635,1116"/>
+<area shape="rect" id="node43" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,1006,367,1033"/>
 </map>

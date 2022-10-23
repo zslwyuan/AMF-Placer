@@ -1,8 +1,8 @@
 <map id="src/lib/HiFPlacer/placement/packing/ParallelCLBPacker.h" name="src/lib/HiFPlacer/placement/packing/ParallelCLBPacker.h">
-<area shape="rect" id="node1" title="This header file contains the definitions of ParallelCLBPacker class and its internal modules and API..." alt="" coords="356,5,551,45"/>
-<area shape="rect" id="node2" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5,108,219,133"/>
-<area shape="rect" id="node4" href="$_parallel_c_l_b_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the ParallelCLBPacker which finally packs L..." alt="" coords="243,101,445,141"/>
-<area shape="rect" id="node5" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html" title="This implementation file contains APIs&#39; implementation related to the packing&#45;cluster&#45;level processes..." alt="" coords="470,93,655,148"/>
-<area shape="rect" id="node6" href="$_parallel_c_l_b_packer___packing_c_l_b_site_8cc.html" title="This implementation file contains APIs&#39; implementation related to the CLBSite&#45;level processes in the ..." alt="" coords="679,93,865,148"/>
-<area shape="rect" id="node3" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="21,196,203,221"/>
+<area shape="rect" id="node1" title="This header file contains the definitions of ParallelCLBPacker class and its internal modules and API..." alt="" coords="356,5,551,47"/>
+<area shape="rect" id="node2" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5,109,219,136"/>
+<area shape="rect" id="node4" href="$_parallel_c_l_b_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the ParallelCLBPacker which finally packs L..." alt="" coords="243,102,445,143"/>
+<area shape="rect" id="node5" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html" title="This implementation file contains APIs&#39; implementation related to the packing&#45;cluster&#45;level processes..." alt="" coords="470,95,655,151"/>
+<area shape="rect" id="node6" href="$_parallel_c_l_b_packer___packing_c_l_b_site_8cc.html" title="This implementation file contains APIs&#39; implementation related to the CLBSite&#45;level processes in the ..." alt="" coords="679,95,865,151"/>
+<area shape="rect" id="node3" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="21,199,203,225"/>
 </map>

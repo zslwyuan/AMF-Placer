@@ -1,6 +1,6 @@
 <map id="PlacementTimingOptimizer::findCriticalPaths" name="PlacementTimingOptimizer::findCriticalPaths">
-<area shape="rect" id="node1" title=" " alt="" coords="5,77,184,117"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a48af391351a611d17fd8437944f8cd0b" title=" " alt="" coords="233,5,425,45"/>
-<area shape="rect" id="node3" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="236,70,423,125"/>
-<area shape="rect" id="node4" href="$class_placement_timing_info_1_1_timing_graph.html#afcbb12ea4d595ce216db98a864af8c6c" title=" " alt="" coords="232,149,427,203"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,77,184,119"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a48af391351a611d17fd8437944f8cd0b" title=" " alt="" coords="233,5,425,47"/>
+<area shape="rect" id="node3" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="236,70,423,126"/>
+<area shape="rect" id="node4" href="$class_placement_timing_info_1_1_timing_graph.html#afcbb12ea4d595ce216db98a864af8c6c" title=" " alt="" coords="232,150,427,206"/>
 </map>

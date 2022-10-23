@@ -1,5 +1,5 @@
 <map id="DeviceInfo::DeviceSite::getClockRegionX" name="DeviceInfo::DeviceSite::getClockRegionX">
-<area shape="rect" id="node1" title=" " alt="" coords="228,37,381,77"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_bin_info.html#ac07a09509c5f47ca215b4c3b60d20343" title="add a resource site into the bin" alt="" coords="5,5,180,45"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_clock_region.html#a742fee4138c51d1d39d2fb8963c3f9e3" title="Construct a new Clock Region object." alt="" coords="11,69,174,109"/>
+<area shape="rect" id="node1" title=" " alt="" coords="228,39,381,80"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_bin_info.html#ac07a09509c5f47ca215b4c3b60d20343" title="add a resource site into the bin" alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_clock_region.html#a742fee4138c51d1d39d2fb8963c3f9e3" title="Construct a new Clock Region object." alt="" coords="11,71,174,112"/>
 </map>

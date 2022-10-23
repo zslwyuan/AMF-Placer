@@ -1,11 +1,11 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addFF" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addFF">
-<area shape="rect" id="node1" title="try to add a given FF into this cluster" alt="" coords="1203,70,1441,125"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title="add CARRY&#45;related PlacementUnit into this CLB site" alt="" coords="948,5,1123,45"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a124f86e84e62e49093f76ea73b9f23ea" title="try to move FFs in Mux slot to other controlSet" alt="" coords="916,70,1155,125"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ade900004dbc40d457c5c002043cc873a" title="try to move FFs in Mux slot to other controlSet" alt="" coords="916,149,1155,203"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,5,868,45"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,5,681,45"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,5,489,45"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,5,303,45"/>
-<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
+<area shape="rect" id="node1" title="try to add a given FF into this cluster" alt="" coords="1203,70,1441,126"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title="add CARRY&#45;related PlacementUnit into this CLB site" alt="" coords="948,5,1123,47"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a124f86e84e62e49093f76ea73b9f23ea" title="try to move FFs in Mux slot to other controlSet" alt="" coords="916,70,1155,126"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ade900004dbc40d457c5c002043cc873a" title="try to move FFs in Mux slot to other controlSet" alt="" coords="916,150,1155,206"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="729,5,868,47"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,5,681,47"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,5,489,47"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,5,303,47"/>
+<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

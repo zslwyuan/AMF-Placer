@@ -1,7 +1,7 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPlacementUnitMaxPathLen" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPlacementUnitMaxPathLen">
-<area shape="rect" id="node1" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="5,62,244,117"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad460b2959e4362540e884149090aa204" title=" " alt="" coords="292,5,519,45"/>
-<area shape="rect" id="node3" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="301,69,510,109"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="310,134,501,159"/>
-<area shape="rect" id="node4" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="567,69,731,109"/>
+<area shape="rect" id="node1" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="5,63,244,119"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ad460b2959e4362540e884149090aa204" title=" " alt="" coords="292,5,519,47"/>
+<area shape="rect" id="node3" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="301,71,510,112"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="310,137,501,163"/>
+<area shape="rect" id="node4" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="567,71,731,112"/>
 </map>

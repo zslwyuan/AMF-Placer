@@ -1,12 +1,12 @@
 <map id="ClusterPlacer" name="ClusterPlacer">
-<area shape="rect" id="node1" title="ClusterPlacer will cluster nodes in the given netlist and place the clusters on the device based on s..." alt="" coords="996,107,1096,133"/>
-<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="626,18,733,43"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="201,53,379,93"/>
-<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,162,89,187"/>
+<area shape="rect" id="node1" title="ClusterPlacer will cluster nodes in the given netlist and place the clusters on the device based on s..." alt="" coords="996,108,1096,135"/>
+<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="626,17,733,44"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="201,54,379,95"/>
+<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,161,89,188"/>
 <area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="217,223,363,249"/>
 <area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,27,89,53"/>
-<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="592,333,767,387"/>
-<area shape="rect" id="node8" href="$class_s_a_placer.html" title=" " alt="" coords="641,67,718,93"/>
-<area shape="rect" id="node9" href="$class_graph_partitioner.html" title=" " alt="" coords="597,117,762,201"/>
-<area shape="rect" id="node10" href="$class_graph_partitioner.html" title=" " alt="" coords="600,225,759,309"/>
+<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="592,337,767,393"/>
+<area shape="rect" id="node8" href="$class_s_a_placer.html" title=" " alt="" coords="641,68,718,95"/>
+<area shape="rect" id="node9" href="$class_graph_partitioner.html" title=" " alt="" coords="597,119,762,204"/>
+<area shape="rect" id="node10" href="$class_graph_partitioner.html" title=" " alt="" coords="600,228,759,313"/>
 </map>

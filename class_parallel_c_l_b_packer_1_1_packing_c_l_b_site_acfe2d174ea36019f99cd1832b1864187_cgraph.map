@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::PackingCLBSite::compatibleInOneHalfCLB" name="ParallelCLBPacker::PackingCLBSite::compatibleInOneHalfCLB">
-<area shape="rect" id="node1" title="check whether two half CLB can be packed togather" alt="" coords="5,23,192,77"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title=" " alt="" coords="265,5,454,31"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ae113a0ab512bbd61cee586c6383f3c83" title=" " alt="" coords="240,55,479,109"/>
+<area shape="rect" id="node1" title="check whether two half CLB can be packed togather" alt="" coords="5,24,192,80"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title=" " alt="" coords="265,5,454,32"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ae113a0ab512bbd61cee586c6383f3c83" title=" " alt="" coords="240,56,479,112"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="ClusterPlacer::createUserDefinedClusterBasedClusterUnits" name="ClusterPlacer::createUserDefinedClusterBasedClusterUnits">
-<area shape="rect" id="node1" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="228,5,443,45"/>
-<area shape="rect" id="node2" href="$class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d" title="initially cluster cells based on user&#45;defined clusters and conduct connectivity&#45;based partitioning ba..." alt="" coords="5,5,180,45"/>
+<area shape="rect" id="node1" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="228,5,443,47"/>
+<area shape="rect" id="node2" href="$class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d" title="initially cluster cells based on user&#45;defined clusters and conduct connectivity&#45;based partitioning ba..." alt="" coords="5,5,180,47"/>
 </map>

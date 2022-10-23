@@ -1,7 +1,7 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::checkAddPU" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::checkAddPU">
-<area shape="rect" id="node1" title=" " alt="" coords="661,45,900,100"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title=" " alt="" coords="351,5,613,60"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title=" " alt="" coords="381,84,583,139"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,53,303,93"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,60,116,85"/>
+<area shape="rect" id="node1" title=" " alt="" coords="661,45,900,101"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title=" " alt="" coords="351,5,613,61"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title=" " alt="" coords="381,85,583,141"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,53,303,94"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,60,116,87"/>
 </map>

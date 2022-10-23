@@ -1,7 +1,7 @@
 <map id="DeviceInfo::ClockRegion::mapSiteToClockColumns" name="DeviceInfo::ClockRegion::mapSiteToClockColumns">
-<area shape="rect" id="node1" title="for the clock column constraints, we need to map site to columns." alt="" coords="5,99,180,139"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_clock_region.html#a9962a5906837db3837dd9871a72112e0" title="Get the Left boundary of the clock region." alt="" coords="228,5,391,45"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_clock_region.html#a159da42d1d44716c450c900bbdfbd703" title="Get the Right boundary of the clock region." alt="" coords="228,69,391,109"/>
-<area shape="rect" id="node4" href="$class_device_info.html#a642f56bb5214e579dccfdd67ef165adf" title=" " alt="" coords="240,134,379,159"/>
-<area shape="rect" id="node5" href="$class_device_info.html#a6e840bd8c98ed729f8b5ff328dab3e82" title=" " alt="" coords="245,183,374,209"/>
+<area shape="rect" id="node1" title="for the clock column constraints, we need to map site to columns." alt="" coords="5,100,180,141"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_clock_region.html#a9962a5906837db3837dd9871a72112e0" title="Get the Left boundary of the clock region." alt="" coords="228,5,391,47"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_clock_region.html#a159da42d1d44716c450c900bbdfbd703" title="Get the Right boundary of the clock region." alt="" coords="228,71,391,112"/>
+<area shape="rect" id="node4" href="$class_device_info.html#a642f56bb5214e579dccfdd67ef165adf" title=" " alt="" coords="240,137,379,163"/>
+<area shape="rect" id="node5" href="$class_device_info.html#a6e840bd8c98ed729f8b5ff328dab3e82" title=" " alt="" coords="245,187,374,214"/>
 </map>

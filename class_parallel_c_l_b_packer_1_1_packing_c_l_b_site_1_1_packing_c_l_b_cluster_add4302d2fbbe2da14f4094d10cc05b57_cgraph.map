@@ -1,8 +1,8 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getHash" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getHash">
-<area shape="rect" id="node1" title="Get the hash code for this cluster." alt="" coords="5,106,244,161"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title="we use a hash function to encode the cluster to easily check duplicated clusters in the candidates" alt="" coords="292,106,531,161"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7839574b3af61d1ad3117aa547dfce05" title=" " alt="" coords="591,5,799,45"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afbbc37ecef88e17c27b70d9982272e81" title=" " alt="" coords="598,70,793,125"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="608,149,783,189"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2e8820284a04ee0a7d615769f324970e" title=" " alt="" coords="579,213,812,253"/>
+<area shape="rect" id="node1" title="Get the hash code for this cluster." alt="" coords="5,106,244,162"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title="we use a hash function to encode the cluster to easily check duplicated clusters in the candidates" alt="" coords="292,106,531,162"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7839574b3af61d1ad3117aa547dfce05" title=" " alt="" coords="591,5,799,47"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afbbc37ecef88e17c27b70d9982272e81" title=" " alt="" coords="598,70,793,126"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="608,149,783,191"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2e8820284a04ee0a7d615769f324970e" title=" " alt="" coords="579,215,812,256"/>
 </map>

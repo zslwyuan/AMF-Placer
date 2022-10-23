@@ -1,5 +1,5 @@
 <map id="PlacementInfo::addPUIntoClockColumn" name="PlacementInfo::addPUIntoClockColumn">
-<area shape="rect" id="node1" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="5,37,180,77"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38" title=" " alt="" coords="239,5,392,45"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856" title=" " alt="" coords="228,69,403,109"/>
+<area shape="rect" id="node1" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="5,39,180,80"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38" title=" " alt="" coords="239,5,392,47"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856" title=" " alt="" coords="228,71,403,112"/>
 </map>

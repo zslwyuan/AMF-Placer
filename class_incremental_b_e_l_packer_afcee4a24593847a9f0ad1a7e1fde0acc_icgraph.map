@@ -1,4 +1,4 @@
 <map id="IncrementalBELPacker::FFPairing" name="IncrementalBELPacker::FFPairing">
-<area shape="rect" id="node1" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,45"/>
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
+<area shape="rect" id="node1" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,47"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

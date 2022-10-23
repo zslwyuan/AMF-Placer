@@ -1,8 +1,8 @@
 <map id="PlacementInfo::updateCells2PlacementUnits" name="PlacementInfo::updateCells2PlacementUnits">
-<area shape="rect" id="node1" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="368,99,555,139"/>
-<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,45"/>
-<area shape="rect" id="node4" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,69,320,109"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="178,134,306,159"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="171,184,313,224"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,106,116,131"/>
+<area shape="rect" id="node1" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="368,100,555,141"/>
+<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,47"/>
+<area shape="rect" id="node4" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,71,320,112"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="178,137,306,163"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="171,188,313,229"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,107,116,134"/>
 </map>

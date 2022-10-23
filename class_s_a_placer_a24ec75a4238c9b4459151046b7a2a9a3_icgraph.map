@@ -1,7 +1,7 @@
 <map id="SAPlacer::getCluster2XY" name="SAPlacer::getCluster2XY">
-<area shape="rect" id="node1" title=" " alt="" coords="905,5,1072,31"/>
-<area shape="rect" id="node2" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="672,5,857,31"/>
-<area shape="rect" id="node3" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,5,624,31"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,5,367,31"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,31"/>
+<area shape="rect" id="node1" title=" " alt="" coords="905,5,1072,32"/>
+<area shape="rect" id="node2" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location" alt="" coords="672,5,857,32"/>
+<area shape="rect" id="node3" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,5,624,32"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,5,367,32"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,32"/>
 </map>

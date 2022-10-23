@@ -1,6 +1,6 @@
 <map id="DesignInfo::isLUTRAM" name="DesignInfo::isLUTRAM">
-<area shape="rect" id="node1" title=" " alt="" coords="436,31,591,56"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation" alt="" coords="212,5,388,31"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a5c64afd9ea532c60965e7668a75dc79f" title=" " alt="" coords="231,55,369,80"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d" title="Construct a new AMFPlacer object according to a given placer configuration file." alt="" coords="5,55,164,80"/>
+<area shape="rect" id="node1" title=" " alt="" coords="436,31,591,57"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation" alt="" coords="212,5,388,32"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a5c64afd9ea532c60965e7668a75dc79f" title=" " alt="" coords="231,56,369,83"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d" title="Construct a new AMFPlacer object according to a given placer configuration file." alt="" coords="5,56,164,83"/>
 </map>

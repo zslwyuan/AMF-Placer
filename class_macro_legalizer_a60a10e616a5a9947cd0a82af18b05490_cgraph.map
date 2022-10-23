@@ -1,10 +1,10 @@
 <map id="MacroLegalizer::spreadMacros" name="MacroLegalizer::spreadMacros">
-<area shape="rect" id="node1" title="spread PlacementUnits accross columns to resolve resource overflow" alt="" coords="5,70,204,95"/>
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit" alt="" coords="495,5,669,45"/>
-<area shape="rect" id="node3" href="$class_macro_legalizer.html#a97a3de055e1e74a3d165f82f94d194fe" title="check whether the current macros can be fitted in the column legally." alt="" coords="252,63,427,103"/>
-<area shape="rect" id="node8" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="290,127,389,153"/>
-<area shape="rect" id="node4" href="$class_macro_legalizer.html#aca631ffd6d2c4fda5713fb1044c3ce1f" title=" " alt="" coords="475,70,689,95"/>
-<area shape="rect" id="node6" href="$class_macro_legalizer.html#a0dc1c0f76bc83c7da79fb99503ba8397" title=" " alt="" coords="498,120,666,160"/>
-<area shape="rect" id="node5" href="$class_macro_legalizer.html#aa58fa1b66ae80470c5a6483338aa854f" title=" " alt="" coords="747,70,914,95"/>
-<area shape="rect" id="node7" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title=" " alt="" coords="737,127,924,153"/>
+<area shape="rect" id="node1" title="spread PlacementUnits accross columns to resolve resource overflow" alt="" coords="5,71,204,98"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit" alt="" coords="495,5,669,47"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#a97a3de055e1e74a3d165f82f94d194fe" title="check whether the current macros can be fitted in the column legally." alt="" coords="252,64,427,105"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="290,130,389,157"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#aca631ffd6d2c4fda5713fb1044c3ce1f" title=" " alt="" coords="475,71,689,98"/>
+<area shape="rect" id="node6" href="$class_macro_legalizer.html#a0dc1c0f76bc83c7da79fb99503ba8397" title=" " alt="" coords="498,123,666,164"/>
+<area shape="rect" id="node5" href="$class_macro_legalizer.html#aa58fa1b66ae80470c5a6483338aa854f" title=" " alt="" coords="747,71,914,98"/>
+<area shape="rect" id="node7" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title=" " alt="" coords="737,130,924,157"/>
 </map>

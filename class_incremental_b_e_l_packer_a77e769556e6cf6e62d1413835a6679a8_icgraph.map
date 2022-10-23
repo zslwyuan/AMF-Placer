@@ -1,6 +1,6 @@
 <map id="IncrementalBELPacker::dumpPairedLUTFF" name="IncrementalBELPacker::dumpPairedLUTFF">
-<area shape="rect" id="node1" title=" " alt="" coords="368,37,524,77"/>
-<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,45"/>
-<area shape="rect" id="node4" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,69,320,109"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,45,116,70"/>
+<area shape="rect" id="node1" title=" " alt="" coords="368,39,524,80"/>
+<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="164,5,320,47"/>
+<area shape="rect" id="node4" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,71,320,112"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>

@@ -1,5 +1,5 @@
 <map id="DeviceInfo::addSiteTypes" name="DeviceInfo::addSiteTypes">
-<area shape="rect" id="node1" title="add a Site type into the set of the existing site types" alt="" coords="388,5,557,31"/>
-<area shape="rect" id="node2" href="$class_device_info.html#a8cef9864125f49998ee9f08594d8a02a" title="add a site into the device information class" alt="" coords="205,5,340,31"/>
-<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,31"/>
+<area shape="rect" id="node1" title="add a Site type into the set of the existing site types" alt="" coords="388,5,557,32"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a8cef9864125f49998ee9f08594d8a02a" title="add a site into the device information class" alt="" coords="205,5,340,32"/>
+<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,32"/>
 </map>

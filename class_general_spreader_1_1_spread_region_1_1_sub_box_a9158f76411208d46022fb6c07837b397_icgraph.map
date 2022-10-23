@@ -1,4 +1,4 @@
 <map id="GeneralSpreader::SpreadRegion::SubBox::RandomPivotPartition" name="GeneralSpreader::SpreadRegion::SubBox::RandomPivotPartition">
-<area shape="rect" id="node1" title="the partition/sort function for quick sorting by cell location (X or Y)" alt="" coords="260,29,467,69"/>
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a30bbd6c5b25a11cdcc2403d7f653d7af" title="recursive implementation of quick sort for cell ids by X/Y location" alt="" coords="5,29,212,69"/>
+<area shape="rect" id="node1" title="the partition/sort function for quick sorting by cell location (X or Y)" alt="" coords="260,29,467,71"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a30bbd6c5b25a11cdcc2403d7f653d7af" title="recursive implementation of quick sort for cell ids by X/Y location" alt="" coords="5,29,212,71"/>
 </map>

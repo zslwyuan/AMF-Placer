@@ -1,8 +1,8 @@
 <map id="PlacementInfo::setBELTypeForCells" name="PlacementInfo::setBELTypeForCells">
-<area shape="rect" id="node1" title=" " alt="" coords="5,88,188,128"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html#a3ea2f44470dec480669f06a2041f8d9f" title="set the mapping from cells in design netlist to BEL type ID for later processing." alt="" coords="236,88,477,128"/>
-<area shape="rect" id="node3" href="$class_device_info.html#a64d783b411441415fa8a8af207412e1b" title=" " alt="" coords="525,5,725,45"/>
-<area shape="rect" id="node4" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="557,70,694,95"/>
-<area shape="rect" id="node5" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="543,119,708,145"/>
-<area shape="rect" id="node6" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="580,169,671,194"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,89,188,131"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html#a3ea2f44470dec480669f06a2041f8d9f" title="set the mapping from cells in design netlist to BEL type ID for later processing." alt="" coords="236,89,477,131"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a64d783b411441415fa8a8af207412e1b" title=" " alt="" coords="525,5,725,47"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="557,71,694,98"/>
+<area shape="rect" id="node5" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="543,122,708,149"/>
+<area shape="rect" id="node6" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="580,173,671,199"/>
 </map>

@@ -1,9 +1,9 @@
 <map id="DeviceInfo::getBELType2FalseBELType" name="DeviceInfo::getBELType2FalseBELType">
-<area shape="rect" id="node1" title=" " alt="" coords="700,37,900,77"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#aed1228eac6380ba01bfcc417fa3405bb" title="get the remapped BEL type of a specific BEL type since some cell can be placed in sites of different ..." alt="" coords="436,5,627,45"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html#a3ea2f44470dec480669f06a2041f8d9f" title="set the mapping from cells in design netlist to BEL type ID for later processing." alt="" coords="411,69,652,109"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="164,13,363,38"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,38,116,63"/>
-<area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,62,327,87"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#ab3e0f7abb94737992d90bc284d1a7116" title=" " alt="" coords="172,112,355,152"/>
+<area shape="rect" id="node1" title=" " alt="" coords="700,39,900,80"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#aed1228eac6380ba01bfcc417fa3405bb" title="get the remapped BEL type of a specific BEL type since some cell can be placed in sites of different ..." alt="" coords="436,5,627,47"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html#a3ea2f44470dec480669f06a2041f8d9f" title="set the mapping from cells in design netlist to BEL type ID for later processing." alt="" coords="411,71,652,112"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="164,13,363,39"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,38,116,65"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,63,327,90"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#ab3e0f7abb94737992d90bc284d1a7116" title=" " alt="" coords="172,115,355,156"/>
 </map>

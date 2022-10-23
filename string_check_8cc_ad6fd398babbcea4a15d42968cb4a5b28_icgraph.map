@@ -1,10 +1,10 @@
 <map id="strContains" name="strContains">
-<area shape="rect" id="node1" title=" " alt="" coords="611,107,699,132"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="387,5,539,31"/>
-<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="164,81,316,107"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title="load the fixed elements (e.g., IOs) from the design file." alt="" coords="386,157,541,197"/>
-<area shape="rect" id="node7" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="385,221,541,261"/>
-<area shape="rect" id="node8" href="$class_device_info.html#a09cd7b043b5de8bae70533abb88ab03a" title="load the detailed location information of pins on PCIE IO slot" alt="" coords="364,107,563,132"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="176,196,304,221"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,196,116,221"/>
+<area shape="rect" id="node1" title=" " alt="" coords="611,107,699,133"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="387,5,539,32"/>
+<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="164,81,316,108"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title="load the fixed elements (e.g., IOs) from the design file." alt="" coords="386,158,541,199"/>
+<area shape="rect" id="node7" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="385,223,541,265"/>
+<area shape="rect" id="node8" href="$class_device_info.html#a09cd7b043b5de8bae70533abb88ab03a" title="load the detailed location information of pins on PCIE IO slot" alt="" coords="364,107,563,133"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="176,197,304,224"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,197,116,224"/>
 </map>

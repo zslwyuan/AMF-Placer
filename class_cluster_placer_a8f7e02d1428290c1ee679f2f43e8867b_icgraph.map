@@ -1,8 +1,8 @@
 <map id="ClusterPlacer::clockBasedPartitioning" name="ClusterPlacer::clockBasedPartitioning">
-<area shape="rect" id="node1" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1144,5,1319,45"/>
-<area shape="rect" id="node2" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="927,5,1096,45"/>
-<area shape="rect" id="node3" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="672,5,879,45"/>
-<area shape="rect" id="node4" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,13,624,38"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,13,367,38"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
+<area shape="rect" id="node1" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1144,5,1319,47"/>
+<area shape="rect" id="node2" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="927,5,1096,47"/>
+<area shape="rect" id="node3" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="672,5,879,47"/>
+<area shape="rect" id="node4" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,13,624,39"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,13,367,39"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

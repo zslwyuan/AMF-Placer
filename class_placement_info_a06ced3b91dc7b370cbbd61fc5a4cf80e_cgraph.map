@@ -1,11 +1,11 @@
 <map id="PlacementInfo::PlacementInfo" name="PlacementInfo::PlacementInfo">
-<area shape="rect" id="node1" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="5,223,201,248"/>
-<area shape="rect" id="node2" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="256,5,444,31"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a1689ee65df6294e3e1eba4edb7ce0ff2" title="Get the Max X of sites to identify the boundary of the device." alt="" coords="253,55,447,95"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#ab021b998d13b134daec018d6229838f2" title="Get the Max Y of sites to identify the boundary of the device." alt="" coords="253,119,447,159"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#aff4f4f687bc2fea0e6156e075bc78a18" title="Get the Min X of sites to identify the boundary of the device." alt="" coords="255,183,445,223"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a0ac2882447670ea1e898bbfcc1af07d6" title="Get the Min Y of sites to identify the boundary of the device." alt="" coords="255,247,445,287"/>
-<area shape="rect" id="node7" href="$class_device_info.html#a642f56bb5214e579dccfdd67ef165adf" title=" " alt="" coords="281,312,419,337"/>
-<area shape="rect" id="node8" href="$class_placement_info.html#a48c3f35082a8cad77c13e158da1cf1f5" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="249,362,451,402"/>
-<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="305,427,395,452"/>
+<area shape="rect" id="node1" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="5,228,201,255"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="256,5,444,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a1689ee65df6294e3e1eba4edb7ce0ff2" title="Get the Max X of sites to identify the boundary of the device." alt="" coords="253,57,447,98"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#ab021b998d13b134daec018d6229838f2" title="Get the Max Y of sites to identify the boundary of the device." alt="" coords="253,122,447,163"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#aff4f4f687bc2fea0e6156e075bc78a18" title="Get the Min X of sites to identify the boundary of the device." alt="" coords="255,187,445,229"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a0ac2882447670ea1e898bbfcc1af07d6" title="Get the Min Y of sites to identify the boundary of the device." alt="" coords="255,253,445,294"/>
+<area shape="rect" id="node7" href="$class_device_info.html#a642f56bb5214e579dccfdd67ef165adf" title=" " alt="" coords="281,319,419,345"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#a48c3f35082a8cad77c13e158da1cf1f5" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="249,370,451,411"/>
+<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="305,436,395,463"/>
 </map>

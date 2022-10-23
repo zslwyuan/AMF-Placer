@@ -1,4 +1,4 @@
 <map id="DesignInfo::DesignPin::getCell" name="DesignInfo::DesignPin::getCell">
-<area shape="rect" id="node1" title="Get the Cell object of the pin." alt="" coords="5,5,155,45"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#a03bd5af253c85b076bfe7f7c1d4c263e" title=" " alt="" coords="203,5,380,45"/>
+<area shape="rect" id="node1" title="Get the Cell object of the pin." alt="" coords="5,5,155,47"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#a03bd5af253c85b076bfe7f7c1d4c263e" title=" " alt="" coords="203,5,380,47"/>
 </map>

@@ -1,19 +1,19 @@
 <map id="GeneralSpreader::expandFromABin" name="GeneralSpreader::expandFromABin">
-<area shape="rect" id="node1" title="obtain a SpreadRegion by expanding a cell spreading window from an overflow bin" alt="" coords="5,301,229,326"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_bin_info.html#a9a6b8f14b2e9846512d70cc887d4a154" title="return the bottom boundary of the bin" alt="" coords="293,5,468,45"/>
-<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region.html#a446651a444487ed99a65e51d3f42d8e3" title="Get the bins in the SpreadRegion." alt="" coords="277,69,484,109"/>
-<area shape="rect" id="node4" href="$class_general_spreader_1_1_spread_region.html#a7f1120285309224c86df14a528210384" title="Get the resource overflow ratio." alt="" coords="277,133,484,173"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_bin_info.html#a130a28c355550103d5b182e8a3f2bdd3" title="return the left boundary of the bin" alt="" coords="293,197,468,237"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_bin_info.html#a8719bfa8827c56d4d0cd4a4757783035" title="return the right boundary of the bin" alt="" coords="293,261,468,301"/>
-<area shape="rect" id="node7" href="$class_general_spreader_1_1_spread_region.html#a018a71d80eb4eca9688185eb86a747d0" title="select the the expansion direction which is found in a pre&#45;defined order" alt="" coords="277,325,484,365"/>
-<area shape="rect" id="node11" href="$class_general_spreader_1_1_spread_region.html#ae8f8a8b2640070fddbc31e45edafb230" title="find the expansion direction iteratively in pre&#45;defined order" alt="" coords="277,453,484,493"/>
-<area shape="rect" id="node13" href="$class_general_spreader_1_1_spread_region.html#ab23f4c703b4366bd79f7acbc5c44d244" title="select the expansion direction greedily" alt="" coords="277,389,484,429"/>
-<area shape="rect" id="node15" href="$class_general_spreader_1_1_spread_region.html#a2e1749090b206dcc6bc40542336d3ecc" title="find the legal expansion direction" alt="" coords="277,517,484,557"/>
-<area shape="rect" id="node17" href="$class_placement_info_1_1_placement_bin_info.html#a87d338a198f9847c9ccc231b261d37b9" title="return the top boundary of the bin" alt="" coords="293,581,468,621"/>
-<area shape="rect" id="node8" href="$class_general_spreader_1_1_spread_region.html#a4313cc8215453bbea8123e077d73bb81" title="add cell bins into SpreadRegion with a new boundary and update region information including boundary ..." alt="" coords="532,325,739,365"/>
-<area shape="rect" id="node9" href="$class_general_spreader_1_1_spread_region.html#af6422a9e739bc8c8c84551db16d55b8e" title="Get the cells in the SpreadRegion." alt="" coords="787,293,993,333"/>
-<area shape="rect" id="node10" href="$class_general_spreader_1_1_spread_region.html#a0ac209c9c1347669b83be9e6d1bf029e" title="check whether the SpreadRegion is overlapped with a given boundary" alt="" coords="787,357,993,397"/>
-<area shape="rect" id="node12" href="$class_general_spreader_1_1_spread_region.html#a128b368690e276b0eccd3bfc68047dac" title="check whether an expansion in a given direction will make the SpreadRegion overlapped with some bins ..." alt="" coords="532,453,739,493"/>
-<area shape="rect" id="node14" href="$class_general_spreader_1_1_spread_region.html#aed77d41dc86181471f596e338193002c" title=" " alt="" coords="532,389,739,429"/>
-<area shape="rect" id="node16" href="$class_general_spreader_1_1_spread_region.html#ac1de28ec53a39a4082076020bdb6ad8c" title="evaluation the utilization and capacity of the incoming bins which will be included in the SpreadRegi..." alt="" coords="532,517,739,557"/>
+<area shape="rect" id="node1" title="obtain a SpreadRegion by expanding a cell spreading window from an overflow bin" alt="" coords="5,307,229,334"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_bin_info.html#a9a6b8f14b2e9846512d70cc887d4a154" title="return the bottom boundary of the bin" alt="" coords="293,5,468,47"/>
+<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region.html#a446651a444487ed99a65e51d3f42d8e3" title="Get the bins in the SpreadRegion." alt="" coords="277,71,484,112"/>
+<area shape="rect" id="node4" href="$class_general_spreader_1_1_spread_region.html#a7f1120285309224c86df14a528210384" title="Get the resource overflow ratio." alt="" coords="277,136,484,177"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_bin_info.html#a130a28c355550103d5b182e8a3f2bdd3" title="return the left boundary of the bin" alt="" coords="293,201,468,243"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_bin_info.html#a8719bfa8827c56d4d0cd4a4757783035" title="return the right boundary of the bin" alt="" coords="293,267,468,308"/>
+<area shape="rect" id="node7" href="$class_general_spreader_1_1_spread_region.html#a018a71d80eb4eca9688185eb86a747d0" title="select the the expansion direction which is found in a pre&#45;defined order" alt="" coords="277,332,484,373"/>
+<area shape="rect" id="node11" href="$class_general_spreader_1_1_spread_region.html#ae8f8a8b2640070fddbc31e45edafb230" title="find the expansion direction iteratively in pre&#45;defined order" alt="" coords="277,463,484,504"/>
+<area shape="rect" id="node13" href="$class_general_spreader_1_1_spread_region.html#ab23f4c703b4366bd79f7acbc5c44d244" title="select the expansion direction greedily" alt="" coords="277,397,484,439"/>
+<area shape="rect" id="node15" href="$class_general_spreader_1_1_spread_region.html#a2e1749090b206dcc6bc40542336d3ecc" title="find the legal expansion direction" alt="" coords="277,528,484,569"/>
+<area shape="rect" id="node17" href="$class_placement_info_1_1_placement_bin_info.html#a87d338a198f9847c9ccc231b261d37b9" title="return the top boundary of the bin" alt="" coords="293,593,468,635"/>
+<area shape="rect" id="node8" href="$class_general_spreader_1_1_spread_region.html#a4313cc8215453bbea8123e077d73bb81" title="add cell bins into SpreadRegion with a new boundary and update region information including boundary ..." alt="" coords="532,332,739,373"/>
+<area shape="rect" id="node9" href="$class_general_spreader_1_1_spread_region.html#af6422a9e739bc8c8c84551db16d55b8e" title="Get the cells in the SpreadRegion." alt="" coords="787,300,993,341"/>
+<area shape="rect" id="node10" href="$class_general_spreader_1_1_spread_region.html#a0ac209c9c1347669b83be9e6d1bf029e" title="check whether the SpreadRegion is overlapped with a given boundary" alt="" coords="787,365,993,407"/>
+<area shape="rect" id="node12" href="$class_general_spreader_1_1_spread_region.html#a128b368690e276b0eccd3bfc68047dac" title="check whether an expansion in a given direction will make the SpreadRegion overlapped with some bins ..." alt="" coords="532,463,739,504"/>
+<area shape="rect" id="node14" href="$class_general_spreader_1_1_spread_region.html#aed77d41dc86181471f596e338193002c" title=" " alt="" coords="532,397,739,439"/>
+<area shape="rect" id="node16" href="$class_general_spreader_1_1_spread_region.html#ac1de28ec53a39a4082076020bdb6ad8c" title="evaluation the utilization and capacity of the incoming bins which will be included in the SpreadRegi..." alt="" coords="532,528,739,569"/>
 </map>

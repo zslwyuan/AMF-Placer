@@ -1,36 +1,36 @@
 <map id="InitialPacker::findBRAMMacros" name="InitialPacker::findBRAMMacros">
-<area shape="rect" id="node1" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="5,1122,207,1147"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="255,581,429,621"/>
-<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="255,741,429,781"/>
-<area shape="rect" id="node22" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="255,805,429,845"/>
-<area shape="rect" id="node27" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="482,1207,647,1233"/>
-<area shape="rect" id="node28" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title="BFS to find the core cells of a macro based on some pre&#45;defined patterns of cascaded cells." alt="" coords="258,1085,426,1125"/>
-<area shape="rect" id="node30" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="273,1150,411,1175"/>
-<area shape="rect" id="node31" href="$class_placement_info_1_1_placement_macro.html#a10685875692186ba2a95623ec871637c" title=" " alt="" coords="255,1200,429,1240"/>
-<area shape="rect" id="node32" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="305,1265,379,1290"/>
-<area shape="rect" id="node33" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="297,1314,387,1339"/>
-<area shape="rect" id="node34" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="255,1364,429,1404"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="477,389,652,429"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="477,453,652,493"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="477,517,652,557"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#adb09a5119212197bddd75634241baaa2" title=" " alt="" coords="477,133,652,173"/>
-<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#a34b224d1c2aa243ad1f9003fe2b88797" title=" " alt="" coords="477,581,652,621"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title=" " alt="" coords="477,645,652,685"/>
-<area shape="rect" id="node9" href="$class_placement_info_1_1_placement_unit.html#a06cbf23f1032d78a25997e727374f415" title=" " alt="" coords="477,709,652,749"/>
-<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html#aac2fb10ed37806637102fa6fbba9a32d" title="Get the clock nets connected to this cell for later legalization." alt="" coords="489,773,641,813"/>
-<area shape="rect" id="node11" href="$class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="489,837,641,877"/>
-<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="489,901,641,941"/>
-<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="489,965,641,1005"/>
-<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="489,197,641,237"/>
-<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="489,1029,641,1069"/>
-<area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="489,1093,641,1133"/>
-<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="489,261,641,301"/>
-<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="489,5,641,45"/>
-<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="489,325,641,365"/>
-<area shape="rect" id="node20" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="489,69,641,109"/>
-<area shape="rect" id="node23" href="$class_design_info.html#acf8cb1949ad57e908d9a942c21ea4478" title="add a cell into the design information" alt="" coords="498,1158,631,1183"/>
-<area shape="rect" id="node24" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="713,1233,865,1273"/>
-<area shape="rect" id="node25" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="700,1160,877,1200"/>
-<area shape="rect" id="node26" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="739,1110,838,1135"/>
-<area shape="rect" id="node29" href="$class_design_info_1_1_design_cell.html#af6d1f6d7609262c31df1b6ffdc6210a9" title=" " alt="" coords="489,1308,641,1348"/>
+<area shape="rect" id="node1" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="5,1145,207,1171"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="255,593,429,635"/>
+<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="255,757,429,799"/>
+<area shape="rect" id="node22" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="255,823,429,864"/>
+<area shape="rect" id="node27" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="482,1233,647,1259"/>
+<area shape="rect" id="node28" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title="BFS to find the core cells of a macro based on some pre&#45;defined patterns of cascaded cells." alt="" coords="258,1108,426,1149"/>
+<area shape="rect" id="node30" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="273,1174,411,1201"/>
+<area shape="rect" id="node31" href="$class_placement_info_1_1_placement_macro.html#a10685875692186ba2a95623ec871637c" title=" " alt="" coords="255,1225,429,1267"/>
+<area shape="rect" id="node32" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="305,1291,379,1318"/>
+<area shape="rect" id="node33" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="297,1342,387,1369"/>
+<area shape="rect" id="node34" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="255,1393,429,1435"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a87e81b83d380618c94126341bd8e0bc6" title=" " alt="" coords="477,397,652,439"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a1c92783d735eb2efde61fd770c4d831b" title=" " alt="" coords="477,463,652,504"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a1b017b4659cebf101c8ea3958b7acad2" title=" " alt="" coords="477,528,652,569"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#adb09a5119212197bddd75634241baaa2" title=" " alt="" coords="477,136,652,177"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#a34b224d1c2aa243ad1f9003fe2b88797" title=" " alt="" coords="477,593,652,635"/>
+<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title=" " alt="" coords="477,659,652,700"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_placement_unit.html#a06cbf23f1032d78a25997e727374f415" title=" " alt="" coords="477,724,652,765"/>
+<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html#aac2fb10ed37806637102fa6fbba9a32d" title="Get the clock nets connected to this cell for later legalization." alt="" coords="489,789,641,831"/>
+<area shape="rect" id="node11" href="$class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="489,855,641,896"/>
+<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#aa9893e52f6a89fc05dc9ceb883efb0b1" title=" " alt="" coords="489,920,641,961"/>
+<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="489,985,641,1027"/>
+<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="489,201,641,243"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="489,1051,641,1092"/>
+<area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="489,1116,641,1157"/>
+<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="489,267,641,308"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="489,5,641,47"/>
+<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="489,332,641,373"/>
+<area shape="rect" id="node20" href="$class_design_info_1_1_design_cell.html#ae2c5c62545323619601a630b184f7ba9" title="Set the Virtual Type object which might override the actual type in later processing." alt="" coords="489,71,641,112"/>
+<area shape="rect" id="node23" href="$class_design_info.html#acf8cb1949ad57e908d9a942c21ea4478" title="add a cell into the design information" alt="" coords="498,1182,631,1209"/>
+<area shape="rect" id="node24" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="713,1259,865,1300"/>
+<area shape="rect" id="node25" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="700,1184,877,1225"/>
+<area shape="rect" id="node26" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="739,1133,838,1159"/>
+<area shape="rect" id="node29" href="$class_design_info_1_1_design_cell.html#af6d1f6d7609262c31df1b6ffdc6210a9" title=" " alt="" coords="489,1335,641,1376"/>
 </map>

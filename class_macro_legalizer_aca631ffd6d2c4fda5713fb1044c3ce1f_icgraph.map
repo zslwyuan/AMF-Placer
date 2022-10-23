@@ -1,12 +1,12 @@
 <map id="MacroLegalizer::sortPUsByPU2Y" name="MacroLegalizer::sortPUsByPU2Y">
-<area shape="rect" id="node1" title=" " alt="" coords="1844,42,2059,67"/>
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#a97a3de055e1e74a3d165f82f94d194fe" title="check whether the current macros can be fitted in the column legally." alt="" coords="1621,5,1796,45"/>
-<area shape="rect" id="node10" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="1347,63,1573,103"/>
-<area shape="rect" id="node3" href="$class_macro_legalizer.html#a60a10e616a5a9947cd0a82af18b05490" title="spread PlacementUnits accross columns to resolve resource overflow" alt="" coords="1361,13,1559,38"/>
-<area shape="rect" id="node4" href="$class_macro_legalizer.html#a5a30f90a83079d26bf7e058997847542" title="resolve the overflow columns during fixed column legalization by spreading &quot;outliers&quot; to neighbor col..." alt="" coords="1089,5,1299,45"/>
-<area shape="rect" id="node5" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="855,5,1041,45"/>
-<area shape="rect" id="node6" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,42,807,67"/>
-<area shape="rect" id="node7" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="413,42,600,67"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,35,365,75"/>
-<area shape="rect" id="node9" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,42,116,67"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1844,42,2059,69"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#a97a3de055e1e74a3d165f82f94d194fe" title="check whether the current macros can be fitted in the column legally." alt="" coords="1621,5,1796,47"/>
+<area shape="rect" id="node10" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="1347,64,1573,105"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#a60a10e616a5a9947cd0a82af18b05490" title="spread PlacementUnits accross columns to resolve resource overflow" alt="" coords="1361,13,1559,39"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#a5a30f90a83079d26bf7e058997847542" title="resolve the overflow columns during fixed column legalization by spreading &quot;outliers&quot; to neighbor col..." alt="" coords="1089,5,1299,47"/>
+<area shape="rect" id="node5" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="855,5,1041,47"/>
+<area shape="rect" id="node6" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,42,807,69"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="413,42,600,69"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,35,365,76"/>
+<area shape="rect" id="node9" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,42,116,69"/>
 </map>

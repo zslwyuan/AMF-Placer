@@ -1,7 +1,7 @@
 <map id="PlacementInfo::getBinGridW" name="PlacementInfo::getBinGridW">
-<area shape="rect" id="node1" title="Get the width of a bin in grid." alt="" coords="668,42,853,67"/>
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#ab4484e67518a9cb6593ae2e550769a1c" title="split horizontally the SubBox into smaller ones and assign cells to them" alt="" coords="413,5,620,45"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="437,70,596,95"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,63,365,103"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,70,116,95"/>
+<area shape="rect" id="node1" title="Get the width of a bin in grid." alt="" coords="668,42,853,69"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#ab4484e67518a9cb6593ae2e550769a1c" title="split horizontally the SubBox into smaller ones and assign cells to them" alt="" coords="413,5,620,47"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="437,71,596,98"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,64,365,105"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,71,116,98"/>
 </map>

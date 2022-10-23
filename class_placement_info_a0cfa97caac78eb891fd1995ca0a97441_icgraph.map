@@ -1,14 +1,14 @@
 <map id="PlacementInfo::isLegalLocation" name="PlacementInfo::isLegalLocation">
-<area shape="rect" id="node1" title="check whether the PlacementUnit is legalized in the device area when a cell in it is placed at target..." alt="" coords="1343,99,1547,125"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a21503dd1a3f80dd7fb6d5fbc42dc3bbc" title="find potential sites for each PlacementUnit" alt="" coords="1113,60,1289,100"/>
-<area shape="rect" id="node9" href="$class_macro_legalizer.html#a291c9e58885f27b964c86162bb3aa4ae" title="find potential sites for each PlacementUnit" alt="" coords="1108,124,1295,164"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="869,5,1045,45"/>
-<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization." alt="" coords="860,70,1055,95"/>
-<area shape="rect" id="node4" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="653,70,802,95"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="413,99,600,125"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,92,365,132"/>
-<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,99,116,125"/>
-<area shape="rect" id="node10" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="864,120,1051,160"/>
-<area shape="rect" id="node12" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="855,185,1060,210"/>
-<area shape="rect" id="node11" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,127,807,153"/>
+<area shape="rect" id="node1" title="check whether the PlacementUnit is legalized in the device area when a cell in it is placed at target..." alt="" coords="1343,102,1547,129"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a21503dd1a3f80dd7fb6d5fbc42dc3bbc" title="find potential sites for each PlacementUnit" alt="" coords="1113,61,1289,103"/>
+<area shape="rect" id="node9" href="$class_macro_legalizer.html#a291c9e58885f27b964c86162bb3aa4ae" title="find potential sites for each PlacementUnit" alt="" coords="1108,127,1295,168"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="869,5,1045,47"/>
+<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization." alt="" coords="860,71,1055,98"/>
+<area shape="rect" id="node4" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="653,71,802,98"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="413,101,600,127"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,93,365,135"/>
+<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,101,116,127"/>
+<area shape="rect" id="node10" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="864,123,1051,164"/>
+<area shape="rect" id="node12" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="855,189,1060,215"/>
+<area shape="rect" id="node11" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,130,807,157"/>
 </map>

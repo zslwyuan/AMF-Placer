@@ -1,7 +1,7 @@
 <map id="PlacementInfo::CompatiblePlacementTable::getOccupation" name="PlacementInfo::CompatiblePlacementTable::getOccupation">
-<area shape="rect" id="node1" title="Get the theoratical occupation of a specific cell type." alt="" coords="584,27,791,67"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#ab04a741133713dd314e3b10b13767d44" title="Get the theoratical occupation of a specific cell type." alt="" coords="340,5,536,31"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="360,55,516,95"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,63,292,88"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,63,116,88"/>
+<area shape="rect" id="node1" title="Get the theoratical occupation of a specific cell type." alt="" coords="584,27,791,69"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#ab04a741133713dd314e3b10b13767d44" title="Get the theoratical occupation of a specific cell type." alt="" coords="340,5,536,32"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="360,57,516,98"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,64,292,91"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,64,116,91"/>
 </map>

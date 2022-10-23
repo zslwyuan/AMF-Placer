@@ -1,7 +1,7 @@
 <map id="GeneralSpreader::SpreadRegion::SubBox::spreadCellsV" name="GeneralSpreader::SpreadRegion::SubBox::spreadCellsV">
-<area shape="rect" id="node1" title="split vertically the SubBox into smaller ones and assign cells to them" alt="" coords="5,70,212,110"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d" title="Get the Actual Occupation By Cell Id." alt="" coords="284,13,451,53"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a238916a1570ece89d7d1b5907b7ddd22" title="Get the height of a bin in grid." alt="" coords="276,77,459,103"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="260,127,475,152"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html#a5cfe1024c3908d336040aa5df6a9daf3" title="Get the Actual Occupation By Cell Id." alt="" coords="523,5,765,60"/>
+<area shape="rect" id="node1" title="split vertically the SubBox into smaller ones and assign cells to them" alt="" coords="5,71,212,113"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a515b1cf1a35f7034e84b4be67706d29d" title="Get the Actual Occupation By Cell Id." alt="" coords="284,13,451,54"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a238916a1570ece89d7d1b5907b7ddd22" title="Get the height of a bin in grid." alt="" coords="276,79,459,105"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="260,129,475,156"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_compatible_placement_table.html#a5cfe1024c3908d336040aa5df6a9daf3" title="Get the Actual Occupation By Cell Id." alt="" coords="523,5,765,61"/>
 </map>

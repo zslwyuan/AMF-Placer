@@ -1,4 +1,4 @@
 <map id="ParallelCLBPacker::PackingCLBSite::checkIsMuxSite" name="ParallelCLBPacker::PackingCLBSite::checkIsMuxSite">
-<area shape="rect" id="node1" title=" " alt="" coords="5,13,223,53"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a956bdd3562fa3d798d3e52ce0fe4052f" title="Get the total number of MUX cells in this cluster." alt="" coords="271,5,509,60"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,223,54"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a956bdd3562fa3d798d3e52ce0fe4052f" title="Get the total number of MUX cells in this cluster." alt="" coords="271,5,509,61"/>
 </map>

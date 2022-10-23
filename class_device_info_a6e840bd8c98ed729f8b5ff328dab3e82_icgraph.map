@@ -1,4 +1,4 @@
 <map id="DeviceInfo::getTile" name="DeviceInfo::getTile">
-<area shape="rect" id="node1" title=" " alt="" coords="228,13,357,38"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_clock_region.html#a83c8ee86be388d609d42fa5a8fcea97a" title="for the clock column constraints, we need to map site to columns." alt="" coords="5,5,180,45"/>
+<area shape="rect" id="node1" title=" " alt="" coords="228,13,357,39"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_clock_region.html#a83c8ee86be388d609d42fa5a8fcea97a" title="for the clock column constraints, we need to map site to columns." alt="" coords="5,5,180,47"/>
 </map>

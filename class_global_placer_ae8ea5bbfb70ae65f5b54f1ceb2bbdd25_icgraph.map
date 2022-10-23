@@ -1,4 +1,4 @@
 <map id="GlobalPlacer::setNeighborDisplacementUpperbound" name="GlobalPlacer::setNeighborDisplacementUpperbound">
-<area shape="rect" id="node1" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion." alt="" coords="164,5,336,45"/>
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,38"/>
+<area shape="rect" id="node1" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion." alt="" coords="164,5,336,47"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>
