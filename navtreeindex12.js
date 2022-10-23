@@ -1,5 +1,7 @@
 var NAVTREEINDEX12 =
 {
+"namespaceexport_device_location.html#a1600af189684609ee12db693dd258469":[24,0,6,14],
+"namespaceexport_device_location.html#a278280f66ad6f9cc8f142291ca6c31c2":[24,0,6,15],
 "namespaceexport_device_location.html#a32ece59f58301347ed5a365cf5b4f22a":[24,0,6,10],
 "namespaceexport_device_location.html#a339ba6e3118c848c002c064783e58b16":[24,0,6,29],
 "namespaceexport_device_location.html#a36fece20998e5de299cc35065e58ec85":[24,0,6,21],
@@ -247,7 +249,5 @@ var NAVTREEINDEX12 =
 "struct_general_spreader_1_1_spread_region_1_1expand_op.html#ace8132e014bd5046a0ce8a6c1dccb5b8":[25,0,9,0,0,5],
 "struct_general_spreader_1_1_spread_region_1_1expand_op.html#ae65bb6ed266ff3454a4d6132ea522118":[25,0,9,0,0,7],
 "struct_incremental_b_e_l_packer_1_1___cell_with_score.html":[25,0,12,0],
-"struct_incremental_b_e_l_packer_1_1___cell_with_score.html#a1de1ee357a3ff5aed25c8461f72e7982":[25,0,12,0,0],
-"struct_incremental_b_e_l_packer_1_1___cell_with_score.html#a6730dbf3ce4865454dfe8f8f7ae6cfb4":[25,0,12,0,1],
-"struct_incremental_b_e_l_packer_1_1___cell_with_score.html#ad0dbeaf969180f698cbcab1498def74d":[25,0,12,0,2]
+"struct_incremental_b_e_l_packer_1_1___cell_with_score.html#a1de1ee357a3ff5aed25c8461f72e7982":[25,0,12,0,0]
 };

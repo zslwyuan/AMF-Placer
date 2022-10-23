@@ -1,5 +1,7 @@
 var NAVTREEINDEX13 =
 {
+"struct_incremental_b_e_l_packer_1_1___cell_with_score.html#a6730dbf3ce4865454dfe8f8f7ae6cfb4":[25,0,12,0,1],
+"struct_incremental_b_e_l_packer_1_1___cell_with_score.html#ad0dbeaf969180f698cbcab1498def74d":[25,0,12,0,2],
 "struct_incremental_b_e_l_packer_1_1___p_u_with_score.html":[25,0,12,1],
 "struct_incremental_b_e_l_packer_1_1___p_u_with_score.html#a2f0572c038774bfecc0f30ca09cf708b":[25,0,12,1,2],
 "struct_incremental_b_e_l_packer_1_1___p_u_with_score.html#aec04f84b191486da5c59c6f8355fbc4e":[25,0,12,1,1],
