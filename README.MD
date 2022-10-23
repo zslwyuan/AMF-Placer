@@ -3,11 +3,11 @@
 ![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)   <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_code.svg" alt="LoCCode" title="LoCCode" height="18" /> 
   <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_comment.svg" alt="LoCComment" title="LoCComment" height="18" /> 
 
-
+# WARNING: !!! Timing-driven version is not released yet !!! The version you are cloning is the wirelength-driven !!!!!!
 
 ## Introduction
 
-AMF-Placer is an open-source analytical mixed-size FPGA placer supporting mixed-size placement on FPGA, with an interface to
+AMF-Placer is an open-source analytical mixed-size FPGA placer supporting heterogeneous resources (LUT/FF/LUTRAM/MUX/CARRY/DSP/BRAM...) on FPGA, with an interface to
 Xilinx Vivado. To speed up the convergence and improve the quality of the placement, AMF-Placer is equipped with
 a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Based on a set
 of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results
