@@ -1,4 +1,3 @@
 <map id="WirelengthOptimizer::solverLoadFixedData" name="WirelengthOptimizer::solverLoadFixedData">
-<area shape="rect" id="node1" title="load to placement location of fixed PlacementUnits from PlacementInfo to the solver" alt="" coords="5,5,156,47"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="204,5,396,47"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="204,5,396,47"/>
 </map>

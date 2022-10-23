@@ -1,4 +1,4 @@
 <map id="PlacementInfo::printStat" name="PlacementInfo::printStat">
-<area shape="rect" id="node1" title=" " alt="" coords="164,5,325,32"/>
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="261,5,371,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a293642a90f1b3266cca289dfc5d2e57f" title="PlacementInfo::~PlacementInfo" alt="" coords="215,56,417,83"/>
 </map>

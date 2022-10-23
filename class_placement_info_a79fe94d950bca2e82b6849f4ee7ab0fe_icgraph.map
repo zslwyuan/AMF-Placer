@@ -1,0 +1,18 @@
+<map id="PlacementInfo::getPULegalXY" name="PlacementInfo::getPULegalXY">
+<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites " alt="" coords="269,156,445,197"/>
+<area shape="rect" id="node12" href="$class_a_m_f_placer.html#a3bc63638c6fcf4e1d4a2ec2cfa3c2b99" title="AMFPlacer::clearSomeAttributes\lCannotRecord" alt="" coords="252,250,463,292"/>
+<area shape="rect" id="node13" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title="MacroLegalizer::dumpMatching" alt="" coords="257,75,458,102"/>
+<area shape="rect" id="node15" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="792,42,979,68"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model. " alt="" coords="545,156,698,197"/>
+<area shape="rect" id="node11" href="$class_wirelength_optimizer.html#ad26ea78722d723916bf8a10678924dab" title="WirelengthOptimizer\l::setSlackPowerFactor" alt="" coords="545,221,698,262"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="796,156,975,197"/>
+<area shape="rect" id="node9" href="$class_wirelength_optimizer.html#abf14be2c0b76b515bdc136b06a6e197f" title="WirelengthOptimizer\l::~WirelengthOptimizer" alt="" coords="1064,221,1215,262"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1039,25,1240,66"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages, e.g., just after initial placement " alt="" coords="1039,90,1240,132"/>
+<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="1070,156,1209,197"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1324,127,1435,154"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1288,70,1471,96"/>
+<area shape="rect" id="node14" href="$class_macro_legalizer.html#a818b3fa99d17c2ecb9720f0746ed9580" title="Get the average displacement of rough legalization for the involved PlacementUnit. " alt="" coords="511,38,732,80"/>
+<area shape="rect" id="node16" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="542,104,701,131"/>
+<area shape="rect" id="node17" href="$class_macro_legalizer.html#aafa0aa1d5ea5195c3e7d406ed36be8f4" title="MacroLegalizer::~MacroLegalizer" alt="" coords="780,104,991,131"/>
+</map>

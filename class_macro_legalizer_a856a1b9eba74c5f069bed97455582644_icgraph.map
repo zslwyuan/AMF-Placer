@@ -1,0 +1,10 @@
+<map id="MacroLegalizer::spreadMacros" name="MacroLegalizer::spreadMacros">
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#a5a30f90a83079d26bf7e058997847542" title="resolve the overflow columns during fixed column legalization by spreading &quot;outliers&quot; to neighbor col..." alt="" coords="252,49,461,90"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization..." alt="" coords="509,49,696,90"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="744,56,903,83"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="963,31,1149,57"/>
+<area shape="rect" id="node9" href="$class_macro_legalizer.html#aafa0aa1d5ea5195c3e7d406ed36be8f4" title="MacroLegalizer::~MacroLegalizer" alt="" coords="951,81,1161,108"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1209,23,1411,65"/>
+<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1495,5,1605,32"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1459,56,1641,83"/>
+</map>

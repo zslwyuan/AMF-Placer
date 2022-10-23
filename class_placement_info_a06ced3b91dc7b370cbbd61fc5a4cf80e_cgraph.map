@@ -1,11 +1,17 @@
 <map id="PlacementInfo::PlacementInfo" name="PlacementInfo::PlacementInfo">
-<area shape="rect" id="node1" title="Construct a new Placement Info object based on the information of design and device." alt="" coords="5,228,201,255"/>
-<area shape="rect" id="node2" href="$class_device_info.html#a930f94a136ef6a01d7cde70d884a119b" title=" " alt="" coords="256,5,444,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a1689ee65df6294e3e1eba4edb7ce0ff2" title="Get the Max X of sites to identify the boundary of the device." alt="" coords="253,57,447,98"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#ab021b998d13b134daec018d6229838f2" title="Get the Max Y of sites to identify the boundary of the device." alt="" coords="253,122,447,163"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#aff4f4f687bc2fea0e6156e075bc78a18" title="Get the Min X of sites to identify the boundary of the device." alt="" coords="255,187,445,229"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a0ac2882447670ea1e898bbfcc1af07d6" title="Get the Min Y of sites to identify the boundary of the device." alt="" coords="255,253,445,294"/>
-<area shape="rect" id="node7" href="$class_device_info.html#a642f56bb5214e579dccfdd67ef165adf" title=" " alt="" coords="281,319,419,345"/>
-<area shape="rect" id="node8" href="$class_placement_info.html#a48c3f35082a8cad77c13e158da1cf1f5" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="249,370,451,411"/>
-<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="305,436,395,463"/>
+<area shape="rect" id="node2" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="869,13,959,40"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a3211c615bca9aaf80ce628804f6fed9a" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="249,103,451,144"/>
+<area shape="rect" id="node11" href="$class_placement_info.html#aa6b6562c01361375a184d1492f2bfd98" title="Get the Min X of sites to identify the boundary of the device. " alt="" coords="255,168,445,210"/>
+<area shape="rect" id="node12" href="$class_device_info.html#a8427dc1cb4261c1c1971675632ca728b" title="DeviceInfo::getSites" alt="" coords="281,234,419,261"/>
+<area shape="rect" id="node13" href="$class_placement_info.html#a67d59e59f7682fcc707719c46db5827f" title="Get the Min Y of sites to identify the boundary of the device. " alt="" coords="255,286,445,327"/>
+<area shape="rect" id="node14" href="$class_placement_info.html#aa82d8c341ba52118a725a9ca8d6002e8" title="Get the Max X of sites to identify the boundary of the device. " alt="" coords="253,351,447,392"/>
+<area shape="rect" id="node15" href="$class_placement_info.html#ac43ca961cec2b1eb8c3f481f84b715a5" title="Get the Max Y of sites to identify the boundary of the device. " alt="" coords="253,416,447,458"/>
+<area shape="rect" id="node16" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title="DeviceInfo::getClockRegions" alt="" coords="256,482,444,509"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object. " alt="" coords="499,115,780,156"/>
+<area shape="rect" id="node5" href="$class_device_info.html#a72d51c4792531a76108d055b08b0b26e" title="get BEL types in the device " alt="" coords="830,64,998,90"/>
+<area shape="rect" id="node6" href="$class_design_info.html#adf0324cc2aabb175c21af7242f26a0e7" title="translate a string into a DesignCellType for a cell " alt="" coords="831,115,997,156"/>
+<area shape="rect" id="node8" href="$class_design_info.html#a2b8fc85cd30478066bda330c8fd0d549" title="DesignInfo::getType2Cells" alt="" coords="828,181,1000,208"/>
+<area shape="rect" id="node9" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title="strSplit" alt="" coords="883,232,945,258"/>
+<area shape="rect" id="node10" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="877,282,951,309"/>
+<area shape="rect" id="node7" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title="print_error" alt="" coords="1048,122,1128,149"/>
 </map>

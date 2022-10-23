@@ -1,5 +1,4 @@
 <map id="PlacementInfo::printStat" name="PlacementInfo::printStat">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,167,57"/>
-<area shape="rect" id="node2" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="215,5,380,32"/>
-<area shape="rect" id="node3" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="260,56,335,83"/>
+<area shape="rect" id="node2" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="260,5,335,32"/>
+<area shape="rect" id="node3" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title="DesignInfo::getNumCells" alt="" coords="215,56,380,83"/>
 </map>

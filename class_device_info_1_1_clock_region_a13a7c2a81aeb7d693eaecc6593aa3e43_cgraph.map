@@ -1,8 +1,7 @@
 <map id="DeviceInfo::ClockRegion::addSite" name="DeviceInfo::ClockRegion::addSite">
-<area shape="rect" id="node1" title="add a site in the clock region and update the boundary of the clock region" alt="" coords="5,136,168,177"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html#aeb68936902acc7288fc46a983f402db5" title=" " alt="" coords="216,5,393,47"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a2b4a614a367960c94900962ca9c4a6e8" title=" " alt="" coords="228,71,381,112"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a012ee1ec701d3a387fe2942b4cadb854" title=" " alt="" coords="228,136,381,177"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="221,202,389,229"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="221,253,389,279"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#a012ee1ec701d3a387fe2942b4cadb854" title="DeviceInfo::DeviceSite\l::setClockRegion" alt="" coords="228,5,381,47"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="221,71,389,98"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_element.html#a28d20e8d152106ce639899f8380a3955" title="DeviceInfo::DeviceElement\l::getName" alt="" coords="216,123,393,164"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="221,189,389,215"/>
+<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a8a72e4d2dd7855756ad9e01f04107339" title="DeviceInfo::DeviceSite\l::getTile" alt="" coords="228,240,381,281"/>
 </map>

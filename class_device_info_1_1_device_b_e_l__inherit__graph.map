@@ -1,4 +1,3 @@
 <map id="DeviceInfo::DeviceBEL" name="DeviceInfo::DeviceBEL">
-<area shape="rect" id="node1" title="BEL(Basic Element of Logic), the smallest undividable element." alt="" coords="17,80,171,107"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html" title="basic class of device element " alt="" coords="5,5,183,32"/>
 </map>

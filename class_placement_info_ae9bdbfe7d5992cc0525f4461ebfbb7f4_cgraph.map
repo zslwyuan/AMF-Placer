@@ -1,5 +1,4 @@
 <map id="PlacementInfo::transferCellBinInfo" name="PlacementInfo::transferCellBinInfo">
-<area shape="rect" id="node1" title="update the bin information of a design cell when it is moved to a new location" alt="" coords="5,23,184,65"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="249,5,387,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="232,56,404,83"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y. " alt="" coords="232,5,404,32"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title="DesignInfo::getCells" alt="" coords="249,56,387,83"/>
 </map>

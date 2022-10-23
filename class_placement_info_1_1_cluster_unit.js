@@ -6,7 +6,7 @@ var class_placement_info_1_1_cluster_unit =
     [ "getBRAMNum", "class_placement_info_1_1_cluster_unit.html#a9d10d300c18744eb23c0e640624c5203", null ],
     [ "getDSPNum", "class_placement_info_1_1_cluster_unit.html#acf6f835f94c014bcb9d182cbe3d6637c", null ],
     [ "getId", "class_placement_info_1_1_cluster_unit.html#a934edb9fd6882cbeac35b7a7566c49b1", null ],
-    [ "getUnits", "class_placement_info_1_1_cluster_unit.html#a436d3f2ab8528ea4c6893605e85cff90", null ],
+    [ "getUnits", "class_placement_info_1_1_cluster_unit.html#a36e24000ccccfa75ca5abd5859cc094e", null ],
     [ "getWeight", "class_placement_info_1_1_cluster_unit.html#a0005dc755379247ba5da053190a62b54", null ],
     [ "id", "class_placement_info_1_1_cluster_unit.html#a09798a53132871330ef77c7c76a7a57f", null ],
     [ "PUs", "class_placement_info_1_1_cluster_unit.html#a465322c111832834f806c8459fd42c2c", null ],

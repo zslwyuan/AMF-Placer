@@ -1,16 +1,14 @@
 <map id="MacroLegalizer::findMacroCell2SitesInDistance" name="MacroLegalizer::findMacroCell2SitesInDistance">
-<area shape="rect" id="node1" title="find candidate sites for the cells left to be matched" alt="" coords="5,341,177,383"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a74a0fad4e06219b949e12ec654a66662" title="find neibor device sites of a given cell from bin grid" alt="" coords="225,217,396,259"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1019,407,1171,448"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="475,43,627,84"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_bin_info.html#afbbb0cec92073cb3212f9dfd048ab2a2" title="Get the reference of the set of sites in the bin." alt="" coords="451,108,651,149"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#a3aacda485c1d9e82a53f2bfc68fe2da3" title="Get the Displacement from a given location to a device site (y2xRatio is considered...." alt="" coords="447,174,656,201"/>
-<area shape="rect" id="node10" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="465,225,637,251"/>
-<area shape="rect" id="node11" href="$class_placement_info_1_1_placement_bin_info.html#a33cbef70955f92b34e9fcf4b1cd435e9" title="Get the shortest Manhattan distance from the bin to a specific location." alt="" coords="444,276,659,317"/>
-<area shape="rect" id="node12" href="$class_placement_info.html#a48af391351a611d17fd8437944f8cd0b" title=" " alt="" coords="455,341,647,383"/>
-<area shape="rect" id="node13" href="$class_placement_info.html#a3ce74d0ec96cab9420207a8dc860313e" title=" " alt="" coords="461,407,642,448"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1219,407,1396,448"/>
-<area shape="rect" id="node8" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="755,149,923,175"/>
-<area shape="rect" id="node9" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="755,199,923,226"/>
-<area shape="rect" id="node14" href="$class_placement_info_1_1_compatible_placement_table.html#ab0eda5a61e6b57c45261526dfe8346cf" title="Get the Potential BEL Type IDs for a specific cell object." alt="" coords="707,407,971,448"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#aba15f2996554fef88b9b8071182b421a" title="find neibor device sites of a given cell from bin grid " alt="" coords="225,250,396,291"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="764,250,916,291"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y. " alt="" coords="490,81,662,108"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#aeedda39297f2899ef048eb191afbe630" title="PlacementInfo::getPlacement\lUnitByCellId" alt="" coords="480,133,672,174"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_compatible_placement_table.html#a27fec259866cbc493f67722529ce081c" title="Get the Potential BEL Type IDs for a specific cell object. " alt="" coords="444,250,708,291"/>
+<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title="DesignInfo::DesignCell\l::getCellType" alt="" coords="500,315,652,357"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_placement_bin_info.html#a33cbef70955f92b34e9fcf4b1cd435e9" title="Get the shortest Manhattan distance from the bin to a specific location. " alt="" coords="469,381,683,422"/>
+<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_bin_info.html#a8ec550c12797638144ff9217d77d662d" title="Get the reference of the set of sites in the bin. " alt="" coords="476,446,676,487"/>
+<area shape="rect" id="node11" href="$class_placement_info.html#a3aacda485c1d9e82a53f2bfc68fe2da3" title="Get the Displacement from a given location to a device site (y2xRatio is considered.) " alt="" coords="471,31,681,57"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="972,250,1149,291"/>
+<area shape="rect" id="node12" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="756,56,924,83"/>
+<area shape="rect" id="node13" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="756,5,924,32"/>
 </map>

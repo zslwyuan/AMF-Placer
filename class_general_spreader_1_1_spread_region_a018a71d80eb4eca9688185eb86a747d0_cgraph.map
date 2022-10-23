@@ -1,6 +1,0 @@
-<map id="GeneralSpreader::SpreadRegion::simpleExpand" name="GeneralSpreader::SpreadRegion::simpleExpand">
-<area shape="rect" id="node1" title="select the the expansion direction which is found in a pre&#45;defined order" alt="" coords="5,39,212,80"/>
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a4313cc8215453bbea8123e077d73bb81" title="add cell bins into SpreadRegion with a new boundary and update region information including boundary ..." alt="" coords="260,39,467,80"/>
-<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region.html#af6422a9e739bc8c8c84551db16d55b8e" title="Get the cells in the SpreadRegion." alt="" coords="515,5,721,47"/>
-<area shape="rect" id="node4" href="$class_general_spreader_1_1_spread_region.html#a0ac209c9c1347669b83be9e6d1bf029e" title="check whether the SpreadRegion is overlapped with a given boundary" alt="" coords="515,71,721,112"/>
-</map>

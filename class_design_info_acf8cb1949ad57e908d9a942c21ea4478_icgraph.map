@@ -1,11 +1,13 @@
 <map id="DesignInfo::addCell" name="DesignInfo::addCell">
-<area shape="rect" id="node1" title="add a cell into the design information" alt="" coords="1065,100,1199,127"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="843,63,1017,105"/>
-<area shape="rect" id="node9" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="854,129,1006,156"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="343,5,545,32"/>
-<area shape="rect" id="node6" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="340,85,548,112"/>
-<area shape="rect" id="node7" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="602,159,789,185"/>
-<area shape="rect" id="node8" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="596,93,795,134"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,85,292,112"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,85,116,112"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#a0cf2b909e8fe1e783aac1ccea479a828" title="add a virtual cell with a given name into the macro with its offsets in the macro. Usually it is to occupy routing resource in a site. " alt="" coords="187,107,361,149"/>
+<area shape="rect" id="node10" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information. " alt="" coords="198,195,350,221"/>
+<area shape="rect" id="node12" href="$class_design_info.html#af435f2aa30e295caa0ff0b98521be0c5" title="DesignInfo::~DesignInfo" alt="" coords="195,245,353,272"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="659,157,861,184"/>
+<area shape="rect" id="node7" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title="InitialPacker::mapCarryRelated\lRouteThru" alt="" coords="409,49,608,90"/>
+<area shape="rect" id="node8" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="656,81,864,108"/>
+<area shape="rect" id="node9" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="667,5,853,32"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro " alt="" coords="912,56,1040,83"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="1088,107,1260,133"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1119,56,1229,83"/>
+<area shape="rect" id="node11" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation " alt="" coords="421,216,597,243"/>
 </map>

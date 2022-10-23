@@ -1,0 +1,4 @@
+<map id="PlacementTimingInfo::TimingGraph::TimingNode::sortInEdgesByForwardLevel" name="PlacementTimingInfo::TimingGraph::TimingNode::sortInEdgesByForwardLevel">
+<area shape="rect" id="node2" href="$class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html#a8be9c864f60ffe363f939c452fa1034d" title="PlacementTimingInfo\l::TimingGraph::TimingEdge\l::getSource" alt="" coords="245,5,421,61"/>
+<area shape="rect" id="node3" href="$class_placement_timing_info_1_1_timing_graph_1_1_timing_node.html#a116fde40ff8c27f93310563b71d50f46" title="Get the distance toward the farthest predecessor register based on the path length (instead of delay)..." alt="" coords="244,85,423,141"/>
+</map>

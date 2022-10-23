@@ -1,6 +1,0 @@
-<map id="GeneralSpreader::SpreadRegion::SubBox::quick_sort" name="GeneralSpreader::SpreadRegion::SubBox::quick_sort">
-<area shape="rect" id="node1" title="recursive implementation of quick sort for cell ids by X/Y location" alt="" coords="5,29,212,71"/>
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a9158f76411208d46022fb6c07837b397" title="the partition/sort function for quick sorting by cell location (X or Y)" alt="" coords="260,29,467,71"/>
-<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a9334d19101f29b5b6f929344409fe129" title="the partition/sort function for quick sorting by cell location (X or Y)" alt="" coords="515,29,721,71"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="769,37,984,63"/>
-</map>

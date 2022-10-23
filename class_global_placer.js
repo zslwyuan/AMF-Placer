@@ -14,7 +14,7 @@ var class_global_placer =
     [ "getMacroLegalizationWeight", "class_global_placer.html#a34d54c12285caf69c091ddd806b8816d", null ],
     [ "getMacroPseudoNetEnhanceCnt", "class_global_placer.html#a418e40981906a19d68b14c773ab201f4", null ],
     [ "getPseudoNetWeight", "class_global_placer.html#aac6b39caece97c88f0cbf0f522621391", null ],
-    [ "getWirelengthOptimizer", "class_global_placer.html#a2144132cc68543ca8d23c74601054ad5", null ],
+    [ "getWirelengthOptimizer", "class_global_placer.html#acc12a5f85eeded22a6bf6d5ced231fb4", null ],
     [ "GlobalPlacement_CLBElements", "class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79", null ],
     [ "GlobalPlacement_fixedCLB", "class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65", null ],
     [ "macroLegalize", "class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e", null ],

@@ -1,4 +1,4 @@
 <map id="IncrementalBELPacker::LUTFFPairing" name="IncrementalBELPacker::LUTFFPairing">
-<area shape="rect" id="node1" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,5,320,47"/>
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#ad89cfb0f178ce902dcd04728d67dc86b" title="Construct a new Incremental BEL Packer object. " alt="" coords="209,5,372,47"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="235,71,346,98"/>
 </map>

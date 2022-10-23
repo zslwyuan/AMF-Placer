@@ -1,0 +1,7 @@
+<map id="DesignInfo::DesignElement::getParentPtr" name="DesignInfo::DesignElement::getParentPtr">
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_pin.html#a948da3f9acfc94a5271b3b6275bc45c0" title="Get the Cell object of the pin. " alt="" coords="231,35,380,76"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c" title="let the parent cell know that one of its pin connects to a specific net " alt="" coords="428,5,599,47"/>
+<area shape="rect" id="node6" href="$_design_info_8h.html#a95dd3fa7e6f358ff292265483fcaf156" title="operator\&lt;\&lt;" alt="" coords="471,71,556,98"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information. " alt="" coords="647,13,799,39"/>
+<area shape="rect" id="node5" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation " alt="" coords="847,13,1023,39"/>
+</map>

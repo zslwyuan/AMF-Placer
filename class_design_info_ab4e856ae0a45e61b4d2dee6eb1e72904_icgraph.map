@@ -1,0 +1,12 @@
+<map id="DesignInfo::getCell" name="DesignInfo::getCell">
+<area shape="rect" id="node2" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title="load the fixed elements (e.g., IOs) from the design file. " alt="" coords="185,5,339,47"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="184,71,340,112"/>
+<area shape="rect" id="node7" href="$class_wirelength_optimizer.html#a647eb3ec59e6f874060fb47cba1aba8c" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo ..." alt="" coords="189,165,335,207"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro " alt="" coords="425,27,553,54"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="643,27,815,54"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="673,202,784,229"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="388,195,589,236"/>
+<area shape="rect" id="node10" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages, e.g., just after initial placement " alt="" coords="388,260,589,301"/>
+<area shape="rect" id="node11" href="$class_wirelength_optimizer.html#abf14be2c0b76b515bdc136b06a6e197f" title="WirelengthOptimizer\l::~WirelengthOptimizer" alt="" coords="413,129,564,171"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="637,259,820,286"/>
+</map>

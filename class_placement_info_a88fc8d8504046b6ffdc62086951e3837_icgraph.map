@@ -1,10 +1,13 @@
 <map id="PlacementInfo::enforceLegalizeXYInArea" name="PlacementInfo::enforceLegalizeXYInArea">
-<area shape="rect" id="node1" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="1472,64,1675,105"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#aa6c7978a01c8f599d13ebe537fc67285" title="make the PlacementUnits in the long path closer to each other" alt="" coords="1202,5,1391,47"/>
-<area shape="rect" id="node3" href="$class_general_spreader.html#adc369727fce67315da9600b84eeb33e0" title="update the information of the involved PlacementUnit(s)" alt="" coords="895,93,1121,135"/>
-<area shape="rect" id="node8" href="$class_general_spreader.html#ace4116469f5831cf9aa75b9ed798594e" title="multi&#45;threading workers for updating the information of the involved PlacementUnit(s)" alt="" coords="1169,123,1424,164"/>
-<area shape="rect" id="node4" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="620,93,847,135"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="413,101,572,127"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,93,365,135"/>
-<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,101,116,127"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#aa6c7978a01c8f599d13ebe537fc67285" title="make the PlacementUnits in the long path closer to each other " alt="" coords="289,5,478,47"/>
+<area shape="rect" id="node4" href="$class_general_spreader.html#a14f37632b7be86bd593b5f2ea1ab92ff" title="update the information of the involved PlacementUnit(s) " alt="" coords="559,93,785,135"/>
+<area shape="rect" id="node12" href="$class_general_spreader.html#acc20d54c233a7f07992db97050bea371" title="multi&#45;threading workers for updating the information of the involved PlacementUnit(s) ..." alt="" coords="256,123,511,164"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#aef59a6cacc14a135ff5730c8056cd566" title="Get the Long Paths in the net list for later optimization. " alt="" coords="575,13,769,39"/>
+<area shape="rect" id="node5" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio " alt="" coords="833,93,1060,135"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements " alt="" coords="1117,71,1276,98"/>
+<area shape="rect" id="node11" href="$class_general_spreader.html#ab0a62c9005bdbae8770045ce40b1cad0" title="GeneralSpreader::~General\lSpreader" alt="" coords="1108,123,1285,164"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1333,96,1535,137"/>
+<area shape="rect" id="node10" href="$class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion. " alt="" coords="1348,31,1520,72"/>
+<area shape="rect" id="node8" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1619,46,1729,73"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1583,103,1765,130"/>
 </map>

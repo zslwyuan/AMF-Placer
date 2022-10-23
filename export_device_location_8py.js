@@ -1,6 +1,6 @@
 var export_device_location_8py =
 [
-    [ "exportDeviceLocation.siteInfo", "classexport_device_location_1_1site_info.html", "classexport_device_location_1_1site_info" ],
+    [ "siteInfo", "classexport_device_location_1_1site_info.html", "classexport_device_location_1_1site_info" ],
     [ "processGTH_RSites", "export_device_location_8py.html#a721aa019d658772c0d2d42b530e2cf37", null ],
     [ "processGTY_QuadSites", "export_device_location_8py.html#aaed2863c39856ba2b7243eba02d8a6c7", null ],
     [ "addedPatchTypes", "export_device_location_8py.html#a5f38bfb6b48c0885602dc142a31783b2", null ],

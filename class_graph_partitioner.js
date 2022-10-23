@@ -2,8 +2,8 @@ var class_graph_partitioner =
 [
     [ "GraphPartitioner", "class_graph_partitioner.html#a76913be5dc96ae087c31bbbfb38a7f7e", null ],
     [ "~GraphPartitioner", "class_graph_partitioner.html#aa2c2187e0b807b8644de3e2a99644eca", null ],
-    [ "getClusters", "class_graph_partitioner.html#a72cf3a58504a15d65804c576571571f7", null ],
-    [ "getClustersPUIdSets", "class_graph_partitioner.html#abbaaa6d8fab189daf038ad7989955914", null ],
+    [ "getClusters", "class_graph_partitioner.html#acfa958c1ca3553a0cf73b1bf4d84b061", null ],
+    [ "getClustersPUIdSets", "class_graph_partitioner.html#a0ebbf29e40f3a81f733cb0bb8158794b", null ],
     [ "minCutBipartition", "class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102", null ],
     [ "recursiveMinCutPartition", "class_graph_partitioner.html#ac8d791b4e733431c2d4937e1823160b9", null ],
     [ "setMaxCutRate", "class_graph_partitioner.html#ac18ffed6039ce5aa0b0dfc1ffbc240d8", null ],

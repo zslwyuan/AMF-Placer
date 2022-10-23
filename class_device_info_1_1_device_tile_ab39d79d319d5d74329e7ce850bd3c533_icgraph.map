@@ -1,0 +1,5 @@
+<map id="DeviceInfo::DeviceTile::getTileType" name="DeviceInfo::DeviceTile::getTileType">
+<area shape="rect" id="node2" href="$class_device_info.html#a7b1f24ca293a4828b72969ac57576a86" title="DeviceInfo::addTile" alt="" coords="204,13,336,39"/>
+<area shape="rect" id="node3" href="$class_device_info.html#ac3a21dcb6cae48dd99588b0629fc6552" title="DeviceInfo::addTileTypes" alt="" coords="384,13,551,39"/>
+<area shape="rect" id="node4" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object. " alt="" coords="391,63,543,90"/>
+</map>

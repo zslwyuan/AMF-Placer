@@ -1,7 +1,2 @@
 <map id="GeneralSpreader::SpreadRegion::SubBox::spreadAndPartition" name="GeneralSpreader::SpreadRegion::SubBox::spreadAndPartition">
-<area shape="rect" id="node1" title="spread cells and partition the SubBox into smaller SubBoxes" alt="" coords="895,29,1101,71"/>
-<area shape="rect" id="node2" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="620,29,847,71"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="413,37,572,63"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,29,365,71"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,37,116,63"/>
 </map>

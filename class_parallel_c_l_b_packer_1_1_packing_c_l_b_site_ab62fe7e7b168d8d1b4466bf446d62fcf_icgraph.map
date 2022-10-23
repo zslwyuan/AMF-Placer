@@ -1,4 +1,3 @@
 <map id="ParallelCLBPacker::PackingCLBSite::isMuxMacro" name="ParallelCLBPacker::PackingCLBSite::isMuxMacro">
-<area shape="rect" id="node1" title=" " alt="" coords="292,13,487,54"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a65aa7667d3fdf2e24d592df682d8d151" title="try to add a given list of FFs into this cluster" alt="" coords="5,5,244,61"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a360963d00263ba0c05ae93c7b27b693d" title="find the slots in the site for Muxes " alt="" coords="248,5,459,61"/>
 </map>

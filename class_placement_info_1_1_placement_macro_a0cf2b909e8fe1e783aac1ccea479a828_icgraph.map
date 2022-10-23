@@ -1,0 +1,9 @@
+<map id="PlacementInfo::PlacementMacro::addVirtualCell" name="PlacementInfo::PlacementMacro::addVirtualCell">
+<area shape="rect" id="node2" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="478,5,679,32"/>
+<area shape="rect" id="node6" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="475,80,683,107"/>
+<area shape="rect" id="node7" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="485,157,672,184"/>
+<area shape="rect" id="node8" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title="InitialPacker::mapCarryRelated\lRouteThru" alt="" coords="228,95,427,137"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="907,56,1079,83"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro " alt="" coords="731,107,859,133"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="937,107,1048,133"/>
+</map>

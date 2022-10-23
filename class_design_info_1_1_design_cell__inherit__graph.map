@@ -1,4 +1,3 @@
 <map id="DesignInfo::DesignCell" name="DesignInfo::DesignCell">
-<area shape="rect" id="node1" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects" alt="" coords="18,80,170,107"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design. " alt="" coords="5,5,183,32"/>
 </map>

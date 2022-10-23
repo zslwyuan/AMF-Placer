@@ -1,0 +1,4 @@
+<map id="GeneralSpreader::SpreadRegion::smartFindExpandDirection" name="GeneralSpreader::SpreadRegion::smartFindExpandDirection">
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a74343810a457564f74274934899eb3c0" title="check whether an expansion in a given direction will make the SpreadRegion overlapped with some bins ..." alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region.html#ac1de28ec53a39a4082076020bdb6ad8c" title="evaluation the utilization and capacity of the incoming bins which will be included in the SpreadRegi..." alt="" coords="260,71,467,112"/>
+</map>

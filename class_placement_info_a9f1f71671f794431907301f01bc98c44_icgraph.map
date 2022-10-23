@@ -1,0 +1,12 @@
+<map id="PlacementInfo::getPotentialBELTypeIDs" name="PlacementInfo::getPotentialBELTypeIDs">
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#a6e15f046281564d3e9aee27027a0a62a" title="find available sites for each specific macro type required by the constructor " alt="" coords="240,49,412,90"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2f6d57d5001f26005dc109a1aa3b0f3d" title="find neighbor PlacementUnit around targetX/Y from the bin grid " alt="" coords="235,115,417,171"/>
+<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer.html#add51eec6b7e9db37932ad704ce57f507" title="ParallelCLBPacker::\lfindNeiborSitesFromBinGrid" alt="" coords="235,195,417,237"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="481,56,640,83"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="716,31,903,57"/>
+<area shape="rect" id="node8" href="$class_macro_legalizer.html#aafa0aa1d5ea5195c3e7d406ed36be8f4" title="MacroLegalizer::~MacroLegalizer" alt="" coords="704,81,915,108"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="963,23,1164,65"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1248,5,1359,32"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1212,56,1395,83"/>
+<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8" title="a iteration to pack PlacementUnit into a CLB site " alt="" coords="465,122,656,163"/>
+</map>

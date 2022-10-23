@@ -1,4 +1,0 @@
-<map id="PlacementInfo::PlacementNet::getUnitsBeDriven" name="PlacementInfo::PlacementNet::getUnitsBeDriven">
-<area shape="rect" id="node1" title="Get the reference of the vector of the PlacementUnits driven by the net." alt="" coords="292,13,467,54"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1e52ba10076d2038e0afce8a3aa75e18" title="Get the number of pins within this site for a given net (more pins are located in ont site will reduc..." alt="" coords="5,5,244,61"/>
-</map>

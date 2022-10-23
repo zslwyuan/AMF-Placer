@@ -1,0 +1,27 @@
+<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPUFailReason" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addPUFailReason">
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77" title="try to add a given LUT into this cluster " alt="" coords="292,183,531,239"/>
+<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a06dea9d3c7967a6980094b6ea47e69fc" title="try to add a given FF into this cluster " alt="" coords="292,535,531,591"/>
+<area shape="rect" id="node20" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a31bc1378c7ad3d1d94dce71bdeb64bf4" title="ParallelCLBPacker::\lPackingCLBSite::getPlacementInfo" alt="" coords="298,616,525,657"/>
+<area shape="rect" id="node21" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="321,733,501,775"/>
+<area shape="rect" id="node22" href="$class_device_info_1_1_device_site.html#aea4211bb193e136a3c094fa9e1ceedf0" title="DeviceInfo::DeviceSite\l::getClockHalfColumn" alt="" coords="623,675,777,716"/>
+<area shape="rect" id="node24" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a0ba43066961d3ac4e306a0f0f7756093" title="ParallelCLBPacker::\lPackingCLBSite::getCLBSite" alt="" coords="316,799,507,840"/>
+<area shape="rect" id="node25" href="$class_device_info_1_1_device_element.html#a28d20e8d152106ce639899f8380a3955" title="DeviceInfo::DeviceElement\l::getName" alt="" coords="323,864,500,905"/>
+<area shape="rect" id="node26" href="$class_placement_info.html#aa3f0376e003430f1c02f304ea8b4b152" title="PlacementInfo::getClockCol2\lClockNets" alt="" coords="317,929,506,971"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#adbb516b14c7bbad37c994b91481aa40f" title="Get the fixed pairs of LUTs which should NOT be broken. " alt="" coords="579,85,821,127"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="1169,253,1321,295"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title="DesignInfo::DesignCell\l::isLUT6" alt="" coords="1169,319,1321,360"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af423d1ee6ada68bf164aef48e9baf2c5" title="check how many input pins will be needed if the two LUTs are packed. " alt="" coords="869,278,1108,334"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1" title="check whether a given cell is unpackable " alt="" coords="889,97,1088,153"/>
+<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="913,5,1065,47"/>
+<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5c2b50544d1e2288a0fceb1e93a10004" title="conduct maximun cardinality matching algorithm to pair LUTs " alt="" coords="581,151,819,207"/>
+<area shape="rect" id="node9" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="1156,5,1333,47"/>
+<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title="try to add a given FF into a specific half CLB in this cluster " alt="" coords="581,565,819,621"/>
+<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title="DesignInfo::DesignCell\l::isVirtualCell" alt="" coords="913,475,1065,516"/>
+<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a00f9ccaf985e4c82df58f6a3e7af3470" title="Get the Control Set Info object of this cell. " alt="" coords="913,540,1065,581"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_control_set_info.html#a0ffffe2680b92dd1b7c938c0525fbcfe" title="DesignInfo::ControlSetInfo\l::getCLK" alt="" coords="902,605,1075,647"/>
+<area shape="rect" id="node16" href="$class_design_info_1_1_control_set_info.html#ad4acfe3e16bd26e59fd40d41fc60771c" title="DesignInfo::ControlSetInfo\l::getSR" alt="" coords="902,671,1075,712"/>
+<area shape="rect" id="node17" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title="DesignInfo::FFSRCompatible" alt="" coords="894,737,1083,763"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist. " alt="" coords="913,788,1065,829"/>
+<area shape="rect" id="node19" href="$class_design_info_1_1_control_set_info.html#a3a0fe433bdf7cbf22a5a7ab2f343b87f" title="Get the Id of the control set (each control set will have a unique Id) " alt="" coords="902,409,1075,451"/>
+<area shape="rect" id="node23" href="$class_placement_info_1_1_placement_unit.html#afc877ab7818c7725e4cbde72e2f8efc9" title="PlacementInfo::Placement\lUnit::getClockNets" alt="" coords="613,740,787,781"/>
+</map>

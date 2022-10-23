@@ -1,5 +1,4 @@
 <map id="DesignInfo::ControlSetInfo::setControlSetInfoAs" name="DesignInfo::ControlSetInfo::setControlSetInfoAs">
-<area shape="rect" id="node1" title="Set the control set information accoridng to a given FF." alt="" coords="5,39,179,80"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="227,5,379,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="227,71,379,112"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="227,5,379,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist. " alt="" coords="227,71,379,112"/>
 </map>

@@ -1,46 +1,45 @@
 <map id="DesignInfo::DesignInfo" name="DesignInfo::DesignInfo">
-<area shape="rect" id="node1" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="5,1063,157,1090"/>
-<area shape="rect" id="node2" href="$class_design_info.html#acf8cb1949ad57e908d9a942c21ea4478" title="add a cell into the design information" alt="" coords="245,98,379,125"/>
-<area shape="rect" id="node5" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="518,619,617,646"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a16cdc343adeeac7222745a64e4ed420d" title="bind a pin to the cell" alt="" coords="491,123,643,164"/>
-<area shape="rect" id="node8" href="$class_design_info.html#aa6022bca479e36f7f13fbcd96946301d" title="bind a pin to an existing net. If the net does not exist, new one." alt="" coords="229,346,395,373"/>
-<area shape="rect" id="node13" href="$class_design_info_1_1_design_pin.html#ac73342bcdf23e55c53159ff3ec253382" title="get the pin type based on its reference name" alt="" coords="237,1085,387,1127"/>
-<area shape="rect" id="node17" href="$class_design_info_1_1_design_pin.html#a61629a25ad087950a525347181a4e978" title="bind the pin to the net by the net name" alt="" coords="237,1216,387,1257"/>
-<area shape="rect" id="node18" href="$class_design_info_1_1_design_pin.html#a9a17e809413ebc507066b59c70e30f14" title="bind the pin to the net&#39;s pointer for later processing" alt="" coords="233,1281,391,1323"/>
-<area shape="rect" id="node19" href="$class_design_info.html#adf0324cc2aabb175c21af7242f26a0e7" title="translate a string into a DesignCellType for a cell" alt="" coords="229,1151,395,1192"/>
-<area shape="rect" id="node20" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="229,1347,395,1374"/>
-<area shape="rect" id="node21" href="$class_device_info.html#a1ec4f9ac803f0d37ea7d331de133b27c" title="Get sites of a specfic type." alt="" coords="223,1398,401,1425"/>
-<area shape="rect" id="node22" href="$class_design_info.html#a5ba9049f57138cb8ee8f9f43ac459d8d" title="load the global clock signals from a design information file" alt="" coords="235,709,389,735"/>
-<area shape="rect" id="node24" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="530,721,605,747"/>
-<area shape="rect" id="node25" href="$class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc" title="for user&#45;defined&#45;cluster&#45;based optimization, load the nets in a user&#45;defined cluster for later proces..." alt="" coords="219,896,405,937"/>
-<area shape="rect" id="node29" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="522,1005,613,1031"/>
-<area shape="rect" id="node31" href="$class_design_info_1_1_design_pin.html#a23376bbcf0e3ccf409346f302438d71c" title=" " alt="" coords="237,1449,387,1491"/>
-<area shape="rect" id="node32" href="$class_design_info_1_1_design_pin.html#a28ac720bf02e13e86733e321537fb01c" title="Set the driver Pin Name of the pin." alt="" coords="237,1515,387,1556"/>
-<area shape="rect" id="node33" href="$class_design_info_1_1_design_pin.html#a53e552b828ccbcdd7985977c6e00f7ed" title="Set the attribute unconnected to be true, indicating the pin connect to no net." alt="" coords="237,1580,387,1621"/>
-<area shape="rect" id="node34" href="$string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28" title=" " alt="" coords="268,1646,356,1673"/>
-<area shape="rect" id="node35" href="$class_design_info.html#a39c1befcff337b98a699525457d1caaa" title="go through the FF cells to extract control sets for later processing" alt="" coords="205,1034,419,1061"/>
-<area shape="rect" id="node41" href="$class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c" title="let the parent cell know that one of its pin connects to a specific net" alt="" coords="227,553,397,595"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="491,5,643,47"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="716,152,893,193"/>
-<area shape="rect" id="node7" href="$class_design_info_1_1_design_pin.html#ab34cae7cdbaf860b759acc4005ea2606" title=" " alt="" coords="730,423,879,464"/>
-<area shape="rect" id="node9" href="$class_design_info_1_1_design_net.html#a83f1437982b777526b6f4a482db7fcbe" title="bind the net to a pin by name" alt="" coords="492,240,643,281"/>
-<area shape="rect" id="node10" href="$class_design_info_1_1_design_net.html#a05d76a2910b424aac20cc6915fef48b4" title="bind the net to a pin&#39;s pointer" alt="" coords="490,423,645,464"/>
-<area shape="rect" id="node11" href="$class_design_info_1_1_design_pin.html#a7c9cb7d85a24b52f43af175d20372ed1" title="Get the name of the net which the pin connects to." alt="" coords="493,305,642,347"/>
-<area shape="rect" id="node12" href="$class_design_info.html#a242dc817a71842fd67a2794a95d8f924" title=" " alt="" coords="485,371,649,398"/>
-<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="729,1264,881,1305"/>
-<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="491,1289,643,1331"/>
-<area shape="rect" id="node16" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title=" " alt="" coords="527,1406,607,1433"/>
-<area shape="rect" id="node23" href="$class_design_info.html#a2b8b2ef74da8be7e36beaf70c9f8e609" title="check if a net is a global clock indicated by input design files" alt="" coords="481,670,654,697"/>
-<area shape="rect" id="node26" href="$dump_zip_8cc.html#afdd89841220a8b18e39e0844a833a18b" title=" " alt="" coords="531,954,604,981"/>
-<area shape="rect" id="node27" href="$class_design_info_1_1_design_pin.html#a1a90814ee1027b566432a900f53d035b" title=" " alt="" coords="493,772,642,813"/>
-<area shape="rect" id="node28" href="$class_design_info_1_1_design_net.html#ae02f7f4e548f7f0e5e467738bfb7af9c" title="Get the vector reference of the pins." alt="" coords="492,837,643,879"/>
-<area shape="rect" id="node30" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title=" " alt="" coords="536,903,599,930"/>
-<area shape="rect" id="node36" href="$class_design_info_1_1_control_set_info.html#ac7c77263d23bf57844c74fb11e437b53" title="add a FF into the set of FFs which are compatible to this control set" alt="" coords="481,1224,654,1265"/>
-<area shape="rect" id="node37" href="$class_design_info.html#a8ef265973bd84c7357aceccd040ec2dc" title="intend to enhance the nets between FFs in a control set to make later packing easier" alt="" coords="469,1056,665,1097"/>
-<area shape="rect" id="node38" href="$class_design_info.html#af0678b75a70953088fc83a563241e8cf" title="extract the ids of CLK, SR, and CE for a given FF" alt="" coords="467,1122,668,1149"/>
-<area shape="rect" id="node40" href="$class_design_info.html#aece2b3b80c5b69d451d85a4d9dd0b84a" title=" " alt="" coords="482,1173,653,1199"/>
-<area shape="rect" id="node39" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="729,1115,881,1156"/>
-<area shape="rect" id="node42" href="$class_design_info_1_1_design_cell.html#aad7f3857c4b9584e94def14bde121ffd" title="add a net and assign it into output/input net list" alt="" coords="491,488,643,529"/>
-<area shape="rect" id="node43" href="$class_design_info_1_1_design_pin.html#aa6c7020d4043326e5989dc9b3826604a" title="Get the Cell object of the pin." alt="" coords="493,553,642,595"/>
-<area shape="rect" id="node44" href="$class_design_info_1_1_design_element.html#a03bd5af253c85b076bfe7f7c1d4c263e" title=" " alt="" coords="716,553,893,595"/>
+<area shape="rect" id="node2" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="522,5,613,32"/>
+<area shape="rect" id="node3" href="$class_design_info.html#adf0324cc2aabb175c21af7242f26a0e7" title="translate a string into a DesignCellType for a cell " alt="" coords="229,451,395,493"/>
+<area shape="rect" id="node5" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title="DesignInfo::getNumCells" alt="" coords="229,1069,395,1096"/>
+<area shape="rect" id="node6" href="$class_design_info.html#acf8cb1949ad57e908d9a942c21ea4478" title="add a cell into the design information " alt="" coords="245,851,379,877"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="518,792,617,819"/>
+<area shape="rect" id="node10" href="$string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28" title="strContains" alt="" coords="268,1120,356,1147"/>
+<area shape="rect" id="node11" href="$class_design_info_1_1_design_pin.html#ac73342bcdf23e55c53159ff3ec253382" title="get the pin type based on its reference name " alt="" coords="237,374,387,415"/>
+<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a16cdc343adeeac7222745a64e4ed420d" title="bind a pin to the cell " alt="" coords="491,961,643,1002"/>
+<area shape="rect" id="node16" href="$class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c" title="let the parent cell know that one of its pin connects to a specific net " alt="" coords="227,953,397,994"/>
+<area shape="rect" id="node20" href="$class_design_info_1_1_design_pin.html#a53e552b828ccbcdd7985977c6e00f7ed" title="Set the attribute unconnected to be true, indicating the pin connect to no net. " alt="" coords="237,1171,387,1213"/>
+<area shape="rect" id="node21" href="$class_design_info_1_1_design_pin.html#a28ac720bf02e13e86733e321537fb01c" title="Set the driver Pin Name of the pin. " alt="" coords="237,1237,387,1278"/>
+<area shape="rect" id="node22" href="$class_design_info_1_1_design_pin.html#a61629a25ad087950a525347181a4e978" title="bind the pin to the net by the net name " alt="" coords="237,1302,387,1343"/>
+<area shape="rect" id="node23" href="$class_design_info.html#aa6022bca479e36f7f13fbcd96946301d" title="bind a pin to an existing net. If the net does not exist, new one. " alt="" coords="229,1019,395,1045"/>
+<area shape="rect" id="node28" href="$class_design_info_1_1_design_pin.html#a9a17e809413ebc507066b59c70e30f14" title="bind the pin to the net&#39;s pointer for later processing " alt="" coords="233,1367,391,1409"/>
+<area shape="rect" id="node29" href="$class_design_info_1_1_design_pin.html#a23376bbcf0e3ccf409346f302438d71c" title="DesignInfo::DesignPin\l::setAliasNetId" alt="" coords="237,1433,387,1474"/>
+<area shape="rect" id="node30" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="530,457,605,484"/>
+<area shape="rect" id="node31" href="$class_device_info.html#a72f3177aa3371bab061e9dc502e7b91e" title="Get sites of a specfic type. " alt="" coords="223,1499,401,1525"/>
+<area shape="rect" id="node32" href="$class_design_info.html#a39c1befcff337b98a699525457d1caaa" title="go through the FF cells to extract control sets for later processing " alt="" coords="205,625,419,652"/>
+<area shape="rect" id="node38" href="$class_design_info.html#a5ba9049f57138cb8ee8f9f43ac459d8d" title="load the global clock signals from a design information file " alt="" coords="235,743,389,769"/>
+<area shape="rect" id="node40" href="$class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc" title="for user&#45;defined&#45;cluster&#45;based optimization, load the nets in a user&#45;defined cluster for later proces..." alt="" coords="219,173,405,214"/>
+<area shape="rect" id="node4" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title="print_error" alt="" coords="527,407,607,433"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title="DesignInfo::DesignElement\l::getName" alt="" coords="716,961,893,1002"/>
+<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title="DesignInfo::DesignCell\l::getCellType" alt="" coords="491,843,643,885"/>
+<area shape="rect" id="node12" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title="DesignInfo::DesignCell\l::isLUT" alt="" coords="491,290,643,331"/>
+<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title="DesignInfo::DesignCell\l::isFF" alt="" coords="729,483,881,525"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_design_pin.html#ab34cae7cdbaf860b759acc4005ea2606" title="DesignInfo::DesignPin\l::isOutputPort" alt="" coords="730,1026,879,1067"/>
+<area shape="rect" id="node17" href="$class_design_info_1_1_design_pin.html#a948da3f9acfc94a5271b3b6275bc45c0" title="Get the Cell object of the pin. " alt="" coords="493,1143,642,1185"/>
+<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#aad7f3857c4b9584e94def14bde121ffd" title="add a net and assign it into output/input net list " alt="" coords="491,1026,643,1067"/>
+<area shape="rect" id="node18" href="$class_design_info_1_1_design_element.html#a028b0faafe6752bbab34962e752d06c0" title="DesignInfo::DesignElement\l::getParentPtr" alt="" coords="716,1143,893,1185"/>
+<area shape="rect" id="node24" href="$class_design_info_1_1_design_pin.html#aff9325e6444d9f8614415609531e09b7" title="Get the name of the net which the pin connects to. " alt="" coords="493,1274,642,1315"/>
+<area shape="rect" id="node25" href="$class_design_info.html#a242dc817a71842fd67a2794a95d8f924" title="DesignInfo::getNumNets" alt="" coords="485,1340,649,1367"/>
+<area shape="rect" id="node26" href="$class_design_info_1_1_design_net.html#a83f1437982b777526b6f4a482db7fcbe" title="bind the net to a pin by name " alt="" coords="492,1209,643,1250"/>
+<area shape="rect" id="node27" href="$class_design_info_1_1_design_net.html#a05d76a2910b424aac20cc6915fef48b4" title="bind the net to a pin&#39;s pointer " alt="" coords="490,1391,645,1433"/>
+<area shape="rect" id="node33" href="$class_design_info.html#af0678b75a70953088fc83a563241e8cf" title="extract the ids of CLK, SR, and CE for a given FF " alt="" coords="467,691,668,717"/>
+<area shape="rect" id="node35" href="$class_design_info.html#aece2b3b80c5b69d451d85a4d9dd0b84a" title="DesignInfo::getFFSRType" alt="" coords="482,508,653,535"/>
+<area shape="rect" id="node36" href="$class_design_info_1_1_control_set_info.html#ac7c77263d23bf57844c74fb11e437b53" title="add a FF into the set of FFs which are compatible to this control set " alt="" coords="481,559,654,601"/>
+<area shape="rect" id="node37" href="$class_design_info.html#a8ef265973bd84c7357aceccd040ec2dc" title="intend to enhance the nets between FFs in a control set to make later packing easier ..." alt="" coords="469,625,665,666"/>
+<area shape="rect" id="node34" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="729,683,881,725"/>
+<area shape="rect" id="node39" href="$class_design_info.html#a2b8b2ef74da8be7e36beaf70c9f8e609" title="check if a net is a global clock indicated by input design files " alt="" coords="481,741,654,768"/>
+<area shape="rect" id="node41" href="$dump_zip_8cc.html#afdd89841220a8b18e39e0844a833a18b" title="fileExists" alt="" coords="531,239,604,265"/>
+<area shape="rect" id="node42" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title="strSplit" alt="" coords="536,56,599,83"/>
+<area shape="rect" id="node43" href="$class_design_info_1_1_design_pin.html#a899283d05f4fb669edd9f815d5e6368f" title="DesignInfo::DesignPin\l::getNet" alt="" coords="493,107,642,149"/>
+<area shape="rect" id="node44" href="$class_design_info_1_1_design_net.html#aa6b16a3ae8d28870175730fb6f1b91d3" title="Get the vector reference of the pins. " alt="" coords="492,173,643,214"/>
 </map>

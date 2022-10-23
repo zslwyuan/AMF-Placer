@@ -1,7 +1,24 @@
 <map id="PlacementInfo::CompatiblePlacementTable::resetCellOccupationToDefault" name="PlacementInfo::CompatiblePlacementTable::resetCellOccupationToDefault">
-<area shape="rect" id="node1" title="forget the occupation adjustment by packing feasibility and routing congestion" alt="" coords="915,5,1153,61"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="620,20,867,47"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="413,45,572,72"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,42,365,83"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion ..." alt="" coords="885,394,1132,421"/>
+<area shape="rect" id="node19" href="$class_placement_info_1_1_compatible_placement_table.html#a24b03c553f3bd0e4cab6007915f43065" title="get the reference of cellId2InfationRatio for convenience " alt="" coords="292,296,543,337"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a9d2ce3051534b0619ff9ef278b477460" title="directly set weight in the quadratic Matrix and vector according to given request. " alt="" coords="1184,267,1361,308"/>
+<area shape="rect" id="node8" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="2399,233,2509,259"/>
+<area shape="rect" id="node17" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements " alt="" coords="1897,363,2055,390"/>
+<area shape="rect" id="node4" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="1413,269,1637,311"/>
+<area shape="rect" id="node14" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites " alt="" coords="1437,123,1613,164"/>
+<area shape="rect" id="node15" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region " alt="" coords="1413,335,1637,376"/>
+<area shape="rect" id="node16" href="$class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title="add pseudo net for user&#45;defined clusters " alt="" coords="1414,189,1637,245"/>
+<area shape="rect" id="node5" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model. " alt="" coords="1685,265,1839,307"/>
+<area shape="rect" id="node13" href="$class_wirelength_optimizer.html#ad26ea78722d723916bf8a10678924dab" title="WirelengthOptimizer\l::setSlackPowerFactor" alt="" coords="1685,196,1839,237"/>
+<area shape="rect" id="node6" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="1887,225,2065,267"/>
+<area shape="rect" id="node11" href="$class_wirelength_optimizer.html#abf14be2c0b76b515bdc136b06a6e197f" title="WirelengthOptimizer\l::~WirelengthOptimizer" alt="" coords="2139,291,2289,332"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="2113,95,2315,136"/>
+<area shape="rect" id="node10" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages, e.g., just after initial placement " alt="" coords="2113,160,2315,201"/>
+<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="2145,225,2283,267"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="2363,135,2545,162"/>
+<area shape="rect" id="node18" href="$class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion. " alt="" coords="2128,356,2300,397"/>
+<area shape="rect" id="node20" href="$class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization ..." alt="" coords="591,263,837,304"/>
+<area shape="rect" id="node21" href="$class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6" title="adjust the resource demand of LUTs/FFs according to routing congestion refer to RippleFPGA&#39;s implemen..." alt="" coords="591,328,837,369"/>
+<area shape="rect" id="node22" href="$class_placement_info.html#aaeeece0e2a9362d1bb26c2e17fd90aad" title="reset the inflate ratio of all the cells to be 1, for re&#45;evaluation " alt="" coords="885,133,1132,175"/>
+<area shape="rect" id="node23" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress " alt="" coords="1180,5,1365,47"/>
 </map>

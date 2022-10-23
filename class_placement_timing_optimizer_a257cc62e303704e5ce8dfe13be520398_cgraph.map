@@ -1,0 +1,12 @@
+<map id="PlacementTimingOptimizer::pauseCounter" name="PlacementTimingOptimizer::pauseCounter">
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#af61939dd04ceb52da184a21bc8410779" title="PlacementTimingOptimizer\l::getSlackThr" alt="" coords="232,141,411,182"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#aac7e930d12f2149afe6984a8cad68134" title="PlacementInfo::getTimingInfo" alt="" coords="473,5,664,32"/>
+<area shape="rect" id="node4" href="$class_placement_timing_info.html#add1921ce82dfd102ac696590c899f691" title="Get the Simple Timing Info object which regard design cells as timing nodes. " alt="" coords="464,57,673,98"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a9d1c5aa5c5c8888aeb2c93fc22e46ff0" title="PlacementInfo::getCellId2location" alt="" coords="461,123,676,149"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a5e5c210a1716ccad33d8f909992a33de" title="PlacementInfo::getPlacementNets" alt="" coords="459,173,679,200"/>
+<area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#a7395049ab979b3d10f54d0c8971942ca" title="PlacementTimingOptimizer\l::getDelayByModel" alt="" coords="479,225,658,266"/>
+<area shape="rect" id="node11" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="531,291,606,317"/>
+<area shape="rect" id="node5" href="$class_placement_timing_info_1_1_timing_graph.html#acbdeb602d48ff52d045eac782d6cd09f" title="PlacementTimingInfo\l::TimingGraph::getNodes" alt="" coords="749,57,913,98"/>
+<area shape="rect" id="node9" href="$class_placement_timing_optimizer.html#a6411919a62c5b3f45a88644ed479790a" title="PlacementTimingOptimizer\l::getDelayByModel_conservative" alt="" coords="727,225,936,266"/>
+<area shape="rect" id="node10" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y) " alt="" coords="984,225,1165,266"/>
+</map>

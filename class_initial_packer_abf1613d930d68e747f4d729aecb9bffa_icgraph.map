@@ -1,6 +1,6 @@
 <map id="InitialPacker::mapCarryRelatedRouteThru" name="InitialPacker::mapCarryRelatedRouteThru">
-<area shape="rect" id="node1" title=" " alt="" coords="596,5,795,47"/>
-<area shape="rect" id="node2" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="340,13,548,39"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,13,292,39"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node2" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="252,31,460,57"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="684,5,856,32"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro " alt="" coords="508,56,636,83"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="715,56,825,83"/>
 </map>

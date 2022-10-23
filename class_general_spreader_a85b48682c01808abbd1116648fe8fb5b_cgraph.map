@@ -1,7 +1,13 @@
 <map id="GeneralSpreader::makeCellInLegalArea" name="GeneralSpreader::makeCellInLegalArea">
-<area shape="rect" id="node1" title="ensure the X/Y is in the legal range of the target device" alt="" coords="5,74,184,115"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="232,5,432,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="232,56,432,83"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="233,107,431,133"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="233,157,431,184"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device) " alt="" coords="253,5,451,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device) " alt="" coords="253,56,451,83"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device) " alt="" coords="252,107,452,133"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device) " alt="" coords="252,157,452,184"/>
+<area shape="rect" id="node6" href="$class_general_spreader.html#a9414c4dd2802f8201e05a9d7048f1f50" title="record the spreaded location in PlacementInfo for later forget&#45;ratio&#45;based location updating ..." alt="" coords="244,209,460,250"/>
+<area shape="rect" id="node8" href="$class_general_spreader.html#aea5a6e91298022974d9868b17e86c18e" title="GeneralSpreader::DumpCells\lCoordinate" alt="" coords="258,274,446,315"/>
+<area shape="rect" id="node12" href="$class_general_spreader.html#af4b9cb06a96db67ef81a9f45b24d9b1e" title="GeneralSpreader::DumpPUCoordinate" alt="" coords="232,340,472,367"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="531,157,723,198"/>
+<area shape="rect" id="node9" href="$class_placement_info.html#a9d1c5aa5c5c8888aeb2c93fc22e46ff0" title="PlacementInfo::getCellId2location" alt="" coords="520,223,735,249"/>
+<area shape="rect" id="node10" href="$class_general_spreader_1_1_spread_region.html#aead9de2d631d1d940dfed4f2f01c630f" title="Get the cells in the SpreadRegion. " alt="" coords="524,274,731,315"/>
+<area shape="rect" id="node11" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title="writeStrToGZip" alt="" coords="572,340,683,367"/>
 </map>

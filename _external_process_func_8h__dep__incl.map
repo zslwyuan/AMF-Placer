@@ -1,11 +1,10 @@
 <map id="src/lib/utils/ExternalProcessFunc.h" name="src/lib/utils/ExternalProcessFunc.h">
-<area shape="rect" id="node1" title="This header file contains the definitions of ExternalProcessFunc class and its internal modules and A..." alt="" coords="255,5,438,47"/>
-<area shape="rect" id="node2" href="$_graph_partitioner_8h.html" title=" " alt="" coords="259,95,434,136"/>
+<area shape="rect" id="node2" href="$_graph_partitioner_8h.html" title="src/lib/HiFPlacer/problem\lSolvers/GraphPartitioner.h" alt="" coords="259,95,434,136"/>
 <area shape="rect" id="node3" href="$_cluster_placer_8h.html" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="129,184,343,225"/>
-<area shape="rect" id="node9" href="$_graph_partitioner_8cc.html" title=" " alt="" coords="368,184,549,225"/>
+<area shape="rect" id="node9" href="$_graph_partitioner_8cc.html" title="src/lib/HiFPlacer/problem\lSolvers/GraphPartitioner.cc" alt="" coords="368,184,549,225"/>
 <area shape="rect" id="node4" href="$_cluster_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the ClusterPlacer which cluster nodes in th..." alt="" coords="5,273,227,315"/>
 <area shape="rect" id="node5" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="251,273,461,315"/>
-<area shape="rect" id="node6" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="129,370,343,397"/>
+<area shape="rect" id="node6" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer) ..." alt="" coords="129,370,343,397"/>
 <area shape="rect" id="node8" href="$_global_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the GlobalPlacer which organizes/configures..." alt="" coords="367,363,585,404"/>
-<area shape="rect" id="node7" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="145,452,327,479"/>
+<area shape="rect" id="node7" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow. " alt="" coords="145,452,327,479"/>
 </map>

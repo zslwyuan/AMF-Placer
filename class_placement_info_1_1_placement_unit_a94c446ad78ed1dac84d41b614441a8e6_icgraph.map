@@ -1,4 +1,4 @@
 <map id="PlacementInfo::PlacementUnit::hasRegister" name="PlacementInfo::PlacementUnit::hasRegister">
-<area shape="rect" id="node1" title=" " alt="" coords="233,5,408,47"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a95775eedfcf78e38eee85b5c6af6b72e" title="update the long path in the design and enhance their net weights" alt="" coords="5,5,185,47"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a95775eedfcf78e38eee85b5c6af6b72e" title="update the long path in the design and enhance their net weights " alt="" coords="228,5,408,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#ab3e0f7abb94737992d90bc284d1a7116" title="PlacementInfo::setBELType\lForCells" alt="" coords="456,5,639,47"/>
 </map>

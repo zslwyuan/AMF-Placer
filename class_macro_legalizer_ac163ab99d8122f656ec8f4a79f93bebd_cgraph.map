@@ -1,9 +1,8 @@
 <map id="MacroLegalizer::getHPWLChange" name="MacroLegalizer::getHPWLChange">
-<area shape="rect" id="node1" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="5,166,223,193"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="279,5,454,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#aeef24b04c2bb4742f16bf2e3760f6f7a" title=" " alt="" coords="271,71,463,112"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="283,137,451,163"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="279,188,454,229"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="283,254,451,281"/>
-<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="279,305,454,347"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title="PlacementInfo::getPlacement\lUnitId2Nets" alt="" coords="271,5,463,47"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title="PlacementInfo::Placement\lUnit::getId" alt="" coords="279,71,454,112"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="283,137,451,163"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="283,187,451,214"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title="PlacementInfo::Placement\lUnit::X" alt="" coords="279,239,454,280"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title="PlacementInfo::Placement\lUnit::Y" alt="" coords="279,304,454,345"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="PlacementInfo::PlacementUnpackedCell::getCell" name="PlacementInfo::PlacementUnpackedCell::getCell">
+<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#ac1143687dd00783f9bfc01a17e82905d" title="check whether two LUTs can be packed to share one BEL " alt="" coords="228,5,384,47"/>
+<area shape="rect" id="node4" href="$_placement_info_8h.html#a71228051289991d8f6c5b32cdb90b06f" title="operator\&lt;\&lt;" alt="" coords="263,71,349,98"/>
+<area shape="rect" id="node3" href="$class_incremental_b_e_l_packer.html#ad89cfb0f178ce902dcd04728d67dc86b" title="Construct a new Incremental BEL Packer object. " alt="" coords="432,5,595,47"/>
+</map>

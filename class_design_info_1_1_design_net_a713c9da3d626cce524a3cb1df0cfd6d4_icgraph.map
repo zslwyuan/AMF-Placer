@@ -1,4 +1,0 @@
-<map id="DesignInfo::DesignNet::getPinPairEnhanceRatio" name="DesignInfo::DesignNet::getPinPairEnhanceRatio">
-<area shape="rect" id="node1" title="Get the Pin Pair Enhance Ratio (placer can customize some 2&#45;pin interconnections to make their weight..." alt="" coords="284,5,452,47"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="5,5,236,47"/>
-</map>

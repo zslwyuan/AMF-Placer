@@ -1,10 +1,7 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::incrementalUpdateScoreInSite">
-<area shape="rect" id="node1" title="incrementally update the score of this cluster by considering that only a given PlacementUnit will be..." alt="" coords="5,151,244,207"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8f89087f0c845cf7da3ca7cddf9b8f07" title=" " alt="" coords="292,151,517,207"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abe4be1f7465d7c4be7730df39bc0aa01" title=" " alt="" coords="565,5,756,47"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="573,71,748,112"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="577,137,745,163"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="573,188,748,229"/>
-<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="577,254,745,281"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="573,305,748,347"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac68ac5008469db43c6c065b245614e8e" title="get the HPWL change if a given PlacementUnit is moved to this site " alt="" coords="292,5,531,61"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a" title="Get the max length of paths involving a given PlacementUnit. " alt="" coords="292,85,531,141"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1e52ba10076d2038e0afce8a3aa75e18" title="Get the number of pins within this site for a given net (more pins are located in ont site will reduc..." alt="" coords="292,165,531,221"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_net.html#aef282bcca752446834a513c30c7eb1de" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="579,139,753,181"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_net.html#a1ca92cdc199b6080de7fe07839b69c77" title="Get the reference of the vector of the PlacementUnits driven by the net. " alt="" coords="579,205,753,246"/>
 </map>

@@ -1,4 +1,6 @@
 <map id="PlacementInfo::getBELType2FalseBELType" name="PlacementInfo::getBELType2FalseBELType">
-<area shape="rect" id="node1" title="get the remapped BEL type of a specific BEL type since some cell can be placed in sites of different ..." alt="" coords="5,5,196,47"/>
-<area shape="rect" id="node2" href="$class_device_info.html#a64d783b411441415fa8a8af207412e1b" title=" " alt="" coords="244,5,444,47"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a64d783b411441415fa8a8af207412e1b" title="DeviceInfo::getBELType2False\lBELType" alt="" coords="244,23,444,65"/>
+<area shape="rect" id="node3" href="$class_device_info.html#acf972e842012f53c4087c8da7032bd8e" title="load BEL type remapping information since some cell can be placed in sites of different sites..." alt="" coords="492,23,667,65"/>
+<area shape="rect" id="node4" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title="strSplit" alt="" coords="721,5,783,32"/>
+<area shape="rect" id="node5" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="715,56,789,83"/>
 </map>

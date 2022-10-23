@@ -1,0 +1,12 @@
+<map id="GeneralSpreader::DumpCellsCoordinate" name="GeneralSpreader::DumpCellsCoordinate">
+<area shape="rect" id="node2" href="$class_general_spreader.html#a85b48682c01808abbd1116648fe8fb5b" title="ensure the X/Y is in the legal range of the target device " alt="" coords="241,35,420,76"/>
+<area shape="rect" id="node3" href="$class_general_spreader.html#acc20d54c233a7f07992db97050bea371" title="multi&#45;threading workers for updating the information of the involved PlacementUnit(s) ..." alt="" coords="468,5,723,47"/>
+<area shape="rect" id="node4" href="$class_general_spreader.html#a14f37632b7be86bd593b5f2ea1ab92ff" title="update the information of the involved PlacementUnit(s) " alt="" coords="771,35,997,76"/>
+<area shape="rect" id="node5" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio " alt="" coords="1045,35,1272,76"/>
+<area shape="rect" id="node6" href="$class_general_spreader.html#ab0a62c9005bdbae8770045ce40b1cad0" title="GeneralSpreader::~General\lSpreader" alt="" coords="1320,5,1497,47"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements " alt="" coords="1329,71,1488,98"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1545,96,1747,137"/>
+<area shape="rect" id="node11" href="$class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion. " alt="" coords="1560,31,1732,72"/>
+<area shape="rect" id="node9" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1831,46,1941,73"/>
+<area shape="rect" id="node10" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1795,103,1977,130"/>
+</map>

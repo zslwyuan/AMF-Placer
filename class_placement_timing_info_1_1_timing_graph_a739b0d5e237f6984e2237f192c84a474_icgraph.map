@@ -1,15 +1,16 @@
 <map id="PlacementTimingInfo::TimingGraph::getClockPeriod" name="PlacementTimingInfo::TimingGraph::getClockPeriod">
-<area shape="rect" id="node1" title="Get the clock period." alt="" coords="1100,233,1296,275"/>
-<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a8b9dd2ba4e109df5e0e69395821838c8" title="add pseudo net for timing optimization based on the timing slack of each elements in the design netli..." alt="" coords="851,41,1042,83"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef66ccd2f80f178b2b6ef93f59208322" title="check whether the FF/LUT are directly connected and calculate the slack" alt="" coords="850,106,1043,162"/>
-<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aedecc00dc431d63a6d2b3436fb79b19e" title="find the slots in the site for Muxes" alt="" coords="853,186,1040,242"/>
-<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a14a1863e6ec97bf437eda5e084ed7be0" title="greedily find the exact slots for the LUTs/FFs in the site" alt="" coords="847,266,1046,322"/>
-<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a360963d00263ba0c05ae93c7b27b693d" title="find the slots in the site for Muxes" alt="" coords="841,346,1052,402"/>
-<area shape="rect" id="node13" href="$class_wirelength_optimizer.html#ad13c56a5650aae1780b83e17c667f3f1" title=" " alt="" coords="845,425,1048,467"/>
-<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="413,71,592,112"/>
-<area shape="rect" id="node8" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="640,100,793,141"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,71,365,112"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="195,136,334,177"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
+<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a8b9dd2ba4e109df5e0e69395821838c8" title="add pseudo net for timing optimization based on the timing slack of each elements in the design netli..." alt="" coords="255,136,446,177"/>
+<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2ff83bd3fa1dfb7f72834060c33dd3c6" title="check whether the FF/LUT are directly connected and calculate the slack " alt="" coords="254,318,447,374"/>
+<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aedecc00dc431d63a6d2b3436fb79b19e" title="find the slots in the site for Muxes " alt="" coords="512,266,699,322"/>
+<area shape="rect" id="node13" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a14a1863e6ec97bf437eda5e084ed7be0" title="greedily find the exact slots for the LUTs/FFs in the site " alt="" coords="506,347,705,403"/>
+<area shape="rect" id="node14" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a360963d00263ba0c05ae93c7b27b693d" title="find the slots in the site for Muxes " alt="" coords="500,430,711,486"/>
+<area shape="rect" id="node15" href="$class_wirelength_optimizer.html#ad13c56a5650aae1780b83e17c667f3f1" title="WirelengthOptimizer\l::LUTLUTPairing_TimingDriven" alt="" coords="249,201,452,243"/>
+<area shape="rect" id="node3" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="759,136,937,177"/>
+<area shape="rect" id="node10" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model. " alt="" coords="529,199,682,240"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="985,136,1187,177"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages, e.g., just after initial placement " alt="" coords="985,71,1187,112"/>
+<area shape="rect" id="node8" href="$class_wirelength_optimizer.html#abf14be2c0b76b515bdc136b06a6e197f" title="WirelengthOptimizer\l::~WirelengthOptimizer" alt="" coords="1011,201,1161,243"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="1017,5,1155,47"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1271,78,1381,105"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1235,135,1417,162"/>
 </map>

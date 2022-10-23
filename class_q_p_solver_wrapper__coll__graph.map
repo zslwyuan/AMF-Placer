@@ -1,5 +1,4 @@
 <map id="QPSolverWrapper" name="QPSolverWrapper">
-<area shape="rect" id="node1" title=" " alt="" coords="181,95,308,121"/>
-<area shape="rect" id="node2" href="$struct_q_p_solver_wrapper_1_1solver_data_type.html" title=" " alt="" coords="5,5,228,32"/>
-<area shape="rect" id="node3" href="$struct_q_p_solver_wrapper_1_1solver_settings_type.html" title=" " alt="" coords="253,5,495,32"/>
+<area shape="rect" id="node2" href="$struct_q_p_solver_wrapper_1_1solver_settings_type.html" title="QPSolverWrapper::solverSettingsType" alt="" coords="5,5,248,32"/>
+<area shape="rect" id="node3" href="$struct_q_p_solver_wrapper_1_1solver_data_type.html" title="QPSolverWrapper::solverDataType" alt="" coords="273,5,495,32"/>
 </map>

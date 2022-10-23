@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['figprocess_0',['figProcess',['../namespacefig_process.html',1,'']]]
+  ['figprocess',['figProcess',['../namespacefig_process.html',1,'']]]
 ];

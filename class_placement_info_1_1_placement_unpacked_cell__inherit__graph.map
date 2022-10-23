@@ -1,4 +1,3 @@
 <map id="PlacementInfo::PlacementUnpackedCell" name="PlacementInfo::PlacementUnpackedCell">
-<area shape="rect" id="node1" title="the smallest, indivisible, representable component. It will include only one standard cell" alt="" coords="17,80,192,121"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand" alt="" coords="5,5,204,32"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand " alt="" coords="5,5,204,32"/>
 </map>

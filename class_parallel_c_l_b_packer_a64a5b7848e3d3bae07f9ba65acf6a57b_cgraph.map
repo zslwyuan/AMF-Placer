@@ -1,9 +1,8 @@
 <map id="ParallelCLBPacker::packCLBsIteration" name="ParallelCLBPacker::packCLBsIteration">
-<area shape="rect" id="node1" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="5,104,144,145"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="224,5,399,47"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="221,71,401,112"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="215,136,407,177"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a6e3b592eb8884c221226e78f353a90fa" title=" " alt="" coords="192,201,431,257"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a647dcb24d560f6f3578166644a12be38" title=" " alt="" coords="489,5,643,47"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a0a56b97b3d64feb09ab7cca14e093856" title=" " alt="" coords="479,71,653,112"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="215,5,407,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="224,71,399,112"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a67b1096f0de4a05e004870c56a55c1bd" title="ParallelCLBPacker::\lPackingCLBSite::PackingCLBCluster\l::getPUs" alt="" coords="192,202,431,258"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="221,136,401,177"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#aea4211bb193e136a3c094fa9e1ceedf0" title="DeviceInfo::DeviceSite\l::getClockHalfColumn" alt="" coords="489,71,643,112"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#afc877ab7818c7725e4cbde72e2f8efc9" title="PlacementInfo::Placement\lUnit::getClockNets" alt="" coords="479,136,653,177"/>
 </map>

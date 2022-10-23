@@ -1,5 +1,4 @@
 <map id="CLBLegalizer::swapPUs" name="CLBLegalizer::swapPUs">
-<area shape="rect" id="node1" title=" " alt="" coords="237,42,400,69"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a004a773a1894effc8b648c0dce2a2f36" title=" " alt="" coords="5,5,189,47"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#abbe04519640adcd7a1b98429377853ac" title=" " alt="" coords="9,71,185,98"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#aa9f9243a90600e55658b68b451b39bef" title="CLBLegalizer::RandomPivot\lPartition" alt="" coords="216,5,400,47"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a2fd4c41aae89b597242fef8b1f362456" title="CLBLegalizer::sortPartition" alt="" coords="220,71,396,98"/>
 </map>

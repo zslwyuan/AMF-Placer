@@ -1,0 +1,14 @@
+<map id="ClusterPlacer::placeUnitBaseOnClusterPlacement" name="ClusterPlacer::placeUnitBaseOnClusterPlacement">
+<area shape="rect" id="node2" href="$class_cluster_placer.html#ab2f74c136ed361b6782d56d5dcf92dc6" title="construct the netlist of the generated clusters based on the PlacementNet in PlacementInfo ..." alt="" coords="459,130,665,157"/>
+<area shape="rect" id="node13" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location ..." alt="" coords="225,181,411,207"/>
+<area shape="rect" id="node3" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="733,5,908,47"/>
+<area shape="rect" id="node11" href="$class_cluster_placer.html#aaf3bcf89de5c55e2e0706ed2e328239a" title="initially cluster cells based on user&#45;defined clusters " alt="" coords="713,123,928,164"/>
+<area shape="rect" id="node4" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement ..." alt="" coords="979,64,1148,105"/>
+<area shape="rect" id="node5" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement " alt="" coords="1199,224,1405,265"/>
+<area shape="rect" id="node6" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="1453,261,1663,287"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level " alt="" coords="1711,235,1913,262"/>
+<area shape="rect" id="node10" href="$class_cluster_placer.html#a0ca64fdff91000c046420b66bec9a89b" title="ClusterPlacer::~ClusterPlacer" alt="" coords="1717,286,1907,313"/>
+<area shape="rect" id="node8" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1997,210,2108,237"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1961,261,2144,287"/>
+<area shape="rect" id="node12" href="$class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d" title="initially cluster cells based on user&#45;defined clusters and conduct connectivity&#45;based partitioning ba..." alt="" coords="976,151,1151,192"/>
+</map>

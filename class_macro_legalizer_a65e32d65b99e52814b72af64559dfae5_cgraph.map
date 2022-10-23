@@ -1,4 +1,3 @@
 <map id="MacroLegalizer::updateMatchingAndUnmatchedMacroCells" name="MacroLegalizer::updateMatchingAndUnmatchedMacroCells">
-<area shape="rect" id="node1" title="record the matching in private list and update the list of cells which are not matched by the bi&#45;part..." alt="" coords="5,5,213,47"/>
-<area shape="rect" id="node2" href="$class_min_cost_bipartite_matcher.html#a7517e8d009997e83e31cfccc9107329b" title=" " alt="" coords="261,5,427,47"/>
+<area shape="rect" id="node2" href="$class_min_cost_bipartite_matcher.html#a7517e8d009997e83e31cfccc9107329b" title="MinCostBipartiteMatcher\l::getMatchedRightNode" alt="" coords="261,5,427,47"/>
 </map>

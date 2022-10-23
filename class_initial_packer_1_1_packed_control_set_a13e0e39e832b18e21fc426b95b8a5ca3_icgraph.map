@@ -1,0 +1,9 @@
+<map id="InitialPacker::PackedControlSet::getFFs" name="InitialPacker::PackedControlSet::getFFs">
+<area shape="rect" id="node2" href="$class_initial_packer.html#a629e14b2a29ceb691985afb7ec20c113" title="check the control set of the candidate FFs and select the control set with the most FFs to be packed ..." alt="" coords="239,81,461,108"/>
+<area shape="rect" id="node7" href="$class_initial_packer_1_1_packed_control_set.html#a43477a2381154e151b867f69b70e9281" title="InitialPacker::PackedControl\lSet::operator=" alt="" coords="257,133,443,174"/>
+<area shape="rect" id="node8" href="$class_initial_packer_1_1_packed_control_set.html#a63ce25d1e568a36715f7ea3f36b99fd4" title="InitialPacker::PackedControl\lSet::PackedControlSet" alt="" coords="257,198,443,239"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="509,56,717,83"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="941,56,1113,83"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro " alt="" coords="765,5,893,32"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="972,5,1083,32"/>
+</map>

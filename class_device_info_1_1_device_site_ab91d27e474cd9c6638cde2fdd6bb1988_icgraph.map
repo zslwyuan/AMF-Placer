@@ -1,6 +1,0 @@
-<map id="DeviceInfo::DeviceSite::getSiteType" name="DeviceInfo::DeviceSite::getSiteType">
-<area shape="rect" id="node1" title=" " alt="" coords="492,31,645,73"/>
-<area shape="rect" id="node2" href="$class_device_info.html#a8cef9864125f49998ee9f08594d8a02a" title="add a site into the device information class" alt="" coords="257,5,392,32"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ae3599b5e79e956c82813b4145859dda3" title="check whether the type of the given PlacementUnit is compatible with the site type" alt="" coords="205,56,444,112"/>
-<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,32"/>
-</map>

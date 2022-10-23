@@ -1,7 +1,7 @@
 var class_placement_info_1_1_placement_macro =
 [
     [ "_fixedPlacementInfo_inMacro", "struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro.html", "struct_placement_info_1_1_placement_macro_1_1__fixed_placement_info__in_macro" ],
-    [ "fixedPlacementInfo_inMacro", "class_placement_info_1_1_placement_macro.html#a2b71da5701e8ceb0aea6df09a0cc1102", null ],
+    [ "fixedPlacementInfo_inMacro", "class_placement_info_1_1_placement_macro.html#af23a20728a0424e0bcbe050fb0f3ddfb", null ],
     [ "PlacementMacroType", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0", [
       [ "PlacementMacroType_LUTFFPair", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0adb93a8b7f594a4eadf9aa7296aebd430", null ],
       [ "PlacementMacroType_LUTLUTSeires", "class_placement_info_1_1_placement_macro.html#a1fd85c9ec83b174f931225a136bd9ff0af9a0c93b4b898c385868fae113890c44", null ],
@@ -21,14 +21,14 @@ var class_placement_info_1_1_placement_macro =
     [ "addCell", "class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7", null ],
     [ "addFixedCellInfo", "class_placement_info_1_1_placement_macro.html#a1e000fe47cfe3a0fdc88e2fef72f5999", null ],
     [ "addOccupiedSite", "class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74", null ],
+    [ "addVirtualCell", "class_placement_info_1_1_placement_macro.html#a0cf2b909e8fe1e783aac1ccea479a828", null ],
     [ "addVirtualCell", "class_placement_info_1_1_placement_macro.html#a6e7ca6b0d372cdbe4d2f41f1d134ba2d", null ],
-    [ "addVirtualCell", "class_placement_info_1_1_placement_macro.html#aaa4d09783dbb1f777673fb33dce7acd5", null ],
     [ "getBottomOffset", "class_placement_info_1_1_placement_macro.html#ab4bae36b4715ee3628a8bc9a87f4894e", null ],
-    [ "getCell", "class_placement_info_1_1_placement_macro.html#a4dbd3eb58782d881d89ba491f17a1120", null ],
+    [ "getCell", "class_placement_info_1_1_placement_macro.html#a46b14aea8015340e29c05553e330e298", null ],
     [ "getCellOffsetXInMacro", "class_placement_info_1_1_placement_macro.html#a685cc55ca98a0e7c83a14f5885082beb", null ],
     [ "getCellOffsetYInMacro", "class_placement_info_1_1_placement_macro.html#af6417d6619cbe3823911800b09100636", null ],
-    [ "getCells", "class_placement_info_1_1_placement_macro.html#a10685875692186ba2a95623ec871637c", null ],
-    [ "getFixedCellInfoVec", "class_placement_info_1_1_placement_macro.html#ad239a91e0bfcc1ca3b561fa2fc778e42", null ],
+    [ "getCells", "class_placement_info_1_1_placement_macro.html#aed24ca5b8d4c52cb7ff4b684862172eb", null ],
+    [ "getFixedCellInfoVec", "class_placement_info_1_1_placement_macro.html#a719607b196d46083426c3b7a82d1bc2c", null ],
     [ "getLeftOffset", "class_placement_info_1_1_placement_macro.html#aa60922d371f4c1d003712eaa6d3c8825", null ],
     [ "getMacroType", "class_placement_info_1_1_placement_macro.html#ad1d97e835581847571928f7b84318ff7", null ],
     [ "getNumOfCells", "class_placement_info_1_1_placement_macro.html#a1390ea67fdb84d30b6128216270ce3fd", null ],

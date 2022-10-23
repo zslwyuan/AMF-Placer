@@ -1,5 +1,4 @@
 <map id="CLBLegalizer::getDisplacement" name="CLBLegalizer::getDisplacement">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,208,57"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="256,5,424,32"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="256,56,424,83"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="256,5,424,32"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="256,56,424,83"/>
 </map>

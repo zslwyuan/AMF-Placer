@@ -1,0 +1,4 @@
+<map id="PlacementTimingOptimizer::getSortedTimingNodes" name="PlacementTimingOptimizer::getSortedTimingNodes">
+<area shape="rect" id="node2" href="$class_placement_timing_info.html#aab232b6d2124de2809f762c785c2b509" title="Get the Simple Placement Timing Graph object. " alt="" coords="236,5,423,61"/>
+<area shape="rect" id="node3" href="$class_placement_timing_info_1_1_timing_graph.html#afcbb12ea4d595ce216db98a864af8c6c" title="PlacementTimingInfo\l::TimingGraph::sortedEndpoint\lByDelay" alt="" coords="232,85,427,141"/>
+</map>

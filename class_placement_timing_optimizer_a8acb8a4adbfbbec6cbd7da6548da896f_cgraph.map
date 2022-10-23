@@ -1,11 +1,10 @@
 <map id="PlacementTimingOptimizer::getPUId2Slack" name="PlacementTimingOptimizer::getPUId2Slack">
-<area shape="rect" id="node1" title=" " alt="" coords="5,122,184,163"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="232,5,447,32"/>
-<area shape="rect" id="node3" href="$class_placement_timing_optimizer.html#a7395049ab979b3d10f54d0c8971942ca" title=" " alt="" coords="250,57,429,98"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="243,122,435,163"/>
-<area shape="rect" id="node7" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="235,187,444,229"/>
-<area shape="rect" id="node9" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="244,253,435,280"/>
-<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#a6411919a62c5b3f45a88644ed479790a" title=" " alt="" coords="495,57,704,98"/>
-<area shape="rect" id="node5" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="752,57,933,98"/>
-<area shape="rect" id="node8" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="517,187,681,229"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#aac7e930d12f2149afe6984a8cad68134" title="PlacementInfo::getTimingInfo" alt="" coords="244,5,435,32"/>
+<area shape="rect" id="node3" href="$class_placement_timing_info.html#add1921ce82dfd102ac696590c899f691" title="Get the Simple Timing Info object which regard design cells as timing nodes. " alt="" coords="235,57,444,98"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a9d1c5aa5c5c8888aeb2c93fc22e46ff0" title="PlacementInfo::getCellId2location" alt="" coords="232,123,447,149"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="243,174,435,215"/>
+<area shape="rect" id="node7" href="$class_placement_timing_optimizer.html#a7395049ab979b3d10f54d0c8971942ca" title="PlacementTimingOptimizer\l::getDelayByModel" alt="" coords="250,239,429,281"/>
+<area shape="rect" id="node4" href="$class_placement_timing_info_1_1_timing_graph.html#acbdeb602d48ff52d045eac782d6cd09f" title="PlacementTimingInfo\l::TimingGraph::getNodes" alt="" coords="517,57,681,98"/>
+<area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#a6411919a62c5b3f45a88644ed479790a" title="PlacementTimingOptimizer\l::getDelayByModel_conservative" alt="" coords="495,239,704,281"/>
+<area shape="rect" id="node9" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y) " alt="" coords="752,239,933,281"/>
 </map>

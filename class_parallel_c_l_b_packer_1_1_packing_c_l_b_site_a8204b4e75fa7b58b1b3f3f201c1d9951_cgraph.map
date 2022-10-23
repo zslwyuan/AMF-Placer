@@ -1,0 +1,3 @@
+<map id="ParallelCLBPacker::PackingCLBSite::moveLUTToLUT6Slot" name="ParallelCLBPacker::PackingCLBSite::moveLUTToLUT6Slot">
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac06a3bbb0e5fd7ad6625b5130e996d1e" title="Get the set of single LUTs in this cluster (some other LUTs have been paired for packing) ..." alt="" coords="307,5,545,61"/>
+</map>

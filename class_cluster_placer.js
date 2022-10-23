@@ -18,7 +18,7 @@ var class_cluster_placer =
     [ "isClustersToLarges", "class_cluster_placer.html#a6a55cd1a6f302b4499533ce925d199a0", null ],
     [ "isDensePlacement", "class_cluster_placer.html#afe8e9b1d5a4831c3adc66004e30ed2ca", null ],
     [ "placeClusters", "class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339", null ],
-    [ "placeUnitBaseOnClusterPlacement", "class_cluster_placer.html#a149784331309e2ae938933d1af6c6010", null ],
+    [ "placeUnitBaseOnClusterPlacement", "class_cluster_placer.html#aac549f90ad1f7820aa447bb8f66f7f8f", null ],
     [ "random_float", "class_cluster_placer.html#a03879444f8300ffffcfd036736f2b14a", null ],
     [ "refineClustersWithPredefinedClusters", "class_cluster_placer.html#abeaa9dab584d4fbf266c7a9e26fd57e3", null ],
     [ "resetClusterInfo", "class_cluster_placer.html#a8b0b60255df9780c038e5a9d6cf50e3b", null ],

@@ -1,9 +1,8 @@
 <map id="PlacementInfo::PlacementMacro::getMacroType" name="PlacementInfo::PlacementMacro::getMacroType">
-<area shape="rect" id="node1" title=" " alt="" coords="451,173,625,214"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aedecc00dc431d63a6d2b3436fb79b19e" title="find the slots in the site for Muxes" alt="" coords="204,5,391,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a14a1863e6ec97bf437eda5e084ed7be0" title="greedily find the exact slots for the LUTs/FFs in the site" alt="" coords="198,85,397,141"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a360963d00263ba0c05ae93c7b27b693d" title="find the slots in the site for Muxes" alt="" coords="192,165,403,221"/>
-<area shape="rect" id="node5" href="$_placement_info_8cc.html#a0f0f5e6d103770fbc53ac592f3798708" title=" " alt="" coords="255,245,340,272"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="213,297,381,338"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object." alt="" coords="5,297,144,338"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aedecc00dc431d63a6d2b3436fb79b19e" title="find the slots in the site for Muxes " alt="" coords="240,5,427,61"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a14a1863e6ec97bf437eda5e084ed7be0" title="greedily find the exact slots for the LUTs/FFs in the site " alt="" coords="234,85,433,141"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a360963d00263ba0c05ae93c7b27b693d" title="find the slots in the site for Muxes " alt="" coords="228,165,439,221"/>
+<area shape="rect" id="node5" href="$_placement_info_8h.html#ac3f4a0f9e9903f17e35ce7cbedbf97fb" title="operator\&lt;\&lt;" alt="" coords="291,245,376,272"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="249,297,417,338"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object. " alt="" coords="487,297,625,338"/>
 </map>

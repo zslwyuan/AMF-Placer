@@ -1,9 +1,8 @@
 <map id="PlacementInfo::optimizeLongPaths" name="PlacementInfo::optimizeLongPaths">
-<area shape="rect" id="node1" title="make the PlacementUnits in the long path closer to each other" alt="" coords="5,143,195,184"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a88fc8d8504046b6ffdc62086951e3837" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="243,113,445,155"/>
-<area shape="rect" id="node7" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="295,179,393,206"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="517,5,691,47"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title=" " alt="" coords="493,70,715,126"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="517,149,691,191"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="517,215,691,256"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a88fc8d8504046b6ffdc62086951e3837" title="move the PlacementUnit to ensure the cells in it are within the device area. " alt="" coords="243,104,445,145"/>
+<area shape="rect" id="node7" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="295,170,393,197"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title="PlacementInfo::Placement\lUnit::X" alt="" coords="517,5,691,47"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title="PlacementInfo::Placement\lUnit::Y" alt="" coords="517,71,691,112"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title="PlacementInfo::Placement\lUnit::getType" alt="" coords="517,136,691,177"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title="PlacementInfo::Placement\lUnit::setAnchorLocationAndForget\lTheOriginalOne" alt="" coords="493,202,715,258"/>
 </map>

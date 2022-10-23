@@ -1,8 +1,7 @@
 <map id="ParallelCLBPacker::checkPackedPUsAndUnpackedPUs" name="ParallelCLBPacker::checkPackedPUsAndUnpackedPUs">
-<area shape="rect" id="node1" title="check the packing status for all the PlacementUnits" alt="" coords="5,27,240,69"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#af5c08da788f04f679b788e32c5ad666f" title=" " alt="" coords="305,5,463,32"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#adf7fc37a3b508e7114d4b9fb70637b57" title=" " alt="" coords="288,57,480,98"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a1b1db2851676857598714de04122290e" title=" " alt="" coords="535,5,673,32"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="528,57,680,98"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="728,57,905,98"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a6ee107065b54548bc25dc7d477563e86" title="PlacementInfo::getCells" alt="" coords="305,5,463,32"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title="PlacementInfo::getPlacement\lUnitByCell" alt="" coords="288,57,480,98"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title="DesignInfo::getCells" alt="" coords="535,5,673,32"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="528,57,680,98"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="728,57,905,98"/>
 </map>

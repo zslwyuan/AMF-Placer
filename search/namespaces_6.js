@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['paintplacement_0',['paintPlacement',['../namespacepaint_placement.html',1,'']]]
+  ['paintplacement',['paintPlacement',['../namespacepaint_placement.html',1,'']]]
 ];

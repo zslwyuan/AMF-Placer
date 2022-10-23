@@ -1,0 +1,20 @@
+<map id="PlacementInfo::PlacementBinInfo::getCorrespondingSites" name="PlacementInfo::PlacementBinInfo::getCorrespondingSites">
+<area shape="rect" id="node2" href="$class_placement_info.html#aba15f2996554fef88b9b8071182b421a" title="find neibor device sites of a given cell from bin grid " alt="" coords="259,85,430,127"/>
+<area shape="rect" id="node19" href="$class_parallel_c_l_b_packer.html#add51eec6b7e9db37932ad704ce57f507" title="ParallelCLBPacker::\lfindNeiborSitesFromBinGrid" alt="" coords="253,151,436,192"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title="ParallelCLBPacker::\ldumpFinalPacking" alt="" coords="506,9,645,51"/>
+<area shape="rect" id="node6" href="$class_macro_legalizer.html#a96b069c52d3ed6fa25c8775d9979a801" title="find candidate sites for the cells left to be matched " alt="" coords="489,85,661,127"/>
+<area shape="rect" id="node14" href="$class_c_l_b_legalizer.html#a2add935df0c96989390f616634fca284" title="find candidate sites for the PlacementUnits left to be matched " alt="" coords="484,173,667,215"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="1465,5,1603,47"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1719,34,1829,61"/>
+<area shape="rect" id="node7" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization..." alt="" coords="724,56,911,97"/>
+<area shape="rect" id="node13" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization. " alt="" coords="715,122,920,149"/>
+<area shape="rect" id="node8" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="968,115,1127,142"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="1187,119,1373,146"/>
+<area shape="rect" id="node12" href="$class_macro_legalizer.html#aafa0aa1d5ea5195c3e7d406ed36be8f4" title="MacroLegalizer::~MacroLegalizer" alt="" coords="1175,69,1385,95"/>
+<area shape="rect" id="node10" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1433,84,1635,125"/>
+<area shape="rect" id="node11" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1683,91,1865,118"/>
+<area shape="rect" id="node15" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization..." alt="" coords="729,173,905,215"/>
+<area shape="rect" id="node18" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization. " alt="" coords="720,239,915,266"/>
+<area shape="rect" id="node16" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="973,181,1122,207"/>
+<area shape="rect" id="node17" href="$class_c_l_b_legalizer.html#a39d4137e05f424217b131eec739f76f9" title="CLBLegalizer::~CLBLegalizer" alt="" coords="1185,181,1375,207"/>
+</map>

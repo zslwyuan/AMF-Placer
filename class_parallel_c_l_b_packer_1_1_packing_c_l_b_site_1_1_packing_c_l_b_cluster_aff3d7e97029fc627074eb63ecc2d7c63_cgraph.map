@@ -1,0 +1,10 @@
+<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addToFFSet" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::addToFFSet">
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#aae3effe73f40e0c149f83793e43baf5f" title="try to add a given FF into a specific half CLB in this cluster " alt="" coords="292,194,531,250"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title="DesignInfo::DesignCell\l::isVirtualCell" alt="" coords="597,5,749,47"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a00f9ccaf985e4c82df58f6a3e7af3470" title="Get the Control Set Info object of this cell. " alt="" coords="597,71,749,112"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_control_set_info.html#a0ffffe2680b92dd1b7c938c0525fbcfe" title="DesignInfo::ControlSetInfo\l::getCLK" alt="" coords="587,136,760,177"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_control_set_info.html#ad4acfe3e16bd26e59fd40d41fc60771c" title="DesignInfo::ControlSetInfo\l::getSR" alt="" coords="587,201,760,243"/>
+<area shape="rect" id="node7" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title="DesignInfo::FFSRCompatible" alt="" coords="579,267,768,294"/>
+<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist. " alt="" coords="597,319,749,360"/>
+<area shape="rect" id="node9" href="$class_design_info_1_1_control_set_info.html#a3a0fe433bdf7cbf22a5a7ab2f343b87f" title="Get the Id of the control set (each control set will have a unique Id) " alt="" coords="587,384,760,425"/>
+</map>

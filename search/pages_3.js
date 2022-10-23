@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['download_20post_2dimplementation_20vivado_20projects_0',['Download Post-Implementation Vivado Projects',['../md_doc_pages__3_3__post_implementation_projects.html',1,'']]]
+  ['extract_20design_20information_20from_20vivado',['Extract Design Information from Vivado',['../_2_4__extract_design_informationfrom_vivado.html',1,'_2_getStarted']]],
+  ['extract_20device_20information_20from_20vivado',['Extract Device Information from Vivado',['../_2_5__extract_device_informationfrom_vivado.html',1,'_2_getStarted']]],
+  ['experimental_20results',['Experimental Results',['../_3_2__experimental_results.html',1,'_3_benchmarkInfo']]],
+  ['existing_20problems_20when_20exporting_20to_20vivado',['Existing Problems When Exporting To Vivado',['../_7_portability_to_vivado_problem.html',1,'']]]
 ];

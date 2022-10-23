@@ -1,5 +1,4 @@
 <map id="CLBLegalizer::resolveOverflowColumns" name="CLBLegalizer::resolveOverflowColumns">
-<area shape="rect" id="node1" title="resolve the overflow columns during fixed column legalization by spreading &quot;outliers&quot; to neighbor col..." alt="" coords="5,5,204,47"/>
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a3c716fa6adc73517939ce5abac62d72e" title="spread PlacementUnits accross columns to resolve resource overflow" alt="" coords="252,13,423,39"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="471,13,665,39"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#aca4d9470e4ad325d899d1602314e8131" title="spread PlacementUnits accross columns to resolve resource overflow " alt="" coords="252,13,423,39"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit " alt="" coords="471,13,665,39"/>
 </map>

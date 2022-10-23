@@ -1,18 +1,19 @@
 <map id="WirelengthOptimizer::addPseudoNet_SlackBased" name="WirelengthOptimizer::addPseudoNet_SlackBased">
-<area shape="rect" id="node1" title="add pseudo net for timing optimization based on the timing slack of each elements in the design netli..." alt="" coords="5,347,196,389"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#ac3eb36b9ddd6446c5941a4f737ed44a9" title=" " alt="" coords="247,5,461,32"/>
-<area shape="rect" id="node3" href="$class_placement_timing_info_1_1_timing_graph.html#a739b0d5e237f6984e2237f192c84a474" title="Get the clock period." alt="" coords="256,57,452,98"/>
-<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#a7395049ab979b3d10f54d0c8971942ca" title=" " alt="" coords="265,122,443,163"/>
-<area shape="rect" id="node7" href="$class_placement_timing_optimizer.html#a62f35a55648c6687d465fd009683a3eb" title=" " alt="" coords="265,187,443,229"/>
-<area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#ad69d76d25628ad43578af140119e17da" title=" " alt="" coords="262,253,446,294"/>
-<area shape="rect" id="node9" href="$class_placement_info.html#a1eb27ae2352f56bf6cb2826d6663d2ac" title=" " alt="" coords="246,318,462,359"/>
-<area shape="rect" id="node10" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="244,384,464,411"/>
-<area shape="rect" id="node11" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="261,435,447,491"/>
-<area shape="rect" id="node12" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="249,514,459,555"/>
-<area shape="rect" id="node14" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="259,580,449,607"/>
-<area shape="rect" id="node15" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="309,631,399,657"/>
-<area shape="rect" id="node16" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="305,681,403,708"/>
-<area shape="rect" id="node5" href="$class_placement_timing_optimizer.html#a6411919a62c5b3f45a88644ed479790a" title=" " alt="" coords="512,122,721,163"/>
-<area shape="rect" id="node6" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="769,122,951,163"/>
-<area shape="rect" id="node13" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="535,514,699,555"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a5e5c210a1716ccad33d8f909992a33de" title="PlacementInfo::getPlacementNets" alt="" coords="244,5,464,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#aac7e930d12f2149afe6984a8cad68134" title="PlacementInfo::getTimingInfo" alt="" coords="751,41,941,68"/>
+<area shape="rect" id="node4" href="$class_placement_timing_info.html#add1921ce82dfd102ac696590c899f691" title="Get the Simple Timing Info object which regard design cells as timing nodes. " alt="" coords="741,93,951,134"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a9d1c5aa5c5c8888aeb2c93fc22e46ff0" title="PlacementInfo::getCellId2location" alt="" coords="739,224,953,251"/>
+<area shape="rect" id="node7" href="$class_placement_timing_optimizer.html#a8d38e030158bcb17d7ff52d66a28b16a" title="PlacementTimingOptimizer\l::getNetActualSlackPinNum" alt="" coords="262,158,446,199"/>
+<area shape="rect" id="node10" href="$class_placement_timing_optimizer.html#a7395049ab979b3d10f54d0c8971942ca" title="PlacementTimingOptimizer\l::getDelayByModel" alt="" coords="757,275,935,317"/>
+<area shape="rect" id="node13" href="$class_placement_info.html#a1eb27ae2352f56bf6cb2826d6663d2ac" title="PlacementInfo::getNetDistribution\lByDensity" alt="" coords="246,326,462,367"/>
+<area shape="rect" id="node14" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="305,392,403,419"/>
+<area shape="rect" id="node15" href="$class_placement_timing_optimizer.html#a62f35a55648c6687d465fd009683a3eb" title="PlacementTimingOptimizer\l::getEffectFactor" alt="" coords="265,443,443,485"/>
+<area shape="rect" id="node16" href="$class_placement_timing_info.html#aab232b6d2124de2809f762c785c2b509" title="Get the Simple Placement Timing Graph object. " alt="" coords="261,509,447,565"/>
+<area shape="rect" id="node17" href="$class_placement_timing_info_1_1_timing_graph.html#a739b0d5e237f6984e2237f192c84a474" title="Get the clock period. " alt="" coords="256,590,452,631"/>
+<area shape="rect" id="node18" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="309,656,399,683"/>
+<area shape="rect" id="node5" href="$class_placement_timing_info_1_1_timing_graph.html#acbdeb602d48ff52d045eac782d6cd09f" title="PlacementTimingInfo\l::TimingGraph::getNodes" alt="" coords="1024,93,1188,134"/>
+<area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#a8acb8a4adbfbbec6cbd7da6548da896f" title="PlacementTimingOptimizer\l::getPUId2Slack" alt="" coords="512,158,691,199"/>
+<area shape="rect" id="node9" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="750,158,942,199"/>
+<area shape="rect" id="node11" href="$class_placement_timing_optimizer.html#a6411919a62c5b3f45a88644ed479790a" title="PlacementTimingOptimizer\l::getDelayByModel_conservative" alt="" coords="1001,275,1211,317"/>
+<area shape="rect" id="node12" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y) " alt="" coords="1259,275,1440,317"/>
 </map>

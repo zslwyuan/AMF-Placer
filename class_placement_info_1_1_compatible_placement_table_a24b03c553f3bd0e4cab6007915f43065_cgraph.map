@@ -1,0 +1,11 @@
+<map id="PlacementInfo::CompatiblePlacementTable::getcellId2InfationRatio" name="PlacementInfo::CompatiblePlacementTable::getcellId2InfationRatio">
+<area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html#a3ea2f44470dec480669f06a2041f8d9f" title="set the mapping from cells in design netlist to BEL type ID for later processing. ..." alt="" coords="304,78,545,119"/>
+<area shape="rect" id="node10" href="$class_placement_info_1_1_compatible_placement_table.html#a3b176f3a41c580bc77b3859c94116107" title="forget the occupation adjustment by packing feasibility and routing congestion " alt="" coords="305,144,544,200"/>
+<area shape="rect" id="node3" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title="DesignInfo::getNumCells" alt="" coords="611,5,776,32"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title="DesignInfo::getCells" alt="" coords="625,56,762,83"/>
+<area shape="rect" id="node5" href="$class_device_info.html#a64d783b411441415fa8a8af207412e1b" title="DeviceInfo::getBELType2False\lBELType" alt="" coords="593,107,793,149"/>
+<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="648,173,739,200"/>
+<area shape="rect" id="node6" href="$class_device_info.html#acf972e842012f53c4087c8da7032bd8e" title="load BEL type remapping information since some cell can be placed in sites of different sites..." alt="" coords="841,107,1016,149"/>
+<area shape="rect" id="node7" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title="strSplit" alt="" coords="1070,89,1133,116"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="1064,140,1139,167"/>
+</map>

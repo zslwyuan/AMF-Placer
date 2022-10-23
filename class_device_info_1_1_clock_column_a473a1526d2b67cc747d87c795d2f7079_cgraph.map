@@ -1,6 +1,5 @@
 <map id="DeviceInfo::ClockColumn::addSite" name="DeviceInfo::ClockColumn::addSite">
-<area shape="rect" id="node1" title=" " alt="" coords="5,64,172,105"/>
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html#aeb68936902acc7288fc46a983f402db5" title=" " alt="" coords="220,5,397,47"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="225,71,393,98"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="225,122,393,149"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="225,5,393,32"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_element.html#a28d20e8d152106ce639899f8380a3955" title="DeviceInfo::DeviceElement\l::getName" alt="" coords="220,57,397,98"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="225,123,393,149"/>
 </map>

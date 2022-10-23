@@ -1,5 +1,5 @@
 <map id="DesignInfo::isMux" name="DesignInfo::isMux">
-<area shape="rect" id="node1" title=" " alt="" coords="399,5,523,32"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a5c64afd9ea532c60965e7668a75dc79f" title=" " alt="" coords="212,5,351,32"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d" title="Construct a new AMFPlacer object according to a given placer configuration file." alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a5c64afd9ea532c60965e7668a75dc79f" title="DesignInfo::printStat" alt="" coords="177,35,316,61"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d" title="Construct a new AMFPlacer object according to a given placer configuration file. " alt="" coords="380,5,539,32"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a78761a5ebcef384b7427db683693a0fd" title="disable enhancement of all the nets in the design (reset extra weight to be 1) " alt="" coords="364,57,555,98"/>
 </map>

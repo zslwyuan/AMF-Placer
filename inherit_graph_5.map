@@ -1,6 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="5,56,183,83"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects" alt="" coords="231,5,383,32"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="231,56,382,83"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_pin.html" title="A design pin on a design cell connected to a net." alt="" coords="232,107,381,133"/>
+<area shape="rect" id="node1" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design. " alt="" coords="5,56,183,83"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects ..." alt="" coords="231,5,383,32"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells " alt="" coords="231,56,382,83"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_pin.html" title="A design pin on a design cell connected to a net. " alt="" coords="232,107,381,133"/>
 </map>

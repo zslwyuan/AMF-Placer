@@ -1,0 +1,11 @@
+<map id="CLBLegalizer::quick_sort_WLChange" name="CLBLegalizer::quick_sort_WLChange">
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a21503dd1a3f80dd7fb6d5fbc42dc3bbc" title="find potential sites for each PlacementUnit " alt="" coords="191,49,367,90"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization..." alt="" coords="424,19,600,61"/>
+<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization. " alt="" coords="415,85,609,112"/>
+<area shape="rect" id="node4" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="657,56,807,83"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="857,31,1043,57"/>
+<area shape="rect" id="node9" href="$class_c_l_b_legalizer.html#a39d4137e05f424217b131eec739f76f9" title="CLBLegalizer::~CLBLegalizer" alt="" coords="855,81,1045,108"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1093,23,1295,65"/>
+<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1379,5,1489,32"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1343,56,1525,83"/>
+</map>

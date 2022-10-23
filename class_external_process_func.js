@@ -5,7 +5,7 @@ var class_external_process_func =
     [ "createShareMemory", "class_external_process_func.html#a4673460aa9c00a6c26d21ebcdbf58417", null ],
     [ "deleteShareMemory", "class_external_process_func.html#a306ff671e2f863d3dfa8e4ed07242c9f", null ],
     [ "execute", "class_external_process_func.html#a063b1a01b42803027b7ffcb694bf2b6b", null ],
-    [ "getSharedMemory", "class_external_process_func.html#a0ae60db9a279499c4df9047e8e3b77d1", null ],
+    [ "getSharedMemory", "class_external_process_func.html#aee16d35a2b1b1fe8a8e4e3629cccfecb", null ],
     [ "executablePath", "class_external_process_func.html#a568e51da8cac6be493daf63364498522", null ],
     [ "sharedid", "class_external_process_func.html#ae1c4d7de86dd64a2f6a25424e50ec25a", null ],
     [ "shm", "class_external_process_func.html#a5d76e49c2a31eea6666e8145825914db", null ],

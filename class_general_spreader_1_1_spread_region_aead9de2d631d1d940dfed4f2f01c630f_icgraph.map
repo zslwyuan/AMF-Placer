@@ -1,0 +1,14 @@
+<map id="GeneralSpreader::SpreadRegion::getCells" name="GeneralSpreader::SpreadRegion::getCells">
+<area shape="rect" id="node2" href="$class_general_spreader.html#aea5a6e91298022974d9868b17e86c18e" title="GeneralSpreader::DumpCells\lCoordinate" alt="" coords="269,39,457,80"/>
+<area shape="rect" id="node5" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio " alt="" coords="1319,68,1545,109"/>
+<area shape="rect" id="node13" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a125de29bb177e1e9428ec75df9fe0b06" title="Construct a new Sub Box object. " alt="" coords="260,156,467,197"/>
+<area shape="rect" id="node3" href="$class_general_spreader.html#a85b48682c01808abbd1116648fe8fb5b" title="ensure the X/Y is in the legal range of the target device " alt="" coords="515,39,693,80"/>
+<area shape="rect" id="node4" href="$class_general_spreader.html#a14f37632b7be86bd593b5f2ea1ab92ff" title="update the information of the involved PlacementUnit(s) " alt="" coords="1044,39,1271,80"/>
+<area shape="rect" id="node12" href="$class_general_spreader.html#acc20d54c233a7f07992db97050bea371" title="multi&#45;threading workers for updating the information of the involved PlacementUnit(s) ..." alt="" coords="741,39,996,80"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements " alt="" coords="1603,46,1761,73"/>
+<area shape="rect" id="node11" href="$class_general_spreader.html#ab0a62c9005bdbae8770045ce40b1cad0" title="GeneralSpreader::~General\lSpreader" alt="" coords="1593,97,1771,139"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1819,71,2020,112"/>
+<area shape="rect" id="node10" href="$class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion. " alt="" coords="1833,5,2005,47"/>
+<area shape="rect" id="node8" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="2104,21,2215,47"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="2068,78,2251,105"/>
+</map>

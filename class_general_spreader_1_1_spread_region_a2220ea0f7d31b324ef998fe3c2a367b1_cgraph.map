@@ -1,8 +1,0 @@
-<map id="GeneralSpreader::SpreadRegion::SpreadRegion" name="GeneralSpreader::SpreadRegion::SpreadRegion">
-<area shape="rect" id="node1" title="Construct a new Spread Region object." alt="" coords="5,136,212,177"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_bin_info.html#ab0c6bfb2c530c40dd069807e7b6bbc08" title=" " alt="" coords="260,5,435,47"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_bin_info.html#a3520d1ce9ca822861f5450aa38a53afe" title="Get the reference of the set of cells in the bin." alt="" coords="260,71,435,112"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_bin_info.html#a7e5e770f9330aa855850ccebb81f9365" title=" " alt="" coords="260,136,435,177"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_bin_info.html#a2f0a8d6bd72874e0649f05199b6a98bc" title="return the column of the bin in the grid" alt="" coords="260,201,435,243"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_bin_info.html#aa94fbb53f48f37bb1454617eaff89b3b" title="return the row of the bin in the grid" alt="" coords="260,267,435,308"/>
-</map>

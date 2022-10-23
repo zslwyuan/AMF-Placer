@@ -1,4 +1,3 @@
 <map id="DesignInfo::DesignCell::getCellId" name="DesignInfo::DesignCell::getCellId">
-<area shape="rect" id="node1" title="Get the Cell Id in the cell list." alt="" coords="5,5,157,47"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="205,5,383,47"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="205,5,383,47"/>
 </map>

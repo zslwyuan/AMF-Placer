@@ -1,0 +1,12 @@
+<map id="MacroLegalizer::RandomPivotPartition" name="MacroLegalizer::RandomPivotPartition">
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#a9dfeb4e45f4d3bd3aadaf3cd6519f1ef" title="MacroLegalizer::swapPUs" alt="" coords="255,82,428,109"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#ac6474dbf7cfa024bfc3a604464154b2d" title="MacroLegalizer::sortPartition" alt="" coords="248,133,435,159"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite " alt="" coords="483,107,700,134"/>
+<area shape="rect" id="node11" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title="MacroLegalizer::swapSitePtr" alt="" coords="498,158,685,185"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title="PlacementInfo::getPlacement\lUnitByCell" alt="" coords="748,5,940,47"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title="PlacementInfo::getPlacement\lUnitId2Nets" alt="" coords="748,71,940,112"/>
+<area shape="rect" id="node9" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="760,137,928,163"/>
+<area shape="rect" id="node10" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="760,187,928,214"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="988,5,1140,47"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="1188,5,1365,47"/>
+</map>

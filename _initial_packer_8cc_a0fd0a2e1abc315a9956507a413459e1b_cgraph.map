@@ -1,5 +1,4 @@
 <map id="canLUTPacked" name="canLUTPacked">
-<area shape="rect" id="node1" title=" " alt="" coords="5,46,119,73"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="167,5,319,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="167,71,319,112"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title="DesignInfo::DesignCell\l::isLUT" alt="" coords="167,5,319,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="167,71,319,112"/>
 </map>

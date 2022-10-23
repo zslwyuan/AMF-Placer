@@ -1,11 +1,10 @@
 <map id="replaceAll" name="replaceAll">
-<area shape="rect" id="node1" title=" " alt="" coords="971,97,1049,124"/>
-<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="747,5,899,32"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46" title=" " alt="" coords="743,57,903,98"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#acdccd594e78ef05cf0b0769cc11bc244" title=" " alt="" coords="724,122,923,163"/>
-<area shape="rect" id="node9" href="$class_placement_timing_info.html#a563843a7fc5ac32d06fa1d8ce590c1a5" title="Construct a new Placement Timing Info object based on the information of design and device." alt="" coords="748,187,899,229"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="537,90,676,131"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="351,90,489,131"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,90,303,131"/>
-<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,97,116,124"/>
+<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object. " alt="" coords="155,5,307,32"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46" title="ParallelCLBPacker::\ldumpCLBPlacementTcl" alt="" coords="151,57,311,98"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#acdccd594e78ef05cf0b0769cc11bc244" title="ParallelCLBPacker::\ldumpDSPBRAMPlacementTcl" alt="" coords="132,122,331,163"/>
+<area shape="rect" id="node9" href="$class_placement_timing_info.html#a563843a7fc5ac32d06fa1d8ce590c1a5" title="Construct a new Placement Timing Info object based on the information of design and device..." alt="" coords="156,187,307,229"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title="ParallelCLBPacker::\ldumpPlacementTcl" alt="" coords="379,90,517,131"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title="ParallelCLBPacker::\ldumpFinalPacking" alt="" coords="565,90,704,131"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="752,90,891,131"/>
+<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="939,97,1049,124"/>
 </map>

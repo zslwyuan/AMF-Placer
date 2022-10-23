@@ -1,0 +1,7 @@
+<map id="MacroLegalizer::macroCanBeFitIn" name="MacroLegalizer::macroCanBeFitIn">
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#a82fea18e2fe947cf747ab4e871b6873d" title="MacroLegalizer::sortSites\lBySiteY" alt="" coords="705,5,873,47"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#a7129771f1e29f2460dbe429bf917b236" title="MacroLegalizer::sortPUsByPU2Y" alt="" coords="228,38,443,65"/>
+<area shape="rect" id="node6" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit " alt="" coords="248,89,423,131"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title="MacroLegalizer::swapSitePtr" alt="" coords="921,13,1108,39"/>
+<area shape="rect" id="node5" href="$class_macro_legalizer.html#aa58fa1b66ae80470c5a6483338aa854f" title="MacroLegalizer::swapPU" alt="" coords="491,38,657,65"/>
+</map>

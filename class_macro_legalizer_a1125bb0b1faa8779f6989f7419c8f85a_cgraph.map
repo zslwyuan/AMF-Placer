@@ -1,0 +1,12 @@
+<map id="MacroLegalizer::DPForMinHPWL" name="MacroLegalizer::DPForMinHPWL">
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#a82fea18e2fe947cf747ab4e871b6873d" title="MacroLegalizer::sortSites\lBySiteY" alt="" coords="291,5,459,47"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit " alt="" coords="288,71,463,112"/>
+<area shape="rect" id="node5" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite " alt="" coords="267,137,484,163"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title="MacroLegalizer::swapSitePtr" alt="" coords="535,13,721,39"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title="PlacementInfo::getPlacement\lUnitByCell" alt="" coords="532,64,724,105"/>
+<area shape="rect" id="node9" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title="PlacementInfo::getPlacement\lUnitId2Nets" alt="" coords="532,129,724,171"/>
+<area shape="rect" id="node10" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="544,195,712,222"/>
+<area shape="rect" id="node11" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="544,246,712,273"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="772,64,924,105"/>
+<area shape="rect" id="node8" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="972,64,1149,105"/>
+</map>

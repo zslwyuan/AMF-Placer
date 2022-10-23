@@ -1,4 +1,3 @@
 <map id="ParallelCLBPacker::prePackLegalizedMacros" name="ParallelCLBPacker::prePackLegalizedMacros">
-<area shape="rect" id="node1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="192,5,360,47"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object." alt="" coords="5,5,144,47"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object. " alt="" coords="221,5,360,47"/>
 </map>

@@ -1,9 +1,8 @@
 <map id="DesignInfo::addPinToNet" name="DesignInfo::addPinToNet">
-<area shape="rect" id="node1" title="bind a pin to an existing net. If the net does not exist, new one." alt="" coords="5,143,172,170"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_net.html#a83f1437982b777526b6f4a482db7fcbe" title="bind the net to a pin by name" alt="" coords="233,5,384,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_net.html#a05d76a2910b424aac20cc6915fef48b4" title="bind the net to a pin&#39;s pointer" alt="" coords="231,71,386,112"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="220,136,397,177"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_pin.html#a7c9cb7d85a24b52f43af175d20372ed1" title="Get the name of the net which the pin connects to." alt="" coords="234,201,383,243"/>
-<area shape="rect" id="node7" href="$class_design_info.html#a242dc817a71842fd67a2794a95d8f924" title=" " alt="" coords="227,267,391,294"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_pin.html#ab34cae7cdbaf860b759acc4005ea2606" title=" " alt="" coords="445,71,595,112"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_pin.html#aff9325e6444d9f8614415609531e09b7" title="Get the name of the net which the pin connects to. " alt="" coords="234,5,383,47"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a242dc817a71842fd67a2794a95d8f924" title="DesignInfo::getNumNets" alt="" coords="227,71,391,98"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_net.html#a83f1437982b777526b6f4a482db7fcbe" title="bind the net to a pin by name " alt="" coords="233,123,384,164"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title="DesignInfo::DesignElement\l::getName" alt="" coords="220,188,397,229"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_net.html#a05d76a2910b424aac20cc6915fef48b4" title="bind the net to a pin&#39;s pointer " alt="" coords="231,253,386,295"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_pin.html#ab34cae7cdbaf860b759acc4005ea2606" title="DesignInfo::DesignPin\l::isOutputPort" alt="" coords="445,253,595,295"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="DeviceInfo::DeviceTile::getChildrenSites" name="DeviceInfo::DeviceTile::getChildrenSites">
+<area shape="rect" id="node2" href="$class_device_info.html#a8cef9864125f49998ee9f08594d8a02a" title="add a site into the device information class " alt="" coords="204,13,339,39"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a8069eeed2c4a5d0ca7935ae17069d1f2" title="add a Site type into the set of the existing site types " alt="" coords="387,13,556,39"/>
+<area shape="rect" id="node4" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object. " alt="" coords="395,63,547,90"/>
+</map>

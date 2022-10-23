@@ -1,0 +1,14 @@
+<map id="CLBLegalizer::sortPartition" name="CLBLegalizer::sortPartition">
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a404c50f60c8245a111653197c1d11f65" title="CLBLegalizer::RandomPivot\lPartition" alt="" coords="229,39,413,80"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a93790c756433eb1f77259c5ad7c3b85d" title="CLBLegalizer::quick\l_sort_locX" alt="" coords="461,5,599,47"/>
+<area shape="rect" id="node4" href="$class_c_l_b_legalizer.html#a66fa786734b05c15bce95f03a63bc8a8" title="CLBLegalizer::quick\l_sort_WLChange" alt="" coords="461,71,599,112"/>
+<area shape="rect" id="node5" href="$class_c_l_b_legalizer.html#a21503dd1a3f80dd7fb6d5fbc42dc3bbc" title="find potential sites for each PlacementUnit " alt="" coords="647,71,823,112"/>
+<area shape="rect" id="node6" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization..." alt="" coords="880,41,1056,83"/>
+<area shape="rect" id="node13" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization. " alt="" coords="871,107,1065,134"/>
+<area shape="rect" id="node7" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="1113,78,1263,105"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="1313,53,1499,79"/>
+<area shape="rect" id="node12" href="$class_c_l_b_legalizer.html#a39d4137e05f424217b131eec739f76f9" title="CLBLegalizer::~CLBLegalizer" alt="" coords="1311,103,1501,130"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1549,45,1751,87"/>
+<area shape="rect" id="node10" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1835,27,1945,54"/>
+<area shape="rect" id="node11" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1799,78,1981,105"/>
+</map>

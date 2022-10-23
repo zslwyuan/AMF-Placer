@@ -1,10 +1,8 @@
 <map id="DesignInfo::DesignCell::isLogicRelated" name="DesignInfo::DesignCell::isLogicRelated">
-<area shape="rect" id="node1" title="check whether the cell is related to logic computation" alt="" coords="5,201,157,243"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a546abcfc49d0f2a14c46abb9c7877e8f" title=" " alt="" coords="205,5,357,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a58e7a388f22b042defe20e751da42b8a" title=" " alt="" coords="205,71,357,112"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="205,136,357,177"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="205,201,357,243"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a1f7cf81863dad6b4613a54daf1b12133" title=" " alt="" coords="205,267,357,308"/>
-<area shape="rect" id="node7" href="$class_design_info_1_1_design_cell.html#a03b6815c5d8200376e119a603c98c5dc" title=" " alt="" coords="205,332,357,373"/>
-<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#aad540c02ce890d994bcf7a9b4e6433ea" title=" " alt="" coords="205,397,357,439"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a4c507342291fe723bb27d68e43f84474" title="DesignInfo::isLUT" alt="" coords="219,5,346,32"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a5abea54a57ffccc26028456b5f156e74" title="DesignInfo::isFF" alt="" coords="225,56,341,83"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a68661265c8e549ee8f3a0209f6df1163" title="DesignInfo::isLUTRAM" alt="" coords="205,107,360,133"/>
+<area shape="rect" id="node5" href="$class_design_info.html#a602d2e43d47be601b929f4044d165504" title="DesignInfo::isBRAM" alt="" coords="213,157,352,184"/>
+<area shape="rect" id="node6" href="$class_design_info.html#a2534a7e1dcd16c6838a094c110fdd33b" title="DesignInfo::isDSP" alt="" coords="219,208,346,235"/>
+<area shape="rect" id="node7" href="$class_design_info.html#aaf2cf53b8b5526ef4d192104e6b9c34b" title="DesignInfo::isShifter" alt="" coords="213,259,352,285"/>
 </map>

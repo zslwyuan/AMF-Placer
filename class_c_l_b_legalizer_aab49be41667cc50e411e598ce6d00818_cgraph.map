@@ -1,0 +1,13 @@
+<map id="CLBLegalizer::setIntitialParameters" name="CLBLegalizer::setIntitialParameters">
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#ae1c80f68af5ff0a91f0b838038b3d013" title="reset the mapped flag of the involved sites. " alt="" coords="225,41,390,82"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title="CLBLegalizer::dumpMatching" alt="" coords="212,107,403,133"/>
+<area shape="rect" id="node4" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="509,5,599,32"/>
+<area shape="rect" id="node5" href="$class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title="CLBLegalizer::getDisplacement" alt="" coords="453,56,655,83"/>
+<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite " alt="" coords="451,107,657,133"/>
+<area shape="rect" id="node11" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit " alt="" coords="457,157,651,184"/>
+<area shape="rect" id="node12" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title="writeStrToGZip" alt="" coords="499,208,609,235"/>
+<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="717,31,885,57"/>
+<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="717,81,885,108"/>
+<area shape="rect" id="node9" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title="PlacementInfo::getPlacement\lUnitId2Nets" alt="" coords="705,133,897,174"/>
+<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title="PlacementInfo::Placement\lUnit::getId" alt="" coords="714,198,889,239"/>
+</map>

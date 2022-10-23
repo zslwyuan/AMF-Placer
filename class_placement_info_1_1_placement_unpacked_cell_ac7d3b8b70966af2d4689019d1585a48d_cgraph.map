@@ -1,11 +1,4 @@
 <map id="PlacementInfo::PlacementUnpackedCell::setLockedAt" name="PlacementInfo::PlacementUnpackedCell::setLockedAt">
-<area shape="rect" id="node1" title=" " alt="" coords="5,221,188,262"/>
-<area shape="rect" id="node2" href="$class_device_info.html#af80ea4926947a5bf90165e9051e159f7" title=" " alt="" coords="258,5,389,32"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a41c9eba04c1d8ed3b2a6c30662550d38" title="Set the Anchor Location for the PlacementUnit." alt="" coords="236,57,411,98"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a531ed51b8a516bf258c3d0237a9aad42" title=" " alt="" coords="236,122,411,163"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#aa981acea66b64adc88749452146f1280" title=" " alt="" coords="236,187,411,229"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a16f6632ebc643578d57c77356f003502" title=" " alt="" coords="247,253,400,294"/>
-<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#a5da6175f473345876ee67558b2f5851c" title=" " alt="" coords="236,318,411,359"/>
-<area shape="rect" id="node8" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="239,384,407,411"/>
-<area shape="rect" id="node9" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="239,435,407,461"/>
+<area shape="rect" id="node2" href="$class_device_info.html#ac3000677fef93eba2e1e5b91469f38d2" title="DeviceInfo::getSite" alt="" coords="247,5,378,32"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a16f6632ebc643578d57c77356f003502" title="DeviceInfo::DeviceSite\l::setOccupied" alt="" coords="236,57,389,98"/>
 </map>

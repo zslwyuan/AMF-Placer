@@ -1,0 +1,9 @@
+<map id="ClusterPlacer::placeUnitBaseOnClusterPlacement" name="ClusterPlacer::placeUnitBaseOnClusterPlacement">
+<area shape="rect" id="node2" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device) " alt="" coords="231,5,431,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device) " alt="" coords="232,56,429,83"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device) " alt="" coords="231,107,431,133"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device) " alt="" coords="232,157,429,184"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="235,209,427,250"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area. " alt="" coords="225,275,436,301"/>
+<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title="PlacementInfo::Placement\lUnit::getType" alt="" coords="484,267,659,309"/>
+</map>

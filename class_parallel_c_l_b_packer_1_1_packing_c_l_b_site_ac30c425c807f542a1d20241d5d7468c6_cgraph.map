@@ -1,32 +1,3 @@
 <map id="ParallelCLBPacker::PackingCLBSite::addCarry" name="ParallelCLBPacker::PackingCLBSite::addCarry">
-<area shape="rect" id="node1" title="add CARRY&#45;related PlacementUnit into this CLB site" alt="" coords="5,580,180,621"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a06dea9d3c7967a6980094b6ea47e69fc" title="try to add a given FF into this cluster" alt="" coords="228,65,467,121"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7bddc200c7d2404963bed65ad5ccbb77" title="try to add a given LUT into this cluster" alt="" coords="228,145,467,201"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a0a16835f0c1b37576fc9a3b5e16cdbc3" title="we use a hash function to encode the cluster to easily check duplicated clusters in the candidates" alt="" coords="228,501,467,557"/>
-<area shape="rect" id="node14" href="$class_design_info_1_1_control_set_info.html#a9d63556d73079d3e896bf113ca8890ce" title=" " alt="" coords="261,580,434,621"/>
-<area shape="rect" id="node16" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title=" " alt="" coords="253,646,442,673"/>
-<area shape="rect" id="node17" href="$class_design_info_1_1_design_cell.html#a454e602731e3da9d6bc22cc217234ecd" title="Get the Control Set Info object of this cell." alt="" coords="271,697,423,739"/>
-<area shape="rect" id="node18" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ae113a0ab512bbd61cee586c6383f3c83" title=" " alt="" coords="228,762,467,818"/>
-<area shape="rect" id="node19" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="271,841,423,883"/>
-<area shape="rect" id="node20" href="$class_design_info_1_1_design_cell.html#a916ef31cb2e02ab0241ceea8d8c8739e" title=" " alt="" coords="271,907,423,948"/>
-<area shape="rect" id="node21" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a592c0413656822af69c9273b9597dc05" title="a API to print the information of cluster" alt="" coords="228,311,467,367"/>
-<area shape="rect" id="node24" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7260913b3b98f930167728b86b5631da" title="update the score of this cluster by considering HPWL, interconnection density, timing and etc" alt="" coords="228,421,467,477"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="555,5,707,47"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="815,80,967,121"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac287a437465d8184844c97f30aa9a49e" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="525,123,737,164"/>
-<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="815,164,967,205"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="803,5,980,47"/>
-<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7839574b3af61d1ad3117aa547dfce05" title=" " alt="" coords="527,356,735,397"/>
-<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#afbbc37ecef88e17c27b70d9982272e81" title=" " alt="" coords="534,501,729,557"/>
-<area shape="rect" id="node12" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="544,580,719,621"/>
-<area shape="rect" id="node13" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a2e8820284a04ee0a7d615769f324970e" title=" " alt="" coords="515,645,748,687"/>
-<area shape="rect" id="node15" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="543,711,720,752"/>
-<area shape="rect" id="node22" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abe4be1f7465d7c4be7730df39bc0aa01" title=" " alt="" coords="796,239,987,280"/>
-<area shape="rect" id="node23" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aefb209328c54bcedd16dbb68c4d03f05" title=" " alt="" coords="534,291,729,332"/>
-<area shape="rect" id="node25" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8f89087f0c845cf7da3ca7cddf9b8f07" title=" " alt="" coords="519,421,744,477"/>
-<area shape="rect" id="node26" href="$class_placement_info_1_1_placement_unit.html#a63e8412c50f27de6c9cf87e1cece8bee" title="Get the Nets Set Ptr object which records the nets connecting to the PlacementUnit." alt="" coords="804,428,979,469"/>
-<area shape="rect" id="node27" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="807,494,975,521"/>
-<area shape="rect" id="node28" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="804,545,979,587"/>
-<area shape="rect" id="node29" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="807,311,975,338"/>
-<area shape="rect" id="node30" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="804,363,979,404"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title="DesignInfo::FFSRCompatible" alt="" coords="228,13,417,39"/>
 </map>

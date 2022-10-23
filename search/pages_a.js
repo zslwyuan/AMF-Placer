@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['parallel_20cell_20spreading_0',['Parallel Cell Spreading',['../md_doc_pages__5_2__cell_spreading.html',1,'']]],
-  ['parallel_20progressive_20macro_20legalization_1',['Parallel Progressive Macro Legalization',['../md_doc_pages__5_3_macro_legalization.html',1,'']]],
-  ['publications_2',['Publications',['../_4_publication.html',1,'']]]
+  ['run_20an_20example',['Run An Example',['../_2_2__run_an_example.html',1,'_2_getStarted']]],
+  ['runtime_20log_20explanation',['Runtime Log Explanation',['../_6_runtime_log.html',1,'_5_explanation']]]
 ];

@@ -1,4 +1,0 @@
-<map id="GraphPartitioner::recursiveMinCutPartition" name="GraphPartitioner::recursiveMinCutPartition">
-<area shape="rect" id="node1" title="a recursive function which will recursively bi&#45;partition the input cluster into two based on connecti..." alt="" coords="5,5,180,47"/>
-<area shape="rect" id="node2" href="$class_graph_partitioner.html#af0fe549726400f1a85b09d98859a8102" title="the actual function to call partitioner to conduct partitioning with given clusters and parameters" alt="" coords="228,5,391,47"/>
-</map>

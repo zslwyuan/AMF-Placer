@@ -1,0 +1,19 @@
+<map id="SAPlacer::incrementalEvaluateClusterPlacement" name="SAPlacer::incrementalEvaluateClusterPlacement">
+<area shape="rect" id="node2" href="$class_s_a_placer.html#a7111d6bdc8d5437b6f72335b7bf7206d" title="SAPlacer::getGrid2clusters" alt="" coords="266,59,445,85"/>
+<area shape="rect" id="node3" href="$class_s_a_placer.html#aabecdef81e0207cbdb9b75ba1fbf1a49" title="SAPlacer::greedyPlaceACluster" alt="" coords="253,109,457,136"/>
+<area shape="rect" id="node4" href="$class_s_a_placer.html#a6a8e5dc6d5668f450a149ad6a8ba7e49" title="SAPlacer::greedyInitialize" alt="" coords="505,109,673,136"/>
+<area shape="rect" id="node5" href="$class_s_a_placer.html#a030b4efe05c4dd6791d8d1249518a27e" title="SAPlacer::solve" alt="" coords="721,109,836,136"/>
+<area shape="rect" id="node6" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location ..." alt="" coords="884,84,1069,111"/>
+<area shape="rect" id="node18" href="$class_s_a_placer.html#a13751e5734d89dded8fd9e24b9232a03" title="SAPlacer::~SAPlacer" alt="" coords="904,135,1049,161"/>
+<area shape="rect" id="node7" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="2112,56,2321,83"/>
+<area shape="rect" id="node12" href="$class_cluster_placer.html#ab2f74c136ed361b6782d56d5dcf92dc6" title="construct the netlist of the generated clusters based on the PlacementNet in PlacementInfo ..." alt="" coords="1117,157,1324,184"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level " alt="" coords="2369,31,2572,57"/>
+<area shape="rect" id="node11" href="$class_cluster_placer.html#a0ca64fdff91000c046420b66bec9a89b" title="ClusterPlacer::~ClusterPlacer" alt="" coords="2375,81,2566,108"/>
+<area shape="rect" id="node9" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="2656,5,2767,32"/>
+<area shape="rect" id="node10" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="2620,56,2803,83"/>
+<area shape="rect" id="node13" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1392,62,1567,103"/>
+<area shape="rect" id="node16" href="$class_cluster_placer.html#aaf3bcf89de5c55e2e0706ed2e328239a" title="initially cluster cells based on user&#45;defined clusters " alt="" coords="1372,179,1587,221"/>
+<area shape="rect" id="node14" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement ..." alt="" coords="1637,107,1807,149"/>
+<area shape="rect" id="node15" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement " alt="" coords="1857,107,2064,149"/>
+<area shape="rect" id="node17" href="$class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d" title="initially cluster cells based on user&#45;defined clusters and conduct connectivity&#45;based partitioning ba..." alt="" coords="1635,194,1809,235"/>
+</map>

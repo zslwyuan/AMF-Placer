@@ -1,0 +1,5 @@
+<map id="ParallelCLBPacker::PackingCLBSite::getSlotMappingRef" name="ParallelCLBPacker::PackingCLBSite::getSlotMappingRef">
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_LUTFFPairReloacationAfterSlotMapping" alt="" coords="288,5,551,61"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="599,13,737,54"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="785,20,896,47"/>
+</map>

@@ -1,5 +1,0 @@
-<map id="PlacementInfo::PlacementNet::addB2BNet" name="PlacementInfo::PlacementNet::addB2BNet">
-<area shape="rect" id="node1" title="set weights of the terms in the quadratic problem" alt="" coords="289,39,464,80"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html#af30c18e8e435944102dcb600d58dfbe6" title=" " alt="" coords="5,5,241,47"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="8,71,239,112"/>
-</map>

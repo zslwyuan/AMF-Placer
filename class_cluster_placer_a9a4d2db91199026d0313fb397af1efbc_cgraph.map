@@ -1,6 +1,5 @@
 <map id="ClusterPlacer::getPlacementUnitMaxPathLen" name="ClusterPlacer::getPlacementUnitMaxPathLen">
-<area shape="rect" id="node1" title=" " alt="" coords="5,35,192,76"/>
-<area shape="rect" id="node2" href="$class_placement_timing_info.html#af2499cb840d145578c41cf00f10a3850" title="Get the Simple Timing Info object which regard design cells as timing nodes." alt="" coords="240,5,449,47"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a5d6575aa1765190eb49a968154e76b3c" title=" " alt="" coords="249,71,440,98"/>
-<area shape="rect" id="node3" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="497,5,661,47"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#aac7e930d12f2149afe6984a8cad68134" title="PlacementInfo::getTimingInfo" alt="" coords="249,5,440,32"/>
+<area shape="rect" id="node3" href="$class_placement_timing_info.html#add1921ce82dfd102ac696590c899f691" title="Get the Simple Timing Info object which regard design cells as timing nodes. " alt="" coords="240,57,449,98"/>
+<area shape="rect" id="node4" href="$class_placement_timing_info_1_1_timing_graph.html#acbdeb602d48ff52d045eac782d6cd09f" title="PlacementTimingInfo\l::TimingGraph::getNodes" alt="" coords="497,57,661,98"/>
 </map>

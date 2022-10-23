@@ -1,4 +1,3 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::compatibleInOneHalfCLB" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::compatibleInOneHalfCLB">
-<area shape="rect" id="node1" title="check whether a given half CLB can be placed with another given half CLB" alt="" coords="5,5,244,61"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title=" " alt="" coords="292,20,481,47"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title="DesignInfo::FFSRCompatible" alt="" coords="292,20,481,47"/>
 </map>

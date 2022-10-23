@@ -1,13 +1,12 @@
 <map id="WirelengthOptimizer::reloadPlacementInfo" name="WirelengthOptimizer::reloadPlacementInfo">
-<area shape="rect" id="node1" title="re&#45;initialize some parameters and optimizer configuration according to the PlacementInfo" alt="" coords="5,217,152,258"/>
-<area shape="rect" id="node2" href="$class_design_info.html#a580d4bec7fc849b1209a039d5f166624" title=" " alt="" coords="245,5,375,32"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="234,57,386,98"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#add47297a7892d37d376e66c550fc1dd7" title=" " alt="" coords="214,123,406,149"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device)" alt="" coords="210,173,410,200"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device)" alt="" coords="210,224,410,251"/>
-<area shape="rect" id="node8" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device)" alt="" coords="211,275,409,301"/>
-<area shape="rect" id="node9" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device)" alt="" coords="211,325,409,352"/>
-<area shape="rect" id="node10" href="$class_placement_info.html#a3892301efe2ab163601c22a25f323fa8" title=" " alt="" coords="200,376,420,403"/>
-<area shape="rect" id="node11" href="$class_placement_info.html#a53bb8ddd59564023f2c8d2428e67d635" title=" " alt="" coords="214,427,406,469"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="468,57,645,98"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device) " alt="" coords="211,5,409,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device) " alt="" coords="210,56,410,83"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a61361a100508454f54d82e04527143be" title="Get the Global Min Y (bottom boundary of the device) " alt="" coords="211,107,409,133"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#ae05f5cbea39d7dec20a31195efde4ac7" title="Get the Global Max Y (top boundary of the device) " alt="" coords="210,157,410,184"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="214,209,406,250"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a5e5c210a1716ccad33d8f909992a33de" title="PlacementInfo::getPlacementNets" alt="" coords="200,275,420,301"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#a73d295c1409d92a270d13f0bdf0cba8e" title="PlacementInfo::getDesignInfo" alt="" coords="214,325,406,352"/>
+<area shape="rect" id="node9" href="$class_design_info.html#ab4e856ae0a45e61b4d2dee6eb1e72904" title="DesignInfo::getCell" alt="" coords="245,376,375,403"/>
+<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="234,427,386,469"/>
+<area shape="rect" id="node11" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="468,427,645,469"/>
 </map>

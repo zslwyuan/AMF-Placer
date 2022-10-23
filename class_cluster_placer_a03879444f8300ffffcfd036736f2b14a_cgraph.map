@@ -1,0 +1,6 @@
+<map id="ClusterPlacer::random_float" name="ClusterPlacer::random_float">
+<area shape="rect" id="node2" href="$class_cluster_placer.html#a1b673af919362063d2ede4cb7a4ae004" title="ClusterPlacer::dumpClusters" alt="" coords="203,35,389,61"/>
+<area shape="rect" id="node5" href="$class_cluster_placer.html#abfbe96e2abf0baa2d62dc634d2b55460" title="ClusterPlacer::drawClusters" alt="" coords="205,85,387,112"/>
+<area shape="rect" id="node3" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="488,5,579,32"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="437,57,629,98"/>
+</map>

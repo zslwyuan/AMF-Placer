@@ -1,4 +1,4 @@
 <map id="InitialPacker::pack" name="InitialPacker::pack">
-<area shape="rect" id="node1" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,5,292,32"/>
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="181,5,353,32"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="212,56,323,83"/>
 </map>

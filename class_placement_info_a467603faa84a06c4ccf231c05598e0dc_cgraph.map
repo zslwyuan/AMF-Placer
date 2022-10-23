@@ -1,5 +1,4 @@
 <map id="PlacementInfo::getPairPinNum" name="PlacementInfo::getPairPinNum">
-<area shape="rect" id="node1" title="Get the Pair Pin Num of two LUTs." alt="" coords="5,46,205,73"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#ac4085d156f301ed5f9b6fff799c95121" title=" " alt="" coords="253,5,405,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="253,71,405,112"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="253,5,405,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title="DesignInfo::DesignCell\l::isLUT6" alt="" coords="253,71,405,112"/>
 </map>

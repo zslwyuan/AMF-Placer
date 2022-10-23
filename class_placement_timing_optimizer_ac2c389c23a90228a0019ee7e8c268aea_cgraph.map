@@ -1,5 +1,4 @@
 <map id="PlacementTimingOptimizer::findCriticalPath" name="PlacementTimingOptimizer::findCriticalPath">
-<area shape="rect" id="node1" title=" " alt="" coords="5,41,184,83"/>
-<area shape="rect" id="node2" href="$class_placement_timing_info_1_1_timing_graph.html#a56a9db381d6db587b93483931a41ca4e" title=" " alt="" coords="243,5,407,47"/>
-<area shape="rect" id="node3" href="$class_placement_timing_info.html#ae9bbeb12a52894eb4168f255e3e2e073" title="Get the Simple Placement Timing Graph object." alt="" coords="232,70,419,126"/>
+<area shape="rect" id="node2" href="$class_placement_timing_info.html#aab232b6d2124de2809f762c785c2b509" title="Get the Simple Placement Timing Graph object. " alt="" coords="232,5,419,61"/>
+<area shape="rect" id="node3" href="$class_placement_timing_info_1_1_timing_graph.html#acbdeb602d48ff52d045eac782d6cd09f" title="PlacementTimingInfo\l::TimingGraph::getNodes" alt="" coords="243,86,407,127"/>
 </map>

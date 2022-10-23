@@ -1,6 +1,5 @@
 <map id="DesignInfo::addCell" name="DesignInfo::addCell">
-<area shape="rect" id="node1" title="add a cell into the design information" alt="" coords="5,78,139,105"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="199,5,351,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#ad11474e7bf1096bab457b40eced8afc5" title=" " alt="" coords="187,71,364,112"/>
-<area shape="rect" id="node4" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="226,137,325,163"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title="DesignInfo::DesignElement\l::getName" alt="" coords="187,5,364,47"/>
+<area shape="rect" id="node3" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="226,71,325,98"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title="DesignInfo::DesignCell\l::getCellType" alt="" coords="199,123,351,164"/>
 </map>

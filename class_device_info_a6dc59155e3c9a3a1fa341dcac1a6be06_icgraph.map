@@ -1,0 +1,34 @@
+<map id="DeviceInfo::getClockRegions" name="DeviceInfo::getClockRegions">
+<area shape="rect" id="node2" href="$class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization ..." alt="" coords="241,276,488,317"/>
+<area shape="rect" id="node19" href="$class_wirelength_optimizer.html#a5b4ed59d2937e4117e528e9655053d7c" title="add pseudo nets for clock region " alt="" coords="1069,5,1293,47"/>
+<area shape="rect" id="node20" href="$class_placement_info.html#aae1e1f737eaa643ae04a4f4dd959d49f" title="check the utlization of the clock regions on the device " alt="" coords="1349,479,1529,520"/>
+<area shape="rect" id="node26" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title="PlacementTimingOptimizer\l::clusterLongPathInOneClockRegion" alt="" coords="544,537,775,579"/>
+<area shape="rect" id="node28" href="$class_placement_info.html#a50e94d6271fe08f6a953382f1ef42ee2" title="PlacementInfo::dumpOverflow\lClockUtilization" alt="" coords="1341,647,1536,688"/>
+<area shape="rect" id="node29" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device. " alt="" coords="267,713,463,739"/>
+<area shape="rect" id="node30" href="$class_placement_timing_optimizer.html#a8895042533e6d09ee22c0ef2fc583283" title="PlacementTimingOptimizer\l::stretchClockRegionColumns" alt="" coords="269,588,461,629"/>
+<area shape="rect" id="node31" href="$class_general_spreader.html#a14f37632b7be86bd593b5f2ea1ab92ff" title="update the information of the involved PlacementUnit(s) " alt="" coords="251,415,478,456"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion ..." alt="" coords="536,283,783,310"/>
+<area shape="rect" id="node9" href="$class_placement_info.html#a9d2ce3051534b0619ff9ef278b477460" title="directly set weight in the quadratic Matrix and vector according to given request. " alt="" coords="837,185,1015,227"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="2128,342,2239,369"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements " alt="" coords="847,342,1005,369"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1842,225,2043,267"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion. " alt="" coords="1603,335,1775,376"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="2092,233,2275,259"/>
+<area shape="rect" id="node10" href="$class_wirelength_optimizer.html#a8c96a78918b9984490b197b6c1270d21" title="add the legalization pseudo nets to force macros move to the legal sites " alt="" coords="1093,152,1269,193"/>
+<area shape="rect" id="node17" href="$class_wirelength_optimizer.html#a2408cbe2566f7cca5fd1e200c5f44d70" title="as convential QP placers do, we add pseudo nets between anchors and PlacementUnit to constrain the mo..." alt="" coords="1069,217,1293,259"/>
+<area shape="rect" id="node18" href="$class_wirelength_optimizer.html#ac726db5290500852fb5b4788fdcb0dd9" title="add pseudo net for user&#45;defined clusters " alt="" coords="1070,71,1293,127"/>
+<area shape="rect" id="node11" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model. " alt="" coords="1362,83,1515,124"/>
+<area shape="rect" id="node16" href="$class_wirelength_optimizer.html#ad26ea78722d723916bf8a10678924dab" title="WirelengthOptimizer\l::setSlackPowerFactor" alt="" coords="1362,152,1515,193"/>
+<area shape="rect" id="node12" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="1599,95,1778,136"/>
+<area shape="rect" id="node14" href="$class_wirelength_optimizer.html#abf14be2c0b76b515bdc136b06a6e197f" title="WirelengthOptimizer\l::~WirelengthOptimizer" alt="" coords="1867,29,2018,71"/>
+<area shape="rect" id="node13" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages, e.g., just after initial placement " alt="" coords="1842,95,2043,136"/>
+<area shape="rect" id="node15" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="1873,160,2012,201"/>
+<area shape="rect" id="node21" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="1584,451,1793,478"/>
+<area shape="rect" id="node24" href="$class_placement_info.html#a3fe3ef0ea00604e37968c16ae051fee2" title="PlacementInfo::getMinHPWL" alt="" coords="1593,603,1784,630"/>
+<area shape="rect" id="node22" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level " alt="" coords="1841,342,2044,369"/>
+<area shape="rect" id="node23" href="$class_cluster_placer.html#a0ca64fdff91000c046420b66bec9a89b" title="ClusterPlacer::~ClusterPlacer" alt="" coords="1847,451,2038,478"/>
+<area shape="rect" id="node25" href="$class_global_placer.html#aadb6ba900abf8a5d1c03e0fd7edd320c" title="Construct a new Global Placer object based on placement information. " alt="" coords="1855,603,2031,630"/>
+<area shape="rect" id="node27" href="$class_placement_timing_optimizer.html#a581a14b1393ddf4358af3ee246f2d19d" title="PlacementTimingOptimizer\l::~PlacementTimingOptimizer" alt="" coords="831,596,1021,637"/>
+<area shape="rect" id="node32" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio " alt="" coords="546,411,773,452"/>
+<area shape="rect" id="node33" href="$class_general_spreader.html#ab0a62c9005bdbae8770045ce40b1cad0" title="GeneralSpreader::~General\lSpreader" alt="" coords="837,411,1015,452"/>
+</map>

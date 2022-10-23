@@ -1,8 +1,8 @@
 var class_min_cost_bipartite_matcher =
 [
-    [ "MinCostBipartiteMatcher", "class_min_cost_bipartite_matcher.html#aeef9f17dcd9470695546f2868b14acf2", null ],
+    [ "MinCostBipartiteMatcher", "class_min_cost_bipartite_matcher.html#a9f013907becf5d7e1c45fe0c5e4a3b2e", null ],
     [ "~MinCostBipartiteMatcher", "class_min_cost_bipartite_matcher.html#a2e88ac0af770f8b3f626cc1fd2566c40", null ],
-    [ "getConnectedSubgraphAdjList", "class_min_cost_bipartite_matcher.html#ae55cb29aff8a9c7253b4f72c0227a74f", null ],
+    [ "getConnectedSubgraphAdjList", "class_min_cost_bipartite_matcher.html#ad3e7581525031fd3118e308ca704429b", null ],
     [ "getMatchedRightNode", "class_min_cost_bipartite_matcher.html#a7517e8d009997e83e31cfccc9107329b", null ],
     [ "solve", "class_min_cost_bipartite_matcher.html#a4d58b7b38000fd820e2df2c3fc20a417", null ],
     [ "adjList", "class_min_cost_bipartite_matcher.html#a231c6e5fb3ceff297b27ac2ea82439d3", null ],

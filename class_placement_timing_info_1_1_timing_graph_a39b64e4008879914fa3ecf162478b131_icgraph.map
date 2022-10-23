@@ -1,6 +1,5 @@
 <map id="PlacementTimingInfo::TimingGraph::addEdgeBetween" name="PlacementTimingInfo::TimingGraph::addEdgeBetween">
-<area shape="rect" id="node1" title="add a TimingEdge into TimingGraph based on some related information" alt="" coords="608,5,817,47"/>
-<area shape="rect" id="node2" href="$class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="391,5,560,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph" alt="" coords="164,5,343,47"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node2" href="$class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical..." alt="" coords="263,5,432,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph " alt="" coords="480,5,659,47"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="707,13,817,39"/>
 </map>

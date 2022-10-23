@@ -1,6 +1,12 @@
 <map id="DesignInfo::getFFControlSetId" name="DesignInfo::getFFControlSetId">
-<area shape="rect" id="node1" title="get the id of the control set of a given FF" alt="" coords="5,39,171,80"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="219,5,371,47"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="219,71,371,112"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="419,5,596,47"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title="DesignInfo::DesignCell\l::isFF" alt="" coords="235,5,387,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="235,71,387,112"/>
+<area shape="rect" id="node5" href="$class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc" title="for user&#45;defined&#45;cluster&#45;based optimization, load the nets in a user&#45;defined cluster for later proces..." alt="" coords="219,183,404,224"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="452,23,629,64"/>
+<area shape="rect" id="node6" href="$dump_zip_8cc.html#afdd89841220a8b18e39e0844a833a18b" title="fileExists" alt="" coords="504,89,577,115"/>
+<area shape="rect" id="node7" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="495,139,586,166"/>
+<area shape="rect" id="node8" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title="strSplit" alt="" coords="509,190,572,217"/>
+<area shape="rect" id="node9" href="$class_design_info_1_1_design_pin.html#a899283d05f4fb669edd9f815d5e6368f" title="DesignInfo::DesignPin\l::getNet" alt="" coords="466,241,615,283"/>
+<area shape="rect" id="node10" href="$class_design_info_1_1_design_net.html#aa6b16a3ae8d28870175730fb6f1b91d3" title="Get the vector reference of the pins. " alt="" coords="465,307,616,348"/>
+<area shape="rect" id="node11" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="503,373,578,399"/>
 </map>

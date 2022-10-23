@@ -1,0 +1,6 @@
+<map id="operator&lt;&lt;" name="operator&lt;&lt;">
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_pin.html#a948da3f9acfc94a5271b3b6275bc45c0" title="Get the Cell object of the pin. " alt="" coords="153,5,302,47"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title="DesignInfo::DesignElement\l::getName" alt="" coords="139,71,316,112"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_pin.html#a6e27b65f0f468375db645ef00c488133" title="Get the reference pin name of the pin. " alt="" coords="153,136,302,177"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a028b0faafe6752bbab34962e752d06c0" title="DesignInfo::DesignElement\l::getParentPtr" alt="" coords="364,5,541,47"/>
+</map>

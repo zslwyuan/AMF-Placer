@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['location_0',['location',['../class_placement_info_1_1_placement_site_type_info.html#ae476b3af78f692c35e03255402b45742',1,'PlacementInfo::PlacementSiteTypeInfo']]],
-  ['location_1',['Location',['../class_placement_info.html#aa5a1aa412082f2b960405ce3c2b61ba0',1,'PlacementInfo']]]
+  ['location',['Location',['../class_placement_info.html#afd8059df8387a2b80634f4784c9a0a30',1,'PlacementInfo::Location()'],['../class_placement_info_1_1_placement_site_type_info.html#aa2682aa4b8ff92a62d50132d7c896ffd',1,'PlacementInfo::PlacementSiteTypeInfo::location()']]]
 ];

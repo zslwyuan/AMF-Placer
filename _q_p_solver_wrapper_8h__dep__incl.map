@@ -1,13 +1,12 @@
 <map id="src/lib/HiFPlacer/problemSolvers/QPSolverWrapper.h" name="src/lib/HiFPlacer/problemSolvers/QPSolverWrapper.h">
-<area shape="rect" id="node1" title=" " alt="" coords="494,5,678,47"/>
 <area shape="rect" id="node2" href="$_wirelength_optimizer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="337,95,589,136"/>
-<area shape="rect" id="node12" href="$_q_p_solver_wrapper_8cc.html" title=" " alt="" coords="613,95,804,136"/>
+<area shape="rect" id="node12" href="$_q_p_solver_wrapper_8cc.html" title="src/lib/HiFPlacer/problem\lSolvers/QPSolverWrapper.cc" alt="" coords="613,95,804,136"/>
 <area shape="rect" id="node3" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="99,184,310,225"/>
 <area shape="rect" id="node7" href="$_wirelength_optimizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the WirelengthOptimizer which builds numeri..." alt="" coords="334,184,593,225"/>
 <area shape="rect" id="node8" href="$_parallel_c_l_b_packer_8h.html" title="This header file contains the definitions of ParallelCLBPacker class and its internal modules and API..." alt="" coords="617,184,811,225"/>
-<area shape="rect" id="node4" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="247,288,461,315"/>
+<area shape="rect" id="node4" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer) ..." alt="" coords="247,288,461,315"/>
 <area shape="rect" id="node6" href="$_global_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the GlobalPlacer which organizes/configures..." alt="" coords="5,281,223,322"/>
-<area shape="rect" id="node5" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="263,377,445,404"/>
+<area shape="rect" id="node5" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow. " alt="" coords="263,377,445,404"/>
 <area shape="rect" id="node9" href="$_parallel_c_l_b_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the ParallelCLBPacker which finally packs L..." alt="" coords="485,281,687,322"/>
 <area shape="rect" id="node10" href="$_parallel_c_l_b_packer___packing_c_l_b_cluster_8cc.html" title="This implementation file contains APIs&#39; implementation related to the packing&#45;cluster&#45;level processes..." alt="" coords="712,273,897,329"/>
 <area shape="rect" id="node11" href="$_parallel_c_l_b_packer___packing_c_l_b_site_8cc.html" title="This implementation file contains APIs&#39; implementation related to the CLBSite&#45;level processes in the ..." alt="" coords="921,273,1107,329"/>

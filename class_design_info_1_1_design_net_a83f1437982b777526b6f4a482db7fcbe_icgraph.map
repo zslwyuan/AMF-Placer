@@ -1,5 +1,6 @@
 <map id="DesignInfo::DesignNet::connectToPinName" name="DesignInfo::DesignNet::connectToPinName">
-<area shape="rect" id="node1" title="bind the net to a pin by name" alt="" coords="420,5,571,47"/>
-<area shape="rect" id="node2" href="$class_design_info.html#aa6022bca479e36f7f13fbcd96946301d" title="bind a pin to an existing net. If the net does not exist, new one." alt="" coords="205,13,372,39"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="5,13,157,39"/>
+<area shape="rect" id="node2" href="$class_design_info.html#aa6022bca479e36f7f13fbcd96946301d" title="bind a pin to an existing net. If the net does not exist, new one. " alt="" coords="204,31,371,57"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information. " alt="" coords="422,5,574,32"/>
+<area shape="rect" id="node5" href="$class_design_info.html#af435f2aa30e295caa0ff0b98521be0c5" title="DesignInfo::~DesignInfo" alt="" coords="419,56,577,83"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation " alt="" coords="625,5,801,32"/>
 </map>

@@ -6,7 +6,7 @@ var class_placement_info_1_1_placement_site_bin_info =
     [ "addSiteIntoBin", "class_placement_info_1_1_placement_site_bin_info.html#ad69ea72b3e108b0d0c1d614805739369", null ],
     [ "canAddMore", "class_placement_info_1_1_placement_site_bin_info.html#a814fc768c2bf61a30709e3916d3347b1", null ],
     [ "getCapacity", "class_placement_info_1_1_placement_site_bin_info.html#a3557d1a0e2584f9c84c4f8b8226ccd52", null ],
-    [ "getMacros", "class_placement_info_1_1_placement_site_bin_info.html#a27362f1d3b2aea0260c545f50e2a4181", null ],
+    [ "getMacros", "class_placement_info_1_1_placement_site_bin_info.html#ab2af89b1605dd778a584bf1b17fd8cf4", null ],
     [ "getUtilization", "class_placement_info_1_1_placement_site_bin_info.html#abe0ae257958e50818d374aa5332d1838", null ],
     [ "getUtilizationRate", "class_placement_info_1_1_placement_site_bin_info.html#a923fffd6d2759373e606cec251fb302f", null ],
     [ "inRange", "class_placement_info_1_1_placement_site_bin_info.html#a2515e6242bb02d945a107d3bc0d11ebc", null ],

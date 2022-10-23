@@ -1,0 +1,6 @@
+<map id="DesignInfo::DesignPin::getNet" name="DesignInfo::DesignPin::getNet">
+<area shape="rect" id="node2" href="$class_design_info.html#afe00e4fefdf567d8f44eb42fee680ecc" title="for user&#45;defined&#45;cluster&#45;based optimization, load the nets in a user&#45;defined cluster for later proces..." alt="" coords="203,27,388,69"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information. " alt="" coords="443,5,595,32"/>
+<area shape="rect" id="node5" href="$class_design_info.html#aa0491a189a3965806f2dacb153848615" title="get the id of the control set of a given FF " alt="" coords="436,57,601,98"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation " alt="" coords="649,5,825,32"/>
+</map>

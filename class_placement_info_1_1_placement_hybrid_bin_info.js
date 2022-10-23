@@ -7,7 +7,7 @@ var class_placement_info_1_1_placement_hybrid_bin_info =
     [ "canAddMore", "class_placement_info_1_1_placement_hybrid_bin_info.html#a0f41e10cec4a082adee062800ff0ddda", null ],
     [ "contains", "class_placement_info_1_1_placement_hybrid_bin_info.html#acc542a06fa37b81fa37d1e01ac8c9f88", null ],
     [ "getCapacity", "class_placement_info_1_1_placement_hybrid_bin_info.html#a9863100e912fe45593fdecb6ae95ea08", null ],
-    [ "getCells", "class_placement_info_1_1_placement_hybrid_bin_info.html#af3cf5f76ede75ab129e56db913cc97cd", null ],
+    [ "getCells", "class_placement_info_1_1_placement_hybrid_bin_info.html#adef5d587ba4619b4bf17d878b0412873", null ],
     [ "getUtilization", "class_placement_info_1_1_placement_hybrid_bin_info.html#a4d43e3898da7877e460f2758ae4f870f", null ],
     [ "getUtilizationRate", "class_placement_info_1_1_placement_hybrid_bin_info.html#a2a28a6c8c71148e20ba49b5fc19549b0", null ],
     [ "inRange", "class_placement_info_1_1_placement_hybrid_bin_info.html#a78ccfb81eeda12bc591cff4705c88b58", null ],

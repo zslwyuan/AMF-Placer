@@ -1,0 +1,8 @@
+<map id="SAPlacer::worker" name="SAPlacer::worker">
+<area shape="rect" id="node2" href="$class_s_a_placer.html#ae52f15e5aa75df3a4251d6769dc153a7" title="SAPlacer::evaluateCluster\lPlacement" alt="" coords="189,5,362,47"/>
+<area shape="rect" id="node3" href="$class_s_a_placer.html#ac86d407647bb046b2f82bb2753e6ddee" title="SAPlacer::randomShuffleRow\lColumn" alt="" coords="180,71,371,112"/>
+<area shape="rect" id="node6" href="$class_s_a_placer.html#af34a1c8944dfc7853e505bbea5639abf" title="SAPlacer::randomSwapInWide\lRange" alt="" coords="176,136,375,177"/>
+<area shape="rect" id="node7" href="$class_s_a_placer.html#af9807c5444f9ba847251e5e5704ec97d" title="SAPlacer::probabilituFunc" alt="" coords="190,202,361,229"/>
+<area shape="rect" id="node4" href="$_s_a_placer_8cc.html#affe095ae4bb407c8904e6badf97b6290" title="shuffleVectors" alt="" coords="423,111,527,138"/>
+<area shape="rect" id="node5" href="$_s_a_placer_8cc.html#a935015ca9df95eb5406c7c13438e8814" title="swapVectors" alt="" coords="575,111,673,138"/>
+</map>

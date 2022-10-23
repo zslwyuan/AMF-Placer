@@ -1,4 +1,0 @@
-<map id="PlacementInfo::PlacementNet::getBottomPinY" name="PlacementInfo::PlacementNet::getBottomPinY">
-<area shape="rect" id="node1" title=" " alt="" coords="284,5,459,47"/>
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_net.html#ad8c49000df6d25319c42bbe8479a25c6" title="update the weights of 2&#45;pin nets between PlacementUnits in this hyperedge(PlacementNet) according to ..." alt="" coords="5,5,236,47"/>
-</map>

@@ -1,7 +1,10 @@
 <map id="PlacementInfo::checkClockUtilization" name="PlacementInfo::checkClockUtilization">
-<area shape="rect" id="node1" title="check the utlization of the clock regions on the device" alt="" coords="672,49,852,90"/>
-<area shape="rect" id="node2" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,5,624,32"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,56,116,83"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="165,107,366,149"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,5,367,32"/>
+<area shape="rect" id="node2" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="233,95,443,122"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="777,37,888,63"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a3fe3ef0ea00604e37968c16ae051fee2" title="PlacementInfo::getMinHPWL" alt="" coords="243,171,433,198"/>
+<area shape="rect" id="node9" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="491,29,693,71"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level " alt="" coords="491,95,693,122"/>
+<area shape="rect" id="node6" href="$class_cluster_placer.html#a0ca64fdff91000c046420b66bec9a89b" title="ClusterPlacer::~ClusterPlacer" alt="" coords="497,146,687,173"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="741,91,924,118"/>
+<area shape="rect" id="node8" href="$class_global_placer.html#aadb6ba900abf8a5d1c03e0fd7edd320c" title="Construct a new Global Placer object based on placement information. " alt="" coords="504,197,680,223"/>
 </map>

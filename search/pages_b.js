@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['run_20an_20example_0',['Run An Example',['../md_doc_pages__2_2__run_an_example.html',1,'']]],
-  ['runtime_20log_20explanation_1',['Runtime Log Explanation',['../md_doc_pages__6_runtime_log.html',1,'']]]
+  ['set_20the_20placement_20configuration_20in_20json_20file',['Set the Placement Configuration in JSON file',['../_2_3__setthe_placement_configurationin_j_s_o_nfile.html',1,'_2_getStarted']]],
+  ['some_20failure_20lessons',['Some Failure Lessons',['../_8_some_failure_lesson.html',1,'']]]
 ];

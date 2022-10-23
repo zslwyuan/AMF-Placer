@@ -1,5 +1,4 @@
 <map id="PlacementTimingOptimizer::getDelayByModel" name="PlacementTimingOptimizer::getDelayByModel">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,184,47"/>
-<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#a6411919a62c5b3f45a88644ed479790a" title=" " alt="" coords="232,5,441,47"/>
-<area shape="rect" id="node3" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="489,5,671,47"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#a6411919a62c5b3f45a88644ed479790a" title="PlacementTimingOptimizer\l::getDelayByModel_conservative" alt="" coords="232,5,441,47"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y) " alt="" coords="489,5,671,47"/>
 </map>

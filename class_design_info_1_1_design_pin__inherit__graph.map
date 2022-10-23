@@ -1,4 +1,3 @@
 <map id="DesignInfo::DesignPin" name="DesignInfo::DesignPin">
-<area shape="rect" id="node1" title="A design pin on a design cell connected to a net." alt="" coords="19,80,169,107"/>
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design. " alt="" coords="5,5,183,32"/>
 </map>

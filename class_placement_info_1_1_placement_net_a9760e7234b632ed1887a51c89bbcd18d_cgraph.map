@@ -1,0 +1,6 @@
+<map id="PlacementInfo::PlacementNet::PlacementNet" name="PlacementInfo::PlacementNet::PlacementNet">
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_net.html#aa6b16a3ae8d28870175730fb6f1b91d3" title="Get the vector reference of the pins. " alt="" coords="250,5,401,47"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title="PlacementInfo::Placement\lUnit::getType" alt="" coords="238,71,413,112"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_macro.html#a685cc55ca98a0e7c83a14f5885082beb" title="PlacementInfo::Placement\lMacro::getCellOffsetXInMacro" alt="" coords="228,136,423,177"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_macro.html#af6417d6619cbe3823911800b09100636" title="PlacementInfo::Placement\lMacro::getCellOffsetYInMacro" alt="" coords="228,201,423,243"/>
+</map>
