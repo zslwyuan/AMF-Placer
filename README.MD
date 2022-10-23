@@ -3,7 +3,7 @@
 ![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)   <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_code.svg" alt="LoCCode" title="LoCCode" height="18" /> 
   <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_comment.svg" alt="LoCComment" title="LoCComment" height="18" /> 
 
-# WARNING: !!! Timing-driven version is not released yet !!! The version you are cloning is the wirelength-driven !!!!!!
+# WARNING: !!! Timing-driven version is not released yet !!! The version you are cloning is the wirelength-driven version !!!!!!
 
 ## Introduction
 
