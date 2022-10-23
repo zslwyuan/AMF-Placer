@@ -22,8 +22,8 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
         
-    - name: Doxygen Action
-      uses: mattnotmitt/doxygen-action@v1.9.4
+    - name: Doxygen Action with version 1.8.13
+      uses: zslwyuan/doxygen-action@myDoxygen
       with:
         # Path to Doxyfile
         doxyfile-path: "./Doxyfile" # default is ./Doxyfile
