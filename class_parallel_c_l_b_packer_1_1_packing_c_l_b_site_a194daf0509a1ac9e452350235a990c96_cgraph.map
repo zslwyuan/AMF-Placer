@@ -1,0 +1,11 @@
+<map id="ParallelCLBPacker::PackingCLBSite::finalMapToSlots" name="ParallelCLBPacker::PackingCLBSite::finalMapToSlots">
+<area shape="rect" id="node1" title="finally map the elements (CARRY/MUX/LUT/FF) packed in this site into the slots in the site" alt="" coords="5,201,192,257"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a59f26ce47aec73ec5f0205c11aba2671" title=" " alt="" coords="253,5,475,47"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#abcb7fcca09b57c7b7abf4b211cbaaac4" title=" " alt="" coords="240,71,488,112"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a5286ef6fe44a2827163314175d1ecf83" title=" " alt="" coords="255,136,473,177"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acf2b8bb615ccffc237f000d2af9e44ac" title=" " alt="" coords="269,201,459,257"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aceaebfba8c5bd1f2db6f5c4c29ede32b" title="find the slots in the site for Carry by enumeration" alt="" coords="271,281,457,337"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8a89b034eda846c09b437103276a06be" title="finally map LUTs/FFs to the exact slots in the sites" alt="" coords="265,361,463,417"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7bfb0fd6f00a7aef5f6bef22fc21bc3d" title="find the slots in the site for Muxes by enumeration" alt="" coords="259,441,469,497"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a956bdd3562fa3d798d3e52ce0fe4052f" title="Get the total number of MUX cells in this cluster." alt="" coords="536,129,775,185"/>
+</map>

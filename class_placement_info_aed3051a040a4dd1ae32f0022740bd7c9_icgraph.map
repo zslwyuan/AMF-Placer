@@ -1,7 +1,5 @@
 <map id="PlacementInfo::enhanceHighFanoutNet" name="PlacementInfo::enhanceHighFanoutNet">
-<area shape="rect" id="node2" href="$class_placement_info.html#a3fe3ef0ea00604e37968c16ae051fee2" title="PlacementInfo::getMinHPWL" alt="" coords="247,5,437,32"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="241,57,443,98"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#aadb6ba900abf8a5d1c03e0fd7edd320c" title="Construct a new Global Placer object based on placement information. " alt="" coords="494,5,670,32"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="527,60,637,87"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="491,111,673,137"/>
+<area shape="rect" id="node1" title=" " alt="" coords="413,5,601,47"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,5,365,47"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="CLBLegalizer::getPUsToLegalize" name="CLBLegalizer::getPUsToLegalize">
-<area shape="rect" id="node2" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="267,5,459,47"/>
+<area shape="rect" id="node1" title="get the PlacementUnits which SHOULD be legalized" alt="" coords="5,13,219,39"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title=" " alt="" coords="267,5,459,47"/>
 </map>

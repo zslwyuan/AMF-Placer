@@ -1,7 +1,8 @@
 <map id="ParallelCLBPacker::prePackLegalizedMacros" name="ParallelCLBPacker::prePackLegalizedMacros">
-<area shape="rect" id="node2" href="$class_placement_info.html#a724a9656acaf8db81c5666fb5683ae75" title="get the sites occupied by the legalized PlacementUnit objects " alt="" coords="221,5,425,32"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_macro.html#ad1d97e835581847571928f7b84318ff7" title="PlacementInfo::Placement\lMacro::getMacroType" alt="" coords="236,57,411,98"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="236,122,411,163"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#aea4211bb193e136a3c094fa9e1ceedf0" title="DeviceInfo::DeviceSite\l::getClockHalfColumn" alt="" coords="484,89,637,130"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#afc877ab7818c7725e4cbde72e2f8efc9" title="PlacementInfo::Placement\lUnit::getClockNets" alt="" coords="473,154,648,195"/>
+<area shape="rect" id="node1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="5,103,173,144"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a99989034ce840db22e0520269a79d692" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="236,37,411,79"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_macro.html#ad1d97e835581847571928f7b84318ff7" title=" " alt="" coords="236,103,411,144"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a724a9656acaf8db81c5666fb5683ae75" title="get the sites occupied by the legalized PlacementUnit objects" alt="" coords="221,169,425,195"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#aea4211bb193e136a3c094fa9e1ceedf0" title=" " alt="" coords="484,5,637,47"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#afc877ab7818c7725e4cbde72e2f8efc9" title=" " alt="" coords="473,71,648,112"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPairPinNum" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::getPairPinNum">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="292,5,444,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title="DesignInfo::DesignCell\l::isLUT6" alt="" coords="292,71,444,112"/>
+<area shape="rect" id="node1" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="5,31,244,87"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title=" " alt="" coords="292,5,444,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="292,71,444,112"/>
 </map>

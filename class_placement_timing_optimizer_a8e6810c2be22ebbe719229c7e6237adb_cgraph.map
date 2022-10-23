@@ -1,7 +1,8 @@
 <map id="PlacementTimingOptimizer::setPinsLocation" name="PlacementTimingOptimizer::setPinsLocation">
-<area shape="rect" id="node2" href="$class_placement_info.html#a9d1c5aa5c5c8888aeb2c93fc22e46ff0" title="PlacementInfo::getCellId2location" alt="" coords="232,5,447,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#af18360ae40c41246c51cca5ef26233fc" title="PlacementInfo::getPinId2location" alt="" coords="233,56,445,83"/>
-<area shape="rect" id="node4" href="$class_design_info.html#aeee0372e6f9a459c3ebd9d401cf79e18" title="DesignInfo::getPins" alt="" coords="272,107,407,133"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a6ee107065b54548bc25dc7d477563e86" title="PlacementInfo::getCells" alt="" coords="260,157,419,184"/>
-<area shape="rect" id="node6" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title="DesignInfo::getCells" alt="" coords="495,157,632,184"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,74,184,115"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a9d1c5aa5c5c8888aeb2c93fc22e46ff0" title=" " alt="" coords="232,5,447,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a6ee107065b54548bc25dc7d477563e86" title=" " alt="" coords="260,56,419,83"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#af18360ae40c41246c51cca5ef26233fc" title=" " alt="" coords="233,107,445,133"/>
+<area shape="rect" id="node6" href="$class_design_info.html#aeee0372e6f9a459c3ebd9d401cf79e18" title=" " alt="" coords="272,157,407,184"/>
+<area shape="rect" id="node4" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title=" " alt="" coords="495,56,632,83"/>
 </map>

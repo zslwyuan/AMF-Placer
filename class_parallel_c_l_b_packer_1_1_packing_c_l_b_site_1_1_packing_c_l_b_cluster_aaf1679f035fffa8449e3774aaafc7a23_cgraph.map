@@ -1,6 +1,0 @@
-<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::areAllPUsValidForThisSite" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::areAllPUsValidForThisSite">
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title="PlacementInfo::Placement\lUnit::getId" alt="" coords="295,5,469,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a80498e16c205cbcbdbc6da11c92199e8" title="check whether the given PlacementUnit can be mapped to the site considering the half&#45;column clock leg..." alt="" coords="292,71,472,112"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#aea4211bb193e136a3c094fa9e1ceedf0" title="DeviceInfo::DeviceSite\l::getClockHalfColumn" alt="" coords="531,37,684,79"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#afc877ab7818c7725e4cbde72e2f8efc9" title="PlacementInfo::Placement\lUnit::getClockNets" alt="" coords="520,103,695,144"/>
-</map>

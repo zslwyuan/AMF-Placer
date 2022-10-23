@@ -1,9 +1,0 @@
-<map id="CLBLegalizer::RandomPivotPartition" name="CLBLegalizer::RandomPivotPartition">
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#aa2cc92cb40a7ac04511d723c82985b11" title="CLBLegalizer::swapSitePtr" alt="" coords="476,35,653,61"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#ae9d6c20e507b3a9ac9220b13a2ad909d" title="CLBLegalizer::sortPartition" alt="" coords="237,85,413,112"/>
-<area shape="rect" id="node4" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite " alt="" coords="461,85,668,112"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="728,5,896,32"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="728,56,896,83"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title="PlacementInfo::getPlacement\lUnitId2Nets" alt="" coords="716,107,908,149"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title="PlacementInfo::Placement\lUnit::getId" alt="" coords="725,173,899,214"/>
-</map>

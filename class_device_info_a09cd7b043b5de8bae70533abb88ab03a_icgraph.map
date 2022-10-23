@@ -1,4 +1,4 @@
 <map id="DeviceInfo::loadPCIEPinOffset" name="DeviceInfo::loadPCIEPinOffset">
-<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object. " alt="" coords="263,5,415,32"/>
-<area shape="rect" id="node3" href="$class_device_info.html#ad0f78b84ce4ed7c6a9e4b34d86dd9274" title="Get the tiles of a specific type. " alt="" coords="252,56,427,83"/>
+<area shape="rect" id="node1" title="load the detailed location information of pins on PCIE IO slot" alt="" coords="205,5,404,32"/>
+<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,32"/>
 </map>

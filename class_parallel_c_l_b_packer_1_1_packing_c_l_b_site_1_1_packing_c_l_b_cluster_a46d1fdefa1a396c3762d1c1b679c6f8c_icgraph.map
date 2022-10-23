@@ -1,0 +1,8 @@
+<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::removeLUT" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::removeLUT">
+<area shape="rect" id="node1" title="remove a specific LUT from this candidate cluster" alt="" coords="948,41,1187,97"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a1e1ec11ce953837dedff9951a9cb6ea3" title="remove some PlacementInfo::PlacementUnit from the cluster for later determined cluster construction o..." alt="" coords="661,41,900,97"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title=" " alt="" coords="351,5,613,61"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title=" " alt="" coords="361,85,603,126"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,49,303,90"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,56,116,83"/>
+</map>

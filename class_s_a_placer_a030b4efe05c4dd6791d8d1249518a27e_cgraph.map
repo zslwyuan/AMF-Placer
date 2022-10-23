@@ -1,15 +1,16 @@
 <map id="SAPlacer::solve" name="SAPlacer::solve">
-<area shape="rect" id="node2" href="$str_print_8cc.html#a9d3b483a858efb84ce776bed255b6dd6" title="printProgress" alt="" coords="203,29,301,55"/>
-<area shape="rect" id="node3" href="$class_s_a_placer.html#a6a8e5dc6d5668f450a149ad6a8ba7e49" title="SAPlacer::greedyInitialize" alt="" coords="168,79,336,106"/>
-<area shape="rect" id="node7" href="$class_s_a_placer.html#ae52f15e5aa75df3a4251d6769dc153a7" title="SAPlacer::evaluateCluster\lPlacement" alt="" coords="399,129,573,171"/>
-<area shape="rect" id="node8" href="$class_s_a_placer.html#a1c09c99c27ca20a7b5bca463ac2afc9a" title="SAPlacer::worker" alt="" coords="191,195,313,222"/>
-<area shape="rect" id="node14" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="215,246,289,273"/>
-<area shape="rect" id="node4" href="$class_s_a_placer.html#aabecdef81e0207cbdb9b75ba1fbf1a49" title="SAPlacer::greedyPlaceACluster" alt="" coords="384,13,588,39"/>
-<area shape="rect" id="node6" href="$class_s_a_placer.html#a026af50e992f8f4340de57721f9323bf" title="SAPlacer::greedyFindNext\lClusterToPlace" alt="" coords="399,64,573,105"/>
-<area shape="rect" id="node5" href="$class_s_a_placer.html#a9de8fa3c4120b47099c310f5d5f10abc" title="SAPlacer::incrementalEvaluate\lClusterPlacement" alt="" coords="636,5,836,47"/>
-<area shape="rect" id="node9" href="$class_s_a_placer.html#ac86d407647bb046b2f82bb2753e6ddee" title="SAPlacer::randomShuffleRow\lColumn" alt="" coords="391,195,581,236"/>
-<area shape="rect" id="node12" href="$class_s_a_placer.html#af34a1c8944dfc7853e505bbea5639abf" title="SAPlacer::randomSwapInWide\lRange" alt="" coords="387,260,585,301"/>
-<area shape="rect" id="node13" href="$class_s_a_placer.html#af9807c5444f9ba847251e5e5704ec97d" title="SAPlacer::probabilituFunc" alt="" coords="401,326,571,353"/>
-<area shape="rect" id="node10" href="$_s_a_placer_8cc.html#affe095ae4bb407c8904e6badf97b6290" title="shuffleVectors" alt="" coords="684,234,788,261"/>
-<area shape="rect" id="node11" href="$_s_a_placer_8cc.html#a935015ca9df95eb5406c7c13438e8814" title="swapVectors" alt="" coords="884,234,983,261"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,166,120,193"/>
+<area shape="rect" id="node2" href="$class_s_a_placer.html#ae52f15e5aa75df3a4251d6769dc153a7" title=" " alt="" coords="399,136,573,177"/>
+<area shape="rect" id="node3" href="$class_s_a_placer.html#a6a8e5dc6d5668f450a149ad6a8ba7e49" title=" " alt="" coords="168,65,336,91"/>
+<area shape="rect" id="node7" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="215,166,289,193"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#a9d3b483a858efb84ce776bed255b6dd6" title=" " alt="" coords="203,217,301,243"/>
+<area shape="rect" id="node9" href="$class_s_a_placer.html#a1c09c99c27ca20a7b5bca463ac2afc9a" title=" " alt="" coords="191,267,313,294"/>
+<area shape="rect" id="node4" href="$class_s_a_placer.html#a026af50e992f8f4340de57721f9323bf" title=" " alt="" coords="399,5,573,47"/>
+<area shape="rect" id="node5" href="$class_s_a_placer.html#aabecdef81e0207cbdb9b75ba1fbf1a49" title=" " alt="" coords="384,71,588,98"/>
+<area shape="rect" id="node6" href="$class_s_a_placer.html#a9de8fa3c4120b47099c310f5d5f10abc" title=" " alt="" coords="636,64,836,105"/>
+<area shape="rect" id="node10" href="$class_s_a_placer.html#af9807c5444f9ba847251e5e5704ec97d" title=" " alt="" coords="401,209,571,235"/>
+<area shape="rect" id="node11" href="$class_s_a_placer.html#ac86d407647bb046b2f82bb2753e6ddee" title=" " alt="" coords="391,260,581,301"/>
+<area shape="rect" id="node14" href="$class_s_a_placer.html#af34a1c8944dfc7853e505bbea5639abf" title=" " alt="" coords="387,325,585,367"/>
+<area shape="rect" id="node12" href="$_s_a_placer_8cc.html#affe095ae4bb407c8904e6badf97b6290" title=" " alt="" coords="684,299,788,326"/>
+<area shape="rect" id="node13" href="$_s_a_placer_8cc.html#a935015ca9df95eb5406c7c13438e8814" title=" " alt="" coords="884,299,983,326"/>
 </map>

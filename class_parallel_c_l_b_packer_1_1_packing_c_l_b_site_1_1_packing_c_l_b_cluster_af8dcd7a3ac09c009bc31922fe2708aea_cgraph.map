@@ -1,6 +1,7 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::compatibleInOneHalfCLB" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::compatibleInOneHalfCLB">
-<area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#a0ffffe2680b92dd1b7c938c0525fbcfe" title="DesignInfo::ControlSetInfo\l::getCLK" alt="" coords="300,5,473,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_control_set_info.html#ad4acfe3e16bd26e59fd40d41fc60771c" title="DesignInfo::ControlSetInfo\l::getSR" alt="" coords="300,71,473,112"/>
-<area shape="rect" id="node4" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title="DesignInfo::FFSRCompatible" alt="" coords="292,137,481,163"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_control_set_info.html#af63a9fd51a746ffbb6a631a05815b36a" title="DesignInfo::ControlSetInfo\l::getFFType" alt="" coords="300,188,473,229"/>
+<area shape="rect" id="node1" title="check whether a control set can be placed in a given half CLB" alt="" coords="5,83,244,139"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title=" " alt="" coords="292,5,481,32"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_control_set_info.html#a0ffffe2680b92dd1b7c938c0525fbcfe" title=" " alt="" coords="300,57,473,98"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_control_set_info.html#af63a9fd51a746ffbb6a631a05815b36a" title=" " alt="" coords="300,122,473,163"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_control_set_info.html#ad4acfe3e16bd26e59fd40d41fc60771c" title=" " alt="" coords="300,187,473,229"/>
 </map>

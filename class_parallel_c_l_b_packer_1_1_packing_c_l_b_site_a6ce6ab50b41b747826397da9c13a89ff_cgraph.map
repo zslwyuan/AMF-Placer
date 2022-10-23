@@ -1,5 +1,5 @@
 <map id="ParallelCLBPacker::PackingCLBSite::mapMuxF7Macro" name="ParallelCLBPacker::PackingCLBSite::mapMuxF7Macro">
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#aed24ca5b8d4c52cb7ff4b684862172eb" title="PlacementInfo::Placement\lMacro::getCells" alt="" coords="277,5,452,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist. " alt="" coords="289,71,441,112"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_macro.html#ab7530c5a864f2260d9c868b25e7604d4" title="PlacementInfo::Placement\lMacro::hasCell" alt="" coords="277,136,452,177"/>
+<area shape="rect" id="node1" title="map cells in MUXF7 macro to CLB slot" alt="" coords="5,39,229,80"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_macro.html#aed24ca5b8d4c52cb7ff4b684862172eb" title=" " alt="" coords="277,5,452,47"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_macro.html#ab7530c5a864f2260d9c868b25e7604d4" title=" " alt="" coords="277,71,452,112"/>
 </map>

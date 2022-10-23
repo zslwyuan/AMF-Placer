@@ -1,16 +1,6 @@
 <map id="DeviceInfo::DeviceSite::getSiteType" name="DeviceInfo::DeviceSite::getSiteType">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a853324f96e6e9f90b8886e5c3359237d" title="try to add a given PlacementUnit into this cluster " alt="" coords="207,189,445,245"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_shortestPath" alt="" coords="810,19,1013,75"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_LUTFFPairReloacationAfterSlotMapping" alt="" coords="780,99,1043,155"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement_swap" alt="" coords="1091,165,1332,206"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a586ad96543d0b4300a4a4ca2edff769b" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site..." alt="" coords="842,230,981,271"/>
-<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ac692f7fbfff75aca6d1a150609784a91" title="without modifying the original cluster container, try to add a given PlacementUnit into this cluster ..." alt="" coords="493,280,732,336"/>
-<area shape="rect" id="node12" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a7979a828a1d8bacd4a1ebf683b3ad90e" title="ParallelCLBPacker::\lPackingCLBSite::PackingCLBCluster\l::checkAddPU" alt="" coords="493,48,732,104"/>
-<area shape="rect" id="node13" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a120ba4bf76257c794648f0c7a3feb566" title="remove invalid clusters from neighbor PlacementUnits " alt="" coords="510,360,715,416"/>
-<area shape="rect" id="node15" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a473b1ef256494fc414f17b7278de6887" title="extend the clusters in the priority queue with the neighbor PlacementUnits " alt="" coords="503,440,722,496"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="1567,131,1705,173"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1753,139,1864,165"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="1139,230,1283,271"/>
-<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure " alt="" coords="1380,222,1519,263"/>
-<area shape="rect" id="node14" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8" title="a iteration to pack PlacementUnit into a CLB site " alt="" coords="816,407,1007,449"/>
+<area shape="rect" id="node1" title=" " alt="" coords="492,31,645,73"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a8cef9864125f49998ee9f08594d8a02a" title="add a site into the device information class" alt="" coords="257,5,392,32"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#ae3599b5e79e956c82813b4145859dda3" title="check whether the type of the given PlacementUnit is compatible with the site type" alt="" coords="205,56,444,112"/>
+<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,5,157,32"/>
 </map>

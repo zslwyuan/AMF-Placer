@@ -1,5 +1,0 @@
-<map id="ParallelCLBPacker::PackingCLBSite::checkDirectLUTFFConnect_slack" name="ParallelCLBPacker::PackingCLBSite::checkDirectLUTFFConnect_slack">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aedecc00dc431d63a6d2b3436fb79b19e" title="find the slots in the site for Muxes " alt="" coords="259,5,445,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a14a1863e6ec97bf437eda5e084ed7be0" title="greedily find the exact slots for the LUTs/FFs in the site " alt="" coords="253,85,451,141"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a360963d00263ba0c05ae93c7b27b693d" title="find the slots in the site for Muxes " alt="" coords="247,165,457,221"/>
-</map>

@@ -1,19 +1,8 @@
 <map id="GlobalPlacer::GlobalPlacer" name="GlobalPlacer::GlobalPlacer">
-<area shape="rect" id="node2" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="276,5,375,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title="PlacementInfo::getDeviceInfo" alt="" coords="229,56,421,83"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#ab444444f740a718e9c81255fa31fe403" title="forget all the legalization information " alt="" coords="229,107,421,149"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a350a9094893fc894706a87a240773377" title="get the proportion of the PlacementUnit objects with high interconnection density ..." alt="" coords="238,173,413,214"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a3fe3ef0ea00604e37968c16ae051fee2" title="PlacementInfo::getMinHPWL" alt="" coords="230,239,421,265"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#aae1e1f737eaa643ae04a4f4dd959d49f" title="check the utlization of the clock regions on the device " alt="" coords="484,166,664,207"/>
-<area shape="rect" id="node15" href="$class_placement_info.html#af113bc7d2e8e06c86694f0931d15d1b5" title="PlacementInfo::enhanceRisky\lClockNet" alt="" coords="477,231,671,273"/>
-<area shape="rect" id="node16" href="$class_placement_info.html#a11dc67d2b14f133fa25fff500317d94c" title="PlacementInfo::enhanceDDRNet" alt="" coords="469,297,679,324"/>
-<area shape="rect" id="node17" href="$class_placement_info.html#aed3051a040a4dd1ae32f0022740bd7c9" title="PlacementInfo::enhanceHigh\lFanoutNet" alt="" coords="480,349,668,390"/>
-<area shape="rect" id="node18" href="$class_placement_info.html#a50e94d6271fe08f6a953382f1ef42ee2" title="PlacementInfo::dumpOverflow\lClockUtilization" alt="" coords="477,83,671,125"/>
-<area shape="rect" id="node8" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array. " alt="" coords="727,72,945,99"/>
-<area shape="rect" id="node9" href="$class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region " alt="" coords="993,123,1219,149"/>
-<area shape="rect" id="node10" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array. " alt="" coords="727,21,945,48"/>
-<area shape="rect" id="node11" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title="DeviceInfo::getClockRegions" alt="" coords="742,123,930,149"/>
-<area shape="rect" id="node12" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y) " alt="" coords="745,342,927,383"/>
-<area shape="rect" id="node13" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="799,291,873,317"/>
-<area shape="rect" id="node14" href="$class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region. " alt="" coords="731,225,941,266"/>
+<area shape="rect" id="node1" title="Construct a new Global Placer object based on placement information." alt="" coords="5,115,181,141"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title=" " alt="" coords="229,5,421,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a3fe3ef0ea00604e37968c16ae051fee2" title=" " alt="" coords="230,56,421,83"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a350a9094893fc894706a87a240773377" title="get the proportion of the PlacementUnit objects with high interconnection density" alt="" coords="238,107,413,149"/>
+<area shape="rect" id="node5" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="276,173,375,200"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#ab444444f740a718e9c81255fa31fe403" title="forget all the legalization information" alt="" coords="229,225,421,266"/>
 </map>

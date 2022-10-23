@@ -1,4 +1,5 @@
 <map id="DeviceInfo::loadPCIEPinOffset" name="DeviceInfo::loadPCIEPinOffset">
-<area shape="rect" id="node2" href="$string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28" title="strContains" alt="" coords="297,5,385,32"/>
-<area shape="rect" id="node3" href="$class_device_info.html#a72f3177aa3371bab061e9dc502e7b91e" title="Get sites of a specfic type. " alt="" coords="252,56,429,83"/>
+<area shape="rect" id="node1" title="load the detailed location information of pins on PCIE IO slot" alt="" coords="5,31,204,57"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a72f3177aa3371bab061e9dc502e7b91e" title="Get sites of a specfic type." alt="" coords="252,5,429,32"/>
+<area shape="rect" id="node3" href="$string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28" title=" " alt="" coords="297,56,385,83"/>
 </map>

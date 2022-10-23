@@ -1,5 +1,5 @@
 <map id="PlacementTimingOptimizer::dumpClockRegionClusters" name="PlacementTimingOptimizer::dumpClockRegionClusters">
-<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title="PlacementTimingOptimizer\l::clusterLongPathInOneClockRegion" alt="" coords="235,5,465,47"/>
-<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#a581a14b1393ddf4358af3ee246f2d19d" title="PlacementTimingOptimizer\l::~PlacementTimingOptimizer" alt="" coords="513,64,704,105"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="553,13,664,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="443,5,624,47"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,5,395,47"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

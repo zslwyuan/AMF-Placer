@@ -1,4 +1,4 @@
 <map id="GlobalPlacer::GlobalPlacement_fixedCLB" name="GlobalPlacer::GlobalPlacement_fixedCLB">
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="291,5,401,32"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="255,56,437,83"/>
+<area shape="rect" id="node1" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="164,5,365,47"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

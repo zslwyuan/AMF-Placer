@@ -1,7 +1,8 @@
 <map id="ParallelCLBPacker::PackingCLBSite::SiteBELMapping::canDirectConnectInSlot" name="ParallelCLBPacker::PackingCLBSite::SiteBELMapping::canDirectConnectInSlot">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title="DesignInfo::DesignCell\l::isLUT6" alt="" coords="285,5,437,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a00f9ccaf985e4c82df58f6a3e7af3470" title="Get the Control Set Info object of this cell. " alt="" coords="285,71,437,112"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_control_set_info.html#a3a0fe433bdf7cbf22a5a7ab2f343b87f" title="Get the Id of the control set (each control set will have a unique Id) " alt="" coords="275,136,448,177"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_control_set_info.html#a0ffffe2680b92dd1b7c938c0525fbcfe" title="DesignInfo::ControlSetInfo\l::getCLK" alt="" coords="275,201,448,243"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_control_set_info.html#ad4acfe3e16bd26e59fd40d41fc60771c" title="DesignInfo::ControlSetInfo\l::getSR" alt="" coords="275,267,448,308"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,129,227,185"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#a0ffffe2680b92dd1b7c938c0525fbcfe" title=" " alt="" coords="275,5,448,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a00f9ccaf985e4c82df58f6a3e7af3470" title="Get the Control Set Info object of this cell." alt="" coords="285,71,437,112"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_control_set_info.html#a3a0fe433bdf7cbf22a5a7ab2f343b87f" title="Get the Id of the control set (each control set will have a unique Id)" alt="" coords="275,136,448,177"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_control_set_info.html#ad4acfe3e16bd26e59fd40d41fc60771c" title=" " alt="" coords="275,201,448,243"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="285,267,437,308"/>
 </map>

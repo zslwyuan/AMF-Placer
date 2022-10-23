@@ -1,9 +1,7 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::removePUToConstructDetCluster" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::removePUToConstructDetCluster">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_LUTFFPairReloacationAfterSlotMapping" alt="" coords="292,5,555,61"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_shortestPath" alt="" coords="322,85,525,141"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement_swap" alt="" coords="303,166,544,207"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f" title="update the information of consistent PUs at the top of priority queue " alt="" coords="311,232,536,288"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="629,93,767,134"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="841,100,952,127"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8" title="a iteration to pack PlacementUnit into a CLB site " alt="" coords="603,239,793,281"/>
+<area shape="rect" id="node1" title="remove some PlacementInfo::PlacementUnit from the cluster for later determined cluster construction o..." alt="" coords="661,41,900,97"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title=" " alt="" coords="351,5,613,61"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title=" " alt="" coords="361,85,603,126"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,49,303,90"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,56,116,83"/>
 </map>

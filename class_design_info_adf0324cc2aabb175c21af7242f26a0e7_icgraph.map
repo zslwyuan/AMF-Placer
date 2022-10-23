@@ -1,8 +1,5 @@
 <map id="DesignInfo::fromStringToCellType" name="DesignInfo::fromStringToCellType">
-<area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object. " alt="" coords="219,5,500,47"/>
-<area shape="rect" id="node5" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information. " alt="" coords="283,71,435,98"/>
-<area shape="rect" id="node7" href="$class_design_info.html#af435f2aa30e295caa0ff0b98521be0c5" title="DesignInfo::~DesignInfo" alt="" coords="280,122,439,149"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a3211c615bca9aaf80ce628804f6fed9a" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="548,5,749,47"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device. " alt="" coords="797,13,993,39"/>
-<area shape="rect" id="node6" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation " alt="" coords="561,71,737,98"/>
+<area shape="rect" id="node1" title="translate a string into a DesignCellType for a cell" alt="" coords="335,35,500,76"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object." alt="" coords="5,5,287,47"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="70,71,222,98"/>
 </map>

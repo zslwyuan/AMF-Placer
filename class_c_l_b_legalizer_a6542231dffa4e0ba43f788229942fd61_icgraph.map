@@ -1,19 +1,15 @@
 <map id="CLBLegalizer::getPUSiteNum" name="CLBLegalizer::getPUSiteNum">
-<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#aed8a15c279133981cc6c9dbd1c7c6f3e" title="DP function for the legalization of a specific type of PlacementUnits in the same column..." alt="" coords="255,140,458,167"/>
-<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title="CLBLegalizer::dumpMatching" alt="" coords="786,19,977,45"/>
-<area shape="rect" id="node12" href="$class_c_l_b_legalizer.html#aa4cb84e902a88b6c07a842de220887b1" title="map PlacementUnit to the columns according to the locations of the cells in it " alt="" coords="513,252,736,279"/>
-<area shape="rect" id="node14" href="$class_c_l_b_legalizer.html#af7996078a08261d3374fb782e0c45c48" title="clear the information of candidate sites for the PlacementUnits left to be matched ..." alt="" coords="529,186,720,227"/>
-<area shape="rect" id="node16" href="$class_c_l_b_legalizer.html#aca4d9470e4ad325d899d1602314e8131" title="spread PlacementUnits accross columns to resolve resource overflow " alt="" coords="271,305,442,332"/>
-<area shape="rect" id="node18" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits. " alt="" coords="248,71,465,113"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns..." alt="" coords="536,121,713,162"/>
-<area shape="rect" id="node4" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="1031,128,1181,155"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="1235,69,1422,96"/>
-<area shape="rect" id="node9" href="$class_c_l_b_legalizer.html#a39d4137e05f424217b131eec739f76f9" title="CLBLegalizer::~CLBLegalizer" alt="" coords="1233,128,1424,155"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="1472,33,1673,74"/>
-<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1757,15,1868,41"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1721,65,1904,92"/>
-<area shape="rect" id="node11" href="$class_c_l_b_legalizer.html#aab49be41667cc50e411e598ce6d00818" title="Set the intitial parameters of the legalizer. " alt="" coords="1027,62,1185,103"/>
-<area shape="rect" id="node13" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization..." alt="" coords="793,241,969,282"/>
-<area shape="rect" id="node15" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization. " alt="" coords="784,183,979,209"/>
-<area shape="rect" id="node17" href="$class_c_l_b_legalizer.html#ac1e985b9aede093537b8b9c263f00061" title="resolve the overflow columns during fixed column legalization by spreading &quot;outliers&quot; to neighbor col..." alt="" coords="525,303,724,345"/>
+<area shape="rect" id="node1" title="check how many sites are required by the given PlacementUnit" alt="" coords="1632,116,1827,143"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a22c25e78befc21fecca41dbff92143ac" title="DP function for the legalization of a specific type of PlacementUnits in the same column." alt="" coords="1381,61,1584,88"/>
+<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="859,7,1049,33"/>
+<area shape="rect" id="node9" href="$class_c_l_b_legalizer.html#aa4cb84e902a88b6c07a842de220887b1" title="map PlacementUnit to the columns according to the locations of the cells in it" alt="" coords="1111,167,1333,193"/>
+<area shape="rect" id="node11" href="$class_c_l_b_legalizer.html#a7eaae03b7ddfc54bea18d7d234807ef2" title="spread PlacementUnits accross columns to resolve resource overflow" alt="" coords="1397,221,1568,248"/>
+<area shape="rect" id="node13" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="845,109,1063,150"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="1133,50,1311,91"/>
+<area shape="rect" id="node4" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="648,57,797,84"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="413,57,600,84"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,25,365,66"/>
+<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,32,116,59"/>
+<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="866,174,1042,215"/>
+<area shape="rect" id="node12" href="$class_c_l_b_legalizer.html#ac1e985b9aede093537b8b9c263f00061" title="resolve the overflow columns during fixed column legalization by spreading &quot;outliers&quot; to neighbor col..." alt="" coords="1123,218,1321,259"/>
 </map>

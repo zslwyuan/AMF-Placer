@@ -1,3 +1,4 @@
 <map id="DeviceInfo::DeviceTile" name="DeviceInfo::DeviceTile">
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html" title="basic class of device element " alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node1" title="A tile is a combination of sites." alt="" coords="19,80,169,107"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="5,5,183,32"/>
 </map>

@@ -1,51 +1,52 @@
 <map id="GlobalPlacer::macroLegalize" name="GlobalPlacer::macroLegalize">
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#ac53aeaa967e0f4101f2409e96ab17387" title="MacroLegalizer::setClock\lRegionAware" alt="" coords="267,5,434,47"/>
-<area shape="rect" id="node3" href="$class_macro_legalizer.html#a818b3fa99d17c2ecb9720f0746ed9580" title="Get the average displacement of rough legalization for the involved PlacementUnit. " alt="" coords="240,920,461,961"/>
-<area shape="rect" id="node5" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="871,913,961,939"/>
-<area shape="rect" id="node9" href="$class_placement_info.html#a79fe94d950bca2e82b6849f4ee7ab0fe" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects " alt="" coords="817,611,1015,638"/>
-<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#aa35786806efd390c90e17e2a8e2d74e3" title="Get the average displacement of rough legalization for the involved PlacementUnit. " alt="" coords="240,531,461,572"/>
-<area shape="rect" id="node11" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="879,229,953,255"/>
-<area shape="rect" id="node12" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title="PlacementInfo::getDeviceInfo" alt="" coords="255,706,447,733"/>
-<area shape="rect" id="node13" href="$class_device_info.html#af2a89acda8ffdd35889bf07c0b0e7806" title="remove the mapped flags for all sites without fixed elements " alt="" coords="272,188,429,229"/>
-<area shape="rect" id="node15" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="276,597,425,623"/>
-<area shape="rect" id="node19" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="573,757,672,783"/>
-<area shape="rect" id="node26" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites ..." alt="" coords="271,1026,430,1053"/>
-<area shape="rect" id="node35" href="$class_macro_legalizer.html#a5194414fc87eb82a9bb3cd1e8a79540f" title="Get the average displacement of exact legalization for the involved PlacementUnit. " alt="" coords="243,1077,459,1119"/>
-<area shape="rect" id="node36" href="$class_c_l_b_legalizer.html#a06f85b0a59dcacb146bec2dc57eb9467" title="Get the average displacement of exact legalization for the involved PlacementUnit. " alt="" coords="243,1143,459,1184"/>
-<area shape="rect" id="node37" href="$class_macro_legalizer.html#aa0f2812c921b80c03260b0513aa6275f" title="Set the intitial parameters of the legalizer. " alt="" coords="266,1464,435,1505"/>
-<area shape="rect" id="node38" href="$class_macro_legalizer.html#a0c2e90a66a7dcd3a583d310b886462fc" title="reset the mapped flag of the involved sites. " alt="" coords="535,1572,710,1613"/>
-<area shape="rect" id="node39" href="$class_c_l_b_legalizer.html#aab49be41667cc50e411e598ce6d00818" title="Set the intitial parameters of the legalizer. " alt="" coords="271,1208,430,1249"/>
-<area shape="rect" id="node40" href="$class_c_l_b_legalizer.html#ae1c80f68af5ff0a91f0b838038b3d013" title="reset the mapped flag of the involved sites. " alt="" coords="540,1507,705,1548"/>
-<area shape="rect" id="node41" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid. " alt="" coords="523,1637,722,1679"/>
-<area shape="rect" id="node4" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title="MacroLegalizer::dumpMatching" alt="" coords="522,1026,723,1053"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title="PlacementInfo::getPlacement\lUnitByCell" alt="" coords="820,1019,1012,1060"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#ab6d442937f2f638bbe5065246994914c" title="PlacementInfo::Placement\lUnit::getName" alt="" coords="829,1084,1003,1125"/>
-<area shape="rect" id="node7" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="1096,1463,1248,1504"/>
-<area shape="rect" id="node14" href="$class_device_info.html#a290fb69f0c75809deaadc8186640e689" title="map recognized clock regions into an array for later clock utilization evaluation ..." alt="" coords="529,123,717,164"/>
-<area shape="rect" id="node16" href="$class_c_l_b_legalizer.html#a03b73bdcb61a3ac7123ac2e2f4c5fb13" title="clear the mapping information and reset the mapping parameters " alt="" coords="825,341,1007,367"/>
-<area shape="rect" id="node17" href="$class_c_l_b_legalizer.html#a904d4134d8a08133239b005cf20f1cba" title="find available sites for each specific type required by the constructor " alt="" coords="531,421,715,463"/>
-<area shape="rect" id="node18" href="$class_c_l_b_legalizer.html#a8a3d5c97db1487129e2bb59c70a92a52" title="get the PlacementUnits which SHOULD be legalized " alt="" coords="516,487,729,514"/>
-<area shape="rect" id="node20" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization. " alt="" coords="525,538,720,565"/>
-<area shape="rect" id="node21" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits. " alt="" coords="514,188,731,229"/>
-<area shape="rect" id="node22" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title="CLBLegalizer::dumpMatching" alt="" coords="527,975,718,1002"/>
-<area shape="rect" id="node23" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization..." alt="" coords="535,589,711,631"/>
-<area shape="rect" id="node24" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns..." alt="" coords="534,253,711,295"/>
-<area shape="rect" id="node25" href="$class_c_l_b_legalizer.html#a8d0b991f818d5acb77ad2221c807b2fe" title="Set the sites which are binded as mapped so they will not be mapped to other elements in the netlist..." alt="" coords="523,655,723,682"/>
-<area shape="rect" id="node27" href="$class_macro_legalizer.html#a6be7354bbee0d0aca68e2a3468c61ded" title="clear the mapping information and reset the mapping parameters " alt="" coords="819,1222,1013,1249"/>
-<area shape="rect" id="node28" href="$class_macro_legalizer.html#a6e15f046281564d3e9aee27027a0a62a" title="find available sites for each specific macro type required by the constructor " alt="" coords="537,1339,709,1380"/>
-<area shape="rect" id="node29" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title="get the PlacementMacro(s) which SHOULD be legalized " alt="" coords="534,1208,711,1249"/>
-<area shape="rect" id="node30" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization. " alt="" coords="520,1405,725,1431"/>
-<area shape="rect" id="node31" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits. " alt="" coords="509,909,736,951"/>
-<area shape="rect" id="node32" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization..." alt="" coords="529,1143,716,1184"/>
-<area shape="rect" id="node33" href="$class_macro_legalizer.html#a77e9e1f1fbbf77fb805b34d57d3198f4" title="finally dynamic programming to legalize the macros which have been mapped to the columns. " alt="" coords="529,1077,716,1119"/>
-<area shape="rect" id="node34" href="$class_macro_legalizer.html#af435c8eafea89bd3e3e3a7af82c1192d" title="Set the sites which are binded as mapped so they will not be mapped to other elements in the netlist..." alt="" coords="541,1273,705,1315"/>
-<area shape="rect" id="node42" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid " alt="" coords="822,1411,1010,1452"/>
-<area shape="rect" id="node43" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title="DesignInfo::getNumCells" alt="" coords="833,1477,999,1503"/>
-<area shape="rect" id="node44" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y. " alt="" coords="830,1527,1002,1554"/>
-<area shape="rect" id="node45" href="$class_placement_info_1_1_compatible_placement_table.html#acb6784c1b88ff54941384d25fb481c23" title="Get the actual occupation of a specific cell. " alt="" coords="795,1345,1037,1387"/>
-<area shape="rect" id="node46" href="$class_placement_info_1_1_compatible_placement_table.html#a27fec259866cbc493f67722529ce081c" title="Get the Potential BEL Type IDs for a specific cell object. " alt="" coords="784,1579,1048,1620"/>
-<area shape="rect" id="node47" href="$class_placement_info.html#a3422f2800dcd73950378e539e7ca8d69" title="Get the Bin Grid object for all types of BEL. " alt="" coords="829,1645,1003,1671"/>
-<area shape="rect" id="node48" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell. " alt="" coords="819,1695,1013,1722"/>
-<area shape="rect" id="node49" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title="DesignInfo::DesignCell\l::isLUT" alt="" coords="840,1797,992,1839"/>
-<area shape="rect" id="node50" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title="DesignInfo::DesignCell\l::isFF" alt="" coords="840,1863,992,1904"/>
+<area shape="rect" id="node1" title="legalize specific types of macro to the target regions" alt="" coords="5,763,192,789"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#a5194414fc87eb82a9bb3cd1e8a79540f" title="Get the average displacement of exact legalization for the involved PlacementUnit." alt="" coords="243,159,459,201"/>
+<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a06f85b0a59dcacb146bec2dc57eb9467" title="Get the average displacement of exact legalization for the involved PlacementUnit." alt="" coords="243,225,459,266"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#a818b3fa99d17c2ecb9720f0746ed9580" title="Get the average displacement of rough legalization for the involved PlacementUnit." alt="" coords="240,290,461,331"/>
+<area shape="rect" id="node5" href="$class_c_l_b_legalizer.html#aa35786806efd390c90e17e2a8e2d74e3" title="Get the average displacement of rough legalization for the involved PlacementUnit." alt="" coords="240,355,461,397"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title=" " alt="" coords="255,421,447,448"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a79fe94d950bca2e82b6849f4ee7ab0fe" title="get the locations (pair of X,Y) of the legalized PlacementUnit objects" alt="" coords="788,733,987,760"/>
+<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a79b48f2adf155f2c81abb4b793189b84" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="276,472,425,499"/>
+<area shape="rect" id="node13" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="842,909,933,936"/>
+<area shape="rect" id="node15" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="850,496,925,523"/>
+<area shape="rect" id="node20" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="573,624,672,651"/>
+<area shape="rect" id="node24" href="$class_macro_legalizer.html#aee1d122d207f573442318c49d6662713" title="conduct legalization and map the PlacementUnit of one of the given types to sites" alt="" coords="271,851,430,877"/>
+<area shape="rect" id="node35" href="$class_device_info.html#af2a89acda8ffdd35889bf07c0b0e7806" title="remove the mapped flags for all sites without fixed elements" alt="" coords="272,953,429,994"/>
+<area shape="rect" id="node36" href="$class_c_l_b_legalizer.html#ae1c80f68af5ff0a91f0b838038b3d013" title="reset the mapped flag of the involved sites." alt="" coords="268,1018,433,1059"/>
+<area shape="rect" id="node37" href="$class_macro_legalizer.html#a0c2e90a66a7dcd3a583d310b886462fc" title="reset the mapped flag of the involved sites." alt="" coords="263,1083,438,1125"/>
+<area shape="rect" id="node38" href="$class_macro_legalizer.html#ac53aeaa967e0f4101f2409e96ab17387" title=" " alt="" coords="267,1149,434,1190"/>
+<area shape="rect" id="node39" href="$class_c_l_b_legalizer.html#aab49be41667cc50e411e598ce6d00818" title="Set the intitial parameters of the legalizer." alt="" coords="271,1214,430,1255"/>
+<area shape="rect" id="node40" href="$class_macro_legalizer.html#aa0f2812c921b80c03260b0513aa6275f" title="Set the intitial parameters of the legalizer." alt="" coords="266,1279,435,1321"/>
+<area shape="rect" id="node41" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="251,1603,450,1645"/>
+<area shape="rect" id="node9" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="527,224,718,251"/>
+<area shape="rect" id="node14" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="534,158,711,199"/>
+<area shape="rect" id="node16" href="$class_c_l_b_legalizer.html#a03b73bdcb61a3ac7123ac2e2f4c5fb13" title="clear the mapping information and reset the mapping parameters" alt="" coords="796,136,979,163"/>
+<area shape="rect" id="node17" href="$class_c_l_b_legalizer.html#a904d4134d8a08133239b005cf20f1cba" title="find available sites for each specific type required by the constructor" alt="" coords="531,275,715,317"/>
+<area shape="rect" id="node18" href="$class_c_l_b_legalizer.html#aa692726c62110a64a478c01219ed33f8" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="535,341,711,382"/>
+<area shape="rect" id="node19" href="$class_c_l_b_legalizer.html#a8a3d5c97db1487129e2bb59c70a92a52" title="get the PlacementUnits which SHOULD be legalized" alt="" coords="516,472,729,499"/>
+<area shape="rect" id="node21" href="$class_c_l_b_legalizer.html#a7d6089890e6f0b74056bf427525977f6" title="conduct rough legalization." alt="" coords="525,5,720,32"/>
+<area shape="rect" id="node22" href="$class_c_l_b_legalizer.html#a8d0b991f818d5acb77ad2221c807b2fe" title="Set the sites which are binded as mapped so they will not be mapped to other elements in the netlist." alt="" coords="523,56,723,83"/>
+<area shape="rect" id="node23" href="$class_c_l_b_legalizer.html#abd4a48f600e74d680d62aa124a89fb63" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="514,406,731,447"/>
+<area shape="rect" id="node10" href="$class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title=" " alt="" coords="786,271,989,297"/>
+<area shape="rect" id="node11" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="784,220,991,247"/>
+<area shape="rect" id="node12" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="790,368,985,395"/>
+<area shape="rect" id="node25" href="$class_macro_legalizer.html#aa588e3204749ad3fd791cd38208670c3" title=" " alt="" coords="522,792,723,819"/>
+<area shape="rect" id="node26" href="$class_macro_legalizer.html#a77e9e1f1fbbf77fb805b34d57d3198f4" title="finally dynamic programming to legalize the macros which have been mapped to the columns." alt="" coords="529,1143,716,1185"/>
+<area shape="rect" id="node27" href="$class_macro_legalizer.html#a6be7354bbee0d0aca68e2a3468c61ded" title="clear the mapping information and reset the mapping parameters" alt="" coords="791,1180,984,1207"/>
+<area shape="rect" id="node28" href="$class_macro_legalizer.html#a6e15f046281564d3e9aee27027a0a62a" title="find available sites for each specific macro type required by the constructor" alt="" coords="537,1311,709,1353"/>
+<area shape="rect" id="node30" href="$class_macro_legalizer.html#a54abe9e01da807f896e887901b744861" title="conduct fixed&#45;column legalization as a step in exact legalization. During fixed&#45;column legalization,..." alt="" coords="529,1078,716,1119"/>
+<area shape="rect" id="node31" href="$class_macro_legalizer.html#a2fbeb068523404dcc896abe8ab765edc" title="get the PlacementMacro(s) which SHOULD be legalized" alt="" coords="534,843,711,885"/>
+<area shape="rect" id="node32" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="520,909,725,936"/>
+<area shape="rect" id="node33" href="$class_macro_legalizer.html#af435c8eafea89bd3e3e3a7af82c1192d" title="Set the sites which are binded as mapped so they will not be mapped to other elements in the netlist." alt="" coords="541,961,705,1002"/>
+<area shape="rect" id="node34" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="509,726,736,767"/>
+<area shape="rect" id="node29" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="797,1398,978,1439"/>
+<area shape="rect" id="node42" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="539,1545,706,1586"/>
+<area shape="rect" id="node43" href="$class_placement_info.html#a3422f2800dcd73950378e539e7ca8d69" title="Get the Bin Grid object for all types of BEL." alt="" coords="536,1611,709,1637"/>
+<area shape="rect" id="node44" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="547,1662,699,1703"/>
+<area shape="rect" id="node45" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="537,1728,709,1755"/>
+<area shape="rect" id="node46" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="540,1779,705,1805"/>
+<area shape="rect" id="node47" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="547,1830,699,1871"/>
+<area shape="rect" id="node48" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="547,1895,699,1937"/>
+<area shape="rect" id="node49" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="529,1377,717,1418"/>
+<area shape="rect" id="node50" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="526,1443,719,1469"/>
 </map>

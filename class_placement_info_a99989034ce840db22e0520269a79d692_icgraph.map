@@ -1,12 +1,12 @@
 <map id="PlacementInfo::addPUIntoClockColumn" name="PlacementInfo::addPUIntoClockColumn">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="290,5,429,47"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="275,297,443,339"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_LUTFFPairReloacationAfterSlotMapping" alt="" coords="228,71,491,127"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_shortestPath" alt="" coords="258,151,461,207"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement_swap" alt="" coords="239,232,480,273"/>
-<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f" title="update the information of consistent PUs at the top of priority queue " alt="" coords="247,363,472,419"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="565,119,703,160"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="777,126,888,153"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object. " alt="" coords="565,297,703,339"/>
-<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8" title="a iteration to pack PlacementUnit into a CLB site " alt="" coords="539,371,729,412"/>
+<area shape="rect" id="node1" title="map the given PlacementUnit to the site for later checking of the half&#45;column clock legalization rule..." alt="" coords="661,193,836,235"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a64a5b7848e3d3bae07f9ba65acf6a57b" title="update the packing cluster candidates for each CLB site and determine some mapping from elements to s..." alt="" coords="413,5,551,47"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="398,295,566,336"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title=" " alt="" coords="351,70,613,126"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title=" " alt="" coords="381,150,583,206"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title=" " alt="" coords="361,229,603,271"/>
+<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f" title="update the information of consistent PUs at the top of priority queue" alt="" coords="369,359,595,415"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,117,303,159"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,125,116,151"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object." alt="" coords="164,295,303,336"/>
 </map>

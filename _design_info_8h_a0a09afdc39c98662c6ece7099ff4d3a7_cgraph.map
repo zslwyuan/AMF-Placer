@@ -1,4 +1,5 @@
 <map id="operator&lt;&lt;" name="operator&lt;&lt;">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title="DesignInfo::DesignCell\l::getCellType" alt="" coords="151,5,303,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title="DesignInfo::DesignElement\l::getName" alt="" coords="139,71,316,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,91,73"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="151,5,303,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title=" " alt="" coords="139,71,316,112"/>
 </map>

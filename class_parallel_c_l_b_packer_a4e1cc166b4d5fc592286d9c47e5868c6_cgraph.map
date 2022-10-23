@@ -1,5 +1,6 @@
 <map id="ParallelCLBPacker::addNonCLBPackingSites" name="ParallelCLBPacker::addNonCLBPackingSites">
-<area shape="rect" id="node2" href="$class_placement_info.html#a724a9656acaf8db81c5666fb5683ae75" title="get the sites occupied by the legalized PlacementUnit objects " alt="" coords="229,5,433,32"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aac8435a777ba9bcdabe1f748723ef69f" title="ParallelCLBPacker::\lPackingCLBSite::setNonCLBCell" alt="" coords="224,57,439,98"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a13da0c77bb2cf540f76801417f8cd788" title="PlacementInfo::getPlacement\lUnpackedCells" alt="" coords="235,122,427,163"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,64,176,105"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a13da0c77bb2cf540f76801417f8cd788" title=" " alt="" coords="235,5,427,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a724a9656acaf8db81c5666fb5683ae75" title="get the sites occupied by the legalized PlacementUnit objects" alt="" coords="229,71,433,98"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aac8435a777ba9bcdabe1f748723ef69f" title=" " alt="" coords="224,123,439,164"/>
 </map>

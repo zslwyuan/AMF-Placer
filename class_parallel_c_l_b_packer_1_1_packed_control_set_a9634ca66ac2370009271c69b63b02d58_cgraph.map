@@ -1,9 +1,10 @@
 <map id="ParallelCLBPacker::PackedControlSet::operator=" name="ParallelCLBPacker::PackedControlSet::operator=">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a8c2c1603ef89d0a18da0fb01ae26a090" title="Get the the number of FFs in this control set. " alt="" coords="251,5,427,47"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#aa417fb26689759eae296708aa10d006f" title="get the control set id of this PackedControlSet. " alt="" coords="249,71,429,112"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a7f01f16194d88e4dabf3987f8e27251d" title="get the FFs in this PackedControlSet " alt="" coords="251,136,426,177"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#aa1929039f6d30a1edd23473e7ca166fc" title="ParallelCLBPacker::\lPackedControlSet::getCLK" alt="" coords="250,201,427,243"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a9d2a41c3839f83db9ff4d49bc79e7c42" title="ParallelCLBPacker::\lPackedControlSet::getSR" alt="" coords="254,267,423,308"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#ab85cb6947d1af93565b9cef222990733" title="ParallelCLBPacker::\lPackedControlSet::getCE" alt="" coords="255,332,423,373"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a3ec9b398d28976d341524169d64a56eb" title="ParallelCLBPacker::\lPackedControlSet::getFFType" alt="" coords="241,397,436,439"/>
+<area shape="rect" id="node1" title="undate a new Packed Control Set object by cloning another one" alt="" coords="5,201,193,243"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#ab85cb6947d1af93565b9cef222990733" title=" " alt="" coords="255,5,423,47"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#aa1929039f6d30a1edd23473e7ca166fc" title=" " alt="" coords="250,71,427,112"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#aa417fb26689759eae296708aa10d006f" title="get the control set id of this PackedControlSet." alt="" coords="249,136,429,177"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a7f01f16194d88e4dabf3987f8e27251d" title="get the FFs in this PackedControlSet" alt="" coords="251,201,426,243"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a3ec9b398d28976d341524169d64a56eb" title=" " alt="" coords="241,267,436,308"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a8c2c1603ef89d0a18da0fb01ae26a090" title="Get the the number of FFs in this control set." alt="" coords="251,332,427,373"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packed_control_set.html#a9d2a41c3839f83db9ff4d49bc79e7c42" title=" " alt="" coords="254,397,423,439"/>
 </map>

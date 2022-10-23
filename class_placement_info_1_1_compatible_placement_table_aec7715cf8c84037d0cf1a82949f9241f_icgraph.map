@@ -1,4 +1,0 @@
-<map id="PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable" name="PlacementInfo::CompatiblePlacementTable::CompatiblePlacementTable">
-<area shape="rect" id="node2" href="$class_placement_info.html#a3211c615bca9aaf80ce628804f6fed9a" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="335,5,536,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device. " alt="" coords="584,13,780,39"/>
-</map>

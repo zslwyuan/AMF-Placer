@@ -1,4 +1,4 @@
 <map id="PlacementTimingOptimizer::clusterLongPathInOneClockRegion" name="PlacementTimingOptimizer::clusterLongPathInOneClockRegion">
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="324,5,435,32"/>
-<area shape="rect" id="node3" href="$class_placement_timing_optimizer.html#a581a14b1393ddf4358af3ee246f2d19d" title="PlacementTimingOptimizer\l::~PlacementTimingOptimizer" alt="" coords="284,57,475,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="164,5,395,47"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="CLBLegalizer::DPForMinHPWL" name="CLBLegalizer::DPForMinHPWL">
+<area shape="rect" id="node1" title="DP function for the legalization of a specific type of PlacementUnits in the same column." alt="" coords="5,183,208,210"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="256,133,463,159"/>
+<area shape="rect" id="node7" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="262,183,457,210"/>
+<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a0e5d0222cf2c76a9683a217d6b844e8b" title=" " alt="" coords="273,235,446,276"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="519,5,694,47"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title=" " alt="" coords="511,71,703,112"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="523,137,691,163"/>
+<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="523,187,691,214"/>
+<area shape="rect" id="node9" href="$class_c_l_b_legalizer.html#aa2cc92cb40a7ac04511d723c82985b11" title=" " alt="" coords="518,242,695,269"/>
+</map>

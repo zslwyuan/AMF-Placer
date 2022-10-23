@@ -1,3 +1,4 @@
 <map id="PlacementInfo::legalizeXYInArea" name="PlacementInfo::legalizeXYInArea">
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title="PlacementInfo::Placement\lUnit::getType" alt="" coords="264,5,439,47"/>
+<area shape="rect" id="node1" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="5,13,216,39"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="264,5,439,47"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="DesignInfo::DesignCell::addPin" name="DesignInfo::DesignCell::addPin">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title="DesignInfo::DesignElement\l::getName" alt="" coords="205,5,383,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_pin.html#ab34cae7cdbaf860b759acc4005ea2606" title="DesignInfo::DesignPin\l::isOutputPort" alt="" coords="219,71,369,112"/>
+<area shape="rect" id="node1" title="bind a pin to the cell" alt="" coords="5,39,157,80"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title=" " alt="" coords="205,5,383,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_pin.html#ab34cae7cdbaf860b759acc4005ea2606" title=" " alt="" coords="219,71,369,112"/>
 </map>

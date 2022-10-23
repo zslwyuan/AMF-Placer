@@ -1,5 +1,6 @@
 <map id="DesignInfo::ControlSetInfo::compatibleWith" name="DesignInfo::ControlSetInfo::compatibleWith">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="245,5,397,47"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title="DesignInfo::FFSRCompatible" alt="" coords="227,71,416,98"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist. " alt="" coords="245,123,397,164"/>
+<area shape="rect" id="node1" title="check if a FF is compatible with the control set" alt="" coords="5,57,179,98"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a92b616853d3211f189319cb78f2f8472" title=" " alt="" coords="227,5,416,32"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title=" " alt="" coords="245,57,397,98"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="245,122,397,163"/>
 </map>

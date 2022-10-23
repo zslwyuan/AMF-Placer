@@ -1,4 +1,0 @@
-<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::areAllPUsValidForThisSite" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::areAllPUsValidForThisSite">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a78fb0ee412bb44ad8b1d5f2271bb2208" title="remove invalid clusters from the priority queue " alt="" coords="292,5,497,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8" title="a iteration to pack PlacementUnit into a CLB site " alt="" coords="545,13,736,54"/>
-</map>

@@ -1,11 +1,12 @@
 <map id="CLBLegalizer::dumpMatching" name="CLBLegalizer::dumpMatching">
-<area shape="rect" id="node2" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="302,5,393,32"/>
-<area shape="rect" id="node3" href="$class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title="CLBLegalizer::getDisplacement" alt="" coords="246,56,449,83"/>
-<area shape="rect" id="node6" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite " alt="" coords="244,107,451,133"/>
-<area shape="rect" id="node9" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit " alt="" coords="250,157,445,184"/>
-<area shape="rect" id="node10" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title="writeStrToGZip" alt="" coords="292,208,403,235"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="511,31,679,57"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="511,81,679,108"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title="PlacementInfo::getPlacement\lUnitId2Nets" alt="" coords="499,133,691,174"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title="PlacementInfo::Placement\lUnit::getId" alt="" coords="507,198,682,239"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,196,159"/>
+<area shape="rect" id="node2" href="$class_c_l_b_legalizer.html#a1e0eec721635632f0793d72fd4363524" title=" " alt="" coords="246,31,449,57"/>
+<area shape="rect" id="node5" href="$class_c_l_b_legalizer.html#a58f7ae3a4f7ef85d943628e9b5b0521a" title="get the HPWL change when the given PlacementUnit moves to the given DeviceSite" alt="" coords="244,81,451,108"/>
+<area shape="rect" id="node8" href="$class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61" title="check how many sites are required by the given PlacementUnit" alt="" coords="250,132,445,159"/>
+<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="302,183,393,209"/>
+<area shape="rect" id="node10" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="292,233,403,260"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="511,5,679,32"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="511,56,679,83"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="507,107,682,149"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title=" " alt="" coords="499,173,691,214"/>
 </map>

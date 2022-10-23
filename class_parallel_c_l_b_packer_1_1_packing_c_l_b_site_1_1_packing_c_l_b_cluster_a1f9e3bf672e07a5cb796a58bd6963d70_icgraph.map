@@ -1,9 +1,4 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::contains" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::contains">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a120ba4bf76257c794648f0c7a3feb566" title="remove invalid clusters from neighbor PlacementUnits " alt="" coords="310,5,515,61"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_shortestPath" alt="" coords="311,165,514,221"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement_swap" alt="" coords="292,246,533,287"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f" title="update the information of consistent PUs at the top of priority queue " alt="" coords="300,85,525,141"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a22d1066e6a168a7c595245ed7e1a0cd8" title="a iteration to pack PlacementUnit into a CLB site " alt="" coords="581,53,772,94"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="607,209,746,250"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="820,216,931,243"/>
+<area shape="rect" id="node1" title="check whether the cluster contains a specific PlacementUnit" alt="" coords="279,5,517,61"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aef151346b6c85de88db41efd74fa6c9f" title="update the information of consistent PUs at the top of priority queue" alt="" coords="5,5,231,61"/>
 </map>

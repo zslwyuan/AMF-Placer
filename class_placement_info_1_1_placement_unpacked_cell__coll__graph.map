@@ -1,14 +1,15 @@
 <map id="PlacementInfo::PlacementUnpackedCell" name="PlacementInfo::PlacementUnpackedCell">
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand " alt="" coords="823,32,1021,59"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects ..." alt="" coords="846,83,998,109"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design. " alt="" coords="5,44,183,71"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells " alt="" coords="245,69,396,96"/>
+<area shape="rect" id="node1" title="the smallest, indivisible, representable component. It will include only one standard cell" alt="" coords="1135,75,1309,117"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand" alt="" coords="823,32,1021,59"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects" alt="" coords="846,83,998,109"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="5,44,183,71"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="245,69,396,96"/>
 <area shape="rect" id="node5" href="$class_design_info_1_1_control_set_info.html" title="A control set is a combination of CLK, CE and SR signal. It could be nullptr (not related to control ..." alt="" coords="499,83,672,109"/>
-<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html" title="Site class for site on device. " alt="" coords="845,224,999,251"/>
-<area shape="rect" id="node8" href="$class_device_info_1_1_device_element.html" title="basic class of device element " alt="" coords="232,159,409,185"/>
-<area shape="rect" id="node12" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites. " alt="" coords="510,188,661,215"/>
-<area shape="rect" id="node9" href="$class_device_info_1_1_device_site_1_1_device_site_pin_infos.html" title="a class record the pin on the site boundary " alt="" coords="509,239,662,281"/>
-<area shape="rect" id="node10" href="$class_device_info_1_1_clock_column.html" title="a column of site in clock region " alt="" coords="502,305,669,332"/>
-<area shape="rect" id="node11" href="$class_device_info_1_1_clock_region.html" title="class for clock regions on FPGA " alt="" coords="504,356,667,383"/>
-<area shape="rect" id="node13" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion. " alt="" coords="279,209,363,236"/>
+<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html" title="Site class for site on device." alt="" coords="845,224,999,251"/>
+<area shape="rect" id="node8" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="232,159,409,185"/>
+<area shape="rect" id="node12" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites." alt="" coords="510,188,661,215"/>
+<area shape="rect" id="node9" href="$class_device_info_1_1_device_site_1_1_device_site_pin_infos.html" title="a class record the pin on the site boundary" alt="" coords="509,239,662,281"/>
+<area shape="rect" id="node10" href="$class_device_info_1_1_clock_column.html" title="a column of site in clock region" alt="" coords="502,305,669,332"/>
+<area shape="rect" id="node11" href="$class_device_info_1_1_clock_region.html" title="class for clock regions on FPGA" alt="" coords="504,356,667,383"/>
+<area shape="rect" id="node13" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="279,209,363,236"/>
 </map>

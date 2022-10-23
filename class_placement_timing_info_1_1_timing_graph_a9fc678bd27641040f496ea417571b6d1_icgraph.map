@@ -1,5 +1,6 @@
 <map id="PlacementTimingInfo::TimingGraph::getMediumPathThresholdLevel" name="PlacementTimingInfo::TimingGraph::getMediumPathThresholdLevel">
-<area shape="rect" id="node2" href="$class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20" title="PlacementTimingInfo\l::getMediumPathThresholdLevel" alt="" coords="252,13,460,54"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph " alt="" coords="508,13,687,54"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="735,20,845,47"/>
+<area shape="rect" id="node1" title="Get the medium path threshold level." alt="" coords="647,5,845,61"/>
+<area shape="rect" id="node2" href="$class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20" title=" " alt="" coords="391,13,599,54"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph" alt="" coords="164,13,343,54"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>

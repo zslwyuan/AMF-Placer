@@ -1,6 +1,5 @@
 <map id="GlobalPlacer::timingDrivenDetailedPlacement_shortestPath_intermediate" name="GlobalPlacer::timingDrivenDetailedPlacement_shortestPath_intermediate">
-<area shape="rect" id="node2" href="$class_global_placer.html#acc12a5f85eeded22a6bf6d5ced231fb4" title="GlobalPlacer::getWirelength\lOptimizer" alt="" coords="275,5,457,47"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="265,71,467,112"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="551,21,661,47"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="515,78,697,105"/>
+<area shape="rect" id="node1" title=" " alt="" coords="413,5,625,61"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,13,365,54"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
 </map>

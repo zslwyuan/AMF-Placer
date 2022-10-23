@@ -1,14 +1,12 @@
 <map id="PlacementInfo::createGridBins" name="PlacementInfo::createGridBins">
-<area shape="rect" id="node2" href="$class_device_info.html#a81c5a41b25cedebdc24c6464df5ef459" title="DeviceInfo::getBoundaryTolerance" alt="" coords="265,5,484,32"/>
-<area shape="rect" id="node3" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title="print_error" alt="" coords="335,56,415,83"/>
-<area shape="rect" id="node4" href="$class_device_info.html#a72f3177aa3371bab061e9dc502e7b91e" title="Get sites of a specfic type. " alt="" coords="286,107,463,133"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#aed1228eac6380ba01bfcc417fa3405bb" title="get the remapped BEL type of a specific BEL type since some cell can be placed in sites of different ..." alt="" coords="279,158,470,199"/>
-<area shape="rect" id="node10" href="$class_placement_info_1_1_compatible_placement_table.html#a8b99bc2a02ad48cfdd9de7b0640b7490" title="get the ID of SharedBELType from a string " alt="" coords="252,223,497,265"/>
-<area shape="rect" id="node11" href="$class_device_info.html#a8427dc1cb4261c1c1971675632ca728b" title="DeviceInfo::getSites" alt="" coords="305,289,444,316"/>
-<area shape="rect" id="node12" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="325,340,424,367"/>
-<area shape="rect" id="node13" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="329,391,420,417"/>
-<area shape="rect" id="node6" href="$class_device_info.html#a64d783b411441415fa8a8af207412e1b" title="DeviceInfo::getBELType2False\lBELType" alt="" coords="545,158,745,199"/>
-<area shape="rect" id="node7" href="$class_device_info.html#acf972e842012f53c4087c8da7032bd8e" title="load BEL type remapping information since some cell can be placed in sites of different sites..." alt="" coords="793,158,968,199"/>
-<area shape="rect" id="node8" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title="strSplit" alt="" coords="1022,140,1085,167"/>
-<area shape="rect" id="node9" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="1016,191,1091,217"/>
+<area shape="rect" id="node1" title="Create a grid of bins on the device." alt="" coords="5,214,204,241"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#aed1228eac6380ba01bfcc417fa3405bb" title="get the remapped BEL type of a specific BEL type since some cell can be placed in sites of different ..." alt="" coords="279,5,470,47"/>
+<area shape="rect" id="node4" href="$class_device_info.html#a81c5a41b25cedebdc24c6464df5ef459" title=" " alt="" coords="265,71,484,98"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html#a8b99bc2a02ad48cfdd9de7b0640b7490" title="get the ID of SharedBELType from a string" alt="" coords="252,123,497,164"/>
+<area shape="rect" id="node6" href="$class_device_info.html#a8427dc1cb4261c1c1971675632ca728b" title=" " alt="" coords="305,189,444,215"/>
+<area shape="rect" id="node7" href="$class_device_info.html#a72f3177aa3371bab061e9dc502e7b91e" title="Get sites of a specfic type." alt="" coords="286,239,463,266"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title=" " alt="" coords="335,290,415,317"/>
+<area shape="rect" id="node9" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="329,341,420,367"/>
+<area shape="rect" id="node10" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="325,391,424,418"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a64d783b411441415fa8a8af207412e1b" title=" " alt="" coords="545,5,745,47"/>
 </map>

@@ -1,0 +1,5 @@
+<map id="GeneralSpreader::SpreadRegion::addBinRegion" name="GeneralSpreader::SpreadRegion::addBinRegion">
+<area shape="rect" id="node1" title="add cell bins into SpreadRegion with a new boundary and update region information including boundary ..." alt="" coords="5,39,212,80"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#aead9de2d631d1d940dfed4f2f01c630f" title="Get the cells in the SpreadRegion." alt="" coords="260,5,467,47"/>
+<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region.html#a0ac209c9c1347669b83be9e6d1bf029e" title="check whether the SpreadRegion is overlapped with a given boundary" alt="" coords="260,71,467,112"/>
+</map>

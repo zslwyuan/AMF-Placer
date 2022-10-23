@@ -1,15 +1,44 @@
 <map id="src/lib/HiFPlacer/placement/packing/ParallelCLBPacker_PackingCLBCluster.cc" name="src/lib/HiFPlacer/placement/packing/ParallelCLBPacker_PackingCLBCluster.cc">
+<area shape="rect" id="node1" title="This implementation file contains APIs&#39; implementation related to the packing&#45;cluster&#45;level processes..." alt="" coords="1299,5,1485,61"/>
 <area shape="rect" id="node2" href="$_parallel_c_l_b_packer_8h.html" title="This header file contains the definitions of ParallelCLBPacker class and its internal modules and API..." alt="" coords="1321,109,1463,136"/>
-<area shape="rect" id="node3" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist. " alt="" coords="2334,497,2429,524"/>
-<area shape="rect" id="node4" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device. " alt="" coords="1443,572,1538,599"/>
-<area shape="rect" id="node5" href="$str_print_8h.html" title="strPrint.h" alt="" coords="147,647,221,673"/>
+<area shape="rect" id="node3" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="2334,497,2429,524"/>
+<area shape="rect" id="node4" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="1443,572,1538,599"/>
+<area shape="rect" id="node5" href="$str_print_8h.html" title=" " alt="" coords="147,647,221,673"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1789,721,1843,748"/>
+<area shape="rect" id="node12" title=" " alt="" coords="3141,647,3209,673"/>
+<area shape="rect" id="node13" title=" " alt="" coords="2839,647,2905,673"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1160,647,1232,673"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1957,647,2003,673"/>
+<area shape="rect" id="node16" title=" " alt="" coords="392,647,432,673"/>
+<area shape="rect" id="node17" title=" " alt="" coords="997,647,1067,673"/>
+<area shape="rect" id="node18" title=" " alt="" coords="2437,647,2496,673"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1330,191,1454,218"/>
+<area shape="rect" id="node20" title=" " alt="" coords="1479,184,1676,225"/>
 <area shape="rect" id="node21" href="$_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="1506,348,1622,375"/>
-<area shape="rect" id="node25" href="$dump_zip_8h.html" title="dumpZip.h" alt="" coords="779,497,861,524"/>
-<area shape="rect" id="node32" href="$_placement_timing_optimizer_8h.html" title="PlacementTimingOptimizer.h" alt="" coords="1619,273,1807,300"/>
+<area shape="rect" id="node25" href="$dump_zip_8h.html" title=" " alt="" coords="779,497,861,524"/>
+<area shape="rect" id="node31" title=" " alt="" coords="999,423,1057,449"/>
+<area shape="rect" id="node32" href="$_placement_timing_optimizer_8h.html" title=" " alt="" coords="1619,273,1807,300"/>
 <area shape="rect" id="node33" href="$_wirelength_optimizer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="2221,191,2369,218"/>
-<area shape="rect" id="node37" href="$const_8h.html" title="const.h" alt="" coords="3475,191,3539,218"/>
-<area shape="rect" id="node38" href="$read_zip_8h.html" title="readZip.h" alt="" coords="697,191,772,218"/>
-<area shape="rect" id="node40" href="$string_check_8h.html" title="stringCheck.h" alt="" coords="1765,572,1867,599"/>
+<area shape="rect" id="node37" href="$const_8h.html" title=" " alt="" coords="3475,191,3539,218"/>
+<area shape="rect" id="node38" href="$read_zip_8h.html" title=" " alt="" coords="697,191,772,218"/>
+<area shape="rect" id="node40" href="$string_check_8h.html" title=" " alt="" coords="1765,572,1867,599"/>
+<area shape="rect" id="node41" title=" " alt="" coords="3933,191,3992,218"/>
+<area shape="rect" id="node42" title=" " alt="" coords="4017,191,4074,218"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,721,67,748"/>
+<area shape="rect" id="node7" title=" " alt="" coords="91,721,130,748"/>
+<area shape="rect" id="node8" title=" " alt="" coords="154,721,214,748"/>
+<area shape="rect" id="node9" title=" " alt="" coords="238,721,301,748"/>
+<area shape="rect" id="node11" title=" " alt="" coords="325,721,406,748"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1436,423,1521,449"/>
+<area shape="rect" id="node23" title=" " alt="" coords="3363,497,3490,524"/>
 <area shape="rect" id="node24" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="1849,423,2004,449"/>
-<area shape="rect" id="node35" href="$_q_p_solver_wrapper_8h.html" title="QPSolverWrapper.h" alt="" coords="2960,423,3096,449"/>
+<area shape="rect" id="node28" title=" " alt="" coords="1494,497,1551,524"/>
+<area shape="rect" id="node30" title=" " alt="" coords="2099,497,2157,524"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1677,497,1752,524"/>
+<area shape="rect" id="node29" title=" " alt="" coords="1979,497,2075,524"/>
+<area shape="rect" id="node26" title=" " alt="" coords="829,572,880,599"/>
+<area shape="rect" id="node34" title=" " alt="" coords="3565,497,3656,524"/>
+<area shape="rect" id="node35" href="$_q_p_solver_wrapper_8h.html" title=" " alt="" coords="2960,423,3096,449"/>
+<area shape="rect" id="node36" title=" " alt="" coords="3113,497,3237,524"/>
+<area shape="rect" id="node39" title=" " alt="" coords="714,273,771,300"/>
 </map>

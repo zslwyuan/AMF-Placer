@@ -1,8 +1,9 @@
 <map id="PlacementInfo::dumpPlacementUnitInformation" name="PlacementInfo::dumpPlacementUnitInformation">
-<area shape="rect" id="node2" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="332,5,423,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a1c23f07e035eae39311944b1fdc6a544" title="Get the Pseudo Net Weight object. " alt="" coords="290,57,465,98"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a76cc84daf9edf557e755a83509003903" title="Get the Macro Pseudo Net Enhance Counter. " alt="" coords="272,122,483,163"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a2eba7c4b800cefadc1122619e3047e8e" title="Get the Macro Legalization Weight. " alt="" coords="260,187,495,229"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="281,253,473,294"/>
-<area shape="rect" id="node7" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title="writeStrToGZip" alt="" coords="322,319,433,345"/>
+<area shape="rect" id="node1" title="dump the PlacementUnit objects and some placement parameters as a checkpoint" alt="" coords="5,169,212,211"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a2eba7c4b800cefadc1122619e3047e8e" title="Get the Macro Legalization Weight." alt="" coords="260,5,495,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a76cc84daf9edf557e755a83509003903" title="Get the Macro Pseudo Net Enhance Counter." alt="" coords="272,71,483,112"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title=" " alt="" coords="281,136,473,177"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a1c23f07e035eae39311944b1fdc6a544" title="Get the Pseudo Net Weight object." alt="" coords="290,201,465,243"/>
+<area shape="rect" id="node6" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="332,267,423,294"/>
+<area shape="rect" id="node7" href="$dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777" title=" " alt="" coords="322,318,433,345"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="DeviceInfo::loadBELType2FalseBELType" name="DeviceInfo::loadBELType2FalseBELType">
-<area shape="rect" id="node2" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title="strSplit" alt="" coords="234,5,297,32"/>
-<area shape="rect" id="node3" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="228,56,303,83"/>
+<area shape="rect" id="node1" title="load BEL type remapping information since some cell can be placed in sites of different sites...." alt="" coords="5,23,180,65"/>
+<area shape="rect" id="node2" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="228,5,303,32"/>
+<area shape="rect" id="node3" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title=" " alt="" coords="234,56,297,83"/>
 </map>

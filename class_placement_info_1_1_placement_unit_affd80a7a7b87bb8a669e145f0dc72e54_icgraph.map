@@ -1,5 +1,6 @@
 <map id="PlacementInfo::PlacementUnit::setPacked" name="PlacementInfo::PlacementUnit::setPacked">
-<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="228,35,384,76"/>
-<area shape="rect" id="node3" href="$class_incremental_b_e_l_packer.html#ad89cfb0f178ce902dcd04728d67dc86b" title="Construct a new Incremental BEL Packer object. " alt="" coords="432,5,595,47"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="458,71,569,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="368,39,543,80"/>
+<area shape="rect" id="node2" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,5,320,47"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="171,71,313,112"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
 </map>

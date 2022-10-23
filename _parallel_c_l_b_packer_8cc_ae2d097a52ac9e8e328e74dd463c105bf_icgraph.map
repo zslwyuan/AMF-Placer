@@ -1,7 +1,8 @@
 <map id="getAngle" name="getAngle">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#add51eec6b7e9db37932ad704ce57f507" title="ParallelCLBPacker::\lfindNeiborSitesFromBinGrid" alt="" coords="167,5,349,47"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_LUTFFPairReloacationAfterSlotMapping" alt="" coords="127,71,389,127"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title="ParallelCLBPacker::\ltimingDrivenDetailedPlacement\l_shortestPath" alt="" coords="157,151,359,207"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="437,119,576,160"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="624,126,735,153"/>
+<area shape="rect" id="node1" title=" " alt="" coords="661,85,735,111"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#add51eec6b7e9db37932ad704ce57f507" title=" " alt="" coords="391,5,573,47"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title=" " alt="" coords="351,70,613,126"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title=" " alt="" coords="381,150,583,206"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,117,303,159"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,125,116,151"/>
 </map>

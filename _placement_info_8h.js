@@ -19,6 +19,6 @@ var _placement_info_8h =
     [ "CellBinInfo", "struct_placement_info_1_1_cell_bin_info.html", "struct_placement_info_1_1_cell_bin_info" ],
     [ "_ClockNetCoverage", "struct_placement_info_1_1___clock_net_coverage.html", "struct_placement_info_1_1___clock_net_coverage" ],
     [ "operator<<", "_placement_info_8h.html#ac3f4a0f9e9903f17e35ce7cbedbf97fb", null ],
-    [ "operator<<", "_placement_info_8h.html#a71228051289991d8f6c5b32cdb90b06f", null ],
-    [ "operator<<", "_placement_info_8h.html#a2095a4ed7afd80bfdea982db8c30dcf4", null ]
+    [ "operator<<", "_placement_info_8h.html#a2095a4ed7afd80bfdea982db8c30dcf4", null ],
+    [ "operator<<", "_placement_info_8h.html#a71228051289991d8f6c5b32cdb90b06f", null ]
 ];

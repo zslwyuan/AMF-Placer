@@ -1,6 +1,6 @@
 <map id="ClusterPlacer::isDensePlacement" name="ClusterPlacer::isDensePlacement">
-<area shape="rect" id="node2" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title="PlacementInfo::getDeviceInfo" alt="" coords="281,5,473,32"/>
-<area shape="rect" id="node3" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array. " alt="" coords="268,56,487,83"/>
-<area shape="rect" id="node4" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array. " alt="" coords="268,107,487,133"/>
-<area shape="rect" id="node5" href="$class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region " alt="" coords="535,107,760,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,220,83"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="268,5,487,32"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="268,56,487,83"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title=" " alt="" coords="281,107,473,133"/>
 </map>

@@ -1,10 +1,11 @@
 <map id="PlacementInfo::getPULegalSite" name="PlacementInfo::getPULegalSite">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a4e1cc166b4d5fc592286d9c47e5868c6" title="ParallelCLBPacker::\laddNonCLBPackingSites" alt="" coords="691,5,861,47"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#acdccd594e78ef05cf0b0769cc11bc244" title="ParallelCLBPacker::\ldumpDSPBRAMPlacementTcl" alt="" coords="257,69,456,111"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="273,135,441,176"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="909,39,1048,80"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1096,46,1207,73"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title="ParallelCLBPacker::\ldumpPlacementTcl" alt="" coords="504,69,643,111"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title="ParallelCLBPacker::\ldumpFinalPacking" alt="" coords="707,71,845,112"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object. " alt="" coords="504,135,643,176"/>
+<area shape="rect" id="node1" title="get the sites occupied by the legalized PlacementUnit objects" alt="" coords="1003,77,1207,103"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a4e1cc166b4d5fc592286d9c47e5868c6" title=" " alt="" coords="351,5,521,47"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#acdccd594e78ef05cf0b0769cc11bc244" title=" " alt="" coords="756,69,955,111"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#ac5bac1353af81a435309a199c0690bf1" title="Load the information of some packed macros like LUTRAM/Crossing&#45;Clock&#45;Domain FFs/Carry Chains have be..." alt="" coords="771,135,939,176"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,39,303,80"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="569,69,708,111"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="367,71,505,112"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object." alt="" coords="569,135,708,176"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="GlobalPlacer::setMacroLegalizationParameters" name="GlobalPlacer::setMacroLegalizationParameters">
-<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a34e4590c4470c35ec96d33a72edb5dbe" title="Set the macro legalization parameters. " alt="" coords="279,5,497,47"/>
+<area shape="rect" id="node1" title="Set the macro legalization parameters (including legalization counter and pseudo net weight)" alt="" coords="5,5,231,47"/>
+<area shape="rect" id="node2" href="$class_wirelength_optimizer.html#a34e4590c4470c35ec96d33a72edb5dbe" title="Set the macro legalization parameters." alt="" coords="279,5,497,47"/>
 </map>

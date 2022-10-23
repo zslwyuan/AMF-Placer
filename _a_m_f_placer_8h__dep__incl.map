@@ -1,3 +1,4 @@
 <map id="src/app/AMFPlacer/AMFPlacer.h" name="src/app/AMFPlacer/AMFPlacer.h">
-<area shape="rect" id="node2" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow. " alt="" coords="21,80,203,107"/>
+<area shape="rect" id="node1" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5,5,219,32"/>
+<area shape="rect" id="node2" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="21,80,203,107"/>
 </map>

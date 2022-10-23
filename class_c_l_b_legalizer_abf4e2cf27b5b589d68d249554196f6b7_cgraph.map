@@ -1,4 +1,5 @@
 <map id="CLBLegalizer::getHPWLChange" name="CLBLegalizer::getHPWLChange">
-<area shape="rect" id="node2" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title="PlacementInfo::getPlacement\lUnitId2Nets" alt="" coords="260,5,452,47"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title="PlacementInfo::Placement\lUnit::getId" alt="" coords="269,71,443,112"/>
+<area shape="rect" id="node1" title="get the HPWL change when the given PlacementUnit moves to the given location" alt="" coords="5,46,212,73"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title=" " alt="" coords="269,5,443,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title=" " alt="" coords="260,71,452,112"/>
 </map>

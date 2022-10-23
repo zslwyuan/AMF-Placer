@@ -1,4 +1,5 @@
 <map id="ParallelCLBPacker::PackedControlSet" name="ParallelCLBPacker::PackedControlSet">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells " alt="" coords="19,81,169,108"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design. " alt="" coords="5,5,183,32"/>
+<area shape="rect" id="node1" title="PackedControlSet stores the data of a combination of FFs within one control set (clock enable/preset&#45;..." alt="" coords="25,200,163,241"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="19,81,169,108"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="5,5,183,32"/>
 </map>

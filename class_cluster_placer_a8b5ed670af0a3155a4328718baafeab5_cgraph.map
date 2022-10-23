@@ -1,7 +1,8 @@
 <map id="ClusterPlacer::basicPartitioning" name="ClusterPlacer::basicPartitioning">
-<area shape="rect" id="node2" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="270,5,462,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a5e5c210a1716ccad33d8f909992a33de" title="PlacementInfo::getPlacementNets" alt="" coords="256,71,476,98"/>
-<area shape="rect" id="node4" href="$class_graph_partitioner.html#ac18ffed6039ce5aa0b0dfc1ffbc240d8" title="Set the max mincut rate. " alt="" coords="284,123,448,164"/>
-<area shape="rect" id="node5" href="$class_graph_partitioner.html#a26dfd199abf361bf2e9a3117226a2ea1" title="a caller which will start the partitioning procedure " alt="" coords="289,189,443,215"/>
-<area shape="rect" id="node6" href="$class_graph_partitioner.html#a0ebbf29e40f3a81f733cb0bb8158794b" title="Get the clusters after partitioning (each is a set containing ids for nodes inside the clusters) ..." alt="" coords="272,240,460,281"/>
+<area shape="rect" id="node1" title="pure connectivity&#45;based partitioning based on PaToH" alt="" coords="5,130,208,157"/>
+<area shape="rect" id="node2" href="$class_graph_partitioner.html#a0ebbf29e40f3a81f733cb0bb8158794b" title="Get the clusters after partitioning (each is a set containing ids for nodes inside the clusters)" alt="" coords="272,5,460,47"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#a5e5c210a1716ccad33d8f909992a33de" title=" " alt="" coords="256,71,476,98"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title=" " alt="" coords="270,123,462,164"/>
+<area shape="rect" id="node5" href="$class_graph_partitioner.html#ac18ffed6039ce5aa0b0dfc1ffbc240d8" title="Set the max mincut rate." alt="" coords="284,188,448,229"/>
+<area shape="rect" id="node6" href="$class_graph_partitioner.html#a26dfd199abf361bf2e9a3117226a2ea1" title="a caller which will start the partitioning procedure" alt="" coords="289,254,443,281"/>
 </map>

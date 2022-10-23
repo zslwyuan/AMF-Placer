@@ -1,10 +1,11 @@
 <map id="PlacementInfo::PlacementNet" name="PlacementInfo::PlacementNet">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells " alt="" coords="604,48,755,75"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design. " alt="" coords="201,44,379,71"/>
-<area shape="rect" id="node4" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization, packing) " alt="" coords="626,213,733,240"/>
-<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion. " alt="" coords="5,213,89,240"/>
+<area shape="rect" id="node1" title="Placement net, compared to design net, includes information related to placement." alt="" coords="900,136,1095,163"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="604,48,755,75"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="201,44,379,71"/>
+<area shape="rect" id="node4" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="626,213,733,240"/>
+<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,213,89,240"/>
 <area shape="rect" id="node7" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="201,275,379,317"/>
-<area shape="rect" id="node8" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement..." alt="" coords="217,161,363,188"/>
-<area shape="rect" id="node6" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections. " alt="" coords="5,339,89,365"/>
-<area shape="rect" id="node9" href="$class_placement_timing_info_1_1_timing_graph.html" title="PlacementTimingInfo\l::TimingGraph\&lt; DesignInfo\l::DesignCell \&gt;" alt="" coords="592,105,767,161"/>
+<area shape="rect" id="node8" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="217,161,363,188"/>
+<area shape="rect" id="node6" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,339,89,365"/>
+<area shape="rect" id="node9" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="592,105,767,161"/>
 </map>

@@ -1,0 +1,8 @@
+<map id="MacroLegalizer::macroCanBeFitIn" name="MacroLegalizer::macroCanBeFitIn">
+<area shape="rect" id="node1" title="check whether the current macros can be fitted in the column legally." alt="" coords="5,64,180,105"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit" alt="" coords="248,5,423,47"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#aca631ffd6d2c4fda5713fb1044c3ce1f" title=" " alt="" coords="228,71,443,98"/>
+<area shape="rect" id="node5" href="$class_macro_legalizer.html#a0dc1c0f76bc83c7da79fb99503ba8397" title=" " alt="" coords="251,123,419,164"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#aa58fa1b66ae80470c5a6483338aa854f" title=" " alt="" coords="501,71,667,98"/>
+<area shape="rect" id="node6" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title=" " alt="" coords="491,130,677,157"/>
+</map>

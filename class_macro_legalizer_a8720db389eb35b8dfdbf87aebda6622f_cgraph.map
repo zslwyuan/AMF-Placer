@@ -1,0 +1,13 @@
+<map id="MacroLegalizer::quick_sort_WLChange" name="MacroLegalizer::quick_sort_WLChange">
+<area shape="rect" id="node1" title=" " alt="" coords="5,125,152,167"/>
+<area shape="rect" id="node2" href="$class_macro_legalizer.html#a677a015f4f8dc9ed96c516d668ebedb6" title=" " alt="" coords="200,125,395,167"/>
+<area shape="rect" id="node3" href="$class_macro_legalizer.html#ae277d2626728649d30340e40cc436de4" title=" " alt="" coords="443,107,629,134"/>
+<area shape="rect" id="node11" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title=" " alt="" coords="693,158,879,185"/>
+<area shape="rect" id="node4" href="$class_macro_legalizer.html#ae08f0b12c2906e197f5018dc16ec0767" title="get the HPWL change when the given DesignCell moves to the given DeviceSite" alt="" coords="677,107,895,134"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title=" " alt="" coords="943,5,1135,47"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#ab82d9f2ba580006b7ac2d10130934e44" title=" " alt="" coords="943,71,1135,112"/>
+<area shape="rect" id="node9" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="955,137,1123,163"/>
+<area shape="rect" id="node10" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="955,187,1123,214"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1183,5,1335,47"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1383,5,1560,47"/>
+</map>

@@ -1,9 +1,10 @@
 <map id="DesignInfo::updateFFControlSets" name="DesignInfo::updateFFControlSets">
-<area shape="rect" id="node2" href="$class_design_info.html#af0678b75a70953088fc83a563241e8cf" title="extract the ids of CLK, SR, and CE for a given FF " alt="" coords="267,45,468,71"/>
-<area shape="rect" id="node5" href="$class_design_info.html#aece2b3b80c5b69d451d85a4d9dd0b84a" title="DesignInfo::getFFSRType" alt="" coords="282,95,453,122"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_control_set_info.html#ac7c77263d23bf57844c74fb11e437b53" title="add a FF into the set of FFs which are compatible to this control set " alt="" coords="281,147,454,188"/>
-<area shape="rect" id="node7" href="$class_design_info.html#a8ef265973bd84c7357aceccd040ec2dc" title="intend to enhance the nets between FFs in a control set to make later packing easier ..." alt="" coords="269,212,465,253"/>
-<area shape="rect" id="node8" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="330,278,405,305"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title="DesignInfo::DesignCell\l::isFF" alt="" coords="516,5,668,47"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="516,71,668,112"/>
+<area shape="rect" id="node1" title="go through the FF cells to extract control sets for later processing" alt="" coords="5,137,219,163"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_control_set_info.html#ac7c77263d23bf57844c74fb11e437b53" title="add a FF into the set of FFs which are compatible to this control set" alt="" coords="281,5,454,47"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a8ef265973bd84c7357aceccd040ec2dc" title="intend to enhance the nets between FFs in a control set to make later packing easier" alt="" coords="269,71,465,112"/>
+<area shape="rect" id="node4" href="$class_design_info.html#af0678b75a70953088fc83a563241e8cf" title="extract the ids of CLK, SR, and CE for a given FF" alt="" coords="267,137,468,163"/>
+<area shape="rect" id="node7" href="$class_design_info.html#aece2b3b80c5b69d451d85a4d9dd0b84a" title=" " alt="" coords="282,187,453,214"/>
+<area shape="rect" id="node8" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="330,238,405,265"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title=" " alt="" coords="516,97,668,139"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="516,163,668,204"/>
 </map>

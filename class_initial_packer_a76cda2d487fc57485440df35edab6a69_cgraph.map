@@ -1,51 +1,52 @@
 <map id="InitialPacker::pack" name="InitialPacker::pack">
-<area shape="rect" id="node2" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="537,1260,627,1286"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="198,490,406,517"/>
-<area shape="rect" id="node17" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="545,1310,619,1337"/>
-<area shape="rect" id="node18" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="209,968,395,994"/>
-<area shape="rect" id="node19" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="201,836,403,862"/>
-<area shape="rect" id="node20" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="207,1041,397,1068"/>
-<area shape="rect" id="node23" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="224,1484,380,1526"/>
-<area shape="rect" id="node31" href="$class_initial_packer.html#a7b172c529adc0aad6f45f19e919ca213" title="detects LUTRAM macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="193,1092,411,1118"/>
-<area shape="rect" id="node32" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out. " alt="" coords="211,1142,393,1169"/>
-<area shape="rect" id="node33" href="$class_initial_packer.html#aa81da495335eae350a1e31505c899369" title="other non&#45;Macro elements will be instantiated as PlacementInfo::PlacementUnpackedCell ..." alt="" coords="213,887,391,928"/>
-<area shape="rect" id="node34" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title="load the fixed elements (e.g., IOs) from the design file. " alt="" coords="225,1931,379,1972"/>
-<area shape="rect" id="node40" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title="print_error" alt="" coords="262,1412,342,1438"/>
-<area shape="rect" id="node41" href="$class_placement_info.html#a132b4740f20122ca80ef9a1c2f3bfdd8" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change ..." alt="" coords="741,1870,928,1911"/>
-<area shape="rect" id="node42" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e.g., some cells are packed) " alt="" coords="215,2284,389,2310"/>
-<area shape="rect" id="node47" href="$class_placement_info_1_1_compatible_placement_table.html#a3ea2f44470dec480669f06a2041f8d9f" title="set the mapping from cells in design netlist to BEL type ID for later processing. ..." alt="" coords="181,1194,423,1235"/>
-<area shape="rect" id="node48" href="$class_design_info.html#a39c1befcff337b98a699525457d1caaa" title="go through the FF cells to extract control sets for later processing " alt="" coords="195,1361,409,1388"/>
-<area shape="rect" id="node49" href="$class_placement_info.html#a4533a5cb4da7ddecfdd6cfdea93fef92" title="calculate the proportion of the PlacementUnit objects with high interconnection density ..." alt="" coords="214,2335,390,2376"/>
-<area shape="rect" id="node50" href="$class_initial_packer.html#ab4192856f4321d686ca5113f9993c17f" title="InitialPacker::dumpMacro\lHighLight" alt="" coords="218,2400,386,2442"/>
-<area shape="rect" id="node4" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title="DesignInfo::getCells" alt="" coords="513,806,651,833"/>
-<area shape="rect" id="node5" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title="DesignInfo::getNumCells" alt="" coords="976,1041,1141,1068"/>
-<area shape="rect" id="node6" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title="BFS to find the core cells of a macro based on some pre&#45;defined patterns of cascaded cells..." alt="" coords="498,538,666,579"/>
-<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading " alt="" coords="495,1092,669,1134"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro " alt="" coords="495,975,669,1016"/>
-<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title="DesignInfo::DesignCell\l::isLUT" alt="" coords="983,163,1135,204"/>
-<area shape="rect" id="node10" href="$_initial_packer_8cc.html#a0fd0a2e1abc315a9956507a413459e1b" title="canLUTPacked" alt="" coords="778,14,891,41"/>
-<area shape="rect" id="node11" href="$class_placement_info_1_1_placement_macro.html#a0cf2b909e8fe1e783aac1ccea479a828" title="add a virtual cell with a given name into the macro with its offsets in the macro. Usually it is to occupy routing resource in a site. " alt="" coords="747,268,922,310"/>
-<area shape="rect" id="node12" href="$class_design_info_1_1_design_net.html#a7032515063cc47ae72c759e937370522" title="Get the vector reference of the pins driven by the net. " alt="" coords="759,159,910,200"/>
-<area shape="rect" id="node13" href="$class_initial_packer.html#a629e14b2a29ceb691985afb7ec20c113" title="check the control set of the candidate FFs and select the control set with the most FFs to be packed ..." alt="" coords="471,166,693,193"/>
-<area shape="rect" id="node14" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title="InitialPacker::mapCarryRelated\lRouteThru" alt="" coords="483,268,681,310"/>
-<area shape="rect" id="node15" href="$class_placement_info_1_1_placement_macro.html#aed24ca5b8d4c52cb7ff4b684862172eb" title="PlacementInfo::Placement\lMacro::getCells" alt="" coords="747,639,922,680"/>
-<area shape="rect" id="node16" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title="PlacementInfo::Placement\lUnit::setWeight" alt="" coords="495,858,669,899"/>
-<area shape="rect" id="node21" href="$class_initial_packer.html#a7ed4c4abec1e269452902b390f560c1f" title="InitialPacker::setDSPRegs" alt="" coords="495,1158,669,1185"/>
-<area shape="rect" id="node22" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="785,1412,884,1438"/>
-<area shape="rect" id="node24" href="$string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28" title="strContains" alt="" coords="538,1812,626,1838"/>
-<area shape="rect" id="node25" href="$class_device_info.html#aa622ef2c0b44b2b699d08b156faea0d4" title="Get a site based on a given name. " alt="" coords="486,1761,678,1788"/>
-<area shape="rect" id="node26" href="$class_design_info.html#ab4e856ae0a45e61b4d2dee6eb1e72904" title="DesignInfo::getCell" alt="" coords="517,1862,647,1889"/>
-<area shape="rect" id="node27" href="$string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140" title="strSplit" alt="" coords="551,1513,613,1540"/>
-<area shape="rect" id="node28" href="$class_placement_info_1_1_placement_macro.html#a1e000fe47cfe3a0fdc88e2fef72f5999" title="add information of a fixed cell " alt="" coords="495,1564,669,1606"/>
-<area shape="rect" id="node29" href="$class_placement_info_1_1_compatible_placement_table.html#aa9fb977286b526a3f6136e9d3491ce09" title="Get the theoratical occupation of a specific cell type. " alt="" coords="479,1630,685,1671"/>
-<area shape="rect" id="node30" href="$class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title="PlacementInfo::Placement\lUnit::addLUTRAM" alt="" coords="495,1695,669,1736"/>
-<area shape="rect" id="node35" href="$_initial_packer_8cc.html#a401e88bf9c8d2d965c8cd9614fcc172c" title="packerUtil_StrReplaceAll" alt="" coords="499,1964,665,1990"/>
-<area shape="rect" id="node36" href="$class_device_info.html#ac3000677fef93eba2e1e5b91469f38d2" title="DeviceInfo::getSite" alt="" coords="517,2014,647,2041"/>
-<area shape="rect" id="node37" href="$class_device_info_1_1_device_site.html#a16f6632ebc643578d57c77356f003502" title="DeviceInfo::DeviceSite\l::setOccupied" alt="" coords="505,2066,659,2107"/>
-<area shape="rect" id="node38" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="498,2132,666,2158"/>
-<area shape="rect" id="node39" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="498,1913,666,1940"/>
-<area shape="rect" id="node43" href="$class_design_info.html#ab48048f8bf6b05195072fe46b7298436" title="DesignInfo::getNets" alt="" coords="514,2364,650,2390"/>
-<area shape="rect" id="node44" href="$class_placement_info_1_1_placement_net.html#aef282bcca752446834a513c30c7eb1de" title="Get the reference of the vector of PlacementUnits connected to the net The placement units in the vec..." alt="" coords="495,2415,669,2456"/>
-<area shape="rect" id="node45" href="$class_placement_info_1_1_placement_net.html#a1d1a11cd2bf9b20191fafa87894d7ab3" title="PlacementInfo::Placement\lNet::isGlobalClock" alt="" coords="495,2480,669,2522"/>
-<area shape="rect" id="node46" href="$class_placement_timing_info.html#aab232b6d2124de2809f762c785c2b509" title="Get the Simple Placement Timing Graph object. " alt="" coords="489,2284,675,2340"/>
+<area shape="rect" id="node1" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="5,1203,133,1230"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a4533a5cb4da7ddecfdd6cfdea93fef92" title="calculate the proportion of the PlacementUnit objects with high interconnection density" alt="" coords="214,5,390,47"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#ab4192856f4321d686ca5113f9993c17f" title=" " alt="" coords="218,71,386,112"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="201,1127,403,1154"/>
+<area shape="rect" id="node17" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="545,1431,619,1458"/>
+<area shape="rect" id="node18" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="537,1330,627,1357"/>
+<area shape="rect" id="node20" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="198,714,406,741"/>
+<area shape="rect" id="node27" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="207,1010,397,1037"/>
+<area shape="rect" id="node29" href="$class_initial_packer.html#a7b172c529adc0aad6f45f19e919ca213" title="detects LUTRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="193,1229,411,1255"/>
+<area shape="rect" id="node30" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="209,1482,395,1509"/>
+<area shape="rect" id="node32" href="$class_initial_packer.html#aa81da495335eae350a1e31505c899369" title="other non&#45;Macro elements will be instantiated as PlacementInfo::PlacementUnpackedCell" alt="" coords="213,1061,391,1103"/>
+<area shape="rect" id="node33" href="$class_initial_packer.html#a49e895448d4b018a5469bb535dafd23c" title="load the fixed elements (e.g., IOs) from the design file." alt="" coords="225,2283,379,2324"/>
+<area shape="rect" id="node41" href="$class_initial_packer.html#abf983cc7b89456f2a376523a23f6c4b8" title="load the special macros from the design file. vendors might allow users to specify some primitive mac..." alt="" coords="224,1845,380,1887"/>
+<area shape="rect" id="node45" href="$class_initial_packer.html#a15ef325cb341bebae0e22a2f57cb4d82" title="directly pack some LUTs/FFs if the LUT has only one fan&#45;out." alt="" coords="211,1178,393,1205"/>
+<area shape="rect" id="node46" href="$str_print_8cc.html#ab465856540324aee918439ebab333b31" title=" " alt="" coords="262,2349,342,2375"/>
+<area shape="rect" id="node47" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="215,1330,389,1357"/>
+<area shape="rect" id="node48" href="$class_placement_info_1_1_compatible_placement_table.html#a3ea2f44470dec480669f06a2041f8d9f" title="set the mapping from cells in design netlist to BEL type ID for later processing." alt="" coords="181,907,423,948"/>
+<area shape="rect" id="node49" href="$class_placement_info.html#a132b4740f20122ca80ef9a1c2f3bfdd8" title="update the mapping from Cells to PlacementUnits, since sometime, PlacementUnits might change" alt="" coords="741,207,928,248"/>
+<area shape="rect" id="node50" href="$class_design_info.html#a39c1befcff337b98a699525457d1caaa" title="go through the FF cells to extract control sets for later processing" alt="" coords="195,1381,409,1407"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#aa61a01d20162ebdc00412cd3e791cefd" title=" " alt="" coords="486,71,678,112"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_macro.html#a732207320ef8a4018aa325bb105fbbc7" title="add a real cell into the macro with its offsets in the macro" alt="" coords="495,1264,669,1305"/>
+<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_macro.html#af717da0349f534cdd68325d2af940c74" title="for site&#45;level cell spreading" alt="" coords="495,1147,669,1188"/>
+<area shape="rect" id="node11" href="$class_placement_info_1_1_placement_macro.html#a0cf2b909e8fe1e783aac1ccea479a828" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="747,833,922,875"/>
+<area shape="rect" id="node12" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="981,841,1146,867"/>
+<area shape="rect" id="node13" href="$class_initial_packer.html#a90ff52b428ac03bd4834d2f0aaddc849" title="BFS to find the core cells of a macro based on some pre&#45;defined patterns of cascaded cells." alt="" coords="498,761,666,803"/>
+<area shape="rect" id="node15" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title=" " alt="" coords="513,878,651,905"/>
+<area shape="rect" id="node16" href="$class_placement_info_1_1_placement_macro.html#aed24ca5b8d4c52cb7ff4b684862172eb" title=" " alt="" coords="747,964,922,1005"/>
+<area shape="rect" id="node19" href="$class_placement_info_1_1_placement_unit.html#a26d7900b05f5a586aab93f739885823a" title=" " alt="" coords="495,1081,669,1123"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_unit.html#a6f5141866e840acbe0b037b10f98409f" title=" " alt="" coords="976,1840,1151,1881"/>
+<area shape="rect" id="node8" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="987,520,1139,561"/>
+<area shape="rect" id="node9" href="$class_design_info_1_1_design_cell.html#ac2af0a5d238fbead4ece2812226d06e4" title=" " alt="" coords="987,1775,1139,1816"/>
+<area shape="rect" id="node14" href="$class_design_info_1_1_design_cell.html#a325b9b1819e87539bea2e1776ce31ff5" title=" " alt="" coords="759,1115,911,1156"/>
+<area shape="rect" id="node21" href="$_initial_packer_8cc.html#a0fd0a2e1abc315a9956507a413459e1b" title=" " alt="" coords="525,339,639,366"/>
+<area shape="rect" id="node23" href="$class_initial_packer.html#a468e9bb1cecc4bcf35c57212bb4c52f7" title="check the control set of the candidate FFs and select the control set with the most FFs to be packed ..." alt="" coords="471,289,693,315"/>
+<area shape="rect" id="node24" href="$class_design_info_1_1_design_net.html#a7032515063cc47ae72c759e937370522" title="Get the vector reference of the pins driven by the net." alt="" coords="759,324,910,365"/>
+<area shape="rect" id="node25" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="483,593,681,635"/>
+<area shape="rect" id="node22" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title=" " alt="" coords="759,655,911,696"/>
+<area shape="rect" id="node26" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title=" " alt="" coords="746,899,923,940"/>
+<area shape="rect" id="node28" href="$class_initial_packer.html#a9d65cc9afe91dedf071b5b5f03116c29" title=" " alt="" coords="495,827,669,854"/>
+<area shape="rect" id="node31" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="493,1787,671,1828"/>
+<area shape="rect" id="node34" href="$class_design_info.html#ab4e856ae0a45e61b4d2dee6eb1e72904" title=" " alt="" coords="517,2239,647,2266"/>
+<area shape="rect" id="node35" href="$class_device_info.html#ac3000677fef93eba2e1e5b91469f38d2" title=" " alt="" coords="517,2341,647,2367"/>
+<area shape="rect" id="node36" href="$_initial_packer_8cc.html#a401e88bf9c8d2d965c8cd9614fcc172c" title=" " alt="" coords="499,2391,665,2418"/>
+<area shape="rect" id="node37" href="$class_device_info_1_1_device_site.html#a16f6632ebc643578d57c77356f003502" title=" " alt="" coords="505,2443,659,2484"/>
+<area shape="rect" id="node38" href="$string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28" title=" " alt="" coords="538,2189,626,2215"/>
+<area shape="rect" id="node39" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="498,2509,666,2535"/>
+<area shape="rect" id="node40" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="498,2290,666,2317"/>
+<area shape="rect" id="node42" href="$class_placement_info_1_1_placement_macro.html#a1e000fe47cfe3a0fdc88e2fef72f5999" title="add information of a fixed cell" alt="" coords="495,2123,669,2164"/>
+<area shape="rect" id="node43" href="$class_placement_info_1_1_compatible_placement_table.html#aa9fb977286b526a3f6136e9d3491ce09" title="Get the theoratical occupation of a specific cell type." alt="" coords="479,1955,685,1996"/>
+<area shape="rect" id="node44" href="$class_device_info.html#aa622ef2c0b44b2b699d08b156faea0d4" title="Get a site based on a given name." alt="" coords="486,2021,678,2047"/>
 </map>

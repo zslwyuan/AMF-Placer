@@ -1,5 +1,0 @@
-<map id="DeviceInfo::addBELTypes" name="DeviceInfo::addBELTypes">
-<area shape="rect" id="node2" href="$class_device_info.html#a1ba371f4045fb8798b642efe18d09000" title="add a BEL element into the device information " alt="" coords="224,46,360,73"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#abacb95ea3246cf9e7f93ae7ea2c19aed" title="DeviceInfo::DeviceSite\l::getChildrenSites" alt="" coords="408,5,561,47"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a065609123fa4f5a650b954ef026b0e84" title="DeviceInfo::DeviceSite\l::addChildBEL" alt="" coords="408,71,561,112"/>
-</map>

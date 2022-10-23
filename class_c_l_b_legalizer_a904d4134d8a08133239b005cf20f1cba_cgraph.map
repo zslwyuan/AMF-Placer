@@ -1,3 +1,4 @@
 <map id="CLBLegalizer::findSiteType2AvailableSites" name="CLBLegalizer::findSiteType2AvailableSites">
-<area shape="rect" id="node2" href="$class_device_info.html#a72f3177aa3371bab061e9dc502e7b91e" title="Get sites of a specfic type. " alt="" coords="237,13,415,39"/>
+<area shape="rect" id="node1" title="find available sites for each specific type required by the constructor" alt="" coords="5,5,189,47"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a72f3177aa3371bab061e9dc502e7b91e" title="Get sites of a specfic type." alt="" coords="237,13,415,39"/>
 </map>

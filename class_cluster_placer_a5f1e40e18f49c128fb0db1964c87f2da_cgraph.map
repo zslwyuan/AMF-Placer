@@ -1,8 +1,9 @@
 <map id="ClusterPlacer::createSinglePUClusterUnits" name="ClusterPlacer::createSinglePUClusterUnits">
-<area shape="rect" id="node2" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="232,5,424,47"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_cluster_unit.html#ac4a603aace654e7493d62d5ab09f779c" title="PlacementInfo::ClusterUnit\l::addPlacementUnit" alt="" coords="239,71,417,112"/>
-<area shape="rect" id="node7" href="$class_placement_info_1_1_cluster_unit.html#a934edb9fd6882cbeac35b7a7566c49b1" title="PlacementInfo::ClusterUnit\l::getId" alt="" coords="239,136,417,177"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a7cb53b16de6067cceeb2631593a73691" title="PlacementInfo::Placement\lUnit::getWeight" alt="" coords="472,5,647,47"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a22069e5518d1dc8727013bc492cce31d" title="PlacementInfo::Placement\lUnit::getBRAMNum" alt="" coords="472,71,647,112"/>
-<area shape="rect" id="node6" href="$class_placement_info_1_1_placement_unit.html#af351a06e4c2bdbe98b05f2d5dfd13241" title="PlacementInfo::Placement\lUnit::getDSPNum" alt="" coords="472,136,647,177"/>
+<area shape="rect" id="node1" title="wrap single PlacementUnits into ClusterUnit for later uniform processing" alt="" coords="5,136,184,177"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_cluster_unit.html#ac4a603aace654e7493d62d5ab09f779c" title=" " alt="" coords="239,71,417,112"/>
+<area shape="rect" id="node6" href="$class_placement_info_1_1_cluster_unit.html#a934edb9fd6882cbeac35b7a7566c49b1" title=" " alt="" coords="239,136,417,177"/>
+<area shape="rect" id="node7" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title=" " alt="" coords="232,201,424,243"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a22069e5518d1dc8727013bc492cce31d" title=" " alt="" coords="472,5,647,47"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#af351a06e4c2bdbe98b05f2d5dfd13241" title=" " alt="" coords="472,71,647,112"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a7cb53b16de6067cceeb2631593a73691" title=" " alt="" coords="472,136,647,177"/>
 </map>

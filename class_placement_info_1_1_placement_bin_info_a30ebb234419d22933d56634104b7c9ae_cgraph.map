@@ -1,0 +1,4 @@
+<map id="PlacementInfo::PlacementBinInfo::getRealUtilizationRate" name="PlacementInfo::PlacementBinInfo::getRealUtilizationRate">
+<area shape="rect" id="node1" title="Get the theoratical utilization rate (use LUT theoratical resource utilization without any adjustment..." alt="" coords="5,5,203,47"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_bin_info.html#af85711584066024bc0549535095239f9" title="Get the Utilization Rate: utilization / (capacity * binShrinkRatio)" alt="" coords="251,5,425,47"/>
+</map>

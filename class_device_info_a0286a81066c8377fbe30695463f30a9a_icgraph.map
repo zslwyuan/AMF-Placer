@@ -1,10 +1,6 @@
 <map id="DeviceInfo::getClockColumns" name="DeviceInfo::getClockColumns">
-<area shape="rect" id="node2" href="$class_device_info.html#a290fb69f0c75809deaadc8186640e689" title="map recognized clock regions into an array for later clock utilization evaluation ..." alt="" coords="245,27,433,69"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object. " alt="" coords="270,93,409,134"/>
-<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object. " alt="" coords="484,5,636,32"/>
-<area shape="rect" id="node4" href="$class_device_info.html#af2a89acda8ffdd35889bf07c0b0e7806" title="remove the mapped flags for all sites without fixed elements " alt="" coords="481,57,639,98"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="687,64,873,91"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="921,57,1123,98"/>
-<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1207,39,1317,65"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1171,89,1353,116"/>
+<area shape="rect" id="node1" title=" " alt="" coords="441,46,633,73"/>
+<area shape="rect" id="node2" href="$class_device_info.html#a290fb69f0c75809deaadc8186640e689" title="map recognized clock regions into an array for later clock utilization evaluation" alt="" coords="205,5,393,47"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#abc715f5f6cbef9c595a8daa504d3f519" title="Construct a new Parallel CLB Packer object." alt="" coords="230,71,369,112"/>
+<area shape="rect" id="node3" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,13,157,39"/>
 </map>

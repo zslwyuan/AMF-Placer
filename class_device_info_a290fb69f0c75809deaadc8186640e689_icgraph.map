@@ -1,8 +1,4 @@
 <map id="DeviceInfo::mapClockRegionToArray" name="DeviceInfo::mapClockRegionToArray">
-<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object. " alt="" coords="244,5,396,32"/>
-<area shape="rect" id="node3" href="$class_device_info.html#af2a89acda8ffdd35889bf07c0b0e7806" title="remove the mapped flags for all sites without fixed elements " alt="" coords="241,57,399,98"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions " alt="" coords="447,64,633,91"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="681,57,883,98"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="967,39,1077,65"/>
-<area shape="rect" id="node7" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="931,89,1113,116"/>
+<area shape="rect" id="node1" title="map recognized clock regions into an array for later clock utilization evaluation" alt="" coords="205,5,393,47"/>
+<area shape="rect" id="node2" href="$class_device_info.html#ac027cbd5faf1db2cd3a41b7611874e98" title="Construct a new Device Info object." alt="" coords="5,13,157,39"/>
 </map>

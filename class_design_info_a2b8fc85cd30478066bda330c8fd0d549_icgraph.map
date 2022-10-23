@@ -1,5 +1,4 @@
 <map id="DesignInfo::getType2Cells" name="DesignInfo::getType2Cells">
-<area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object. " alt="" coords="225,5,507,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a3211c615bca9aaf80ce628804f6fed9a" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="555,5,756,47"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a06ced3b91dc7b370cbbd61fc5a4cf80e" title="Construct a new Placement Info object based on the information of design and device. " alt="" coords="804,13,1000,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="335,13,507,39"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_compatible_placement_table.html#aec7715cf8c84037d0cf1a82949f9241f" title="Construct a new Compatible Placement Table object." alt="" coords="5,5,287,47"/>
 </map>

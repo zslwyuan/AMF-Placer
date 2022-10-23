@@ -1,6 +1,5 @@
 <map id="DesignInfo::isDesignClock" name="DesignInfo::isDesignClock">
-<area shape="rect" id="node2" href="$class_design_info.html#a5ba9049f57138cb8ee8f9f43ac459d8d" title="load the global clock signals from a design information file " alt="" coords="227,31,381,57"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information. " alt="" coords="449,5,601,32"/>
-<area shape="rect" id="node5" href="$class_design_info.html#a2a7ed51b0b14ad873ef024324776a7ea" title="extract the pointers of CLK, SR, and CE for a given FF " alt="" coords="429,56,620,83"/>
-<area shape="rect" id="node4" href="$class_design_info.html#a5b156b53dff428fa7432691d0be8193d" title="check whether the cell is related to logic computation " alt="" coords="668,5,844,32"/>
+<area shape="rect" id="node1" title="check if a net is a global clock indicated by input design files" alt="" coords="408,5,581,32"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a5ba9049f57138cb8ee8f9f43ac459d8d" title="load the global clock signals from a design information file" alt="" coords="205,5,360,32"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="5,5,157,32"/>
 </map>

@@ -1,6 +1,7 @@
 <map id="PlacementInfo::enforceLegalizeXYInArea" name="PlacementInfo::enforceLegalizeXYInArea">
-<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title="PlacementInfo::Placement\lUnit::X" alt="" coords="279,5,454,47"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title="PlacementInfo::Placement\lUnit::Y" alt="" coords="279,71,454,112"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title="PlacementInfo::Placement\lUnit::getType" alt="" coords="279,136,454,177"/>
-<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title="PlacementInfo::Placement\lUnit::setAnchorLocationAndForget\lTheOriginalOne" alt="" coords="256,202,477,258"/>
+<area shape="rect" id="node1" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="5,113,208,155"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="279,5,454,47"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#abb1389394eb8eee466241d0b2017284f" title=" " alt="" coords="256,70,477,126"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#a0180b3bd2ea0883a61a980ec62892037" title=" " alt="" coords="279,149,454,191"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#ade77b0d39fb980a04b918fdc502ca619" title=" " alt="" coords="279,215,454,256"/>
 </map>

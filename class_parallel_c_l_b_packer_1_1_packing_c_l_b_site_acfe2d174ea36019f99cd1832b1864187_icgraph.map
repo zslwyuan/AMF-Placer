@@ -1,5 +1,4 @@
 <map id="ParallelCLBPacker::PackingCLBSite::compatibleInOneHalfCLB" name="ParallelCLBPacker::PackingCLBSite::compatibleInOneHalfCLB">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aedecc00dc431d63a6d2b3436fb79b19e" title="find the slots in the site for Muxes " alt="" coords="252,5,439,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a14a1863e6ec97bf437eda5e084ed7be0" title="greedily find the exact slots for the LUTs/FFs in the site " alt="" coords="246,85,445,141"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a360963d00263ba0c05ae93c7b27b693d" title="find the slots in the site for Muxes " alt="" coords="240,165,451,221"/>
+<area shape="rect" id="node1" title="check whether two half CLB can be packed togather" alt="" coords="292,5,479,61"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a65aa7667d3fdf2e24d592df682d8d151" title="try to add a given list of FFs into this cluster" alt="" coords="5,5,244,61"/>
 </map>

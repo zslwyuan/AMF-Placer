@@ -1,4 +1,5 @@
 <map id="PlacementInfo::verifyDeviceForDesign" name="PlacementInfo::verifyDeviceForDesign">
-<area shape="rect" id="node2" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title="DesignInfo::getCells" alt="" coords="236,5,373,32"/>
-<area shape="rect" id="node3" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="259,56,350,83"/>
+<area shape="rect" id="node1" title="verify that each cells in the design can be mapped on the resource elements on the device." alt="" coords="5,23,188,65"/>
+<area shape="rect" id="node2" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title=" " alt="" coords="236,5,373,32"/>
+<area shape="rect" id="node3" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="259,56,350,83"/>
 </map>

@@ -1,3 +1,4 @@
 <map id="ClusterPlacer::resetClusterInfo" name="ClusterPlacer::resetClusterInfo">
-<area shape="rect" id="node2" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="252,5,444,47"/>
+<area shape="rect" id="node1" title="clean all information of the clusters (including PlacementUnit&#45;Cluster mapping and the cluster&#45;level ..." alt="" coords="5,13,204,39"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title=" " alt="" coords="252,5,444,47"/>
 </map>

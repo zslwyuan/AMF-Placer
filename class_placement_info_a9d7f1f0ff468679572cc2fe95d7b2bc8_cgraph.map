@@ -1,4 +1,5 @@
 <map id="PlacementInfo::printOutClockColumnLegalization" name="PlacementInfo::printOutClockColumnLegalization">
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#aea4211bb193e136a3c094fa9e1ceedf0" title="DeviceInfo::DeviceSite\l::getClockHalfColumn" alt="" coords="255,5,408,47"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#afc877ab7818c7725e4cbde72e2f8efc9" title="PlacementInfo::Placement\lUnit::getClockNets" alt="" coords="244,71,419,112"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,39,196,80"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#aea4211bb193e136a3c094fa9e1ceedf0" title=" " alt="" coords="255,5,408,47"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#afc877ab7818c7725e4cbde72e2f8efc9" title=" " alt="" coords="244,71,419,112"/>
 </map>

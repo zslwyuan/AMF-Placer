@@ -1,9 +1,10 @@
 <map id="InitialPacker::loadFixedPlacementUnits" name="InitialPacker::loadFixedPlacementUnits">
-<area shape="rect" id="node2" href="$string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28" title="strContains" alt="" coords="248,5,336,32"/>
-<area shape="rect" id="node3" href="$class_design_info.html#ab4e856ae0a45e61b4d2dee6eb1e72904" title="DesignInfo::getCell" alt="" coords="227,56,357,83"/>
-<area shape="rect" id="node4" href="$_initial_packer_8cc.html#a401e88bf9c8d2d965c8cd9614fcc172c" title="packerUtil_StrReplaceAll" alt="" coords="209,107,375,133"/>
-<area shape="rect" id="node5" href="$class_device_info.html#ac3000677fef93eba2e1e5b91469f38d2" title="DeviceInfo::getSite" alt="" coords="227,157,357,184"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a16f6632ebc643578d57c77356f003502" title="DeviceInfo::DeviceSite\l::setOccupied" alt="" coords="215,209,369,250"/>
-<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="208,275,376,301"/>
-<area shape="rect" id="node8" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="208,325,376,352"/>
+<area shape="rect" id="node1" title="load the fixed elements (e.g., IOs) from the design file." alt="" coords="5,158,160,199"/>
+<area shape="rect" id="node2" href="$class_design_info.html#ab4e856ae0a45e61b4d2dee6eb1e72904" title=" " alt="" coords="227,5,357,32"/>
+<area shape="rect" id="node3" href="$class_device_info.html#ac3000677fef93eba2e1e5b91469f38d2" title=" " alt="" coords="227,56,357,83"/>
+<area shape="rect" id="node4" href="$_initial_packer_8cc.html#a401e88bf9c8d2d965c8cd9614fcc172c" title=" " alt="" coords="209,107,375,133"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#a16f6632ebc643578d57c77356f003502" title=" " alt="" coords="215,158,369,199"/>
+<area shape="rect" id="node6" href="$string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28" title=" " alt="" coords="248,224,336,251"/>
+<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="208,275,376,301"/>
+<area shape="rect" id="node8" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="208,325,376,352"/>
 </map>

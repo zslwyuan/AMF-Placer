@@ -1,5 +1,5 @@
 <map id="PlacementInfo::calculateNetNumDistributionOfPUs" name="PlacementInfo::calculateNetNumDistributionOfPUs">
-<area shape="rect" id="node2" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro " alt="" coords="229,31,357,57"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="405,5,577,32"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="436,56,547,83"/>
+<area shape="rect" id="node1" title="calculate the proportion of the PlacementUnit objects with high interconnection density" alt="" coords="340,5,516,47"/>
+<area shape="rect" id="node2" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,13,292,39"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
 </map>

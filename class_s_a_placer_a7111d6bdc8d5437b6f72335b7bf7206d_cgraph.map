@@ -1,4 +1,0 @@
-<map id="SAPlacer::getGrid2clusters" name="SAPlacer::getGrid2clusters">
-<area shape="rect" id="node2" href="$class_s_a_placer.html#ae52f15e5aa75df3a4251d6769dc153a7" title="SAPlacer::evaluateCluster\lPlacement" alt="" coords="245,5,419,47"/>
-<area shape="rect" id="node3" href="$class_s_a_placer.html#a9de8fa3c4120b47099c310f5d5f10abc" title="SAPlacer::incrementalEvaluate\lClusterPlacement" alt="" coords="232,71,432,112"/>
-</map>

@@ -1,4 +1,4 @@
 <map id="PlacementInfo::createGridBins" name="PlacementInfo::createGridBins">
-<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="288,5,399,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#ab3e0f7abb94737992d90bc284d1a7116" title="PlacementInfo::setBELType\lForCells" alt="" coords="252,57,435,98"/>
+<area shape="rect" id="node1" title="Create a grid of bins on the device." alt="" coords="164,5,363,32"/>
+<area shape="rect" id="node2" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,32"/>
 </map>

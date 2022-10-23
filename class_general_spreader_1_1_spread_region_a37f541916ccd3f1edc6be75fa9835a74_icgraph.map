@@ -1,10 +1,8 @@
 <map id="GeneralSpreader::SpreadRegion::left" name="GeneralSpreader::SpreadRegion::left">
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a0179a5805b8dafadb4ea6b759b924027" title="check whether overlapped with another SpreadRegion " alt="" coords="270,5,477,47"/>
-<area shape="rect" id="node3" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio " alt="" coords="260,71,487,112"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements " alt="" coords="544,49,703,75"/>
-<area shape="rect" id="node9" href="$class_general_spreader.html#ab0a62c9005bdbae8770045ce40b1cad0" title="GeneralSpreader::~General\lSpreader" alt="" coords="535,100,712,141"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="760,75,961,116"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion. " alt="" coords="775,9,947,51"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1045,25,1156,51"/>
-<area shape="rect" id="node7" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="1009,82,1192,109"/>
+<area shape="rect" id="node1" title="get the left bin coordinate X of the SpreadRegion in bin grid" alt="" coords="895,39,1101,80"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region.html#a0179a5805b8dafadb4ea6b759b924027" title="check whether overlapped with another SpreadRegion" alt="" coords="630,5,837,47"/>
+<area shape="rect" id="node3" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="620,71,847,112"/>
+<area shape="rect" id="node4" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="413,78,572,105"/>
+<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,71,365,112"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
 </map>

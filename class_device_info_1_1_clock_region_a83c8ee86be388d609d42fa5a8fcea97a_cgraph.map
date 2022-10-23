@@ -1,7 +1,7 @@
 <map id="DeviceInfo::ClockRegion::mapSiteToClockColumns" name="DeviceInfo::ClockRegion::mapSiteToClockColumns">
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#a3799582dc4d0d5ab4763cae0fdabff64" title="DeviceInfo::DeviceSite\l::getSiteY" alt="" coords="228,5,381,47"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a61b7cf8ead9b7ec51ac8adef8d6bd647" title="DeviceInfo::DeviceSite\l::getSiteX" alt="" coords="228,71,381,112"/>
-<area shape="rect" id="node4" href="$class_device_info.html#ae0c7690f61a816e15c5fecb00a5b3fb8" title="DeviceInfo::getTile" alt="" coords="240,137,369,163"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_tile.html#a0fa04108a58fa65f185ebcab9721a25e" title="DeviceInfo::DeviceTile\l::getTileIdX" alt="" coords="229,188,380,229"/>
-<area shape="rect" id="node6" href="$class_device_info.html#a8427dc1cb4261c1c1971675632ca728b" title="DeviceInfo::getSites" alt="" coords="235,254,374,281"/>
+<area shape="rect" id="node1" title="for the clock column constraints, we need to map site to columns." alt="" coords="5,100,180,141"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_clock_region.html#a9962a5906837db3837dd9871a72112e0" title="Get the Left boundary of the clock region." alt="" coords="228,5,391,47"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_clock_region.html#a159da42d1d44716c450c900bbdfbd703" title="Get the Right boundary of the clock region." alt="" coords="228,71,391,112"/>
+<area shape="rect" id="node4" href="$class_device_info.html#a8427dc1cb4261c1c1971675632ca728b" title=" " alt="" coords="240,137,379,163"/>
+<area shape="rect" id="node5" href="$class_device_info.html#ae0c7690f61a816e15c5fecb00a5b3fb8" title=" " alt="" coords="245,187,374,214"/>
 </map>

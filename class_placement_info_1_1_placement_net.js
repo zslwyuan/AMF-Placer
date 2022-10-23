@@ -1,8 +1,8 @@
 var class_placement_info_1_1_placement_net =
 [
     [ "_pinOffset", "struct_placement_info_1_1_placement_net_1_1__pin_offset.html", "struct_placement_info_1_1_placement_net_1_1__pin_offset" ],
-    [ "pinOffset", "class_placement_info_1_1_placement_net.html#aa8719d6d75bf473a2c2da404b88b6d66", null ],
-    [ "PlacementNet", "class_placement_info_1_1_placement_net.html#a9760e7234b632ed1887a51c89bbcd18d", null ],
+    [ "pinOffset", "class_placement_info_1_1_placement_net.html#ab7235c19652991bf4b448829291c5a74", null ],
+    [ "PlacementNet", "class_placement_info_1_1_placement_net.html#aeed7b5b6d86cd6b1a54a5abb495c1fbc", null ],
     [ "~PlacementNet", "class_placement_info_1_1_placement_net.html#a62680c28b41bb94bd446fef4c55eedca", null ],
     [ "addB2BNet", "class_placement_info_1_1_placement_net.html#a36191d1493f38ed6916065a63a9451bb", null ],
     [ "addPseudoNet_enhancePin2Pin", "class_placement_info_1_1_placement_net.html#a28db9d72046f1ca833d8ac4c207058c7", null ],

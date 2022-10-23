@@ -1,4 +1,0 @@
-<map id="PlacementInfo::PlacementMacro::getCell" name="PlacementInfo::PlacementMacro::getCell">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a92bbec6e8c1899d04dab2a6ba9251651" title="ParallelCLBPacker::\lPackingCLBSite::mapCarryRelated\lCellsToSlots" alt="" coords="228,5,451,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aedecc00dc431d63a6d2b3436fb79b19e" title="find the slots in the site for Muxes " alt="" coords="499,5,685,61"/>
-</map>

@@ -1,12 +1,13 @@
 <map id="ParallelCLBPacker::findNeiborSitesFromBinGrid" name="ParallelCLBPacker::findNeiborSitesFromBinGrid">
-<area shape="rect" id="node2" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y. " alt="" coords="257,5,429,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title="PlacementInfo::getPotential\lBELTypeIDs" alt="" coords="253,57,434,98"/>
-<area shape="rect" id="node7" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title="PlacementInfo::getDeviceInfo" alt="" coords="247,123,439,149"/>
-<area shape="rect" id="node8" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y) " alt="" coords="253,174,434,215"/>
-<area shape="rect" id="node9" href="$class_placement_info.html#ad6136221e6643107289fcb9554db14f0" title="Get the Bin Grid object. " alt="" coords="257,240,430,267"/>
-<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_bin_info.html#a33cbef70955f92b34e9fcf4b1cd435e9" title="Get the shortest Manhattan distance from the bin to a specific location. " alt="" coords="236,291,451,333"/>
-<area shape="rect" id="node11" href="$class_placement_info_1_1_placement_bin_info.html#a8ec550c12797638144ff9217d77d662d" title="Get the reference of the set of sites in the bin. " alt="" coords="243,357,443,398"/>
-<area shape="rect" id="node4" href="$class_placement_info_1_1_compatible_placement_table.html#a27fec259866cbc493f67722529ce081c" title="Get the Potential BEL Type IDs for a specific cell object. " alt="" coords="499,57,763,98"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="811,57,963,98"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="1011,57,1188,98"/>
+<area shape="rect" id="node1" title="find the neighbors of specific cell type with given coordinate center" alt="" coords="5,181,188,222"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#ad6136221e6643107289fcb9554db14f0" title="Get the Bin Grid object." alt="" coords="257,5,430,32"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="253,57,434,98"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_bin_info.html#a8ec550c12797638144ff9217d77d662d" title="Get the reference of the set of sites in the bin." alt="" coords="243,122,443,163"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title=" " alt="" coords="247,188,439,215"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="257,239,429,265"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_placement_bin_info.html#a33cbef70955f92b34e9fcf4b1cd435e9" title="Get the shortest Manhattan distance from the bin to a specific location." alt="" coords="236,290,451,331"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="253,355,434,397"/>
+<area shape="rect" id="node9" href="$class_placement_info_1_1_compatible_placement_table.html#a27fec259866cbc493f67722529ce081c" title="Get the Potential BEL Type IDs for a specific cell object." alt="" coords="499,355,763,397"/>
+<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="811,355,963,397"/>
+<area shape="rect" id="node11" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1011,355,1188,397"/>
 </map>

@@ -1,5 +1,6 @@
 <map id="PlacementTimingOptimizer::PlacementTimingOptimizer" name="PlacementTimingOptimizer::PlacementTimingOptimizer">
-<area shape="rect" id="node2" href="$class_placement_info.html#a73d295c1409d92a270d13f0bdf0cba8e" title="PlacementInfo::getDesignInfo" alt="" coords="237,5,429,32"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title="PlacementInfo::getDeviceInfo" alt="" coords="237,56,429,83"/>
-<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#a07f1239ff5bb2a0c43ea3185a49acc2e" title="PlacementTimingOptimizer\l::initPois" alt="" coords="244,107,423,149"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,49,189,90"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a73d295c1409d92a270d13f0bdf0cba8e" title=" " alt="" coords="237,5,429,32"/>
+<area shape="rect" id="node3" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title=" " alt="" coords="237,56,429,83"/>
+<area shape="rect" id="node4" href="$class_placement_timing_optimizer.html#a07f1239ff5bb2a0c43ea3185a49acc2e" title=" " alt="" coords="244,107,423,149"/>
 </map>

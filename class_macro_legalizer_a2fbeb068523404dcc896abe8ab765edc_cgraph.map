@@ -1,7 +1,8 @@
 <map id="MacroLegalizer::getMacrosToLegalize" name="MacroLegalizer::getMacrosToLegalize">
-<area shape="rect" id="node2" href="$class_placement_info.html#a6ee107065b54548bc25dc7d477563e86" title="PlacementInfo::getCells" alt="" coords="247,5,406,32"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title="PlacementInfo::getPlacement\lUnitByCell" alt="" coords="231,57,423,98"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title="DesignInfo::getCells" alt="" coords="478,5,615,32"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="471,57,623,98"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="671,57,848,98"/>
+<area shape="rect" id="node1" title="get the PlacementMacro(s) which SHOULD be legalized" alt="" coords="5,27,183,69"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a6ee107065b54548bc25dc7d477563e86" title=" " alt="" coords="247,5,406,32"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title=" " alt="" coords="231,57,423,98"/>
+<area shape="rect" id="node3" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title=" " alt="" coords="478,5,615,32"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="471,57,623,98"/>
+<area shape="rect" id="node6" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="671,57,848,98"/>
 </map>

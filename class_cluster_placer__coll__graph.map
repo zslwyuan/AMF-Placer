@@ -1,11 +1,12 @@
 <map id="ClusterPlacer" name="ClusterPlacer">
-<area shape="rect" id="node2" href="$class_graph_partitioner.html" title="GraphPartitioner\&lt; std\l::vector\&lt; PlacementInfo\l::ClusterUnit *\&gt;, std::\lvector\&lt; PlacementInfo::ClusterNet *\&gt; \&gt;" alt="" coords="592,5,840,76"/>
-<area shape="rect" id="node3" href="$class_graph_partitioner.html" title="GraphPartitioner\&lt; std\l::vector\&lt; PlacementInfo\l::PlacementUnit *\&gt;, std\l::vector\&lt; PlacementInfo\l::PlacementNet *\&gt; \&gt;" alt="" coords="637,101,795,186"/>
-<area shape="rect" id="node4" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization, packing) " alt="" coords="663,210,769,237"/>
-<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion. " alt="" coords="5,230,89,257"/>
-<area shape="rect" id="node7" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="201,163,379,204"/>
-<area shape="rect" id="node8" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement..." alt="" coords="217,291,363,318"/>
-<area shape="rect" id="node6" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections. " alt="" coords="5,95,89,122"/>
-<area shape="rect" id="node9" href="$class_placement_timing_info_1_1_timing_graph.html" title="PlacementTimingInfo\l::TimingGraph\&lt; DesignInfo\l::DesignCell \&gt;" alt="" coords="629,315,803,371"/>
-<area shape="rect" id="node10" href="$class_s_a_placer.html" title="SAPlacer" alt="" coords="677,261,755,287"/>
+<area shape="rect" id="node1" title="ClusterPlacer will cluster nodes in the given netlist and place the clusters on the device based on s..." alt="" coords="996,167,1096,193"/>
+<area shape="rect" id="node2" href="$class_graph_partitioner.html" title=" " alt="" coords="597,5,762,91"/>
+<area shape="rect" id="node3" href="$class_graph_partitioner.html" title=" " alt="" coords="600,115,759,200"/>
+<area shape="rect" id="node4" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="626,224,733,251"/>
+<area shape="rect" id="node5" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="5,244,89,271"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="201,177,379,218"/>
+<area shape="rect" id="node8" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="217,305,363,332"/>
+<area shape="rect" id="node6" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="5,109,89,136"/>
+<area shape="rect" id="node9" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="592,329,767,385"/>
+<area shape="rect" id="node10" href="$class_s_a_placer.html" title=" " alt="" coords="641,275,718,301"/>
 </map>

@@ -1,6 +1,0 @@
-<map id="InitialPacker::setDSPRegs" name="InitialPacker::setDSPRegs">
-<area shape="rect" id="node2" href="$class_initial_packer.html#a9241161c3f43cea5f6d032659e6f4958" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro ..." alt="" coords="228,56,419,83"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="643,56,815,83"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro " alt="" coords="467,5,595,32"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="673,5,784,32"/>
-</map>

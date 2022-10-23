@@ -1,4 +1,5 @@
 <map id="PlacementInfo::isLegalLocation" name="PlacementInfo::isLegalLocation">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="257,5,409,47"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="457,5,635,47"/>
+<area shape="rect" id="node1" title="check whether the PlacementUnit is legalized in the device area when a cell in it is placed at target..." alt="" coords="5,13,209,39"/>
+<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="257,5,409,47"/>
+<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="457,5,635,47"/>
 </map>

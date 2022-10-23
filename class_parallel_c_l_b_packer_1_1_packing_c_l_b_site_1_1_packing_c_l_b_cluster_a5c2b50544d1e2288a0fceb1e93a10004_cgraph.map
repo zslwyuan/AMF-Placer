@@ -1,8 +1,9 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::maxCardinalityMatching" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::maxCardinalityMatching">
-<area shape="rect" id="node2" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="335,5,487,47"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af423d1ee6ada68bf164aef48e9baf2c5" title="check how many input pins will be needed if the two LUTs are packed. " alt="" coords="292,71,531,127"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1" title="check whether a given cell is unpackable " alt="" coords="312,151,511,207"/>
-<area shape="rect" id="node3" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="579,5,756,47"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title="DesignInfo::DesignCell\l::getInputPins" alt="" coords="591,75,743,116"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title="DesignInfo::DesignCell\l::isLUT6" alt="" coords="591,140,743,181"/>
+<area shape="rect" id="node1" title="conduct maximun cardinality matching algorithm to pair LUTs" alt="" coords="5,85,244,141"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#acc0e6cdc5c4a8762125b8dcd13d812b1" title="check whether a given cell is unpackable" alt="" coords="312,5,511,61"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af423d1ee6ada68bf164aef48e9baf2c5" title="check how many input pins will be needed if the two LUTs are packed." alt="" coords="292,85,531,141"/>
+<area shape="rect" id="node6" href="$_parallel_c_l_b_packer___packing_c_l_b_site_8cc.html#a8bda09f4d43a5a29ceb92e9ef5ae5fb4" title=" " alt="" coords="379,165,444,192"/>
+<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#abc7943b5dbe473933c02836fd4fbe11b" title=" " alt="" coords="579,27,731,69"/>
+<area shape="rect" id="node5" href="$class_design_info_1_1_design_cell.html#a840969cd996a7e4c8cd79152d59c5a9a" title=" " alt="" coords="579,93,731,134"/>
+<area shape="rect" id="node7" href="$class_design_info_1_1_design_cell.html#a755e0943c81c289911dfadd38a3af5d6" title="Get the Original Cell Type object defined in the design netlist." alt="" coords="579,158,731,199"/>
 </map>

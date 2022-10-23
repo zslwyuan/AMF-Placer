@@ -1,3 +1,4 @@
 <map id="PlacementInfo::getBinGridH" name="PlacementInfo::getBinGridH">
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#adc5cc5479c1a558406f690680ffb4049" title="split vertically the SubBox into smaller ones and assign cells to them " alt="" coords="236,5,443,47"/>
+<area shape="rect" id="node1" title="Get the height of a bin in grid." alt="" coords="260,13,443,39"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#adc5cc5479c1a558406f690680ffb4049" title="split vertically the SubBox into smaller ones and assign cells to them" alt="" coords="5,5,212,47"/>
 </map>

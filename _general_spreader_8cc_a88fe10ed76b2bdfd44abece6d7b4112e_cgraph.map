@@ -1,6 +1,7 @@
 <map id="operator&lt;&lt;" name="operator&lt;&lt;">
-<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a57d2423664e8406243803337c23efa5d" title="get the top bin coordinate Y of the SubBox in bin grid " alt="" coords="139,5,345,47"/>
-<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#afcf4167da8529556bbe21a11310dabcb" title="get the bottom bin coordinate Y of the SubBox in bin grid " alt="" coords="139,71,345,112"/>
-<area shape="rect" id="node4" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#ae1c47878f5624d903f0a064aac81e972" title="get the left bin coordinate X of the SubBox in bin grid " alt="" coords="139,136,345,177"/>
-<area shape="rect" id="node5" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#abcc36cf670abb1c1595acc8740a8b6de" title="get the right bin coordinate X of the SubBox in bin grid " alt="" coords="139,201,345,243"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,111,91,138"/>
+<area shape="rect" id="node2" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#afcf4167da8529556bbe21a11310dabcb" title="get the bottom bin coordinate Y of the SubBox in bin grid" alt="" coords="139,5,345,47"/>
+<area shape="rect" id="node3" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#ae1c47878f5624d903f0a064aac81e972" title="get the left bin coordinate X of the SubBox in bin grid" alt="" coords="139,71,345,112"/>
+<area shape="rect" id="node4" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#abcc36cf670abb1c1595acc8740a8b6de" title="get the right bin coordinate X of the SubBox in bin grid" alt="" coords="139,136,345,177"/>
+<area shape="rect" id="node5" href="$class_general_spreader_1_1_spread_region_1_1_sub_box.html#a57d2423664e8406243803337c23efa5d" title="get the top bin coordinate Y of the SubBox in bin grid" alt="" coords="139,201,345,243"/>
 </map>

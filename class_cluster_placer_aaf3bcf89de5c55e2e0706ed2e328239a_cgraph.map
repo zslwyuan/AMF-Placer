@@ -1,51 +1,19 @@
 <map id="ClusterPlacer::createUserDefinedClusterBasedClusterUnits" name="ClusterPlacer::createUserDefinedClusterBasedClusterUnits">
-<area shape="rect" id="node2" href="$class_placement_info.html#a73d295c1409d92a270d13f0bdf0cba8e" title="PlacementInfo::getDesignInfo" alt="" coords="1535,843,1727,870"/>
-<area shape="rect" id="node3" href="$class_design_info.html#a2e9b3da4f222fbabccc63506efc470ae" title="Get the predefined clusters which are defined in design configuration files. " alt="" coords="1547,712,1716,753"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title="PlacementInfo::getPlacement\lUnits" alt="" coords="1535,999,1727,1040"/>
-<area shape="rect" id="node5" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title="PlacementInfo::getPlacement\lUnitByCell" alt="" coords="1535,647,1727,688"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_cluster_unit.html#a934edb9fd6882cbeac35b7a7566c49b1" title="PlacementInfo::ClusterUnit\l::getId" alt="" coords="1543,136,1720,177"/>
-<area shape="rect" id="node9" href="$class_placement_info_1_1_cluster_unit.html#ac4a603aace654e7493d62d5ab09f779c" title="PlacementInfo::ClusterUnit\l::addPlacementUnit" alt="" coords="1543,71,1720,112"/>
-<area shape="rect" id="node13" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title="print_info" alt="" coords="1594,383,1669,410"/>
-<area shape="rect" id="node14" href="$class_cluster_placer.html#a5f1e40e18f49c128fb0db1964c87f2da" title="wrap single PlacementUnits into ClusterUnit for later uniform processing " alt="" coords="1283,201,1462,243"/>
-<area shape="rect" id="node15" href="$class_cluster_placer.html#ab2f74c136ed361b6782d56d5dcf92dc6" title="construct the netlist of the generated clusters based on the PlacementNet in PlacementInfo ..." alt="" coords="268,821,475,847"/>
-<area shape="rect" id="node6" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="1790,647,1942,688"/>
-<area shape="rect" id="node7" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="2001,647,2179,688"/>
-<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_unit.html#a7cb53b16de6067cceeb2631593a73691" title="PlacementInfo::Placement\lUnit::getWeight" alt="" coords="1779,5,1953,47"/>
-<area shape="rect" id="node11" href="$class_placement_info_1_1_placement_unit.html#a22069e5518d1dc8727013bc492cce31d" title="PlacementInfo::Placement\lUnit::getBRAMNum" alt="" coords="1779,71,1953,112"/>
-<area shape="rect" id="node12" href="$class_placement_info_1_1_placement_unit.html#af351a06e4c2bdbe98b05f2d5dfd13241" title="PlacementInfo::Placement\lUnit::getDSPNum" alt="" coords="1779,136,1953,177"/>
-<area shape="rect" id="node16" href="$class_placement_info.html#a5e5c210a1716ccad33d8f909992a33de" title="PlacementInfo::getPlacementNets" alt="" coords="1263,1373,1483,1399"/>
-<area shape="rect" id="node17" href="$class_placement_info_1_1_cluster_net.html#a1ff840fe5aec9b2224296bfa27ad2a09" title="PlacementInfo::ClusterNet\l::addClusterUnit" alt="" coords="539,645,713,687"/>
-<area shape="rect" id="node18" href="$class_cluster_placer.html#a8ad4a2d696e76b631a5360cbc36b2a44" title="construct the cluster nets adjacent matrix for simulated&#45;annealing cluster placement ..." alt="" coords="1029,1489,1195,1531"/>
-<area shape="rect" id="node27" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement ..." alt="" coords="785,813,955,855"/>
-<area shape="rect" id="node29" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1025,881,1199,923"/>
-<area shape="rect" id="node31" href="$class_cluster_placer.html#a195e11693047920316c329564598052d" title="initially cluster cells based on clock domains " alt="" coords="1285,267,1460,308"/>
-<area shape="rect" id="node35" href="$class_cluster_placer.html#acd51be7cefa11416be111c5094a60a46" title="initially cluster cells based on user&#45;defined clusters " alt="" coords="1287,587,1458,628"/>
-<area shape="rect" id="node43" href="$class_cluster_placer.html#a6a55cd1a6f302b4499533ce925d199a0" title="check whether the average size of clusters is greater than the given threshold " alt="" coords="1030,763,1194,804"/>
-<area shape="rect" id="node44" href="$class_cluster_placer.html#a8b5ed670af0a3155a4328718baafeab5" title="pure connectivity&#45;based partitioning based on PaToH " alt="" coords="1011,1133,1213,1159"/>
-<area shape="rect" id="node45" href="$class_cluster_placer.html#aec60723404a9ef58e23232ff241c894d" title="initially cluster cells based on user&#45;defined clusters and conduct connectivity&#45;based partitioning ba..." alt="" coords="1025,1067,1199,1108"/>
-<area shape="rect" id="node46" href="$class_cluster_placer.html#abeaa9dab584d4fbf266c7a9e26fd57e3" title="refine the elements in obtained clusters to ensure the cells in user&#45;defined clusters in the same clu..." alt="" coords="1280,704,1465,745"/>
-<area shape="rect" id="node48" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement " alt="" coords="523,1107,729,1148"/>
-<area shape="rect" id="node49" href="$class_cluster_placer.html#af48d1de1711c4fc65941c863b1b6f339" title="conduct the ClusterUnit level SA placement and then map PlacementUnit to cluster location ..." alt="" coords="777,1750,963,1777"/>
-<area shape="rect" id="node50" href="$class_cluster_placer.html#aac549f90ad1f7820aa447bb8f66f7f8f" title="map PlacementUnit to cluster location " alt="" coords="1026,1743,1198,1784"/>
-<area shape="rect" id="node19" href="$class_placement_info.html#ac560bb08aa50290e5ccdda7093253860" title="PlacementInfo::getFixedPlacement\lUnits" alt="" coords="1261,1424,1484,1465"/>
-<area shape="rect" id="node20" href="$class_placement_info.html#ab172f7c2f6656773cfb34975de8f9c61" title="Get the Global Max X (right boundary of the device) " alt="" coords="1273,1809,1473,1835"/>
-<area shape="rect" id="node21" href="$class_placement_info.html#ab92fa0f9685c18db14e9a76341e857eb" title="Get the Global Min X (left boundary of the device) " alt="" coords="1274,1707,1471,1734"/>
-<area shape="rect" id="node22" href="$class_placement_info.html#a80bec37ddde34d28be1b2c43a99aa614" title="PlacementInfo::getMedium\lPathThresholdLevel" alt="" coords="1285,1489,1461,1531"/>
-<area shape="rect" id="node23" href="$class_cluster_placer.html#afe8e9b1d5a4831c3adc66004e30ed2ca" title="ClusterPlacer::isDensePlacement" alt="" coords="1265,1555,1480,1582"/>
-<area shape="rect" id="node24" href="$_cluster_placer_8cc.html#a5735b045bfe96dc29dca1cfb7f34116d" title="containIOCells" alt="" coords="1319,1606,1426,1633"/>
-<area shape="rect" id="node25" href="$class_cluster_placer.html#a9a4d2db91199026d0313fb397af1efbc" title="ClusterPlacer::getPlacement\lUnitMaxPathLen" alt="" coords="1279,1256,1466,1297"/>
-<area shape="rect" id="node26" href="$class_placement_info.html#aac7e930d12f2149afe6984a8cad68134" title="PlacementInfo::getTimingInfo" alt="" coords="1536,929,1727,955"/>
-<area shape="rect" id="node28" href="$class_placement_info.html#a77be708aff703d87c2cc78f225fdddfc" title="PlacementInfo::getNumCells" alt="" coords="1019,829,1205,855"/>
-<area shape="rect" id="node30" href="$class_cluster_placer.html#a8b0b60255df9780c038e5a9d6cf50e3b" title="clean all information of the clusters (including PlacementUnit&#45;Cluster mapping and the cluster&#45;level ..." alt="" coords="1273,922,1472,949"/>
-<area shape="rect" id="node32" href="$class_design_info.html#ad05c87066ad912c85702b4adf3e9c4d6" title="Get the all the clock nets in the design. " alt="" coords="1532,333,1731,359"/>
-<area shape="rect" id="node40" href="$class_graph_partitioner.html#ac18ffed6039ce5aa0b0dfc1ffbc240d8" title="Set the max mincut rate. " alt="" coords="1291,1191,1455,1232"/>
-<area shape="rect" id="node41" href="$class_graph_partitioner.html#a26dfd199abf361bf2e9a3117226a2ea1" title="a caller which will start the partitioning procedure " alt="" coords="1296,1074,1449,1101"/>
-<area shape="rect" id="node42" href="$class_graph_partitioner.html#a0ebbf29e40f3a81f733cb0bb8158794b" title="Get the clusters after partitioning (each is a set containing ids for nodes inside the clusters) ..." alt="" coords="1279,1125,1467,1167"/>
-<area shape="rect" id="node33" href="$class_design_info.html#a7c9e54e1989edf8a889f153f7c47d304" title="Get the cells driven by a given clock net. " alt="" coords="1545,267,1717,308"/>
-<area shape="rect" id="node34" href="$class_placement_info_1_1_cluster_unit.html#a36e24000ccccfa75ca5abd5859cc094e" title="PlacementInfo::ClusterUnit\l::getUnits" alt="" coords="1543,201,1720,243"/>
-<area shape="rect" id="node36" href="$class_placement_timing_info.html#a8cc89f6dbb5dfeed18f1b8e239564106" title="PlacementTimingInfo\l::getSimplePlacementTiming\lInfo_PathLenSorted" alt="" coords="1538,501,1725,557"/>
-<area shape="rect" id="node37" href="$class_placement_info.html#ac18f726c75937363f52be34154f4468c" title="PlacementInfo::getLongPath\lThresholdLevel" alt="" coords="1538,581,1725,623"/>
-<area shape="rect" id="node38" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title="print_status" alt="" coords="1586,1910,1677,1937"/>
-<area shape="rect" id="node39" href="$class_placement_info.html#aeedda39297f2899ef048eb191afbe630" title="PlacementInfo::getPlacement\lUnitByCellId" alt="" coords="1535,435,1727,476"/>
-<area shape="rect" id="node47" href="$class_placement_info_1_1_placement_unit.html#af293d36a725e1639dc033ee87b07084a" title="PlacementInfo::Placement\lUnit::getId" alt="" coords="1544,777,1719,819"/>
+<area shape="rect" id="node1" title="initially cluster cells based on user&#45;defined clusters" alt="" coords="5,300,220,341"/>
+<area shape="rect" id="node2" href="$class_placement_info_1_1_cluster_unit.html#ac4a603aace654e7493d62d5ab09f779c" title=" " alt="" coords="544,71,721,112"/>
+<area shape="rect" id="node6" href="$class_cluster_placer.html#ab2f74c136ed361b6782d56d5dcf92dc6" title="construct the netlist of the generated clusters based on the PlacementNet in PlacementInfo" alt="" coords="268,307,475,334"/>
+<area shape="rect" id="node9" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="595,385,670,411"/>
+<area shape="rect" id="node10" href="$class_cluster_placer.html#a5f1e40e18f49c128fb0db1964c87f2da" title="wrap single PlacementUnits into ClusterUnit for later uniform processing" alt="" coords="282,191,461,232"/>
+<area shape="rect" id="node11" href="$class_placement_info_1_1_cluster_unit.html#a934edb9fd6882cbeac35b7a7566c49b1" title=" " alt="" coords="544,136,721,177"/>
+<area shape="rect" id="node12" href="$class_placement_info.html#a2fbb1173f089b8d776156b0123d5fb12" title=" " alt="" coords="537,201,729,243"/>
+<area shape="rect" id="node13" href="$class_placement_info.html#a73d295c1409d92a270d13f0bdf0cba8e" title=" " alt="" coords="275,409,467,435"/>
+<area shape="rect" id="node14" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title=" " alt="" coords="275,460,467,501"/>
+<area shape="rect" id="node17" href="$class_design_info.html#a2e9b3da4f222fbabccc63506efc470ae" title="Get the predefined clusters which are defined in design configuration files." alt="" coords="287,525,456,567"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_unit.html#a22069e5518d1dc8727013bc492cce31d" title=" " alt="" coords="792,5,967,47"/>
+<area shape="rect" id="node4" href="$class_placement_info_1_1_placement_unit.html#af351a06e4c2bdbe98b05f2d5dfd13241" title=" " alt="" coords="792,71,967,112"/>
+<area shape="rect" id="node5" href="$class_placement_info_1_1_placement_unit.html#a7cb53b16de6067cceeb2631593a73691" title=" " alt="" coords="792,136,967,177"/>
+<area shape="rect" id="node7" href="$class_placement_info_1_1_cluster_net.html#a1ff840fe5aec9b2224296bfa27ad2a09" title=" " alt="" coords="545,319,720,360"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#a5e5c210a1716ccad33d8f909992a33de" title=" " alt="" coords="523,267,743,294"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="557,460,709,501"/>
+<area shape="rect" id="node16" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="791,460,968,501"/>
 </map>

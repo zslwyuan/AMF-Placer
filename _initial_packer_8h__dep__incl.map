@@ -1,5 +1,6 @@
 <map id="src/lib/HiFPlacer/placement/packing/InitialPacker.h" name="src/lib/HiFPlacer/placement/packing/InitialPacker.h">
-<area shape="rect" id="node2" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer) ..." alt="" coords="5,102,219,129"/>
+<area shape="rect" id="node1" title="This header file contains the definitions of InitialPacker class and its internal modules and APIs wh..." alt="" coords="131,5,314,47"/>
+<area shape="rect" id="node2" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5,102,219,129"/>
 <area shape="rect" id="node4" href="$_initial_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the InitialPacker which identifies macros f..." alt="" coords="243,95,426,136"/>
-<area shape="rect" id="node3" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow. " alt="" coords="21,184,203,211"/>
+<area shape="rect" id="node3" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="21,184,203,211"/>
 </map>

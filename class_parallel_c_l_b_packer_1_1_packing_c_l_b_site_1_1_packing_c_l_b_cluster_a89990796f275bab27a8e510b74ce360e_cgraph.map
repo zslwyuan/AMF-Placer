@@ -1,6 +1,0 @@
-<map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::checkNumMuxCompatibleInFFSet" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster::checkNumMuxCompatibleInFFSet">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a31bc1378c7ad3d1d94dce71bdeb64bf4" title="ParallelCLBPacker::\lPackingCLBSite::getPlacementInfo" alt="" coords="292,5,519,47"/>
-<area shape="rect" id="node3" href="$class_placement_info.html#a51d2bae6ff35845d63fcb2671a8b4b5e" title="PlacementInfo::getPlacement\lUnitByCell" alt="" coords="309,71,501,112"/>
-<area shape="rect" id="node4" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list. " alt="" coords="567,71,719,112"/>
-<area shape="rect" id="node5" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title="DesignInfo::DesignElement\l::getElementIdInType" alt="" coords="767,71,944,112"/>
-</map>

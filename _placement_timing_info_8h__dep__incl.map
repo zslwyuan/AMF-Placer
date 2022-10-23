@@ -1,8 +1,9 @@
 <map id="src/lib/HiFPlacer/placement/placementTiming/PlacementTimingInfo.h" name="src/lib/HiFPlacer/placement/placementTiming/PlacementTimingInfo.h">
+<area shape="rect" id="node1" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="2149,5,2379,61"/>
 <area shape="rect" id="node2" href="$_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="1618,109,1825,151"/>
 <area shape="rect" id="node26" href="$_placement_timing_info_8cc.html" title="This implementation file contains APIs&#39; implementation for the timing information related to placemen..." alt="" coords="2783,199,3014,255"/>
-<area shape="rect" id="node27" href="$_placement_timing_optimizer_8h.html" title="src/lib/HiFPlacer/placement\l/placementTiming/PlacementTiming\lOptimizer.h" alt="" coords="2149,199,2379,255"/>
-<area shape="rect" id="node3" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer) ..." alt="" coords="1803,511,2016,537"/>
+<area shape="rect" id="node27" href="$_placement_timing_optimizer_8h.html" title=" " alt="" coords="2149,199,2379,255"/>
+<area shape="rect" id="node3" href="$_a_m_f_placer_8h.html" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="1803,511,2016,537"/>
 <area shape="rect" id="node5" href="$_cluster_placer_8h.html" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="321,310,535,351"/>
 <area shape="rect" id="node7" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="789,407,1000,448"/>
 <area shape="rect" id="node9" href="$_general_spreader_8h.html" title="This header file contains the definitions of GeneralSpreader class and its internal modules and APIs ..." alt="" coords="166,206,399,247"/>
@@ -13,9 +14,9 @@
 <area shape="rect" id="node21" href="$_incremental_b_e_l_packer_8h.html" title="This header file contains the definitions of IncrementalBELPacker class and its internal modules and ..." alt="" coords="1804,310,2023,351"/>
 <area shape="rect" id="node23" href="$_initial_packer_8h.html" title="This header file contains the definitions of InitialPacker class and its internal modules and APIs wh..." alt="" coords="946,206,1129,247"/>
 <area shape="rect" id="node25" href="$_placement_info_8cc.html" title="This implementation file contains APIs to initialize and process the information related to FPGA plac..." alt="" coords="1543,206,1756,247"/>
-<area shape="rect" id="node29" href="$_graph_partitioner_8h.html" title="src/lib/HiFPlacer/problem\lSolvers/GraphPartitioner.h" alt="" coords="563,206,738,247"/>
-<area shape="rect" id="node31" href="$_min_cost_bipartite_matcher_8h.html" title="src/lib/HiFPlacer/problem\lSolvers/MinCostBipartiteMatcher.h" alt="" coords="1295,206,1518,247"/>
-<area shape="rect" id="node4" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow. " alt="" coords="1818,600,2001,627"/>
+<area shape="rect" id="node29" href="$_graph_partitioner_8h.html" title=" " alt="" coords="563,206,738,247"/>
+<area shape="rect" id="node31" href="$_min_cost_bipartite_matcher_8h.html" title=" " alt="" coords="1295,206,1518,247"/>
+<area shape="rect" id="node4" href="$main_8cc.html" title="AMF&#45;Placer Main file which directly pass the arguments to the AMFPacer workflow." alt="" coords="1818,600,2001,627"/>
 <area shape="rect" id="node6" href="$_cluster_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the ClusterPlacer which cluster nodes in th..." alt="" coords="317,407,539,448"/>
 <area shape="rect" id="node8" href="$_global_placer_8cc.html" title="This implementation file contains APIs&#39; implementation of the GlobalPlacer which organizes/configures..." alt="" coords="786,503,1003,545"/>
 <area shape="rect" id="node10" href="$_general_spreader_8cc.html" title="This implementation file contains APIs&#39; implementation of the GeneralSpreader which accounts for the ..." alt="" coords="5,310,245,351"/>
@@ -27,7 +28,7 @@
 <area shape="rect" id="node20" href="$_macro_legalizer_8cc.html" title="This implementation file contains APIs&#39; implementation of the MacroLegalizer which maps DSP/BRAM/CARR..." alt="" coords="1074,407,1273,448"/>
 <area shape="rect" id="node22" href="$_incremental_b_e_l_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the IncrementalBELPacker which incrementall..." alt="" coords="1796,407,2023,448"/>
 <area shape="rect" id="node24" href="$_initial_packer_8cc.html" title="This implementation file contains APIs&#39; implementation of the InitialPacker which identifies macros f..." alt="" coords="817,310,999,351"/>
-<area shape="rect" id="node28" href="$_placement_timing_optimizer_8cc.html" title="src/lib/HiFPlacer/placement\l/placementTiming/PlacementTiming\lOptimizer.cc" alt="" coords="2426,303,2657,359"/>
-<area shape="rect" id="node30" href="$_graph_partitioner_8cc.html" title="src/lib/HiFPlacer/problem\lSolvers/GraphPartitioner.cc" alt="" coords="560,310,741,351"/>
-<area shape="rect" id="node32" href="$_min_cost_bipartite_matcher_8cc.html" title="src/lib/HiFPlacer/problem\lSolvers/MinCostBipartiteMatcher.cc" alt="" coords="1291,310,1522,351"/>
+<area shape="rect" id="node28" href="$_placement_timing_optimizer_8cc.html" title=" " alt="" coords="2426,303,2657,359"/>
+<area shape="rect" id="node30" href="$_graph_partitioner_8cc.html" title=" " alt="" coords="560,310,741,351"/>
+<area shape="rect" id="node32" href="$_min_cost_bipartite_matcher_8cc.html" title=" " alt="" coords="1291,310,1522,351"/>
 </map>

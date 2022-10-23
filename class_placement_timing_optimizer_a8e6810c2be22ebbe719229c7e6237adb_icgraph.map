@@ -1,11 +1,10 @@
 <map id="PlacementTimingOptimizer::setPinsLocation" name="PlacementTimingOptimizer::setPinsLocation">
-<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#a6bf9224fd0a810facbd9657374db84c5" title="PlacementTimingOptimizer\l::conductStaticTimingAnalysis" alt="" coords="243,172,439,213"/>
-<area shape="rect" id="node5" href="$class_placement_timing_optimizer.html#a581a14b1393ddf4358af3ee246f2d19d" title="PlacementTimingOptimizer\l::~PlacementTimingOptimizer" alt="" coords="776,314,967,356"/>
-<area shape="rect" id="node10" href="$class_placement_timing_optimizer.html#a7b34ee3b0222d8ff78db0a63f92d003c" title="PlacementTimingOptimizer\l::incrementalStaticTimingAnalysis\l_forPUWithLocation" alt="" coords="232,398,449,454"/>
-<area shape="rect" id="node3" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title="PlacementTimingOptimizer\l::clusterLongPathInOneClockRegion" alt="" coords="497,230,728,272"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="1015,154,1125,180"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure " alt="" coords="543,48,682,89"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites " alt="" coords="802,12,941,53"/>
-<area shape="rect" id="node8" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion " alt="" coords="512,113,713,154"/>
-<area shape="rect" id="node9" href="$class_global_placer.html#a68f3d72f86ba740d8f21efa962400ed6" title="GlobalPlacer::~GlobalPlacer" alt="" coords="780,78,963,104"/>
+<area shape="rect" id="node1" title=" " alt="" coords="957,159,1136,200"/>
+<area shape="rect" id="node2" href="$class_placement_timing_optimizer.html#a6bf9224fd0a810facbd9657374db84c5" title=" " alt="" coords="703,123,899,164"/>
+<area shape="rect" id="node8" href="$class_placement_timing_optimizer.html#a7b34ee3b0222d8ff78db0a63f92d003c" title=" " alt="" coords="692,187,909,243"/>
+<area shape="rect" id="node3" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="164,5,395,47"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,101,116,127"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="474,123,613,164"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="210,123,349,164"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="443,240,644,281"/>
 </map>

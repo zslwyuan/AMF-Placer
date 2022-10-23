@@ -1,9 +1,0 @@
-<map id="MacroLegalizer::spreadMacros" name="MacroLegalizer::spreadMacros">
-<area shape="rect" id="node2" href="$class_macro_legalizer.html#ac0635484f84690ab85e8af44ed33efd4" title="check whether the current macros can be fitted in the column legally. " alt="" coords="252,31,427,72"/>
-<area shape="rect" id="node7" href="$class_macro_legalizer.html#abdcfc131b709f5c75f476b740297901d" title="check how many sites are required by the given PlacementUnit " alt="" coords="495,89,669,131"/>
-<area shape="rect" id="node8" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title="print_warning" alt="" coords="290,147,389,174"/>
-<area shape="rect" id="node3" href="$class_macro_legalizer.html#a82fea18e2fe947cf747ab4e871b6873d" title="MacroLegalizer::sortSites\lBySiteY" alt="" coords="952,5,1120,47"/>
-<area shape="rect" id="node5" href="$class_macro_legalizer.html#a7129771f1e29f2460dbe429bf917b236" title="MacroLegalizer::sortPUsByPU2Y" alt="" coords="475,38,689,65"/>
-<area shape="rect" id="node4" href="$class_macro_legalizer.html#a5a0b3dd763d209214a334a49699d19b1" title="MacroLegalizer::swapSitePtr" alt="" coords="1168,13,1355,39"/>
-<area shape="rect" id="node6" href="$class_macro_legalizer.html#aa58fa1b66ae80470c5a6483338aa854f" title="MacroLegalizer::swapPU" alt="" coords="737,38,904,65"/>
-</map>

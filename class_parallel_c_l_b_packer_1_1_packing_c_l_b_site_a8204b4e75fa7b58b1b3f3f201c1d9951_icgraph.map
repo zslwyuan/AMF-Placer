@@ -1,5 +1,0 @@
-<map id="ParallelCLBPacker::PackingCLBSite::moveLUTToLUT6Slot" name="ParallelCLBPacker::PackingCLBSite::moveLUTToLUT6Slot">
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#aceaebfba8c5bd1f2db6f5c4c29ede32b" title="find the slots in the site for Carry by enumeration " alt="" coords="319,5,505,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a8a89b034eda846c09b437103276a06be" title="finally map LUTs/FFs to the exact slots in the sites " alt="" coords="313,85,511,141"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a7bfb0fd6f00a7aef5f6bef22fc21bc3d" title="find the slots in the site for Muxes by enumeration " alt="" coords="307,165,517,221"/>
-</map>

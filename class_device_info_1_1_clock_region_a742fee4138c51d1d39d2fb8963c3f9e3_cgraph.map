@@ -1,8 +1,9 @@
 <map id="DeviceInfo::ClockRegion::ClockRegion" name="DeviceInfo::ClockRegion::ClockRegion">
-<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#a1db113d4da2ff21bb1a71948c7a5ddf8" title="DeviceInfo::DeviceSite\l::getClockRegionX" alt="" coords="223,5,377,47"/>
-<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a03674f7e97a9152447bab8f56cb5935d" title="DeviceInfo::DeviceSite\l::getClockRegionY" alt="" coords="223,71,377,112"/>
-<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a012ee1ec701d3a387fe2942b4cadb854" title="DeviceInfo::DeviceSite\l::setClockRegion" alt="" coords="223,136,377,177"/>
-<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title="DeviceInfo::DeviceSite::X" alt="" coords="216,202,384,229"/>
-<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title="DeviceInfo::DeviceSite::Y" alt="" coords="216,253,384,279"/>
-<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#a8a72e4d2dd7855756ad9e01f04107339" title="DeviceInfo::DeviceSite\l::getTile" alt="" coords="223,304,377,345"/>
+<area shape="rect" id="node1" title="Construct a new Clock Region object." alt="" coords="5,169,168,211"/>
+<area shape="rect" id="node2" href="$class_device_info_1_1_device_site.html#a1db113d4da2ff21bb1a71948c7a5ddf8" title=" " alt="" coords="223,5,377,47"/>
+<area shape="rect" id="node3" href="$class_device_info_1_1_device_site.html#a03674f7e97a9152447bab8f56cb5935d" title=" " alt="" coords="223,71,377,112"/>
+<area shape="rect" id="node4" href="$class_device_info_1_1_device_site.html#a8a72e4d2dd7855756ad9e01f04107339" title=" " alt="" coords="223,136,377,177"/>
+<area shape="rect" id="node5" href="$class_device_info_1_1_device_site.html#a012ee1ec701d3a387fe2942b4cadb854" title=" " alt="" coords="223,201,377,243"/>
+<area shape="rect" id="node6" href="$class_device_info_1_1_device_site.html#af47254c6ca40f095cbec714ed0f5613f" title=" " alt="" coords="216,267,384,294"/>
+<area shape="rect" id="node7" href="$class_device_info_1_1_device_site.html#a04f3836e6a0952513f181fe209fa4a27" title=" " alt="" coords="216,318,384,345"/>
 </map>

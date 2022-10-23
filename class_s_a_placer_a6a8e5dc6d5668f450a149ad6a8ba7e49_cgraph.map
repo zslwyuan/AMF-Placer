@@ -1,5 +1,6 @@
 <map id="SAPlacer::greedyInitialize" name="SAPlacer::greedyInitialize">
-<area shape="rect" id="node2" href="$class_s_a_placer.html#aabecdef81e0207cbdb9b75ba1fbf1a49" title="SAPlacer::greedyPlaceACluster" alt="" coords="221,13,425,39"/>
-<area shape="rect" id="node4" href="$class_s_a_placer.html#a026af50e992f8f4340de57721f9323bf" title="SAPlacer::greedyFindNext\lClusterToPlace" alt="" coords="237,64,410,105"/>
-<area shape="rect" id="node3" href="$class_s_a_placer.html#a9de8fa3c4120b47099c310f5d5f10abc" title="SAPlacer::incrementalEvaluate\lClusterPlacement" alt="" coords="473,5,673,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,173,69"/>
+<area shape="rect" id="node2" href="$class_s_a_placer.html#a026af50e992f8f4340de57721f9323bf" title=" " alt="" coords="237,5,410,47"/>
+<area shape="rect" id="node3" href="$class_s_a_placer.html#aabecdef81e0207cbdb9b75ba1fbf1a49" title=" " alt="" coords="221,71,425,98"/>
+<area shape="rect" id="node4" href="$class_s_a_placer.html#a9de8fa3c4120b47099c310f5d5f10abc" title=" " alt="" coords="473,64,673,105"/>
 </map>

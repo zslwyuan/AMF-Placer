@@ -1,22 +1,23 @@
 <map id="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster" name="ParallelCLBPacker::PackingCLBSite::PackingCLBCluster">
+<area shape="rect" id="node1" title="PackingCLBCluster is a container of cells/PlacementUnits which can be packed in the corresponding CLB..." alt="" coords="1244,314,1483,355"/>
 <area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html" title="PackingCLBSite is a container for the packing information (parameters, candidates and packing status)..." alt="" coords="1673,466,1812,507"/>
-<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization, packing) " alt="" coords="958,265,1065,292"/>
-<area shape="rect" id="node3" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion. " alt="" coords="279,277,363,304"/>
+<area shape="rect" id="node2" href="$class_placement_info.html" title="Information related to FPGA placement (wirelength optimization, cell spreading, legalization,..." alt="" coords="958,265,1065,292"/>
+<area shape="rect" id="node3" href="$class_device_info.html" title="Information class related to FPGA device, including the details of BEL/Site/Tile/ClockRegion." alt="" coords="279,277,363,304"/>
 <area shape="rect" id="node5" href="$class_placement_info_1_1_compatible_placement_table.html" title="describes the type mapping from design to device, where a cell can be placed (which BEL in which site..." alt="" coords="521,231,699,273"/>
-<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement..." alt="" coords="537,80,683,107"/>
-<area shape="rect" id="node19" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites. " alt="" coords="535,360,685,387"/>
-<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections. " alt="" coords="279,129,363,156"/>
-<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title="PlacementTimingInfo\l::TimingGraph\&lt; DesignInfo\l::DesignCell \&gt;" alt="" coords="924,5,1099,61"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping.html" title="SiteBELMapping is a contain recording the mapping between cells and BELs. " alt="" coords="1253,614,1474,655"/>
-<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects ..." alt="" coords="935,643,1087,669"/>
-<area shape="rect" id="node11" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design. " alt="" coords="5,677,183,704"/>
-<area shape="rect" id="node13" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells " alt="" coords="245,643,396,669"/>
+<area shape="rect" id="node6" href="$class_placement_timing_info.html" title="PlacementTimingInfo is the container which record the timing information related to placement." alt="" coords="537,80,683,107"/>
+<area shape="rect" id="node19" href="$class_device_info_1_1_device_tile.html" title="A tile is a combination of sites." alt="" coords="535,360,685,387"/>
+<area shape="rect" id="node4" href="$class_design_info.html" title="Information related to FPGA designs, including design cells and their interconnections." alt="" coords="279,129,363,156"/>
+<area shape="rect" id="node7" href="$class_placement_timing_info_1_1_timing_graph.html" title=" " alt="" coords="924,5,1099,61"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_site_b_e_l_mapping.html" title="SiteBELMapping is a contain recording the mapping between cells and BELs." alt="" coords="1253,614,1474,655"/>
+<area shape="rect" id="node10" href="$class_design_info_1_1_design_cell.html" title="a DesignCell in design netlist, DesignPin objects of which might connect to DesignNet objects" alt="" coords="935,643,1087,669"/>
+<area shape="rect" id="node11" href="$class_design_info_1_1_design_element.html" title="basic class of element in a design." alt="" coords="5,677,183,704"/>
+<area shape="rect" id="node13" href="$class_design_info_1_1_design_net.html" title="a design net (hyperedge) defined in the design, connecting to pins of cells" alt="" coords="245,643,396,669"/>
 <area shape="rect" id="node12" href="$class_design_info_1_1_control_set_info.html" title="A control set is a combination of CLK, CE and SR signal. It could be nullptr (not related to control ..." alt="" coords="523,643,697,669"/>
-<area shape="rect" id="node14" href="$class_device_info_1_1_device_site.html" title="Site class for site on device. " alt="" coords="935,475,1088,501"/>
-<area shape="rect" id="node15" href="$class_device_info_1_1_device_element.html" title="basic class of device element " alt="" coords="232,527,409,553"/>
-<area shape="rect" id="node16" href="$class_device_info_1_1_device_site_1_1_device_site_pin_infos.html" title="a class record the pin on the site boundary " alt="" coords="533,411,687,453"/>
-<area shape="rect" id="node17" href="$class_device_info_1_1_clock_column.html" title="a column of site in clock region " alt="" coords="527,477,693,504"/>
-<area shape="rect" id="node18" href="$class_device_info_1_1_clock_region.html" title="class for clock regions on FPGA " alt="" coords="529,528,691,555"/>
-<area shape="rect" id="node20" href="$class_placement_info_1_1_placement_macro.html" title="a fixed group of multiple standard cells with constraints of their relative locations ..." alt="" coords="1276,685,1451,726"/>
-<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand " alt="" coords="912,693,1111,720"/>
+<area shape="rect" id="node14" href="$class_device_info_1_1_device_site.html" title="Site class for site on device." alt="" coords="935,475,1088,501"/>
+<area shape="rect" id="node15" href="$class_device_info_1_1_device_element.html" title="basic class of device element" alt="" coords="232,527,409,553"/>
+<area shape="rect" id="node16" href="$class_device_info_1_1_device_site_1_1_device_site_pin_infos.html" title="a class record the pin on the site boundary" alt="" coords="533,411,687,453"/>
+<area shape="rect" id="node17" href="$class_device_info_1_1_clock_column.html" title="a column of site in clock region" alt="" coords="527,477,693,504"/>
+<area shape="rect" id="node18" href="$class_device_info_1_1_clock_region.html" title="class for clock regions on FPGA" alt="" coords="529,528,691,555"/>
+<area shape="rect" id="node20" href="$class_placement_info_1_1_placement_macro.html" title="a fixed group of multiple standard cells with constraints of their relative locations" alt="" coords="1276,685,1451,726"/>
+<area shape="rect" id="node21" href="$class_placement_info_1_1_placement_unit.html" title="a movement unit in placement with information of location and resource demand" alt="" coords="912,693,1111,720"/>
 </map>

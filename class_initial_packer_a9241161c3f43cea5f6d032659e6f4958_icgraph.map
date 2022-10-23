@@ -1,5 +1,5 @@
 <map id="InitialPacker::findDSPMacros" name="InitialPacker::findDSPMacros">
-<area shape="rect" id="node2" href="$class_initial_packer.html#a0f6ca11a4f9a5b63e03454eef8bb5e78" title="Construct a new Initial Packer object. " alt="" coords="420,5,592,32"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro " alt="" coords="244,56,372,83"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure " alt="" coords="451,56,561,83"/>
+<area shape="rect" id="node1" title="detects DSP macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="340,5,531,32"/>
+<area shape="rect" id="node2" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,5,292,32"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,5,116,32"/>
 </map>
