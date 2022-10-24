@@ -90,7 +90,10 @@ $(document).ready(function(){initNavTree('_2_2__run_an_example.html',''); initRe
 <div class="textblock"><h1>Run An Example</h1>
 <p>Below is a command that users can try to run in the "build" directory. It will run the placement flow according to a given JSON configuration, where design/device/paramters are specified.</p>
 <div class="fragment"><div class="line">./AMFPlacer ../benchmarks/testConfig/OpenPiton.json</div>
-</div><!-- fragment --><p>Users may find that <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> prints somethings in the terminal and if you are interested in the details of those information, you can find the concrete explanation here: (<a class="el" href="_6_runtime_log.html">Runtime Log Explanation</a>). </p>
+</div><!-- fragment --><p>Users may find that <a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> prints somethings in the terminal and if you are interested in the details of those information, you can find the concrete explanation here: (<a class="el" href="_6_runtime_log.html">Runtime Log Explanation</a>).</p>
+<p>Users can also turn on the GUI interface to visualize the placement procedure:</p>
+<div class="fragment"><div class="line">./AMFPlacer ../benchmarks/testConfig/OpenPiton.json -gui</div>
+</div><!-- fragment --><p>In the GUI window, you can zoom in by left click of your mouse, zoom out by right click of your mouse, and reset to orginal scale by the middle button of your mouse. The critical path and various elements will be colored respectively. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
