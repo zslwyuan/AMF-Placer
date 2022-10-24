@@ -1,44 +1,46 @@
 <map id="DesignInfo::DesignElement::getName" name="DesignInfo::DesignElement::getName">
-<area shape="rect" id="node1" title=" " alt="" coords="1663,619,1840,661"/>
-<area shape="rect" id="node2" href="$class_design_info.html#acf8cb1949ad57e908d9a942c21ea4478" title="add a cell into the design information" alt="" coords="1417,188,1551,215"/>
-<area shape="rect" id="node8" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="838,20,1025,47"/>
-<area shape="rect" id="node9" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="832,173,1031,214"/>
-<area shape="rect" id="node11" href="$class_design_info_1_1_design_cell.html#aad7f3857c4b9584e94def14bde121ffd" title="add a net and assign it into output/input net list" alt="" coords="1408,242,1560,283"/>
-<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#a16cdc343adeeac7222745a64e4ed420d" title="bind a pin to the cell" alt="" coords="1116,305,1268,346"/>
-<area shape="rect" id="node14" href="$class_design_info.html#aa6022bca479e36f7f13fbcd96946301d" title="bind a pin to an existing net. If the net does not exist, new one." alt="" coords="1109,371,1275,397"/>
-<area shape="rect" id="node15" href="$class_design_info_1_1_control_set_info.html#a9d63556d73079d3e896bf113ca8890ce" title=" " alt="" coords="1397,414,1571,455"/>
-<area shape="rect" id="node21" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="1395,817,1573,858"/>
-<area shape="rect" id="node25" href="$class_parallel_c_l_b_packer.html#a5c868c5456df2f1459a88829b1f15a52" title=" " alt="" coords="368,487,528,529"/>
-<area shape="rect" id="node26" href="$class_global_placer.html#a14f5dc4c74f1c09d1236cf50d6c55630" title=" " alt="" coords="1367,597,1601,624"/>
-<area shape="rect" id="node27" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="1363,883,1605,909"/>
-<area shape="rect" id="node28" href="$class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46" title=" " alt="" coords="1404,531,1564,573"/>
-<area shape="rect" id="node31" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="1373,933,1595,960"/>
-<area shape="rect" id="node32" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="1378,715,1590,741"/>
-<area shape="rect" id="node33" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="1373,765,1595,792"/>
-<area shape="rect" id="node34" href="$class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80" title=" " alt="" coords="1353,1035,1615,1061"/>
-<area shape="rect" id="node37" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="1365,984,1603,1011"/>
-<area shape="rect" id="node38" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="164,963,320,1005"/>
-<area shape="rect" id="node39" href="$class_wirelength_optimizer.html#ad13c56a5650aae1780b83e17c667f3f1" title=" " alt="" coords="1383,649,1585,690"/>
-<area shape="rect" id="node42" href="$_design_info_8h.html#a0a09afdc39c98662c6ece7099ff4d3a7" title=" " alt="" coords="1441,1136,1527,1163"/>
-<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_macro.html#a0cf2b909e8fe1e783aac1ccea479a828" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="1105,71,1279,113"/>
-<area shape="rect" id="node10" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="855,279,1007,305"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="579,71,781,97"/>
-<area shape="rect" id="node7" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="576,121,784,148"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="384,96,512,123"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,733,116,760"/>
-<area shape="rect" id="node12" href="$class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c" title="let the parent cell know that one of its pin connects to a specific net" alt="" coords="1107,239,1277,281"/>
-<area shape="rect" id="node16" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title="add CARRY&#45;related PlacementUnit into this CLB site" alt="" coords="1105,422,1279,463"/>
-<area shape="rect" id="node17" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="862,422,1001,463"/>
-<area shape="rect" id="node18" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="608,422,752,463"/>
-<area shape="rect" id="node19" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="379,422,517,463"/>
-<area shape="rect" id="node20" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="173,553,311,594"/>
-<area shape="rect" id="node22" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="1108,824,1276,851"/>
-<area shape="rect" id="node23" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="579,817,781,858"/>
-<area shape="rect" id="node24" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="579,726,781,767"/>
-<area shape="rect" id="node29" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="1123,543,1261,585"/>
-<area shape="rect" id="node30" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="379,553,517,594"/>
-<area shape="rect" id="node35" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="1079,973,1305,1014"/>
-<area shape="rect" id="node36" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="852,953,1011,980"/>
-<area shape="rect" id="node40" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="1115,655,1269,697"/>
-<area shape="rect" id="node41" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="842,662,1021,703"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1887,619,2064,661"/>
+<area shape="rect" id="node2" href="$class_design_info.html#acf8cb1949ad57e908d9a942c21ea4478" title="add a cell into the design information" alt="" coords="1641,188,1775,215"/>
+<area shape="rect" id="node10" href="$class_initial_packer.html#a70b8e943d4f33f43e258b10bab2bf377" title="detects Mux macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="1062,20,1249,47"/>
+<area shape="rect" id="node11" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="1056,173,1255,214"/>
+<area shape="rect" id="node13" href="$class_design_info_1_1_design_cell.html#aad7f3857c4b9584e94def14bde121ffd" title="add a net and assign it into output/input net list" alt="" coords="1632,242,1784,283"/>
+<area shape="rect" id="node15" href="$class_design_info_1_1_design_cell.html#a16cdc343adeeac7222745a64e4ed420d" title="bind a pin to the cell" alt="" coords="1340,305,1492,346"/>
+<area shape="rect" id="node16" href="$class_design_info.html#aa6022bca479e36f7f13fbcd96946301d" title="bind a pin to an existing net. If the net does not exist, new one." alt="" coords="1333,371,1499,397"/>
+<area shape="rect" id="node17" href="$class_design_info_1_1_control_set_info.html#a9d63556d73079d3e896bf113ca8890ce" title=" " alt="" coords="1621,414,1795,455"/>
+<area shape="rect" id="node23" href="$class_global_placer.html#a8d0e2cbde7042f59772f84032acca2ac" title=" " alt="" coords="1619,817,1797,858"/>
+<area shape="rect" id="node27" href="$class_parallel_c_l_b_packer.html#a5c868c5456df2f1459a88829b1f15a52" title=" " alt="" coords="592,487,752,529"/>
+<area shape="rect" id="node28" href="$class_global_placer.html#a14f5dc4c74f1c09d1236cf50d6c55630" title=" " alt="" coords="1591,597,1825,624"/>
+<area shape="rect" id="node29" href="$class_global_placer.html#afd74d9e13d498f713cc19b444529fef4" title=" " alt="" coords="1587,883,1829,909"/>
+<area shape="rect" id="node30" href="$class_parallel_c_l_b_packer.html#aaf51c1970267bc6971b9dafb47cabf46" title=" " alt="" coords="1628,531,1788,573"/>
+<area shape="rect" id="node33" href="$class_global_placer.html#addcee9b008ef4f76f6a8a15fddb29297" title=" " alt="" coords="1597,933,1819,960"/>
+<area shape="rect" id="node34" href="$class_global_placer.html#a3e9e0321e467f8c54211065ca6b2e182" title=" " alt="" coords="1602,715,1814,741"/>
+<area shape="rect" id="node35" href="$class_global_placer.html#a8928fc05ebd34f1966c5ecf744270f34" title=" " alt="" coords="1597,765,1819,792"/>
+<area shape="rect" id="node36" href="$class_general_spreader.html#a6e1521d90fb94d18ff2dfa5e0272db80" title=" " alt="" coords="1577,1035,1839,1061"/>
+<area shape="rect" id="node39" href="$class_global_placer.html#ad6b379801f0d28eead8092e02b3e12c3" title=" " alt="" coords="1589,984,1827,1011"/>
+<area shape="rect" id="node40" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="388,963,544,1005"/>
+<area shape="rect" id="node41" href="$class_wirelength_optimizer.html#ad13c56a5650aae1780b83e17c667f3f1" title=" " alt="" coords="1607,649,1809,690"/>
+<area shape="rect" id="node44" href="$_design_info_8h.html#a0a09afdc39c98662c6ece7099ff4d3a7" title=" " alt="" coords="1665,1136,1751,1163"/>
+<area shape="rect" id="node3" href="$class_placement_info_1_1_placement_macro.html#a0cf2b909e8fe1e783aac1ccea479a828" title="add a virtual cell with a given name into the macro with its offsets in the macro...." alt="" coords="1329,71,1503,113"/>
+<area shape="rect" id="node12" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="1079,279,1231,305"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#a9b15c94f8f5fcff2bd895e3286cb1d3f" title="detects BRAM macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="803,71,1005,97"/>
+<area shape="rect" id="node9" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="800,121,1008,148"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="608,96,736,123"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,733,340,760"/>
+<area shape="rect" id="node7" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,733,181,760"/>
+<area shape="rect" id="node8" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,733,56,760"/>
+<area shape="rect" id="node14" href="$class_design_info_1_1_design_pin.html#a64302cc470b4ba1a8b24a4f67db2cf4c" title="let the parent cell know that one of its pin connects to a specific net" alt="" coords="1331,239,1501,281"/>
+<area shape="rect" id="node18" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#ac30c425c807f542a1d20241d5d7468c6" title="add CARRY&#45;related PlacementUnit into this CLB site" alt="" coords="1329,422,1503,463"/>
+<area shape="rect" id="node19" href="$class_parallel_c_l_b_packer.html#a3f9fb6a2b3483b161e8e8083082cbb48" title="try to rip up the packing for a given CLB site and pack the given PlacementUnit in the site...." alt="" coords="1086,422,1225,463"/>
+<area shape="rect" id="node20" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="832,422,976,463"/>
+<area shape="rect" id="node21" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="603,422,741,463"/>
+<area shape="rect" id="node22" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="397,553,535,594"/>
+<area shape="rect" id="node24" href="$class_global_placer.html#a3e7069774930c89ce676479dd332dc36" title=" " alt="" coords="1332,824,1500,851"/>
+<area shape="rect" id="node25" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="803,817,1005,858"/>
+<area shape="rect" id="node26" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="803,726,1005,767"/>
+<area shape="rect" id="node31" href="$class_parallel_c_l_b_packer.html#aae61408e1484e32f75f793a74290cc3a" title=" " alt="" coords="1347,543,1485,585"/>
+<area shape="rect" id="node32" href="$class_parallel_c_l_b_packer.html#abd5e0da3fe8cf5319d1209c947b925c1" title=" " alt="" coords="603,553,741,594"/>
+<area shape="rect" id="node37" href="$class_general_spreader.html#acee8d5ba55251a75d2f354ad99efbd90" title="spread cells with a given forgetting ratio" alt="" coords="1303,973,1529,1014"/>
+<area shape="rect" id="node38" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="1076,953,1235,980"/>
+<area shape="rect" id="node42" href="$class_wirelength_optimizer.html#ac86a8cec470ba0ec7f05b359adf56810" title="update the net weights in the quadratic model according to B2B net HPWL model." alt="" coords="1339,655,1493,697"/>
+<area shape="rect" id="node43" href="$class_wirelength_optimizer.html#a4a06650ccd86e08513cd48979c0f8849" title="use quadratic model to estimate the HPWL and some timing/user&#45;defined pseudo nets are involved for sp..." alt="" coords="1066,662,1245,703"/>
 </map>

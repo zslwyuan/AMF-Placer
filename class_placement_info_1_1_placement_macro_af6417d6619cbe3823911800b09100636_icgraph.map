@@ -1,10 +1,12 @@
 <map id="PlacementInfo::PlacementMacro::getCellOffsetYInMacro" name="PlacementInfo::PlacementMacro::getCellOffsetYInMacro">
-<area shape="rect" id="node1" title=" " alt="" coords="867,114,1061,155"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a92bbec6e8c1899d04dab2a6ba9251651" title=" " alt="" coords="596,5,819,61"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="608,85,807,126"/>
-<area shape="rect" id="node7" href="$_placement_info_8h.html#ac3f4a0f9e9903f17e35ce7cbedbf97fb" title=" " alt="" coords="665,151,750,177"/>
-<area shape="rect" id="node8" href="$class_placement_info_1_1_placement_net.html#aeed7b5b6d86cd6b1a54a5abb495c1fbc" title="Construct a new Placement Net object." alt="" coords="620,202,795,243"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="340,92,548,119"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,92,292,119"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,92,116,119"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1091,114,1285,155"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a92bbec6e8c1899d04dab2a6ba9251651" title=" " alt="" coords="820,5,1043,61"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="832,85,1031,126"/>
+<area shape="rect" id="node9" href="$_placement_info_8h.html#ac3f4a0f9e9903f17e35ce7cbedbf97fb" title=" " alt="" coords="889,151,974,177"/>
+<area shape="rect" id="node10" href="$class_placement_info_1_1_placement_net.html#aeed7b5b6d86cd6b1a54a5abb495c1fbc" title="Construct a new Placement Net object." alt="" coords="844,202,1019,243"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="564,92,772,119"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="388,92,516,119"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,92,340,119"/>
+<area shape="rect" id="node7" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,92,181,119"/>
+<area shape="rect" id="node8" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,92,56,119"/>
 </map>

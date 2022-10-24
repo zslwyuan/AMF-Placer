@@ -1,11 +1,13 @@
 <map id="DesignInfo::getNets" name="DesignInfo::getNets">
-<area shape="rect" id="node1" title=" " alt="" coords="660,123,796,150"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="411,37,612,78"/>
-<area shape="rect" id="node4" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="424,152,599,179"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,184,116,211"/>
-<area shape="rect" id="node5" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="185,46,341,88"/>
-<area shape="rect" id="node6" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,112,363,153"/>
-<area shape="rect" id="node7" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="185,177,341,218"/>
-<area shape="rect" id="node8" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="199,243,327,270"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="193,294,334,336"/>
+<area shape="rect" id="node1" title=" " alt="" coords="884,123,1020,150"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="635,37,836,78"/>
+<area shape="rect" id="node6" href="$class_placement_info.html#a6ec456c9d7088caf68b950b78e851b9e" title="update PlacementNet objects when there are some updates of PlacementUnit objects (e...." alt="" coords="648,152,823,179"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,184,340,211"/>
+<area shape="rect" id="node4" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,184,181,211"/>
+<area shape="rect" id="node5" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,184,56,211"/>
+<area shape="rect" id="node7" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="409,46,565,88"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="388,112,587,153"/>
+<area shape="rect" id="node9" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="409,177,565,218"/>
+<area shape="rect" id="node10" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="423,243,551,270"/>
+<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="417,294,558,336"/>
 </map>

@@ -1,6 +1,8 @@
 <map id="WirelengthOptimizer::getMacroLegalizationWeight" name="WirelengthOptimizer::getMacroLegalizationWeight">
-<area shape="rect" id="node1" title="Get the net weight for macro legalization." alt="" coords="437,39,628,80"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#a34d54c12285caf69c091ddd806b8816d" title="Get the current macro legalization weight object." alt="" coords="164,5,389,47"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="176,71,377,112"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,46,116,73"/>
+<area shape="rect" id="node1" title="Get the net weight for macro legalization." alt="" coords="661,39,852,80"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#a34d54c12285caf69c091ddd806b8816d" title="Get the current macro legalization weight object." alt="" coords="388,5,613,47"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="400,71,601,112"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,46,340,73"/>
+<area shape="rect" id="node4" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,46,181,73"/>
+<area shape="rect" id="node5" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,46,56,73"/>
 </map>

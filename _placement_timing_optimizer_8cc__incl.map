@@ -1,8 +1,8 @@
 <map id="src/lib/HiFPlacer/placement/placementTiming/PlacementTimingOptimizer.cc" name="src/lib/HiFPlacer/placement/placementTiming/PlacementTimingOptimizer.cc">
-<area shape="rect" id="node1" title=" " alt="" coords="1327,5,1558,61"/>
-<area shape="rect" id="node2" href="$_placement_timing_optimizer_8h.html" title=" " alt="" coords="1201,109,1389,136"/>
-<area shape="rect" id="node30" title=" " alt="" coords="1413,109,1472,136"/>
-<area shape="rect" id="node31" title=" " alt="" coords="1497,109,1565,136"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1446,5,1677,61"/>
+<area shape="rect" id="node2" href="$_placement_timing_optimizer_8h.html" title=" " alt="" coords="1319,109,1507,136"/>
+<area shape="rect" id="node31" title=" " alt="" coords="1532,109,1591,136"/>
+<area shape="rect" id="node32" title=" " alt="" coords="1615,109,1683,136"/>
 <area shape="rect" id="node3" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="811,333,906,360"/>
 <area shape="rect" id="node4" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="726,408,821,435"/>
 <area shape="rect" id="node10" title=" " alt="" coords="882,557,937,584"/>
@@ -10,24 +10,25 @@
 <area shape="rect" id="node13" title=" " alt="" coords="1028,483,1095,509"/>
 <area shape="rect" id="node14" title=" " alt="" coords="96,483,168,509"/>
 <area shape="rect" id="node15" title=" " alt="" coords="1291,483,1338,509"/>
-<area shape="rect" id="node16" title=" " alt="" coords="1491,483,1531,509"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1539,483,1579,509"/>
 <area shape="rect" id="node17" title=" " alt="" coords="275,483,344,509"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1387,483,1445,509"/>
-<area shape="rect" id="node19" href="$_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="1045,184,1161,211"/>
-<area shape="rect" id="node22" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="1275,259,1429,285"/>
-<area shape="rect" id="node23" href="$dump_zip_8h.html" title=" " alt="" coords="347,333,429,360"/>
-<area shape="rect" id="node26" title=" " alt="" coords="1859,333,1917,360"/>
-<area shape="rect" id="node27" title=" " alt="" coords="1739,333,1835,360"/>
-<area shape="rect" id="node28" title=" " alt="" coords="1656,333,1715,360"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1435,483,1493,509"/>
+<area shape="rect" id="node19" href="$_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="1130,184,1246,211"/>
+<area shape="rect" id="node22" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="1393,259,1548,285"/>
+<area shape="rect" id="node23" href="$dump_zip_8h.html" title=" " alt="" coords="324,333,407,360"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1907,333,1965,360"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1787,333,1883,360"/>
+<area shape="rect" id="node28" title=" " alt="" coords="1704,333,1763,360"/>
 <area shape="rect" id="node5" href="$str_print_8h.html" title=" " alt="" coords="368,483,443,509"/>
 <area shape="rect" id="node6" title=" " alt="" coords="227,557,288,584"/>
 <area shape="rect" id="node7" title=" " alt="" coords="313,557,351,584"/>
 <area shape="rect" id="node8" title=" " alt="" coords="375,557,435,584"/>
 <area shape="rect" id="node9" title=" " alt="" coords="459,557,522,584"/>
 <area shape="rect" id="node11" title=" " alt="" coords="546,557,627,584"/>
-<area shape="rect" id="node20" title=" " alt="" coords="780,259,865,285"/>
-<area shape="rect" id="node21" title=" " alt="" coords="890,259,1017,285"/>
-<area shape="rect" id="node29" title=" " alt="" coords="1041,259,1098,285"/>
-<area shape="rect" id="node25" title=" " alt="" coords="1253,333,1328,360"/>
+<area shape="rect" id="node20" title=" " alt="" coords="735,259,820,285"/>
+<area shape="rect" id="node21" title=" " alt="" coords="845,259,971,285"/>
+<area shape="rect" id="node29" title=" " alt="" coords="995,259,1135,285"/>
+<area shape="rect" id="node30" title=" " alt="" coords="1159,259,1217,285"/>
+<area shape="rect" id="node25" title=" " alt="" coords="1301,333,1376,360"/>
 <area shape="rect" id="node24" title=" " alt="" coords="347,408,397,435"/>
 </map>

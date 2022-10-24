@@ -1,10 +1,12 @@
 <map id="DesignInfo::getClocksInDesign" name="DesignInfo::getClocksInDesign">
-<area shape="rect" id="node1" title="Get the all the clock nets in the design." alt="" coords="1589,13,1788,39"/>
-<area shape="rect" id="node2" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1144,5,1319,47"/>
-<area shape="rect" id="node8" href="$class_cluster_placer.html#a195e11693047920316c329564598052d" title="initially cluster cells based on clock domains" alt="" coords="1367,35,1541,76"/>
-<area shape="rect" id="node3" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="927,5,1096,47"/>
-<area shape="rect" id="node4" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="672,5,879,47"/>
-<area shape="rect" id="node5" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="415,13,624,39"/>
-<area shape="rect" id="node6" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="164,13,367,39"/>
-<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title="Get the all the clock nets in the design." alt="" coords="1813,13,2012,39"/>
+<area shape="rect" id="node2" href="$class_cluster_placer.html#a8f7e02d1428290c1ee679f2f43e8867b" title="initially cluster cells based on clock domains and conduct connectivity&#45;based partitioning based on P..." alt="" coords="1368,5,1543,47"/>
+<area shape="rect" id="node10" href="$class_cluster_placer.html#a195e11693047920316c329564598052d" title="initially cluster cells based on clock domains" alt="" coords="1591,35,1765,76"/>
+<area shape="rect" id="node3" href="$class_cluster_placer.html#af7202fb0ce01ef43c3131d20162a95a2" title="call specific partitioners to partition the design netlist into clusters for initial placement" alt="" coords="1151,5,1320,47"/>
+<area shape="rect" id="node4" href="$class_cluster_placer.html#a90317008ebd3425a23044614db7796ba" title="cluster the netlist and create ClusterUnit level netlist for SA placement" alt="" coords="896,5,1103,47"/>
+<area shape="rect" id="node5" href="$class_cluster_placer.html#ad0254cbde0f50918f69e86d6260b292e" title="conduct cluster placement, cluster nodes in the given netlist and place the clusters on the device as..." alt="" coords="639,13,848,39"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="388,13,591,39"/>
+<area shape="rect" id="node7" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,13,340,39"/>
+<area shape="rect" id="node8" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,13,181,39"/>
+<area shape="rect" id="node9" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
 </map>

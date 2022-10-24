@@ -46,7 +46,7 @@
 <area shape="rect" id="node43" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="792,1575,959,1617"/>
 <area shape="rect" id="node44" href="$class_placement_info.html#a3422f2800dcd73950378e539e7ca8d69" title="Get the Bin Grid object for all types of BEL." alt="" coords="789,1641,962,1668"/>
 <area shape="rect" id="node45" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="799,1693,951,1734"/>
-<area shape="rect" id="node46" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="789,1759,961,1785"/>
-<area shape="rect" id="node47" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="785,1810,966,1851"/>
-<area shape="rect" id="node48" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="799,1875,951,1917"/>
+<area shape="rect" id="node46" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title=" " alt="" coords="807,1759,944,1785"/>
+<area shape="rect" id="node47" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="789,1809,961,1836"/>
+<area shape="rect" id="node48" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="785,1861,966,1902"/>
 </map>

@@ -10,6 +10,7 @@ var class_a_m_f_placer =
     [ "incrementalBELPacker", "class_a_m_f_placer.html#a91f820423e8844774dc7419b24132344", null ],
     [ "initialPacker", "class_a_m_f_placer.html#a444b0835607905bb2b4942e393909d12", null ],
     [ "JSON", "class_a_m_f_placer.html#a1f0908a0131fcf86efc2bab444ac7246", null ],
+    [ "paintData", "class_a_m_f_placer.html#ad1d3d0c879cb6a72a381fef2a25201d5", null ],
     [ "parallelCLBPacker", "class_a_m_f_placer.html#a9edb6e34696a6768fc14aaa8ad8c02e8", null ],
     [ "placementInfo", "class_a_m_f_placer.html#aea49bc3654c402760d9a6f88be8ff5f1", null ]
 ];

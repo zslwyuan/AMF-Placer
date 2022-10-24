@@ -10,18 +10,19 @@
 <area shape="rect" id="node9" href="$class_placement_info.html#afbbe29c57c4ae17870c98d9191a11f18" title="get the PlacementUnit Mapping to clock region column for timing optimzation" alt="" coords="256,436,445,477"/>
 <area shape="rect" id="node10" href="$class_placement_info.html#abec52af63f0dc9d260793fd798e2834d" title="move the PlacementUnit to ensure the cells in it are within the device area." alt="" coords="245,319,456,346"/>
 <area shape="rect" id="node12" href="$str_print_8cc.html#a03797150cc06a6f048f1e2c0f1665439" title=" " alt="" coords="301,553,400,579"/>
-<area shape="rect" id="node13" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="251,667,450,708"/>
+<area shape="rect" id="node13" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="251,692,450,733"/>
 <area shape="rect" id="node11" href="$class_placement_info_1_1_placement_unit.html#a798665829e1db97c1b28706a78545e78" title=" " alt="" coords="513,312,688,353"/>
 <area shape="rect" id="node14" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="517,608,684,649"/>
 <area shape="rect" id="node16" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="1057,667,1209,708"/>
 <area shape="rect" id="node18" href="$class_placement_info.html#a3422f2800dcd73950378e539e7ca8d69" title="Get the Bin Grid object for all types of BEL." alt="" coords="514,725,687,751"/>
-<area shape="rect" id="node19" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="518,775,683,802"/>
-<area shape="rect" id="node20" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="510,827,691,868"/>
-<area shape="rect" id="node22" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="525,892,677,933"/>
-<area shape="rect" id="node23" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="525,957,677,999"/>
-<area shape="rect" id="node24" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="507,491,695,532"/>
-<area shape="rect" id="node25" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="504,557,697,583"/>
+<area shape="rect" id="node19" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title=" " alt="" coords="532,775,669,802"/>
+<area shape="rect" id="node20" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="518,826,683,853"/>
+<area shape="rect" id="node21" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="510,877,691,919"/>
+<area shape="rect" id="node23" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="525,943,677,984"/>
+<area shape="rect" id="node24" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="525,1008,677,1049"/>
+<area shape="rect" id="node25" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="507,491,695,532"/>
+<area shape="rect" id="node26" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="504,557,697,583"/>
 <area shape="rect" id="node15" href="$class_placement_info_1_1_compatible_placement_table.html#acb6784c1b88ff54941384d25fb481c23" title="Get the actual occupation of a specific cell." alt="" coords="756,608,999,649"/>
 <area shape="rect" id="node17" href="$class_design_info_1_1_design_element.html#a0094ceadfdafe98cf9eb90f16faf673c" title=" " alt="" coords="1257,667,1435,708"/>
-<area shape="rect" id="node21" href="$class_placement_info_1_1_compatible_placement_table.html#a27fec259866cbc493f67722529ce081c" title="Get the Potential BEL Type IDs for a specific cell object." alt="" coords="745,776,1009,817"/>
+<area shape="rect" id="node22" href="$class_placement_info_1_1_compatible_placement_table.html#a27fec259866cbc493f67722529ce081c" title="Get the Potential BEL Type IDs for a specific cell object." alt="" coords="745,801,1009,843"/>
 </map>

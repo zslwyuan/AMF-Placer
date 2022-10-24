@@ -1,0 +1,52 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,1500,56,1527"/>
+<area shape="rect" id="node2" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="122,1475,199,1502"/>
+<area shape="rect" id="node50" href="$main_8cc.html#a8815343966eb1c9ec97a7aab9eccdc97" title=" " alt="" coords="104,1526,217,1552"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="265,1475,376,1502"/>
+<area shape="rect" id="node4" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="425,250,672,276"/>
+<area shape="rect" id="node7" href="$str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="1070,1008,1161,1035"/>
+<area shape="rect" id="node12" href="$class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph" alt="" coords="459,482,638,524"/>
+<area shape="rect" id="node16" href="$class_placement_info.html#aae1e1f737eaa643ae04a4f4dd959d49f" title="check the utlization of the clock regions on the device" alt="" coords="755,841,935,882"/>
+<area shape="rect" id="node17" href="$str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="1078,1707,1153,1734"/>
+<area shape="rect" id="node18" href="$class_a_m_f_placer.html#a3bc63638c6fcf4e1d4a2ec2cfa3c2b99" title=" " alt="" coords="443,716,654,757"/>
+<area shape="rect" id="node19" href="$class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="433,650,664,692"/>
+<area shape="rect" id="node20" href="$class_placement_timing_optimizer.html#a6bf9224fd0a810facbd9657374db84c5" title=" " alt="" coords="747,776,943,817"/>
+<area shape="rect" id="node21" href="$class_placement_info.html#ac92a9f898fde7212efa62296e95abb32" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="750,1176,939,1217"/>
+<area shape="rect" id="node22" href="$class_placement_info.html#aac7e930d12f2149afe6984a8cad68134" title=" " alt="" coords="749,724,940,751"/>
+<area shape="rect" id="node23" href="$class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="743,2100,946,2127"/>
+<area shape="rect" id="node24" href="$class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="1016,2034,1215,2076"/>
+<area shape="rect" id="node25" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="449,548,648,575"/>
+<area shape="rect" id="node26" href="$class_placement_info.html#ad375f44e1beb054ccab71369b82a67c3" title="dump the congestion mesh grid for evaluation" alt="" coords="444,950,653,976"/>
+<area shape="rect" id="node27" href="$class_placement_info.html#a50e94d6271fe08f6a953382f1ef42ee2" title=" " alt="" coords="451,1234,646,1276"/>
+<area shape="rect" id="node28" href="$class_placement_info.html#afd6eefdcfdfd1fcf889adbdda4f5211a" title="dump the PlacementUnit objects and some placement parameters as a checkpoint" alt="" coords="445,1001,652,1042"/>
+<area shape="rect" id="node29" href="$class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="767,1700,923,1741"/>
+<area shape="rect" id="node30" href="$class_placement_info.html#ac18f726c75937363f52be34154f4468c" title=" " alt="" coords="455,1402,642,1444"/>
+<area shape="rect" id="node31" href="$class_global_placer.html#a34d54c12285caf69c091ddd806b8816d" title="Get the current macro legalization weight object." alt="" coords="436,1468,661,1509"/>
+<area shape="rect" id="node32" href="$class_global_placer.html#a418e40981906a19d68b14c773ab201f4" title="Get the number of macro pseudo net enhancements." alt="" coords="449,1533,649,1574"/>
+<area shape="rect" id="node33" href="$class_global_placer.html#aac6b39caece97c88f0cbf0f522621391" title="Get the current pseudo net weight." alt="" coords="456,1598,641,1640"/>
+<area shape="rect" id="node34" href="$class_global_placer.html#acc12a5f85eeded22a6bf6d5ced231fb4" title=" " alt="" coords="458,1664,639,1705"/>
+<area shape="rect" id="node35" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="448,884,649,925"/>
+<area shape="rect" id="node36" href="$class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="744,1765,945,1806"/>
+<area shape="rect" id="node37" href="$class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="767,1634,923,1676"/>
+<area shape="rect" id="node38" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="781,1583,909,1610"/>
+<area shape="rect" id="node39" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="479,1169,618,1210"/>
+<area shape="rect" id="node40" href="$class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="749,2152,940,2193"/>
+<area shape="rect" id="node41" href="$class_placement_info.html#ae7c0dcd8d6ccdb681f0f29c8d65c911b" title=" " alt="" coords="764,1831,925,1858"/>
+<area shape="rect" id="node42" href="$class_placement_info.html#a39eb9359bec6f297a503a2cb333c50d3" title="reset the LUTFFDeterminedOccupation object" alt="" coords="424,2085,673,2126"/>
+<area shape="rect" id="node43" href="$class_placement_timing_info.html#a2179a625c9672be64b4ed387e89f4642" title=" " alt="" coords="772,1352,917,1393"/>
+<area shape="rect" id="node44" href="$class_global_placer.html#a769b91db354db2b152a69a311ec55320" title="Set the macro legalization parameters (including legalization counter and pseudo net weight)" alt="" coords="436,2202,661,2244"/>
+<area shape="rect" id="node45" href="$class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion." alt="" coords="463,2268,635,2309"/>
+<area shape="rect" id="node46" href="$class_placement_info.html#ab6874a7760f4ba208685fe88ddb9b8e5" title=" " alt="" coords="440,2334,657,2360"/>
+<area shape="rect" id="node47" href="$class_global_placer.html#ab40a26b53745e6f76418954ef214ba8d" title="Set the initial pseudo net weight for the global placer." alt="" coords="456,2385,641,2426"/>
+<area shape="rect" id="node48" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="774,2034,915,2076"/>
+<area shape="rect" id="node49" href="$class_placement_info.html#a7f1faeda139da4654803bf2b80001604" title="verify that each cells in the design can be mapped on the resource elements on the device." alt="" coords="753,1110,936,1152"/>
+<area shape="rect" id="node5" href="$class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization" alt="" coords="721,242,968,284"/>
+<area shape="rect" id="node8" href="$class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="721,46,968,88"/>
+<area shape="rect" id="node9" href="$class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="1024,54,1207,80"/>
+<area shape="rect" id="node10" href="$class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6" title="adjust the resource demand of LUTs/FFs according to routing congestion refer to RippleFPGA&#39;s implemen..." alt="" coords="721,360,968,401"/>
+<area shape="rect" id="node11" href="$class_placement_info_1_1_compatible_placement_table.html#a3b176f3a41c580bc77b3859c94116107" title="forget the occupation adjustment by packing feasibility and routing congestion" alt="" coords="725,111,964,167"/>
+<area shape="rect" id="node6" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="1025,549,1206,590"/>
+<area shape="rect" id="node13" href="$class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="760,608,929,649"/>
+<area shape="rect" id="node14" href="$class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc" title=" " alt="" coords="749,425,940,466"/>
+<area shape="rect" id="node15" href="$class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20" title=" " alt="" coords="741,490,949,532"/>
+</map>

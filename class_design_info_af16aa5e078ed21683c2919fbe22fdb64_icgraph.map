@@ -1,5 +1,7 @@
 <map id="DesignInfo::resetLUTFFDeterminedOccupation" name="DesignInfo::resetLUTFFDeterminedOccupation">
-<area shape="rect" id="node1" title="reset the LUTFFDeterminedOccupation object" alt="" coords="461,5,688,47"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a39eb9359bec6f297a503a2cb333c50d3" title="reset the LUTFFDeterminedOccupation object" alt="" coords="164,5,413,47"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title="reset the LUTFFDeterminedOccupation object" alt="" coords="685,5,912,47"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a39eb9359bec6f297a503a2cb333c50d3" title="reset the LUTFFDeterminedOccupation object" alt="" coords="388,5,637,47"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,13,340,39"/>
+<area shape="rect" id="node4" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,13,181,39"/>
+<area shape="rect" id="node5" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
 </map>

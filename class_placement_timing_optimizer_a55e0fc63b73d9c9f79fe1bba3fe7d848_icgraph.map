@@ -1,6 +1,8 @@
 <map id="PlacementTimingOptimizer::getWorstSlackOfCell" name="PlacementTimingOptimizer::getWorstSlackOfCell">
-<area shape="rect" id="node1" title=" " alt="" coords="640,5,819,47"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title=" " alt="" coords="351,5,592,47"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,5,303,47"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title=" " alt="" coords="864,5,1043,47"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#a6718c1d6c04a2078d29f34d9027a6f4b" title=" " alt="" coords="575,5,816,47"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="388,5,527,47"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,13,340,39"/>
+<area shape="rect" id="node5" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,13,181,39"/>
+<area shape="rect" id="node6" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
 </map>

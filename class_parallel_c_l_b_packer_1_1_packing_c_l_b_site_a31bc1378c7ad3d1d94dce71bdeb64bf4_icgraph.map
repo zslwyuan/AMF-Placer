@@ -1,11 +1,13 @@
 <map id="ParallelCLBPacker::PackingCLBSite::getPlacementInfo" name="ParallelCLBPacker::PackingCLBSite::getPlacementInfo">
-<area shape="rect" id="node1" title=" " alt="" coords="1045,133,1272,174"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="744,5,983,61"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5bb68767518430207cfbf2f5ea773988" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="729,85,997,141"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="744,165,983,221"/>
-<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af3a14f881d82c409152fb64f2f72a5c7" title=" " alt="" coords="744,245,983,301"/>
-<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="537,173,681,214"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="351,173,489,214"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,173,303,214"/>
-<area shape="rect" id="node8" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,180,116,207"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1269,133,1496,174"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5f34ace3d5500bde637290ecdde79a4a" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="968,5,1207,61"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a5bb68767518430207cfbf2f5ea773988" title="Get the max length of paths involving a given PlacementUnit." alt="" coords="953,85,1221,141"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#a4f34cb2d7d9e31105dcf5bc0297e6780" title="Get the total weights of cells in the cluster (each cell will have different weight in the placement)" alt="" coords="968,165,1207,221"/>
+<area shape="rect" id="node11" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site_1_1_packing_c_l_b_cluster.html#af3a14f881d82c409152fb64f2f72a5c7" title=" " alt="" coords="968,245,1207,301"/>
+<area shape="rect" id="node5" href="$class_parallel_c_l_b_packer.html#a921fb77be4e776ada5aeb0cc17e481e9" title="try to find a legal location for the given PlacementUnit when most of PlacementUnits are packed into ..." alt="" coords="761,173,905,214"/>
+<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a3760e55c0fd5a0b7898e106afa28f67f" title="handle the PlacementUnits that cannot be packed during the parallel procedure" alt="" coords="575,173,713,214"/>
+<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="388,173,527,214"/>
+<area shape="rect" id="node8" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,180,340,207"/>
+<area shape="rect" id="node9" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,180,181,207"/>
+<area shape="rect" id="node10" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,180,56,207"/>
 </map>

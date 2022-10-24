@@ -1,7 +1,9 @@
 <map id="PlacementInfo::CompatiblePlacementTable::resetCellOccupationToDefault" name="PlacementInfo::CompatiblePlacementTable::resetCellOccupationToDefault">
-<area shape="rect" id="node1" title="forget the occupation adjustment by packing feasibility and routing congestion" alt="" coords="915,5,1153,61"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="620,20,867,47"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,20,116,47"/>
-<area shape="rect" id="node4" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="413,45,572,72"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,42,365,83"/>
+<area shape="rect" id="node1" title="forget the occupation adjustment by packing feasibility and routing congestion" alt="" coords="1139,5,1377,61"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="844,20,1091,47"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,20,340,47"/>
+<area shape="rect" id="node6" href="$class_global_placer.html#a38469fa983e153bf5d3375000775f82e" title="cell spreading for all types of elements" alt="" coords="637,45,796,72"/>
+<area shape="rect" id="node4" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,20,181,47"/>
+<area shape="rect" id="node5" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,20,56,47"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="388,42,589,83"/>
 </map>

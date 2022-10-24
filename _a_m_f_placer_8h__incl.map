@@ -1,52 +1,52 @@
 <map id="src/app/AMFPlacer/AMFPlacer.h" name="src/app/AMFPlacer/AMFPlacer.h">
-<area shape="rect" id="node1" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5488,5,5701,32"/>
-<area shape="rect" id="node2" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="5467,468,5562,495"/>
-<area shape="rect" id="node3" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="4385,543,4479,569"/>
-<area shape="rect" id="node13" title=" " alt="" coords="2833,617,2905,644"/>
-<area shape="rect" id="node18" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="4441,80,4548,107"/>
-<area shape="rect" id="node21" href="$_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="4563,319,4679,345"/>
-<area shape="rect" id="node31" title=" " alt="" coords="5465,244,5522,271"/>
-<area shape="rect" id="node36" href="$_placement_timing_optimizer_8h.html" title=" " alt="" coords="3485,244,3673,271"/>
-<area shape="rect" id="node38" href="$_incremental_b_e_l_packer_8h.html" title="This header file contains the definitions of IncrementalBELPacker class and its internal modules and ..." alt="" coords="4037,162,4203,189"/>
-<area shape="rect" id="node40" href="$_initial_packer_8h.html" title="This header file contains the definitions of InitialPacker class and its internal modules and APIs wh..." alt="" coords="7139,244,7243,271"/>
-<area shape="rect" id="node45" href="$_parallel_c_l_b_packer_8h.html" title="This header file contains the definitions of ParallelCLBPacker class and its internal modules and API..." alt="" coords="6413,80,6555,107"/>
-<area shape="rect" id="node47" href="$simple_j_s_o_n_8h.html" title=" " alt="" coords="7183,468,7318,495"/>
-<area shape="rect" id="node50" title=" " alt="" coords="8401,80,8541,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="5301,692,5355,719"/>
-<area shape="rect" id="node11" title=" " alt="" coords="1289,617,1357,644"/>
-<area shape="rect" id="node12" title=" " alt="" coords="4585,617,4652,644"/>
-<area shape="rect" id="node14" title=" " alt="" coords="6417,617,6463,644"/>
-<area shape="rect" id="node16" title=" " alt="" coords="5380,617,5449,644"/>
-<area shape="rect" id="node17" title=" " alt="" coords="7725,617,7784,644"/>
-<area shape="rect" id="node4" href="$str_print_8h.html" title=" " alt="" coords="8552,617,8627,644"/>
-<area shape="rect" id="node15" title=" " alt="" coords="2113,617,2153,644"/>
-<area shape="rect" id="node5" title=" " alt="" coords="8751,692,8812,719"/>
-<area shape="rect" id="node6" title=" " alt="" coords="8411,692,8450,719"/>
-<area shape="rect" id="node7" title=" " alt="" coords="8474,692,8534,719"/>
-<area shape="rect" id="node8" title=" " alt="" coords="8558,692,8621,719"/>
-<area shape="rect" id="node10" title=" " alt="" coords="8645,692,8726,719"/>
-<area shape="rect" id="node19" href="$_c_l_b_legalizer_8h.html" title="This header file contains the definitions of CLBLegalizer class and its internal modules and APIs whi..." alt="" coords="3814,162,3925,189"/>
-<area shape="rect" id="node23" title=" " alt="" coords="5702,393,5829,420"/>
-<area shape="rect" id="node25" href="$dump_zip_8h.html" title=" " alt="" coords="4983,468,5065,495"/>
-<area shape="rect" id="node27" title=" " alt="" coords="1953,468,2010,495"/>
-<area shape="rect" id="node28" title=" " alt="" coords="1401,468,1497,495"/>
-<area shape="rect" id="node29" title=" " alt="" coords="2723,468,2781,495"/>
-<area shape="rect" id="node32" href="$_cluster_placer_8h.html" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="2310,244,2421,271"/>
-<area shape="rect" id="node33" href="$_general_spreader_8h.html" title="This header file contains the definitions of GeneralSpreader class and its internal modules and APIs ..." alt="" coords="5835,244,5965,271"/>
-<area shape="rect" id="node35" href="$_macro_legalizer_8h.html" title="This header file contains the definitions of MacroLegalizer class and its internal modules and APIs w..." alt="" coords="4537,162,4657,189"/>
-<area shape="rect" id="node37" href="$_wirelength_optimizer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="5106,162,5254,189"/>
-<area shape="rect" id="node20" href="$_min_cost_bipartite_matcher_8h.html" title=" " alt="" coords="1667,244,1842,271"/>
-<area shape="rect" id="node22" title=" " alt="" coords="4579,393,4664,420"/>
-<area shape="rect" id="node24" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="3539,393,3693,420"/>
-<area shape="rect" id="node30" title=" " alt="" coords="7323,393,7381,420"/>
-<area shape="rect" id="node26" title=" " alt="" coords="5923,543,5997,569"/>
-<area shape="rect" id="node34" href="$const_8h.html" title=" " alt="" coords="6205,319,6269,345"/>
-<area shape="rect" id="node39" title=" " alt="" coords="6094,244,6218,271"/>
-<area shape="rect" id="node41" href="$read_zip_8h.html" title=" " alt="" coords="6851,319,6925,345"/>
-<area shape="rect" id="node43" href="$string_check_8h.html" title=" " alt="" coords="6832,543,6933,569"/>
-<area shape="rect" id="node44" title=" " alt="" coords="7912,319,7971,345"/>
-<area shape="rect" id="node42" title=" " alt="" coords="7558,543,7615,569"/>
-<area shape="rect" id="node46" title=" " alt="" coords="7691,155,7888,196"/>
-<area shape="rect" id="node48" title=" " alt="" coords="7211,543,7290,569"/>
-<area shape="rect" id="node49" title=" " alt="" coords="7315,543,7381,569"/>
+<area shape="rect" id="node1" title="The major file describing the overall workflow of AMFPlacer (an analytical mixed&#45;size FPGA placer)" alt="" coords="5639,5,5853,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,137,121"/>
+<area shape="rect" id="node3" href="$_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="5411,483,5505,509"/>
+<area shape="rect" id="node4" href="$_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="4856,557,4951,584"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1259,632,1331,659"/>
+<area shape="rect" id="node18" href="$_global_placer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="2282,87,2389,114"/>
+<area shape="rect" id="node20" href="$_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="4255,333,4371,360"/>
+<area shape="rect" id="node31" title=" " alt="" coords="973,333,1031,360"/>
+<area shape="rect" id="node36" href="$_placement_timing_optimizer_8h.html" title=" " alt="" coords="3680,259,3868,285"/>
+<area shape="rect" id="node38" href="$_incremental_b_e_l_packer_8h.html" title="This header file contains the definitions of IncrementalBELPacker class and its internal modules and ..." alt="" coords="6629,177,6796,203"/>
+<area shape="rect" id="node40" href="$_initial_packer_8h.html" title="This header file contains the definitions of InitialPacker class and its internal modules and APIs wh..." alt="" coords="7147,259,7251,285"/>
+<area shape="rect" id="node45" href="$_parallel_c_l_b_packer_8h.html" title="This header file contains the definitions of ParallelCLBPacker class and its internal modules and API..." alt="" coords="6223,87,6365,114"/>
+<area shape="rect" id="node47" href="$simple_j_s_o_n_8h.html" title=" " alt="" coords="7144,483,7279,509"/>
+<area shape="rect" id="node50" title=" " alt="" coords="8223,87,8363,114"/>
+<area shape="rect" id="node10" title=" " alt="" coords="3289,707,3344,733"/>
+<area shape="rect" id="node11" title=" " alt="" coords="4488,632,4556,659"/>
+<area shape="rect" id="node12" title=" " alt="" coords="5738,632,5805,659"/>
+<area shape="rect" id="node14" title=" " alt="" coords="6331,632,6377,659"/>
+<area shape="rect" id="node16" title=" " alt="" coords="3917,632,3986,659"/>
+<area shape="rect" id="node17" title=" " alt="" coords="7614,632,7673,659"/>
+<area shape="rect" id="node5" href="$str_print_8h.html" title=" " alt="" coords="8213,632,8287,659"/>
+<area shape="rect" id="node15" title=" " alt="" coords="2663,632,2703,659"/>
+<area shape="rect" id="node6" title=" " alt="" coords="8107,707,8169,733"/>
+<area shape="rect" id="node7" title=" " alt="" coords="8193,707,8232,733"/>
+<area shape="rect" id="node8" title=" " alt="" coords="8256,707,8316,733"/>
+<area shape="rect" id="node9" title=" " alt="" coords="8340,707,8403,733"/>
+<area shape="rect" id="node19" href="$_c_l_b_legalizer_8h.html" title="This header file contains the definitions of CLBLegalizer class and its internal modules and APIs whi..." alt="" coords="1672,259,1783,285"/>
+<area shape="rect" id="node22" title=" " alt="" coords="4973,408,5100,435"/>
+<area shape="rect" id="node24" href="$dump_zip_8h.html" title=" " alt="" coords="1479,483,1562,509"/>
+<area shape="rect" id="node26" title=" " alt="" coords="2468,483,2525,509"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1850,483,1946,509"/>
+<area shape="rect" id="node28" title=" " alt="" coords="2223,483,2282,509"/>
+<area shape="rect" id="node32" href="$_cluster_placer_8h.html" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="2584,259,2695,285"/>
+<area shape="rect" id="node33" href="$_general_spreader_8h.html" title="This header file contains the definitions of GeneralSpreader class and its internal modules and APIs ..." alt="" coords="5339,259,5468,285"/>
+<area shape="rect" id="node35" href="$_macro_legalizer_8h.html" title="This header file contains the definitions of MacroLegalizer class and its internal modules and APIs w..." alt="" coords="2077,259,2197,285"/>
+<area shape="rect" id="node37" href="$_wirelength_optimizer_8h.html" title="This header file contains the definitions of GlobalPlacer class and its internal modules and APIs whi..." alt="" coords="4037,177,4185,203"/>
+<area shape="rect" id="node21" title=" " alt="" coords="4407,408,4493,435"/>
+<area shape="rect" id="node23" href="$_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="3405,408,3559,435"/>
+<area shape="rect" id="node29" title=" " alt="" coords="4243,408,4383,435"/>
+<area shape="rect" id="node30" title=" " alt="" coords="7253,408,7311,435"/>
+<area shape="rect" id="node25" title=" " alt="" coords="5026,557,5101,584"/>
+<area shape="rect" id="node34" href="$const_8h.html" title=" " alt="" coords="5986,333,6050,360"/>
+<area shape="rect" id="node39" title=" " alt="" coords="6897,259,7021,285"/>
+<area shape="rect" id="node41" href="$read_zip_8h.html" title=" " alt="" coords="6530,333,6605,360"/>
+<area shape="rect" id="node43" href="$string_check_8h.html" title=" " alt="" coords="6746,557,6847,584"/>
+<area shape="rect" id="node44" title=" " alt="" coords="7541,333,7599,360"/>
+<area shape="rect" id="node42" title=" " alt="" coords="7371,557,7428,584"/>
+<area shape="rect" id="node46" title=" " alt="" coords="6407,169,6605,211"/>
+<area shape="rect" id="node48" title=" " alt="" coords="7075,557,7153,584"/>
+<area shape="rect" id="node49" title=" " alt="" coords="7178,557,7245,584"/>
 </map>

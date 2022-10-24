@@ -1,10 +1,12 @@
 <map id="PlacementInfo::PlacementMacro::hasCell" name="PlacementInfo::PlacementMacro::hasCell">
-<area shape="rect" id="node1" title=" " alt="" coords="868,118,1043,159"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a977fe1bd59bce4a4f1671ef8abe69c76" title="find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mappe..." alt="" coords="609,5,807,61"/>
-<area shape="rect" id="node3" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="609,85,807,126"/>
-<area shape="rect" id="node7" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6ce6ab50b41b747826397da9c13a89ff" title="map cells in MUXF7 macro to CLB slot" alt="" coords="596,150,820,191"/>
-<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6adb673f74d9954f73a49c88db60ac68" title="map cells in MUXF8 macro to CLB slot" alt="" coords="596,215,820,257"/>
-<area shape="rect" id="node4" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="340,92,548,119"/>
-<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="164,92,292,119"/>
-<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,92,116,119"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1092,118,1267,159"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a977fe1bd59bce4a4f1671ef8abe69c76" title="find the correspdnding FF control set id for a given Mux macro (this mux macro should have been mappe..." alt="" coords="833,5,1031,61"/>
+<area shape="rect" id="node3" href="$class_initial_packer.html#abf1613d930d68e747f4d729aecb9bffa" title=" " alt="" coords="833,85,1031,126"/>
+<area shape="rect" id="node9" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6ce6ab50b41b747826397da9c13a89ff" title="map cells in MUXF7 macro to CLB slot" alt="" coords="820,150,1044,191"/>
+<area shape="rect" id="node10" href="$class_parallel_c_l_b_packer_1_1_packing_c_l_b_site.html#a6adb673f74d9954f73a49c88db60ac68" title="map cells in MUXF8 macro to CLB slot" alt="" coords="820,215,1044,257"/>
+<area shape="rect" id="node4" href="$class_initial_packer.html#ae1676e7770568f2778e4f24fe8be9b18" title="detects CARRY macros and clusters the related cells into PlacementInfo::PlacementMacro" alt="" coords="564,92,772,119"/>
+<area shape="rect" id="node5" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="388,92,516,119"/>
+<area shape="rect" id="node6" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,92,340,119"/>
+<area shape="rect" id="node7" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,92,181,119"/>
+<area shape="rect" id="node8" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,92,56,119"/>
 </map>

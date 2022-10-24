@@ -1,8 +1,10 @@
 <map id="getAngle" name="getAngle">
-<area shape="rect" id="node1" title=" " alt="" coords="661,85,735,111"/>
-<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#add51eec6b7e9db37932ad704ce57f507" title=" " alt="" coords="391,5,573,47"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title=" " alt="" coords="351,70,613,126"/>
-<area shape="rect" id="node6" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title=" " alt="" coords="381,150,583,206"/>
-<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="164,117,303,159"/>
-<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,125,116,151"/>
+<area shape="rect" id="node1" title=" " alt="" coords="885,85,959,111"/>
+<area shape="rect" id="node2" href="$class_parallel_c_l_b_packer.html#add51eec6b7e9db37932ad704ce57f507" title=" " alt="" coords="615,5,797,47"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#abea3ffc7912903a9cd501bb66ef954b0" title=" " alt="" coords="575,70,837,126"/>
+<area shape="rect" id="node8" href="$class_parallel_c_l_b_packer.html#a3680e4cce3fd43017865e0135814b8ec" title=" " alt="" coords="605,150,807,206"/>
+<area shape="rect" id="node4" href="$class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="388,117,527,159"/>
+<area shape="rect" id="node5" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,125,340,151"/>
+<area shape="rect" id="node6" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,125,181,151"/>
+<area shape="rect" id="node7" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,125,56,151"/>
 </map>

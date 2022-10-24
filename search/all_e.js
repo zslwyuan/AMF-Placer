@@ -16,7 +16,7 @@ var searchData=
   ['net_1383',['net',['../class_placement_timing_info_1_1_timing_graph_1_1_timing_edge.html#a868e75588aa2e9c18e50912aeccb359f',1,'PlacementTimingInfo::TimingGraph::TimingEdge']]],
   ['netactualslackpinnum_1384',['netActualSlackPinNum',['../class_placement_timing_optimizer.html#a9bac53e0ee9571d971f4eede330cf39e',1,'PlacementTimingOptimizer']]],
   ['netdistribution_1385',['netDistribution',['../class_placement_info.html#aa589e6a1198d6d444d3a5821678d9183',1,'PlacementInfo']]],
-  ['netlist_1386',['netlist',['../class_design_info.html#a6bdc4bb5c70782b881791f1cee861ed9',1,'DesignInfo::netlist()'],['../class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5',1,'GraphPartitioner::netList()']]],
+  ['netlist_1386',['netList',['../class_graph_partitioner.html#ac4ebc3426ef3049b741bdd26028d79c5',1,'GraphPartitioner::netList()'],['../class_design_info.html#a6bdc4bb5c70782b881791f1cee861ed9',1,'DesignInfo::netlist()']]],
   ['netname_1387',['netName',['../class_design_info_1_1_design_pin.html#a19d00022d40327b33625c14676540d0f',1,'DesignInfo::DesignPin']]],
   ['netnames_1388',['netNames',['../class_design_info_1_1_design_cell.html#a249ac4694875069d50d11398168be80b',1,'DesignInfo::DesignCell']]],
   ['netpinenhancerate_1389',['netPinEnhanceRate',['../class_wirelength_optimizer.html#aa5b671bb76229563e631730e5e75ab8d',1,'WirelengthOptimizer']]],

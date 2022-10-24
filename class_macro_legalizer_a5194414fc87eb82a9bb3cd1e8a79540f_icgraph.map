@@ -1,7 +1,9 @@
 <map id="MacroLegalizer::getAverageDisplacementOfExactLegalization" name="MacroLegalizer::getAverageDisplacementOfExactLegalization">
-<area shape="rect" id="node1" title="Get the average displacement of exact legalization for the involved PlacementUnit." alt="" coords="648,27,864,69"/>
-<area shape="rect" id="node2" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="413,5,600,32"/>
-<area shape="rect" id="node5" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="414,57,599,98"/>
-<area shape="rect" id="node3" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="164,27,365,69"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,35,116,61"/>
+<area shape="rect" id="node1" title="Get the average displacement of exact legalization for the involved PlacementUnit." alt="" coords="872,27,1088,69"/>
+<area shape="rect" id="node2" href="$class_global_placer.html#ad4442b1120a81645cfffdeccf334d52e" title="legalize specific types of macro to the target regions" alt="" coords="637,5,824,32"/>
+<area shape="rect" id="node7" href="$class_global_placer.html#a3ab05c4e6656eb025042e22016229b68" title="update pseudo net weight according to placement progress" alt="" coords="638,57,823,98"/>
+<area shape="rect" id="node3" href="$class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="388,27,589,69"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,35,340,61"/>
+<area shape="rect" id="node5" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,35,181,61"/>
+<area shape="rect" id="node6" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,35,56,61"/>
 </map>

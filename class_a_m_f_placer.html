@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('class_a_m_f_placer.html',''); initResi
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_a_m_f_placer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -141,6 +142,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aca812cc7fbc4d53806148d7034ae3981"><td class="mdescLeft">&#160;</td><td class="mdescRight">launch the analytical mixed-size FPGA placement procedure  <a href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981">More...</a><br /></td></tr>
 <tr class="separator:aca812cc7fbc4d53806148d7034ae3981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ad1d3d0c879cb6a72a381fef2a25201d5"><td class="memItemLeft" align="right" valign="top">PaintDataBase *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_f_placer.html#ad1d3d0c879cb6a72a381fef2a25201d5">paintData</a> = nullptr</td></tr>
+<tr class="separator:ad1d3d0c879cb6a72a381fef2a25201d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ac7cf3a0b0c2c5538565356abeda46bcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_device_info.html">DeviceInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_a_m_f_placer.html#ac7cf3a0b0c2c5538565356abeda46bcb">deviceinfo</a> = nullptr</td></tr>
@@ -172,7 +178,7 @@ Private Attributes</h2></td></tr>
 <div class="textblock"><p><a class="el" href="class_a_m_f_placer.html" title="AMFPlacer is an analytical mixed-size FPGA placer.">AMFPlacer</a> is an analytical mixed-size FPGA placer. </p>
 <p>To enable the performance optimization of application mapping on modern field-programmable gate arrays (FPGAs), certain critical path portions of the designs might be prearranged into many multi-cell macros during synthesis. These movable macros with constraints of shape and resources lead to challenging mixed-size placement for FPGA designs which cannot be addressed by previous works of analytical placers. In this work, we propose AMF-Placer, an open-source analytical mixed-size FPGA placer supporting mixed-size placement on FPGA, with an interface to Xilinx Vivado. To speed up the convergence and improve the quality of the placement, AMF-Placer is equipped with a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Based on a set of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure can be accelerated by 2.41x on average. </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00042">42</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00043">43</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4bd86b7a1afa4822b9ef5d45686a072d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bd86b7a1afa4822b9ef5d45686a072d">&#9670;&nbsp;</a></span>AMFPlacer()</h2>
@@ -206,7 +212,7 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00050">50</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00051">51</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -256,7 +262,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00089">89</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00091">91</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
 </div>
 </div>
@@ -284,9 +290,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00102">102</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00104">104</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -302,8 +308,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_a_m_f_placer_a3bc63638c6fcf4e1d4a2ec2cfa3c2b99_icgraph.png" border="0" usemap="#class_a_m_f_placer_a3bc63638c6fcf4e1d4a2ec2cfa3c2b99_icgraph" alt=""/></div>
 <map name="class_a_m_f_placer_a3bc63638c6fcf4e1d4a2ec2cfa3c2b99_icgraph" id="class_a_m_f_placer_a3bc63638c6fcf4e1d4a2ec2cfa3c2b99_icgraph">
-<area shape="rect" title=" " alt="" coords="164,5,375,47"/>
-<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" title=" " alt="" coords="388,5,599,47"/>
+<area shape="rect" href="class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,13,340,39"/>
+<area shape="rect" href="main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,13,181,39"/>
+<area shape="rect" href="main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
 </map>
 </div>
 
@@ -334,62 +342,74 @@ Here is the caller graph for this function:</div>
 
 <p>launch the analytical mixed-size FPGA placement procedure </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00122">122</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00124">124</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="main_8cc_source.html#l00016">runPlacer()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_a_m_f_placer_aca812cc7fbc4d53806148d7034ae3981_cgraph.png" border="0" usemap="#class_a_m_f_placer_aca812cc7fbc4d53806148d7034ae3981_cgraph" alt=""/></div>
 <map name="class_a_m_f_placer_aca812cc7fbc4d53806148d7034ae3981_cgraph" id="class_a_m_f_placer_aca812cc7fbc4d53806148d7034ae3981_cgraph">
-<area shape="rect" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,1511,116,1538"/>
+<area shape="rect" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,1526,116,1553"/>
 <area shape="rect" href="class_placement_info.html#adcdcb38c96ddfbdf0bba26ca5738cac6" title="adjust the resource demand of LUTs/FFs according to packing feasibility and routing congestion" alt="" coords="165,314,412,341"/>
-<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="820,1123,911,1150"/>
-<area shape="rect" href="class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph" alt="" coords="199,492,378,533"/>
-<area shape="rect" href="class_placement_info.html#aae1e1f737eaa643ae04a4f4dd959d49f" title="check the utlization of the clock regions on the device" alt="" coords="495,555,675,596"/>
-<area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="828,1867,903,1894"/>
+<area shape="rect" href="str_print_8cc.html#a361dd1f71740d6b50ed46dd18246c2ab" title=" " alt="" coords="820,1239,911,1266"/>
+<area shape="rect" href="class_placement_info.html#acaa7520c9a32ed41e4e327b54c3b9a3c" title="call timing info to build simple timing graph" alt="" coords="199,636,378,677"/>
+<area shape="rect" href="class_placement_info.html#aae1e1f737eaa643ae04a4f4dd959d49f" title="check the utlization of the clock regions on the device" alt="" coords="495,372,675,413"/>
+<area shape="rect" href="str_print_8cc.html#a03b6174b3e71ead6304cc54724c5b7f6" title=" " alt="" coords="828,1850,903,1877"/>
 <area shape="rect" href="class_a_m_f_placer.html#a3bc63638c6fcf4e1d4a2ec2cfa3c2b99" title=" " alt="" coords="183,769,394,811"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="173,835,404,876"/>
-<area shape="rect" href="class_placement_timing_optimizer.html#a6bf9224fd0a810facbd9657374db84c5" title=" " alt="" coords="487,1225,683,1267"/>
-<area shape="rect" href="class_placement_info.html#ac92a9f898fde7212efa62296e95abb32" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="490,1393,679,1435"/>
-<area shape="rect" href="class_placement_info.html#aac7e930d12f2149afe6984a8cad68134" title=" " alt="" coords="489,803,680,830"/>
-<area shape="rect" href="class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="483,2254,686,2281"/>
-<area shape="rect" href="class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="766,2196,965,2237"/>
-<area shape="rect" href="class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="189,1069,388,1095"/>
-<area shape="rect" href="class_placement_info.html#ad375f44e1beb054ccab71369b82a67c3" title="dump the congestion mesh grid for evaluation" alt="" coords="184,1237,393,1263"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#aa2e835c9fd98444e1f406c128f6b1c13" title=" " alt="" coords="173,900,404,941"/>
+<area shape="rect" href="class_placement_timing_optimizer.html#a6bf9224fd0a810facbd9657374db84c5" title=" " alt="" coords="487,1005,683,1047"/>
+<area shape="rect" href="class_placement_info.html#ac92a9f898fde7212efa62296e95abb32" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="490,1123,679,1164"/>
+<area shape="rect" href="class_placement_info.html#aac7e930d12f2149afe6984a8cad68134" title=" " alt="" coords="489,853,680,879"/>
+<area shape="rect" href="class_global_placer.html#a3a96135a3d9dfc5af2c69f2fbe64bcee" title="cluster elements and conduct initial placement at coarse&#45;grained level" alt="" coords="483,2245,686,2271"/>
+<area shape="rect" href="class_placement_info.html#aa57b4ff9ac730c7760e89fd2b8e183aa" title="update the B2B net model for the placement and get the total HPWL of all the nets in the design" alt="" coords="766,2187,965,2228"/>
+<area shape="rect" href="class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="189,1402,388,1429"/>
+<area shape="rect" href="class_placement_info.html#ad375f44e1beb054ccab71369b82a67c3" title="dump the congestion mesh grid for evaluation" alt="" coords="184,1017,393,1043"/>
 <area shape="rect" href="class_placement_info.html#a50e94d6271fe08f6a953382f1ef42ee2" title=" " alt="" coords="487,97,682,139"/>
-<area shape="rect" href="class_placement_info.html#afd6eefdcfdfd1fcf889adbdda4f5211a" title="dump the PlacementUnit objects and some placement parameters as a checkpoint" alt="" coords="185,1288,392,1329"/>
-<area shape="rect" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="507,1801,663,1843"/>
-<area shape="rect" href="class_placement_info.html#ac18f726c75937363f52be34154f4468c" title=" " alt="" coords="195,1471,382,1512"/>
-<area shape="rect" href="class_global_placer.html#a34d54c12285caf69c091ddd806b8816d" title="Get the current macro legalization weight object." alt="" coords="176,1536,401,1577"/>
-<area shape="rect" href="class_global_placer.html#a418e40981906a19d68b14c773ab201f4" title="Get the number of macro pseudo net enhancements." alt="" coords="189,1601,389,1643"/>
-<area shape="rect" href="class_global_placer.html#aac6b39caece97c88f0cbf0f522621391" title="Get the current pseudo net weight." alt="" coords="196,1667,381,1708"/>
-<area shape="rect" href="class_global_placer.html#acc12a5f85eeded22a6bf6d5ced231fb4" title=" " alt="" coords="198,1732,379,1773"/>
-<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="188,1120,389,1161"/>
-<area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="484,1919,685,1960"/>
-<area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="507,1736,663,1777"/>
-<area shape="rect" href="class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="521,1867,649,1894"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="219,1405,358,1447"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="489,2305,680,2347"/>
-<area shape="rect" href="class_placement_info.html#ae7c0dcd8d6ccdb681f0f29c8d65c911b" title=" " alt="" coords="208,2001,369,2027"/>
-<area shape="rect" href="class_placement_info.html#a39eb9359bec6f297a503a2cb333c50d3" title="reset the LUTFFDeterminedOccupation object" alt="" coords="164,2153,413,2195"/>
-<area shape="rect" href="class_placement_timing_info.html#a2179a625c9672be64b4ed387e89f4642" title=" " alt="" coords="216,952,361,993"/>
-<area shape="rect" href="class_global_placer.html#a769b91db354db2b152a69a311ec55320" title="Set the macro legalization parameters (including legalization counter and pseudo net weight)" alt="" coords="176,2271,401,2312"/>
-<area shape="rect" href="class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion." alt="" coords="203,2336,375,2377"/>
-<area shape="rect" href="class_global_placer.html#ab40a26b53745e6f76418954ef214ba8d" title="Set the initial pseudo net weight for the global placer." alt="" coords="196,2401,381,2443"/>
-<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="514,2036,655,2077"/>
-<area shape="rect" href="class_placement_info.html#a7f1faeda139da4654803bf2b80001604" title="verify that each cells in the design can be mapped on the resource elements on the device." alt="" coords="493,905,676,947"/>
+<area shape="rect" href="class_placement_info.html#afd6eefdcfdfd1fcf889adbdda4f5211a" title="dump the PlacementUnit objects and some placement parameters as a checkpoint" alt="" coords="185,1184,392,1225"/>
+<area shape="rect" href="class_incremental_b_e_l_packer.html#afcee4a24593847a9f0ad1a7e1fde0acc" title="try to pair FFs in the design netlist which are neighbors according to a given threshold and the cont..." alt="" coords="507,1843,663,1884"/>
+<area shape="rect" href="class_placement_info.html#ac18f726c75937363f52be34154f4468c" title=" " alt="" coords="195,1453,382,1495"/>
+<area shape="rect" href="class_global_placer.html#a34d54c12285caf69c091ddd806b8816d" title="Get the current macro legalization weight object." alt="" coords="176,1519,401,1560"/>
+<area shape="rect" href="class_global_placer.html#a418e40981906a19d68b14c773ab201f4" title="Get the number of macro pseudo net enhancements." alt="" coords="189,1584,389,1625"/>
+<area shape="rect" href="class_global_placer.html#aac6b39caece97c88f0cbf0f522621391" title="Get the current pseudo net weight." alt="" coords="196,1649,381,1691"/>
+<area shape="rect" href="class_global_placer.html#acc12a5f85eeded22a6bf6d5ced231fb4" title=" " alt="" coords="198,1715,379,1756"/>
+<area shape="rect" href="class_global_placer.html#aa0a2c26154bfa7971eedf87f4fc9ad79" title="wirelength optimization + cell spreading + legalization + area adjustion" alt="" coords="188,835,389,876"/>
+<area shape="rect" href="class_global_placer.html#a49624faa647a3fbdc3fd38e2905c8e65" title="fix the locations of CLB and let macros move without low pseudo net at initial stages,..." alt="" coords="484,2077,685,2119"/>
+<area shape="rect" href="class_incremental_b_e_l_packer.html#a241df33330f3138754915482bf78a1e6" title="try to pair LUTs/FFs in the design netlist which are neighbors according to a given threshold and con..." alt="" coords="507,1777,663,1819"/>
+<area shape="rect" href="class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="521,1726,649,1753"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a2c5914557e975a42157ff48b25bebdc2" title="packing the PlacementUnits (which are compatible to CLB sites) into CLB sites" alt="" coords="219,1119,358,1160"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a7112645ab9e2f922625b5c23ebc117a2" title="update the location of PlacementUnits according to the packing result" alt="" coords="489,2296,680,2337"/>
+<area shape="rect" href="class_placement_info.html#ae7c0dcd8d6ccdb681f0f29c8d65c911b" title=" " alt="" coords="208,1933,369,1959"/>
+<area shape="rect" href="class_placement_info.html#a39eb9359bec6f297a503a2cb333c50d3" title="reset the LUTFFDeterminedOccupation object" alt="" coords="164,2136,413,2177"/>
+<area shape="rect" href="class_placement_timing_info.html#a2179a625c9672be64b4ed387e89f4642" title=" " alt="" coords="512,1356,657,1397"/>
+<area shape="rect" href="class_global_placer.html#a769b91db354db2b152a69a311ec55320" title="Set the macro legalization parameters (including legalization counter and pseudo net weight)" alt="" coords="176,2253,401,2295"/>
+<area shape="rect" href="class_global_placer.html#ae8ea5bbfb70ae65f5b54f1ceb2bbdd25" title="Set the distance upperbound of neighbor LUT/FF&#45;like elements for area adjustion." alt="" coords="203,2319,375,2360"/>
+<area shape="rect" href="class_placement_info.html#ab6874a7760f4ba208685fe88ddb9b8e5" title=" " alt="" coords="180,2385,397,2411"/>
+<area shape="rect" href="class_global_placer.html#ab40a26b53745e6f76418954ef214ba8d" title="Set the initial pseudo net weight for the global placer." alt="" coords="196,2436,381,2477"/>
+<area shape="rect" href="class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="514,1960,655,2001"/>
+<area shape="rect" href="class_placement_info.html#a7f1faeda139da4654803bf2b80001604" title="verify that each cells in the design can be mapped on the resource elements on the device." alt="" coords="493,1291,676,1332"/>
 <area shape="rect" href="class_placement_info.html#a76823dff50d1bb7356c38d0dc86e2e41" title="adjust the utlization of clock&#45;related elements to mitigate the overflow of clock utilization" alt="" coords="461,307,708,348"/>
 <area shape="rect" href="class_placement_info.html#ab84f0cbcf36011c59150288a49a83942" title="adjust the resource demand of LUTs/FFs according to packing feasibility" alt="" coords="461,241,708,283"/>
 <area shape="rect" href="class_placement_info.html#abebc59f717cacb306bd3145e8b218b2e" title="Get the Progress ratio of the placement." alt="" coords="774,46,957,73"/>
-<area shape="rect" href="class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6" title="adjust the resource demand of LUTs/FFs according to routing congestion refer to RippleFPGA&#39;s implemen..." alt="" coords="461,620,708,661"/>
+<area shape="rect" href="class_placement_info.html#a4947a02bcfa570b08cf1c16c0f9542f6" title="adjust the resource demand of LUTs/FFs according to routing congestion refer to RippleFPGA&#39;s implemen..." alt="" coords="461,437,708,479"/>
 <area shape="rect" href="class_placement_info_1_1_compatible_placement_table.html#a3b176f3a41c580bc77b3859c94116107" title="forget the occupation adjustment by packing feasibility and routing congestion" alt="" coords="465,162,704,218"/>
-<area shape="rect" href="class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="775,555,956,596"/>
-<area shape="rect" href="class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="756,289,975,315"/>
-<area shape="rect" href="class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="756,339,975,366"/>
-<area shape="rect" href="class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title=" " alt="" coords="771,447,959,474"/>
-<area shape="rect" href="class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="500,737,669,779"/>
-<area shape="rect" href="class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc" title=" " alt="" coords="489,372,680,413"/>
-<area shape="rect" href="class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20" title=" " alt="" coords="481,437,689,479"/>
-<area shape="rect" href="class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region." alt="" coords="760,620,971,661"/>
+<area shape="rect" href="class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="775,416,956,457"/>
+<area shape="rect" href="class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="756,314,975,341"/>
+<area shape="rect" href="class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="756,263,975,290"/>
+<area shape="rect" href="class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title=" " alt="" coords="771,365,959,391"/>
+<area shape="rect" href="class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="500,685,669,727"/>
+<area shape="rect" href="class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc" title=" " alt="" coords="489,620,680,661"/>
+<area shape="rect" href="class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20" title=" " alt="" coords="481,555,689,596"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_a_m_f_placer_aca812cc7fbc4d53806148d7034ae3981_icgraph.png" border="0" usemap="#class_a_m_f_placer_aca812cc7fbc4d53806148d7034ae3981_icgraph" alt=""/></div>
+<map name="class_a_m_f_placer_aca812cc7fbc4d53806148d7034ae3981_icgraph" id="class_a_m_f_placer_aca812cc7fbc4d53806148d7034ae3981_icgraph">
+<area shape="rect" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,5,340,32"/>
+<area shape="rect" href="main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,5,181,32"/>
+<area shape="rect" href="main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,5,56,32"/>
 </map>
 </div>
 
@@ -418,9 +438,9 @@ Here is the call graph for this function:</div>
 
 <p>information related to the design (cells, pins and nets) </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00253">253</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00258">258</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00050">AMFPlacer()</a>, <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00089">~AMFPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00051">AMFPlacer()</a>, <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00091">~AMFPlacer()</a>.</p>
 
 </div>
 </div>
@@ -446,9 +466,9 @@ Here is the call graph for this function:</div>
 
 <p>information related to the device (BELs, Sites, Tiles, Clock Regions) </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00247">247</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00252">252</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00050">AMFPlacer()</a>, <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00089">~AMFPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00051">AMFPlacer()</a>, <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00091">~AMFPlacer()</a>.</p>
 
 </div>
 </div>
@@ -474,9 +494,9 @@ Here is the call graph for this function:</div>
 
 <p>global placer acconting for initial placement, quadratic placement, cell spreading and macro legalization. </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00277">277</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00282">282</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00089">~AMFPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00091">~AMFPlacer()</a>.</p>
 
 </div>
 </div>
@@ -502,9 +522,9 @@ Here is the call graph for this function:</div>
 
 <p>incremental pairing of some FFs and LUTs into small macros </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00271">271</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00276">276</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00089">~AMFPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00091">~AMFPlacer()</a>.</p>
 
 </div>
 </div>
@@ -530,9 +550,9 @@ Here is the call graph for this function:</div>
 
 <p>initially packing for macro extraction based on pre-defined rules </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00265">265</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00270">270</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00089">~AMFPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00091">~AMFPlacer()</a>.</p>
 
 </div>
 </div>
@@ -558,9 +578,27 @@ Here is the call graph for this function:</div>
 
 <p>the user-defined settings of placement </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00289">289</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00294">294</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00050">AMFPlacer()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00051">AMFPlacer()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>.</p>
+
+</div>
+</div>
+<a id="ad1d3d0c879cb6a72a381fef2a25201d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1d3d0c879cb6a72a381fef2a25201d5">&#9670;&nbsp;</a></span>paintData</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PaintDataBase* AMFPlacer::paintData = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00245">245</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00051">AMFPlacer()</a>, <a class="el" href="main_8cc_source.html#l00035">main()</a>, <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>, and <a class="el" href="main_8cc_source.html#l00021">runVisualization()</a>.</p>
 
 </div>
 </div>
@@ -586,9 +624,9 @@ Here is the call graph for this function:</div>
 
 <p>final packing of instances into CLB sites </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00283">283</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00288">288</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>.</p>
 
 </div>
 </div>
@@ -614,9 +652,9 @@ Here is the call graph for this function:</div>
 
 <p>inforamtion related to placement (locations, interconnections, status, constraints, legalization) </p>
 
-<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00259">259</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_m_f_placer_8h_source.html#l00264">264</a> of file <a class="el" href="_a_m_f_placer_8h_source.html">AMFPlacer.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00102">clearSomeAttributesCannotRecord()</a>, <a class="el" href="_a_m_f_placer_8h_source.html#l00122">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00089">~AMFPlacer()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_a_m_f_placer_8h_source.html#l00104">clearSomeAttributesCannotRecord()</a>, <a class="el" href="_a_m_f_placer_8h_source.html#l00124">run()</a>, and <a class="el" href="_a_m_f_placer_8h_source.html#l00091">~AMFPlacer()</a>.</p>
 
 </div>
 </div>

@@ -1,5 +1,7 @@
 <map id="PlacementInfo::getBELType2FalseBELType" name="PlacementInfo::getBELType2FalseBELType">
-<area shape="rect" id="node1" title="get the remapped BEL type of a specific BEL type since some cell can be placed in sites of different ..." alt="" coords="411,5,601,47"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="164,13,363,39"/>
-<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,13,116,39"/>
+<area shape="rect" id="node1" title="get the remapped BEL type of a specific BEL type since some cell can be placed in sites of different ..." alt="" coords="635,5,825,47"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#afca57e9c206de49d90aed595d1d87aa9" title="Create a grid of bins on the device." alt="" coords="388,13,587,39"/>
+<area shape="rect" id="node3" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,13,340,39"/>
+<area shape="rect" id="node4" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,13,181,39"/>
+<area shape="rect" id="node5" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,13,56,39"/>
 </map>

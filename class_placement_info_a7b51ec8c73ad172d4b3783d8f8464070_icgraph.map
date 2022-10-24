@@ -1,6 +1,8 @@
 <map id="PlacementInfo::getCompatiblePlacementTable" name="PlacementInfo::getCompatiblePlacementTable">
-<area shape="rect" id="node1" title=" " alt="" coords="411,39,605,80"/>
-<area shape="rect" id="node2" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="164,5,363,47"/>
-<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="193,71,334,112"/>
-<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="5,78,116,105"/>
+<area shape="rect" id="node1" title=" " alt="" coords="635,39,829,80"/>
+<area shape="rect" id="node2" href="$class_placement_info.html#a06eafa4c917e1b967487c377224584e0" title="load the data of the PlacementUnit objects and some placement parameters from a checkpoint file" alt="" coords="388,5,587,47"/>
+<area shape="rect" id="node3" href="$class_parallel_c_l_b_packer.html#a5a11519476a3cabbec1e4d4416f8066f" title="Update the macros in PlacementInfo by regarding those elements in one CLB site as a macro." alt="" coords="417,71,558,112"/>
+<area shape="rect" id="node4" href="$class_a_m_f_placer.html#aca812cc7fbc4d53806148d7034ae3981" title="launch the analytical mixed&#45;size FPGA placement procedure" alt="" coords="229,78,340,105"/>
+<area shape="rect" id="node5" href="$main_8cc.html#afb7c33754dd0833686daf9435ea12f98" title=" " alt="" coords="104,78,181,105"/>
+<area shape="rect" id="node6" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,78,56,105"/>
 </map>
