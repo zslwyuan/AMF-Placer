@@ -109,8 +109,9 @@ Below is a hiearchy tree of this project. As for the details, please refer to th
 1. eigen 3.3.8 (source code included)
 2. PaToH (library included)
 3. osqp (source code included)
-4. MKL (optional)
-5. opengl, freeglut, glew (optional)
+4. Qt5 (for GUI, you can install it on Ubuntu by: sudo apt-get install qt5-default  )
+5. MKL (optional)
+6. opengl, freeglut, glew (optional)
 
 
 ## Todo List

@@ -8,5 +8,6 @@ git clone https://github.com/zslwyuan/AMF-Placer.git
 We provide a script to build the placer and users can run the following command in the project root directory:
 
 ```bash
+sudo apt-get install qt5-default #for GUI
 ./build.sh
 ```
