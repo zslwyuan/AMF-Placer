@@ -274,18 +274,9 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool disableOptimist
 
     timingGraph->propogateArrivalTime();
     timingGraph->backPropogateRequiredArrivalTime();
-    float maxDelay = 0;
-    int maxDelayId = -1;
-    for (unsigned int i = 0; i < timingGraph->getNodes().size(); i++)
-    {
-        if (timingGraph->getNodes()[i]->getLatestInputArrival() > maxDelay)
-        {
-            maxDelay = timingGraph->getNodes()[i]->getLatestInputArrival();
-            maxDelayId = i;
-        }
-    }
+    timingGraph->updateCriticalPath();
 
-    auto resPath = timingGraph->backTraceDelayLongestPathFromNode(maxDelayId);
+    auto resPath = timingGraph->backTraceDelayLongestPathFromNode(timingGraph->getCriticalEndPoint());
 
     std::cout << "An example of long delay path for the current placement:\n";
     for (auto id : resPath)
@@ -361,7 +352,7 @@ float PlacementTimingOptimizer::conductStaticTimingAnalysis(bool disableOptimist
         outfile0.close();
     }
 
-    return maxDelay;
+    return timingGraph->getCriticalPathDelay();
 }
 
 float PlacementTimingOptimizer::getSlackThr()

@@ -767,7 +767,6 @@ void PlacementInfo::PlacementNet::drawNet(float generalWeight)
             lines.push_back(std::pair<int, int>(topPinId_net, pinId_net));
         }
     }
-    // paintB2BNodeLine(nodexy, lines);
 }
 
 void PlacementInfo::verifyDeviceForDesign()
@@ -990,7 +989,7 @@ void PlacementInfo::updateElementBinGrid()
             }
         }
     }
-    
+
     auto &cells = designInfo->getCells();
     PaintXs.resize(cells.size());
     PaintYs.resize(cells.size());
@@ -1017,7 +1016,9 @@ void PlacementInfo::updateElementBinGrid()
             PaintTypes[i] = 6;
     }
     assert(paintData);
-    paintData->writeElementInfo(PaintXs, PaintYs, PaintTypes);
+    auto criticalPath = simplePlacementTimingInfo->getSimplePlacementTimingGraph()->backTraceDelayLongestPathFromNode(
+        simplePlacementTimingInfo->getSimplePlacementTimingGraph()->getCriticalEndPoint());
+    paintData->writeElementInfo(PaintXs, PaintYs, PaintTypes, criticalPath);
 
     for (auto &tmpRow : globalBinGrid)
     {

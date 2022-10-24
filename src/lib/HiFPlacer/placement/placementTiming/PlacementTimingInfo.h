@@ -613,6 +613,30 @@ class PlacementTimingInfo
          */
         void backPropogateRequiredArrivalTime();
 
+        void updateCriticalPath()
+        {
+            maxDelay = 0;
+            maxDelayId = -1;
+            for (unsigned int i = 0; i < getNodes().size(); i++)
+            {
+                if (getNodes()[i]->getLatestInputArrival() > maxDelay)
+                {
+                    maxDelay = getNodes()[i]->getLatestInputArrival();
+                    maxDelayId = i;
+                }
+            }
+        }
+
+        inline int getCriticalEndPoint()
+        {
+            return maxDelayId;
+        }
+
+        inline float getCriticalPathDelay()
+        {
+            return maxDelay;
+        }
+
         /**
          * @brief backtrace the longest delay path from the node
          *
@@ -780,6 +804,9 @@ class PlacementTimingInfo
         int mediumPathThresholdLevel = 1;
 
         float clockPeriod = 10.0; // ns
+
+        float maxDelay = 0;
+        int maxDelayId = -1;
     };
 
     /**

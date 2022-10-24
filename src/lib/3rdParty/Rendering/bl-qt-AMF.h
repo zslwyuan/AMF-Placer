@@ -31,10 +31,11 @@ class MainWindow : public QWidget
     std::vector<BLPoint> _coords;
     std::vector<int> types;
     // LUT,FF,MUX,CARRY,DSP,BRAM,LUTRAM
-    float _type2W[10] = {1, 1, 1, 1, 4, 4, 1, 3};
-    float _type2H[10] = {1, 1, 1, 2, 5, 7.5, 2, 900};
+    double _type2W[10] = {1, 1, 1, 1, 4, 4, 1, 3};
+    double _type2H[10] = {1, 1, 1, 2, 5, 7.5, 2, 900};
     std::vector<BLRgba32> _type2C;
     std::vector<int> elementTypes;
+    std::vector<int> timingPath;
     std::vector<BLPoint> _steps;
     std::vector<BLRgba32> _colors;
     BLCompOp _compOp;
@@ -47,6 +48,10 @@ class MainWindow : public QWidget
     double curW = WIN_W;
     double curH = WIN_H;
     bool lastIsButtonPressed = false;
+    bool fineGrainedShow = false;
+    double shrinkRatio = 1.0;
+    bool toFine = false;
+    bool toCoarse = false;
 
     enum ShapeType
     {
@@ -115,7 +120,7 @@ class MainWindow : public QWidget
 
         std::vector<float> Xs, Ys;
 
-        // float IOX6[6] = {7.5, 15.5, 33.5, 51.5, 69.5, 76.5};
+        // double IOX6[6] = {7.5, 15.5, 33.5, 51.5, 69.5, 76.5};
         // _coords.resize(6);
         // for (size_t i = 0; i < 6; i++)
         // {
@@ -125,7 +130,7 @@ class MainWindow : public QWidget
         // }
 
         assert(paintData);
-        if (paintData->readElementInfo(Xs, Ys, elementTypes))
+        if (paintData->readElementInfo(Xs, Ys, elementTypes, timingPath))
         {
             _coords.resize(Xs.size() + 6);
             size_t size = Xs.size();
@@ -136,7 +141,7 @@ class MainWindow : public QWidget
                 vertex.y = (WIN_H - (Ys[i] * 2) - 5);
             }
 
-            float IOX6[6] = {7, 15.5, 33.5, 52.5, 71.5, 78.25};
+            double IOX6[6] = {7, 15.5, 33.5, 52.5, 71.5, 78.25};
             for (size_t i = 0; i < 6; i++)
             {
                 BLPoint &vertex = _coords[size + i];
@@ -150,11 +155,11 @@ class MainWindow : public QWidget
         _updateTitle();
     }
 
-    void getWHC(int type, float &W, float &H, BLRgba32 &c, int index)
+    void getWHC(int type, double &W, double &H, BLRgba32 &c, int index)
     {
         // // LUT,FF,MUX,CARRY,DSP,BRAM,LUTRAM
-        // float _type2W[10] = {1, 1, 1, 1, 2, 2, 1};
-        // float _type2H[10] = {1, 1, 1, 2, 5, 7.5, 2};
+        // double _type2W[10] = {1, 1, 1, 1, 2, 2, 1};
+        // double _type2H[10] = {1, 1, 1, 2, 5, 7.5, 2};
         // std::vector<BLRgba32> _type2C;
 
         double w = _canvas.blImage.width();
@@ -162,21 +167,41 @@ class MainWindow : public QWidget
         assert(type >= 0 && type <= 7);
         W = _type2W[type] / 2 * w / curW;
         H = _type2H[type] / 2 * h / curH;
+        if (fineGrainedShow)
+        {
+            W = W / shrinkRatio;
+            H = H / shrinkRatio;
+        }
         if (type < 4)
             c = BLRgba32(_type2C[type].value | (index & 0x050505));
         else
             c = _type2C[type];
     }
 
-    void remapXY(double &x, double &y)
+    void remapXY(double &x, double &y, int i = -1)
     {
         double w = _canvas.blImage.width();
         double h = _canvas.blImage.height();
 
-        float XInWin = x / WIN_W * w;
-        float YInWin = y / WIN_H * h;
-        x = (XInWin - winLeft) / curW * w;
-        y = (YInWin - winBottom) / curH * h;
+        if (i < 0)
+        {
+            double XInWin = x / WIN_W * w;
+            double YInWin = y / WIN_H * h;
+            x = (XInWin - winLeft) / curW * w;
+            y = (YInWin - winBottom) / curH * h;
+        }
+        else
+        {
+            if (fineGrainedShow)
+            {
+                x += (i % 8 + 1) * 0.15 - 0.75;
+                y += (i / 8 % 8 + 1) * 0.15 - 0.75;
+            }
+            double XInWin = x / WIN_W * w;
+            double YInWin = y / WIN_H * h;
+            x = (XInWin - winLeft) / curW * w;
+            y = (YInWin - winBottom) / curH * h;
+        }
     }
 
     void transformDeviceXY(double &X, double &Y)
@@ -222,7 +247,7 @@ class MainWindow : public QWidget
         {
             if (7 != elementTypes[i])
                 continue;
-            float halfW, halfH;
+            double halfW, halfH;
             BLRgba32 curTypeC;
             getWHC(elementTypes[i], halfW, halfH, curTypeC, i);
             double x = _coords[i].x;
@@ -239,17 +264,39 @@ class MainWindow : public QWidget
             {
                 if (t != elementTypes[i])
                     continue;
-                float halfW, halfH;
+                double halfW, halfH;
                 BLRgba32 curTypeC;
                 getWHC(elementTypes[i], halfW, halfH, curTypeC, i);
                 double x = _coords[i].x;
                 double y = _coords[i].y;
-                remapXY(x, y);
+                remapXY(x, y, i);
                 x = x - halfW;
                 y = y - halfH;
                 ctx.setFillStyle(curTypeC);
                 ctx.fillRect(x, y, halfW * 2, halfH * 2);
             }
+
+        if (timingPath.size())
+        {
+            for (int i = 1; i < timingPath.size(); i++)
+            {
+                BLPath path;
+                double x = _coords[timingPath[i - 1]].x;
+                double y = _coords[timingPath[i - 1]].y;
+                remapXY(x, y, i);
+                path.moveTo(x, y);
+                x = _coords[timingPath[i]].x;
+                y = _coords[timingPath[i]].y;
+                remapXY(x, y, i);
+                path.lineTo(x, y);
+                ctx.setStrokeStyle(BLRgba32(0xFF00FF00));
+                ctx.setCompOp(BL_COMP_OP_SRC_OVER);
+                ctx.setStrokeWidth(2);
+                ctx.strokePath(path);
+                path.clear();
+                path.close();
+            }
+        }
 
         ctx.setFillStyle(BLRgba32(0x80000000));
         ctx.fillRect(10, h - (900) / WIN_H * h - 20, 100, h - (900) / WIN_H * h - 20 + (30 * 8) / WIN_H * h);
@@ -284,54 +331,53 @@ class MainWindow : public QWidget
     void onRenderQt(QPainter &ctx) noexcept
     {
         assert(false && "Qt rendering is not ready yet");
-        ctx.fillRect(0, 0, _canvas.width(), _canvas.height(), QColor(0, 0, 0));
+        // ctx.fillRect(0, 0, _canvas.width(), _canvas.height(), QColor(0, 0, 0));
 
-        ctx.setRenderHint(QPainter::Antialiasing, true);
-        ctx.setCompositionMode(Blend2DCompOpToQtCompositionMode(_compOp));
+        // ctx.setRenderHint(QPainter::Antialiasing, true);
+        // ctx.setCompositionMode(Blend2DCompOpToQtCompositionMode(_compOp));
 
-        size_t i;
-        size_t size = _coords.size();
+        // size_t i;
+        // size_t size = _coords.size();
 
-        switch (_shapeType)
-        {
-        case kShapeRect:
-            for (int t = 0; t < 7; t++)
-                for (i = 0; i < size; i++)
-                {
-                    if (t != elementTypes[i])
-                        continue;
-                    float halfW, halfH;
-                    BLRgba32 curTypeC;
-                    getWHC(elementTypes[i], halfW, halfH, curTypeC, i);
-                    double x = _coords[i].x - halfW;
-                    double y = _coords[i].y - halfH;
+        // switch (_shapeType)
+        // {
+        // case kShapeRect:
+        //     for (int t = 0; t < 7; t++)
+        //         for (i = 0; i < size; i++)
+        //         {
+        //             if (t != elementTypes[i])
+        //                 continue;
+        //             double halfW, halfH;
+        //             BLRgba32 curTypeC;
+        //             getWHC(elementTypes[i], halfW, halfH, curTypeC, i);
+        //             double x = _coords[i].x - halfW;
+        //             double y = _coords[i].y - halfH;
 
-                    ctx.fillRect(QRectF(_coords[i].x - halfW, _coords[i].y - halfH, halfW * 2, halfH * 2),
-                                 QColor(_colors[i].r(), _colors[i].g(), _colors[i].b(), _colors[i].a()));
-                }
-            break;
-        }
+        //             ctx.fillRect(QRectF(_coords[i].x - halfW, _coords[i].y - halfH, halfW * 2, halfH * 2),
+        //                          QColor(_colors[i].r(), _colors[i].g(), _colors[i].b(), _colors[i].a()));
+        //         }
+        //     break;
+        // }
     }
 
     void onMouseEvent(QMouseEvent *event) noexcept
     {
-        float x = event->x();
-        float y = event->y();
+        double x = event->x();
+        double y = event->y();
         double w = _canvas.blImage.width();
         double h = _canvas.blImage.height();
 
-        float realCX = x / w * curW + winLeft;
-        float realCY = y / h * curH + winBottom;
+        double realCX = x / w * curW + winLeft;
+        double realCY = y / h * curH + winBottom;
 
+        double changeStep = 0.9;
         if (!lastIsButtonPressed && (event->buttons() & Qt::LeftButton))
         {
             // std::cout << "========================================================\n";
-            curW = curW * 0.9;
-            curH = curH * 0.9;
-            winLeft = realCX - curW / 2;
-            winRight = realCX + curW / 2;
-            winTop = realCY + curH / 2;
-            winBottom = realCY - curH / 2;
+            curW = curW * changeStep;
+            curH = curH * changeStep;
+            winLeft = realCX - changeStep * (realCX - winLeft);
+            winBottom = realCY - changeStep * (realCY - winBottom);
             lastIsButtonPressed = true;
             // std::cout << " x=" << x << " y=" << y << " curW=" << curW << " curH=" << curH << " winLeft=" << winLeft
             //           << " winRight=" << winRight << "\n";
@@ -339,12 +385,10 @@ class MainWindow : public QWidget
         else if (!lastIsButtonPressed && (event->buttons() & Qt::RightButton))
         {
             // std::cout << "========================================================\n";
-            curW = curW / 0.9;
-            curH = curH / 0.9;
-            winLeft = realCX - curW / 2;
-            winRight = realCX + curW / 2;
-            winTop = realCY + curH / 2;
-            winBottom = realCY - curH / 2;
+            curW = curW / changeStep;
+            curH = curH / changeStep;
+            winLeft = realCX - 1 / changeStep * (realCX - winLeft);
+            winBottom = realCY - 1 / changeStep * (realCY - winBottom);
             lastIsButtonPressed = true;
             // std::cout << " x=" << x << " y=" << y << " curW=" << curW << " curH=" << curH << " winLeft=" << winLeft
             //           << " winRight=" << winRight << "\n";
@@ -366,6 +410,16 @@ class MainWindow : public QWidget
         {
             if (!event->buttons())
                 lastIsButtonPressed = false;
+        }
+        toFine = false;
+        if (w / curW > 20)
+        {
+            fineGrainedShow = true;
+            shrinkRatio = std::pow(w / curW, 0.5);
+        }
+        else
+        {
+            fineGrainedShow = false;
         }
     }
 
