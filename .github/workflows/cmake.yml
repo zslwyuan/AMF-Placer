@@ -30,6 +30,7 @@ jobs:
       # Build your program with the given configuration
       run: |
           apt-get install qt5-default
+          apt-get install qtbase5-dev
           cmake --build ${{github.workspace}}/build #--config ${{env.BUILD_TYPE}}
 
     - name: Test

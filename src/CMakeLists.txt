@@ -14,6 +14,7 @@ else(OPENMP_FOUND)
 endif()
 
 
+find_package(Qt5Widgets REQUIRED)
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
 
 
@@ -145,7 +146,6 @@ include_directories(
 )
 
 add_subdirectory(lib)
-find_package(Qt5Widgets REQUIRED)
 
 set(SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/app/AMFPlacer/main.cc)
 add_executable(AMFPlacer ${SOURCE_FILES})
