@@ -2,7 +2,7 @@ var searchData=
 [
   ['get_20started_733',['Get Started',['../_2_get_started.html',1,'']]],
   ['generalnetweight_734',['generalNetWeight',['../class_wirelength_optimizer.html#a4c0e97d41ee7c72b3ada1e179d1edca5',1,'WirelengthOptimizer']]],
-  ['generalspreader_735',['GeneralSpreader',['../class_general_spreader.html',1,'GeneralSpreader'],['../class_general_spreader.html#a635972a8998bb0101119b15b574cb4f2',1,'GeneralSpreader::GeneralSpreader()'],['../class_global_placer.html#a8fb70ed192a690363fcc090f172520bb',1,'GlobalPlacer::generalSpreader()']]],
+  ['generalspreader_735',['GeneralSpreader',['../class_general_spreader.html',1,'GeneralSpreader'],['../class_global_placer.html#a8fb70ed192a690363fcc090f172520bb',1,'GlobalPlacer::generalSpreader()'],['../class_general_spreader.html#a635972a8998bb0101119b15b574cb4f2',1,'GeneralSpreader::GeneralSpreader()']]],
   ['generalspreader_2ecc_736',['GeneralSpreader.cc',['../_general_spreader_8cc.html',1,'']]],
   ['generalspreader_2eh_737',['GeneralSpreader.h',['../_general_spreader_8h.html',1,'']]],
   ['generaltimingnetweight_738',['generalTimingNetWeight',['../class_wirelength_optimizer.html#a28b2b9823eb4094faf88994d2a02f45b',1,'WirelengthOptimizer']]],

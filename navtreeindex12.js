@@ -1,6 +1,5 @@
 var NAVTREEINDEX12 =
 {
-"struct_incremental_b_e_l_packer_1_1___p_u_with_score.html#aec04f84b191486da5c59c6f8355fbc4e":[8,0,12,1,1],
 "struct_incremental_b_e_l_packer_1_1___p_u_with_score.html#afac0275f6aad6fd95299ce05b0236e75":[8,0,12,1,0],
 "struct_packing___netcompare.html":[8,0,16],
 "struct_packing___netcompare.html#a26b2b99b2fe06c19c8b5e16e3ea09c24":[8,0,16,0],
