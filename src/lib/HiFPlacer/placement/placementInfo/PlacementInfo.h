@@ -19,6 +19,7 @@
 #include "Eigen/Core"
 #include "Eigen/SparseCore"
 #include "PlacementTimingInfo.h"
+#include "Rendering/paintDB.h"
 #include "dumpZip.h"
 #include <assert.h>
 #include <fstream>
@@ -4408,6 +4409,12 @@ class PlacementInfo
         return macroRatio;
     }
 
+    inline void setPaintDataBase(PaintDataBase *_paintData)
+    {
+        assert(_paintData);
+        paintData = _paintData;
+    }
+
   private:
     CompatiblePlacementTable *compatiblePlacementTable = nullptr;
     std::vector<PlacementUnit *> placementUnits;
@@ -4515,6 +4522,11 @@ class PlacementInfo
     std::map<PlacementUnit *, std::pair<float, float>> PU2ClockRegionCenters;
     std::map<PlacementUnit *, int> PU2ClockRegionColumn;
     std::map<DeviceInfo::ClockColumn *, std::set<DesignInfo::DesignNet *>> clockCol2ClockNets;
+    PaintDataBase *paintData = nullptr;
+
+    std::vector<float> PaintXs;
+    std::vector<float> PaintYs;
+    std::vector<int> PaintTypes;
 
     /**
      * @brief the retangular clock region coverage of a clock net

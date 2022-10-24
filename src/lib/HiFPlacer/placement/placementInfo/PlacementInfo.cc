@@ -990,6 +990,34 @@ void PlacementInfo::updateElementBinGrid()
             }
         }
     }
+    
+    auto &cells = designInfo->getCells();
+    PaintXs.resize(cells.size());
+    PaintYs.resize(cells.size());
+    PaintTypes.resize(cells.size());
+    // writeElementInfo(std::vector<float> &_Xs, std::vector<float> &_Ys, std::vector<int> &_elementTypes)
+    for (int i = 0; i < cells.size(); i++)
+    {
+        PaintXs[i] = cellId2location[i].X;
+        PaintYs[i] = cellId2location[i].Y;
+        // LUT,FF,MUX,CARRY,DSP,BRAM,LUTRAM
+        if (cells[i]->isLUT())
+            PaintTypes[i] = 0;
+        else if (cells[i]->isFF())
+            PaintTypes[i] = 1;
+        else if (cells[i]->isMux())
+            PaintTypes[i] = 2;
+        else if (cells[i]->isCarry())
+            PaintTypes[i] = 3;
+        else if (cells[i]->isDSP())
+            PaintTypes[i] = 4;
+        else if (cells[i]->isBRAM())
+            PaintTypes[i] = 5;
+        else
+            PaintTypes[i] = 6;
+    }
+    assert(paintData);
+    paintData->writeElementInfo(PaintXs, PaintYs, PaintTypes);
 
     for (auto &tmpRow : globalBinGrid)
     {

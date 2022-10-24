@@ -145,6 +145,7 @@ include_directories(
 )
 
 add_subdirectory(lib)
+find_package(Qt5Widgets REQUIRED)
 
 set(SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/app/AMFPlacer/main.cc)
 add_executable(AMFPlacer ${SOURCE_FILES})
@@ -161,7 +162,7 @@ include_directories(./lib/
 ./lib/HiFPlacer/placement/placementTiming/
 ./lib/3rdParty
 ./lib/HiFPlacer/problemSolvers
-${abseil-cpp_SOURCE_DIR} 
+#${abseil-cpp_SOURCE_DIR} 
 )
 
 link_directories(${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/)
@@ -169,6 +170,7 @@ link_directories(${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/)
 target_link_libraries(AMFPlacer GlobalPlacer DesignInfo DeviceInfo PlacementInfo PlacementTiming Packing Legalization ProblemSolvers Utils
                         ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a 
                         pthread 
-                        ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} ) #GL GLU glut GLEW
+                        ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} Rendering Qt5::Widgets blend2d::blend2d) #GL GLU glut GLEW
 target_link_libraries(partitionHyperGraph  ${Boost_LIBRARIES}  m ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a )
 
+execute_process(COMMAND  cp ${CMAKE_SOURCE_DIR}/../doc/NotoSans-Regular.ttf ${CMAKE_BINARY_DIR}/NotoSans-Regular.ttf OUTPUT_VARIABLE tmp)

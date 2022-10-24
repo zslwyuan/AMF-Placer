@@ -10,6 +10,7 @@
  *
  */
 
+#include "3rdParty/Rendering/paintDB.h"
 #include "DesignInfo.h"
 #include "DeviceInfo.h"
 #include "GlobalPlacer.h"
@@ -84,6 +85,7 @@ class AMFPlacer
         // load design information
         designInfo = new DesignInfo(JSON, deviceinfo);
         designInfo->printStat();
+        paintData = new PaintDataBase();
     };
 
     ~AMFPlacer()
@@ -123,6 +125,7 @@ class AMFPlacer
     {
         // initialize placement information, including how to map cells to BELs
         placementInfo = new PlacementInfo(designInfo, deviceinfo, JSON);
+        placementInfo->setPaintDataBase(paintData);
 
         // we have to pack cells in design info into placement units in placement info with packer
         InitialPacker *initialPacker = new InitialPacker(designInfo, deviceinfo, placementInfo, JSON);
@@ -238,6 +241,8 @@ class AMFPlacer
 
         return;
     }
+
+    PaintDataBase *paintData = nullptr;
 
   private:
     /**

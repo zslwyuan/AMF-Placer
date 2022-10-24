@@ -10,18 +10,56 @@
  *
  */
 
+#include "3rdParty/Rendering/bl-qt-AMF.h"
 #include "AMFPlacer.h"
 
-int main(int argc, const char **argv)
+void runPlacer(AMFPlacer *placer)
+{
+    placer->run();
+}
+
+void runVisualization(AMFPlacer *placer)
+{
+    char *argv[] = {"/home/tingyuan/Downloads/workspace/blend2d-samples/qt/build/AMF-Placer"};
+    int argc = 1;
+    QApplication app(argc, argv);
+    MainWindow win;
+    win.paintData = placer->paintData;
+    win.setMinimumSize(QSize(400, 320));
+    win.resize(QSize(WIN_W, WIN_H));
+    win.show();
+
+    app.exec();
+}
+
+int main(int argc, char **argv)
 {
     if (argc < 2)
     {
-        std::cerr << "Usage: " << argv[0] << " <config JSON file> " << std::endl;
+        std::cerr << "Usage: " << argv[0] << " <config JSON file> [-gui]" << std::endl;
         return 1;
     }
+    bool guiEnable = false;
+    if (argc == 3)
+    {
+        std::string arg2(argv[2]);
+        if (arg2 == "-gui")
+            guiEnable = true;
+    }
 
-    auto placer = new AMFPlacer(argv[1]);
-    placer->run();
+    AMFPlacer *placer = new AMFPlacer(argv[1]);
+
+    std::thread threadPlacer(runPlacer, placer);
+    while (!placer->paintData)
+    {
+    };
+    std::thread *threadPaint = nullptr;
+    if (guiEnable)
+        threadPaint = new std::thread(runVisualization, placer);
+    threadPlacer.join();
+    if (threadPaint)
+        threadPaint->join();
+
     delete placer;
 
     return 0;
