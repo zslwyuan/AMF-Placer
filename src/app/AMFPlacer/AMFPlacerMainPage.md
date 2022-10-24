@@ -55,6 +55,11 @@ Generally, for non-commercial usage of this open-source project, users should co
 9. a set of pre-implementation benchmarks from latest practical FPGA applications
 10. provides a set of Tcl scripts which extracts design netlist from Vivado and exports post-placement information to Vivado
 
+<center>
+<img src="GUI.gif" alt="GUI" title="GUI" width="150" />  
+</center>
+
+
 **Todo List**
 
 1. clock tree synthesis

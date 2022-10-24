@@ -17,5 +17,8 @@ Users can also turn on the GUI interface to visualize the placement procedure:
 ```
 
 In the GUI window, you can zoom in by left click of your mouse, zoom out by right click of your mouse, and reset to orginal scale by the middle button of your mouse.
-The critical path and various elements will be colored respectively.
+The critical path and various elements will be colored respectively as shown below.
 
+<center>
+<img src="GUI.gif" alt="GUI" title="GUI" width="150" />  
+</center>
