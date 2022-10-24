@@ -92,18 +92,18 @@ message(STATUS " boost includes ${Boost_INCLUDE_DIRS}")
 include_directories(${Boost_INCLUDE_DIRS})
 
 # ABSL
-if (NOT TARGET absl::strings OR NOT TARGET absl::status OR NOT TARGET absl::span)
-  message(STATUS "AMFPlacer fetching packages: `absl` targets not found. Attempting to fetch contents...")
-  FetchContent_Declare(
-    abseil-cpp 
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/abseil-cpp-src
-    # GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
-    # GIT_TAG        origin/master
-  )
-  FetchContent_MakeAvailable(abseil-cpp)
-else()
-  message(STATUS "AMFPlacer fetching packages: `absl` targets found.")
-endif()
+# if (NOT TARGET absl::strings OR NOT TARGET absl::status OR NOT TARGET absl::span)
+#   message(STATUS "AMFPlacer fetching packages: `absl` targets not found. Attempting to fetch contents...")
+#   FetchContent_Declare(
+#     abseil-cpp 
+#     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/abseil-cpp-src
+#     # GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
+#     # GIT_TAG        origin/master
+#   )
+#   FetchContent_MakeAvailable(abseil-cpp)
+# else()
+#   message(STATUS "AMFPlacer fetching packages: `absl` targets found.")
+# endif()
 
 # EIGEN
 # Eigen is usually available as a system package, so we use find_package.
@@ -123,18 +123,18 @@ else()
 endif()
 
 # OSQP
-if (NOT TARGET osqpstatic)
-  message(STATUS "AMFPlacer fetching packages: `osqp` targets not found. Attempting to find contents...")
-  FetchContent_Declare(
-    osqp
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/osqp-src
-    # GIT_REPOSITORY https://github.com/oxfordcontrol/osqp.git
-    # GIT_TAG        origin/master
-  )
-  FetchContent_MakeAvailable(osqp)
-else()
-  message(STATUS "AMFPlacer fetching packages: `osqp` targets found.")
-endif()
+# if (NOT TARGET osqpstatic)
+#   message(STATUS "AMFPlacer fetching packages: `osqp` targets not found. Attempting to find contents...")
+#   FetchContent_Declare(
+#     osqp
+#     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/osqp-src
+#     # GIT_REPOSITORY https://github.com/oxfordcontrol/osqp.git
+#     # GIT_TAG        origin/master
+#   )
+#   FetchContent_MakeAvailable(osqp)
+# else()
+#   message(STATUS "AMFPlacer fetching packages: `osqp` targets found.")
+# endif()
 
 find_package(ZLIB)
 

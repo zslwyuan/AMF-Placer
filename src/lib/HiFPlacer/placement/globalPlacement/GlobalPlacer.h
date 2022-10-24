@@ -25,7 +25,7 @@
 #include "PlacementTimingOptimizer.h"
 #include "WirelengthOptimizer.h"
 #include "dumpZip.h"
-#include "osqp++/osqp++.h"
+//#include "osqp++/osqp++.h"
 #include <assert.h>
 #include <fstream>
 #include <iostream>

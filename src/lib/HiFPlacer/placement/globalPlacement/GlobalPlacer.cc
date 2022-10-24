@@ -290,9 +290,12 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
         if (criteria3 || criteria4)
         {
             print_status("Global Placer: B2B converge");
-            BRAMDSPLegalizer->dumpMatching(true, true);
-            CARRYMacroLegalizer->dumpMatching(true, true);
-            mCLBLegalizer->dumpMatching(true, true);
+            if (!BRAMDSPLegalizer->hasNoTarget())
+                BRAMDSPLegalizer->dumpMatching(true, true);
+            if (!CARRYMacroLegalizer->hasNoTarget())
+                CARRYMacroLegalizer->dumpMatching(true, true);
+            if (!mCLBLegalizer->hasNoTarget())
+                mCLBLegalizer->dumpMatching(true, true);
             break;
         }
 
@@ -302,6 +305,8 @@ void GlobalPlacer::GlobalPlacement_CLBElements(int iterNum, bool continuePreviou
             break;
         }
     }
+
+    placementInfo->updateElementBinGrid();
     dumpCoord();
     dumpLUTFFCoordinate(true);
 
@@ -455,8 +460,8 @@ void GlobalPlacer::macroLegalize(int curIteration, bool timingDriven, PlacementT
 
     CARRYMacroLegalizer->setClockRegionAware(enableClockRegionAware);
 
-    if ((BRAMDSPLegalizer->getAverageDisplacementOfRoughLegalization() > 3 && progressRatio < 0.9 &&
-         curIteration < 10) &&
+    if ((!BRAMDSPLegalizer->hasNoTarget() && BRAMDSPLegalizer->getAverageDisplacementOfRoughLegalization() > 3 &&
+         progressRatio < 0.9 && curIteration < 10) &&
         !macroLocked && !macrosBindedToSites && !directMacroLegalize)
     {
         // rough legalization phase
@@ -488,12 +493,14 @@ void GlobalPlacer::macroLegalize(int curIteration, bool timingDriven, PlacementT
         mCLBLegalizer->setIntitialParameters(20.0, 20, 2);
         CARRYMacroLegalizer->setIntitialParameters((float)2.0, 3, 2);
 
-        if (((averageMacroLegalDisplacement > 1 || averageMCLBLegalDisplacement > 3 ||
-              averageCarryLegalDisplacement > 2)) ||
+        if ((((!BRAMDSPLegalizer->hasNoTarget() && averageMacroLegalDisplacement > 1) ||
+              (!mCLBLegalizer->hasNoTarget() && averageMCLBLegalDisplacement > 3) ||
+              (!CARRYMacroLegalizer->hasNoTarget() && averageCarryLegalDisplacement > 2))) ||
             !macroCloseToSite)
         {
-            if (curIteration >= 10 && averageMacroLegalDisplacement < 7.5 && averageMCLBLegalDisplacement < 7.5 &&
-                averageCarryLegalDisplacement < 7.5)
+            if (curIteration >= 10 && (BRAMDSPLegalizer->hasNoTarget() || averageMacroLegalDisplacement < 7.5) &&
+                (mCLBLegalizer->hasNoTarget() || averageMCLBLegalDisplacement < 7.5) &&
+                (CARRYMacroLegalizer->hasNoTarget() || averageCarryLegalDisplacement < 7.5))
             {
                 print_warning("too many times of legalization. enforce the elements to be fixed!");
                 macroCloseToSite = true;
@@ -510,16 +517,18 @@ void GlobalPlacer::macroLegalize(int curIteration, bool timingDriven, PlacementT
             {
                 macroCloseToSite = true;
 
-                if (averageMacroLegalDisplacement > 1)
+                if (!BRAMDSPLegalizer->hasNoTarget() && averageMacroLegalDisplacement > 1)
                 {
                     print_status("BRAMDSPLegalizer: Launch.");
                     BRAMDSPLegalizer->resetSitesMapped();
                     BRAMDSPLegalizer->legalize(true, directMacroLegalize, timingDriven);
                     macroCloseToSite = false;
                 }
-                if (averageCarryLegalDisplacement > 2 || averageMCLBLegalDisplacement > 3)
+                if ((!CARRYMacroLegalizer->hasNoTarget() && averageCarryLegalDisplacement > 2) ||
+                    (!mCLBLegalizer->hasNoTarget() && averageMCLBLegalDisplacement > 3))
                 {
-                    if (curIteration % 2 == 0 || averageCarryLegalDisplacement > 5000)
+                    if ((!CARRYMacroLegalizer->hasNoTarget() || !mCLBLegalizer->hasNoTarget()) &&
+                        (curIteration % 2 == 0 || averageCarryLegalDisplacement > 5000))
                     {
                         mCLBLegalizer->resetSitesMapped();
                         CARRYMacroLegalizer->resetSitesMapped();

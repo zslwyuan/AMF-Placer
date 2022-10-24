@@ -16,7 +16,7 @@
 
 void QPSolverWrapper::QPSolve(QPSolverWrapper *&curSolver)
 {
-    osqp::OsqpSolver &osqpSolver = curSolver->osqpSolver;
+    // osqp::OsqpSolver &osqpSolver = curSolver->osqpSolver;
 
     Eigen::ConjugateGradient<Eigen::SparseMatrix<double>, Eigen::Lower | Eigen::Upper> &CGSolver = curSolver->CGSolver;
     std::vector<Eigen::Triplet<float>> &objectiveMatrixTripletList = curSolver->solverData.objectiveMatrixTripletList;
@@ -56,58 +56,59 @@ void QPSolverWrapper::QPSolve(QPSolverWrapper *&curSolver)
     }
     else
     {
+        assert(false && "Currently, OSQP is disabled to make the project size smaller!");
         /////////////////////////////////////////////////////////////////////////
-        // OSQP (support constraints but runtime x2~3)
-        Eigen::SparseMatrix<double> constraint_matrix(objectiveVector.size(), objectiveVector.size());
-        std::vector<Eigen::Triplet<float>> constraints;
-        for (unsigned int i = 0; i < objectiveVector.size(); i++)
-        {
-            constraints.push_back(Eigen::Triplet<float>(i, i, 1.0));
-        }
-        constraint_matrix.setFromTriplets(constraints.begin(), constraints.end());
+        // // OSQP (support constraints but runtime x2~3)
+        // Eigen::SparseMatrix<double> constraint_matrix(objectiveVector.size(), objectiveVector.size());
+        // std::vector<Eigen::Triplet<float>> constraints;
+        // for (unsigned int i = 0; i < objectiveVector.size(); i++)
+        // {
+        //     constraints.push_back(Eigen::Triplet<float>(i, i, 1.0));
+        // }
+        // constraint_matrix.setFromTriplets(constraints.begin(), constraints.end());
 
-        osqp::OsqpInstance instance;
-        instance.objective_matrix = objective_matrix;
-        instance.objective_vector = objectiveVector;
-        instance.constraint_matrix = constraint_matrix;
-        instance.lower_bounds.resize(objectiveVector.size());
-        for (unsigned int i = 0; i < objectiveVector.size(); i++)
-        {
-            instance.lower_bounds[i] = curSolver->solverSettings.lowerbound;
-        }
-        instance.upper_bounds.resize(objectiveVector.size());
-        for (unsigned int i = 0; i < objectiveVector.size(); i++)
-        {
-            instance.upper_bounds[i] = curSolver->solverSettings.upperbound;
-        }
+        // osqp::OsqpInstance instance;
+        // instance.objective_matrix = objective_matrix;
+        // instance.objective_vector = objectiveVector;
+        // instance.constraint_matrix = constraint_matrix;
+        // instance.lower_bounds.resize(objectiveVector.size());
+        // for (unsigned int i = 0; i < objectiveVector.size(); i++)
+        // {
+        //     instance.lower_bounds[i] = curSolver->solverSettings.lowerbound;
+        // }
+        // instance.upper_bounds.resize(objectiveVector.size());
+        // for (unsigned int i = 0; i < objectiveVector.size(); i++)
+        // {
+        //     instance.upper_bounds[i] = curSolver->solverSettings.upperbound;
+        // }
 
-        osqp::OsqpSettings settings;
-        settings.verbose = false;
+        // osqp::OsqpSettings settings;
+        // settings.verbose = false;
 
-        if (curSolver->solverSettings.verbose)
-            print_status("OSQP Solver initializing.");
+        // if (curSolver->solverSettings.verbose)
+        //     print_status("OSQP Solver initializing.");
 
-        auto status = osqpSolver.Init(instance, settings, curSolver->solverSettings.MKLorNot);
-        assert(status.ok());
+        // auto status = osqpSolver.Init(instance, settings, curSolver->solverSettings.MKLorNot);
+        // assert(status.ok());
 
-        if (curSolver->solverSettings.verbose)
-            print_status("OSQP Solver Started.");
+        // if (curSolver->solverSettings.verbose)
+        //     print_status("OSQP Solver Started.");
 
-        status = osqpSolver.SetPrimalWarmStart(curSolver->solverData.oriSolution);
-        assert(status.ok());
+        // status = osqpSolver.SetPrimalWarmStart(curSolver->solverData.oriSolution);
+        // assert(status.ok());
 
-        osqp::OsqpExitCode exit_code = osqpSolver.Solve();
-        assert(exit_code == osqp::OsqpExitCode::kOptimal);
+        // osqp::OsqpExitCode exit_code = osqpSolver.Solve();
+        // assert(exit_code == osqp::OsqpExitCode::kOptimal);
 
-        // if need to trace the objective, uncomment the line below
-        // double optimal_objective = osqpSolver.objective_value();
+        // // if need to trace the objective, uncomment the line below
+        // // double optimal_objective = osqpSolver.objective_value();
 
-        if (curSolver->solverSettings.solutionForward)
-            curSolver->solverData.oriSolution = osqpSolver.primal_solution();
-        else
-            curSolver->solverData.solution = osqpSolver.primal_solution();
+        // if (curSolver->solverSettings.solutionForward)
+        //     curSolver->solverData.oriSolution = osqpSolver.primal_solution();
+        // else
+        //     curSolver->solverData.solution = osqpSolver.primal_solution();
 
-        if (curSolver->solverSettings.verbose)
-            print_status("OSQP Solver Done.");
+        // if (curSolver->solverSettings.verbose)
+        //     print_status("OSQP Solver Done.");
     }
 }

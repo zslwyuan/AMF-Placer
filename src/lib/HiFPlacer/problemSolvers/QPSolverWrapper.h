@@ -15,7 +15,7 @@
 
 #include "Eigen/Eigen"
 #include "Eigen/SparseCore"
-#include "osqp++/osqp++.h"
+//#include "osqp++/osqp++.h"
 #include "strPrint.h"
 #include <assert.h>
 #include <fstream>
@@ -38,7 +38,7 @@ class QPSolverWrapper
     } solverDataType;
 
     solverDataType solverData;
-    osqp::OsqpSolver osqpSolver;
+    // osqp::OsqpSolver osqpSolver;
 
     Eigen::ConjugateGradient<Eigen::SparseMatrix<double>, Eigen::Lower | Eigen::Upper> CGSolver;
     typedef struct
