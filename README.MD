@@ -65,6 +65,7 @@ If our works are involved in your works, please cite our papers:
 8. supports placement check-point importing/exporting
 9. a set of pre-implementation benchmarks from latest practical FPGA applications
 10. provides a set of Tcl scripts which extracts design netlist from Vivado and exports post-placement information to Vivado
+11. A basic GUI for user to analyze the placement procedure to optimize the implementation
 
 ## Implementation Overview
 
