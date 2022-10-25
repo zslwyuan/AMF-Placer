@@ -19,7 +19,7 @@
 <area shape="rect" id="node37" href="$class_macro_legalizer.html#ac53aeaa967e0f4101f2409e96ab17387" title=" " alt="" coords="267,1125,434,1167"/>
 <area shape="rect" id="node38" href="$class_c_l_b_legalizer.html#aab49be41667cc50e411e598ce6d00818" title="Set the intitial parameters of the legalizer." alt="" coords="271,1191,430,1232"/>
 <area shape="rect" id="node39" href="$class_macro_legalizer.html#aa0f2812c921b80c03260b0513aa6275f" title="Set the intitial parameters of the legalizer." alt="" coords="266,1256,435,1297"/>
-<area shape="rect" id="node40" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="251,1641,450,1683"/>
+<area shape="rect" id="node40" href="$class_placement_info.html#a4d5ac46c9c9c56c18154338a7be6ea12" title="map design cells to the bins in the bin grid." alt="" coords="251,1615,450,1656"/>
 <area shape="rect" id="node11" href="$class_c_l_b_legalizer.html#a24d927255db513c44f0a609d2eddf2d1" title=" " alt="" coords="527,550,718,577"/>
 <area shape="rect" id="node13" href="$class_c_l_b_legalizer.html#af14c3a472238909c2d6417befd34e984" title="finally dynamic programming to legalize the PlacementUnits which have been mapped to the columns." alt="" coords="534,237,711,279"/>
 <area shape="rect" id="node15" href="$class_c_l_b_legalizer.html#a03b73bdcb61a3ac7123ac2e2f4c5fb13" title="clear the mapping information and reset the mapping parameters" alt="" coords="792,114,975,141"/>
@@ -38,15 +38,15 @@
 <area shape="rect" id="node31" href="$class_macro_legalizer.html#aacf81ec6f3b170a1d10296241a10f9fc" title="conduct rough legalization." alt="" coords="520,1118,725,1145"/>
 <area shape="rect" id="node32" href="$class_macro_legalizer.html#af435c8eafea89bd3e3e3a7af82c1192d" title="Set the sites which are binded as mapped so they will not be mapped to other elements in the netlist." alt="" coords="541,1169,705,1211"/>
 <area shape="rect" id="node33" href="$class_macro_legalizer.html#a2e872a7d9cdcaa4b67a529f7074f82ee" title="update the locations of the legalization anchors for the PlacementUnits." alt="" coords="509,703,736,744"/>
-<area shape="rect" id="node28" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="793,1511,974,1552"/>
-<area shape="rect" id="node41" href="$class_placement_timing_info_1_1_timing_graph.html#aca632459df523e81f9ea3e84d4fa7da5" title="backtrace the longest delay path from the node" alt="" coords="522,1598,723,1654"/>
-<area shape="rect" id="node42" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="539,1677,706,1719"/>
-<area shape="rect" id="node43" href="$class_placement_info.html#a3422f2800dcd73950378e539e7ca8d69" title="Get the Bin Grid object for all types of BEL." alt="" coords="536,1794,709,1821"/>
-<area shape="rect" id="node44" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="547,1845,699,1887"/>
-<area shape="rect" id="node45" href="$class_design_info.html#a4998b9688099dce643ab1f5d4fbf11f8" title=" " alt="" coords="554,1911,691,1938"/>
-<area shape="rect" id="node46" href="$class_placement_timing_info_1_1_timing_graph.html#a88a465eee7ab80b2c65dcbabde6ee3c8" title=" " alt="" coords="539,1962,706,2018"/>
-<area shape="rect" id="node47" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="537,1353,709,1379"/>
-<area shape="rect" id="node48" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="540,1403,705,1430"/>
-<area shape="rect" id="node49" href="$class_placement_timing_info.html#aab232b6d2124de2809f762c785c2b509" title="Get the Simple Placement Timing Graph object." alt="" coords="529,1454,716,1510"/>
-<area shape="rect" id="node50" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="547,1533,699,1575"/>
+<area shape="rect" id="node28" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="793,1491,974,1532"/>
+<area shape="rect" id="node41" href="$class_placement_info.html#ac863717f99a599e960d290a98c92c038" title="Get the actual occupation of a specific cell." alt="" coords="539,1585,706,1627"/>
+<area shape="rect" id="node42" href="$class_placement_info.html#a3422f2800dcd73950378e539e7ca8d69" title="Get the Bin Grid object for all types of BEL." alt="" coords="536,1651,709,1678"/>
+<area shape="rect" id="node43" href="$class_design_info_1_1_design_cell.html#a93a5562d2d33c1701f6263777a0a0ab6" title="Get the Cell Id in the cell list." alt="" coords="547,1753,699,1795"/>
+<area shape="rect" id="node44" href="$class_placement_info.html#a2544141cc8b73bf5a274228d38024615" title="Get the Grid row/column based on given location X,Y." alt="" coords="537,1819,709,1846"/>
+<area shape="rect" id="node45" href="$class_design_info.html#ae567cfda9aba8fcda50e1c02e22f9deb" title=" " alt="" coords="540,1870,705,1897"/>
+<area shape="rect" id="node46" href="$class_design_info_1_1_design_cell.html#a395881ed3a15b278ab8d678e6b2cfdf5" title=" " alt="" coords="547,1921,699,1963"/>
+<area shape="rect" id="node47" href="$class_design_info_1_1_design_cell.html#a8548cc4a4f26678245fcc9d9d6aa3441" title=" " alt="" coords="547,1352,699,1393"/>
+<area shape="rect" id="node48" href="$class_placement_info.html#aadfa6fd6a6a2dc22c9df22368fadc91d" title="clean the information in bin grid" alt="" coords="529,1417,717,1459"/>
+<area shape="rect" id="node49" href="$class_placement_info.html#a765485e7f565fbc808904c00b5d5aaa1" title="Set the cell bin Information of a design cell." alt="" coords="526,1483,719,1510"/>
+<area shape="rect" id="node50" href="$class_placement_info.html#a9ef4c1eb107dd663c006d06543d8fa24" title=" " alt="" coords="516,1534,729,1561"/>
 </map>

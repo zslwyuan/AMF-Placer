@@ -17,5 +17,5 @@
 <area shape="rect" id="node10" href="$main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627" title=" " alt="" coords="5,293,56,319"/>
 <area shape="rect" id="node14" href="$class_initial_packer.html#a76cda2d487fc57485440df35edab6a69" title="extract the macros from the netlist to construction PlacmentMacro" alt="" coords="580,323,708,350"/>
 <area shape="rect" id="node17" href="$class_design_info.html#a2c32682396aeba4246c7081a3047590a" title="Construct a new Design Info object based on user&#45;defined settings and device information." alt="" coords="765,457,917,483"/>
-<area shape="rect" id="node19" href="$class_a_m_f_placer.html#a4bd86b7a1afa4822b9ef5d45686a072d" title="Construct a new AMFPlacer object according to a given placer configuration file." alt="" coords="761,515,920,542"/>
+<area shape="rect" id="node19" href="$class_a_m_f_placer.html#af51e68c29458e8ba57b12181280bfc1d" title="Construct a new AMFPlacer object according to a given placer configuration file." alt="" coords="761,515,920,542"/>
 </map>
