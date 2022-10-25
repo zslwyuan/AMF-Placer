@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <vector>
 
+#include <QStyleOptionSlider>
+#include <QToolTip>
+
 static QPainter::CompositionMode Blend2DCompOpToQtCompositionMode(BLCompOp compOp)
 {
     switch (compOp)
@@ -63,6 +66,7 @@ static QPainter::CompositionMode Blend2DCompOpToQtCompositionMode(BLCompOp compO
 
 MainWindow::MainWindow() : _random(0x1234), _compOp(BL_COMP_OP_SRC_OVER), _shapeType(0), _rectSize(64.0)
 {
+    setFocusPolicy(Qt::StrongFocus);
     // LUT,FF,MUX,CARRY,DSP,BRAM,LUTRAM
     // float _type2W[10] = {1, 1, 1, 1, 2, 2, 1};
     // float _type2H[10] = {1, 1, 1, 2, 5, 7.5, 2};
@@ -85,7 +89,6 @@ MainWindow::MainWindow() : _random(0x1234), _compOp(BL_COMP_OP_SRC_OVER), _shape
     grid->setContentsMargins(5, 5, 5, 5);
     grid->setSpacing(5);
 
-    QBLCanvas::initRendererSelectBox(&_rendererSelect);
     _compOpSelect.addItem("SrcOver", QVariant(int(BL_COMP_OP_SRC_OVER)));
     _compOpSelect.addItem("SrcCopy", QVariant(int(BL_COMP_OP_SRC_COPY)));
     _compOpSelect.addItem("DstAtop", QVariant(int(BL_COMP_OP_DST_ATOP)));
@@ -96,9 +99,13 @@ MainWindow::MainWindow() : _random(0x1234), _compOp(BL_COMP_OP_SRC_OVER), _shape
     _compOpSelect.addItem("Hard Light", QVariant(int(BL_COMP_OP_HARD_LIGHT)));
     _compOpSelect.addItem("Difference", QVariant(int(BL_COMP_OP_DIFFERENCE)));
 
-    _shapeTypeSelect.addItem("Rect", QVariant(int(kShapeRect)));
-
-    _limitFpsCheck.setText(QLatin1String("Limit FPS"));
+    _LUTCheck.setText(QLatin1String("LUT"));
+    _FFCheck.setText(QLatin1String("FF"));
+    _MUXCheck.setText(QLatin1String("MUX"));
+    _CARRYCheck.setText(QLatin1String("CARRY"));
+    _DSPCheck.setText(QLatin1String("DSP"));
+    _BRAMCheck.setText(QLatin1String("BRAM"));
+    _OtherCheck.setText(QLatin1String("Others"));
 
     _sizeSlider.setOrientation(Qt::Horizontal);
     _sizeSlider.setMinimum(8);
@@ -107,37 +114,45 @@ MainWindow::MainWindow() : _random(0x1234), _compOp(BL_COMP_OP_SRC_OVER), _shape
 
     _countSlider.setOrientation(Qt::Horizontal);
     _countSlider.setMinimum(1);
-    _countSlider.setMaximum(10000);
-    _countSlider.setSliderPosition(200);
+    _countSlider.setMaximum(100);
+    _countSlider.setSliderPosition(1);
 
     _canvas.onRenderB2D = std::bind(&MainWindow::onRenderB2D, this, std::placeholders::_1);
-    _canvas.onRenderQt = std::bind(&MainWindow::onRenderQt, this, std::placeholders::_1);
     _canvas.onMouseEvent = std::bind(&MainWindow::onMouseEvent, this, std::placeholders::_1);
 
-    connect(&_rendererSelect, SIGNAL(activated(int)), SLOT(onRendererChanged(int)));
+    _canvas.onKeyPressEvent = std::bind(&MainWindow::keyPressEvent, this, std::placeholders::_1);
+    _canvas.onKeyReleaseEvent = std::bind(&MainWindow::keyReleaseEvent, this, std::placeholders::_1);
+
     connect(&_compOpSelect, SIGNAL(activated(int)), SLOT(onCompOpChanged(int)));
-    connect(&_shapeTypeSelect, SIGNAL(activated(int)), SLOT(onShapeTypeChanged(int)));
-    connect(&_limitFpsCheck, SIGNAL(stateChanged(int)), SLOT(onLimitFpsChanged(int)));
     connect(&_sizeSlider, SIGNAL(valueChanged(int)), SLOT(onSizeChanged(int)));
     connect(&_countSlider, SIGNAL(valueChanged(int)), SLOT(onCountChanged(int)));
 
-    grid->addWidget(new QLabel("Renderer:"), 0, 0);
-    grid->addWidget(&_rendererSelect, 0, 1);
+    connect(&_LUTCheck, SIGNAL(stateChanged(int)), SLOT(onLUTChanged(int)));
+    connect(&_FFCheck, SIGNAL(stateChanged(int)), SLOT(onFFChanged(int)));
+    connect(&_MUXCheck, SIGNAL(stateChanged(int)), SLOT(onMUXChanged(int)));
+    connect(&_CARRYCheck, SIGNAL(stateChanged(int)), SLOT(onCARRYChanged(int)));
+    connect(&_DSPCheck, SIGNAL(stateChanged(int)), SLOT(onDSPChanged(int)));
+    connect(&_BRAMCheck, SIGNAL(stateChanged(int)), SLOT(onBRAMChanged(int)));
+    connect(&_OtherCheck, SIGNAL(stateChanged(int)), SLOT(onOtherChanged(int)));
 
-    grid->addWidget(new QLabel("Comp Op:"), 0, 2);
+    grid->addWidget(new QLabel("ColorStyle:"), 0, 2);
     grid->addWidget(&_compOpSelect, 0, 3);
 
-    grid->addWidget(new QLabel("Shape:"), 0, 4);
-    grid->addWidget(&_shapeTypeSelect, 0, 5);
-
     grid->addItem(new QSpacerItem(0, 0, QSizePolicy::Expanding), 0, 6);
-    grid->addWidget(&_limitFpsCheck, 0, 7, Qt::AlignRight);
 
-    grid->addWidget(new QLabel("Count:"), 1, 0, 1, 1, Qt::AlignRight);
+    grid->addWidget(new QLabel("#CriticalPath:"), 1, 0, 1, 1, Qt::AlignRight);
     grid->addWidget(&_countSlider, 1, 1, 1, 7);
 
-    grid->addWidget(new QLabel("Size:"), 2, 0, 1, 1, Qt::AlignRight);
-    grid->addWidget(&_sizeSlider, 2, 1, 1, 7);
+    grid->addWidget(&_LUTCheck, 2, 0, Qt::AlignRight);
+    grid->addWidget(&_FFCheck, 2, 1, Qt::AlignRight);
+    grid->addWidget(&_MUXCheck, 2, 2, Qt::AlignRight);
+    grid->addWidget(&_CARRYCheck, 2, 3, Qt::AlignRight);
+    grid->addWidget(&_DSPCheck, 2, 4, Qt::AlignRight);
+    grid->addWidget(&_BRAMCheck, 2, 5, Qt::AlignRight);
+    grid->addWidget(&_OtherCheck, 2, 6, Qt::AlignRight);
+
+    // grid->addWidget(new QLabel("Size:"), 2, 0, 1, 1, Qt::AlignRight);
+    // grid->addWidget(&_sizeSlider, 2, 1, 1, 7);
 
     vBox->addLayout(grid);
     vBox->addWidget(&_canvas);
@@ -145,6 +160,31 @@ MainWindow::MainWindow() : _random(0x1234), _compOp(BL_COMP_OP_SRC_OVER), _shape
 
     connect(&_timer, SIGNAL(timeout()), this, SLOT(onTimer()));
     onInit();
+}
+
+FancySlider::FancySlider(QWidget *parent) : QSlider(parent)
+{
+}
+
+FancySlider::FancySlider(Qt::Orientation orientation, QWidget *parent) : QSlider(orientation, parent)
+{
+}
+
+void FancySlider::sliderChange(QAbstractSlider::SliderChange change)
+{
+    QSlider::sliderChange(change);
+
+    if (change == QAbstractSlider::SliderValueChange)
+    {
+        QStyleOptionSlider opt;
+        initStyleOption(&opt);
+
+        QRect sr = style()->subControlRect(QStyle::CC_Slider, &opt, QStyle::SC_SliderHandle, this);
+        QPoint bottomRightCorner = sr.bottomLeft();
+
+        QToolTip::showText(mapToGlobal(QPoint(bottomRightCorner.x(), bottomRightCorner.y())), QString::number(value()),
+                           this);
+    }
 }
 
 // int main(int argc, char *argv[]) {

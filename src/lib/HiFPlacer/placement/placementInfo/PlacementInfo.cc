@@ -34,6 +34,11 @@ PlacementInfo::PlacementInfo(DesignInfo *designInfo, DeviceInfo *deviceInfo,
         y2xRatio = std::stof(JSONCfg["y2xRatio"]);
     }
 
+    if (JSONCfg.find("guiEnable") != JSONCfg.end())
+    {
+        guiEnable = JSONCfg["guiEnable"] == "true";
+    }
+
     print_status("Loading compatiblePlacementTable");
     compatiblePlacementTable = loadCompatiblePlacementTable(cellType2fixedAmoFileName, cellType2sharedCellTypeFileName,
                                                             sharedCellType2BELtypeFileName);
@@ -990,35 +995,10 @@ void PlacementInfo::updateElementBinGrid()
         }
     }
 
-    auto &cells = designInfo->getCells();
-    PaintXs.resize(cells.size());
-    PaintYs.resize(cells.size());
-    PaintTypes.resize(cells.size());
-    // writeElementInfo(std::vector<float> &_Xs, std::vector<float> &_Ys, std::vector<int> &_elementTypes)
-    for (int i = 0; i < cells.size(); i++)
+    if (guiEnable)
     {
-        PaintXs[i] = cellId2location[i].X;
-        PaintYs[i] = cellId2location[i].Y;
-        // LUT,FF,MUX,CARRY,DSP,BRAM,LUTRAM
-        if (cells[i]->isLUT())
-            PaintTypes[i] = 0;
-        else if (cells[i]->isFF())
-            PaintTypes[i] = 1;
-        else if (cells[i]->isMux())
-            PaintTypes[i] = 2;
-        else if (cells[i]->isCarry())
-            PaintTypes[i] = 3;
-        else if (cells[i]->isDSP())
-            PaintTypes[i] = 4;
-        else if (cells[i]->isBRAM())
-            PaintTypes[i] = 5;
-        else
-            PaintTypes[i] = 6;
+        transferPaintData();
     }
-    assert(paintData);
-    auto criticalPath = simplePlacementTimingInfo->getSimplePlacementTimingGraph()->backTraceDelayLongestPathFromNode(
-        simplePlacementTimingInfo->getSimplePlacementTimingGraph()->getCriticalEndPoint());
-    paintData->writeElementInfo(PaintXs, PaintYs, PaintTypes, criticalPath);
 
     for (auto &tmpRow : globalBinGrid)
     {
@@ -2221,4 +2201,93 @@ void PlacementInfo::dumpOverflowClockUtilization()
             }
         }
     }
+}
+
+void PlacementInfo::transferPaintData()
+{
+    auto &cells = designInfo->getCells();
+    PaintXs.resize(cells.size());
+    PaintYs.resize(cells.size());
+    PaintTypes.resize(cells.size());
+
+    std::vector<std::string> cellNames;
+    // writeElementInfo(std::vector<float> &_Xs, std::vector<float> &_Ys, std::vector<int> &_elementTypes)
+    for (int i = 0; i < cells.size(); i++)
+    {
+        PaintXs[i] = cellId2location[i].X;
+        PaintYs[i] = cellId2location[i].Y;
+        // LUT,FF,MUX,CARRY,DSP,BRAM,LUTRAM
+        if (cells[i]->isLUT())
+            PaintTypes[i] = 0;
+        else if (cells[i]->isFF())
+            PaintTypes[i] = 1;
+        else if (cells[i]->isMux())
+            PaintTypes[i] = 2;
+        else if (cells[i]->isCarry())
+            PaintTypes[i] = 3;
+        else if (cells[i]->isDSP())
+            PaintTypes[i] = 4;
+        else if (cells[i]->isBRAM())
+            PaintTypes[i] = 5;
+        else
+            PaintTypes[i] = 6;
+        cellNames.push_back(cells[i]->getName());
+    }
+    assert(paintData);
+
+    auto timingInfo = simplePlacementTimingInfo;
+    auto timingGraph = timingInfo->getSimplePlacementTimingGraph();
+    timingGraph->sortedEndpointByDelay();
+    std::vector<int> isCovered(timingGraph->getNodes().size(), 0);
+    std::vector<std::vector<int>> resPaths;
+
+    int pathNumThr;
+
+    paintData->getPaintDemand(pathNumThr);
+    pathNumThr = 1000;
+    // print_status("painting " + std::to_string(pathNumThr) + " critical paths");
+
+    for (auto curEndpoint : timingGraph->getSortedTimingEndpoints())
+    {
+        if (isCovered[curEndpoint->getId()])
+            continue;
+        std::vector<int> resPath;
+        bool findSuccessfully =
+            timingGraph->backTraceDelayLongestPathFromNode(curEndpoint->getId(), isCovered, resPath, 10);
+        if (findSuccessfully)
+        {
+            // std::cout << "find endpoint [" << curEndpoint->getDesignNode()
+            //           << "] delay=" << curEndpoint->getLatestInputArrival() << " with " << resPath.size()
+            //           << " nodes in path.\n";
+
+            bool containNegativeIndex = false;
+            for (auto cellId : resPath)
+            {
+                if (cellId < 0)
+                {
+                    containNegativeIndex = true;
+                    break;
+                }
+                auto PU = getPlacementUnitByCellId(cellId);
+                if (auto unpackedCell = dynamic_cast<PlacementInfo::PlacementUnpackedCell *>(PU))
+                {
+                    isCovered[unpackedCell->getCell()->getCellId()]++;
+                }
+                else if (auto macro = dynamic_cast<PlacementInfo::PlacementMacro *>(PU))
+                {
+                    for (auto cell : macro->getCells())
+                    {
+                        isCovered[cell->getCellId()]++;
+                    }
+                }
+            }
+            if (!containNegativeIndex)
+                resPaths.push_back(resPath);
+        }
+
+        if (resPaths.size() > pathNumThr)
+            break;
+    }
+
+    paintData->writeElementInfo(PaintXs, PaintYs, PaintTypes, resPaths, cellNames);
 }

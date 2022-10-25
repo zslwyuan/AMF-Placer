@@ -20,13 +20,13 @@ void runPlacer(AMFPlacer *placer)
 
 void runVisualization(AMFPlacer *placer)
 {
-    char *argv[] = {"/home/tingyuan/Downloads/workspace/blend2d-samples/qt/build/AMF-Placer"};
+    char *argv[] = {"GUI"};
     int argc = 1;
     QApplication app(argc, argv);
     MainWindow win;
     win.paintData = placer->paintData;
     win.setMinimumSize(QSize(400, 320));
-    win.resize(QSize(WIN_W, WIN_H));
+    win.resize(QSize(WIN_W, WIN_H + 80));
     win.show();
 
     app.exec();
@@ -47,7 +47,7 @@ int main(int argc, char **argv)
             guiEnable = true;
     }
 
-    AMFPlacer *placer = new AMFPlacer(argv[1]);
+    AMFPlacer *placer = new AMFPlacer(argv[1], guiEnable);
 
     std::thread threadPlacer(runPlacer, placer);
     while (!placer->paintData)

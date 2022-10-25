@@ -48,7 +48,7 @@ class AMFPlacer
      *
      * @param JSONFileName
      */
-    AMFPlacer(std::string JSONFileName)
+    AMFPlacer(std::string JSONFileName, bool guiEnable)
     {
         JSON = parseJSONFile(JSONFileName);
 
@@ -86,6 +86,9 @@ class AMFPlacer
         designInfo = new DesignInfo(JSON, deviceinfo);
         designInfo->printStat();
         paintData = new PaintDataBase();
+
+        if (guiEnable)
+            JSON["guiEnable"] = "true";
     };
 
     ~AMFPlacer()

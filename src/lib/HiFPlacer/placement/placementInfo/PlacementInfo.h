@@ -4415,6 +4415,8 @@ class PlacementInfo
         paintData = _paintData;
     }
 
+    void transferPaintData();
+
   private:
     CompatiblePlacementTable *compatiblePlacementTable = nullptr;
     std::vector<PlacementUnit *> placementUnits;
@@ -4611,6 +4613,8 @@ class PlacementInfo
     int highFanOutThr = 10000000;
 
     float macroRatio = 0.0;
+
+    bool guiEnable = false;
 };
 
 std::ostream &operator<<(std::ostream &os, PlacementInfo::PlacementMacro *curMacro);
