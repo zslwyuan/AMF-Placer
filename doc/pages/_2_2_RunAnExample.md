@@ -20,5 +20,5 @@ In the GUI window, you can zoom in by left click of your mouse, zoom out by righ
 The critical path and various elements will be colored respectively as shown below.
 
 <center>
-<img src="GUI.gif" alt="GUI" title="GUI" width="150" />  
+<img src="GUI.gif" alt="GUI" title="GUI" width="200" />  
 </center>

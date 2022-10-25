@@ -13,7 +13,7 @@ AMF-Placer 2.0 is an open-source comprehensive timing-driven Analytical Mixed-si
 AMF-Placer 2.0 is the extension of AMF-Placer 1.0. AMF-Placer 1.0 is equipped with a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Based on a set of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure can be accelerated by 2.41x on average. 
 
 <center>
-<img src="OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />    <img src="MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" />   <img src="optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" />    <img src="MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)" width="100" /> 
+<img src="OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />    <img src="MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" />   <img src="optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" />    <img src="MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)" width="100" />  <img src="GUI.gif" alt="GUI" title="GUI" width="100" />  
 </center>
 
 **License**
@@ -54,10 +54,6 @@ Generally, for non-commercial usage of this open-source project, users should co
 8. supports placement check-point importing/exporting
 9. a set of pre-implementation benchmarks from latest practical FPGA applications
 10. provides a set of Tcl scripts which extracts design netlist from Vivado and exports post-placement information to Vivado
-
-<center>
-<img src="GUI.gif" alt="GUI" title="GUI" width="150" />  
-</center>
 
 
 **Todo List**
