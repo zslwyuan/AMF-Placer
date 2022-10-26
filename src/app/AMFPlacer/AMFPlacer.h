@@ -30,14 +30,20 @@
  * To enable the performance optimization of application mapping on modern field-programmable gate arrays (FPGAs),
  * certain critical path portions of the designs might be prearranged into many multi-cell macros during synthesis.
  * These movable macros with constraints of shape and resources lead to challenging mixed-size placement for FPGA
- * designs which cannot be addressed by previous works of analytical placers. In this work, we propose AMF-Placer,
- * an open-source analytical mixed-size FPGA placer supporting mixed-size placement on FPGA, with an interface to
- * Xilinx Vivado. To speed up the convergence and improve the quality of the placement, AMF-Placer is equipped with
- * a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Based on a set
- * of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results
- * indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the
- * baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure
- * can be accelerated by 2.41x on average.
+ * designs which cannot be addressed by previous works of analytical placers. AMF-Placer 2.0 is an open-source
+ * comprehensive timing-driven Analytical Mixed-size FPGA placer. It supports mixed-size placement of heterogeneous
+ * resources (e.g., LUT/FF/LUTRAM/MUX/CARRY/DSP/BRAM) on FPGA. To speed up the convergence and improve the timing
+ * quality of the placement,  standing upon the shoulders of AMF-Placer 1.0, AMF-Placer 2.0 is equipped with a series of
+ * new techniques for timing optimization, including an effective regression-based timing model,
+ * placement-blockage-aware anchor insertion, WNS-aware timing-driven quadratic placement, and sector-guided detailed
+ * placement. Based on a set of the latest large open-source benchmarks from various domains for Xilinx Ultrascale
+ * FPGAs, experimental results indicate that critical path delays realized by AMF-Placer 2.0 are averagely 2.2% and
+ * 0.59% higher than those achieved by commercial tool Xilinx Vivavo 2020.2 and 2021.2  respectively. Meanwhile, the
+ * average runtime of placement procedure of AMF-Placer 2.0 is 14% and 8.5% higher than Xilinx Vivavo 2020.2 and 2021.2
+ * respectively. Although limited by the absence of the exact timing model of the device, the information of design
+ * hierarchy and accurate routing feedback, AMF-Placer 2.0 is the first open-source FPGA placer which can handle the
+ * timing-driven mixed-size placement of practical complex designs with various FPGA resources and achieves the
+ * comparable quality to the latest commercial tools.
  *
  */
 class AMFPlacer

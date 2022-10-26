@@ -56,16 +56,24 @@ Below is a hiearchy tree of this project. As for the details, please refer to th
 ```
 
 **Dependencies**
-1. opengl, freeglut, glew
-2. eigen 3.3.8 (source code included)
-3. MKL (optional)
-4. PaToH (library included)
-5. osqp (source code included)
+  
+AMF-Placer 2.0 relies on the following dependencies and we sincerely appreciate the efforts of the authors of the related open-source project.
+Each of them has corresponding licensing policy and please confirm that you are following the rules mentioned in the licenses. 
+In the source code of AMF-Placer 2.0, we only include the open-source projects under the Apache License 2.0 or MIT License. 
+The other dependencies will be downloaded when you are building the project and interact with the main body of AMF-Placer 2.0 via libraries and APIs.
+
+1. eigen 3.3.8 (MPL2 license, source code will be downlaoded into the building directory during building if you have not installed it)
+2. PaToH (academic use only, library will be downlaoded into the building directory)
+3. Asmjit (Apache License, source code included in src/lib/3rdParty/asmjit for fast placement rendering)
+4. Blend2d (Apache License, source code included in src/lib/3rdParty/blend2d for fast placement rendering)
+5. Qt5 (for GUI, you can install it on Ubuntu by: sudo apt-get install qt5-default )
+6. KDTree (MIT License, source code included in src/lib/3rdParty/KDTree)
+7. Maximal Cardinality Matching (MIT License, source code included in src/lib/3rdParty/MaximalCardinalityMatching))
+8. Min Cost Flow (MIT License, source code included in src/lib/3rdParty/minCostFlow
+
 
 
 **Todo List**
-1. stable clock legalization
-2. basic static timing analysis (doing)
-3. timing term in analytical model (doing)
-4. timing-driven detailed placement
 
+1. clock tree synthesis
+2. ckock-related optimization
