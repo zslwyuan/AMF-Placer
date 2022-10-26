@@ -11,3 +11,8 @@ We provide a script to build the placer and users can run the following command 
 sudo apt-get install qt5-default #for GUI
 ./build.sh
 ```
+after the first initial building with "build.sh" script, for the latter building after your update of source code, you can directly go into the build directory and type:
+```
+make -j8
+```
+This command will not download the Eigen3 source code and PaToH again.

@@ -1253,6 +1253,11 @@ class DeviceInfo
         return clockRegions[regionY][regionX]->getMaxUtilizationOfClockColumns();
     }
 
+    /**
+     * @brief Get the Clock Regions in an 2D array clockregion[Y][X]
+     *
+     * @return std::vector<std::vector<ClockRegion *>>&
+     */
     inline std::vector<std::vector<ClockRegion *>> &getClockRegions()
     {
         return clockRegions;
