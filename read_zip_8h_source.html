@@ -88,48 +88,48 @@ $(document).ready(function(){initNavTree('read_zip_8h_source.html',''); initResi
 </div><!--header-->
 <div class="contents">
 <a href="read_zip_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef _READZIP</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define _READZIP</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// create a FILEBUF to read the unzip file pipe</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html">   21</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_f_i_l_ebuf.html">FILEbuf</a> : std::streambuf</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#aa86de919fc2f7fa7f7c82010b9fc9eeb">   23</a></span>&#160;    <a class="code" href="struct_f_i_l_ebuf.html#aa86de919fc2f7fa7f7c82010b9fc9eeb">FILEbuf</a>(FILE *fp) : <a class="code" href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">fp_</a>(fp)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#aa63d1cf65b3c60df8cb6e059afcaaa16">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_f_i_l_ebuf.html#aa63d1cf65b3c60df8cb6e059afcaaa16">underflow</a>()</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> (this-&gt;gptr() == this-&gt;egptr())</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordtype">int</span> size = fread(this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a>, 1, <span class="keywordtype">int</span>(<a class="code" href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">s_size</a>), this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">fp_</a>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (0 &lt; size)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                this-&gt;setg(this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a>, this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a>, this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a> + size);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> this-&gt;gptr() == this-&gt;egptr() ? traits_type::eof() : traits_type::to_int_type(*gptr());</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#ifndef _READZIP</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define _READZIP</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;cstdio&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// create a FILEBUF to read the unzip file pipe</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html">   33</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_f_i_l_ebuf.html">FILEbuf</a> : std::streambuf</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#aa86de919fc2f7fa7f7c82010b9fc9eeb">   35</a></span>&#160;    <a class="code" href="struct_f_i_l_ebuf.html#aa86de919fc2f7fa7f7c82010b9fc9eeb">FILEbuf</a>(FILE *fp) : <a class="code" href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">fp_</a>(fp)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">   38</a></span>&#160;    FILE *<a class="code" href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">fp_</a>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">enum</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">s_size</a> = 1024</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">   42</a></span>&#160;    };</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">   43</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a>[<a class="code" href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">s_size</a>];</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#aa63d1cf65b3c60df8cb6e059afcaaa16">   38</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_f_i_l_ebuf.html#aa63d1cf65b3c60df8cb6e059afcaaa16">underflow</a>()</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (this-&gt;gptr() == this-&gt;egptr())</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordtype">int</span> size = fread(this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a>, 1, <span class="keywordtype">int</span>(<a class="code" href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">s_size</a>), this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">fp_</a>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keywordflow">if</span> (0 &lt; size)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                this-&gt;setg(this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a>, this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a>, this-&gt;<a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a> + size);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> this-&gt;gptr() == this-&gt;egptr() ? traits_type::eof() : traits_type::to_int_type(*gptr());</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">   50</a></span>&#160;    FILE *<a class="code" href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">fp_</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">enum</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">s_size</a> = 1024</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">   54</a></span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">   55</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">buffer_</a>[<a class="code" href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">s_size</a>];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="astruct_f_i_l_ebuf_html_aa86de919fc2f7fa7f7c82010b9fc9eeb"><div class="ttname"><a href="struct_f_i_l_ebuf.html#aa86de919fc2f7fa7f7c82010b9fc9eeb">FILEbuf::FILEbuf</a></div><div class="ttdeci">FILEbuf(FILE *fp)</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00023">readZip.h:23</a></div></div>
-<div class="ttc" id="astruct_f_i_l_ebuf_html_a1cc5f1ce60dc59f52d38df2c1cdbe97e"><div class="ttname"><a href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">FILEbuf::buffer_</a></div><div class="ttdeci">char buffer_[s_size]</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00043">readZip.h:43</a></div></div>
-<div class="ttc" id="astruct_f_i_l_ebuf_html"><div class="ttname"><a href="struct_f_i_l_ebuf.html">FILEbuf</a></div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00021">readZip.h:22</a></div></div>
-<div class="ttc" id="astruct_f_i_l_ebuf_html_aa63d1cf65b3c60df8cb6e059afcaaa16"><div class="ttname"><a href="struct_f_i_l_ebuf.html#aa63d1cf65b3c60df8cb6e059afcaaa16">FILEbuf::underflow</a></div><div class="ttdeci">int underflow()</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00026">readZip.h:26</a></div></div>
-<div class="ttc" id="astruct_f_i_l_ebuf_html_a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5"><div class="ttname"><a href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">FILEbuf::s_size</a></div><div class="ttdeci">@ s_size</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00042">readZip.h:41</a></div></div>
-<div class="ttc" id="astruct_f_i_l_ebuf_html_a750578ef790df8eca31b51d2d76c0dbd"><div class="ttname"><a href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">FILEbuf::fp_</a></div><div class="ttdeci">FILE * fp_</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00038">readZip.h:38</a></div></div>
+<div class="ttc" id="astruct_f_i_l_ebuf_html_aa86de919fc2f7fa7f7c82010b9fc9eeb"><div class="ttname"><a href="struct_f_i_l_ebuf.html#aa86de919fc2f7fa7f7c82010b9fc9eeb">FILEbuf::FILEbuf</a></div><div class="ttdeci">FILEbuf(FILE *fp)</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00035">readZip.h:35</a></div></div>
+<div class="ttc" id="astruct_f_i_l_ebuf_html_a1cc5f1ce60dc59f52d38df2c1cdbe97e"><div class="ttname"><a href="struct_f_i_l_ebuf.html#a1cc5f1ce60dc59f52d38df2c1cdbe97e">FILEbuf::buffer_</a></div><div class="ttdeci">char buffer_[s_size]</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00055">readZip.h:55</a></div></div>
+<div class="ttc" id="astruct_f_i_l_ebuf_html"><div class="ttname"><a href="struct_f_i_l_ebuf.html">FILEbuf</a></div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00033">readZip.h:34</a></div></div>
+<div class="ttc" id="astruct_f_i_l_ebuf_html_aa63d1cf65b3c60df8cb6e059afcaaa16"><div class="ttname"><a href="struct_f_i_l_ebuf.html#aa63d1cf65b3c60df8cb6e059afcaaa16">FILEbuf::underflow</a></div><div class="ttdeci">int underflow()</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00038">readZip.h:38</a></div></div>
+<div class="ttc" id="astruct_f_i_l_ebuf_html_a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5"><div class="ttname"><a href="struct_f_i_l_ebuf.html#a05ccadb620fb17fc6a9f7e7cbbb3717ea3b86668cd7c4b3c0d7a342d7c08079b5">FILEbuf::s_size</a></div><div class="ttdeci">@ s_size</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00054">readZip.h:53</a></div></div>
+<div class="ttc" id="astruct_f_i_l_ebuf_html_a750578ef790df8eca31b51d2d76c0dbd"><div class="ttname"><a href="struct_f_i_l_ebuf.html#a750578ef790df8eca31b51d2d76c0dbd">FILEbuf::fp_</a></div><div class="ttdeci">FILE * fp_</div><div class="ttdef"><b>Definition:</b> <a href="read_zip_8h_source.html#l00050">readZip.h:50</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

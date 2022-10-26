@@ -88,42 +88,42 @@ $(document).ready(function(){initNavTree('dump_zip_8cc_source.html',''); initRes
 </div><!--header-->
 <div class="contents">
 <a href="dump_zip_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dump_zip_8h.html">dumpZip.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="dump_zip_8h.html#a21c5a770aceed592dcbb296cacea5777">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a>(std::string fileName, std::stringstream &amp;<a class="code" href="namespacedelay_visualization.html#ac5da16cbe8d0cf44f04d5da65d90eef5">data</a>)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">// we will use GZip from zlib</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    gzFile gz_file;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// open the file for writing in binary mode</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    gz_file = gzopen(fileName.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    assert(Z_NULL != gz_file &amp;&amp; <span class="stringliteral">&quot;The zip file should be created successfully and please check your path settings.&quot;</span>);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// Get the size of the stream</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> file_size = <span class="keyword">sizeof</span>(char) * <a class="code" href="namespacedelay_visualization.html#ac5da16cbe8d0cf44f04d5da65d90eef5">data</a>.str().size();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">// Write the data</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    gzwrite(gz_file, (<span class="keywordtype">void</span> *)(<a class="code" href="namespacedelay_visualization.html#ac5da16cbe8d0cf44f04d5da65d90eef5">data</a>.str().data()), file_size);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">// close the file</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    gzclose(gz_file);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="dump_zip_8h.html#afdd89841220a8b18e39e0844a833a18b">   33</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="dump_zip_8cc.html#afdd89841220a8b18e39e0844a833a18b">fileExists</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="namespacepaint_placement.html#a082821fb8230777ec65c81f1abadc0f0">filename</a>)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">struct </span>stat buf;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">if</span> (stat(<a class="code" href="namespacepaint_placement.html#a082821fb8230777ec65c81f1abadc0f0">filename</a>.c_str(), &amp;buf) != -1)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="dump_zip_8h.html">dumpZip.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;sys/stat.h&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="dump_zip_8h.html#a21c5a770aceed592dcbb296cacea5777">   29</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a>(std::string fileName, std::stringstream &amp;<a class="code" href="namespacedelay_visualization.html#ac5da16cbe8d0cf44f04d5da65d90eef5">data</a>)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// we will use GZip from zlib</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    gzFile gz_file;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// open the file for writing in binary mode</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    gz_file = gzopen(fileName.c_str(), <span class="stringliteral">&quot;wb&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    assert(Z_NULL != gz_file &amp;&amp; <span class="stringliteral">&quot;The zip file should be created successfully and please check your path settings.&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// Get the size of the stream</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> file_size = <span class="keyword">sizeof</span>(char) * <a class="code" href="namespacedelay_visualization.html#ac5da16cbe8d0cf44f04d5da65d90eef5">data</a>.str().size();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Write the data</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    gzwrite(gz_file, (<span class="keywordtype">void</span> *)(<a class="code" href="namespacedelay_visualization.html#ac5da16cbe8d0cf44f04d5da65d90eef5">data</a>.str().data()), file_size);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// close the file</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    gzclose(gz_file);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="dump_zip_8h.html#afdd89841220a8b18e39e0844a833a18b">   45</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="dump_zip_8cc.html#afdd89841220a8b18e39e0844a833a18b">fileExists</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="namespacepaint_placement.html#a082821fb8230777ec65c81f1abadc0f0">filename</a>)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">struct </span>stat buf;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (stat(<a class="code" href="namespacepaint_placement.html#a082821fb8230777ec65c81f1abadc0f0">filename</a>.c_str(), &amp;buf) != -1)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacepaint_placement_html_a082821fb8230777ec65c81f1abadc0f0"><div class="ttname"><a href="namespacepaint_placement.html#a082821fb8230777ec65c81f1abadc0f0">paintPlacement.filename</a></div><div class="ttdeci">string filename</div><div class="ttdef"><b>Definition:</b> <a href="paint_placement_8py_source.html#l00141">paintPlacement.py:141</a></div></div>
 <div class="ttc" id="anamespacedelay_visualization_html_ac5da16cbe8d0cf44f04d5da65d90eef5"><div class="ttname"><a href="namespacedelay_visualization.html#ac5da16cbe8d0cf44f04d5da65d90eef5">delayVisualization.data</a></div><div class="ttdeci">data</div><div class="ttdef"><b>Definition:</b> <a href="delay_visualization_8py_source.html#l00076">delayVisualization.py:76</a></div></div>
-<div class="ttc" id="adump_zip_8cc_html_afdd89841220a8b18e39e0844a833a18b"><div class="ttname"><a href="dump_zip_8cc.html#afdd89841220a8b18e39e0844a833a18b">fileExists</a></div><div class="ttdeci">bool fileExists(const std::string &amp;filename)</div><div class="ttdef"><b>Definition:</b> <a href="dump_zip_8cc_source.html#l00033">dumpZip.cc:33</a></div></div>
+<div class="ttc" id="adump_zip_8cc_html_afdd89841220a8b18e39e0844a833a18b"><div class="ttname"><a href="dump_zip_8cc.html#afdd89841220a8b18e39e0844a833a18b">fileExists</a></div><div class="ttdeci">bool fileExists(const std::string &amp;filename)</div><div class="ttdef"><b>Definition:</b> <a href="dump_zip_8cc_source.html#l00045">dumpZip.cc:45</a></div></div>
 <div class="ttc" id="adump_zip_8h_html"><div class="ttname"><a href="dump_zip_8h.html">dumpZip.h</a></div></div>
-<div class="ttc" id="adump_zip_8cc_html_a21c5a770aceed592dcbb296cacea5777"><div class="ttname"><a href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a></div><div class="ttdeci">void writeStrToGZip(std::string fileName, std::stringstream &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="dump_zip_8cc_source.html#l00017">dumpZip.cc:17</a></div></div>
+<div class="ttc" id="adump_zip_8cc_html_a21c5a770aceed592dcbb296cacea5777"><div class="ttname"><a href="dump_zip_8cc.html#a21c5a770aceed592dcbb296cacea5777">writeStrToGZip</a></div><div class="ttdeci">void writeStrToGZip(std::string fileName, std::stringstream &amp;data)</div><div class="ttdef"><b>Definition:</b> <a href="dump_zip_8cc_source.html#l00029">dumpZip.cc:29</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

@@ -95,7 +95,6 @@ $(document).ready(function(){initNavTree('_cluster_placer_8h.html',''); initResi
 <div class="textblock"><code>#include &quot;<a class="el" href="_design_info_8h_source.html">DesignInfo.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_device_info_8h_source.html">DeviceInfo.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_graph_partitioner_8h_source.html">GraphPartitioner.h</a>&quot;</code><br />
-<code>#include &quot;PaToH/patoh.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_placement_info_8h_source.html">PlacementInfo.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_s_a_placer_8h_source.html">SAPlacer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sys_info_8h_source.html">sysInfo.h</a>&quot;</code><br />
@@ -115,54 +114,53 @@ Include dependency graph for ClusterPlacer.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="_cluster_placer_8h__incl.png" border="0" usemap="#src_2lib_2_hi_f_placer_2placement_2global_placement_2_cluster_placer_8h" alt=""/></div>
 <map name="src_2lib_2_hi_f_placer_2placement_2global_placement_2_cluster_placer_8h" id="src_2lib_2_hi_f_placer_2placement_2global_placement_2_cluster_placer_8h">
-<area shape="rect" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="1634,5,1849,47"/>
-<area shape="rect" href="_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="1137,319,1231,345"/>
-<area shape="rect" href="_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="1143,393,1238,420"/>
-<area shape="rect" title=" " alt="" coords="1529,543,1583,569"/>
-<area shape="rect" title=" " alt="" coords="1282,468,1350,495"/>
-<area shape="rect" title=" " alt="" coords="768,468,835,495"/>
-<area shape="rect" title=" " alt="" coords="1593,468,1665,495"/>
-<area shape="rect" title=" " alt="" coords="981,468,1027,495"/>
-<area shape="rect" title=" " alt="" coords="528,468,568,495"/>
-<area shape="rect" title=" " alt="" coords="1772,468,1841,495"/>
-<area shape="rect" title=" " alt="" coords="1689,468,1748,495"/>
-<area shape="rect" href="_graph_partitioner_8h.html" title=" " alt="" coords="2147,95,2274,121"/>
-<area shape="rect" title=" " alt="" coords="2501,169,2611,196"/>
-<area shape="rect" href="_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="1318,169,1434,196"/>
-<area shape="rect" title=" " alt="" coords="2014,319,2071,345"/>
-<area shape="rect" title=" " alt="" coords="448,319,544,345"/>
-<area shape="rect" title=" " alt="" coords="3421,468,3480,495"/>
-<area shape="rect" href="sys_info_8h.html" title=" " alt="" coords="3504,468,3579,495"/>
-<area shape="rect" href="_s_a_placer_8h.html" title=" " alt="" coords="2282,393,2369,420"/>
-<area shape="rect" href="str_print_8h.html" title=" " alt="" coords="2167,468,2241,495"/>
-<area shape="rect" title=" " alt="" coords="2173,543,2235,569"/>
-<area shape="rect" title=" " alt="" coords="2259,543,2298,569"/>
-<area shape="rect" title=" " alt="" coords="2553,543,2613,569"/>
-<area shape="rect" title=" " alt="" coords="3065,543,3127,569"/>
-<area shape="rect" title=" " alt="" coords="2067,543,2149,569"/>
-<area shape="rect" href="_external_process_func_8h.html" title="This header file contains the definitions of ExternalProcessFunc class and its internal modules and A..." alt="" coords="2495,393,2649,420"/>
-<area shape="rect" title=" " alt="" coords="1251,244,1336,271"/>
-<area shape="rect" title=" " alt="" coords="803,244,930,271"/>
-<area shape="rect" href="_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="1512,244,1667,271"/>
-<area shape="rect" href="dump_zip_8h.html" title=" " alt="" coords="1516,393,1599,420"/>
-<area shape="rect" title=" " alt="" coords="954,244,1094,271"/>
-<area shape="rect" title=" " alt="" coords="1118,244,1175,271"/>
-<area shape="rect" title=" " alt="" coords="1256,319,1331,345"/>
-<area shape="rect" title=" " alt="" coords="1468,468,1519,495"/>
-<area shape="rect" title=" " alt="" coords="3491,543,3557,569"/>
-<area shape="rect" title=" " alt="" coords="3581,543,3675,569"/>
-<area shape="rect" title=" " alt="" coords="3367,543,3433,569"/>
-<area shape="rect" title=" " alt="" coords="2266,468,2323,495"/>
-<area shape="rect" title=" " alt="" coords="2347,468,2426,495"/>
-<area shape="rect" title=" " alt="" coords="2451,468,2517,495"/>
-<area shape="rect" title=" " alt="" coords="2542,468,2605,495"/>
-<area shape="rect" title=" " alt="" coords="2629,468,2693,495"/>
-<area shape="rect" title=" " alt="" coords="2718,468,2799,495"/>
-<area shape="rect" title=" " alt="" coords="2823,468,2902,495"/>
-<area shape="rect" title=" " alt="" coords="2926,468,3013,495"/>
-<area shape="rect" title=" " alt="" coords="3037,468,3117,495"/>
-<area shape="rect" title=" " alt="" coords="3141,468,3245,495"/>
-<area shape="rect" title=" " alt="" coords="1916,468,2041,495"/>
+<area shape="rect" title="This header file contains the definitions of ClusterPlacer class and its internal modules and APIs wh..." alt="" coords="1685,5,1900,47"/>
+<area shape="rect" href="_design_info_8h.html" title="This header file contains the classes of data for a standalone design netlist." alt="" coords="2312,319,2406,345"/>
+<area shape="rect" href="_device_info_8h.html" title="This header file contains the classes of data for a standalone device." alt="" coords="2008,393,2102,420"/>
+<area shape="rect" title=" " alt="" coords="2028,543,2082,569"/>
+<area shape="rect" title=" " alt="" coords="1657,468,1725,495"/>
+<area shape="rect" title=" " alt="" coords="2158,468,2224,495"/>
+<area shape="rect" title=" " alt="" coords="1934,468,2006,495"/>
+<area shape="rect" title=" " alt="" coords="2370,468,2417,495"/>
+<area shape="rect" title=" " alt="" coords="1339,468,1379,495"/>
+<area shape="rect" title=" " alt="" coords="3070,468,3139,495"/>
+<area shape="rect" title=" " alt="" coords="2700,468,2759,495"/>
+<area shape="rect" href="_graph_partitioner_8h.html" title=" " alt="" coords="1729,95,1856,121"/>
+<area shape="rect" href="_placement_info_8h.html" title="This header file mainly contains the definition of class PlacementInfo, including information related..." alt="" coords="2324,169,2440,196"/>
+<area shape="rect" title=" " alt="" coords="3250,319,3308,345"/>
+<area shape="rect" title=" " alt="" coords="1482,319,1578,345"/>
+<area shape="rect" title=" " alt="" coords="3639,468,3698,495"/>
+<area shape="rect" href="sys_info_8h.html" title=" " alt="" coords="3288,468,3363,495"/>
+<area shape="rect" href="_s_a_placer_8h.html" title=" " alt="" coords="2837,393,2924,420"/>
+<area shape="rect" href="str_print_8h.html" title=" " alt="" coords="1088,468,1163,495"/>
+<area shape="rect" title=" " alt="" coords="1020,543,1082,569"/>
+<area shape="rect" title=" " alt="" coords="1106,543,1145,569"/>
+<area shape="rect" title=" " alt="" coords="702,543,762,569"/>
+<area shape="rect" title=" " alt="" coords="149,543,212,569"/>
+<area shape="rect" title=" " alt="" coords="1169,543,1250,569"/>
+<area shape="rect" href="_external_process_func_8h.html" title="This header file contains the definitions of ExternalProcessFunc class and its internal modules and A..." alt="" coords="552,393,707,420"/>
+<area shape="rect" title=" " alt="" coords="2591,244,2676,271"/>
+<area shape="rect" title=" " alt="" coords="2701,244,2828,271"/>
+<area shape="rect" href="_placement_timing_info_8h.html" title="This header file contains the classes of data which record the timing information related to placemen..." alt="" coords="2362,244,2516,271"/>
+<area shape="rect" href="dump_zip_8h.html" title=" " alt="" coords="3202,393,3284,420"/>
+<area shape="rect" title=" " alt="" coords="2852,244,2992,271"/>
+<area shape="rect" title=" " alt="" coords="3016,244,3073,271"/>
+<area shape="rect" title=" " alt="" coords="2687,319,2762,345"/>
+<area shape="rect" title=" " alt="" coords="3163,468,3214,495"/>
+<area shape="rect" title=" " alt="" coords="3344,543,3411,569"/>
+<area shape="rect" title=" " alt="" coords="3227,543,3320,569"/>
+<area shape="rect" title=" " alt="" coords="1607,543,1674,569"/>
+<area shape="rect" title=" " alt="" coords="85,468,142,495"/>
+<area shape="rect" title=" " alt="" coords="166,468,245,495"/>
+<area shape="rect" title=" " alt="" coords="270,468,336,495"/>
+<area shape="rect" title=" " alt="" coords="361,468,424,495"/>
+<area shape="rect" title=" " alt="" coords="448,468,512,495"/>
+<area shape="rect" title=" " alt="" coords="537,468,618,495"/>
+<area shape="rect" title=" " alt="" coords="642,468,721,495"/>
+<area shape="rect" title=" " alt="" coords="745,468,832,495"/>
+<area shape="rect" title=" " alt="" coords="856,468,936,495"/>
+<area shape="rect" title=" " alt="" coords="960,468,1064,495"/>
+<area shape="rect" title=" " alt="" coords="2834,468,2959,495"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -192,7 +190,9 @@ Classes</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Tingyuan LIANG (<a href="#" onclick="location.href='mai'+'lto:'+'tli'+'an'+'g@c'+'on'+'nec'+'t.'+'ust'+'.h'+'k'; return false;">tlian<span style="display: none;">.nosp@m.</span>g@co<span style="display: none;">.nosp@m.</span>nnect<span style="display: none;">.nosp@m.</span>.ust<span style="display: none;">.nosp@m.</span>.hk</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2021-10-02</dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 Reconfiguration Computing Systems Lab, The Hong Kong University of Science and Technology. All rights reserved. </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2021 Reconfiguration Computing Systems Lab, The Hong Kong University of Science and Technology. All rights reserved.</dd></dl>
+<p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at </p><pre class="fragment">http://www.apache.org/licenses/LICENSE-2.0
+</pre><p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. </p>
 
 <p class="definition">Definition in file <a class="el" href="_cluster_placer_8h_source.html">ClusterPlacer.h</a>.</p>
 </div></div><!-- contents -->

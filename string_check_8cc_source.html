@@ -88,49 +88,49 @@ $(document).ready(function(){initNavTree('string_check_8cc_source.html',''); ini
 </div><!--header-->
 <div class="contents">
 <a href="string_check_8cc.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string_check_8h.html">stringCheck.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="string_check_8h.html#ad6fd398babbcea4a15d42968cb4a5b28">   18</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28">strContains</a>(std::string target, std::string substring)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">return</span> (target.find(substring) != std::string::npos);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="string_check_8h.html#abcff5c080eaf26c4fe2ca75cfdb1f140">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>, std::vector&lt;std::string&gt; &amp;sv, <span class="keyword">const</span> <span class="keywordtype">char</span> *delim)</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    sv.clear();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">char</span> *buffer = <span class="keyword">new</span> <span class="keywordtype">char</span>[<a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>.size() + 1];</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    buffer[<a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>.size()] = <span class="charliteral">&#39;\0&#39;</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    std::copy(<a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>.begin(), <a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>.end(), buffer);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">char</span> *p = std::strtok(buffer, delim);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">do</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        sv.push_back(p);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    } <span class="keywordflow">while</span> ((p = std::strtok(NULL, delim)));</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">delete</span>[] buffer;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="string_check_8h.html#aea65d8aaf45377aa73450b1f4b0e1930">   38</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a>(std::string &amp;str, <span class="keyword">const</span> std::string from, <span class="keyword">const</span> std::string to)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">if</span> (from.empty())</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::string::size_type start_pos = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">while</span> ((start_pos = str.find(from, start_pos)) != std::string::npos)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        str.replace(start_pos, from.length(), to);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        start_pos += to.length(); <span class="comment">// In case &#39;to&#39; contains &#39;from&#39;, like replacing &#39;x&#39; with &#39;yx&#39;</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="string_check_8h.html">stringCheck.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="string_check_8h.html#ad6fd398babbcea4a15d42968cb4a5b28">   30</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28">strContains</a>(std::string target, std::string substring)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> (target.find(substring) != std::string::npos);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="string_check_8h.html#abcff5c080eaf26c4fe2ca75cfdb1f140">   35</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a>(<span class="keyword">const</span> std::string &amp;<a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>, std::vector&lt;std::string&gt; &amp;sv, <span class="keyword">const</span> <span class="keywordtype">char</span> *delim)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    sv.clear();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">char</span> *buffer = <span class="keyword">new</span> <span class="keywordtype">char</span>[<a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>.size() + 1];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    buffer[<a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>.size()] = <span class="charliteral">&#39;\0&#39;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    std::copy(<a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>.begin(), <a class="code" href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">s</a>.end(), buffer);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">char</span> *p = std::strtok(buffer, delim);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        sv.push_back(p);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    } <span class="keywordflow">while</span> ((p = std::strtok(NULL, delim)));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">delete</span>[] buffer;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="string_check_8h.html#aea65d8aaf45377aa73450b1f4b0e1930">   50</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a>(std::string &amp;str, <span class="keyword">const</span> std::string from, <span class="keyword">const</span> std::string to)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> (from.empty())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    std::string::size_type start_pos = 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">while</span> ((start_pos = str.find(from, start_pos)) != std::string::npos)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        str.replace(start_pos, from.length(), to);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        start_pos += to.length(); <span class="comment">// In case &#39;to&#39; contains &#39;from&#39;, like replacing &#39;x&#39; with &#39;yx&#39;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anamespacedelay_visualization_html_a175f7733c4dec6ed96d12e85da56b5be"><div class="ttname"><a href="namespacedelay_visualization.html#a175f7733c4dec6ed96d12e85da56b5be">delayVisualization.s</a></div><div class="ttdeci">s</div><div class="ttdef"><b>Definition:</b> <a href="delay_visualization_8py_source.html#l00099">delayVisualization.py:99</a></div></div>
-<div class="ttc" id="astring_check_8cc_html_ad6fd398babbcea4a15d42968cb4a5b28"><div class="ttname"><a href="string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28">strContains</a></div><div class="ttdeci">bool strContains(std::string target, std::string substring)</div><div class="ttdef"><b>Definition:</b> <a href="string_check_8cc_source.html#l00018">stringCheck.cc:18</a></div></div>
+<div class="ttc" id="astring_check_8cc_html_ad6fd398babbcea4a15d42968cb4a5b28"><div class="ttname"><a href="string_check_8cc.html#ad6fd398babbcea4a15d42968cb4a5b28">strContains</a></div><div class="ttdeci">bool strContains(std::string target, std::string substring)</div><div class="ttdef"><b>Definition:</b> <a href="string_check_8cc_source.html#l00030">stringCheck.cc:30</a></div></div>
 <div class="ttc" id="astring_check_8h_html"><div class="ttname"><a href="string_check_8h.html">stringCheck.h</a></div></div>
-<div class="ttc" id="astring_check_8cc_html_abcff5c080eaf26c4fe2ca75cfdb1f140"><div class="ttname"><a href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a></div><div class="ttdeci">void strSplit(const std::string &amp;s, std::vector&lt; std::string &gt; &amp;sv, const char *delim)</div><div class="ttdef"><b>Definition:</b> <a href="string_check_8cc_source.html#l00023">stringCheck.cc:23</a></div></div>
-<div class="ttc" id="astring_check_8cc_html_aea65d8aaf45377aa73450b1f4b0e1930"><div class="ttname"><a href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a></div><div class="ttdeci">void replaceAll(std::string &amp;str, const std::string from, const std::string to)</div><div class="ttdef"><b>Definition:</b> <a href="string_check_8cc_source.html#l00038">stringCheck.cc:38</a></div></div>
+<div class="ttc" id="astring_check_8cc_html_abcff5c080eaf26c4fe2ca75cfdb1f140"><div class="ttname"><a href="string_check_8cc.html#abcff5c080eaf26c4fe2ca75cfdb1f140">strSplit</a></div><div class="ttdeci">void strSplit(const std::string &amp;s, std::vector&lt; std::string &gt; &amp;sv, const char *delim)</div><div class="ttdef"><b>Definition:</b> <a href="string_check_8cc_source.html#l00035">stringCheck.cc:35</a></div></div>
+<div class="ttc" id="astring_check_8cc_html_aea65d8aaf45377aa73450b1f4b0e1930"><div class="ttname"><a href="string_check_8cc.html#aea65d8aaf45377aa73450b1f4b0e1930">replaceAll</a></div><div class="ttdeci">void replaceAll(std::string &amp;str, const std::string from, const std::string to)</div><div class="ttdef"><b>Definition:</b> <a href="string_check_8cc_source.html#l00050">stringCheck.cc:50</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
