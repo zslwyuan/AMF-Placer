@@ -15,4 +15,4 @@ after the first initial building with "build.sh" script, for the latter building
 ```
 make -j8
 ```
-This command will not download the Eigen3 source code and PaToH again.
+This command will not download and building the Eigen3 source code and PaToH again, which might save some building time.
