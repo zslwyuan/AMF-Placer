@@ -11,9 +11,11 @@ AMF-Placer 2.0 is an open-source comprehensive timing-driven Analytical Mixed-si
 AMF-Placer 2.0 is the extension of AMF-Placer 1.0. AMF-Placer 1.0 is a wirelength-driven mixed-size FPGA placer equipped with a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Experimental results indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure can be accelerated by 2.41x on average. 
 
 <p align="center">
-<img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)"  height="150" />  <img src="https://zslwyuan.github.io/AMF-Placer/MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)"  height="150" /> <img src="https://zslwyuan.github.io/AMF-Placer/optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)"  height="150" />   <img src="https://zslwyuan.github.io/AMF-Placer/MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)"  height="150" /><img src="https://zslwyuan.github.io/AMF-Placer/GUI.gif" alt="GUI" title="GUI"  height="150" /><img src="https://zslwyuan.github.io/AMF-Placer/GUIdetailed.gif" alt="GUIdetailed" title="GUIdetailed" height="150" />    
+<img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)"  height="200" />  <img src="https://zslwyuan.github.io/AMF-Placer/MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)"  height="200" /> <img src="https://zslwyuan.github.io/AMF-Placer/optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)"  height="200" />   <img src="https://zslwyuan.github.io/AMF-Placer/MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)"  height="200" /><img src="https://zslwyuan.github.io/AMF-Placer/GUI.gif" alt="GUI" title="GUI"  height="200" />   
 </p>
-
+<p align="center">
+<img src="https://zslwyuan.github.io/AMF-Placer/GUIdetailed.gif" alt="GUIdetailed" title="GUIdetailed" height="200" />    
+</p>
 ## License
 
 This project is developed by [Reconfiguration Computing Systems Lab](https://eeweiz.home.ece.ust.hk/), Hong Kong University of Science and Technology (HKUST). Tingyuan Liang (tliang@connect.ust.hk), Gengjie Chen (chen_gengjie.hotmail.com), Jieru Zhao (zhao-jieru.sjtu.edu.cn), Sharad Sinha (sharad@iitgoa.ac.in) and Wei Zhang (eeweiz@ust.hk) are the major contributors of this project.
