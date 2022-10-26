@@ -41,7 +41,6 @@ If our works are involved in your works, please cite our papers:
   journal={arXiv preprint arXiv:2210.08682},
   year={2022}
 }
-
 ```
 
 ## Motivations
