@@ -78,4 +78,6 @@ This project is under active development and far from perfect. We do want to mak
 * If you have any question/problem, please feel free to create an issue in the [GitHub Issue](https://github.com/zslwyuan/AMF-Placer/issues) or email us (Tingyuan LIANG, tliang@connect.ust.hk)
 * We sincerely welcome code contribution to this project or suggestion in any approach!
 
-(last updated Oct 23, 2022)
+
+
+(last updated Oct 26, 2022)
