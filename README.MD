@@ -33,7 +33,7 @@ If our works are involved in your works, please cite our papers:
    year={2021},  volume={},  number={},  pages={1-6},
 }
 ```
-\[2\] AMF-Placer 2.0: Open Source Timing-driven Analytical Mixed-size Placer for Large-scale Heterogeneous FPGA[(pre-print)](https://arxiv.org/abs/2210.08682)
+\[2\] AMF-Placer 2.0: Open Source Timing-driven Analytical Mixed-size Placer for Large-scale Heterogeneous FPGA[(pre-print)](https://github.com/zslwyuan/AMF-Placer/blob/main/doc/paper/amf-placer2.pdf)
 ```
 @article{liang2022amf,
   title={AMF-Placer 2.0: Open Source Timing-driven Analytical Mixed-size Placer for Large-scale Heterogeneous FPGA},
