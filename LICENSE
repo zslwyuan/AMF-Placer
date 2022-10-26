@@ -1,6 +1,3 @@
-For non-commercial usage of this open-source project, users should comply the Apache License attached below.
-For commercial usage of this open-source project, users must contact authors (Wei ZHANG, eeweiz@ust.hk; Tingyuan LIANG, tliang@connect.ust.hk) for authorization.
-
 
                                  Apache License
                            Version 2.0, January 2004
@@ -190,7 +187,7 @@ For commercial usage of this open-source project, users must contact authors (We
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
-   Copyright 2021 Tingyuan LIANG (Reconfiguration Computing Systems Lab, The Hong Kong University of Science and Technology)
+   Copyright [yyyy] [name of copyright owner]
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -203,3 +200,19 @@ For commercial usage of this open-source project, users must contact authors (We
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+========================================================================
+AMF-Placer 2.0 Subcomponents:
+
+The AMF-Placer 2.0 project contains subcomponents with separate copyright
+notices and license terms. Your use of the source code for these
+subcomponents is also subject to the terms and conditions of the following
+licenses.
+
+1. Asmjit (Apache License, source code included in src/lib/3rdParty/asmjit for fast placement rendering)
+2. Blend2d (Apache License, source code included in src/lib/3rdParty/blend2d for fast placement rendering)
+3. KDTree (MIT License, source code included in src/lib/3rdParty/KDTree)
+4. Maximal Cardinality Matching (MIT License, source code included in src/lib/3rdParty/MaximalCardinalityMatching))
+5. Min Cost Flow (MIT License, source code included in src/lib/3rdParty/minCostFlow
+
+See the corresponding directories for details of the license.

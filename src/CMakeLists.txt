@@ -92,19 +92,11 @@ message(STATUS " boost libs ${Boost_LIBRARIES}")
 message(STATUS " boost includes ${Boost_INCLUDE_DIRS}")
 include_directories(${Boost_INCLUDE_DIRS})
 
-# ABSL
-# if (NOT TARGET absl::strings OR NOT TARGET absl::status OR NOT TARGET absl::span)
-#   message(STATUS "AMFPlacer fetching packages: `absl` targets not found. Attempting to fetch contents...")
-#   FetchContent_Declare(
-#     abseil-cpp 
-#     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/abseil-cpp-src
-#     # GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
-#     # GIT_TAG        origin/master
-#   )
-#   FetchContent_MakeAvailable(abseil-cpp)
-# else()
-#   message(STATUS "AMFPlacer fetching packages: `absl` targets found.")
-# endif()
+message(STATUS "AMFPlacer fetching packages: `PaToH` == ${CMAKE_BINARY_DIR}")
+
+execute_process(COMMAND  wget https://faculty.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz -P ${CMAKE_BINARY_DIR})
+execute_process(COMMAND  mkdir ${CMAKE_BINARY_DIR}/PaToH)
+execute_process(COMMAND  tar -xf  ${CMAKE_BINARY_DIR}/patoh-Linux-x86_64.tar.gz -C  ${CMAKE_BINARY_DIR}/PaToH --strip-components=2)
 
 # EIGEN
 # Eigen is usually available as a system package, so we use find_package.
@@ -112,9 +104,9 @@ if (NOT TARGET Eigen3::Eigen)
   message(STATUS "AMFPlacer fetching packages: `Eigen3` targets not found. Attempting to find package...")
   FetchContent_Declare(
     eigen
-    # GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-    # GIT_TAG        origin/master
-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/eigen3-src
+    GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+    GIT_TAG        origin/master
+   # SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/eigen3-src
   )
   FetchContent_MakeAvailable(eigen)
   set(EIGEN3_INCLUDE_DIR ${eigen_SOURCE_DIR})
@@ -123,19 +115,6 @@ else()
   message(STATUS "AMFPlacer fetching packages: `Eigen3` targets found.")
 endif()
 
-# OSQP
-# if (NOT TARGET osqpstatic)
-#   message(STATUS "AMFPlacer fetching packages: `osqp` targets not found. Attempting to find contents...")
-#   FetchContent_Declare(
-#     osqp
-#     SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/osqp-src
-#     # GIT_REPOSITORY https://github.com/oxfordcontrol/osqp.git
-#     # GIT_TAG        origin/master
-#   )
-#   FetchContent_MakeAvailable(osqp)
-# else()
-#   message(STATUS "AMFPlacer fetching packages: `osqp` targets found.")
-# endif()
 
 find_package(ZLIB)
 
@@ -152,6 +131,7 @@ add_executable(AMFPlacer ${SOURCE_FILES})
 add_executable(partitionHyperGraph lib/3rdParty/partitionHyperGraph.cc)
 
 include_directories(./lib/
+${CMAKE_BINARY_DIR}/PaToH/
 ./lib/HiFPlacer/designInfo/ 
 ./lib/HiFPlacer/deviceInfo/ 
 ./lib/utils/
@@ -165,12 +145,12 @@ include_directories(./lib/
 #${abseil-cpp_SOURCE_DIR} 
 )
 
-link_directories(${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/)
+link_directories(${CMAKE_BINARY_DIR}/PaToH/)
 
 target_link_libraries(AMFPlacer GlobalPlacer DesignInfo DeviceInfo PlacementInfo PlacementTiming Packing Legalization ProblemSolvers Utils
-                        ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a 
+                        ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a 
                         pthread 
                         ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} Rendering Qt5::Widgets blend2d::blend2d) #GL GLU glut GLEW
-target_link_libraries(partitionHyperGraph  ${Boost_LIBRARIES}  m ${CMAKE_SOURCE_DIR}/lib/3rdParty/PaToH/libpatoh.a )
+target_link_libraries(partitionHyperGraph  ${Boost_LIBRARIES}  m ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a )
 
 execute_process(COMMAND  cp ${CMAKE_SOURCE_DIR}/../doc/NotoSans-Regular.ttf ${CMAKE_BINARY_DIR}/NotoSans-Regular.ttf OUTPUT_VARIABLE tmp)

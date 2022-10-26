@@ -11,15 +11,15 @@ AMF-Placer 2.0 is an open-source comprehensive timing-driven Analytical Mixed-si
 AMF-Placer 2.0 is the extension of AMF-Placer 1.0. AMF-Placer 1.0 is a wirelength-driven mixed-size FPGA placer equipped with a series of new techniques for wirelength optimization, cell spreading, packing, and legalization. Experimental results indicate that AMF-Placer can improve HPWL by 20.4%-89.3% and reduce runtime by 8.0%-84.2%, compared to the baseline. Furthermore, utilizing the parallelism of the proposed algorithms, with 8 threads, the placement procedure can be accelerated by 2.41x on average. 
 
 <p align="center">
-<img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)" width="100" />  <img src="https://zslwyuan.github.io/AMF-Placer/MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)" width="100" /> <img src="https://zslwyuan.github.io/AMF-Placer/optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)" width="100" />   <img src="https://zslwyuan.github.io/AMF-Placer/MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)" width="100" />   <img src="https://zslwyuan.github.io/AMF-Placer/GUI.gif" alt="GUI" title="GUI" width="100" />   <img src="https://zslwyuan.github.io/AMF-Placer/GUIdetailed.gif" alt="GUIdetailed" title="GUIdetailed" height="250" />    
+<img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)"  height="200" />  <img src="https://zslwyuan.github.io/AMF-Placer/MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)"  height="200" /> <img src="https://zslwyuan.github.io/AMF-Placer/optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)"  height="200" />   <img src="https://zslwyuan.github.io/AMF-Placer/MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)"  height="200" />   <img src="https://zslwyuan.github.io/AMF-Placer/GUI.gif" alt="GUI" title="GUI"  height="200" />   <img src="https://zslwyuan.github.io/AMF-Placer/GUIdetailed.gif" alt="GUIdetailed" title="GUIdetailed" height="200" />    
 </p>
 
 ## License
 
 This project is developed by [Reconfiguration Computing Systems Lab](https://eeweiz.home.ece.ust.hk/), Hong Kong University of Science and Technology (HKUST). Tingyuan Liang (tliang@connect.ust.hk), Gengjie Chen (chen_gengjie.hotmail.com), Jieru Zhao (zhao-jieru.sjtu.edu.cn), Sharad Sinha (sharad@iitgoa.ac.in) and Wei Zhang (eeweiz@ust.hk) are the major contributors of this project.
 
-In this repo, we provide the **initial implementation of AMF-Placer 2.0**, supporting comprehensive timing-driven placement with critical path delay and runtime which are downgraded by ~5%. If you want to reproduce the experimental results in the paper of [AMF-Placer 2.0](https://arxiv.org/abs/2210.08682) for academic evaluation or commercial usage, you are required to contact the authors Tingyuan Liang (tliang@connect.ust.hk) and Wei ZHANG (eeweiz@ust.hk) with your offcial instituation email and we will response in 72 hours.
-Generally, for non-commercial usage of this open-source project, users should comply the Apache License attached in the root directory and for commercial usage of this open-source project, users must contact project supervisor (Wei ZHANG, eeweiz@ust.hk) for authorization.
+In this repo, we provide the **basic implementation of AMF-Placer 2.0, under the Apache License 2.0**, supporting comprehensive timing-driven placement with critical path delay and runtime which are downgraded by ~5%. If you want to obtain **the advanced version of AMF-Placer 2.0** to reproduce the experimental results in the paper of [AMF-Placer 2.0](https://arxiv.org/abs/2210.08682) for academic evaluation or commercial usage, you are required to contact the authors Tingyuan Liang (tliang@connect.ust.hk) and Wei ZHANG (eeweiz@ust.hk) with your offcial instituation email and we will response in 72 hours. If you are commercial entities, you can also contact ttsamuel@ust.hk for licensing opportunities of the advanced version.
+
 
 ## Publications
 
@@ -107,12 +107,19 @@ Below is a hiearchy tree of this project. As for the details, please refer to th
 
 ## Dependencies
   
-1. eigen 3.3.8 (source code included)
-2. PaToH (library included)
-3. osqp (source code included)
-4. Qt5 (for GUI, you can install it on Ubuntu by: sudo apt-get install qt5-default  )
-5. MKL (optional)
-6. opengl, freeglut, glew (optional)
+AMF-Placer 2.0 relies on the following dependencies and we sincerely appreciate the efforts of the authors of the related open-source project.
+Each of them has corresponding licensing policy and please confirm that you are following the rules mentioned in the licenses. 
+In the source code of AMF-Placer 2.0, we only include the open-source projects under the Apache License 2.0 or MIT License. 
+The other dependencies will be downloaded when you are building the project and interact with the main body of AMF-Placer 2.0 via libraries and APIs.
+
+1. eigen 3.3.8 (MPL2 license, source code will be downlaoded into the building directory during building if you have not installed it)
+2. PaToH (academic use only, library will be downlaoded into the building directory)
+3. Asmjit (Apache License, source code included in src/lib/3rdParty/asmjit for fast placement rendering)
+4. Blend2d (Apache License, source code included in src/lib/3rdParty/blend2d for fast placement rendering)
+5. Qt5 (for GUI, you can install it on Ubuntu by: sudo apt-get install qt5-default )
+6. KDTree (MIT License, source code included in src/lib/3rdParty/KDTree)
+7. Maximal Cardinality Matching (MIT License, source code included in src/lib/3rdParty/MaximalCardinalityMatching))
+8. Min Cost Flow (MIT License, source code included in src/lib/3rdParty/minCostFlow
 
 
 ## Todo List

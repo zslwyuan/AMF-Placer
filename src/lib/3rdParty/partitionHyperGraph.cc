@@ -1,6 +1,6 @@
 
 #include "../utils/ProcessFuncInterface.h"
-#include "PaToH/patoh.h"
+#include "patoh.h"
 #include <iostream>
 
 int main(int argc, const char **argv)
