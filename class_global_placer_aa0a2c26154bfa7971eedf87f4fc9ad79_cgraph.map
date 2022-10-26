@@ -41,7 +41,7 @@
 <area shape="rect" id="node10" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="570,1297,751,1338"/>
 <area shape="rect" id="node11" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="551,1479,770,1505"/>
 <area shape="rect" id="node12" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="551,1529,770,1556"/>
-<area shape="rect" id="node13" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title=" " alt="" coords="567,1580,755,1607"/>
+<area shape="rect" id="node13" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title="Get the Clock Regions in an 2D array clockregion[Y][X]." alt="" coords="567,1580,755,1607"/>
 <area shape="rect" id="node14" href="$class_device_info.html#abe13bd4a4e6518a4563044988d46d0f0" title="Get the maximum utilization among the clock columns in clock region." alt="" coords="555,1362,766,1403"/>
 <area shape="rect" id="node16" href="$class_device_info.html#ac36ff07cc0cd3b6a7ce51c9a6e4bd833" title="record the information of cell in a specific clock region" alt="" coords="548,1428,773,1455"/>
 <area shape="rect" id="node18" href="$class_placement_info.html#a9d1c5aa5c5c8888aeb2c93fc22e46ff0" title=" " alt="" coords="553,528,768,555"/>

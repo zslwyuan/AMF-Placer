@@ -45,7 +45,7 @@
 <area shape="rect" id="node4" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="775,416,956,457"/>
 <area shape="rect" id="node5" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="756,314,975,341"/>
 <area shape="rect" id="node6" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="756,263,975,290"/>
-<area shape="rect" id="node7" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title=" " alt="" coords="771,365,959,391"/>
+<area shape="rect" id="node7" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title="Get the Clock Regions in an 2D array clockregion[Y][X]." alt="" coords="771,365,959,391"/>
 <area shape="rect" id="node14" href="$class_placement_timing_info.html#a877024881cfb98a56ec996d420adee17" title="build a simple timing graph, where the inner delay between pin paris for an element will be identical" alt="" coords="500,685,669,727"/>
 <area shape="rect" id="node15" href="$class_placement_timing_info.html#a9751ae32acb35ef568ecceb9e393e0dc" title=" " alt="" coords="489,620,680,661"/>
 <area shape="rect" id="node16" href="$class_placement_timing_info.html#a1611fa85052e36071d12f6980e7cdb20" title=" " alt="" coords="481,555,689,596"/>

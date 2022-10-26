@@ -42,7 +42,7 @@
 <area shape="rect" id="node38" href="$class_design_info_1_1_design_element.html#a51484eb3a7f19decc10377ee6ec8a074" title=" " alt="" coords="757,799,935,840"/>
 <area shape="rect" id="node39" href="$class_placement_info.html#a72c7618553542ae7f16c9fe594d8cc4a" title=" " alt="" coords="750,864,942,905"/>
 <area shape="rect" id="node40" href="$class_placement_info.html#aeedda39297f2899ef048eb191afbe630" title=" " alt="" coords="750,929,942,971"/>
-<area shape="rect" id="node43" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title=" " alt="" coords="752,1482,940,1509"/>
+<area shape="rect" id="node43" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title="Get the Clock Regions in an 2D array clockregion[Y][X]." alt="" coords="752,1482,940,1509"/>
 <area shape="rect" id="node44" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title=" " alt="" coords="750,1533,942,1559"/>
 <area shape="rect" id="node45" href="$class_placement_info.html#ac92a9f898fde7212efa62296e95abb32" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="751,1584,941,1625"/>
 <area shape="rect" id="node46" href="$class_placement_info.html#afbbe29c57c4ae17870c98d9191a11f18" title="get the PlacementUnit Mapping to clock region column for timing optimzation" alt="" coords="751,1649,941,1691"/>

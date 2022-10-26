@@ -1,7 +1,7 @@
 <map id="PlacementTimingOptimizer::stretchClockRegionColumns" name="PlacementTimingOptimizer::stretchClockRegionColumns">
 <area shape="rect" id="node1" title=" " alt="" coords="5,312,197,353"/>
 <area shape="rect" id="node2" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="260,5,441,47"/>
-<area shape="rect" id="node3" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title=" " alt="" coords="257,71,445,98"/>
+<area shape="rect" id="node3" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title="Get the Clock Regions in an 2D array clockregion[Y][X]." alt="" coords="257,71,445,98"/>
 <area shape="rect" id="node4" href="$class_placement_info.html#ade0537081e03836945454566c60dddef" title=" " alt="" coords="267,123,434,164"/>
 <area shape="rect" id="node5" href="$class_placement_info.html#a89c7b38c083040f6d58a3d916189886a" title="get top boundary of the bin grid" alt="" coords="267,188,434,229"/>
 <area shape="rect" id="node6" href="$class_placement_info.html#ac3ce2b9529da7bf633620d67545f5bf3" title="get bottom boundary of the bin grid" alt="" coords="267,253,434,295"/>

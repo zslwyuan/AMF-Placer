@@ -16,7 +16,7 @@
 <area shape="rect" id="node7" href="$class_device_info.html#a96f985e9ac787404e646373909b5fb76" title="Get the clock region ID (X/Y) by a given location (X/Y)" alt="" coords="851,509,1032,550"/>
 <area shape="rect" id="node8" href="$class_device_info.html#a680e49bd27d6045dbd2a956754b1220d" title="Get the number of columns of the clock region array." alt="" coords="832,575,1051,601"/>
 <area shape="rect" id="node9" href="$class_device_info.html#a5c909a8a6763507f3677d1bcde2f453d" title="Get the number of rows of the clock region array." alt="" coords="832,676,1051,703"/>
-<area shape="rect" id="node10" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title=" " alt="" coords="847,945,1035,972"/>
+<area shape="rect" id="node10" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title="Get the Clock Regions in an 2D array clockregion[Y][X]." alt="" coords="847,945,1035,972"/>
 <area shape="rect" id="node11" href="$class_placement_info.html#a9f1f71671f794431907301f01bc98c44" title=" " alt="" coords="851,443,1032,485"/>
 <area shape="rect" id="node12" href="$class_placement_info.html#a144b38f7ee41b0dc539e71a0837885a8" title=" " alt="" coords="831,727,1052,753"/>
 <area shape="rect" id="node15" href="$class_placement_info.html#a492f0c9cc447ff4146745b0a7136fd6a" title="find neibor LUTs/FFs from bin grid" alt="" coords="856,1346,1027,1387"/>

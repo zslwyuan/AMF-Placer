@@ -131,18 +131,22 @@ $(document).ready(function(){initNavTree('_1_intro.html',''); initResizable(); }
 <div class="line">        │   │   └── placementTiming</div>
 <div class="line">        │   └── problemSolvers</div>
 <div class="line">        └── utils        // some minor utility functions</div>
-</div><!-- fragment --><p><b>Dependencies</b></p><ol type="1">
-<li>opengl, freeglut, glew</li>
-<li>eigen 3.3.8 (source code included)</li>
-<li>MKL (optional)</li>
-<li>PaToH (library included)</li>
-<li>osqp (source code included)</li>
+</div><!-- fragment --><p><b>Dependencies</b></p>
+<p>AMF-Placer 2.0 relies on the following dependencies and we sincerely appreciate the efforts of the authors of the related open-source project. Each of them has corresponding licensing policy and please confirm that you are following the rules mentioned in the licenses. In the source code of AMF-Placer 2.0, we only include the open-source projects under the Apache License 2.0 or MIT License. The other dependencies will be downloaded when you are building the project and interact with the main body of AMF-Placer 2.0 via libraries and APIs.</p>
+<ol type="1">
+<li>eigen 3.3.8 (MPL2 license, source code will be downlaoded into the building directory during building if you have not installed it)</li>
+<li>PaToH (academic use only, library will be downlaoded into the building directory)</li>
+<li>Asmjit (Apache License, source code included in src/lib/3rdParty/asmjit for fast placement rendering)</li>
+<li>Blend2d (Apache License, source code included in src/lib/3rdParty/blend2d for fast placement rendering)</li>
+<li>Qt5 (for GUI, you can install it on Ubuntu by: sudo apt-get install qt5-default )</li>
+<li>KDTree (MIT License, source code included in src/lib/3rdParty/KDTree)</li>
+<li>Maximal Cardinality Matching (MIT License, source code included in src/lib/3rdParty/MaximalCardinalityMatching))</li>
+<li>Min Cost Flow (MIT License, source code included in src/lib/3rdParty/minCostFlow</li>
 </ol>
-<p><b>Todo List</b></p><ol type="1">
-<li>stable clock legalization</li>
-<li>basic static timing analysis (doing)</li>
-<li>timing term in analytical model (doing)</li>
-<li>timing-driven detailed placement </li>
+<p><b>Todo List</b></p>
+<ol type="1">
+<li>clock tree synthesis</li>
+<li>ckock-related optimization </li>
 </ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

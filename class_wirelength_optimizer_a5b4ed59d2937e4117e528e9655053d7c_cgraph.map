@@ -1,7 +1,7 @@
 <map id="WirelengthOptimizer::updatePseudoNetForClockRegion" name="WirelengthOptimizer::updatePseudoNetForClockRegion">
 <area shape="rect" id="node1" title="add pseudo nets for clock region" alt="" coords="5,209,229,251"/>
 <area shape="rect" id="node2" href="$class_placement_info.html#a9d2ce3051534b0619ff9ef278b477460" title="directly set weight in the quadratic Matrix and vector according to given request." alt="" coords="285,71,462,112"/>
-<area shape="rect" id="node6" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title=" " alt="" coords="279,137,467,163"/>
+<area shape="rect" id="node6" href="$class_device_info.html#a6dc59155e3c9a3a1fa341dcac1a6be06" title="Get the Clock Regions in an 2D array clockregion[Y][X]." alt="" coords="279,137,467,163"/>
 <area shape="rect" id="node7" href="$class_placement_info.html#aec88ff9f5846a101891c26901232e7e7" title=" " alt="" coords="277,187,469,214"/>
 <area shape="rect" id="node8" href="$class_placement_info.html#ac92a9f898fde7212efa62296e95abb32" title="get the PlacementUnit Mapping to clock region centers for timing optimzation" alt="" coords="279,239,468,280"/>
 <area shape="rect" id="node9" href="$class_placement_info.html#afbbe29c57c4ae17870c98d9191a11f18" title="get the PlacementUnit Mapping to clock region column for timing optimzation" alt="" coords="279,304,468,345"/>
