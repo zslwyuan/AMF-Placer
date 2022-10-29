@@ -8,3 +8,4 @@ We were trapped by many problems during our implementation of the placer and exp
 4. Double check when some operations are conducted for specific types of elements, for example, some cell types will have significant impact on the others.
 5. Analytical model cannot improve or model everything because of the device complexity so sometimes you may give a chance to heuristic solutions.
 6. When trying to adopt the existing solutions into your flow, the implict assumptions/requirements of those solutions should be clearly considered.
+7. We might need a global data structure to store all the hyperparameters for better control of the entire placement flow since now, many parameters are scattered in difference class, making it hard to analyze the correlation between them for 3rd party users.
