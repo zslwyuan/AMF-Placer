@@ -70,7 +70,7 @@ In this repo, we provide the **basic implementation of AMF-Placer 2.0, under the
 
 **Acknowledgement**
 
-We sincerely appreciate the kindly suggestions from reviewers, detailed explanations of UTPlaceF from [Dr. Wuxi Li](http://wuxili.net/#about), useful advice on Vivado metric usages from Dr. Stephen Yang, fruitful discussion on some previous works with [Ms. Yun Zhou](https://github.com/YunxZhou) and practical suggestions of the convenient usages of AMF-Placer from [Mr. Jing Mai](https://github.com/magic3007).
+We sincerely appreciate the kindly suggestions from reviewers, detailed explanations of UTPlaceF from [Dr. Wuxi Li](http://wuxili.net/#about), useful advice on Vivado metric usages from Dr. Stephen Yang, fruitful discussion on some previous works with [Dr. Yun Zhou](https://github.com/YunxZhou) and practical suggestions of the convenient usages of AMF-Placer from [Mr. Jing Mai](https://github.com/magic3007).
 
 
 **Issue Report**
