@@ -60,6 +60,7 @@ In this repo, we provide the **basic implementation of AMF-Placer 2.0, under the
 
 1. clock tree synthesis
 2. ckock-related optimization
+3. reduce the hyperparameters in the algorithms and make them adaptive to design features
 
 **Implementation Overview**
 
