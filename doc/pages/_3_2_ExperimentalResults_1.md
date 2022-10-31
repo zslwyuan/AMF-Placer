@@ -1,7 +1,6 @@
 @page _3_2_ExperimentalResults_1 Experimental Results of AMF-Placer 1.0
 # Experimental Results of AMF-Placer 1.0
 
-**The Experimental Result of AMF-Placer 1.0**
 Apart from the fundamental mechanisms to support macro placement, some optional optimization techniques are evaluated:
 
 1. SA-based initial placement
