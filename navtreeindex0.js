@@ -13,6 +13,8 @@ var NAVTREEINDEX0 =
 "_3_1__benchmarks_details.html":[2,2,0],
 "_3_1__benchmarks_details.html":[2,0],
 "_3_2__experimental_results.html":[2,1],
+"_3_2__experimental_results_1.html":[2,1,0],
+"_3_2__experimental_results_2.html":[2,1,1],
 "_3_3__download_post_implementation_vivado_projects.html":[2,2],
 "_3_benchmark_info.html":[2],
 "_4_publication.html":[3],
@@ -22,8 +24,8 @@ var NAVTREEINDEX0 =
 "_5_4_packing.html":[4,3],
 "_5_5_timing_clocking_congestion.html":[4,4],
 "_5_explanation.html":[4],
-"_6_runtime_log.html":[4,5],
 "_6_runtime_log.html":[1,1,0],
+"_6_runtime_log.html":[4,5],
 "_7_portability_to_vivado_problem.html":[5],
 "_8_some_failure_lesson.html":[6],
 "_a_m_f-_vivado-2020-test_set_8py.html":[9,0,0,3,1],
@@ -247,7 +249,5 @@ var NAVTREEINDEX0 =
 "class_c_l_b_legalizer.html#a596d21a5cf6331aa0b4371e7f5fafbce":[8,0,3,39],
 "class_c_l_b_legalizer.html#a5a707c1b66106287af77b052a56a5abb":[8,0,3,59],
 "class_c_l_b_legalizer.html#a6542231dffa4e0ba43f788229942fd61":[8,0,3,17],
-"class_c_l_b_legalizer.html#a65d0fc2a198f55fc259d02a4373011aa":[8,0,3,67],
-"class_c_l_b_legalizer.html#a6b0daf16e780c712884fdb0cd2e29ead":[8,0,3,68],
-"class_c_l_b_legalizer.html#a7112d75a4771b7ad011e24d086ed3031":[8,0,3,92]
+"class_c_l_b_legalizer.html#a65d0fc2a198f55fc259d02a4373011aa":[8,0,3,67]
 };
