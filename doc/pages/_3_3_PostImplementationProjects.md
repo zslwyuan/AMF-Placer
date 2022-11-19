@@ -18,7 +18,7 @@ Users can directly open the .xpr file with Vivado. There might be some warnings 
 </center>
 
 
-For the latest results of our timing-driven placement, we have prepared Vivado placement checkpoints and our post-AMF-placement checkpoins with various configurations and Vivado versions in the share folders of [Google Drive](https://drive.google.com/drive/folders/1hEo9_n9WjYeoUC_lRI71KXp6jStc4iRn?usp=sharing) and [Tencent Weiyun Disk](https://share.weiyun.com/w50lBmqZ)
+For the latest results of our timing-driven placement, we have prepared Vivado placement checkpoints and our post-AMF-placement checkpoins with various configurations and Vivado versions in the share folders of [Google Drive](https://drive.google.com/drive/folders/1hEo9_n9WjYeoUC_lRI71KXp6jStc4iRn?usp=sharing) and [Tencent Weiyun Disk](https://share.weiyun.com/S4NkMQSI)
 
 1. Cfg0: all the optimization techniques are enabled as the configuration.
 2. Cfg1: disable path-length-aware clustering before partitioning
