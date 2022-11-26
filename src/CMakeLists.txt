@@ -94,10 +94,12 @@ include_directories(${Boost_INCLUDE_DIRS})
 
 message(STATUS "AMFPlacer fetching packages: `PaToH` == ${CMAKE_BINARY_DIR}")
 
-execute_process(COMMAND  wget https://faculty.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz -P ${CMAKE_BINARY_DIR})
-execute_process(COMMAND  mkdir ${CMAKE_BINARY_DIR}/PaToH)
-execute_process(COMMAND  tar -xf  ${CMAKE_BINARY_DIR}/patoh-Linux-x86_64.tar.gz -C  ${CMAKE_BINARY_DIR}/PaToH --strip-components=2)
-
+if(NOT EXISTS ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a)
+   message(STATUS "AMFPlacer fetching packages: `PaToH` targets not found. Attempting to find package...")
+   execute_process(COMMAND  wget https://faculty.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz -P ${CMAKE_BINARY_DIR})
+   execute_process(COMMAND  mkdir ${CMAKE_BINARY_DIR}/PaToH)
+   execute_process(COMMAND  tar -xf  ${CMAKE_BINARY_DIR}/patoh-Linux-x86_64.tar.gz -C  ${CMAKE_BINARY_DIR}/PaToH --strip-components=2)
+endif()
 # EIGEN
 # Eigen is usually available as a system package, so we use find_package.
 if (NOT TARGET Eigen3::Eigen)
@@ -105,12 +107,12 @@ if (NOT TARGET Eigen3::Eigen)
   FetchContent_Declare(
     eigen
     GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-    GIT_TAG        origin/master
+    GIT_TAG        3.3.9
    # SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/eigen3-src
   )
   FetchContent_MakeAvailable(eigen)
   set(EIGEN3_INCLUDE_DIR ${eigen_SOURCE_DIR})
-  # find_package(Eigen3 3.3.7 REQUIRED NO_MODULE)
+  # find_package(Eigen3 EXACT 3.3.9 REQUIRED NO_MODULE)
 else()
   message(STATUS "AMFPlacer fetching packages: `Eigen3` targets found.")
 endif()
