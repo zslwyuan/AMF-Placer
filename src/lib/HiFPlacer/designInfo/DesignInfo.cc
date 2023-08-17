@@ -29,6 +29,7 @@
 #include <assert.h>
 #include <queue>
 #include <regex>
+#include "utils.h"
 
 void DesignInfo::DesignPin::updateParentCellNetInfo()
 {
@@ -229,7 +230,7 @@ DesignInfo::DesignInfo(std::map<std::string, std::string> &JSONCfg, DeviceInfo *
             {
                 netName = drivepinName = "<const1>";
             }
-            netName = drivepinName; // don't use the net name, which has aliases in Vivado, otherwise will fail to map
+            netName = drivepinName;                 // don't use the net name, which has aliases in Vivado, otherwise will fail to map
             curPin->setDriverPinName(drivepinName); // bind to a net name first
             curPin->connectToNetName(netName);
             addPinToNet(curPin);                             // update net in netlist
@@ -698,3 +699,8 @@ std::ostream &operator<<(std::ostream &os, DesignInfo::DesignPin *pin)
        << " (" << DesignCellTypeStr_const[cell->getCellType()] << ") " << cell->getName();
     return os;
 }
+
+// PYBIND11_MODULE(TORCH_EXTENSION_NAME, m)
+//{
+//     m.def("forward", &DREAMPLACE_NAMESPACE::pin_rudy_forward, "compute pin RUDY map");
+// }

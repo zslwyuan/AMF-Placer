@@ -25,6 +25,9 @@
 #ifndef _DESIGNINFO
 #define _DESIGNINFO
 
+#if CMAKE_PYBIND11_TYPE
+#include <pybind11/pybind11.h>
+#endif
 #include "DeviceInfo.h"
 #include <assert.h>
 #include <fstream>
@@ -34,13 +37,15 @@
 #include <string>
 #include <vector>
 
-#define CELLTYPESTRS                                                                                                   \
-    "LUT1", "LUT2", "LUT3", "LUT4", "LUT5", "LUT6", "LUT6_2", "FDCE", "FDPE", "FDRE", "FDSE", "LDCE", "AND2B1L",       \
-        "CARRY8", "DSP48E2", "MUXF7", "MUXF8", "SRL16E", "SRLC32E", "RAM32M16", "RAM64M", "RAM64X1D", "RAM32M",        \
-        "RAM32X1D", "RAM32X1S", "RAM64X1S", "RAM64M8", "RAM256X1D", "FIFO36E2", "FIFO18E2", "RAMB18E2", "RAMB36E2",    \
-        "BUFGCE", "BUFG_GT", "BUFG_GT_SYNC", "BUFGCE_DIV", "BUFGCTRL", "GTHE3_CHANNEL", "GTHE3_COMMON", "IOBUF",       \
-        "IBUF", "IBUFDS", "IOBUFDS", "IBUFDS_GTE3", "IBUF_ANALOG", "IOBUFE3", "MMCME3_ADV", "OBUF", "OBUFT",           \
-        "PCIE_3_1", "BSCANE2", "SYSMONE1", "RXTX_BITSLICE", "BITSLICE_CONTROL", "TX_BITSLICE_TRI", "OSERDESE3",        \
+#define EXTENSION_NAME "DesignInfo"
+
+#define CELLTYPESTRS                                                                                                \
+    "LUT1", "LUT2", "LUT3", "LUT4", "LUT5", "LUT6", "LUT6_2", "FDCE", "FDPE", "FDRE", "FDSE", "LDCE", "AND2B1L",    \
+        "CARRY8", "DSP48E2", "MUXF7", "MUXF8", "SRL16E", "SRLC32E", "RAM32M16", "RAM64M", "RAM64X1D", "RAM32M",     \
+        "RAM32X1D", "RAM32X1S", "RAM64X1S", "RAM64M8", "RAM256X1D", "FIFO36E2", "FIFO18E2", "RAMB18E2", "RAMB36E2", \
+        "BUFGCE", "BUFG_GT", "BUFG_GT_SYNC", "BUFGCE_DIV", "BUFGCTRL", "GTHE3_CHANNEL", "GTHE3_COMMON", "IOBUF",    \
+        "IBUF", "IBUFDS", "IOBUFDS", "IBUFDS_GTE3", "IBUF_ANALOG", "IOBUFE3", "MMCME3_ADV", "OBUF", "OBUFT",        \
+        "PCIE_3_1", "BSCANE2", "SYSMONE1", "RXTX_BITSLICE", "BITSLICE_CONTROL", "TX_BITSLICE_TRI", "OSERDESE3",     \
         "RIU_OR", "PLLE3_ADV", "HPIO_VREF", "OBUFDS_DUAL_BUF"
 
 /**
@@ -49,7 +54,7 @@
  */
 class DesignInfo
 {
-  public:
+public:
     /**
      * @brief types of the elements in a design
      *
@@ -213,7 +218,7 @@ class DesignInfo
      */
     class DesignElement
     {
-      public:
+    public:
         DesignElement(const std::string &name, DesignElement *parentPtr, DesignElementType type, int id)
             : name(name), parentPtr(parentPtr), type(type), id(id)
         {
@@ -257,7 +262,7 @@ class DesignInfo
             return id;
         }
 
-      private:
+    private:
         std::string name;
         DesignElement *parentPtr = nullptr;
         DesignElementType type;
@@ -275,7 +280,7 @@ class DesignInfo
      */
     class DesignPin : public DesignElement
     {
-      public:
+    public:
         /**
          * @brief Construct a new Design Pin object
          *
@@ -496,7 +501,7 @@ class DesignInfo
             fixed = true;
         }
 
-      private:
+    private:
         /**
          * @brief pin type could be:
          *
@@ -523,7 +528,7 @@ class DesignInfo
      */
     class DesignNet : public DesignElement
     {
-      public:
+    public:
         /**
          * @brief Construct a new Design Net object
          *
@@ -760,7 +765,7 @@ class DesignInfo
             containFixedPins = true;
         }
 
-      private:
+    private:
         std::vector<std::string> pinNames;
         std::vector<DesignPin *> pinPtrs;
         std::vector<DesignPin *> driverPinPtrs;
@@ -780,7 +785,7 @@ class DesignInfo
      */
     class DesignCell : public DesignElement
     {
-      public:
+    public:
         /**
          * @brief Construct a new Design Cell object
          *
@@ -1126,7 +1131,7 @@ class DesignInfo
             return timingLength;
         }
 
-      private:
+    private:
         std::vector<DesignPin *> pinPtrs;
         std::vector<DesignPin *> inputPinPtrs;
         std::vector<DesignPin *> outputPinPtrs;
@@ -1150,7 +1155,7 @@ class DesignInfo
      */
     class ControlSetInfo
     {
-      public:
+    public:
         /**
          * @brief Construct a new Control Set Info object with signals of a given FF and a given ID
          *
@@ -1312,7 +1317,7 @@ class DesignInfo
             std::cout << "CellType: " << DesignCellTypeStr[(int)FFType] << "\n";
         }
 
-      private:
+    private:
         DesignInfo::DesignNet *CLK = nullptr;
         DesignInfo::DesignNet *SR = nullptr;
         DesignInfo::DesignNet *CE = nullptr;
@@ -1737,7 +1742,7 @@ class DesignInfo
         return clock2Cells[clock];
     }
 
-  private:
+private:
     std::vector<DesignNet *> netlist;
     std::vector<DesignCell *> cells;
     std::vector<DesignPin *> pins;

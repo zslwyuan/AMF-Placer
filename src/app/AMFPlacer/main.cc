@@ -12,6 +12,7 @@
 
 #include "3rdParty/Rendering/bl-qt-AMF.h"
 #include "AMFPlacer.h"
+// #include "3rdParty/pybind11/include/pybind11/pybind11.h"
 
 void runPlacer(AMFPlacer *placer)
 {

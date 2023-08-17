@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 
 project(AMFPlacer)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 find_package(OpenMP)
-add_compile_options ( -std=c++17 -O3  -fopenmp -Wall )
+add_compile_options ( -std=c++14 -O3  -fopenmp -Wall )
 if(OPENMP_FOUND)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 ${OpenMP_CXX_FLAGS}")
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 ${OpenMP_C_FLAGS}")
@@ -13,120 +13,58 @@ else(OPENMP_FOUND)
   message (STATUS "OpenMP not found")
 endif()
 
+# if(CMAKE_CXX_FLAGS)
+# string(REGEX REPLACE "-std=c\\+\\+([0-9a-z]+)" " " CMAKE_CXX_FLAGS_INIT ${CMAKE_CXX_FLAGS})
+# endif(CMAKE_CXX_FLAGS)
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS_INIT}" CACHE STRING "Flags used by the compiler during all build types." FORCE)
 
+# if(NOT CMAKE_CXX_ABI)
+#     set(CMAKE_CXX_ABI 0 CACHE STRING
+#         "Choose the value for _GLIBCXX_USE_CXX11_ABI, options are: 0|1."
+#         FORCE)
+# endif(NOT CMAKE_CXX_ABI)
+# message(STATUS "CMAKE_CXX_ABI: _GLIBCXX_USE_CXX11_ABI=${CMAKE_CXX_ABI}")
+# add_definitions(-D_GLIBCXX_USE_CXX11_ABI=${CMAKE_CXX_ABI})
+
+if (CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+    set (CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}" CACHE PATH "Prefix prepended to install directories" FORCE )
+    #set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
+endif()
+message(STATUS "CMAKE_INSTALL_PREFIX: ${CMAKE_INSTALL_PREFIX}")
+
+SET(CMAKE_PREFIX_PATH "/usr/lib/x86_64-linux-gnu/cmake")
 find_package(Qt5Widgets REQUIRED)
-set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
-
-
-# find required packages
-include(FetchContent)
-
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Gui REQUIRED)
 
 
 # Boost
 # set(BOOST_ROOT "")
 
-set(Boost_USE_STATIC_LIBS OFF)
-set(BOOST_VER 1.65.1)
-set(Boost_NO_BOOST_CMAKE ON)
-set(BOOST_COMPONENTS filesystem program_options system log thread)
-ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
+#set(Boost_USE_STATIC_LIBS OFF)
+#set(BOOST_VER 1.65.1)
+#set(Boost_NO_BOOST_CMAKE ON)
+#set(BOOST_COMPONENTS filesystem program_options system log thread)
+find_package(ZLIB REQUIRED)
+#set(Boost_NO_BOOST_CMAKE TRUE)
+#find_package(Boost 1.65.1 REQUIRED)
+#ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
 
-# Workaround function to allow cmake call `find_package` twice. Avoide side effects from local variables, which are produced be `find_package`
-function(findBoost Required)
-    find_package(Boost ${BOOST_VER} ${Required} 
-        COMPONENTS ${BOOST_COMPONENTS}
-        OPTIONAL_COMPONENTS unit_test_framework
-    )
-    set(Boost_FOUND ${Boost_FOUND} PARENT_SCOPE)
-    set(Boost_LIBRARIES ${Boost_LIBRARIES} PARENT_SCOPE)
-    set(Boost_INCLUDE_DIRS ${Boost_INCLUDE_DIRS} PARENT_SCOPE)
-endfunction()
+#find_package(ZLIB)
 
-findBoost("")
 
-if(NOT Boost_FOUND)
-  string(REPLACE "." "_" BOOST_VER_ ${BOOST_VER}) 
-  set(BOOST_URL "https://boostorg.jfrog.io/artifactory/main/release/${BOOST_VER}/source/boost_${BOOST_VER_}.tar.bz2" CACHE STRING "Boost download URL")
-  set(BOOST_URL_SHA256 "9807a5d16566c57fd74fb522764e0b134a8bbe6b6e8967b83afefd30dcd3be81" CACHE STRING "Boost download URL SHA256 checksum")
-  option(BOOST_DISABLE_TESTS "Do not build test targets" OFF)
-  include(FetchContent)
-  set(FETCHCONTENT_QUIET OFF)
-  FetchContent_Declare(
-    Boost
-    URL ${BOOST_URL}
-    URL_HASH SHA256=${BOOST_URL_SHA256}
-  )
-  FetchContent_GetProperties(Boost)
-  set(FETCHCONTENT_QUIET OFF)
-  if(NOT Boost_POPULATED)
-    message(STATUS "Fetching Boost")
-    FetchContent_Populate(Boost)
-    message(STATUS "Fetching Boost - done")
-    message(STATUS " boost source dir is ${boost_SOURCE_DIR} ")
-    message(STATUS " boost binary dir is ${boost_BINARY_DIR} ")
-    string(JOIN "," BOOST_WITH_LIBRARIES ${BOOST_COMPONENTS}) 
-    execute_process(
-      COMMAND ./bootstrap.sh --prefix=${boost_BINARY_DIR} --with-libraries=${BOOST_WITH_LIBRARIES}
-      WORKING_DIRECTORY ${boost_SOURCE_DIR}
-      RESULT_VARIABLE result
-    )
-    if(NOT result EQUAL "0")
-      message( FATAL_ERROR "Bad exit status of bootstrap")
-    endif()
-    execute_process(
-      COMMAND ./b2 install -j8
-      WORKING_DIRECTORY ${boost_SOURCE_DIR}
-      RESULT_VARIABLE result
-    )
-    if(NOT result EQUAL "0")
-      message( FATAL_ERROR "Bad exit status of b2")
-    endif()
-    set(BOOST_ROOT ${boost_BINARY_DIR} CACHE PATH "Root folder to find boost" FORCE)
-    set(Boost_DIR ${boost_BINARY_DIR} CACHE PATH "Root folder to find boost" FORCE)
-  endif()
-  findBoost(REQUIRED)
+
+
+# include(cmake/TorchExtension.cmake)
+include(cmake/configure.cmake)
+if(NOT CMAKE_PYBIND11_TYPE)
+  set(CMAKE_PYBIND11_TYPE false CACHE BOOL "wether to build c++ binary")
 endif()
-
-message(STATUS " boost libs ${Boost_LIBRARIES}")
-message(STATUS " boost includes ${Boost_INCLUDE_DIRS}")
-include_directories(${Boost_INCLUDE_DIRS})
-
-message(STATUS "AMFPlacer fetching packages: `PaToH` == ${CMAKE_BINARY_DIR}")
-
-if(NOT EXISTS ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a)
-   message(STATUS "AMFPlacer fetching packages: `PaToH` targets not found. Attempting to find package...")
-   execute_process(COMMAND  wget https://faculty.cc.gatech.edu/~umit/PaToH/patoh-Linux-x86_64.tar.gz -P ${CMAKE_BINARY_DIR})
-   execute_process(COMMAND  mkdir ${CMAKE_BINARY_DIR}/PaToH)
-   execute_process(COMMAND  tar -xf  ${CMAKE_BINARY_DIR}/patoh-Linux-x86_64.tar.gz -C  ${CMAKE_BINARY_DIR}/PaToH --strip-components=2)
-endif()
-# EIGEN
-# Eigen is usually available as a system package, so we use find_package.
-if (NOT TARGET Eigen3::Eigen)
-  message(STATUS "AMFPlacer fetching packages: `Eigen3` targets not found. Attempting to find package...")
-  FetchContent_Declare(
-    eigen
-    GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-    GIT_TAG        3.3.9
-   # SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib/3rdParty/eigen3-src
-  )
-  FetchContent_MakeAvailable(eigen)
-  set(EIGEN3_INCLUDE_DIR ${eigen_SOURCE_DIR})
-  # find_package(Eigen3 EXACT 3.3.9 REQUIRED NO_MODULE)
-else()
-  message(STATUS "AMFPlacer fetching packages: `Eigen3` targets found.")
-endif()
-
-
-find_package(ZLIB)
-
-include_directories(
-  ${Boost_INCLUDE_DIR}
-  ${EIGEN3_INCLUDE_DIR}
-  ${ZLIB_INCLUDE_DIRS}
-)
-
+add_definitions( -DCMAKE_PYBIND11_TYPE=${CMAKE_PYBIND11_TYPE})
+message(STATUS CMAKE_PYBIND11_TYPE=${CMAKE_PYBIND11_TYPE})
+#add_subdirectory(lib/3rdParty/pybind11)
 add_subdirectory(lib)
+# add_subdirectory(app)
 
 set(SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/app/AMFPlacer/main.cc)
 add_executable(AMFPlacer ${SOURCE_FILES})
@@ -143,16 +81,26 @@ ${CMAKE_BINARY_DIR}/PaToH/
 ./lib/HiFPlacer/placement/packing/
 ./lib/HiFPlacer/placement/placementTiming/
 ./lib/3rdParty
+#./lib/3rdParty/eigen-src
+${EIGEN3_INCLUDE_DIR}
 ./lib/HiFPlacer/problemSolvers
 #${abseil-cpp_SOURCE_DIR} 
 )
 
-link_directories(${CMAKE_BINARY_DIR}/PaToH/)
-
 target_link_libraries(AMFPlacer GlobalPlacer DesignInfo DeviceInfo PlacementInfo PlacementTiming Packing Legalization ProblemSolvers Utils
-                        ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a 
-                        pthread 
-                        ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} Rendering Qt5::Widgets blend2d::blend2d) #GL GLU glut GLEW
+                       ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a 
+                       pthread 
+                       ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} Rendering Qt5::Widgets blend2d::blend2d) #GL GLU glut GLEW
 target_link_libraries(partitionHyperGraph  ${Boost_LIBRARIES}  m ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a )
 
 execute_process(COMMAND  cp ${CMAKE_SOURCE_DIR}/../doc/NotoSans-Regular.ttf ${CMAKE_BINARY_DIR}/NotoSans-Regular.ttf OUTPUT_VARIABLE tmp)
+
+file(GLOB INSTALL_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/app/*.py")
+install(
+    FILES ${INSTALL_SRCS} DESTINATION app
+    )
+file(GLOB unittest "${CMAKE_CURRENT_SOURCE_DIR}/unittest/*.py")
+install(
+    FILES ${INSTALL_SRCS} DESTINATION unittest
+    )
+

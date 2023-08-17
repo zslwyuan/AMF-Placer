@@ -48,7 +48,7 @@
  */
 class AMFPlacer
 {
-  public:
+public:
     /**
      * @brief Construct a new AMFPlacer object according to a given placer configuration file
      *
@@ -253,7 +253,7 @@ class AMFPlacer
 
     PaintDataBase *paintData = nullptr;
 
-  private:
+private:
     /**
      * @brief information related to the device (BELs, Sites, Tiles, Clock Regions)
      *
@@ -286,8 +286,8 @@ class AMFPlacer
 
     /**
      * @brief global placer acconting for initial placement, quadratic placement, cell spreading and macro legalization.
-     *
-     */
+
+    */
     GlobalPlacer *globalPlacer = nullptr;
 
     /**
