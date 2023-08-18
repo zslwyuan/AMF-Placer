@@ -137,7 +137,7 @@ for filename in onlyfiles:
 
     if (filename.find(patternStr) < 0 or filename.find(".gz") < 0):
         continue
-    fileId = int(filename.split(patternStr)[1].replace(".gz", ""))
+    fileId = filename.split(patternStr)[1].replace(".gz", "")
     filename = args.TraceDirectory + "/"+patternStr+str(fileId)+".gz"
     targetImgName = args.OutputDirectory + \
         "/"+patternStr+str(fileId)+".png"

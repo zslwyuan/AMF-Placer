@@ -1,0 +1,49 @@
+---------------------------------------------------------------------
+                       PaToH Version 3.2
+            Copyright (c) 1996-  by Umit V. Catalyurek
+---------------------------------------------------------------------
+ License: PaToH binary distribution is available free of charge for
+ non-commercial, research use by individuals, academic or research
+ institutions and corporations. Commercial use of PaToH software
+ requires commercial license. Please direct commercial-use license
+ inquiries to umit@gatech.edu.
+---------------------------------------------------------------------
+
+PaToH (Partitioning Tools for Hypergraphs) is a multilevel hypergraph
+partitioning tool.
+
+Important features of PaToH:
+
+ - Fast, stable multilevel hypergraph partitioner,
+ - Hypergraph partitioning with fixed cells,
+ - Multi-constraint hypergraph partitioner.
+
+You can download latest binary distribution of PaToH
+from  http://cc.gatech.edu/~umit/software.html.
+
+
+This distribution contains the following files:
+
+README			 - This file
+patoh			 - PaToH executable
+libpatoh.a		 - PaToH library file
+patoh.h			 - C header file for the library
+manual.pdf		 - manual
+simple.c		 - sample C code
+try.c			 - another sample C code
+ken-11.u		 - sample hypergraph
+
+To compile sample codes:
+
+cc -o try try.c -L. -lpatoh -lm
+cc -o simple simple.c -L. -lpatoh -lm
+
+For questions, comments, suggestions, bugs please send e-mail to:
+
+Umit V. Catalyurek   umit@gatech.edu
+Cevdet Aykanat	     aykanat@cs.bilkent.edu.tr
+
+
+
+
+
