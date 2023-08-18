@@ -1,0 +1,136 @@
+# AMF-Placer 2.0
+
+![DocumentationFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/main.yml/badge.svg) ![CMakeFlow](https://github.com/zslwyuan/AMF-Placer/actions/workflows/cmake.yml/badge.svg)   <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_code.svg" alt="LoCCode" title="LoCCode" height="18" /> 
+  <img src="https://raw.githubusercontent.com/zslwyuan/AMF-Placer/cloc_code/cloc_comment.svg" alt="LoCComment" title="LoCComment" height="18" /> 
+
+## Introduction
+
+AMF-Placer 2.0 is an open-source comprehensive timing-driven Analytical Mixed-size FPGA placer. It supports mixed-size placement of heterogeneous resources (e.g., LUT/FF/LUTRAM/MUX/CARRY/DSP/BRAM) on FPGA. To speed up the convergence and improve the timing quality of the placement,  standing upon the shoulders of AMF-Placer 1.0, AMF-Placer 2.0 is equipped with a series of new techniques for timing optimization, including an effective regression-based timing model, placement-blockage-aware anchor insertion, WNS-aware timing-driven quadratic placement, and sector-guided detailed placement. Based on a set of the latest large open-source benchmarks from various domains for Xilinx Ultrascale FPGAs, experimental results indicate that critical path delays realized by AMF-Placer 2.0 are averagely 2.2% and 0.59% higher than those achieved by commercial tool Xilinx Vivavo 2020.2 and 2021.2  respectively. Meanwhile, the average runtime of placement procedure of AMF-Placer 2.0 is 6.7% and 11.4% lower than Xilinx Vivavo 2020.2 and 2021.2 respectively. Although limited by the absence of the exact timing model of the device, the information of design hierarchy and accurate routing feedback, AMF-Placer 2.0 is the first open-source FPGA placer which can handle the timing-driven mixed-size placement of practical complex designs with various FPGA resources and achieves the comparable quality to the latest commercial tools. **Detailed Doxygen-based documentation (e.g, introduction, usage, implementation and experimental results) can be accessed [here](https://zslwyuan.github.io/AMF-Placer/)**.
+
+
+<p align="center">
+<img src="https://zslwyuan.github.io/AMF-Placer/OpenPiton_converge.gif" alt="Convergence (OpenPiton)" title="Convergence (OpenPiton)"  height="200" />  <img src="https://zslwyuan.github.io/AMF-Placer/MiniMap2_converge.gif" alt="Convergence (MiniMap2)" title="Convergence (MiniMap2)"  height="200" /> <img src="https://zslwyuan.github.io/AMF-Placer/optimsoc_converge.gif" alt="Convergence (OptimSoC)" title="Convergence (OptimSoC)"  height="200" />   <img src="https://zslwyuan.github.io/AMF-Placer/MemN2N_converge.gif" alt="Convergence (MemN2N)" title="Convergence (MemN2N)"  height="200" /><img src="https://zslwyuan.github.io/AMF-Placer/GUI.gif" alt="GUI" title="GUI"  height="200" /><img src="https://zslwyuan.github.io/AMF-Placer/GUIdetailed.gif" alt="GUIdetailed" title="GUIdetailed" height="200" />       
+</p>
+
+## License
+
+This project is developed by [Reconfiguration Computing Systems Lab](https://eeweiz.home.ece.ust.hk/), Hong Kong University of Science and Technology (HKUST). Tingyuan Liang (tliang@connect.ust.hk), Gengjie Chen (chen_gengjie@hotmail.com), Jieru Zhao (zhao-jieru@sjtu.edu.cn), Sharad Sinha (sharad@iitgoa.ac.in) and Wei Zhang (eeweiz@ust.hk) are the major contributors of this project.
+
+In this repo, we provide the **basic implementation of AMF-Placer 2.0, under the Apache License 2.0**, supporting comprehensive timing-driven placement with critical path delay and runtime which are downgraded slightly by ~5% on average. If you want to obtain **the advanced version of AMF-Placer 2.0** to reproduce the experimental results in the paper of [AMF-Placer 2.0](https://arxiv.org/abs/2210.08682) for academic evaluation or commercial usage, you are required to contact the authors Tingyuan Liang (tliang@connect.ust.hk) and Wei ZHANG (eeweiz@ust.hk) with your offcial instituation email and we will response in 72 hours. If you are commercial entities, you can also contact ttsamuel@ust.hk for licensing opportunities of the advanced version. The authors acknowledge support from the Hong Kong Research Grants Council (HK-RGC) General Research Funds (GRF No. 16213521) and thank the anonymous reviewers for their valuable comments to improve the quality of the papers.
+
+## Publications
+
+If our works are involved in your works, please cite our papers:
+
+\[1\] AMF-Placer: High-Performance Analytical Mixed-size Placer for FPGA[(pre-print)](https://github.com/zslwyuan/AMF-Placer/blob/main/doc/paper/iccad2021.pdf)
+```
+@INPROCEEDINGS{AMFPlacer,  
+   title={AMF-Placer: High-Performance Analytical Mixed-size Placer for FPGA},
+   author={Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Sinha, Sharad and Zhang, Wei},  
+   booktitle={2021 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},   
+   year={2021},  volume={},  number={},  pages={1-6},
+}
+```
+\[2\] AMF-Placer 2.0: Open Source Timing-driven Analytical Mixed-size Placer for Large-scale Heterogeneous FPGA[(pre-print)](https://github.com/zslwyuan/AMF-Placer/blob/main/doc/paper/amf-placer2.pdf)
+```
+@article{liang2022amf,
+  title={AMF-Placer 2.0: Open Source Timing-driven Analytical Mixed-size Placer for Large-scale Heterogeneous FPGA},
+  author={Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Sinha, Sharad and Zhang, Wei},
+  journal={arXiv preprint arXiv:2210.08682},
+  year={2022}
+}
+```
+
+## Motivations
+
+1. Just reinvent the wheel for fun, try to build a complete flow and reproduce/improve some state-of-art techniques in the latest papers.
+2. Resolve some existing constraints in some previous works and consider more practical situations, like FPGA mixed-size placement with a series of optimization from the perspectives of timing, clocking, routability-aware and parallelism.
+3. A beginner-friendly placement framework with clear hierarchy and detailed Doxygen-based documentation. We hope that it can lower the overhead for people who are also interested in this research area.
+4. Currently, this framework is under development and it is still far from our goals and the practical demands, but we are happy to share our progress in this GitHub repository. If you have any questions/problems/suggestions, please contact feel free to contact us (Tingyuan LIANG, tliang@connect.ust.hk)
+
+
+## Features
+
+1. supports placeemnt with a large number of mixed-size macros with shape constraints in practical FPGA applications.
+2. wirelength-driven, routability-aware, packing-aware, clock-aware, region-aware. 
+3. initially timing-driven with basic embedded static timing analysis, WNS-aware global placement, efficient detailed placement
+4. a set of optional optimization techniques to improve mixed-size FPGA placement QoR
+5. parallelizes the implementation of each stage of placement based on multi-threading
+6. modularized function implementation for easier further development
+7. flexible and extensible JSON-based placement configuration
+8. supports placement check-point importing/exporting
+9. a set of pre-implementation benchmarks from latest practical FPGA applications
+10. provides a set of Tcl scripts which extracts design netlist from Vivado and exports post-placement information to Vivado
+11. A basic GUI for user to analyze the placement procedure to optimize the implementation
+
+## Implementation Overview
+
+<p align="center">
+<img src="https://zslwyuan.github.io/AMF-Placer/overview.png" alt="Implementation Overview" title="Implementation Overview" width="800" /> 
+</p>
+
+## Project Hiearchy
+
+Below is a hiearchy tree of this project. As for the details, please refer to the class information and collaboration diagram in the Doxygen documentation and trace the implementation, e.g., AMFPlacer, GlobalPlacer, and PlacementInfo.
+```
+├── benchmarks  // benchmark information
+│   ├── analysisScripts  // experimental result analysis Python scripts
+│   ├── testConfig       // some test settings of placer
+│   ├── VCU108           // information of design and device for VCU108
+│   │   ├── compatibleTable    // mapping information between design and device
+│   │   ├── design             // design information
+│   │   └── device             // device information
+│   └── vivadoScripts    // some Vivado Tcl scripts to extract design/device information
+├── build                // potential target directory for built output
+├── doc                  // documentation-related materials
+└── src                  // source code of the project
+    ├── app              // application (e.g., AMFPlacer)
+    │   └── AMFPlacer    // A High-Performance Analytical Mixed-size Placer for FPGA
+    └── lib              // libraries for application implementation
+        ├── 3rdParty     // third-party libraries
+        ├── HiFPlacer    // our placement function modules
+        │   ├── designInfo
+        │   ├── deviceInfo
+        │   ├── placement
+        │   │   ├── globalPlacement
+        │   │   ├── legalization
+        │   │   ├── packing
+        │   │   ├── placementInfo
+        │   │   └── placementTiming
+        │   └── problemSolvers
+        └── utils        // some minor utility functions
+```
+
+## Dependencies
+  
+AMF-Placer 2.0 relies on the following dependencies and we sincerely appreciate the efforts of the authors of the related open-source project.
+Each of them has corresponding licensing policy and please confirm that you are following the rules mentioned in the licenses. 
+In the source code of AMF-Placer 2.0, we only include the open-source projects under the Apache License 2.0 or MIT License. 
+The other dependencies will be downloaded when you are building the project and interact with the main body of AMF-Placer 2.0 via libraries and APIs.
+
+1. eigen 3.3.8 (MPL2 license, source code will be downlaoded into the building directory during building if you have not installed it)
+2. PaToH (academic use only, library will be downlaoded into the building directory)
+3. Asmjit (Apache License, source code included in src/lib/3rdParty/asmjit for fast placement rendering)
+4. Blend2d (Apache License, source code included in src/lib/3rdParty/blend2d for fast placement rendering)
+5. Qt5 (for GUI, you can install it on Ubuntu by: sudo apt-get install qt5-default )
+6. KDTree (MIT License, source code included in src/lib/3rdParty/KDTree)
+7. Maximal Cardinality Matching (MIT License, source code included in src/lib/3rdParty/MaximalCardinalityMatching))
+8. Min Cost Flow (MIT License, source code included in src/lib/3rdParty/minCostFlow
+
+
+## Todo List
+
+1. clock tree synthesis
+2. ckock-related optimization
+3. reduce the hyperparameters in the algorithms and make them adaptive to design features
+
+
+## Issue Report
+
+This project is under active development and far from perfect. We do want to make the placer useful for people in the community. Therefore,
+* If you have any question/problem, please feel free to create an issue in the [GitHub Issue](https://github.com/zslwyuan/AMF-Placer/issues) or email us (Tingyuan LIANG, tliang@connect.ust.hk)
+* We sincerely welcome code contribution to this project or suggestion in any approach!
+
+
+
+(last updated Oct 26, 2022)
