@@ -2361,11 +2361,18 @@ class ParallelCLBPacker
             {
             }
 
-            DesignInfo::DesignCell *LUTs[2][2][4]; // [bottom_Or_Top][6 or 5][which Slot]
-            DesignInfo::DesignCell *FFs[2][2][4];  // [bottom_Or_Top][FF or FF2][which Slot]
-            DesignInfo::DesignCell *MuxF7[2][2];   // [bottom_Or_Top][which Slot]
-            DesignInfo::DesignCell *MuxF8[2];
-            DesignInfo::DesignCell *Carry;
+            DesignInfo::DesignCell *LUTs[2][2][4] = {
+                {{nullptr, nullptr, nullptr, nullptr}, {nullptr, nullptr, nullptr, nullptr}},
+                {{nullptr, nullptr, nullptr, nullptr},
+                 {nullptr, nullptr, nullptr, nullptr}}}; // [bottom_Or_Top][6 or 5][which Slot]
+            DesignInfo::DesignCell *FFs[2][2][4] = {
+                {{nullptr, nullptr, nullptr, nullptr}, {nullptr, nullptr, nullptr, nullptr}},
+                {{nullptr, nullptr, nullptr, nullptr},
+                 {nullptr, nullptr, nullptr, nullptr}}}; // [bottom_Or_Top][FF or FF2][which Slot]
+            DesignInfo::DesignCell *MuxF7[2][2] = {{nullptr, nullptr},
+                                                   {nullptr, nullptr}}; // [bottom_Or_Top][which Slot]
+            DesignInfo::DesignCell *MuxF8[2] = {nullptr, nullptr};
+            DesignInfo::DesignCell *Carry = nullptr;
 
             const std::string MuxF8SlotNames[2] = {"F8MUX_BOT", "F8MUX_TOP"};
             const std::string MuxF7SlotNames[2][2] = {{"F7MUX_AB", "F7MUX_CD"}, {"F7MUX_EF", "F7MUX_GH"}};
