@@ -33,12 +33,16 @@ If our works are involved in your works, please cite our papers:
 ```
 \[2\] AMF-Placer 2.0: Open Source Timing-driven Analytical Mixed-size Placer for Large-scale Heterogeneous FPGA[(pre-print)](https://github.com/zslwyuan/AMF-Placer/blob/main/doc/paper/amf-placer2.pdf)
 ```
-@article{liang2022amf,
-  title={AMF-Placer 2.0: Open Source Timing-driven Analytical Mixed-size Placer for Large-scale Heterogeneous FPGA},
+@ARTICLE{liang2024amf,
   author={Liang, Tingyuan and Chen, Gengjie and Zhao, Jieru and Sinha, Sharad and Zhang, Wei},
-  journal={arXiv preprint arXiv:2210.08682},
-  year={2022}
-}
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={AMF-Placer 2.0: Open Source Timing-Driven Analytical Mixed-Size Placer for Large-Scale Heterogeneous FPGA}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Field programmable gate arrays;Timing;Computer architecture;Microprocessors;Table lookup;Routing;Standards;timing-driven placement;analytical placement;mixed-size placement;FPGA},
+  doi={10.1109/TCAD.2024.3373357}}
 ```
 
 ## Motivations
