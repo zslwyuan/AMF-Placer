@@ -14,7 +14,16 @@ else(OPENMP_FOUND)
 endif()
 
 
-find_package(Qt5Widgets REQUIRED)
+# Find Qt
+set(HOME_DIR $ENV{HOME})
+set(QT6_DIR ${HOME_DIR}//Qt/6.8.3/gcc_64/lib/cmake/Qt6)
+message("Qt6 dir is ${QT6_DIR}")
+set(CMAKE_MODULE_PATH ${QT6_DIR})
+set(Qt6_DIR ${QT6_DIR})
+find_package(Qt6 REQUIRED COMPONENTS Core Xml Gui Help PrintSupport Widgets)
+qt_standard_project_setup(REQUIRES 6.8)
+find_package(Qt6Widgets REQUIRED)
+
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR})
 
 
@@ -152,7 +161,7 @@ link_directories(${CMAKE_BINARY_DIR}/PaToH/)
 target_link_libraries(AMFPlacer GlobalPlacer DesignInfo DeviceInfo PlacementInfo PlacementTiming Packing Legalization ProblemSolvers Utils
                         ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a 
                         pthread 
-                        ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} Rendering Qt5::Widgets blend2d::blend2d) #GL GLU glut GLEW
+                        ${ZLIB_LIBRARIES}  ${Boost_LIBRARIES} Rendering Qt6::Widgets blend2d::blend2d) #GL GLU glut GLEW
 target_link_libraries(partitionHyperGraph  ${Boost_LIBRARIES}  m ${CMAKE_BINARY_DIR}/PaToH/libpatoh.a )
 
 execute_process(COMMAND  cp ${CMAKE_SOURCE_DIR}/../doc/NotoSans-Regular.ttf ${CMAKE_BINARY_DIR}/NotoSans-Regular.ttf OUTPUT_VARIABLE tmp)
